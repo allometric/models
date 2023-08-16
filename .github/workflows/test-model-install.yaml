@@ -25,5 +25,12 @@ jobs:
 
       - uses: r-lib/actions/setup-r-dependencies@v2
         with:
-          extra-packages: any::remotes, local::.
+          extra-packages: any::remotes
           needs: check
+
+      - name: Install allometric package
+        run: |
+          remotes::install_github(
+            "https://github.com/allometric/allometric.git@model_migration"
+          )
+        shell: Rscript {0}
