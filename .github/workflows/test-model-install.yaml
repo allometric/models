@@ -30,3 +30,10 @@ jobs:
       - name: Clone allometric/allometric.
         run: |
           git clone -b model_migration https://github.com/allometric/allometric.git
+
+      - name: Run install models test.
+        run: |
+          devtools::load_all("./allometric");
+          testthat::test_file("./allometric/tests/testthat/test-install.R")
+        shell: Rscript {0}
+
