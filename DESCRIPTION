@@ -12,6 +12,9 @@ Imports:
 Remotes: github::allometric/allometric@model_migration
 Depends: 
     R (>= 2.10)
+Suggests: 
+    testthat (>= 3.0.0)
+Config/testthat/edition: 3
 LazyData: true
 BugReports: https://github.com/allometric/models/issues
 Contact: bfrank70@gmail.com
