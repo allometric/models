@@ -1,0 +1,27 @@
+name: R-CI
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+name: test-model-install
+
+jobs:
+  build:
+    runs-on: ${{ matrix.config.os }}
+    strategy:
+      matrix:
+        config:
+          - {os: windows-latest, r: 'release'}
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: Install dependencies
+      run: |
+        Rscript -e 'install.packages("remotes")'
+        Rscript -e 'remotes::install_github("allometric/allometric")'
+    - name: Run tests
+      run: |
+        Rscript -e 'library(allometric); testthat::test_file("tests/testthat/test-allometric.R")'
