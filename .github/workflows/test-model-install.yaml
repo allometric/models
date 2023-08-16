@@ -26,3 +26,8 @@ jobs:
       - uses: r-lib/actions/setup-r-dependencies@v2
         with:
           needs: check
+
+      - name: Test models install.
+        run: |
+          testthat::test_file(system.file("tests/testthat/test-install.R", package = "allometric"))
+        shell: Rscript {0}
