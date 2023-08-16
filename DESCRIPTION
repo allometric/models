@@ -7,7 +7,8 @@ Authors@R:
 Description: A public repository of allometric models.
 License: MIT + file LICENSE
 Encoding: UTF-8
-Depends: allometric
+Imports:
+    allometric@model_migration
 Remotes: github::allometric/allometric@model_migration
 Depends: 
     R (>= 2.10)
