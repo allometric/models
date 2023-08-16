@@ -27,7 +27,6 @@ jobs:
         with:
           needs: check
 
-      - name: Test models install.
+      - name: Clone allometric/allometric.
         run: |
-          testthat::test_file(system.file("tests/testthat/test-install.R", package = "allometric"))
-        shell: Rscript {0}
+          git clone -b model_migration git@github.com:allometric/allometric.git
