@@ -31,6 +31,6 @@ jobs:
       - name: Install allometric package
         run: |
           remotes::install_github(
-            "allometric/allometric.git@model_migration"
+            "allometric/allometric@model_migration"
           )
         shell: Rscript {0}
