@@ -1,12 +1,10 @@
-name: R-CI
+name: test-model-install
 
 on:
   push:
     branches: [ main ]
   pull_request:
     branches: [ main ]
-
-name: test-model-install
 
 jobs:
   build:
