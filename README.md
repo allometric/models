@@ -27,11 +27,24 @@ Motivated users can learn how to install models directly using the package funct
 
 Other ideas? Contact bfrank70@gmail.com to help out.
 
-# Versioning
+# Versioning (Developers Only)
 
 This repository is versioned separately from `allometric` using
 [`semantic-release`](https://github.com/semantic-release/semantic-release),
 a Node.js tool that facilitates semantic versioning. This enables a rigid
 release framework for new allometric models and modifications therein.
 
-To create a new release: `npx semantic-versionin --no-ci`
+To install the versioning dependencies: `npm install`
+To create a release commit: `npx semantic-versioning --no-ci`
+
+Versioning Philosophy:
+  - Breaking releases - Occur only when breaking changes happen to
+    `allometric/models`, this might occur do to downstream effects on
+    `allometric/allometric` or other software. These should be exceptionally
+    rare.
+  - Feature releases - Are meant to accommodate batch releases of several
+    publications at a time. New publications should be added as `feat`. These
+    should occur for every 3-7 new publications.
+  - Fix releases - Are meant to accommodate edits to publication files and
+    parameters, but not additions. Edits to models should be added as `fix` and
+    a new release should be made for each fix.
