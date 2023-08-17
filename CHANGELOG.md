@@ -1,5 +1,12 @@
 # allometric/models changelog
 
+## [1.0.1](https://github.com/allometric/models/compare/v1.0.0...v1.0.1) (2023-08-17)
+
+
+### Bug Fixes
+
+* adding node package information ([437b191](https://github.com/allometric/models/commit/437b1918687e59fd1362a5b88967d4549ae50b5a))
+
 # 1.0.0 (2023-08-13)
 
 
