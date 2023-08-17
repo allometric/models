@@ -13,7 +13,7 @@
     [
       "@semantic-release/exec",
       {
-        "prepareCommand": "./set-version.ps1 testesttest"
+        "prepareCmd": "powershell ./set-version.ps1 ${nextRelease.version}"
       }
     ],
     [

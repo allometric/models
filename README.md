@@ -33,3 +33,5 @@ This repository is versioned separately from `allometric` using
 [`semantic-release`](https://github.com/semantic-release/semantic-release),
 a Node.js tool that facilitates semantic versioning. This enables a rigid
 release framework for new allometric models and modifications therein.
+
+To create a new release: `npx semantic-versionin --no-ci`
