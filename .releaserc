@@ -17,7 +17,11 @@
       }
     ],
     [
-      "@semantic-release/git"
+      "@semantic-release/git",
+      {
+        "assets": ["./DESCRIPTION"],
+        "message": "chore(release): ${nextRelease.version}"
+      }
     ],
     [
       "@semantic-release/github"
