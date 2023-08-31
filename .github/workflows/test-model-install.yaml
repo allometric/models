@@ -34,6 +34,7 @@ jobs:
       - name: Run install models test.
         run: |
           devtools::install("./allometric");
+          devtools::load_all("./allometric");
           testthat::test_file("./allometric/tests/testthat/test-install.R")
         shell: Rscript {0}
 
