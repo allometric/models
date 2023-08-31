@@ -8,7 +8,8 @@ krisnawati_2016 <- Publication(
     volume = 3,
     number = 1,
     pages = "49--64",
-    year = 2016
+    year = 2016,
+    doi = "https://doi.org/10.20886/ijfr.2016.3.1.49-64"
   ),
   descriptors = list(
     country = "ID",

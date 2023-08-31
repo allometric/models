@@ -9,7 +9,8 @@ hahn_1991 <- Publication(
     number = 2,
     pages = "46--57",
     year = 1991,
-    publisher = "Oxford University Press"
+    publisher = "Oxford University Press",
+    doi = "https://doi.org/10.1093/njaf/8.2.47"
   ),
   descriptors = list(
     country = "US",

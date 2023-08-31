@@ -4,7 +4,7 @@ ung_2008 <- Publication(
     key = "ung_2008",
     title = "Canadian national biomass equations: new parameter estimates that include British Columbia data",
     author = "Ung, Chhun-Huor and Bernier, Pierre and Guo, Xiao-Jing",
-    doi = "10.1139/X07-224",
+    doi = "https://doi.org/10.1139/X07-224",
     issn = "0045-5067",
     journal = "Canadian Journal of Forest Research",
     volume = 38,

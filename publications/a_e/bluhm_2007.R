@@ -6,7 +6,8 @@ bluhm_2007 <- Publication(
     author = "Bluhm, Andrew A and Garber, Sean M and Hibbs, David E",
     volume = 735,
     year = 2007,
-    institution = "US Department of Agriculture, Forest Service, Pacific Northwest Research Station"
+    institution = "US Department of Agriculture, Forest Service, Pacific Northwest Research Station",
+    doi = "https://doi.org/10.2737/PNW-GTR-735"
   ),
   descriptors = list(
     country = c("US", "CA"),

@@ -5,7 +5,8 @@ chittester_1984 <- Publication(
     title = "Cubic-foot tree volume equations and tables for western juniper",
     author = "Chittester, Judith M and MacLean, Colin D",
     institution = "US Department of Agriculture, Forest Service, Pacific Northwest Forest and Range Experiment Station (USA)",
-    year = 1984
+    year = 1984,
+    doi = "https://doi.org/10.2737/PNW-RN-420"
   ),
   descriptors = list(
     country = "US",
