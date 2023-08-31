@@ -35,6 +35,9 @@ jobs:
         run: |
           devtools::install("./allometric");
           devtools::load_all("./allometric");
-          testthat::test_file("./allometric/tests/testthat/test-install.R")
+          exit_data <- testthat::test_file("./allometric/tests/testthat/test-install.R");
+          exit_data <- as.data.frame(exit_data);
+          exit_code <- ifelse(sum(exit_data$failed, exit_data$error) == 0, 0, 1);
+          quit(save = "no", status = exit_code, runLast = FALSE);
         shell: Rscript {0}
 
