@@ -9,7 +9,8 @@ hibbs_2007 <- Publication(
     number = 1,
     pages = "61--66",
     year = 2007,
-    publisher = "Oxford University Press"
+    publisher = "Oxford University Press",
+    doi = "https://doi.org/10.1093/wjaf/22.1.61"
   ),
   descriptors = list(
     country = c("US", "CA"),

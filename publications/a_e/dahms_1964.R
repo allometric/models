@@ -5,7 +5,8 @@ dahms_1964 <- Publication(
     title = "Gross and net yield tables for lodgepole pine",
     author = "Dahms, Walter G",
     year = 1964,
-    institution = "Pacific Northwest Forest and Range Experiment Station, Forest Service"
+    institution = "Pacific Northwest Forest and Range Experiment Station, Forest Service",
+    doi = "https://doi.org/10.5962/bhl.title.94205"
   ),
   descriptors = list(
     family = "Pinaceae",

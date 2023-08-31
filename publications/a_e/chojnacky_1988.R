@@ -6,7 +6,8 @@ chojnacky_1988 <- Publication(
     author = "Chojnacky, David C",
     volume = 391,
     year = 1988,
-    institution = "US Department of Agriculture, Forest Service, Intermountain Research Station"
+    institution = "US Department of Agriculture, Forest Service, Intermountain Research Station",
+    doi = "https://doi.org/10.5962/bhl.title.68960"
   ),
   descriptors = list(
     country = "US",

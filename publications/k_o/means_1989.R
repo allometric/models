@@ -7,7 +7,8 @@ means_1989 <- Publication(
     journal = "Western Journal of Applied Forestry",
     volume = 4,
     number = 4,
-    year = 1989
+    year = 1989,
+    doi = "https://doi.org/10.1093/wjaf/4.4.136"
   ),
   descriptors = list(
     country = "US",

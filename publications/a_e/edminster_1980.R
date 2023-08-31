@@ -6,7 +6,8 @@ edminster_1980 <- Publication(
     title = "Volume tables and point-sampling factors for ponderosa pine in the Front Range of Colorado",
     volume = 218,
     year = 1980,
-    institution = "Rocky Mountain Forest and Range Experiment Station, Forest Service, US"
+    institution = "Rocky Mountain Forest and Range Experiment Station, Forest Service, US",
+    doi = "https://doi.org/10.5962/bhl.title.98678"
   ),
   descriptors = list(
     country = "US",

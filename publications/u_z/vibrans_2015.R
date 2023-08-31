@@ -9,7 +9,8 @@ vibrans_2015 <- Publication(
     number = 6,
     pages = "865--874",
     year = 2015,
-    publisher = "BioMed Central"
+    publisher = "BioMed Central",
+    doi = "https://doi.org/10.1007/s13595-015-0481-x"
   ),
   descriptors = list(
     country = "BR",

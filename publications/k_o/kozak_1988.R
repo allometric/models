@@ -9,7 +9,8 @@ kozak_1988 <- Publication(
     number = 11,
     pages = "1363--1368",
     year = 1988,
-    publisher = "NRC Research Press Ottawa, Canada"
+    publisher = "NRC Research Press Ottawa, Canada",
+    doi = "https://doi.org/10.1139/x88-213"
   ),
   descriptors = list(
     country = "CA",

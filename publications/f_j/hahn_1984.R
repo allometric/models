@@ -5,7 +5,8 @@ hahn_1984 <- Publication(
     title = "Tree Volume and Biomass Equations for the Lake States",
     author = "Hahn, Jerold T",
     year = 1984,
-    institution = "USDA Department of Agriculture, North Central Forest Experiment Station"
+    institution = "USDA Department of Agriculture, North Central Forest Experiment Station",
+    doi = "https://doi.org/10.2737/NC-RP-250"
   ),
   descriptors = list(
     country = "US",

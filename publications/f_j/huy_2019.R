@@ -8,7 +8,8 @@ huy_2019_citation <- RefManageR::BibEntry(
   volume = 437,
   pages = "156-174",
   year = 2019,
-  publisher = "Elsevier"
+  publisher = "Elsevier",
+  doi = "https://doi.org/10.1016/j.foreco.2019.01.038"
 )
 
 huy_2019 <- Publication(

@@ -9,7 +9,8 @@ rustagi_1991 <- Publication(
     number = 2,
     pages = "143--151",
     year = 1991,
-    publisher = "NRC Research Press Ottawa, Canada"
+    publisher = "NRC Research Press Ottawa, Canada",
+    doi = "https://doi.org/10.1139/x91-018"
   ),
   descriptors = list(
     country = c("US", "CA"),

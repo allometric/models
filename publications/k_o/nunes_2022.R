@@ -6,7 +6,7 @@ nunes_2022 <- Publication(
     author = "Nunes, Leonia and Pasalodos-Tato, Maria and Alberdi, Iciar and Sequeira, Ana Catarina and Vega, Jose Antonio and Silva, Vasco and Vieira, Pedro and Rego, Francisco Castro",
     volume = 13,
     issn = "1999-4907",
-    doi = "10.3390/f13040555",
+    doi = "https://doi.org/10.3390/f13040555",
     number = 4,
     journal = "Forests",
     year = 2022

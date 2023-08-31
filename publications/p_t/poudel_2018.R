@@ -9,7 +9,8 @@ poudel_2018 <- Publication(
     number = 1,
     pages = "1--12",
     year = 2018,
-    publisher = "Springer"
+    publisher = "Springer",
+    doi = "https://doi.org/10.1186/s40663-018-0134-2"
   ),
   descriptors = list(
     country = "US",
