@@ -7,7 +7,9 @@ track their development. This repository is used for this purpose. We treat
 `models` as a data repository, and not as an R package.
 
 Users interested in *contributing* models to `allometric` are in the right 
-location. Users interested in *using* allometric models for analysis, please
+location.
+
+Users interested in *using* allometric models for analysis, please
 refer to the `allometric` package.
 
 # How Can I Help?
