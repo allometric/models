@@ -6,7 +6,8 @@ scott_1981 <- Publication(
     author = "Charles Thomas Scott",
     volume = 304,
     year = 1981,
-    institution = "US Department of Agriculture, Forest Service"
+    institution = "US Department of Agriculture, Forest Service",
+    doi = "https://doi.org/10.2737/NE-RN-304"
   ),
   descriptors = list(
     country = 'US',

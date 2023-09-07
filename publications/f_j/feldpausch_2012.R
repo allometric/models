@@ -10,7 +10,8 @@ feldpausch_2012 <- Publication(
     number = 8,
     pages = "3381--3403",
     year = 2012,
-    publisher = "Copernicus GmbH"
+    publisher = "Copernicus GmbH",
+    doi = "https://doi.org/10.5194/bg-9-3381-2012"
   )
 )
 

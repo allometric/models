@@ -6,7 +6,8 @@ myers_1972 <- Publication(
     author = "Myers, Clifford A and Edminster, Carleton B",
     volume = 95,
     year = 1972,
-    institution = "Rocky Mountain Forest and Range Experiment Station, Forest Service"
+    institution = "Rocky Mountain Forest and Range Experiment Station, Forest Service",
+    doi = "https://doi.org/10.5962/bhl.title.98625"
   ),
   descriptors = list(
     country = "US",

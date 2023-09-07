@@ -9,7 +9,8 @@ temesgen_2007 <- Publication(
     number = 3,
     pages = "213--219",
     year = 2007,
-    publisher = "Oxford University Press"
+    publisher = "Oxford University Press",
+    doi = "https://doi.org/10.1093/wjaf/22.3.213"
   ),
   descriptors = list(
     country = "US",

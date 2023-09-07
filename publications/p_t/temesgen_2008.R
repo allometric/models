@@ -9,7 +9,8 @@ temesgen_2008_citation <- RefManageR::BibEntry(
   volume = 38,
   number = 3,
   pages = "553-565",
-  year = 2008
+  year = 2008,
+  doi = "https://doi.org/10.1139/X07-104"
 )
 
 temesgen_2008 <- Publication(

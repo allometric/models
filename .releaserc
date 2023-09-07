@@ -11,20 +11,20 @@
       }
     ],
     [
-      "@semantic-release/git"
+      "@semantic-release/exec",
+      {
+        "prepareCmd": "powershell ./set-version.ps1 ${nextRelease.version}"
+      }
     ],
     [
-      "@semantic-release/github",
+      "@semantic-release/git",
       {
-        "assets": [
-          {
-            "path": "parameters/**"
-          },
-          {
-            "path": "publications/**/*.R"
-          }
-        ]
+        "assets": ["./DESCRIPTION", "./CHANGELOG.md"],
+        "message": "chore(release): ${nextRelease.version}"
       }
+    ],
+    [
+      "@semantic-release/github"
     ]
   ]
 }

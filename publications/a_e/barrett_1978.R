@@ -6,7 +6,8 @@ barrett_1978 <- Publication(
     author = "Barrett, James Willis",
     volume = 232,
     year = 1978,
-    institution = "Department of Agriculture, Forest Service, Pacific Northwest Forest and Range Research Station"
+    institution = "Department of Agriculture, Forest Service, Pacific Northwest Forest and Range Research Station",
+    doi = "https://doi.org/10.5962/bhl.title.94197"
   ),
   descriptors = list(
     family = "Pinaceae",

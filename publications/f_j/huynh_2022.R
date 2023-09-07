@@ -9,7 +9,8 @@ huynh_2022 <- Publication(
     number = 3,
     pages = 486,
     year = 2022,
-    publisher = "MDPI"
+    publisher = "MDPI",
+    doi = "https://doi.org/10.3390/f13030486"
   ),
   descriptors = list(
     country = "AU",

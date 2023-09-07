@@ -9,7 +9,8 @@ turner_2000 <- Publication(
     number = 1,
     pages = "61--76",
     year = 2000,
-    publisher = "Elsevier"
+    publisher = "Elsevier",
+    doi = "https://doi.org/10.1016/S0378-1127(99)00083-3"
   ),
   descriptors = list(
     country = "US",

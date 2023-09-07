@@ -9,7 +9,8 @@ lambert_2005 <- Publication(
     number = 8,
     pages = "1996--2018",
     year = 2005,
-    publisher = "NRC Research Press Ottawa, Canada"
+    publisher = "NRC Research Press Ottawa, Canada",
+    doi = "https://doi.org/10.1139/x05-112"
   ),
   descriptors = list(
     country = "CA"

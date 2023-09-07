@@ -9,7 +9,8 @@ moore_1996 <- Publication(
     number = 4,
     pages = "132--137",
     year = 1996,
-    publisher = "Oxford University Press"
+    publisher = "Oxford University Press",
+    doi = "https://doi.org/10.1093/wjaf/11.4.132"
   ),
   descriptors = list(
     country = "US",

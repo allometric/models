@@ -9,7 +9,8 @@ delcourt_2022 <- Publication(
     number = 18,
     pages = "4499--4520",
     year = 2022,
-    publisher = "Copernicus GmbH"
+    publisher = "Copernicus GmbH",
+    doi = "https://doi.org/10.5194/bg-19-4499-2022"
   ),
   descriptors = list(
     country = "RU",

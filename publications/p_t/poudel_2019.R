@@ -9,7 +9,8 @@ poudel_2019 <- Publication(
     number = 6,
     pages = "701--714",
     year = 2019,
-    publisher = "NRC Research Press"
+    publisher = "NRC Research Press",
+    doi = "https://doi.org/10.1139/cjfr-2018-0361"
   ),
   descriptors = list(
     country = c("US", "CA"),

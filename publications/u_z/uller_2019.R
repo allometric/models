@@ -9,7 +9,8 @@ uller_2019 <- Publication(
     number = 3,
     pages = "261--271",
     year = 2019,
-    publisher = "NISC"
+    publisher = "NISC",
+    doi = "https://doi.org/10.2989/00306525.2019.1581498"
   ),
   descriptors = list(
     country = "BR",

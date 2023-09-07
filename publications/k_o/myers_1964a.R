@@ -6,7 +6,8 @@ myers_1964a <- Publication(
     author = "Myers, Clifford A",
     institution = "Rocky Mountain Forest and Range Experiment Station, Forest Service, US",
     year = 1964,
-    volume = 8
+    volume = 8,
+    doi = "https://doi.org/10.5962/bhl.title.99237"
   ),
   descriptors = list(
     country = "US",

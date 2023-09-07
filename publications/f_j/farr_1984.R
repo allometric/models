@@ -6,7 +6,8 @@ farr_1984 <- Publication(
     author = "Farr, Wilbur",
     number = 326,
     year = 1984,
-    institution = "Pacific Northwest Forest and Range Experiment Station"
+    institution = "Pacific Northwest Forest and Range Experiment Station",
+    doi = "https://doi.org/10.5962/bhl.title.94521"
   ),
   descriptors = list(
     region = "US-AK",
