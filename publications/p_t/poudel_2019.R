@@ -122,7 +122,7 @@ v_to_agb <- FixedEffectsSet(
   predict_fn = function(vsia) {
     cf * exp(a + b * log(vsia))
   },
-  model_specifications = load_parameter_frame("bt_poudel_2019_4")
+  model_specifications = load_parameter_frame("bt_poudel_2019_3")
 )
 
 rsbt <- FixedEffectsSet(
