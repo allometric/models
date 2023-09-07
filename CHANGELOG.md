@@ -1,5 +1,13 @@
 # allometric/models changelog
 
+## [1.1.2](https://github.com/allometric/models/compare/v1.1.1...v1.1.2) (2023-09-07)
+
+
+### Bug Fixes
+
+* changing action branch of allometric to master ([e811129](https://github.com/allometric/models/commit/e8111290910d3860e5fba77ae7229c66ecab30a0))
+* resolving error in poudel_2019 with ponderosa pine and subalpine fir biomass models ([7adeb6e](https://github.com/allometric/models/commit/7adeb6e77b7840432f434938ed74812933b93039))
+
 ## [1.1.1](https://github.com/allometric/models/compare/v1.1.0...v1.1.1) (2023-08-31)
 
 
