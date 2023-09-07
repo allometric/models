@@ -53,8 +53,8 @@ agb_1 <- FixedEffectsSet(
   model_specifications = load_parameter_frame("bt_poudel_2019_1")
 )
 
-# Table 5, models that use a, b, c and d parameters
-agb_2 <- FixedEffectsSet(
+# Table 4, ponderosa pine model
+agb_pp <- FixedEffectsModel(
   response_unit = list(
     bt = units::as_units("kg")
   ),
@@ -62,15 +62,40 @@ agb_2 <- FixedEffectsSet(
     dsob = units::as_units("cm"),
     hst = units::as_units("m")
   ),
-  parameter_names = c("a", "b", "c", "d", "cf"),
+  parameters = list(
+    a = -0.6616,
+    b = 0.8288,
+    c = 0.2127,
+    d = 0.4145,
+    cf = 1.0246
+  ),
   predict_fn = function(dsob, hst) {
-    cf * exp(a + b * log(dsob) + c * log(hst) + d * hst)
-  },
-  model_specifications = load_parameter_frame("bt_poudel_2019_2")
+    cf * exp(a + b * log(dsob) + c * log(dsob)^2 + d * log(hst))
+  }
 )
 
-# Table 5, models that use a and b parameters
-agb_3 <- FixedEffectsSet(
+# Table 4, subalpine fir model
+agb_sa <- FixedEffectsModel(
+  response_unit = list(
+    bt = units::as_units("kg")
+  ),
+  covariate_units = list(
+    dsob = units::as_units("cm"),
+    hst = units::as_units("m")
+  ),
+  parameters = list(
+    a = -5.5175,
+    b = 2.6795,
+    c = 1.2805,
+    cf = 1
+  ),
+  predict_fn = function(dsob, hst) {
+    cf * exp(a + b * log(dsob) + c * log(hst))
+  },
+)
+
+# Table 4, models that use a and b parameters
+agb_2 <- FixedEffectsSet(
   response_unit = list(
     bt = units::as_units("kg")
   ),
@@ -81,7 +106,7 @@ agb_3 <- FixedEffectsSet(
   predict_fn = function(dsob) {
     cf * exp(a + b * log(dsob))
   },
-  model_specifications = load_parameter_frame("bt_poudel_2019_3")
+  model_specifications = load_parameter_frame("bt_poudel_2019_2")
 )
 
 # Table 6, volume to biomass conversion
@@ -207,8 +232,9 @@ rbbt <- FixedEffectsSet(
 poudel_2019 <- poudel_2019 %>%
   add_set(cvts) %>%
   add_set(agb_1) %>%
+  add_model(agb_pp) %>%
+  add_model(agb_sa) %>%
   add_set(agb_2) %>%
-  add_set(agb_3) %>%
   add_set(v_to_agb) %>%
   add_set(rfbt) %>%
   add_set(rkbt) %>%
