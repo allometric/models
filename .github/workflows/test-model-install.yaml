@@ -29,7 +29,7 @@ jobs:
 
       - name: Clone allometric/allometric.
         run: |
-          git clone -b model_migration https://github.com/allometric/allometric.git
+          git clone https://github.com/allometric/allometric.git
 
       - name: Run install models test.
         run: |
