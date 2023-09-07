@@ -37,7 +37,7 @@ a Node.js tool that facilitates semantic versioning. This enables a rigid
 release framework for new allometric models and modifications therein.
 
 To install the versioning dependencies: `npm install`
-To create a release commit: `npx semantic-versioning --no-ci`
+To create a release commit: `npx semantic-release --no-ci`
 
 Versioning Philosophy:
   - Breaking releases - Occur only when breaking changes happen to
