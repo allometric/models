@@ -20,14 +20,14 @@ hst <- FixedEffectsSet(
   ),
   covariate_units = list(
     dsob = units::as_units('in'),
-    hstix = units::as_units('ft'),
+    hstix50 = units::as_units('ft'),
     d = units::as_units('in'),
     gs_s = units::as_units("ft^2 / acre")
   ),
   parameter_names = c('b_1', 'b_2', 'b_3', 'b_4', 'b_5', 'b_6'),
-  predict_fn = function(dsob, hstix, d, gs_s) {
+  predict_fn = function(dsob, hstix50, d, gs_s) {
     T <- (1.00001 - d / dsob)
-    4.5 + b_1 * (1 - exp(b_2 * dsob))^b_3 * hstix^b_4 * T^b_5 * gs_s^b_6
+    4.5 + b_1 * (1 - exp(b_2 * dsob))^b_3 * hstix50^b_4 * T^b_5 * gs_s^b_6
   },
   covariate_definitions = list(
     d = "Top d.o.b., a value of 0 gives total height."
