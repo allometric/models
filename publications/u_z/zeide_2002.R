@@ -32,7 +32,6 @@ normal <- FixedEffectsModel(
   predict_fn = function(dsob_s) {
     a * dsob_s^b
   },
-  response_definition = "Arithmetic mean height of trees",
   covariate_definitions = list(
     dsob_s = "Quadratic mean diameter"
   ),
