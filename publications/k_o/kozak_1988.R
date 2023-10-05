@@ -19,10 +19,10 @@ kozak_1988 <- Publication(
 )
 
 taper <- FixedEffectsSet(
-  response_unit = list(
+  response = list(
     dsih = units::as_units("cm")
   ),
-  covariate_units = list(
+  covariates = list(
     hst = units::as_units("m"),
     hsd = units::as_units("m"),
     dsob = units::as_units("cm")

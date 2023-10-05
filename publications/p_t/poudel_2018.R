@@ -21,10 +21,10 @@ poudel_2018 <- Publication(
 
 
 m1 <- FixedEffectsSet(
-  response_unit = list(
+  response = list(
     rsdodi = units::as_units("cm / cm")
   ),
-  covariate_units = list(
+  covariates = list(
     hst = units::as_units("m"),
     hsd = units::as_units("m")
   ),
@@ -46,10 +46,10 @@ m1 <- FixedEffectsSet(
 )
 
 m2 <- FixedEffectsSet(
-  response_unit = list(
+  response = list(
     dsih = units::as_units("cm")
   ),
-  covariate_units = list(
+  covariates = list(
     hst = units::as_units("m"),
     hsd = units::as_units("m"),
     dsob = units::as_units("cm")
@@ -77,10 +77,10 @@ m2 <- FixedEffectsSet(
 )
 
 m3 <- FixedEffectsSet(
-  response_unit = list(
+  response = list(
     rsdodi = units::as_units("cm / cm")
   ),
-  covariate_units = list(
+  covariates = list(
     hst = units::as_units("m"),
     hsd = units::as_units("m"),
     dsob = units::as_units("cm")
@@ -105,10 +105,10 @@ m3 <- FixedEffectsSet(
 )
 
 m4 <- FixedEffectsSet(
-  response_unit = list(
+  response = list(
     dsih = units::as_units("cm")
   ),
-  covariate_units = list(
+  covariates = list(
     hst = units::as_units("m"),
     hsd = units::as_units("m"),
     dsob = units::as_units("cm")
@@ -136,10 +136,10 @@ m4 <- FixedEffectsSet(
 )
 
 m5 <- FixedEffectsSet(
-  response_unit = list(
+  response = list(
     dsih = units::as_units("cm")
   ),
-  covariate_units = list(
+  covariates = list(
     hst = units::as_units("m"),
     hsd = units::as_units("m"),
     dsob = units::as_units("cm")

@@ -19,10 +19,10 @@ moore_1996 <- Publication(
 )
 
 wykoff_set <- FixedEffectsSet(
-  response_unit = list(
+  response = list(
     hst = units::as_units("ft")
   ),
-  covariate_units = list(
+  covariates = list(
     dsob = units::as_units("in")
   ),
   parameter_names = c("a", "b"),
@@ -33,10 +33,10 @@ wykoff_set <- FixedEffectsSet(
 )
 
 lundqvist_set <- FixedEffectsSet(
-  response_unit = list(
+  response = list(
     hst = units::as_units("ft")
   ),
-  covariate_units = list(
+  covariates = list(
     dsob = units::as_units("in")
   ),
   parameter_names = c("a", "b", "c"),

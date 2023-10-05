@@ -24,10 +24,10 @@ poudel_2019 <- Publication(
 )
 
 cvts <- FixedEffectsSet(
-  response_unit = list(
+  response = list(
     vsia = units::as_units("m^3")
   ),
-  covariate_units = list(
+  covariates = list(
     dsob = units::as_units("cm"),
     hst = units::as_units("m")
   ),
@@ -40,10 +40,10 @@ cvts <- FixedEffectsSet(
 
 # Table 4, models that use a, b and c parameters
 agb_1 <- FixedEffectsSet(
-  response_unit = list(
+  response = list(
     bt = units::as_units("kg")
   ),
-  covariate_units = list(
+  covariates = list(
     dsob = units::as_units("cm"),
     hst = units::as_units("m")
   ),
@@ -56,10 +56,10 @@ agb_1 <- FixedEffectsSet(
 
 # Table 4, ponderosa pine model
 agb_pp <- FixedEffectsModel(
-  response_unit = list(
+  response = list(
     bt = units::as_units("kg")
   ),
-  covariate_units = list(
+  covariates = list(
     dsob = units::as_units("cm"),
     hst = units::as_units("m")
   ),
@@ -77,10 +77,10 @@ agb_pp <- FixedEffectsModel(
 
 # Table 4, subalpine fir model
 agb_sa <- FixedEffectsModel(
-  response_unit = list(
+  response = list(
     bt = units::as_units("kg")
   ),
-  covariate_units = list(
+  covariates = list(
     dsob = units::as_units("cm"),
     hst = units::as_units("m")
   ),
@@ -97,10 +97,10 @@ agb_sa <- FixedEffectsModel(
 
 # Table 4, models that use a and b parameters
 agb_2 <- FixedEffectsSet(
-  response_unit = list(
+  response = list(
     bt = units::as_units("kg")
   ),
-  covariate_units = list(
+  covariates = list(
     dsob = units::as_units("cm")
   ),
   parameter_names = c("a", "b", "cf"),
@@ -112,10 +112,10 @@ agb_2 <- FixedEffectsSet(
 
 # Table 6, volume to biomass conversion
 v_to_agb <- FixedEffectsSet(
-  response_unit = list(
+  response = list(
     bt = units::as_units("kg")
   ),
-  covariate_units = list(
+  covariates = list(
     vsia = units::as_units("m^3")
   ),
   parameter_names = c("a", "b", "cf"),
@@ -126,10 +126,10 @@ v_to_agb <- FixedEffectsSet(
 )
 
 rsbt <- FixedEffectsSet(
-  response_unit = list(
+  response = list(
     rsbt = units::as_units("kg / kg")
   ),
-  covariate_units = list(
+  covariates = list(
     dsob = units::as_units("cm"),
     hst = units::as_units("m")
   ),
@@ -152,10 +152,10 @@ rsbt <- FixedEffectsSet(
 )
 
 rkbt <- FixedEffectsSet(
-  response_unit = list(
+  response = list(
     rkbt = units::as_units("kg / kg")
   ),
-  covariate_units = list(
+  covariates = list(
     dsob = units::as_units("cm"),
     hst = units::as_units("m")
   ),
@@ -179,10 +179,10 @@ rkbt <- FixedEffectsSet(
 
 
 rfbt <- FixedEffectsSet(
-  response_unit = list(
+  response = list(
     rfbt = units::as_units("kg / kg")
   ),
-  covariate_units = list(
+  covariates = list(
     dsob = units::as_units("cm"),
     hst = units::as_units("m")
   ),
@@ -205,10 +205,10 @@ rfbt <- FixedEffectsSet(
 )
 
 rbbt <- FixedEffectsSet(
-  response_unit = list(
+  response = list(
     rbbt = units::as_units("kg / kg")
   ),
-  covariate_units = list(
+  covariates = list(
     dsob = units::as_units("cm"),
     hst = units::as_units("m")
   ),

@@ -19,10 +19,10 @@ turner_2000 <- Publication(
 )
 
 bf <- FixedEffectsSet(
-  response_unit = list(
+  response = list(
     bf = units::as_units("kg")
   ),
-  covariate_units = list(
+  covariates = list(
     dsob = units::as_units("cm")
   ),
   parameter_names = c("a", "b"),

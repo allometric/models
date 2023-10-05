@@ -15,10 +15,10 @@ hann_1987 <- Publication(
 
 
 hstix50_psme <- FixedEffectsModel(
-  response_unit = list(
+  response = list(
     hstix50 = units::as_units("ft")
   ),
-  covariate_units = list(
+  covariates = list(
     hst = units::as_units("ft"),
     atb = units::as_units("yr")
   ),
@@ -39,10 +39,10 @@ hstix50_psme <- FixedEffectsModel(
 )
 
 hstix50_pipo <- FixedEffectsModel(
-  response_unit = list(
+  response = list(
     hstix50 = units::as_units("ft")
   ),
-  covariate_units = list(
+  covariates = list(
     hst = units::as_units("ft"),
     atb = units::as_units("yr")
   ),

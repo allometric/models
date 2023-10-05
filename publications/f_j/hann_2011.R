@@ -15,10 +15,10 @@ hann_2011 <- Publication(
 )
 
 dsib <- FixedEffectsSet(
-  response_unit = list(
+  response = list(
     dsib = units::as_units("in")
   ),
-  covariate_units = list(
+  covariates = list(
     dsob = units::as_units("in"),
     rc = units::as_units("ft/ft")
   ),
@@ -32,10 +32,10 @@ dsib <- FixedEffectsSet(
 )
 
 dui1 <- FixedEffectsSet(
-  response_unit = list(
+  response = list(
     dui1 = units::as_units("in")
   ),
-  covariate_units = list(
+  covariates = list(
     dsob = units::as_units("in"),
     rc = units::as_units("ft/ft")
   ),
@@ -49,10 +49,10 @@ dui1 <- FixedEffectsSet(
 )
 
 vsio <- FixedEffectsSet(
-  response_unit = list(
+  response = list(
     vsio = units::as_units("ft^3")
   ),
-  covariate_units = list(
+  covariates = list(
     hso = units::as_units("ft"),
     dsob = units::as_units("in"),
     hsv = units::as_units("ft")

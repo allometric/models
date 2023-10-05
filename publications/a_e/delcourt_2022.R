@@ -26,15 +26,15 @@ regions <- unique(params$region)
 responses <- unique(params$response_name)
 
 for(response_name in responses) {
-  response_unit <- list()
-  response_unit[[response_name]] <- units::as_units("kg")
+  response <- list()
+  response[[response_name]] <- units::as_units("kg")
   spec <- params %>% dplyr::filter(
     response_name == {{response_name}}
   )
 
   set <- FixedEffectsSet(
-    response_unit = response_unit,
-    covariate_units = list(
+    response = response,
+    covariates = list(
       dsob = units::as_units("cm")
     ),
     parameter_names = c("a", "b"),

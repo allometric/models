@@ -18,10 +18,10 @@ bruce_1974 <- Publication(
 )
 
 small <- FixedEffectsModel(
-  response_unit = list(
+  response = list(
     vsia = units::as_units("ft^3")
   ),
-  covariate_units = list(
+  covariates = list(
     hst = units::as_units("ft"),
     dsob = units::as_units("in")
   ),
@@ -42,10 +42,10 @@ small <- FixedEffectsModel(
 )
 
 large <- FixedEffectsModel(
-  response_unit = list(
+  response = list(
     vsia = units::as_units("ft^3")
   ),
-  covariate_units = list(
+  covariates = list(
     hst = units::as_units("ft"),
     dsob = units::as_units("in")
   ),

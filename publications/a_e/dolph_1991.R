@@ -21,10 +21,10 @@ dolph_1991 <- Publication(
 # starting with "Equation 3 expresses...", therefore only the height function
 # is made here.
 hst <- FixedEffectsModel(
-  response_unit = list(
+  response = list(
     hst = units::as_units("ft")
   ),
-  covariate_units = list(
+  covariates = list(
     hstix50 = units::as_units("ft"),
     atb = units::as_units("years")
   ),

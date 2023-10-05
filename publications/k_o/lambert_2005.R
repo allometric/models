@@ -57,10 +57,10 @@ diaht_response_funcs <- list(
   }
 )
 
-dia_covariate_units <- list(dsob = units::as_units("cm"))
-diaht_covariate_units <- list(dsob = units::as_units("cm"), hst = units::as_units("m"))
+dia_covariates <- list(dsob = units::as_units("cm"))
+diaht_covariates <- list(dsob = units::as_units("cm"), hst = units::as_units("m"))
 
-response_unit_defs <- list(
+response_defs <- list(
   wood = "bs",
   bark = "bk",
   branches = "bb",
@@ -68,9 +68,9 @@ response_unit_defs <- list(
 )
 
 construct_ung_set <- function(category, b_params, b_params_names,
-  covariate_units, response_funcs, na_genus) {
-  response_unit <- list()
-  response_unit[[response_unit_defs[[category]]]] <- units::as_units("kg")
+  covariates, response_funcs, na_genus) {
+  response <- list()
+  response[[response_defs[[category]]]] <- units::as_units("kg")
 
 
   parameter_names <- b_params_names[grepl(category, b_params_names, fixed=T)]
@@ -91,8 +91,8 @@ construct_ung_set <- function(category, b_params, b_params_names,
   }
 
   FixedEffectsSet(
-    response_unit = response_unit,
-    covariate_units = covariate_units,
+    response = response,
+    covariates = covariates,
     parameter_names = parameter_names,
     predict_fn = response_funcs[[category]],
     model_specifications = model_specifications
@@ -107,7 +107,7 @@ for(i in seq_along(dia_response_funcs)) {
     category,
     dia_b_params,
     dia_b_params_names,
-    dia_covariate_units,
+    dia_covariates,
     dia_response_funcs,
     na_genus = FALSE
   )
@@ -123,7 +123,7 @@ for(i in seq_along(dia_response_funcs)) {
     category,
     diaht_b_params,
     diaht_b_params_names,
-    diaht_covariate_units,
+    diaht_covariates,
     diaht_response_funcs,
     na_genus = FALSE
   )
@@ -139,7 +139,7 @@ for(i in seq_along(dia_response_funcs)) {
     category,
     dia_b_params,
     dia_b_params_names,
-    dia_covariate_units,
+    dia_covariates,
     dia_response_funcs,
     na_genus = TRUE
   )
@@ -155,7 +155,7 @@ for(i in seq_along(dia_response_funcs)) {
     category,
     diaht_b_params,
     diaht_b_params_names,
-    diaht_covariate_units,
+    diaht_covariates,
     diaht_response_funcs,
     na_genus = TRUE
   )

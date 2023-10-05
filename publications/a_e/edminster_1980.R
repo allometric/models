@@ -20,8 +20,8 @@ edminster_1980 <- Publication(
 
 # Table 1
 vsia <- FixedEffectsModel(
-  response_unit = list(vsia = units::as_units("ft^3")),
-  covariate_units = list(
+  response = list(vsia = units::as_units("ft^3")),
+  covariates = list(
     dsob = units::as_units("in"),
     hst = units::as_units("ft")
   ),
@@ -36,8 +36,8 @@ vsia <- FixedEffectsModel(
 
 # Table 2
 vsim <- FixedEffectsModel(
-  response_unit = list(vsim = units::as_units("ft^3")),
-  covariate_units = list(
+  response = list(vsim = units::as_units("ft^3")),
+  covariates = list(
     dsob = units::as_units("in"),
     hst = units::as_units("ft")
   ),

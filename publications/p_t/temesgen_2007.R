@@ -19,10 +19,10 @@ temesgen_2007 <- Publication(
 )
 
 eq4 <- FixedEffectsSet(
-  response_unit = list(
+  response = list(
     hst = units::as_units("m")
   ),
-  covariate_units = list(
+  covariates = list(
     dsob = units::as_units("cm")
   ),
   parameter_names = c("a", "b", "c"),

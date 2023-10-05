@@ -14,10 +14,10 @@ iffsc_2022 <- Publication(
 )
 
 pantropical <- FixedEffectsModel(
-  response_unit = list(
+  response = list(
     bt = units::as_units("kg")
   ),
-  covariate_units = list(
+  covariates = list(
     dsob = units::as_units("cm"),
     rwd = units::as_units("g / cm^3")
   ),
@@ -37,8 +37,8 @@ pantropical <- FixedEffectsModel(
 )
 
 cecropia_galaziovii <- FixedEffectsModel(
-  response_unit = list(bt = units::as_units("kg")),
-  covariate_units = list(
+  response = list(bt = units::as_units("kg")),
+  covariates = list(
     dsoc = units::as_units("cm"),
     hst = units::as_units("m")
   ),
@@ -59,8 +59,8 @@ cecropia_galaziovii <- FixedEffectsModel(
 )
 
 cyathea_delgadii <- FixedEffectsModel(
-  response_unit = list(bt = units::as_units("kg")),
-  covariate_units = list(
+  response = list(bt = units::as_units("kg")),
+  covariates = list(
     dsob = units::as_units("cm"),
     hst = units::as_units("m")
   ),
@@ -80,8 +80,8 @@ cyathea_delgadii <- FixedEffectsModel(
 )
 
 euterpe_edulis <- FixedEffectsModel(
-  response_unit = list(bt = units::as_units("kg")),
-  covariate_units = list(
+  response = list(bt = units::as_units("kg")),
+  covariates = list(
     dsob = units::as_units("cm"),
     hst = units::as_units("m")
   ),
@@ -105,10 +105,10 @@ euterpe_edulis <- FixedEffectsModel(
 
 # Eq 8.
 mixed_ombrophilous <- FixedEffectsModel(
-  response_unit = list(
+  response = list(
     bt = units::as_units("kg")
   ),
-  covariate_units = list(
+  covariates = list(
     dsob = units::as_units("cm"),
     rwd = units::as_units("g / cm^3")
   ),
@@ -127,10 +127,10 @@ mixed_ombrophilous <- FixedEffectsModel(
 )
 
 araucaria_angustifolia <- FixedEffectsModel(
-  response_unit = list(
+  response = list(
     bt = units::as_units("kg")
   ),
-  covariate_units = list(
+  covariates = list(
     dsob = units::as_units("cm"),
     rwd = units::as_units("g / cm^3")
   ),
@@ -151,10 +151,10 @@ araucaria_angustifolia <- FixedEffectsModel(
 )
 
 deciduous <- FixedEffectsModel(
-  response_unit = list(
+  response = list(
     bt = units::as_units("kg")
   ),
-  covariate_units = list(
+  covariates = list(
     dsob = units::as_units("cm"),
     rwd = units::as_units("g / cm^3")
   ),

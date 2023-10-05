@@ -49,20 +49,20 @@ for(eq_no in eq_nos) {
 
   if(eq_no %in% c(1, 2)) {
     set <- FixedEffectsSet(
-      response_unit = list(
+      response = list(
         hst = units::as_units("ft")
       ),
-      covariate_units = covt_units[[eq_no]],
+      covariates = covt_units[[eq_no]],
       parameter_names = param_names,
       predict_fn = predict_fn,
       model_specifications = model_specifications
     )
   } else {
     set <- FixedEffectsSet(
-      response_unit = list(
+      response = list(
         hst = units::as_units("ft")
       ),
-      covariate_units = covt_units[[eq_no]],
+      covariates = covt_units[[eq_no]],
       parameter_names = param_names,
       predict_fn = predict_fn,
       model_specifications = model_specifications,

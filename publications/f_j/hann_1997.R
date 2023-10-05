@@ -16,10 +16,10 @@ hann_1997 <- Publication(
 )
 
 dcl <- FixedEffectsSet(
-  response_unit = list(
+  response = list(
     dcl = units::as_units("ft")
   ),
-  covariate_units = list(
+  covariates = list(
     dsob = units::as_units("in"),
     hst = units::as_units("ft"),
     rc = units::as_units("ft / ft"),

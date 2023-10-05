@@ -15,10 +15,10 @@ hahn_1984 <- Publication(
 )
 
 hst <- FixedEffectsSet(
-  response_unit = list(
+  response = list(
     hst = units::as_units('ft')
   ),
-  covariate_units = list(
+  covariates = list(
     dsob = units::as_units('in'),
     hstix50 = units::as_units('ft'),
     d = units::as_units('in'),
@@ -36,10 +36,10 @@ hst <- FixedEffectsSet(
 )
 
 cuft <- FixedEffectsSet(
-  response_unit = list(
+  response = list(
     vsia = units::as_units('ft^3')
   ),
-  covariate_units = list(
+  covariates = list(
     dsob = units::as_units('in'),
     hst = units::as_units('ft')
   ),
@@ -51,10 +51,10 @@ cuft <- FixedEffectsSet(
 )
 
 bdft <- FixedEffectsSet(
-  response_unit = list(
+  response = list(
     vsia = units::as_units('board_foot')
   ),
-  covariate_units = list(
+  covariates = list(
     dsob = units::as_units('in'),
     hst = units::as_units('ft')
   ),
@@ -66,10 +66,10 @@ bdft <- FixedEffectsSet(
 )
 
 vui <- FixedEffectsSet(
-  response_unit = list(
+  response = list(
     vui = units::as_units('ft^3')
   ),
-  covariate_units = list(
+  covariates = list(
     dsob = units::as_units('in')
   ),
   parameter_names = c('s'),
@@ -80,10 +80,10 @@ vui <- FixedEffectsSet(
 )
 
 rsk <- FixedEffectsSet(
-  response_unit = list(
+  response = list(
     rsk = units::unitless
   ),
-  covariate_units = list(
+  covariates = list(
     dsob = units::as_units('in')
   ),
   parameter_names = c('b_0', 'b_1'),

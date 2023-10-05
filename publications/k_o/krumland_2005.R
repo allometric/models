@@ -19,10 +19,10 @@ krumland_2005 <- Publication(
 model_specifications <- load_parameter_frame("hstix_krumland_2005")
 
 krumland_2005_cr1_model_set <- FixedEffectsSet(
-  response_unit = list(
+  response = list(
     hstixi = units::as_units("ft")
   ),
-  covariate_units = list(
+  covariates = list(
     hst = units::as_units("ft"),
     atb = units::as_units("years"),
     ati = units::as_units("years")
@@ -37,10 +37,10 @@ krumland_2005_cr1_model_set <- FixedEffectsSet(
 )
 
 krumland_2005_cr2_model_set <- FixedEffectsSet(
-  response_unit = list(
+  response = list(
     hstixi = units::as_units("ft")
   ),
-  covariate_units = list(
+  covariates = list(
     hst = units::as_units("ft"),
     atb = units::as_units("years"),
     ati = units::as_units("years")
@@ -59,10 +59,10 @@ krumland_2005_cr2_model_set <- FixedEffectsSet(
 )
 
 krumland_2005_sh1_model_set <- FixedEffectsSet(
-  response_unit = list(
+  response = list(
     hstixi = units::as_units("ft")
   ),
-  covariate_units = list(
+  covariates = list(
     hst = units::as_units("ft"),
     atb = units::as_units("years"),
     ati = units::as_units("years")
@@ -78,10 +78,10 @@ krumland_2005_sh1_model_set <- FixedEffectsSet(
 )
 
 krumland_2005_sh2_model_set <- FixedEffectsSet(
-  response_unit = list(
+  response = list(
     hstixi = units::as_units("ft")
   ),
-  covariate_units = list(
+  covariates = list(
     hst = units::as_units("ft"),
     atb = units::as_units("years"),
     ati = units::as_units("years")
@@ -96,10 +96,10 @@ krumland_2005_sh2_model_set <- FixedEffectsSet(
 )
 
 krumland_2005_kp1_model_set <- FixedEffectsSet(
-  response_unit = list(
+  response = list(
     hstixi = units::as_units("ft")
   ),
-  covariate_units = list(
+  covariates = list(
     hst = units::as_units("ft"),
     atb = units::as_units("years"),
     ati = units::as_units("years")
@@ -115,10 +115,10 @@ krumland_2005_kp1_model_set <- FixedEffectsSet(
 )
 
 krumland_2005_lg1_model_set <- FixedEffectsSet(
-  response_unit = list(
+  response = list(
     hstixi = units::as_units("ft")
   ),
-  covariate_units = list(
+  covariates = list(
     hst = units::as_units("ft"),
     atb = units::as_units("years"),
     ati = units::as_units("years")

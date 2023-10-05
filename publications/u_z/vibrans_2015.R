@@ -19,10 +19,10 @@ vibrans_2015 <- Publication(
 )
 
 vsoa_species <- FixedEffectsSet(
-  response_unit = list(
+  response = list(
     vsoa = units::as_units("m^3")
   ),
-  covariate_units = list(
+  covariates = list(
     dsob = units::as_units("cm"),
     hst = units::as_units("m")
   ),
@@ -35,10 +35,10 @@ vsoa_species <- FixedEffectsSet(
 )
 
 vsoa_generics <- FixedEffectsSet(
-  response_unit = list(
+  response = list(
     vsoa = units::as_units("m^3")
   ),
-  covariate_units = list(
+  covariates = list(
     dsob = units::as_units("cm"),
     hst = units::as_units("m")
   ),

@@ -14,10 +14,10 @@ ritchie_1987 <- Publication(
 )
 
 rc_1 <- FixedEffectsSet(
-  response_unit = list(
+  response = list(
     rc = units::as_units("ft / ft")
   ),
-  covariate_units = list(
+  covariates = list(
     hst = units::as_units("ft"),
     ccfl = units::as_units("ft^2 / ft^2"),
     gs_s = units::as_units("ft^2 / acre"),
@@ -35,10 +35,10 @@ rc_1 <- FixedEffectsSet(
 )
 
 rc_2 <- FixedEffectsSet(
-  response_unit = list(
+  response = list(
     rc = units::as_units("ft / ft")
   ),
-  covariate_units = list(
+  covariates = list(
     hst = units::as_units("ft"),
     ccfl = units::as_units("ft^2 / ft^2"),
     gs_s = units::as_units("ft^2 / acre")
@@ -54,10 +54,10 @@ rc_2 <- FixedEffectsSet(
 )
 
 rc_3 <- FixedEffectsSet(
-  response_unit = list(
+  response = list(
     rc = units::as_units("ft / ft")
   ),
-  covariate_units = list(
+  covariates = list(
     hst = units::as_units("ft"),
     ccfl = units::as_units("ft^2 / ft^2"),
     gs_s = units::as_units("ft^2 / acre"),
@@ -74,10 +74,10 @@ rc_3 <- FixedEffectsSet(
 )
 
 rc_4 <- FixedEffectsSet(
-  response_unit = list(
+  response = list(
     rc = units::as_units("ft / ft")
   ),
-  covariate_units = list(
+  covariates = list(
     ccfl = units::as_units("ft^2 / ft^2")
   ),
   parameter_names = c("b_0", "b_2"),
@@ -91,10 +91,10 @@ rc_4 <- FixedEffectsSet(
 )
 
 rc_tanoak <- FixedEffectsModel(
-  response_unit = list(
+  response = list(
     rc = units::as_units("ft / ft")
   ),
-  covariate_units = list(
+  covariates = list(
     ccfl = units::as_units("ft^2 / ft^2")
   ),
   parameters = list(
@@ -110,10 +110,10 @@ rc_tanoak <- FixedEffectsModel(
 )
 
 rc_canyon_live_oak <- FixedEffectsModel(
-  response_unit = list(
+  response = list(
     rc = units::as_units("ft / ft")
   ),
-  covariate_units = list(
+  covariates = list(
     gs_s = units::as_units("ft^2 / acre")
   ),
   parameters = list(
@@ -127,10 +127,10 @@ rc_canyon_live_oak <- FixedEffectsModel(
 )
 
 rc_black_oak <- FixedEffectsModel(
-  response_unit = list(
+  response = list(
     rc = units::as_units("ft / ft")
   ),
-  covariate_units = list(
+  covariates = list(
     hst = units::as_units("ft"),
     dsob = units::as_units("in"),
     gs_s = units::as_units("ft^2 / acre")
@@ -147,10 +147,10 @@ rc_black_oak <- FixedEffectsModel(
 )
 
 rc_bigleaf_maple <- FixedEffectsModel(
-  response_unit = list(
+  response = list(
     rc = units::as_units("ft / ft")
   ),
-  covariate_units = list(
+  covariates = list(
     hst = units::as_units("ft"),
     ccfl = units::as_units("ft^2 / ft^2")
   ),

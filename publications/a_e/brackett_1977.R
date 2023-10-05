@@ -18,10 +18,10 @@ brackett_1977 <- Publication(
 model_specifications <- load_parameter_frame("vsa_brackett_1977")
 
 brackett_1977 <- add_set(brackett_1977, FixedEffectsSet(
-  response_unit = list(
+  response = list(
     vsia = units::as_units("ft3")
   ),
-  covariate_units = list(
+  covariates = list(
     dsob = units::as_units("in"),
     hst  = units::as_units("ft")
   ),

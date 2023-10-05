@@ -14,10 +14,10 @@ larsen_1985 <- Publication(
 )
 
 dsib <- FixedEffectsSet(
-  response_unit = list(
+  response = list(
     dsib = units::as_units("in")
   ),
-  covariate_units = list(
+  covariates = list(
     dsob = units::as_units("in")
   ),
   parameter_names = c(

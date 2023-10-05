@@ -15,10 +15,10 @@ fvs_2008 <- Publication(
 
 # Curtis-Arney functional form, 4.1.1a
 curtis_arney_not_df <- FixedEffectsSet(
-  response_unit = list(
+  response = list(
     hst = units::as_units("ft")
   ),
-  covariate_units = list(
+  covariates = list(
     dsob = units::as_units("in")
   ),
   parameter_names = c("p2", "p3", "p4"),
@@ -39,10 +39,10 @@ curtis_arney_not_df <- FixedEffectsSet(
 )
 
 curtis_arney_df <- FixedEffectsSet(
-  response_unit = list(
+  response = list(
     hst = units::as_units("ft")
   ),
-  covariate_units = list(
+  covariates = list(
     dsob = units::as_units("in")
   ),
   parameter_names = c("p2", "p3", "p4"),
@@ -62,10 +62,10 @@ curtis_arney_df <- FixedEffectsSet(
 
 # Eq. 4.1.2
 wykoff <- FixedEffectsSet(
-  response_unit = list(
+  response = list(
     hst = units::as_units("ft")
   ),
-  covariate_units = list(
+  covariates = list(
     dsob = units::as_units("in")
   ),
   parameter_names = c("b1", "b2"),
@@ -77,10 +77,10 @@ wykoff <- FixedEffectsSet(
 
 # Eq. 4.1.3. first group
 first_413 <- FixedEffectsSet(
-  response_unit = list(
+  response = list(
     hst = units::as_units("ft")
   ),
-  covariate_units = list(
+  covariates = list(
     dsob = units::as_units("in"),
     rc = units::as_units("ft/ft")
   ),
@@ -94,10 +94,10 @@ first_413 <- FixedEffectsSet(
 
 # Eq. 4.1.3. second group
 second_413 <- FixedEffectsSet(
-  response_unit = list(
+  response = list(
     hst = units::as_units("ft")
   ),
-  covariate_units = list(
+  covariates = list(
     dsob = units::as_units("in"),
     rc = units::as_units("ft/ft")
   ),
@@ -112,10 +112,10 @@ second_413 <- FixedEffectsSet(
 
 # Eq. 4.3.1.1. & 4.3.1.2.
 rc <- FixedEffectsSet(
-  response_unit = list(
+  response = list(
     rc = units::as_units("ft / ft")
   ),
-  covariate_units = list(
+  covariates = list(
     hst = units::as_units("ft"),
     gs_s = units::as_units("ft^2 / acre")
   ),

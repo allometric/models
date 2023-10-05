@@ -22,10 +22,10 @@ hibbs_2007 <- Publication(
 )
 
 dsih <- FixedEffectsModel(
-  response_unit = list(
+  response = list(
     dsih = units::as_units("in")
   ),
-  covariate_units = list(
+  covariates = list(
     dsob = units::as_units("in"),
     hst = units::as_units("ft"),
     hsd = units::as_units("in")

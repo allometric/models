@@ -19,10 +19,10 @@ zeide_2002 <- Publication(
 )
 
 normal <- FixedEffectsModel(
-  response_unit = list(
+  response = list(
     hst_s = units::as_units("ft")
   ),
-  covariate_units = list(
+  covariates = list(
     dsob_s = units::as_units("in")
   ),
   parameters = list(

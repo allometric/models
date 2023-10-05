@@ -18,10 +18,10 @@ cochran_1985 <- Publication(
 )
 
 hstix50 <- FixedEffectsModel(
-  response_unit = list(
+  response = list(
     hstix50 = units::as_units("ft")
   ),
-  covariate_units = list(
+  covariates = list(
     atb = units::as_units("years"),
     hst = units::as_units("ft")
   ),

@@ -16,10 +16,10 @@ chojnacky_1988 <- Publication(
 )
 
 vsoa_small <- FixedEffectsSet(
-  response_unit = list(
+  response = list(
     vsoa = units::as_units('ft^3')
   ),
-  covariate_units = list(
+  covariates = list(
     dsoc = units::as_units('in'),
     hst = units::as_units('ft')
   ),
@@ -32,10 +32,10 @@ vsoa_small <- FixedEffectsSet(
 )
 
 vsoa_large <- FixedEffectsSet(
-  response_unit = list(
+  response = list(
     vsoa = units::as_units('ft^3')
   ),
-  covariate_units = list(
+  covariates = list(
     dsoc = units::as_units('in'),
     hst = units::as_units('ft')
   ),

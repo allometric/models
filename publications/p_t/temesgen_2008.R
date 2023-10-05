@@ -25,10 +25,10 @@ temesgen_2008 <- Publication(
 )
 
 temesgen_2008 <- add_model(temesgen_2008, FixedEffectsModel(
-  response_unit = list(
+  response = list(
     hst = units::as_units("m")
   ),
-  covariate_units = list(
+  covariates = list(
     dsob = units::as_units("cm")
   ),
   parameters = list(
@@ -42,10 +42,10 @@ temesgen_2008 <- add_model(temesgen_2008, FixedEffectsModel(
 ))
 
 temesgen_2008 <- add_model(temesgen_2008, MixedEffectsModel(
-  response_unit = list(
+  response = list(
     hst = units::as_units("m")
   ),
-  covariate_units = list(
+  covariates = list(
     dsob = units::as_units("cm")
   ),
   parameters = list(
@@ -68,10 +68,10 @@ temesgen_2008 <- add_model(temesgen_2008, MixedEffectsModel(
 ))
 
 temesgen_2008 <- add_model(temesgen_2008, MixedEffectsModel(
-  response_unit = list(
+  response = list(
     hst = units::as_units("m")
   ),
-  covariate_units = list(
+  covariates = list(
     dsob = units::as_units("cm")
   ),
   parameters = list(
@@ -89,10 +89,10 @@ temesgen_2008 <- add_model(temesgen_2008, MixedEffectsModel(
 ))
 
 temesgen_2008 <- add_model(temesgen_2008, FixedEffectsModel(
-  response_unit = list(
+  response = list(
     hst = units::as_units("m")
   ),
-  covariate_units = list(
+  covariates = list(
     ccfl = units::as_units("m2 / ha"),
     gs_s = units::as_units("m2 / ha"),
     dsob = units::as_units("cm")
@@ -114,10 +114,10 @@ temesgen_2008 <- add_model(temesgen_2008, FixedEffectsModel(
 ))
 
 temesgen_2008 <- add_model(temesgen_2008, MixedEffectsModel(
-  response_unit = list(
+  response = list(
     hst = units::as_units("m")
   ),
-  covariate_units = list(
+  covariates = list(
     ccfl = units::as_units("m2 / ha"),
     gs_s = units::as_units("m2 / ha"),
     dsob = units::as_units("cm")
@@ -143,10 +143,10 @@ temesgen_2008 <- add_model(temesgen_2008, MixedEffectsModel(
 ))
 
 temesgen_2008 <- add_model(temesgen_2008, MixedEffectsModel(
-  response_unit = list(
+  response = list(
     hst = units::as_units("m")
   ),
-  covariate_units = list(
+  covariates = list(
     ccfl = units::as_units("m2 / ha"),
     gs_s = units::as_units("m2 / ha"),
     dsob = units::as_units("cm")

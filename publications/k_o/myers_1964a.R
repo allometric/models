@@ -18,12 +18,12 @@ myers_1964a <- Publication(
   )
 )
 
-covariate_units_hst <- list(
+covariates_hst <- list(
   dsob = units::as_units('in'),
   hst = units::as_units('ft')
 )
 
-covariate_units_hsm <- list(
+covariates_hsm <- list(
   dsob = units::as_units('in'),
   hsm = units::as_units('ft')
 )
@@ -32,10 +32,10 @@ parameter_names <- c('a', 'b')
 
 # Table 1
 vsom_cuft <- FixedEffectsSet(
-  response_unit = list(
+  response = list(
     vsom = units::as_units('ft^3')
   ),
-  covariate_units = covariate_units_hst,
+  covariates = covariates_hst,
   predict_fn = function(dsob, hst) {
     a + b * dsob^2 * hst
   },
@@ -49,10 +49,10 @@ vsom_cuft <- FixedEffectsSet(
 
 # Table 2
 vsom_cuft_2 <- FixedEffectsSet(
-  response_unit = list(
+  response = list(
     vsom = units::as_units('ft^3')
   ),
-  covariate_units = covariate_units_hst,
+  covariates = covariates_hst,
   predict_fn = function(dsob, hst) {
     a + b * dsob^2 * hst
   },
@@ -66,10 +66,10 @@ vsom_cuft_2 <- FixedEffectsSet(
 
 # Table 3
 rsvg_cuft <- FixedEffectsSet(
-  response_unit = list(
+  response = list(
     rsvg = units::as_units("ft^3 / ft^2")
   ),
-  covariate_units = covariate_units_hst,
+  covariates = covariates_hst,
   parameter_names = parameter_names,
   predict_fn = function(dsob, hst) {
     a * hst + b / dsob^2
@@ -83,10 +83,10 @@ rsvg_cuft <- FixedEffectsSet(
 
 # Table 4
 vsom_bdfts <- FixedEffectsSet(
-  response_unit = list(
+  response = list(
     vsom = units::as_units("board_foot")
   ),
-  covariate_units = covariate_units_hst,
+  covariates = covariates_hst,
   parameter_names = parameter_names,
   predict_fn = function(dsob, hst) {
     a + b * dsob^2 * hst
@@ -101,10 +101,10 @@ vsom_bdfts <- FixedEffectsSet(
 
 # Table 5
 rsvg_bdfts <- FixedEffectsSet(
-  response_unit = list(
+  response = list(
     rsvg = units::as_units("board_foot / ft^2")
   ),
-  covariate_units = covariate_units_hst,
+  covariates = covariates_hst,
   parameter_names = parameter_names,
   predict_fn = function(dsob, hst) {
     a * hst + b / dsob^2
@@ -119,10 +119,10 @@ rsvg_bdfts <- FixedEffectsSet(
 
 # Table 6
 vsom_bdfts_logs <- FixedEffectsSet(
-  response_unit = list(
+  response = list(
     vsom = units::as_units("board_foot")
   ),
-  covariate_units = covariate_units_hsm,
+  covariates = covariates_hsm,
   parameter_names = parameter_names,
   predict_fn = function(dsob, hsm) {
     a + b * dsob^2 * hsm
@@ -140,10 +140,10 @@ vsom_bdfts_logs <- FixedEffectsSet(
 
 # Table 7
 rsvg_bdfts_logs <- FixedEffectsSet(
-  response_unit = list(
+  response = list(
     rsvg = units::as_units("board_foot / ft^2")
   ),
-  covariate_units = covariate_units_hsm,
+  covariates = covariates_hsm,
   parameter_names = parameter_names,
   predict_fn = function(dsob, hsm) {
     a * hsm + b / dsob^2
@@ -161,10 +161,10 @@ rsvg_bdfts_logs <- FixedEffectsSet(
 
 # Table 8
 vsom_bdfti <- FixedEffectsSet(
-  response_unit = list(
+  response = list(
     vsom = units::as_units("board_foot")
   ),
-  covariate_units = covariate_units_hst,
+  covariates = covariates_hst,
   parameter_names = parameter_names,
   predict_fn = function(dsob, hst) {
     a + b * dsob^2 * hst
@@ -179,10 +179,10 @@ vsom_bdfti <- FixedEffectsSet(
 
 # Table 9
 rsvg_bdfti <- FixedEffectsSet(
-  response_unit = list(
+  response = list(
     rsvg = units::as_units("board_foot / ft^2")
   ),
-  covariate_units = covariate_units_hst,
+  covariates = covariates_hst,
   parameter_names = parameter_names,
   predict_fn = function(dsob, hst) {
     a * hst + b / dsob^2
@@ -197,10 +197,10 @@ rsvg_bdfti <- FixedEffectsSet(
 
 # Table 10
 vsom_bdfti_logs <- FixedEffectsSet(
-  response_unit = list(
+  response = list(
     vsom = units::as_units("board_foot")
   ),
-  covariate_units = covariate_units_hsm,
+  covariates = covariates_hsm,
   parameter_names = parameter_names,
   predict_fn = function(dsob, hsm) {
     a + b * dsob^2 * hsm
@@ -218,10 +218,10 @@ vsom_bdfti_logs <- FixedEffectsSet(
 
 # Table 11
 rsvg_bdfti_logs <- FixedEffectsSet(
-  response_unit = list(
+  response = list(
     rsvg = units::as_units("board_foot / ft^2")
   ),
-  covariate_units = covariate_units_hsm,
+  covariates = covariates_hsm,
   parameter_names = parameter_names,
   predict_fn = function(dsob, hsm) {
     a * hsm + b / dsob^2

@@ -20,10 +20,10 @@ curtis_1974 <- Publication(
 )
 
 eq3_lte100 <- FixedEffectsModel(
-  response_unit = list(
+  response = list(
     hstix100 = units::as_units("ft")
   ),
-  covariate_units = list(
+  covariates = list(
     hst = units::as_units("ft"),
     atb = units::as_units("years")
   ),
@@ -44,10 +44,10 @@ eq3_lte100 <- FixedEffectsModel(
 )
 
 eq3_gt100 <- FixedEffectsModel(
-  response_unit = list(
+  response = list(
     hstix100 = units::as_units("ft")
   ),
-  covariate_units = list(
+  covariates = list(
     hst = units::as_units("ft"),
     atb = units::as_units("years")
   ),

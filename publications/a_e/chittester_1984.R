@@ -18,10 +18,10 @@ chittester_1984 <- Publication(
 )
 
 cvts <- FixedEffectsModel(
-  response_unit = list(
+  response = list(
     vsia = units::as_units("ft^3")
   ),
-  covariate_units = list(
+  covariates = list(
     dsob = units::as_units("in"),
     hst = units::as_units("ft")
   ),
@@ -38,10 +38,10 @@ cvts <- FixedEffectsModel(
 )
 
 cv4 <- FixedEffectsModel(
-  response_unit = list(
+  response = list(
     vsim = units::as_units("ft^3")
   ),
-  covariate_units = list(
+  covariates = list(
     vsoa = units::as_units("ft^3"),
     dsob = units::as_units("in")
   ),

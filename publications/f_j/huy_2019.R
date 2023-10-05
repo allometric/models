@@ -20,10 +20,10 @@ huy_2019 <- Publication(
 )
 
 bs_huy_2019_1 <- FixedEffectsSet(
-  response_unit = list(
+  response = list(
     bs = units::as_units("kg")
   ),
-  covariate_units = list(
+  covariates = list(
     dsob = units::as_units("cm"),
     hst = units::as_units("m"),
     es = units::as_units("g/cm^3")
@@ -36,10 +36,10 @@ bs_huy_2019_1 <- FixedEffectsSet(
 )
 
 bs_huy_2019_2 <- FixedEffectsSet(
-  response_unit = list(
+  response = list(
     bs = units::as_units("kg")
   ),
-  covariate_units = list(
+  covariates = list(
     dsob = units::as_units("cm")
   ),
   parameter_names = c("a_1", "b_11"),
@@ -50,10 +50,10 @@ bs_huy_2019_2 <- FixedEffectsSet(
 )
 
 bb_huy_2019 <- FixedEffectsSet(
-  response_unit = list(
+  response = list(
     bb = units::as_units("kg")
   ),
-  covariate_units = list(
+  covariates = list(
     dsob = units::as_units("cm")
   ),
   parameter_names = c("a_2", "b_21"),
@@ -64,10 +64,10 @@ bb_huy_2019 <- FixedEffectsSet(
 )
 
 bf_huy_2019 <- FixedEffectsSet(
-  response_unit = list(
+  response = list(
     bf = units::as_units("kg")
   ),
-  covariate_units = list(
+  covariates = list(
     dsob = units::as_units("cm")
   ),
   parameter_names = c("a_3", "b_31"),
@@ -78,10 +78,10 @@ bf_huy_2019 <- FixedEffectsSet(
 )
 
 bk_huy_2019 <- FixedEffectsSet(
-  response_unit = list(
+  response = list(
     bk = units::as_units("kg")
   ),
-  covariate_units = list(
+  covariates = list(
     dsob = units::as_units("cm")
   ),
   parameter_names = c("a_4", "b_41"),

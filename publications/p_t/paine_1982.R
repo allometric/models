@@ -15,10 +15,10 @@ paine_1982 <- Publication(
 )
 
 dcm <- FixedEffectsSet(
-  response_unit = list(
+  response = list(
     dcm = units::as_units("feet")
   ),
-  covariate_units = list(
+  covariates = list(
     dsob = units::as_units("in")
   ),
   parameter_names = c(

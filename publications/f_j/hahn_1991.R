@@ -19,8 +19,8 @@ hahn_1991 <- Publication(
 )
 
 cuvol <- FixedEffectsSet(
-  response_unit = list(vsia = units::as_units("ft^3")),
-  covariate_units = list(
+  response = list(vsia = units::as_units("ft^3")),
+  covariates = list(
     hstix50 = units::as_units("ft"),
     dsob = units::as_units("in")
   ),
@@ -35,8 +35,8 @@ cuvol <- FixedEffectsSet(
 )
 
 bdft <- FixedEffectsSet(
-  response_unit = list(vsia = units::as_units("board_foot")),
-  covariate_units = list(
+  response = list(vsia = units::as_units("board_foot")),
+  covariates = list(
     hstix50 = units::as_units("ft"),
     dsob = units::as_units("in")
   ),

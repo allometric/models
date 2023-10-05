@@ -17,10 +17,10 @@ harrington_1986 <- Publication(
 )
 
 hstix20 <- FixedEffectsModel(
-  response_unit = list(
+  response = list(
     hstix = units::as_units("ft")
   ),
-  covariate_units = list(
+  covariates = list(
     hst = units::as_units("ft"),
     atb = units::as_units("years")
   ),

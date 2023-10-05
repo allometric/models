@@ -17,10 +17,10 @@ nunes_2022 <- Publication(
 )
 
 hcl <- FixedEffectsSet(
-  response_unit = list(
+  response = list(
     hcl = units::as_units("m")
   ),
-  covariate_units = list(
+  covariates = list(
     hst = units::as_units("m"),
     en  = units::as_units("ha^-1") # TODO look at defining units for trees per hectare and acre, etc
   ),
@@ -32,10 +32,10 @@ hcl <- FixedEffectsSet(
 )
 
 dc <- FixedEffectsSet(
-  response_unit = list(
+  response = list(
     dc = units::as_units("m")
   ),
-  covariate_units = list(
+  covariates = list(
     dsob = units::as_units("cm"),
     en = units::as_units("ha^-1") # TODO look at defining units for trees per hectare
   ),

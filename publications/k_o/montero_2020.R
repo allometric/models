@@ -15,10 +15,10 @@ montero_2020 <- Publication(
 all_params <- load_parameter_frame("montero_2020")
 
 hht_polynomial <- FixedEffectsSet(
-  response_unit = list(
+  response = list(
     "hht" = units::as_units("m")
   ),
-  covariate_units = list(
+  covariates = list(
     "ah" = units::as_units("years")
   ),
   parameter_names = c("c1", "c2", "c3"),
@@ -31,10 +31,10 @@ hht_polynomial <- FixedEffectsSet(
 )
 
 hht_power <- FixedEffectsSet(
-  response_unit = list(
+  response = list(
     "hht" = units::as_units("m")
   ),
-  covariate_units = list(
+  covariates = list(
     "ah" = units::as_units("years")
   ),
   parameter_names = c("c1", "c2"),
@@ -47,10 +47,10 @@ hht_power <- FixedEffectsSet(
 )
 
 dh_polynomial <- FixedEffectsSet(
-  response_unit = list(
+  response = list(
     "dh" = units::as_units("mm")
   ),
-  covariate_units = list(
+  covariates = list(
     "ah" = units::as_units("years")
   ),
   parameter_names = c("c1", "c2", "c3"),
@@ -63,10 +63,10 @@ dh_polynomial <- FixedEffectsSet(
 )
 
 dh_power <- FixedEffectsSet(
-  response_unit = list(
+  response = list(
     "dh" = units::as_units("mm")
   ),
-  covariate_units = list(
+  covariates = list(
     "ah" = units::as_units("years")
   ),
   parameter_names = c("c1", "c2"),
@@ -79,10 +79,10 @@ dh_power <- FixedEffectsSet(
 )
 
 bh_p <- FixedEffectsSet(
-  response_unit = list(
+  response = list(
     "bh_p" = units::as_units("Mg / ha")
   ),
-  covariate_units = list(
+  covariates = list(
     "rv_p" = units::as_units("m^2 / m^2"),
     "hht_p" = units::as_units("dm")
   ),
@@ -96,10 +96,10 @@ bh_p <- FixedEffectsSet(
 )
 
 inc_bh_p_acos <- FixedEffectsSet(
-  response_unit = list(
+  response = list(
     "i_bh_p" = units::as_units("Mg / ha / year")
   ),
-  covariate_units = list(
+  covariates = list(
     "rv_p" = units::as_units("m^2 / m^2"),
     "hht_p" = units::as_units("dm")
   ),
@@ -113,10 +113,10 @@ inc_bh_p_acos <- FixedEffectsSet(
 )
 
 inc_bh_p_exp <- FixedEffectsSet(
-  response_unit = list(
+  response = list(
     "i_bh_p" = units::as_units("Mg / ha / year")
   ),
-  covariate_units = list(
+  covariates = list(
     "rv_p" = units::as_units("m^2 / m^2"),
     "hht_p" = units::as_units("dm")
   ),
@@ -130,10 +130,10 @@ inc_bh_p_exp <- FixedEffectsSet(
 )
 
 bh_p_power <- FixedEffectsSet(
-  response_unit = list(
+  response = list(
     "i_bh_p" = units::as_units("Mg / ha")
   ),
-  covariate_units = list(
+  covariates = list(
     "ah_p" = units::as_units("years")
   ),
   parameter_names = c("c1", "c2"),

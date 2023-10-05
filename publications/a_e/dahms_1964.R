@@ -18,10 +18,10 @@ dahms_1964 <- Publication(
 )
 
 hstix100 <- FixedEffectsModel(
-  response_unit = list(
+  response = list(
     hstix100 = units::as_units("ft")
   ),
-  covariate_units = list(
+  covariates = list(
     hst = units::as_units("ft"),
     att = units::as_units("years")
   ),
