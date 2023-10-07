@@ -91,7 +91,7 @@ pantropical_model <- FixedEffectsModel(
   predict_fn = function(dsob) {
     a * (1 - exp(-b * dsob^c))
   },
-  descriptors = pantropical_frame[, "country"]
+  descriptors = unique(pantropical_frame$country[[1]])
 )
 
 # Unfortunately, Feldpascuh et al. do not specify the source of the biomass
