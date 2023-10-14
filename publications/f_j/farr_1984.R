@@ -15,7 +15,7 @@ farr_1984 <- Publication(
   )
 )
 
-pisi.hstix50 <- FixedEffectsModel(
+pisi_hstix50 <- FixedEffectsModel(
   response_unit = list(
     hstix50 = units::as_units("ft")
   ),
@@ -54,7 +54,7 @@ pisi.hstix50 <- FixedEffectsModel(
   )
 )
 
-tshe.hstix50 <- FixedEffectsModel(
+tshe_hstix50 <- FixedEffectsModel(
   response_unit = list(
     hstix50 = units::as_units("ft")
   ),
@@ -95,5 +95,5 @@ tshe.hstix50 <- FixedEffectsModel(
 )
 
 farr_1984 <- farr_1984 %>%
-  add_model(pisi.hstix50) %>%
-  add_model(tshe.hstix50)
+  add_model(pisi_hstix50) %>%
+  add_model(tshe_hstix50)

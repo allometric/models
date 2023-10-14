@@ -42,7 +42,8 @@ dsih <- FixedEffectsModel(
     z <- hsd / hst
     p <- hst / 4.5
     x <- (1 - sqrt(z)) / (1 - sqrt(p))
-    a_1 * dsob^a_2 * x^(a_3 * (1.364409 * dsob^(1 / 3) * exp(a_4 * z) + exp(a_5 * (dsob / hst)^a_6 * z)))
+    a_1 * dsob^a_2 * x^(a_3 * (1.364409 * dsob^(1 / 3) * exp(a_4 * z) +
+      exp(a_5 * (dsob / hst)^a_6 * z)))
   }
 )
 

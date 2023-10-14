@@ -17,7 +17,7 @@ cochran_1979b <- Publication(
   )
 )
 
-hstix.df <- FixedEffectsModel(
+hstix_df <- FixedEffectsModel(
   response_unit = list(
     hstix50 = units::as_units("ft")
   ),
@@ -42,4 +42,4 @@ hstix.df <- FixedEffectsModel(
 )
 
 cochran_1979b <- cochran_1979b %>%
-  add_model(hstix.df)
+  add_model(hstix_df)

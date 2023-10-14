@@ -65,7 +65,8 @@ rc_3 <- FixedEffectsSet(
   ),
   parameter_names = c("b_0", "b_2", "b_3", "b_4"),
   predict_fn = function(hst, ccfl, gs_s, dsob) {
-    1 - ((1) / (1 + exp(b_0 + b_2 * ccfl + b_3 * log(gs_s) + b_4 * (dsob / hst))))
+    1 - ((1) / (1 + exp(b_0 + b_2 * ccfl + b_3 * log(gs_s) +
+      b_4 * (dsob / hst))))
   },
   model_specifications = load_parameter_frame("rc_ritchie_1987_3"),
   covariate_definitions = list(
@@ -103,7 +104,11 @@ rc_tanoak <- FixedEffectsModel(
   predict_fn = function(ccfl) {
     1 - ((1) / (1 + exp(b_2 * ccfl)))
   },
-  descriptors = list(family = "Fagaceae", genus = "Notholithocarpus", species = "densiflorus"),
+  descriptors = list(
+    family = "Fagaceae",
+    genus = "Notholithocarpus",
+    species = "densiflorus"
+  ),
   covariate_definitions = list(
     ccfl = "crown competition factor of large trees"
   )
@@ -123,7 +128,11 @@ rc_canyon_live_oak <- FixedEffectsModel(
   predict_fn = function(gs_s) {
     1 - ((1) / (1 + exp(b_0 + b_3 * log(gs_s))))
   },
-  descriptors = list(family = "Fagaceae", genus = "Quercus", species = "chrysolepis")
+  descriptors = list(
+    family = "Fagaceae",
+    genus = "Quercus",
+    species = "chrysolepis"
+  )
 )
 
 rc_black_oak <- FixedEffectsModel(
@@ -143,7 +152,11 @@ rc_black_oak <- FixedEffectsModel(
   predict_fn = function(dsob, hst, gs_s) {
     1 - ((1) / (1 + exp(b_0 + b_3 * log(gs_s) + b_4 * (dsob / hst))))
   },
-  descriptors = list(family = "Fagaceae", genus = "Quercus", species = "kelloggii")
+  descriptors = list(
+    family = "Fagaceae",
+    genus = "Quercus",
+    species = "kelloggii"
+  )
 )
 
 rc_bigleaf_maple <- FixedEffectsModel(
@@ -162,7 +175,11 @@ rc_bigleaf_maple <- FixedEffectsModel(
   predict_fn = function(hst, ccfl) {
     1 - ((1) / (1 + exp(b_0 + b_1 * hst + b_2 * ccfl)))
   },
-  descriptors = list(family = "Fagaceae", genus = "Quercus", species = "kelloggii"),
+  descriptors = list(
+    family = "Fagaceae",
+    genus = "Quercus",
+    species = "kelloggii"
+  ),
   covariate_definitions = list(
     ccfl = "crown competition factor of large trees"
   )

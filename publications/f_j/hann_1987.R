@@ -29,7 +29,8 @@ hstix50_psme <- FixedEffectsModel(
     b_4 = -0.000133377
   ),
   predict_fn = function(hst, atb) {
-    4.5 + (hst - 4.5) * exp(b_1 * (atb - 50) + b_2 * (atb - 50)^2 + b_3 * (atb - 50) * log(hst - 4.5) + b_4 * (atb - 50)^2 * log(hst - 4.5))
+    4.5 + (hst - 4.5) * exp(b_1 * (atb - 50) + b_2 * (atb - 50)^2 +
+      b_3 * (atb - 50) * log(hst - 4.5) + b_4 * (atb - 50)^2 * log(hst - 4.5))
   },
   descriptors = list(
     family = "Pinaceae",
@@ -53,7 +54,8 @@ hstix50_pipo <- FixedEffectsModel(
     b_4 = -0.0000718058
   ),
   predict_fn = function(hst, atb) {
-    4.5 + (hst - 4.5) * exp(b_1 * (atb - 50) + b_2 * (atb - 50)^2 + b_3 * (atb - 50) * log(hst - 4.5) + b_4 * (atb - 50)^2 * log(hst - 4.5))
+    4.5 + (hst - 4.5) * exp(b_1 * (atb - 50) + b_2 * (atb - 50)^2 +
+      b_3 * (atb - 50) * log(hst - 4.5) + b_4 * (atb - 50)^2 * log(hst - 4.5))
   },
   descriptors = list(
     family = "Pinaceae",

@@ -85,7 +85,7 @@ temesgen_2008 <- add_model(temesgen_2008, MixedEffectsModel(
   predict_fn = function(dsob) {
     1.37 + (beta_0 + b_0_i) * (1 - exp(beta_1 * dsob)^(beta_2 + b_2_i))
   },
-  fixed_only = T
+  fixed_only = TRUE
 ))
 
 temesgen_2008 <- add_model(temesgen_2008, FixedEffectsModel(
@@ -136,7 +136,7 @@ temesgen_2008 <- add_model(temesgen_2008, MixedEffectsModel(
     1.37 + (beta_00 + beta_01 * ccfl + beta_02 * gs_s + b_i) *
       (1 - exp(beta_1 * dsob)^beta_2)
   },
-  fixed_only = T,
+  fixed_only = TRUE,
   covariate_definitions = list(
     ccfl = "crown competition factor of large trees"
   )

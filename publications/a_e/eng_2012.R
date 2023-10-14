@@ -15,22 +15,36 @@ eng_2012 <- Publication(
   )
 )
 
-params <- load_parameter_frame('hst_eng_2012')
+params <- load_parameter_frame("hst_eng_2012")
 
 predict_fns <- list(
-  function(dsob) {4.5 + exp(a + b * dsob^c)},
-  function(dsob) {a * (1 - exp(b * dsob^c))},
-  function(asc, dsob) {a_0 + a_1 * asc + b * dsob^c},
-  function(asc, rc, dsob) {4.5 + exp(a_0 + a_1 * asc + a_2 * rc + b * dsob^c)}
+  function(dsob) {
+    4.5 + exp(a + b * dsob^c)
+  },
+  function(dsob) {
+    a * (1 - exp(b * dsob^c))
+  },
+  function(asc, dsob) {
+    a_0 + a_1 * asc + b * dsob^c
+  },
+  function(asc, rc, dsob) {
+    4.5 + exp(a_0 + a_1 * asc + a_2 * rc + b * dsob^c)
+  }
 )
 
-asc_description <- list(asc = "Aggregated site class, 1 denotes site class II or better, 0 denotes site class III or worse.")
+asc_description <- list(
+  asc = "Aggregated site class, 1 denotes site class II or better, 0 denotes site class III or worse."
+)
 
 covt_units <- list(
   list(dsob = units::as_units("in")),
   list(dsob = units::as_units("in")),
   list(asc = units::unitless, dsob = units::as_units("in")),
-  list(asc = units::unitless, rc = units::as_units("ft / ft"), dsob = units::as_units("in"))
+  list(
+    asc = units::unitless,
+    rc = units::as_units("ft / ft"),
+    dsob = units::as_units("in")
+  )
 )
 
 eq_nos <- unique(params$eq_no)

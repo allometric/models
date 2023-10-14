@@ -34,7 +34,8 @@ hstix50 <- FixedEffectsModel(
     f = 0.000197693
   ),
   predict_fn = function(hst, atb) {
-    4.5 + 2500 / ((atb^2 / (hst - 4.5) + a + b * atb + c * atb^2) / (d + e * atb + f * atb^2))
+    4.5 + 2500 / ((atb^2 / (hst - 4.5) + a + b * atb + c * atb^2) /
+      (d + e * atb + f * atb^2))
   }
 )
 

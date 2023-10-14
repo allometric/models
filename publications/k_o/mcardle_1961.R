@@ -37,7 +37,7 @@ specifications <- tibble::tibble(
   d = -2.66
 )
 
-hstix.df <- FixedEffectsSet(
+hstix_df <- FixedEffectsSet(
   response_unit = list(
     hstix50 = units::as_units("ft")
   ),
@@ -53,4 +53,4 @@ hstix.df <- FixedEffectsSet(
 )
 
 mcardle_1961 <- mcardle_1961 %>%
-  add_set(hstix.df)
+  add_set(hstix_df)

@@ -57,6 +57,8 @@ eq_21 <- FixedEffectsModel(
   }
 )
 
+# The authors transformed the parameter estimates away from eq. 13, so I use
+# a-f as parameter names
 eq_22 <- FixedEffectsModel(
   response_unit = list(
     vsio = units::as_units("m^3")
@@ -66,7 +68,7 @@ eq_22 <- FixedEffectsModel(
     hso = units::as_units("m"),
     hsdop67 = units::as_units("m")
   ),
-  parameters = list( # The authors transformed the parameter estimates away from eq. 13, so I use a-f as parameter names
+  parameters = list( 
     k = 7.854e-5,
     a = 0.0067803,
     b = -0.042807,

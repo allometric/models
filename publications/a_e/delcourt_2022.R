@@ -20,12 +20,12 @@ delcourt_2022 <- Publication(
   )
 )
 
-params <- load_parameter_frame('b_delcourt_2022')
+params <- load_parameter_frame("b_delcourt_2022")
 
 regions <- unique(params$region)
 responses <- unique(params$response_name)
 
-for(response_name in responses) {
+for (response_name in responses) {
   response_unit <- list()
   response_unit[[response_name]] <- units::as_units("kg")
   spec <- params %>% dplyr::filter(
@@ -46,4 +46,3 @@ for(response_name in responses) {
 
   delcourt_2022 <- delcourt_2022 %>% add_set(set)
 }
-

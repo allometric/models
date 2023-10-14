@@ -33,7 +33,7 @@ hst <- FixedEffectsModel(
   ),
   predict_fn = function(hstix100, atb)  {
     hstix100 * (1 - exp(-(c + d *hstix100) * atb))^f /
-    (1 - exp(-(c+ d * S) * 100))
+      (1 - exp(-(c+ d * S) * 100))
   }
 )
 
