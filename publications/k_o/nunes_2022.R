@@ -22,7 +22,7 @@ hcl <- FixedEffectsSet(
   ),
   covariates = list(
     hst = units::as_units("m"),
-    en  = units::as_units("ha^-1") # TODO look at defining units for trees per hectare and acre, etc
+    en  = units::as_units("ha^-1")
   ),
   parameter_names = c("a0", "a1"),
   predict_fn = function(hst, en) {
@@ -37,7 +37,7 @@ dc <- FixedEffectsSet(
   ),
   covariates = list(
     dsob = units::as_units("cm"),
-    en = units::as_units("ha^-1") # TODO look at defining units for trees per hectare
+    en = units::as_units("ha^-1")
   ),
   parameter_names = c("b0", "b1", "b2"),
   predict_fn = function(dsob, en) {

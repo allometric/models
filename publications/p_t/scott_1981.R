@@ -10,42 +10,42 @@ scott_1981 <- Publication(
     doi = "https://doi.org/10.2737/NE-RN-304"
   ),
   descriptors = list(
-    country = 'US',
+    country = "US",
     region = c(
-      'US-TN', 'US-OH', 'US-WV', 'US-MD', 'US-DE', 'US-PA', 'US-NJ', 'US-NY',
-      'US-CT', 'US-RI', 'US-MA', 'US-VT', 'US-NH', 'US-ME'
+      "US-TN", "US-OH", "US-WV", "US-MD", "US-DE", "US-PA", "US-NJ", "US-NY",
+      "US-CT", "US-RI", "US-MA", "US-VT", "US-NH", "US-ME"
     )
   )
 )
 
 vsm_spc <- FixedEffectsSet(
-  response = list(
-    vsia = units::as_units('ft^3')
+  response_unit = list(
+    vsia = units::as_units("ft^3")
   ),
-  covariates = list(
-    dsob = units::as_units('in'),
-    hsm = units::as_units('ft')
+  covariate_units = list(
+    dsob = units::as_units("in"),
+    hsm = units::as_units("ft")
   ),
-  parameter_names = c('b_0', 'b_1', 'b_2', 'b_3', 'b_4', 'b_5'),
+  parameter_names = c("b_0", "b_1", "b_2", "b_3", "b_4", "b_5"),
   predict_fn = function(dsob, hsm) {
     b_0 + b_1 * dsob^b_2 + b_3 * dsob^(b_4) * hsm^b_5
   },
-  model_specifications = load_parameter_frame('vsm_scott_1981_1')
+  model_specifications = load_parameter_frame("vsm_scott_1981_1")
 )
 
 vsm_grp <- FixedEffectsSet(
-  response = list(
-    vsia = units::as_units('ft^3')
+  response_unit = list(
+    vsia = units::as_units("ft^3")
   ),
-  covariates = list(
-    dsob = units::as_units('in'),
-    hsm = units::as_units('ft')
+  covariate_units = list(
+    dsob = units::as_units("in"),
+    hsm = units::as_units("ft")
   ),
-  parameter_names = c('b_0', 'b_1', 'b_2', 'b_3', 'b_4', 'b_5'),
+  parameter_names = c("b_0", "b_1", "b_2", "b_3", "b_4", "b_5"),
   predict_fn = function(dsob, hsm) {
     b_0 + b_1 * dsob^b_2 + b_3 * dsob^(b_4) * hsm^b_5
   },
-  model_specifications = load_parameter_frame('vsm_scott_1981_2')
+  model_specifications = load_parameter_frame("vsm_scott_1981_2")
 )
 
 

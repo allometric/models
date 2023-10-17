@@ -45,5 +45,5 @@ hstix50 <- FixedEffectsModel(
   }
 )
 
-cochran_1985 <- cochran_1985 %>% 
+cochran_1985 <- cochran_1985 %>%
   add_model(hstix50)

@@ -14,8 +14,8 @@ cochran_1979a <- Publication(
   )
 )
 
-hstix50.wf <- FixedEffectsModel(
-  response = list(
+hstix50_wf <- FixedEffectsModel(
+  response_unit = list(
     hstix50 = units::as_units("ft")
   ),
   covariates = list(
@@ -33,13 +33,13 @@ hstix50.wf <- FixedEffectsModel(
     h = 0.001762,
     i = -0.0000054,
     j = 0.0000002046,
-    k = - 0.000000000000404
-
+    k = -0.000000000000404
   ),
   predict_fn = function(hst, atb) {
     log_atb <- log(atb)
     x1 <- a + b * log_atb + c * log_atb^2 + d * log_atb^9 + e * log_atb
-    x2 <- f + g * log_atb + h * log_atb^4 + i * log_atb^9 + j * log_atb^11 + k * log_atb^18
+    x2 <- f + g * log_atb + h * log_atb^4 + i * log_atb^9 + j * log_atb^11 +
+      k * log_atb^18
 
     (hst - 4.5) * exp(x1) - exp(x1) * exp(x2) + 89.43
   },
@@ -50,11 +50,11 @@ hstix50.wf <- FixedEffectsModel(
   )
 )
 
-hstix50.gf <- hstix50.wf
-descriptors(hstix50.gf) <- tibble::tibble(
+hstix50_gf <- hstix50_wf
+descriptors(hstix50_gf) <- tibble::tibble(
   family = "Pinaceae", genus = "Abies", species = "grandis"
 )
 
 cochran_1979a <- cochran_1979a %>%
-  add_model(hstix50.wf) %>%
-  add_model(hstix50.gf)
+  add_model(hstix50_wf) %>%
+  add_model(hstix50_gf)

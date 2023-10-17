@@ -54,7 +54,7 @@ continent_params <- tibble::tibble(
 continent_frame <- country_frame %>%
   dplyr::group_by(continent) %>%
   dplyr::summarise(country = list(country)) %>%
-  dplyr::filter(!continent %in% c("Australia", "Asia")) %>% # These two are redundant
+  dplyr::filter(!continent %in% c("Australia", "Asia")) %>%
   merge(continent_params) %>%
   tibble::as_tibble()
 
@@ -117,7 +117,9 @@ bt_1 <- FixedEffectsModel(
   ),
   predict_fn = function(dsob, rwd) {
     cf <- exp(rse^2 / 2)
-    cf * exp(a + b * log(dsob) + c * log(dsob)^2 + d * log(dsob)^3 + e * log(rwd))
+    cf * exp(
+      a + b * log(dsob) + c * log(dsob)^2 + d * log(dsob)^3 + e * log(rwd)
+    )
   },
   descriptors = list(geographic_region = "pantropical")
 )

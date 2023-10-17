@@ -25,8 +25,6 @@ dia_b_params_names <- unique(dia_b_params$parameter)
 diaht_b_params <- b_params %>% dplyr::filter(model == "DBHHT")
 diaht_b_params_names <- unique(diaht_b_params$parameter)
 
-unique(dia_b_params$code)[!unique(dia_b_params$code) %in% unique(diaht_b_params$code)]
-
 dia_response_funcs <- list(
   wood = function(dsob) {
     bwood1 * dsob^bwood2
@@ -57,8 +55,11 @@ diaht_response_funcs <- list(
   }
 )
 
-dia_covariates <- list(dsob = units::as_units("cm"))
-diaht_covariates <- list(dsob = units::as_units("cm"), hst = units::as_units("m"))
+dia_covariate_units <- list(dsob = units::as_units("cm"))
+diaht_covariate_units <- list(
+  dsob = units::as_units("cm"),
+  hst = units::as_units("m")
+)
 
 response_defs <- list(
   wood = "bs",
@@ -86,7 +87,11 @@ construct_ung_set <- function(category, b_params, b_params_names,
       dplyr::filter(genus == "NA", parameter %in% parameter_names) %>%
       tidyr::pivot_wider(names_from = parameter, values_from = estimate) %>%
       dplyr::mutate(region = as.list(strsplit(region, ", "))) %>%
-      dplyr::mutate(species_group = dplyr::recode(code, UNKN.HWD = "hardwood", UNKN.SWD = "softwood", UNKN.SPP = "all")) %>%
+      dplyr::mutate(
+        species_group = dplyr::recode(
+          code, UNKN.HWD = "hardwood", UNKN.SWD = "softwood", UNKN.SPP = "all"
+        )
+      ) %>%
       dplyr::select(-c(model, code, family, genus, species))
   }
 

@@ -158,9 +158,9 @@ vsim <- FixedEffectsModel(
 )
 
 krisnawati_2016 <- krisnawati_2016 %>%
-  add_model(vsoa) %>% 
-  add_model(vsia) %>% 
+  add_model(vsoa) %>%
+  add_model(vsia) %>%
   add_model(dsoh) %>%
-  add_model(dsih) %>% 
+  add_model(dsih) %>%
   add_model(vsim) %>%
   add_model(vsom)

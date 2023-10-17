@@ -49,7 +49,12 @@ vsoa_generics <- FixedEffectsSet(
   },
   model_specifications = tibble::tibble(
     forest_type = c("DEC", "MIX", "DEN", "ALL"),
-    forest_type_description = c("seasonal deciduous", "mixed ombrophilous", "dense ombrophilous", "overall generic"),
+    forest_type_description = c(
+      "seasonal deciduous",
+      "mixed ombrophilous",
+      "dense ombrophilous",
+      "overall generic"
+    ),
     beta_0 = c(-17.68, -17.96, -17.75, -17.84),
     beta_1 = c(0.95, 0.96, 0.98, 0.96),
     beta_2 = c(0.67, 0.76, 0.57, 0.69)

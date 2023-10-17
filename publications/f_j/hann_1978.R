@@ -15,18 +15,18 @@ hann_1978 <- Publication(
 )
 
 vsia <- FixedEffectsSet(
-  response = list(
-    vsia = units::as_units('ft^3')
+  response_unit = list(
+    vsia = units::as_units("ft^3")
   ),
-  covariates = list(
-    dsob = units::as_units('in'),
-    hst = units::as_units('ft')
+  covariate_units = list(
+    dsob = units::as_units("in"),
+    hst = units::as_units("ft")
   ),
-  parameter_names = c('a_0', 'a_1'),
+  parameter_names = c("a_0", "a_1"),
   predict_fn = function(dsob, hst) {
     a_0 + a_1 * dsob^2 * hst
   },
-  model_specifications = load_parameter_frame('vsa_hann_1978')
+  model_specifications = load_parameter_frame("vsa_hann_1978")
 )
 
 hann_1978 <- hann_1978 %>%

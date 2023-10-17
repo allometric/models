@@ -173,7 +173,8 @@ mod_10 <- FixedEffectsModel(
     bcf = 1.0175
   ),
   predict_fn = function(dsob, hst, rsd) {
-    exp(log(beta_0) + beta_1 * log(dsob) + beta_2 * log(hst) + beta_3 * log(rsd)) * bcf
+    exp(log(beta_0) + beta_1 * log(dsob) + beta_2 * log(hst) +
+      beta_3 * log(rsd)) * bcf
   }
 )
 

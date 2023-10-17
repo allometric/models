@@ -18,22 +18,22 @@ myers_1964a <- Publication(
   )
 )
 
-covariates_hst <- list(
-  dsob = units::as_units('in'),
-  hst = units::as_units('ft')
+covariate_units_hst <- list(
+  dsob = units::as_units("in"),
+  hst = units::as_units("ft")
 )
 
-covariates_hsm <- list(
-  dsob = units::as_units('in'),
-  hsm = units::as_units('ft')
+covariate_units_hsm <- list(
+  dsob = units::as_units("in"),
+  hsm = units::as_units("ft")
 )
 
-parameter_names <- c('a', 'b')
+parameter_names <- c("a", "b")
 
 # Table 1
 vsom_cuft <- FixedEffectsSet(
-  response = list(
-    vsom = units::as_units('ft^3')
+  response_unit = list(
+    vsom = units::as_units("ft^3")
   ),
   covariates = covariates_hst,
   predict_fn = function(dsob, hst) {
@@ -49,8 +49,8 @@ vsom_cuft <- FixedEffectsSet(
 
 # Table 2
 vsom_cuft_2 <- FixedEffectsSet(
-  response = list(
-    vsom = units::as_units('ft^3')
+  response_unit = list(
+    vsom = units::as_units("ft^3")
   ),
   covariates = covariates_hst,
   predict_fn = function(dsob, hst) {
@@ -93,7 +93,7 @@ vsom_bdfts <- FixedEffectsSet(
   },
   model_specifications = tibble::tibble(
     bdft_rule = "Scribner",
-    d2h = c('<= 16000', '> 16000'),
+    d2h = c("<= 16000", "> 16000"),
     a = c(-34.167170, -99.212720),
     b = c(0.012331, 0.016318)
   )
@@ -111,7 +111,7 @@ rsvg_bdfts <- FixedEffectsSet(
   },
   model_specifications = tibble::tibble(
     bdft_rule = "Scribner",
-    tree_size = c('small', 'large'),
+    tree_size = c("small", "large"),
     a = c(2.609, 2.9919),
     b = c(-6264.6076, -18190.8177)
   )
@@ -129,7 +129,7 @@ vsom_bdfts_logs <- FixedEffectsSet(
   },
   model_specifications = tibble::tibble(
     bdft_rule = "Scribner",
-    d2h = c('<= 1200', '> 1200'),
+    d2h = c("<= 1200", "> 1200"),
     a = c(1.737800, -56.188070),
     b = c(0.264275, 0.312659)
   ),
@@ -150,7 +150,7 @@ rsvg_bdfts_logs <- FixedEffectsSet(
   },
   model_specifications = tibble::tibble(
     bdft_rule = "Scribner",
-    tree_size = c('small', 'large'),
+    tree_size = c("small", "large"),
     a = c(48.4538, 57.3247),
     b = c(318.6285, -10302.1764)
   ),
@@ -171,7 +171,7 @@ vsom_bdfti <- FixedEffectsSet(
   },
   model_specifications = tibble::tibble(
     bdft_rule = "International 1/4-inch",
-    d2h = c('<= 13000', '> 13000'),
+    d2h = c("<= 13000", "> 13000"),
     a = c(-44.360460, -68.750200),
     b = c(0.015011, 0.016991)
   )
@@ -189,7 +189,7 @@ rsvg_bdfti <- FixedEffectsSet(
   },
   model_specifications = tibble::tibble(
     bdft_rule = "International 1/4-inch",
-    tree_size = c('small', 'large'),
+    tree_size = c("small", "large"),
     a = c(2.7523, 3.1153),
     b = c(-8133.5644, -12605.4639)
   )
@@ -207,7 +207,7 @@ vsom_bdfti_logs <- FixedEffectsSet(
   },
   model_specifications = tibble::tibble(
     bdft_rule = "International 1/4-inch",
-    d2h = c('<= 1100', '> 1100'),
+    d2h = c("<= 1100", "> 1100"),
     a = c(2.338510, -5.939610),
     b = c(0.312621, 0.318669)
   ),
@@ -228,7 +228,7 @@ rsvg_bdfti_logs <- FixedEffectsSet(
   },
   model_specifications = tibble::tibble(
     bdft_rule = "International 1/4-inch",
-    tree_size = c('small', 'large'),
+    tree_size = c("small", "large"),
     a = c(57.3196, 58.4285),
     b = c(428.7697, -1089.0374)
   ),

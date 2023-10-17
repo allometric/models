@@ -108,7 +108,10 @@ inc_bh_p_acos <- FixedEffectsSet(
     c1 * hht_p * c3 * acos(sqrt(rv_p))^c2
   },
   model_specifications = all_params %>%
-    dplyr::filter(equation == "IncBiomass_FCC_H", equation_type == "acos_sqrt") %>%
+    dplyr::filter(
+      equation == "IncBiomass_FCC_H",
+      equation_type == "acos_sqrt"
+    ) %>%
     dplyr::select(family, genus, species, c1, c2, c3)
 )
 
@@ -125,7 +128,10 @@ inc_bh_p_exp <- FixedEffectsSet(
     c4 * exp(c1) * rv_p^c2 * hht_p^c3
   },
   model_specifications = all_params %>%
-    dplyr::filter(equation == "IncBiomass_FCC_H", equation_type == "exp_log") %>%
+    dplyr::filter(
+      equation == "IncBiomass_FCC_H",
+      equation_type == "exp_log"
+    ) %>%
     dplyr::select(family, genus, species, c1, c2, c3, c4)
 )
 
