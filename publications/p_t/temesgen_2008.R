@@ -1,26 +1,28 @@
-temesgen_2008_citation <- RefManageR::BibEntry(
-  bibtype = "article",
-  key = "temesgen_2008",
-  title = "Analysis and comparison of nonlinear tree height prediction
-        strategies for Douglas-fir forests",
-  author = "Temesgen, Hailemariam and Monleon, Vicente J. and Hann, David W.",
-  journal = "Canadian Journal of Forest Research",
-  year = 2008,
-  volume = 38,
-  number = 3,
-  pages = "553-565",
-  year = 2008,
-  doi = "https://doi.org/10.1139/X07-104"
-)
-
 temesgen_2008 <- Publication(
-  citation = temesgen_2008_citation,
+  citation = RefManageR::BibEntry(
+    bibtype = "article",
+    key = "temesgen_2008",
+    title = "Analysis and comparison of nonlinear tree height prediction
+          strategies for Douglas-fir forests",
+    author = "Temesgen, Hailemariam and Monleon, Vicente J. and Hann, David W.",
+    journal = "Canadian Journal of Forest Research",
+    year = 2008,
+    volume = 38,
+    number = 3,
+    pages = "553-565",
+    year = 2008,
+    doi = "https://doi.org/10.1139/X07-104"
+  ),
   descriptors = list(
     country = "US",
     region = "US-OR",
-    family = "Pinaceae",
-    genus = "Pseudotsuga",
-    species = "menziesii"
+    taxa = Taxa(
+      Taxon(
+        family = "Pinaceae",
+        genus = "Pseudotsuga",
+        species = "menziesii"
+      )
+    )
   )
 )
 

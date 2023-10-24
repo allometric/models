@@ -11,9 +11,13 @@ dolph_1991 <- Publication(
   descriptors = list(
     country = "US",
     region = c("US-CA", "US-OR"),
-    family = "Pinaceae",
-    genus = "Abies",
-    species = "magnifica"
+    taxa = Taxa(
+      Taxon(
+        family = "Pinaceae",
+        genus = "Abies",
+        species = "magnifica"
+      )
+    )
   )
 )
 

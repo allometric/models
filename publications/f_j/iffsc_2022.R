@@ -52,9 +52,13 @@ cecropia_galaziovii <- FixedEffectsModel(
     a / (1 + exp(b + c * dsoc + d * hst))
   },
   descriptors = list(
-    family = "Uritaceae",
-    genus = "Cecropia",
-    species = "galaziovii"
+    taxa = Taxa(
+      Taxon(
+        family = "Uritaceae",
+        genus = "Cecropia",
+        species = "galaziovii"
+      )
+    )
   )
 )
 
@@ -73,9 +77,13 @@ cyathea_delgadii <- FixedEffectsModel(
     a * dsob^b * hst^c
   },
   descriptors = list(
-    family = "Cyatheaceae",
-    genus = "Cyathea",
-    species = "delgadii"
+    taxa = Taxa(
+      Taxon(
+        family = "Cyatheaceae",
+        genus = "Cyathea",
+        species = "delgadii"
+      )
+    )
   )
 )
 
@@ -94,9 +102,13 @@ euterpe_edulis <- FixedEffectsModel(
     a * dsob^b * hst^c
   },
   descriptors = list(
-    family = "Arecaceae",
-    genus = "Euterpe",
-    species = "edulist"
+    taxa = Taxa(
+      Taxon(
+        family = "Arecaceae",
+        genus = "Euterpe",
+        species = "edulist"
+      )
+    )
   )
 )
 
@@ -144,9 +156,13 @@ araucaria_angustifolia <- FixedEffectsModel(
     a * (dsob^2 * (1.3 + b * exp(c / dsob)) * rwd)^d
   },
   descriptors = list(
-    family = "Araucariaceae",
-    genus = "Araucaria",
-    species = "angustifolia"
+    taxa = Taxa(
+      Taxon(
+        family = "Araucariaceae",
+        genus = "Araucaria",
+        species = "angustifolia"
+      )
+    )
   )
 )
 

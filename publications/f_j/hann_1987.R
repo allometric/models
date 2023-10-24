@@ -33,9 +33,13 @@ hstix50_psme <- FixedEffectsModel(
       b_3 * (atb - 50) * log(hst - 4.5) + b_4 * (atb - 50)^2 * log(hst - 4.5))
   },
   descriptors = list(
-    family = "Pinaceae",
-    genus = "Pseudotsuga",
-    species = "menziesii"
+    taxa = Taxa(
+      Taxon(
+        family = "Pinaceae",
+        genus = "Pseudotsuga",
+        species = "menziesii"
+      )
+    )
   )
 )
 
@@ -58,9 +62,13 @@ hstix50_pipo <- FixedEffectsModel(
       b_3 * (atb - 50) * log(hst - 4.5) + b_4 * (atb - 50)^2 * log(hst - 4.5))
   },
   descriptors = list(
-    family = "Pinaceae",
-    genus = "Pinus",
-    species = "ponderosa"
+    taxa = Taxa(
+      Taxon(
+        family = "Pinaceae",
+        genus = "Pinus",
+        species = "ponderosa"
+      )
+    )
   )
 )
 

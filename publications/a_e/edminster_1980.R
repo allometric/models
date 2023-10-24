@@ -12,9 +12,13 @@ edminster_1980 <- Publication(
   descriptors = list(
     country = "US",
     region = "US-CO",
-    family = "Pinaceae",
-    genus = "Pinus",
-    species = "ponderosa"
+    taxa = Taxa(
+      Taxon(
+        family = "Pinaceae",
+        genus = "Pinus",
+        species = "ponderosa"
+      )
+    )
   )
 )
 

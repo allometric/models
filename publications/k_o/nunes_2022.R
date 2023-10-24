@@ -28,7 +28,8 @@ hcl <- FixedEffectsSet(
   predict_fn = function(hst, en) {
     hst / (1 + a0 * exp(-a1 * (10000 / en)^(-0.5)))
   },
-  model_specifications = load_parameter_frame("hcl_nunes_2022")
+  model_specifications = load_parameter_frame("hcl_nunes_2022") %>%
+    aggregate_taxa()
 )
 
 dc <- FixedEffectsSet(
@@ -43,7 +44,8 @@ dc <- FixedEffectsSet(
   predict_fn = function(dsob, en) {
     b0 * (dsob^b1) * ((10000 / en)^(-0.5))^b2
   },
-  model_specifications = load_parameter_frame("dc_nunes_2022")
+  model_specifications = load_parameter_frame("dc_nunes_2022") %>%
+    aggregate_taxa()
 )
 
 nunes_2022 <- nunes_2022 %>%

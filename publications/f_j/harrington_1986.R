@@ -8,11 +8,15 @@ harrington_1986 <- Publication(
     institution = "Pacific Northwest Research Station, US Department of Agriculture, Forest Service"
   ),
   descriptors = list(
-    family = "Betulaceae",
-    genus = "Alnus",
-    species = "rubra",
     country = "US",
-    region = c("US-OR", "US-WA")
+    region = c("US-OR", "US-WA"),
+    taxa = Taxa(
+      Taxon(
+        family = "Betulaceae",
+        genus = "Alnus",
+        species = "rubra"
+      )
+    )
   )
 )
 

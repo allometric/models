@@ -37,7 +37,7 @@ curtis_arney_not_df <- FixedEffectsSet(
             "612 - Siuslaw, 712 - BLM Coos", "708 - BLM Salem"
           )
       ) | genus != "Pseudotsuga"
-    )
+    ) %>% aggregate_taxa()
 )
 
 curtis_arney_df <- FixedEffectsSet(
@@ -61,7 +61,7 @@ curtis_arney_df <- FixedEffectsSet(
         geographic_region %in% c(
           "612 - Siuslaw, 712 - BLM Coos", "708 - BLM Salem"
         )
-    )
+    ) %>% aggregate_taxa()
 )
 
 # Eq. 4.1.2
@@ -76,7 +76,7 @@ wykoff <- FixedEffectsSet(
   predict_fn = function(dsob) {
     4.5 + exp(b1 + b2 / (dsob + 1))
   },
-  load_parameter_frame("hst_fvs_2008_2")
+  load_parameter_frame("hst_fvs_2008_2") %>% aggregate_taxa()
 )
 
 # Eq. 4.1.3. first group
@@ -92,7 +92,7 @@ first_413 <- FixedEffectsSet(
   predict_fn = function(dsob, rc) {
     exp(h1 + (h2 * dsob) + (h3 * rc * 100) + (h4 * dsob^2) + h5)
   },
-  load_parameter_frame("hst_fvs_2008_3")
+  load_parameter_frame("hst_fvs_2008_3") %>% aggregate_taxa()
 )
 
 
@@ -109,7 +109,7 @@ second_413 <- FixedEffectsSet(
   predict_fn = function(dsob, rc) {
     h1 + (h2 * dsob) + (h3 * rc * 100) + (h4 * dsob^2) + h5
   },
-  load_parameter_frame("hst_fvs_2008_4")
+  load_parameter_frame("hst_fvs_2008_4") %>% aggregate_taxa()
 )
 
 # Eq. 4.1.3. third group TODO
@@ -128,7 +128,8 @@ rc <- FixedEffectsSet(
     x <- r1 + r2 * hst + r3 * gs_s
     ((x - 1) * 10 + 1) / 100
   },
-  model_specifications = load_parameter_frame("rc_fvs_2008")
+  model_specifications = load_parameter_frame("rc_fvs_2008") %>%
+    aggregate_taxa()
 )
 
 fvs_2008 <- fvs_2008 %>%

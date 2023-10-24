@@ -105,9 +105,13 @@ rc_tanoak <- FixedEffectsModel(
     1 - ((1) / (1 + exp(b_2 * ccfl)))
   },
   descriptors = list(
-    family = "Fagaceae",
-    genus = "Notholithocarpus",
-    species = "densiflorus"
+    taxa = Taxa(
+      Taxon(
+        family = "Fagaceae",
+        genus = "Notholithocarpus",
+        species = "densiflorus"
+      )
+    )
   ),
   covariate_definitions = list(
     ccfl = "crown competition factor of large trees"
@@ -129,9 +133,13 @@ rc_canyon_live_oak <- FixedEffectsModel(
     1 - ((1) / (1 + exp(b_0 + b_3 * log(gs_s))))
   },
   descriptors = list(
-    family = "Fagaceae",
-    genus = "Quercus",
-    species = "chrysolepis"
+    taxa = Taxa(
+      Taxon(
+        family = "Fagaceae",
+        genus = "Quercus",
+        species = "chrysolepis"
+      )
+    )
   )
 )
 
@@ -153,9 +161,13 @@ rc_black_oak <- FixedEffectsModel(
     1 - ((1) / (1 + exp(b_0 + b_3 * log(gs_s) + b_4 * (dsob / hst))))
   },
   descriptors = list(
-    family = "Fagaceae",
-    genus = "Quercus",
-    species = "kelloggii"
+    taxa = Taxa(
+      Taxon(
+        family = "Fagaceae",
+        genus = "Quercus",
+        species = "kelloggii"
+      )
+    )
   )
 )
 
@@ -176,9 +188,13 @@ rc_bigleaf_maple <- FixedEffectsModel(
     1 - ((1) / (1 + exp(b_0 + b_1 * hst + b_2 * ccfl)))
   },
   descriptors = list(
-    family = "Fagaceae",
-    genus = "Quercus",
-    species = "kelloggii"
+    taxa = Taxa(
+      Taxon(
+        family = "Fagaceae",
+        genus = "Quercus",
+        species = "kelloggii"
+      )
+    )
   ),
   covariate_definitions = list(
     ccfl = "crown competition factor of large trees"

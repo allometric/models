@@ -11,9 +11,13 @@ curtis_1974 <- Publication(
     journal = "Forest Science"
   ),
   descriptors = list(
-    family = "Pinaceae",
-    genus = "Pseudotsuga",
-    species = "menziesii",
+    taxa = Taxa(
+      Taxon(
+        family = "Pinaceae",
+        genus = "Pseudotsuga",
+        species = "menziesii"
+      )
+    ),
     country = "US",
     region = c("US-OR", "US-WA")
   )

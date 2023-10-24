@@ -12,18 +12,22 @@ myers_1964a <- Publication(
   descriptors = list(
     country = "US",
     region = c("US-WY", "US-SD"),
-    family = "Pinaceae",
-    genus = "Pinus",
-    species = "ponderosa"
+    taxa = Taxa(
+      Taxon(
+        family = "Pinaceae",
+        genus = "Pinus",
+        species = "ponderosa"
+      )
+    )
   )
 )
 
-covariate_units_hst <- list(
+covariates_hst <- list(
   dsob = units::as_units("in"),
   hst = units::as_units("ft")
 )
 
-covariate_units_hsm <- list(
+covariates_hsm <- list(
   dsob = units::as_units("in"),
   hsm = units::as_units("ft")
 )
@@ -32,7 +36,7 @@ parameter_names <- c("a", "b")
 
 # Table 1
 vsom_cuft <- FixedEffectsSet(
-  response_unit = list(
+  response = list(
     vsom = units::as_units("ft^3")
   ),
   covariates = covariates_hst,
@@ -49,7 +53,7 @@ vsom_cuft <- FixedEffectsSet(
 
 # Table 2
 vsom_cuft_2 <- FixedEffectsSet(
-  response_unit = list(
+  response = list(
     vsom = units::as_units("ft^3")
   ),
   covariates = covariates_hst,

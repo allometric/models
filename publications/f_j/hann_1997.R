@@ -31,7 +31,8 @@ dcl <- FixedEffectsSet(
   predict_fn = function(dsob, hst, rc, dcm) {
     dcm * rc ^ (b0 + b1 * (rc * hst) + b2 * (dsob / hst))
   },
-  model_specifications = load_parameter_frame("dcl_hann_1997")
+  model_specifications = load_parameter_frame("dcl_hann_1997") %>%
+    aggregate_taxa()
 )
 
 hann_1997 <- hann_1997 %>% add_set(dcl)

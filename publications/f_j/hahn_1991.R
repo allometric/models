@@ -31,7 +31,8 @@ cuvol <- FixedEffectsSet(
   covariate_definitions = list(
     hstix50 = "Site index at an un-specified base age."
   ),
-  model_specifications = load_parameter_frame("vsa_hahn_1991_1")
+  model_specifications = load_parameter_frame("vsa_hahn_1991_1") %>%
+    aggregate_taxa()
 )
 
 bdft <- FixedEffectsSet(
@@ -47,7 +48,8 @@ bdft <- FixedEffectsSet(
   covariate_definitions = list(
     hstix50 = "Site index at an un-specified base age."
   ),
-  model_specifications = load_parameter_frame("vsa_hahn_1991_2")
+  model_specifications = load_parameter_frame("vsa_hahn_1991_2") %>%
+    aggregate_taxa()
 )
 
 hahn_1991 <- hahn_1991 %>%

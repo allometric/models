@@ -30,9 +30,29 @@ bf <- FixedEffectsSet(
     exp(a + (b * log(dsob)))
   },
   model_specifications = tibble::tibble(
-    family = c("Pinaceae", "Pinaceae", "Cupressaceae"),
-    genus = c("Pseudotsuga", "Tsuga", "Thuja"),
-    species = c("menziesii", "heterophylla", "plicata"),
+    taxa = list(
+      Taxa(
+        Taxon(
+          family = "Pinaceae",
+          genus = "Pseudotsuga",
+          species = "menziesii"
+        )
+      ),
+      Taxa(
+        Taxon(
+          family = "Pinaceae",
+          genus = "Tsuga",
+          species = "heterophylla"
+        )
+      ),
+      Taxa(
+        Taxon(
+          family = "Cupressaceae",
+          genus = "Thuja",
+          species = "plicata"
+        )
+      )
+    ),
     a = c(-2.846, -4.130, -2.617),
     b = c(1.701, 2.128, 1.782)
   )

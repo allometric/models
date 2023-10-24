@@ -15,7 +15,8 @@ brackett_1977 <- Publication(
   )
 )
 
-model_specifications <- load_parameter_frame("vsa_brackett_1977")
+model_specifications <- load_parameter_frame("vsa_brackett_1977") %>%
+  aggregate_taxa()
 
 brackett_1977 <- add_set(brackett_1977, FixedEffectsSet(
   response = list(

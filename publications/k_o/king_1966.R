@@ -9,9 +9,13 @@ king_1966 <- Publication(
     institution = "Weyerhaeuser Forestry Research Center"
   ),
   descriptors = list(
-    family = "Pinaceae",
-    genus = "Pseudotsuga",
-    species = "menziesii",
+    taxa = Taxa(
+      Taxon(
+        family = "Pinaceae",
+        genus = "Pseudotsuga",
+        species = "menziesii"
+      )
+    ),
     country = "US",
     region = "US-WA"
   )

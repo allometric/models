@@ -14,9 +14,13 @@ delcourt_2022 <- Publication(
   ),
   descriptors = list(
     country = "RU",
-    family = "Pinaceae",
-    genus = "Larix",
-    species = "cajanderi"
+    taxa = Taxa(
+      Taxon(
+        family = "Pinaceae",
+        genus = "Larix",
+        species = "cajanderi"
+      )
+    )
   )
 )
 
@@ -26,8 +30,8 @@ regions <- unique(params$region)
 responses <- unique(params$response_name)
 
 for (response_name in responses) {
-  response_unit <- list()
-  response_unit[[response_name]] <- units::as_units("kg")
+  response <- list()
+  response[[response_name]] <- units::as_units("kg")
   spec <- params %>% dplyr::filter(
     response_name == {{response_name}}
   )

@@ -15,9 +15,13 @@ rustagi_1991 <- Publication(
   descriptors = list(
     country = c("US", "CA"),
     region = c("US-OR", "US-WA", "CA-BC"),
-    family = "Pinaceae",
-    genus = "Pseudotsuga",
-    species = "menziesii"
+    taxa = Taxa(
+      Taxon(
+        family = "Pinaceae",
+        genus = "Pseudotsuga",
+        species = "menziesii"
+      )
+    )
   )
 )
 

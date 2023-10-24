@@ -15,10 +15,10 @@ hahn_1984 <- Publication(
 )
 
 hst <- FixedEffectsSet(
-  response_unit = list(
+  response = list(
     hst = units::as_units("ft")
   ),
-  covariate_units = list(
+  covariates = list(
     dsob = units::as_units("in"),
     hstix50 = units::as_units("ft"),
     d = units::as_units("in"),
@@ -32,14 +32,15 @@ hst <- FixedEffectsSet(
   covariate_definitions = list(
     d = "Top d.o.b., a value of 0 gives total height."
   ),
-  model_specifications = load_parameter_frame("hst_hahn_1984")
+  model_specifications = load_parameter_frame("hst_hahn_1984") %>%
+    aggregate_taxa()
 )
 
 cuft <- FixedEffectsSet(
-  response_unit = list(
+  response = list(
     vsia = units::as_units("ft^3")
   ),
-  covariate_units = list(
+  covariates = list(
     dsob = units::as_units("in"),
     hst = units::as_units("ft")
   ),
@@ -47,14 +48,15 @@ cuft <- FixedEffectsSet(
   predict_fn = function(dsob, hst) {
     b_0 + b_1 * dsob^2 * hst
   },
-  model_specifications = load_parameter_frame("vsa_hahn_1984_1")
+  model_specifications = load_parameter_frame("vsa_hahn_1984_1") %>%
+    aggregate_taxa()
 )
 
 bdft <- FixedEffectsSet(
-  response_unit = list(
+  response = list(
     vsia = units::as_units("board_foot")
   ),
-  covariate_units = list(
+  covariates = list(
     dsob = units::as_units("in"),
     hst = units::as_units("ft")
   ),
@@ -62,35 +64,38 @@ bdft <- FixedEffectsSet(
   predict_fn = function(dsob, hst) {
     b_0 + b_1 * dsob^2 * hst
   },
-  model_specifications = load_parameter_frame("vsa_hahn_1984_2")
+  model_specifications = load_parameter_frame("vsa_hahn_1984_2") %>%
+    aggregate_taxa()
 )
 
 vui <- FixedEffectsSet(
-  response_unit = list(
+  response = list(
     vui = units::as_units("ft^3")
   ),
-  covariate_units = list(
+  covariates = list(
     dsob = units::as_units("in")
   ),
   parameter_names = c("s"),
   predict_fn = function(dsob) {
     s * dsob^2
   },
-  model_specifications = load_parameter_frame("vu_hahn_1984")
+  model_specifications = load_parameter_frame("vu_hahn_1984") %>%
+    aggregate_taxa()
 )
 
 rsk <- FixedEffectsSet(
   response = list(
     rsk = units::unitless
   ),
-  covariate_units = list(
+  covariates = list(
     dsob = units::as_units("in")
   ),
   parameter_names = c("b_0", "b_1"),
   predict_fn = function(dsob) {
     (b_0 + b_1 * dsob) / 100
   },
-  model_specifications = load_parameter_frame("rsk_hahn_1984")
+  model_specifications = load_parameter_frame("rsk_hahn_1984") %>%
+    aggregate_taxa()
 )
 
 # Finally, add individually the

@@ -15,9 +15,13 @@ huynh_2022 <- Publication(
   descriptors = list(
     country = "AU",
     region = "AU-QLD",
-    family = "Myrtaceae",
-    genus = "Corymbia",
-    species = "citriodora"
+    taxa = Taxa(
+      Taxon(
+        family = "Myrtaceae",
+        genus = "Corymbia",
+        species = "citriodora"
+      )
+    )
   )
 )
 
@@ -150,7 +154,7 @@ model_group <- list(
       dc = units::as_units("m")
     ),
     predict_fn = function(dsob, hst, dc) {
-      alpha * (dsob^2 * hst* dc)^beta
+      alpha * (dsob^2 * hst * dc)^beta
     }
   ),
   "16" = list(
@@ -248,7 +252,9 @@ for(i in seq_along(model_group)) {
   eq_id <- names(model_group)[[i]]
   config <- model_group[[eq_id]]
 
-  parameters <- all_params[all_params$equation_no == as.numeric(eq_id), config$parameter_names]
+  parameters <- all_params[
+    all_params$equation_no == as.numeric(eq_id), config$parameter_names
+  ]
 
   mod <- FixedEffectsModel(
     response = list(

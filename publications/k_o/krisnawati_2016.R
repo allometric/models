@@ -14,9 +14,13 @@ krisnawati_2016 <- Publication(
   descriptors = list(
     country = "ID",
     region = "ID-SS",
-    family = "Fabaceae",
-    genus = "Acacia",
-    species = "mangium"
+    taxa = Taxa(
+      Taxon(
+        family = "Fabaceae",
+        genus = "Acacia",
+        species = "mangium"
+      )
+    )
   )
 )
 

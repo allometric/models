@@ -10,9 +10,13 @@ zeide_2002 <- Publication(
     organization = "General Technical Report SRS-48. USDA, Forest Service. Southern Research Station"
   ),
   descriptors = list(
-    family = "Pinaceae",
-    genus = "Pinus",
-    species = "taeda",
+    taxa = Taxa(
+      Taxon(
+        family = "Pinaceae",
+        genus = "Pinus",
+        species = "taeda"
+      )
+    ),
     country = "US",
     region = "US-AR"
   )

@@ -11,9 +11,13 @@ bell_1981_citation <- RefManageR::BibEntry(
 bell_1981 <- Publication(
   citation = bell_1981_citation,
   descriptors = list(
-    family = "Pinaceae",
-    genus = "Tsuga",
-    species = "mertensiana",
+    taxa = Taxa(
+      Taxon(
+        family = "Pinaceae",
+        genus = "Tsuga",
+        species = "mertensiana"
+      )
+    ),
     country = "US",
     region = "US-OR"
   )

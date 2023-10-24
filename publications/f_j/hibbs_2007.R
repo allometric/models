@@ -15,9 +15,13 @@ hibbs_2007 <- Publication(
   descriptors = list(
     country = c("US", "CA"),
     region = c("US-OR", "US-WA", "CA-BC"),
-    family = "Betulaceae",
-    genus = "Alnus",
-    species = "rubra"
+    taxa = Taxa(
+      Taxon(
+        family = "Betulaceae",
+        genus = "Alnus",
+        species = "rubra"
+      )
+    )
   )
 )
 

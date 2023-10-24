@@ -15,7 +15,7 @@ cochran_1979a <- Publication(
 )
 
 hstix50_wf <- FixedEffectsModel(
-  response_unit = list(
+  response = list(
     hstix50 = units::as_units("ft")
   ),
   covariates = list(
@@ -44,15 +44,23 @@ hstix50_wf <- FixedEffectsModel(
     (hst - 4.5) * exp(x1) - exp(x1) * exp(x2) + 89.43
   },
   descriptors = list(
-    family = "Pinaceae",
-    genus = "Abies",
-    species = "concolor"
+    taxa = Taxa(
+      Taxon(
+        family = "Pinaceae",
+        genus = "Abies",
+        species = "concolor"
+      )
+    )
   )
 )
 
 hstix50_gf <- hstix50_wf
 descriptors(hstix50_gf) <- tibble::tibble(
-  family = "Pinaceae", genus = "Abies", species = "grandis"
+  taxa = list(
+    Taxa(
+      Taxon(family = "Pinaceae", genus = "Abies", species = "grandis")
+    )
+  )
 )
 
 cochran_1979a <- cochran_1979a %>%

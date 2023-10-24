@@ -1,4 +1,3 @@
-
 montero_2005 <- Publication(
   citation = RefManageR::BibEntry(
     bibtype = "techreport",
@@ -30,7 +29,8 @@ for (b_param_name in b_param_names) {
     dplyr::select(-name) %>%
     dplyr::group_by(allo_var, family, genus, species, a, b, cf) %>%
     dplyr::summarise(region = list(region)) %>%
-    dplyr::ungroup()
+    dplyr::ungroup() %>%
+    aggregate_taxa()
 
   model_spec <- model_spec[, -1] # drop allo_var column
 
@@ -55,7 +55,8 @@ bb_spec <- bb_params %>%
   dplyr::select(-name) %>%
   dplyr::group_by(family, genus, species, branch_size, a, b, cf) %>%
   dplyr::summarise(region = list(region)) %>%
-  dplyr::ungroup()
+  dplyr::ungroup() %>%
+  aggregate_taxa()
 
 bb_set <- FixedEffectsSet(
   response = list(bb = units::as_units("kg")),

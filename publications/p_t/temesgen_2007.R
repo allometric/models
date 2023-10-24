@@ -29,7 +29,8 @@ eq4 <- FixedEffectsSet(
   predict_fn = function(dsob) {
     1.3 + exp(a + b * dsob^c)
   },
-  model_specifications = load_parameter_frame("hst_temesgen_2007")
+  model_specifications = load_parameter_frame("hst_temesgen_2007") %>%
+    aggregate_taxa()
 )
 
 temesgen_2007 <- temesgen_2007 %>%

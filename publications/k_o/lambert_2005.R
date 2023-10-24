@@ -17,7 +17,8 @@ lambert_2005 <- Publication(
   )
 )
 
-b_params <- load_parameter_frame('b_lambert_2005')
+b_params <- load_parameter_frame("b_lambert_2005") %>%
+  aggregate_taxa()
 
 dia_b_params <- b_params %>% dplyr::filter(model == "DBH")
 dia_b_params_names <- unique(dia_b_params$parameter)
@@ -121,7 +122,7 @@ for(i in seq_along(dia_response_funcs)) {
 }
 
 # Dia-ht models with at least a genus defined
-for(i in seq_along(dia_response_funcs)) {
+for (i in seq_along(dia_response_funcs)) {
   category <- names(dia_response_funcs)[[i]]
 
   set <- construct_ung_set(
@@ -137,7 +138,7 @@ for(i in seq_along(dia_response_funcs)) {
 }
 
 # Diameter-only models of "pooled" models
-for(i in seq_along(dia_response_funcs)) {
+for (i in seq_along(dia_response_funcs)) {
   category <- names(dia_response_funcs)[[i]]
 
   set <- construct_ung_set(

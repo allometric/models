@@ -26,7 +26,8 @@ dsib <- FixedEffectsSet(
   predict_fn = function(dsob) {
     b1 * (dsob)^b2
   },
-  model_specifications = load_parameter_frame("dsib_larsen_1985")
+  model_specifications = load_parameter_frame("dsib_larsen_1985") %>%
+    aggregate_taxa()
 )
 
 larsen_1985 <- larsen_1985 %>%

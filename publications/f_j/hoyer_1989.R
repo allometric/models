@@ -9,9 +9,13 @@ hoyer_1989 <- Publication(
     institution = "US Department of Agriculture, Forest Service, Pacific Northwest Research Station"
   ),
   descriptors = list(
-    family = "Pinaceae",
-    genus = "abies",
-    species = "amibalis",
+    taxa = Taxa(
+      Taxon(
+        family = "Pinaceae",
+        genus = "abies",
+        species = "amibalis"
+      )
+    ),
     country = "US",
     region = c("US-OR", "US-WA")
   )

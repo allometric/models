@@ -9,9 +9,13 @@ wiley_1978 <- Publication(
     year = 1978
   ),
   descriptors = list(
-    family = "Pinaceae",
-    genus = "Tsuga",
-    species = "heterophylla",
+    taxa = Taxa(
+      Taxon(
+        family = "Pinaceae",
+        genus = "Tsuga",
+        species = "heterophylla"
+      )
+    ),
     country = c("US", "CA"),
     region = c("US-OR", "US-WA", "CA-BC")
   )

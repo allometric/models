@@ -15,7 +15,8 @@ eng_2012 <- Publication(
   )
 )
 
-params <- load_parameter_frame("hst_eng_2012")
+params <- load_parameter_frame("hst_eng_2012") %>%
+  aggregate_taxa()
 
 predict_fns <- list(
   function(dsob) {
@@ -54,7 +55,7 @@ for(eq_no in eq_nos) {
     dplyr::filter(eq_no == {{eq_no}}) %>%
     dplyr::select_if(~sum(!is.na(.)) > 0)
 
-  param_names <- colnames(params_eq)[!colnames(params_eq) %in% c("family", "genus", "species", "eq_no")]
+  param_names <- colnames(params_eq)[!colnames(params_eq) %in% c("taxa", "eq_no")]
 
 
   model_specifications <- params_eq %>% dplyr::select(-c(eq_no))

@@ -31,7 +31,8 @@ vsoa_species <- FixedEffectsSet(
     circ <- dsob * pi
     1000 * exp(beta_0 + beta_1 * log(circ^2) + beta_2 * log(hst))
   },
-  model_specifications = load_parameter_frame("vsa_vibrans_2015")
+  model_specifications = load_parameter_frame("vsa_vibrans_2015") %>%
+    aggregate_taxa()
 )
 
 vsoa_generics <- FixedEffectsSet(

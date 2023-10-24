@@ -29,7 +29,8 @@ wykoff_set <- FixedEffectsSet(
   predict_fn = function(dsob) {
     4.5 + exp(a + (b / (dsob + 1)))
   },
-  model_specifications = load_parameter_frame("hst_moore_1996_1")
+  model_specifications = load_parameter_frame("hst_moore_1996_1") %>%
+    aggregate_taxa()
 )
 
 lundqvist_set <- FixedEffectsSet(
@@ -43,7 +44,8 @@ lundqvist_set <- FixedEffectsSet(
   predict_fn = function(dsob) {
     4.5 + a * exp(-b * dsob^(-c))
   },
-  model_specifications = load_parameter_frame("hst_moore_1996_2")
+  model_specifications = load_parameter_frame("hst_moore_1996_2") %>%
+    aggregate_taxa()
 )
 
 moore_1996 <- moore_1996 %>%

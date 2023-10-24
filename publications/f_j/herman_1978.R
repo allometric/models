@@ -9,11 +9,15 @@ herman_1978 <- Publication(
     institution = "Department of Agriculture, Forest Service, Pacific Northwest Forest and Range Experiment Station"
   ),
   descriptors = list(
-    family = "Pinaceae",
-    genus = "Abies",
-    species = "procera",
     region = c("US-OR", "US-WA"),
-    country = "US"
+    country = "US",
+    taxa = Taxa(
+      Taxon(
+        family = "Pinaceae",
+        genus = "Abies",
+        species = "procera"
+      )
+    )
   )
 )
 

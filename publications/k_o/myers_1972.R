@@ -12,9 +12,13 @@ myers_1972 <- Publication(
   descriptors = list(
     country = "US",
     region = c("US-CO", "US-WY"),
-    family = "Pinaceae",
-    genus = "Picea",
-    species = "engelmanii"
+    taxa = Taxa(
+      Taxon(
+        family = "Pinaceae",
+        genus = "Picea",
+        species = "engelmanii"
+      )
+    )
   )
 )
 
@@ -39,7 +43,7 @@ covt_units_logs <- list(
 param_names <- c("a", "b")
 
 cuft_vol <- FixedEffectsSet(
-  response_unit = list(
+  response = list(
     vsoa = units::as_units("ft^3")
   ),
   covariates = covt_units_ht,
@@ -49,7 +53,7 @@ cuft_vol <- FixedEffectsSet(
 )
 
 cuft_vbar <- FixedEffectsSet(
-  response_unit = list(
+  response = list(
     rsvg = units::as_units("ft^3 / ft^2")
   ),
   covariates = covt_units_ht,
@@ -59,7 +63,7 @@ cuft_vbar <- FixedEffectsSet(
 )
 
 bdft_vol_logs <- FixedEffectsSet(
-  response_unit = list(
+  response = list(
     vsom = units::as_units("board_foot")
   ),
   covariates = covt_units_logs,
@@ -74,7 +78,7 @@ bdft_vol_logs <- FixedEffectsSet(
 )
 
 bdft_vol_feet <- FixedEffectsSet(
-  response_unit = list(
+  response = list(
     vsim = units::as_units("board_foot")
   ),
   covariates = covt_units_ht,
@@ -84,7 +88,7 @@ bdft_vol_feet <- FixedEffectsSet(
 )
 
 bdft_vbar_logs <- FixedEffectsSet(
-  response_unit = list(
+  response = list(
     rsvg = units::as_units("ft^3 / ft^2")
   ),
   covariates = covt_units_logs,
@@ -99,7 +103,7 @@ bdft_vbar_logs <- FixedEffectsSet(
 )
 
 bdft_vbar_feet <- FixedEffectsSet(
-  response_unit = list(
+  response = list(
     rsvg = units::as_units("ft^3 / ft^2")
   ),
   covariates = covt_units_ht,

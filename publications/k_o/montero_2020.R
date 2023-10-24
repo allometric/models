@@ -12,7 +12,7 @@ montero_2020 <- Publication(
   )
 )
 
-all_params <- load_parameter_frame("montero_2020")
+all_params <- load_parameter_frame("montero_2020") %>% aggregate_taxa()
 
 hht_polynomial <- FixedEffectsSet(
   response = list(
@@ -27,7 +27,7 @@ hht_polynomial <- FixedEffectsSet(
   },
   model_specifications = all_params %>%
     dplyr::filter(equation == "Height_Age", equation_type == "polynomial") %>%
-    dplyr::select(family, genus, species, c1, c2, c3)
+    dplyr::select(taxa, c1, c2, c3)
 )
 
 hht_power <- FixedEffectsSet(
@@ -43,7 +43,7 @@ hht_power <- FixedEffectsSet(
   },
   model_specifications = all_params %>%
     dplyr::filter(equation == "Height_Age", equation_type == "power") %>%
-    dplyr::select(family, genus, species, c1, c2)
+    dplyr::select(taxa, c1, c2)
 )
 
 dh_polynomial <- FixedEffectsSet(
@@ -59,7 +59,7 @@ dh_polynomial <- FixedEffectsSet(
   },
   model_specifications = all_params %>%
     dplyr::filter(equation == "Diameter_Age", equation_type == "polynomial") %>%
-    dplyr::select(family, genus, species, c1, c2, c3)
+    dplyr::select(taxa, c1, c2, c3)
 )
 
 dh_power <- FixedEffectsSet(
@@ -75,7 +75,7 @@ dh_power <- FixedEffectsSet(
   },
   model_specifications = all_params %>%
     dplyr::filter(equation == "Diameter_Age", equation_type == "power") %>%
-    dplyr::select(family, genus, species, c1, c2)
+    dplyr::select(taxa, c1, c2)
 )
 
 bh_p <- FixedEffectsSet(
@@ -92,7 +92,7 @@ bh_p <- FixedEffectsSet(
   },
   model_specifications = all_params %>%
     dplyr::filter(equation == "Biomass_FCC_H", equation_type == "acos_sqrt") %>%
-    dplyr::select(family, genus, species, c1, c2, c3)
+    dplyr::select(taxa, c1, c2, c3)
 )
 
 inc_bh_p_acos <- FixedEffectsSet(
@@ -112,7 +112,7 @@ inc_bh_p_acos <- FixedEffectsSet(
       equation == "IncBiomass_FCC_H",
       equation_type == "acos_sqrt"
     ) %>%
-    dplyr::select(family, genus, species, c1, c2, c3)
+    dplyr::select(taxa, c1, c2, c3)
 )
 
 inc_bh_p_exp <- FixedEffectsSet(
@@ -132,7 +132,7 @@ inc_bh_p_exp <- FixedEffectsSet(
       equation == "IncBiomass_FCC_H",
       equation_type == "exp_log"
     ) %>%
-    dplyr::select(family, genus, species, c1, c2, c3, c4)
+    dplyr::select(taxa, c1, c2, c3, c4)
 )
 
 bh_p_power <- FixedEffectsSet(
@@ -148,7 +148,7 @@ bh_p_power <- FixedEffectsSet(
   },
   model_specifications = all_params %>%
     dplyr::filter(equation == "Biomass_Age", equation_type == "power") %>%
-    dplyr::select(family, genus, species, c1, c2)
+    dplyr::select(taxa, c1, c2)
 )
 
 montero_2020 <- montero_2020 %>%

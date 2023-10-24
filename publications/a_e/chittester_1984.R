@@ -11,9 +11,13 @@ chittester_1984 <- Publication(
   descriptors = list(
     country = "US",
     region = c("US-OR", "US-CA"),
-    family = "Cupressaceae",
-    genus = "Juniperus",
-    species = "occidentalis"
+    taxa = Taxa(
+      Taxon(
+        family = "Cupressaceae",
+        genus = "Juniperus",
+        species = "occidentalis"
+      )
+    )
   )
 )
 

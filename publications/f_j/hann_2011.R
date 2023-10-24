@@ -26,9 +26,8 @@ dsib <- FixedEffectsSet(
   predict_fn = function(dsob, rc) {
     b_1 * dsob^b_2 * exp(b_3 * (1 - rc)^(0.5))
   },
-  model_specifications = tibble::tibble(
-    load_parameter_frame("dsib_hann_2011")
-  )
+  model_specifications = load_parameter_frame("dsib_hann_2011") %>%
+    aggregate_taxa()
 )
 
 dui1 <- FixedEffectsSet(
@@ -43,9 +42,8 @@ dui1 <- FixedEffectsSet(
   predict_fn = function(dsob, rc) {
     b_1 + b_2 * dsob^b_3 * exp(b_4 * rc^b_5)
   },
-  model_specifications = tibble::tibble(
-    load_parameter_frame("dui1_hann_2011")
-  )
+  model_specifications = load_parameter_frame("dui1_hann_2011") %>%
+    aggregate_taxa()
 )
 
 vsio <- FixedEffectsSet(
@@ -62,7 +60,8 @@ vsio <- FixedEffectsSet(
     b_1 * (hso / dsob)^(b_2 * (1 - exp(b_3 * dsob^b_4)))^k *
       exp(b_5 * (hsv / hso)) * dsob^b_7 * dsob^2 * hso
   },
-  model_specifications = tibble::tibble(load_parameter_frame("vso_hann_2011"))
+  model_specifications = load_parameter_frame("vso_hann_2011") %>%
+    aggregate_taxa()
 )
 
 hann_2011 <- hann_2011 %>%
