@@ -35,7 +35,8 @@ cvts <- FixedEffectsSet(
   predict_fn = function(dsob, hst) {
     exp(a + b * log(dsob) + c * log(hst))
   },
-  model_specifications = load_parameter_frame("vsa_poudel_2019")
+  model_specifications = load_parameter_frame("vsa_poudel_2019") %>%
+    aggregate_taxa()
 )
 
 # Table 4, models that use a, b and c parameters
@@ -51,7 +52,8 @@ agb_1 <- FixedEffectsSet(
   predict_fn = function(dsob, hst) {
     cf * exp(a + b * log(dsob) + c * log(hst))
   },
-  model_specifications = load_parameter_frame("bt_poudel_2019_1")
+  model_specifications = load_parameter_frame("bt_poudel_2019_1") %>%
+    aggregate_taxa()
 )
 
 # Table 4, ponderosa pine model
@@ -72,7 +74,10 @@ agb_pp <- FixedEffectsModel(
   ),
   predict_fn = function(dsob, hst) {
     cf * exp(a + b * log(dsob) + c * log(dsob)^2 + d * log(hst))
-  }
+  },
+  descriptors = list(
+    taxa = Taxa(Taxon(family = "Pinaceae", genus = "Pinus", species = "ponderosa"))
+  )
 )
 
 # Table 4, subalpine fir model
@@ -93,6 +98,9 @@ agb_sa <- FixedEffectsModel(
   predict_fn = function(dsob, hst) {
     cf * exp(a + b * log(dsob) + c * log(hst))
   },
+  descriptors = list(
+    taxa = Taxa(Taxon(family = "Pinaceae", genus = "Abies", species = "lasiocarpa"))
+  )
 )
 
 # Table 4, models that use a and b parameters
@@ -107,7 +115,8 @@ agb_2 <- FixedEffectsSet(
   predict_fn = function(dsob) {
     cf * exp(a + b * log(dsob))
   },
-  model_specifications = load_parameter_frame("bt_poudel_2019_2")
+  model_specifications = load_parameter_frame("bt_poudel_2019_2") %>%
+    aggregate_taxa()
 )
 
 # Table 6, volume to biomass conversion
@@ -122,7 +131,8 @@ v_to_agb <- FixedEffectsSet(
   predict_fn = function(vsia) {
     cf * exp(a + b * log(vsia))
   },
-  model_specifications = load_parameter_frame("bt_poudel_2019_3")
+  model_specifications = load_parameter_frame("bt_poudel_2019_3") %>%
+    aggregate_taxa()
 )
 
 rsbt <- FixedEffectsSet(

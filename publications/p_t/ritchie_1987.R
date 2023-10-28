@@ -28,7 +28,8 @@ rc_1 <- FixedEffectsSet(
   predict_fn = function(hst, ccfl, gs_s, dsob, hstix50) {
     1 - ((1) / (1 + exp(b_0 + b_1 * hst + b_2 * ccfl + b_3 * log(gs_s) + b_4 * (dsob / hst) + b_5 * (hstix50 - 4.5))))
   },
-  model_specifications = load_parameter_frame("rc_ritchie_1987_1"),
+  model_specifications = load_parameter_frame("rc_ritchie_1987_1") %>%
+    aggregate_taxa(),
   covariate_definitions = list(
     ccfl = "crown competition factor of large trees"
   )
@@ -47,7 +48,8 @@ rc_2 <- FixedEffectsSet(
   predict_fn = function(hst, ccfl, gs_s) {
     1 - ((1) / (1 + exp(b_0 + b_1 * hst + b_2 * ccfl + b_3 * log(gs_s))))
   },
-  model_specifications = load_parameter_frame("rc_ritchie_1987_2"),
+  model_specifications = load_parameter_frame("rc_ritchie_1987_2") %>%
+    aggregate_taxa(),
   covariate_definitions = list(
     ccfl = "crown competition factor of large trees"
   )
@@ -68,7 +70,8 @@ rc_3 <- FixedEffectsSet(
     1 - ((1) / (1 + exp(b_0 + b_2 * ccfl + b_3 * log(gs_s) +
       b_4 * (dsob / hst))))
   },
-  model_specifications = load_parameter_frame("rc_ritchie_1987_3"),
+  model_specifications = load_parameter_frame("rc_ritchie_1987_3") %>%
+    aggregate_taxa(),
   covariate_definitions = list(
     ccfl = "crown competition factor of large trees"
   )
@@ -85,7 +88,8 @@ rc_4 <- FixedEffectsSet(
   predict_fn = function(ccfl) {
     1 - ((1) / (1 + exp(b_0 + b_2 * ccfl)))
   },
-  model_specifications = load_parameter_frame("rc_ritchie_1987_4"),
+  model_specifications = load_parameter_frame("rc_ritchie_1987_4") %>%
+    aggregate_taxa(),
   covariate_definitions = list(
     ccfl = "crown competition factor of large trees"
   )

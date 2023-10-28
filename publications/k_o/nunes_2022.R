@@ -16,7 +16,7 @@ nunes_2022 <- Publication(
   )
 )
 
-hcl <- FixedEffectsSet(
+hcl_taxa <- FixedEffectsSet(
   response = list(
     hcl = units::as_units("m")
   ),
@@ -29,10 +29,28 @@ hcl <- FixedEffectsSet(
     hst / (1 + a0 * exp(-a1 * (10000 / en)^(-0.5)))
   },
   model_specifications = load_parameter_frame("hcl_nunes_2022") %>%
+    dplyr::filter(!is.na(family)) %>%
     aggregate_taxa()
 )
 
-dc <- FixedEffectsSet(
+hcl_notaxa <- FixedEffectsSet(
+  response = list(
+    hcl = units::as_units("m")
+  ),
+  covariates = list(
+    hst = units::as_units("m"),
+    en  = units::as_units("ha^-1")
+  ),
+  parameter_names = c("a0", "a1"),
+  predict_fn = function(hst, en) {
+    hst / (1 + a0 * exp(-a1 * (10000 / en)^(-0.5)))
+  },
+  model_specifications = load_parameter_frame("hcl_nunes_2022") %>%
+    dplyr::filter(is.na(family)) %>%
+    dplyr::select(-c(family, genus, species))
+)
+
+dc_taxa <- FixedEffectsSet(
   response = list(
     dc = units::as_units("m")
   ),
@@ -45,9 +63,30 @@ dc <- FixedEffectsSet(
     b0 * (dsob^b1) * ((10000 / en)^(-0.5))^b2
   },
   model_specifications = load_parameter_frame("dc_nunes_2022") %>%
+    dplyr::filter(!is.na(family)) %>%
     aggregate_taxa()
 )
 
+
+dc_notaxa <- FixedEffectsSet(
+  response = list(
+    dc = units::as_units("m")
+  ),
+  covariates = list(
+    dsob = units::as_units("cm"),
+    en = units::as_units("ha^-1")
+  ),
+  parameter_names = c("b0", "b1", "b2"),
+  predict_fn = function(dsob, en) {
+    b0 * (dsob^b1) * ((10000 / en)^(-0.5))^b2
+  },
+  model_specifications = load_parameter_frame("dc_nunes_2022") %>%
+    dplyr::filter(is.na(family)) %>%
+    dplyr::select(-c(family, genus, species))
+)
+
 nunes_2022 <- nunes_2022 %>%
-  add_set(hcl) %>%
-  add_set(dc)
+  add_set(hcl_taxa) %>%
+  add_set(hcl_notaxa) %>%
+  add_set(dc_taxa) %>%
+  add_set(dc_notaxa)

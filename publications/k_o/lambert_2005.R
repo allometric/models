@@ -20,6 +20,15 @@ lambert_2005 <- Publication(
 b_params <- load_parameter_frame("b_lambert_2005") %>%
   aggregate_taxa()
 
+taxa_key <- b_params %>%
+  dplyr::select(model, region, code, taxa) %>%
+  dplyr::group_by(model, region, code) %>%
+  dplyr::filter(dplyr::row_number() == 1)
+
+b_params <- b_params %>%
+  dplyr::mutate(na_genus = purrr::map_lgl(taxa, ~ "NA" %in% .)) %>%
+  dplyr::select(-c(taxa))
+
 dia_b_params <- b_params %>% dplyr::filter(model == "DBH")
 dia_b_params_names <- unique(dia_b_params$parameter)
 
@@ -56,8 +65,8 @@ diaht_response_funcs <- list(
   }
 )
 
-dia_covariate_units <- list(dsob = units::as_units("cm"))
-diaht_covariate_units <- list(
+dia_covariates <- list(dsob = units::as_units("cm"))
+diaht_covariates <- list(
   dsob = units::as_units("cm"),
   hst = units::as_units("m")
 )
@@ -79,21 +88,29 @@ construct_ung_set <- function(category, b_params, b_params_names,
 
   if(!na_genus) {
     model_specifications <- b_params %>%
-      dplyr::filter(genus != "NA", parameter %in% parameter_names) %>%
+      dplyr::filter(
+        !na_genus,
+        parameter %in% parameter_names
+      ) %>%
       tidyr::pivot_wider(names_from = parameter, values_from = estimate) %>%
+      dplyr::left_join(taxa_key, by = c("model", "region", "code")) %>%
       dplyr::select(-c(model, code)) %>%
       dplyr::mutate(region = as.list(strsplit(region, ", ")))
   } else {
     model_specifications <- b_params %>%
-      dplyr::filter(genus == "NA", parameter %in% parameter_names) %>%
+      dplyr::filter(
+        na_genus,
+        parameter %in% parameter_names
+      ) %>%
       tidyr::pivot_wider(names_from = parameter, values_from = estimate) %>%
+      dplyr::left_join(taxa_key, by = c("model", "region", "code")) %>%
       dplyr::mutate(region = as.list(strsplit(region, ", "))) %>%
       dplyr::mutate(
         species_group = dplyr::recode(
           code, UNKN.HWD = "hardwood", UNKN.SWD = "softwood", UNKN.SPP = "all"
         )
       ) %>%
-      dplyr::select(-c(model, code, family, genus, species))
+      dplyr::select(-c(model, code))
   }
 
   FixedEffectsSet(

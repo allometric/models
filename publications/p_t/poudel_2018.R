@@ -18,6 +18,17 @@ poudel_2018 <- Publication(
   )
 )
 
+taxon_ppm <- Taxon(
+  family = "Pinaceae",
+  genus = "Pseudotsuga",
+  species = "menziesii"
+)
+
+taxon_pth <- Taxon(
+  family = "Pinaceae",
+  genus = "Tsuga",
+  species = "heterophylla"
+)
 
 
 m1 <- FixedEffectsSet(
@@ -34,9 +45,7 @@ m1 <- FixedEffectsSet(
     b_1 + b_2 * x + b_3 * x^2 + b_4 * x^3 + b_5 * x^4
   },
   model_specifications = tibble::tibble(
-    family = c("Pinaceae", "Pinaceae"),
-    genus = c("Pseudotsuga", "Tsuga"),
-    species = c("menziesii", "heterophylla"),
+    taxa = list(Taxa(taxon_ppm), Taxa(taxon_pth)),
     b_1 = c(0.02435, 0.03080),
     b_2 = c(0.85814, 0.42992),
     b_3 = c(2.57379, 4.12143),
@@ -61,9 +70,7 @@ m2 <- FixedEffectsSet(
     b_1 * dsob^b_2 * b_3^dsob * ((1 - sqrt(t)) / (1 - sqrt(p)))^(b_4 * t^2 + b_5 * log(t + 0.001) + b_6 * sqrt(t) + b_7 * exp(t) + b_8 * (dsob / hst))
   },
   model_specifications = tibble::tibble(
-    family = c("Pinaceae", "Pinaceae"),
-    genus = c("Pseudotsuga", "Tsuga"),
-    species = c("menziesii", "heterophylla"),
+    taxa = list(Taxa(taxon_ppm), Taxa(taxon_pth)),
     b_1 = c(0.79314, 0.92336),
     b_2 = c(1.02189, 1.00547),
     b_3 = c(0.99754, 0.99796),
@@ -91,9 +98,7 @@ m3 <- FixedEffectsSet(
     ((log(sin(t * pi / 2))) / (log(sin((1.37 / hst) * pi / 2))))^(b_1 + b_2 * sin(t * pi / 2) + b_3 * cos(t * (3 * pi / 2)) + b_4 * ((sin((pi / 2) * t)) / (t)) + b_5 * dsob + b_6 * t * sqrt(dsob) + b_7 * t * sqrt(hst))
   },
   model_specifications = tibble::tibble(
-    family = c("Pinaceae", "Pinaceae"),
-    genus = c("Pseudotsuga", "Tsuga"),
-    species = c("menziesii", "heterophylla"),
+    taxa = list(Taxa(taxon_ppm), Taxa(taxon_pth)),
     b_1 = c(0.14030, 1.84835),
     b_2 = c(0.72960, 0.01014),
     b_3 = c(0.15440, 0.00175),
@@ -120,9 +125,7 @@ m4 <- FixedEffectsSet(
     b_1 * dsob^b_2 * hst^b_3 * ((1 - t^(1 / 3)) / (1 - k^(1 / 3)))^(b_4 * t^4 + b_5 * (1 / exp(dsob / hst)) + b_6 * ((1 - t^(1 / 3)) / (1 - k^(1 / 3)))^(0.1) + b_7 * (1 / dsob) + b_8 * (hst^(1 - (hsd / hst)^(1 / 3))) + b_9 * ((1 - t^(1 / 3)) / (1 - k^(1 / 3))))
   },
   model_specifications = tibble::tibble(
-    family = c("Pinaceae", "Pinaceae"),
-    genus = c("Pseudotsuga", "Tsuga"),
-    species = c("menziesii", "heterophylla"),
+    taxa = list(Taxa(taxon_ppm), Taxa(taxon_pth)),
     b_1 = c(1.04208, 1.05981),
     b_2 = c(0.99771, 0.99433),
     b_3 = c(-0.03111, -0.01684),
@@ -149,9 +152,7 @@ m5 <- FixedEffectsSet(
     2 * (((b_1 * dsob) / (1 - exp(b_3 * (1.3 - hst)))) + (dsob / 2 - b_1 * dsob) * (1 - (1 / (1 - exp(b_2 * (1.3 - hst))))) + exp(-b_2 * hsd) * ((dsob / 2 - b_1 * dsob) * exp(1.3 * b_2) / (1 - exp(b_2 * (1.3 - hst)))) - exp(b_3 * hsd) * ((b_1 * dsob * exp(-b_3 * hst)) / (1 - exp(b_3 * (1.3 - hst)))))
   },
   model_specifications = tibble::tibble(
-    family = c("Pinaceae", "Pinaceae"),
-    genus = c("Pseudotsuga", "Tsuga"),
-    species = c("menziesii", "heterophylla"),
+    taxa = list(Taxa(taxon_ppm), Taxa(taxon_pth)),
     b_1 = c(0.30853, 0.04561),
     b_2 = c(0.08620, -0.02362),
     b_3 = c(0.07768, -0.86616)

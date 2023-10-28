@@ -30,7 +30,8 @@ vsm_spc <- FixedEffectsSet(
   predict_fn = function(dsob, hsm) {
     b_0 + b_1 * dsob^b_2 + b_3 * dsob^(b_4) * hsm^b_5
   },
-  model_specifications = load_parameter_frame("vsm_scott_1981_1")
+  model_specifications = load_parameter_frame("vsm_scott_1981_1") %>%
+    aggregate_taxa()
 )
 
 vsm_grp <- FixedEffectsSet(
@@ -47,7 +48,6 @@ vsm_grp <- FixedEffectsSet(
   },
   model_specifications = load_parameter_frame("vsm_scott_1981_2")
 )
-
 
 scott_1981 <- scott_1981 %>%
   add_set(vsm_spc) %>%
