@@ -19,17 +19,18 @@ temesgen_2007 <- Publication(
 )
 
 eq4 <- FixedEffectsSet(
-  response_unit = list(
+  response = list(
     hst = units::as_units("m")
   ),
-  covariate_units = list(
+  covariates = list(
     dsob = units::as_units("cm")
   ),
   parameter_names = c("a", "b", "c"),
   predict_fn = function(dsob) {
     1.3 + exp(a + b * dsob^c)
   },
-  model_specifications = load_parameter_frame("hst_temesgen_2007")
+  model_specifications = load_parameter_frame("hst_temesgen_2007") %>%
+    aggregate_taxa()
 )
 
 temesgen_2007 <- temesgen_2007 %>%

@@ -1,28 +1,26 @@
-krumland_2005_citation <- RefManageR::BibEntry(
-  bibtype = "techreport",
-  key = "krumland_2005",
-  title = "Site index systems for major young-growth forest and woodland species in northern California",
-  author = "Krumland, Bruce & Eng, Helge",
-  year = 2005,
-  institution = "State of California, The Resources Agency, Department of Forestry and Fire Protection"
-)
-
-
 krumland_2005 <- Publication(
-  citation = krumland_2005_citation,
+  citation = RefManageR::BibEntry(
+    bibtype = "techreport",
+    key = "krumland_2005",
+    title = "Site index systems for major young-growth forest and woodland species in northern California",
+    author = "Krumland, Bruce & Eng, Helge",
+    year = 2005,
+    institution = "State of California, The Resources Agency, Department of Forestry and Fire Protection"
+  ),
   descriptors = list(
     country = "US",
     region = "US-CA"
   )
 )
 
-model_specifications <- load_parameter_frame("hstix_krumland_2005")
+model_specifications <- load_parameter_frame("hstix_krumland_2005") %>%
+  aggregate_taxa()
 
 krumland_2005_cr1_model_set <- FixedEffectsSet(
-  response_unit = list(
+  response = list(
     hstixi = units::as_units("ft")
   ),
-  covariate_units = list(
+  covariates = list(
     hst = units::as_units("ft"),
     atb = units::as_units("years"),
     ati = units::as_units("years")
@@ -37,10 +35,10 @@ krumland_2005_cr1_model_set <- FixedEffectsSet(
 )
 
 krumland_2005_cr2_model_set <- FixedEffectsSet(
-  response_unit = list(
+  response = list(
     hstixi = units::as_units("ft")
   ),
-  covariate_units = list(
+  covariates = list(
     hst = units::as_units("ft"),
     atb = units::as_units("years"),
     ati = units::as_units("years")
@@ -59,10 +57,10 @@ krumland_2005_cr2_model_set <- FixedEffectsSet(
 )
 
 krumland_2005_sh1_model_set <- FixedEffectsSet(
-  response_unit = list(
+  response = list(
     hstixi = units::as_units("ft")
   ),
-  covariate_units = list(
+  covariates = list(
     hst = units::as_units("ft"),
     atb = units::as_units("years"),
     ati = units::as_units("years")
@@ -78,10 +76,10 @@ krumland_2005_sh1_model_set <- FixedEffectsSet(
 )
 
 krumland_2005_sh2_model_set <- FixedEffectsSet(
-  response_unit = list(
+  response = list(
     hstixi = units::as_units("ft")
   ),
-  covariate_units = list(
+  covariates = list(
     hst = units::as_units("ft"),
     atb = units::as_units("years"),
     ati = units::as_units("years")
@@ -96,10 +94,10 @@ krumland_2005_sh2_model_set <- FixedEffectsSet(
 )
 
 krumland_2005_kp1_model_set <- FixedEffectsSet(
-  response_unit = list(
+  response = list(
     hstixi = units::as_units("ft")
   ),
-  covariate_units = list(
+  covariates = list(
     hst = units::as_units("ft"),
     atb = units::as_units("years"),
     ati = units::as_units("years")
@@ -115,10 +113,10 @@ krumland_2005_kp1_model_set <- FixedEffectsSet(
 )
 
 krumland_2005_lg1_model_set <- FixedEffectsSet(
-  response_unit = list(
+  response = list(
     hstixi = units::as_units("ft")
   ),
-  covariate_units = list(
+  covariates = list(
     hst = units::as_units("ft"),
     atb = units::as_units("years"),
     ati = units::as_units("years")

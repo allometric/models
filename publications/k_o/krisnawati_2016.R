@@ -14,18 +14,22 @@ krisnawati_2016 <- Publication(
   descriptors = list(
     country = "ID",
     region = "ID-SS",
-    family = "Fabaceae",
-    genus = "Acacia",
-    species = "mangium"
+    taxa = Taxa(
+      Taxon(
+        family = "Fabaceae",
+        genus = "Acacia",
+        species = "mangium"
+      )
+    )
   )
 )
 
 # Eq. 23
 vsoa <- FixedEffectsModel(
-  response_unit = list(
+  response = list(
     vsoa = units::as_units("m^3")
   ),
-  covariate_units = list(
+  covariates = list(
     dsob = units::as_units("cm"),
     hst = units::as_units("m")
   ),
@@ -41,10 +45,10 @@ vsoa <- FixedEffectsModel(
 
 # Eq. 24
 vsia <- FixedEffectsModel(
-  response_unit = list(
+  response = list(
     vsia = units::as_units("m^3")
   ),
-  covariate_units = list(
+  covariates = list(
     dsob = units::as_units("cm"),
     hst = units::as_units("m")
   ),
@@ -60,10 +64,10 @@ vsia <- FixedEffectsModel(
 
 # Eq. 25
 dsoh <- FixedEffectsModel(
-  response_unit = list(
+  response = list(
     dsoh = units::as_units("cm")
   ),
-  covariate_units = list(
+  covariates = list(
     dsob = units::as_units("cm"),
     hst = units::as_units("m"),
     hsl = units::as_units("m")
@@ -82,10 +86,10 @@ dsoh <- FixedEffectsModel(
 
 # Eq. 26
 dsih <- FixedEffectsModel(
-  response_unit = list(
+  response = list(
     dsih = units::as_units("cm")
   ),
-  covariate_units = list(
+  covariates = list(
     dsob = units::as_units("cm"),
     hst = units::as_units("m"),
     hsl = units::as_units("m")
@@ -106,10 +110,10 @@ dsih <- FixedEffectsModel(
 
 # Eq. 27
 vsom <- FixedEffectsModel(
-  response_unit = list(
+  response = list(
     vsom = units::as_units("m^3")
   ),
-  covariate_units = list(
+  covariates = list(
     dsob = units::as_units("cm"),
     hst = units::as_units("m"),
     dsoh = units::as_units("cm")
@@ -131,10 +135,10 @@ vsom <- FixedEffectsModel(
 
 # Eq. 28
 vsim <- FixedEffectsModel(
-  response_unit = list(
+  response = list(
     vsim = units::as_units("m^3")
   ),
-  covariate_units = list(
+  covariates = list(
     dsob = units::as_units("cm"),
     hst = units::as_units("m"),
     dsih = units::as_units("cm")

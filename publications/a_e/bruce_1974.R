@@ -11,17 +11,21 @@ bruce_1974 <- Publication(
   descriptors = list(
     country = c("US", "CA"),
     region = c("US-OR", "US-WA", "CA-BC"),
-    family = "Pinaceae",
-    genus = "Pseudotsuga",
-    species = "menziesii"
+    taxa = Taxa(
+      Taxon(
+        family = "Pinaceae",
+        genus = "Pseudotsuga",
+        species = "menziesii"
+      )
+    )
   )
 )
 
 small <- FixedEffectsModel(
-  response_unit = list(
+  response = list(
     vsia = units::as_units("ft^3")
   ),
-  covariate_units = list(
+  covariates = list(
     hst = units::as_units("ft"),
     dsob = units::as_units("in")
   ),
@@ -42,10 +46,10 @@ small <- FixedEffectsModel(
 )
 
 large <- FixedEffectsModel(
-  response_unit = list(
+  response = list(
     vsia = units::as_units("ft^3")
   ),
-  covariate_units = list(
+  covariates = list(
     hst = units::as_units("ft"),
     dsob = units::as_units("in")
   ),

@@ -8,19 +8,23 @@ harrington_1986 <- Publication(
     institution = "Pacific Northwest Research Station, US Department of Agriculture, Forest Service"
   ),
   descriptors = list(
-    family = "Betulaceae",
-    genus = "Alnus",
-    species = "rubra",
     country = "US",
-    region = c("US-OR", "US-WA")
+    region = c("US-OR", "US-WA"),
+    taxa = Taxa(
+      Taxon(
+        family = "Betulaceae",
+        genus = "Alnus",
+        species = "rubra"
+      )
+    )
   )
 )
 
 hstix20 <- FixedEffectsModel(
-  response_unit = list(
+  response = list(
     hstix = units::as_units("ft")
   ),
-  covariate_units = list(
+  covariates = list(
     hst = units::as_units("ft"),
     atb = units::as_units("years")
   ),

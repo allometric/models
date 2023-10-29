@@ -9,9 +9,13 @@ hoyer_1989 <- Publication(
     institution = "US Department of Agriculture, Forest Service, Pacific Northwest Research Station"
   ),
   descriptors = list(
-    family = "Pinaceae",
-    genus = "abies",
-    species = "amibalis",
+    taxa = Taxa(
+      Taxon(
+        family = "Pinaceae",
+        genus = "abies",
+        species = "amibalis"
+      )
+    ),
     country = "US",
     region = c("US-OR", "US-WA")
   )
@@ -19,10 +23,10 @@ hoyer_1989 <- Publication(
 
 # Eq. 4 - the selected height model
 hst <- FixedEffectsModel(
-  response_unit = list(
+  response = list(
     hst = units::as_units("ft")
   ),
-  covariate_units = list(
+  covariates = list(
     hstix100 = units::as_units("ft"),
     atb = units::as_units("years")
   ),
@@ -39,10 +43,10 @@ hst <- FixedEffectsModel(
 
 # Eq. 8 - Site index at 100
 hstix100 <- FixedEffectsModel(
-  response_unit = list(
+  response = list(
     hstix100 = units::as_units("ft")
   ),
-  covariate_units = list(
+  covariates = list(
     hst = units::as_units("ft"),
     atb = units::as_units("years")
   ),

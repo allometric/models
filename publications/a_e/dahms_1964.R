@@ -9,19 +9,23 @@ dahms_1964 <- Publication(
     doi = "https://doi.org/10.5962/bhl.title.94205"
   ),
   descriptors = list(
-    family = "Pinaceae",
-    genus = "Pinus",
-    species = "contorta",
+    taxa = Taxa(
+      Taxon(
+        family = "Pinaceae",
+        genus = "Pinus",
+        species = "contorta"
+      )
+    ),
     region = "US-OR",
     country = "US"
   )
 )
 
 hstix100 <- FixedEffectsModel(
-  response_unit = list(
+  response = list(
     hstix100 = units::as_units("ft")
   ),
-  covariate_units = list(
+  covariates = list(
     hst = units::as_units("ft"),
     att = units::as_units("years")
   ),

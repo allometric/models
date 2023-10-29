@@ -11,19 +11,23 @@ curtis_1974 <- Publication(
     journal = "Forest Science"
   ),
   descriptors = list(
-    family = "Pinaceae",
-    genus = "Pseudotsuga",
-    species = "menziesii",
+    taxa = Taxa(
+      Taxon(
+        family = "Pinaceae",
+        genus = "Pseudotsuga",
+        species = "menziesii"
+      )
+    ),
     country = "US",
     region = c("US-OR", "US-WA")
   )
 )
 
 eq3_lte100 <- FixedEffectsModel(
-  response_unit = list(
+  response = list(
     hstix100 = units::as_units("ft")
   ),
-  covariate_units = list(
+  covariates = list(
     hst = units::as_units("ft"),
     atb = units::as_units("years")
   ),
@@ -44,10 +48,10 @@ eq3_lte100 <- FixedEffectsModel(
 )
 
 eq3_gt100 <- FixedEffectsModel(
-  response_unit = list(
+  response = list(
     hstix100 = units::as_units("ft")
   ),
-  covariate_units = list(
+  covariates = list(
     hst = units::as_units("ft"),
     atb = units::as_units("years")
   ),

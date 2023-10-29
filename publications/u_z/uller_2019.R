@@ -19,8 +19,8 @@ uller_2019 <- Publication(
 )
 
 mod_1 <- FixedEffectsModel(
-  response_unit = list(bt = units::as_units("kg")),
-  covariate_units = list(dsob = units::as_units("cm")),
+  response = list(bt = units::as_units("kg")),
+  covariates = list(dsob = units::as_units("cm")),
   parameters = list(
     beta_0 = -48.4365,
     beta_1 = 0.6467
@@ -31,8 +31,8 @@ mod_1 <- FixedEffectsModel(
 )
 
 mod_2 <- FixedEffectsModel(
-  response_unit = list(bt = units::as_units("kg")),
-  covariate_units = list(dsob = units::as_units("cm")),
+  response = list(bt = units::as_units("kg")),
+  covariates = list(dsob = units::as_units("cm")),
   parameters = list(
     beta_0 = -2.3702,
     beta_1 = 2.5179,
@@ -44,8 +44,8 @@ mod_2 <- FixedEffectsModel(
 )
 
 mod_3 <- FixedEffectsModel(
-  response_unit = list(bt = units::as_units("kg")),
-  covariate_units = list(
+  response = list(bt = units::as_units("kg")),
+  covariates = list(
     dsob = units::as_units("cm"),
     hst = units::as_units("m")
   ),
@@ -59,8 +59,8 @@ mod_3 <- FixedEffectsModel(
 )
 
 mod_4 <- FixedEffectsModel(
-  response_unit = list(bt = units::as_units("kg")),
-  covariate_units = list(
+  response = list(bt = units::as_units("kg")),
+  covariates = list(
     dsob = units::as_units("cm"),
     hst = units::as_units("m")
   ),
@@ -75,8 +75,8 @@ mod_4 <- FixedEffectsModel(
 )
 
 mod_5 <- FixedEffectsModel(
-  response_unit = list(bt = units::as_units("kg")),
-  covariate_units = list(
+  response = list(bt = units::as_units("kg")),
+  covariates = list(
     dsob = units::as_units("cm"),
     hst = units::as_units("m")
   ),
@@ -92,8 +92,8 @@ mod_5 <- FixedEffectsModel(
 )
 
 mod_6 <- FixedEffectsModel(
-  response_unit = list(bt = units::as_units("kg")),
-  covariate_units = list(
+  response = list(bt = units::as_units("kg")),
+  covariates = list(
     dsob = units::as_units("cm"),
     hst = units::as_units("m")
   ),
@@ -109,8 +109,8 @@ mod_6 <- FixedEffectsModel(
 )
 
 mod_7 <- FixedEffectsModel(
-  response_unit = list(bt = units::as_units("kg")),
-  covariate_units = list(
+  response = list(bt = units::as_units("kg")),
+  covariates = list(
     dsob = units::as_units("cm"),
     rsd = units::as_units("kg / m^3")
   ),
@@ -126,8 +126,8 @@ mod_7 <- FixedEffectsModel(
 )
 
 mod_8 <- FixedEffectsModel(
-  response_unit = list(bt = units::as_units("kg")),
-  covariate_units = list(
+  response = list(bt = units::as_units("kg")),
+  covariates = list(
     dsob = units::as_units("cm"),
     hst = units::as_units("m"),
     rsd = units::as_units("kg / m^3")
@@ -142,8 +142,8 @@ mod_8 <- FixedEffectsModel(
 )
 
 mod_9 <- FixedEffectsModel(
-  response_unit = list(bt = units::as_units("kg")),
-  covariate_units = list(
+  response = list(bt = units::as_units("kg")),
+  covariates = list(
     dsob = units::as_units("cm"),
     hst = units::as_units("m"),
     rsd = units::as_units("kg / m^3")
@@ -159,8 +159,8 @@ mod_9 <- FixedEffectsModel(
 )
 
 mod_10 <- FixedEffectsModel(
-  response_unit = list(bt = units::as_units("kg")),
-  covariate_units = list(
+  response = list(bt = units::as_units("kg")),
+  covariates = list(
     dsob = units::as_units("cm"),
     hst = units::as_units("m"),
     rsd = units::as_units("kg / m^3")

@@ -12,9 +12,13 @@ myers_1972 <- Publication(
   descriptors = list(
     country = "US",
     region = c("US-CO", "US-WY"),
-    family = "Pinaceae",
-    genus = "Picea",
-    species = "engelmanii"
+    taxa = Taxa(
+      Taxon(
+        family = "Pinaceae",
+        genus = "Picea",
+        species = "engelmanii"
+      )
+    )
   )
 )
 
@@ -39,30 +43,30 @@ covt_units_logs <- list(
 param_names <- c("a", "b")
 
 cuft_vol <- FixedEffectsSet(
-  response_unit = list(
+  response = list(
     vsoa = units::as_units("ft^3")
   ),
-  covariate_units = covt_units_ht,
+  covariates = covt_units_ht,
   parameter_names = param_names,
   predict_fn = vol_func,
   model_specifications = load_parameter_frame("vsa_myers_1972_1")
 )
 
 cuft_vbar <- FixedEffectsSet(
-  response_unit = list(
+  response = list(
     rsvg = units::as_units("ft^3 / ft^2")
   ),
-  covariate_units = covt_units_ht,
+  covariates = covt_units_ht,
   parameter_names = param_names,
   predict_fn = vbar_func,
   model_specifications = load_parameter_frame("rsvg_myers_1972_1")
 )
 
 bdft_vol_logs <- FixedEffectsSet(
-  response_unit = list(
+  response = list(
     vsom = units::as_units("board_foot")
   ),
-  covariate_units = covt_units_logs,
+  covariates = covt_units_logs,
   parameter_names = param_names,
   predict_fn = function(dsob, hsm) {
     a + b * dsob^2 * hsm
@@ -74,20 +78,20 @@ bdft_vol_logs <- FixedEffectsSet(
 )
 
 bdft_vol_feet <- FixedEffectsSet(
-  response_unit = list(
+  response = list(
     vsim = units::as_units("board_foot")
   ),
-  covariate_units = covt_units_ht,
+  covariates = covt_units_ht,
   parameter_names = param_names,
   predict_fn = vol_func,
   model_specifications = load_parameter_frame("vsm_myers_1972_2")
 )
 
 bdft_vbar_logs <- FixedEffectsSet(
-  response_unit = list(
+  response = list(
     rsvg = units::as_units("ft^3 / ft^2")
   ),
-  covariate_units = covt_units_logs,
+  covariates = covt_units_logs,
   parameter_names = param_names,
   predict_fn = function(dsob, hsm) {
     a * hsm + b / dsob^2
@@ -99,10 +103,10 @@ bdft_vbar_logs <- FixedEffectsSet(
 )
 
 bdft_vbar_feet <- FixedEffectsSet(
-  response_unit = list(
+  response = list(
     rsvg = units::as_units("ft^3 / ft^2")
   ),
-  covariate_units = covt_units_ht,
+  covariates = covt_units_ht,
   parameter_names = param_names,
   predict_fn = vbar_func,
   model_specifications = load_parameter_frame("rsvg_myers_1972_3")

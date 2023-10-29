@@ -14,10 +14,10 @@ iffsc_2022 <- Publication(
 )
 
 pantropical <- FixedEffectsModel(
-  response_unit = list(
+  response = list(
     bt = units::as_units("kg")
   ),
-  covariate_units = list(
+  covariates = list(
     dsob = units::as_units("cm"),
     rwd = units::as_units("g / cm^3")
   ),
@@ -37,8 +37,8 @@ pantropical <- FixedEffectsModel(
 )
 
 cecropia_galaziovii <- FixedEffectsModel(
-  response_unit = list(bt = units::as_units("kg")),
-  covariate_units = list(
+  response = list(bt = units::as_units("kg")),
+  covariates = list(
     dsoc = units::as_units("cm"),
     hst = units::as_units("m")
   ),
@@ -52,15 +52,19 @@ cecropia_galaziovii <- FixedEffectsModel(
     a / (1 + exp(b + c * dsoc + d * hst))
   },
   descriptors = list(
-    family = "Uritaceae",
-    genus = "Cecropia",
-    species = "galaziovii"
+    taxa = Taxa(
+      Taxon(
+        family = "Uritaceae",
+        genus = "Cecropia",
+        species = "galaziovii"
+      )
+    )
   )
 )
 
 cyathea_delgadii <- FixedEffectsModel(
-  response_unit = list(bt = units::as_units("kg")),
-  covariate_units = list(
+  response = list(bt = units::as_units("kg")),
+  covariates = list(
     dsob = units::as_units("cm"),
     hst = units::as_units("m")
   ),
@@ -73,15 +77,19 @@ cyathea_delgadii <- FixedEffectsModel(
     a * dsob^b * hst^c
   },
   descriptors = list(
-    family = "Cyatheaceae",
-    genus = "Cyathea",
-    species = "delgadii"
+    taxa = Taxa(
+      Taxon(
+        family = "Cyatheaceae",
+        genus = "Cyathea",
+        species = "delgadii"
+      )
+    )
   )
 )
 
 euterpe_edulis <- FixedEffectsModel(
-  response_unit = list(bt = units::as_units("kg")),
-  covariate_units = list(
+  response = list(bt = units::as_units("kg")),
+  covariates = list(
     dsob = units::as_units("cm"),
     hst = units::as_units("m")
   ),
@@ -94,9 +102,13 @@ euterpe_edulis <- FixedEffectsModel(
     a * dsob^b * hst^c
   },
   descriptors = list(
-    family = "Arecaceae",
-    genus = "Euterpe",
-    species = "edulist"
+    taxa = Taxa(
+      Taxon(
+        family = "Arecaceae",
+        genus = "Euterpe",
+        species = "edulist"
+      )
+    )
   )
 )
 
@@ -105,10 +117,10 @@ euterpe_edulis <- FixedEffectsModel(
 
 # Eq 8.
 mixed_ombrophilous <- FixedEffectsModel(
-  response_unit = list(
+  response = list(
     bt = units::as_units("kg")
   ),
-  covariate_units = list(
+  covariates = list(
     dsob = units::as_units("cm"),
     rwd = units::as_units("g / cm^3")
   ),
@@ -127,10 +139,10 @@ mixed_ombrophilous <- FixedEffectsModel(
 )
 
 araucaria_angustifolia <- FixedEffectsModel(
-  response_unit = list(
+  response = list(
     bt = units::as_units("kg")
   ),
-  covariate_units = list(
+  covariates = list(
     dsob = units::as_units("cm"),
     rwd = units::as_units("g / cm^3")
   ),
@@ -144,17 +156,21 @@ araucaria_angustifolia <- FixedEffectsModel(
     a * (dsob^2 * (1.3 + b * exp(c / dsob)) * rwd)^d
   },
   descriptors = list(
-    family = "Araucariaceae",
-    genus = "Araucaria",
-    species = "angustifolia"
+    taxa = Taxa(
+      Taxon(
+        family = "Araucariaceae",
+        genus = "Araucaria",
+        species = "angustifolia"
+      )
+    )
   )
 )
 
 deciduous <- FixedEffectsModel(
-  response_unit = list(
+  response = list(
     bt = units::as_units("kg")
   ),
-  covariate_units = list(
+  covariates = list(
     dsob = units::as_units("cm"),
     rwd = units::as_units("g / cm^3")
   ),

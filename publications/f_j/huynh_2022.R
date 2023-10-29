@@ -15,9 +15,13 @@ huynh_2022 <- Publication(
   descriptors = list(
     country = "AU",
     region = "AU-QLD",
-    family = "Myrtaceae",
-    genus = "Corymbia",
-    species = "citriodora"
+    taxa = Taxa(
+      Taxon(
+        family = "Myrtaceae",
+        genus = "Corymbia",
+        species = "citriodora"
+      )
+    )
   )
 )
 
@@ -26,7 +30,7 @@ all_params <- load_parameter_frame("huynh_2022")
 model_group <- list(
   "3" = list(
     parameter_names = c("alpha", "beta"),
-    covariate_units = list(
+    covariates = list(
       dsob = units::as_units("cm")
     ),
     predict_fn = function(dsob) {
@@ -35,7 +39,7 @@ model_group <- list(
   ),
   "4" = list(
     parameter_names = c("alpha", "beta"),
-    covariate_units = list(
+    covariates = list(
       hst = units::as_units("m")
     ),
     predict_fn = function(hst) {
@@ -44,7 +48,7 @@ model_group <- list(
   ),
   "5" = list(
     parameter_names = c("alpha", "beta", "beta_1"),
-    covariate_units = list(
+    covariates = list(
       dsob = units::as_units("cm"),
       hst = units::as_units("m")
     ),
@@ -54,7 +58,7 @@ model_group <- list(
   ),
   "6" = list(
     parameter_names = c("alpha", "beta"),
-    covariate_units = list(
+    covariates = list(
       dsob = units::as_units("cm"),
       hst = units::as_units("m")
     ),
@@ -64,7 +68,7 @@ model_group <- list(
   ),
   "7" = list(
     parameter_names = c("alpha", "beta", "beta_1"),
-    covariate_units = list(
+    covariates = list(
       dsob = units::as_units("cm"),
       rwd = units::as_units("kg / m^3")
     ),
@@ -74,7 +78,7 @@ model_group <- list(
   ),
   "8" = list(
     parameter_names = c("alpha", "beta", "beta_1", 'beta_2'),
-    covariate_units = list(
+    covariates = list(
       dsob = units::as_units("cm"),
       hst = units::as_units("m"),
       rwd = units::as_units("kg / m^3")
@@ -85,7 +89,7 @@ model_group <- list(
   ),
   "9" = list(
     parameter_names = c("alpha", "beta"),
-    covariate_units = list(
+    covariates = list(
       dsob = units::as_units("cm"),
       hst = units::as_units("m"),
       rwd = units::as_units("kg / m^3")
@@ -96,7 +100,7 @@ model_group <- list(
   ),
   "10" = list(
     parameter_names = c("alpha", "beta"),
-    covariate_units = list(
+    covariates = list(
       dsob = units::as_units("cm")
     ),
     predict_fn = function(dsob) {
@@ -105,7 +109,7 @@ model_group <- list(
   ),
   "11" = list(
     parameter_names = c("alpha", "beta"),
-    covariate_units = list(
+    covariates = list(
       hst = units::as_units("m")
     ),
     predict_fn = function(hst) {
@@ -114,7 +118,7 @@ model_group <- list(
   ),
   "12" = list(
     parameter_names = c("alpha", "beta"),
-    covariate_units = list(
+    covariates = list(
       dc = units::as_units("m")
     ),
     predict_fn = function(dc) {
@@ -123,7 +127,7 @@ model_group <- list(
   ),
   "13" = list(
     parameter_names = c("alpha", "beta", "beta_1"),
-    covariate_units = list(
+    covariates = list(
       dsob = units::as_units("cm"),
       dc = units::as_units("m")
     ),
@@ -133,7 +137,7 @@ model_group <- list(
   ),
   "14" = list(
     parameter_names = c("alpha", "beta", "beta_1", "beta_2"),
-    covariate_units = list(
+    covariates = list(
       dsob = units::as_units("cm"),
       hst = units::as_units("m"),
       dc = units::as_units("m")
@@ -144,18 +148,18 @@ model_group <- list(
   ),
   "15" = list(
     parameter_names = c("alpha", "beta"),
-    covariate_units = list(
+    covariates = list(
       dsob = units::as_units("cm"),
       hst = units::as_units("m"),
       dc = units::as_units("m")
     ),
     predict_fn = function(dsob, hst, dc) {
-      alpha * (dsob^2 * hst* dc)^beta
+      alpha * (dsob^2 * hst * dc)^beta
     }
   ),
   "16" = list(
     parameter_names = c("alpha", "beta", "beta_1", "beta_2", "beta_3"),
-    covariate_units = list(
+    covariates = list(
       dsob = units::as_units("cm"),
       hst = units::as_units("m"),
       rwd = units::as_units("kg / m^3"),
@@ -167,7 +171,7 @@ model_group <- list(
   ),
   "17" = list(
     parameter_names = c("alpha", "beta"),
-    covariate_units = list(
+    covariates = list(
       dsob = units::as_units("cm"),
       hst = units::as_units("m"),
       rwd = units::as_units("kg / m^3"),
@@ -179,7 +183,7 @@ model_group <- list(
   ),
   "18" = list(
     parameter_names = c("alpha", "beta"),
-    covariate_units = list(
+    covariates = list(
       vc = units::as_units("cm^3")
     ),
     predict_fn = function(vc) {
@@ -188,7 +192,7 @@ model_group <- list(
   ),
   "19" = list(
     parameter_names = c("alpha", "beta", "beta_1"),
-    covariate_units = list(
+    covariates = list(
       dsob = units::as_units("cm"),
       vc = units::as_units("cm^3")
     ),
@@ -198,7 +202,7 @@ model_group <- list(
   ),
   "20" = list(
     parameter_names = c("alpha", "beta", "beta_1", "beta_2"),
-    covariate_units = list(
+    covariates = list(
       dsob = units::as_units("cm"),
       hst = units::as_units("m"),
       vc = units::as_units("cm^3")
@@ -209,7 +213,7 @@ model_group <- list(
   ),
   "21" = list(
     parameter_names = c("alpha", "beta"),
-    covariate_units = list(
+    covariates = list(
       dsob = units::as_units("cm"),
       hst = units::as_units("m"),
       vc = units::as_units("cm^3")
@@ -220,7 +224,7 @@ model_group <- list(
   ),
   "22" = list(
     parameter_names = c("alpha", "beta", "beta_1", "beta_2", "beta_3"),
-    covariate_units = list(
+    covariates = list(
       dsob = units::as_units("cm"),
       hst = units::as_units("m"),
       rwd = units::as_units("kg / m^3"),
@@ -232,7 +236,7 @@ model_group <- list(
   ),
   "23" = list(
     parameter_names = c("alpha", "beta"),
-    covariate_units = list(
+    covariates = list(
       dsob = units::as_units("cm"),
       hst = units::as_units("m"),
       rwd = units::as_units("kg / m^3"),
@@ -248,13 +252,15 @@ for(i in seq_along(model_group)) {
   eq_id <- names(model_group)[[i]]
   config <- model_group[[eq_id]]
 
-  parameters <- all_params[all_params$equation_no == as.numeric(eq_id), config$parameter_names]
+  parameters <- all_params[
+    all_params$equation_no == as.numeric(eq_id), config$parameter_names
+  ]
 
   mod <- FixedEffectsModel(
-    response_unit = list(
+    response = list(
       bt = units::as_units("kg")
     ),
-    covariate_units = config$covariate_units,
+    covariates = config$covariates,
     parameters = parameters,
     predict_fn = config$predict_fn,
     descriptors = list(

@@ -1,4 +1,3 @@
-
 montero_2005 <- Publication(
   citation = RefManageR::BibEntry(
     bibtype = "techreport",
@@ -19,9 +18,9 @@ b_params <- load_parameter_frame("b_montero_2005")
 b_param_names <- unique(b_params$allo_var)
 
 for (b_param_name in b_param_names) {
-  response_unit <- list()
-  response_unit[[b_param_name]] <- units::as_units("kg")
-  covariate_units <- list(dsob = units::as_units("cm"))
+  response <- list()
+  response[[b_param_name]] <- units::as_units("kg")
+  covariates <- list(dsob = units::as_units("cm"))
 
 
   # Nest the regions
@@ -30,13 +29,14 @@ for (b_param_name in b_param_names) {
     dplyr::select(-name) %>%
     dplyr::group_by(allo_var, family, genus, species, a, b, cf) %>%
     dplyr::summarise(region = list(region)) %>%
-    dplyr::ungroup()
+    dplyr::ungroup() %>%
+    aggregate_taxa()
 
   model_spec <- model_spec[, -1] # drop allo_var column
 
   set <- FixedEffectsSet(
-    response_unit = response_unit,
-    covariate_units = covariate_units,
+    response = response,
+    covariates = covariates,
     parameter_names = c("a", "b", "cf"),
     predict_fn = function(dsob) {
       cf * exp(a) * dsob^b
@@ -55,11 +55,12 @@ bb_spec <- bb_params %>%
   dplyr::select(-name) %>%
   dplyr::group_by(family, genus, species, branch_size, a, b, cf) %>%
   dplyr::summarise(region = list(region)) %>%
-  dplyr::ungroup()
+  dplyr::ungroup() %>%
+  aggregate_taxa()
 
 bb_set <- FixedEffectsSet(
-  response_unit = list(bb = units::as_units("kg")),
-  covariate_units = covariate_units,
+  response = list(bb = units::as_units("kg")),
+  covariates = covariates,
   parameter_names = c("a", "b", "cf"),
   predict_fn = function(dsob) {
     cf * exp(a) * dsob^b
@@ -71,10 +72,10 @@ montero_2005 <- montero_2005 %>% add_set(bb_set)
 
 # Others - total tree
 bt_others <- FixedEffectsSet(
-  response_unit = list(
+  response = list(
     bt = units::as_units("kg")
   ),
-  covariate_units = list(
+  covariates = list(
     dsob = units::as_units("cm")
   ),
   parameter_names = c("a", "b", "cf"),
@@ -91,10 +92,10 @@ bt_others <- FixedEffectsSet(
 
 # Others - root
 br_others <- FixedEffectsSet(
-  response_unit = list(
+  response = list(
     br = units::as_units("kg")
   ),
-  covariate_units = list(
+  covariates = list(
     dsob = units::as_units("cm")
   ),
   parameter_names = c("a", "b", "cf"),

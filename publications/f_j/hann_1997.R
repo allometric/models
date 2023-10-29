@@ -16,10 +16,10 @@ hann_1997 <- Publication(
 )
 
 dcl <- FixedEffectsSet(
-  response_unit = list(
+  response = list(
     dcl = units::as_units("ft")
   ),
-  covariate_units = list(
+  covariates = list(
     dsob = units::as_units("in"),
     hst = units::as_units("ft"),
     rc = units::as_units("ft / ft"),
@@ -31,7 +31,8 @@ dcl <- FixedEffectsSet(
   predict_fn = function(dsob, hst, rc, dcm) {
     dcm * rc ^ (b0 + b1 * (rc * hst) + b2 * (dsob / hst))
   },
-  model_specifications = load_parameter_frame("dcl_hann_1997")
+  model_specifications = load_parameter_frame("dcl_hann_1997") %>%
+    aggregate_taxa()
 )
 
 hann_1997 <- hann_1997 %>% add_set(dcl)
