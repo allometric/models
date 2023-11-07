@@ -19,10 +19,10 @@ kozak_1988 <- Publication(
 )
 
 taper <- FixedEffectsSet(
-  response_unit = list(
+  response = list(
     dsih = units::as_units("cm")
   ),
-  covariate_units = list(
+  covariates = list(
     hst = units::as_units("m"),
     hsd = units::as_units("m"),
     dsob = units::as_units("cm")
@@ -34,7 +34,7 @@ taper <- FixedEffectsSet(
     a_0 * dsob^a_1 * a_2^dsob * x^(b_1 * z^2 + b_2 * log(z + 0.001) +
       b_3 * sqrt(z) + b_4 * exp(z) + b_5 * (dsob / hst))
   },
-  model_specifications = tibble::tibble(load_parameter_frame("kozak_1988"))
+  model_specifications = load_parameter_frame("kozak_1988") %>% aggregate_taxa()
 )
 
 kozak_1988 <- kozak_1988 %>% add_set(taper)

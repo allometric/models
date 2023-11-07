@@ -15,10 +15,10 @@ paine_1982 <- Publication(
 )
 
 dcm <- FixedEffectsSet(
-  response_unit = list(
+  response = list(
     dcm = units::as_units("feet")
   ),
-  covariate_units = list(
+  covariates = list(
     dsob = units::as_units("in")
   ),
   parameter_names = c(
@@ -27,7 +27,8 @@ dcm <- FixedEffectsSet(
   predict_fn = function(dsob) {
     a0 + a1 * dsob + a2 * dsob^2
   },
-  model_specifications = load_parameter_frame("dcm_paine_1982")
+  model_specifications = load_parameter_frame("dcm_paine_1982") %>%
+    aggregate_taxa()
 )
 
 paine_1982 <- paine_1982 %>% add_set(dcm)

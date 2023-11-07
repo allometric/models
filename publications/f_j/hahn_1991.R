@@ -19,8 +19,8 @@ hahn_1991 <- Publication(
 )
 
 cuvol <- FixedEffectsSet(
-  response_unit = list(vsia = units::as_units("ft^3")),
-  covariate_units = list(
+  response = list(vsia = units::as_units("ft^3")),
+  covariates = list(
     hstix50 = units::as_units("ft"),
     dsob = units::as_units("in")
   ),
@@ -31,12 +31,13 @@ cuvol <- FixedEffectsSet(
   covariate_definitions = list(
     hstix50 = "Site index at an un-specified base age."
   ),
-  model_specifications = load_parameter_frame("vsa_hahn_1991_1")
+  model_specifications = load_parameter_frame("vsa_hahn_1991_1") %>%
+    aggregate_taxa()
 )
 
 bdft <- FixedEffectsSet(
-  response_unit = list(vsia = units::as_units("board_foot")),
-  covariate_units = list(
+  response = list(vsia = units::as_units("board_foot")),
+  covariates = list(
     hstix50 = units::as_units("ft"),
     dsob = units::as_units("in")
   ),
@@ -47,7 +48,8 @@ bdft <- FixedEffectsSet(
   covariate_definitions = list(
     hstix50 = "Site index at an un-specified base age."
   ),
-  model_specifications = load_parameter_frame("vsa_hahn_1991_2")
+  model_specifications = load_parameter_frame("vsa_hahn_1991_2") %>%
+    aggregate_taxa()
 )
 
 hahn_1991 <- hahn_1991 %>%

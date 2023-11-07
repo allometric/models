@@ -9,19 +9,23 @@ cochran_1985 <- Publication(
     institution = "US Department of Agriculture, Forest Service, Pacific Northwest Forest and Experiment Station"
   ),
   descriptors = list(
-    family = "Pinaceae",
-    genus = "Larix",
-    species = "occidentalis",
+    taxa = Taxa(
+      Taxon(
+        family = "Pinaceae",
+        genus = "Larix",
+        species = "occidentalis"
+      )
+    ),
     country = "US",
     region = c("US-OR", "US-WA")
   )
 )
 
 hstix50 <- FixedEffectsModel(
-  response_unit = list(
+  response = list(
     hstix50 = units::as_units("ft")
   ),
-  covariate_units = list(
+  covariates = list(
     atb = units::as_units("years"),
     hst = units::as_units("ft")
   ),

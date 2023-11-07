@@ -1,5 +1,31 @@
 # allometric/models changelog
 
+# [2.0.0](https://github.com/allometric/models/compare/v1.1.2...v2.0.0) (2023-10-29)
+
+
+### Bug Fixes
+
+* correctly specifying feldpausch_2012 pantropical model country descriptor ([880303a](https://github.com/allometric/models/commit/880303a0c5ac27216b90874f824ae8ad7b19d252))
+* defining site index base age for hahn_1984 models, closes [#19](https://github.com/allometric/models/issues/19) ([ddc9b81](https://github.com/allometric/models/commit/ddc9b81ccb39cd5c247fe7eb7866674e33de299e))
+* defining site index base age for hahn_1991 models, closes [#20](https://github.com/allometric/models/issues/20) ([979df5c](https://github.com/allometric/models/commit/979df5c854599e8980e1aeae905ce83abf1812c7))
+* temporarily removing zeide_2002 response description to avoid errors in the CRAN version of allometric ([cce52a0](https://github.com/allometric/models/commit/cce52a0317ae74fd524358691df89fa431945a02))
+
+
+* Forcing breaking change ([45fc7c3](https://github.com/allometric/models/commit/45fc7c3e65f0d548b52c23796cc4638f21a5b1b7))
+
+
+### Features
+
+* adding cochran_1979b ([53020b2](https://github.com/allometric/models/commit/53020b2ed644787e4d1aeb512d104419123c89ca))
+* adding mcardle_1961, closes [#25](https://github.com/allometric/models/issues/25) ([a29a093](https://github.com/allometric/models/commit/a29a0932064c032aee6d299d873ccc7b8cd0da0a))
+* **models:** added zeide_2002, closes [#18](https://github.com/allometric/models/issues/18) ([b2f305c](https://github.com/allometric/models/commit/b2f305cd1d6f42a395c7e1c0c0abc2085b9ade6c))
+
+
+### BREAKING CHANGES
+
+* commit
+* Updating models to use taxa field
+
 ## [1.1.2](https://github.com/allometric/models/compare/v1.1.1...v1.1.2) (2023-09-07)
 
 

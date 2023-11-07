@@ -9,19 +9,23 @@ wiley_1978 <- Publication(
     year = 1978
   ),
   descriptors = list(
-    family = "Pinaceae",
-    genus = "Tsuga",
-    species = "heterophylla",
+    taxa = Taxa(
+      Taxon(
+        family = "Pinaceae",
+        genus = "Tsuga",
+        species = "heterophylla"
+      )
+    ),
     country = c("US", "CA"),
     region = c("US-OR", "US-WA", "CA-BC")
   )
 )
 
 hstix50 <- FixedEffectsModel(
-  response_unit = list(
+  response = list(
     hstix50 = units::as_units("ft")
   ),
-  covariate_units = list(
+  covariates = list(
     hst = units::as_units("ft"),
     atb = units::as_units("years")
   ),

@@ -11,19 +11,23 @@ bell_1981_citation <- RefManageR::BibEntry(
 bell_1981 <- Publication(
   citation = bell_1981_citation,
   descriptors = list(
-    family = "Pinaceae",
-    genus = "Tsuga",
-    species = "mertensiana",
+    taxa = Taxa(
+      Taxon(
+        family = "Pinaceae",
+        genus = "Tsuga",
+        species = "mertensiana"
+      )
+    ),
     country = "US",
     region = "US-OR"
   )
 )
 
 chosen_cvts_model <- FixedEffectsModel(
-  response_unit = list(
+  response = list(
     vsia = units::as_units("ft^3")
   ),
-  covariate_units = list(
+  covariates = list(
     dsob = units::as_units("in"),
     hst = units::as_units("ft")
   ),

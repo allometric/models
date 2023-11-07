@@ -14,10 +14,10 @@ larsen_1985 <- Publication(
 )
 
 dsib <- FixedEffectsSet(
-  response_unit = list(
+  response = list(
     dsib = units::as_units("in")
   ),
-  covariate_units = list(
+  covariates = list(
     dsob = units::as_units("in")
   ),
   parameter_names = c(
@@ -26,7 +26,8 @@ dsib <- FixedEffectsSet(
   predict_fn = function(dsob) {
     b1 * (dsob)^b2
   },
-  model_specifications = load_parameter_frame("dsib_larsen_1985")
+  model_specifications = load_parameter_frame("dsib_larsen_1985") %>%
+    aggregate_taxa()
 )
 
 larsen_1985 <- larsen_1985 %>%

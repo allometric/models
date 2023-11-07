@@ -11,17 +11,21 @@ cochran_1979b <- Publication(
   descriptors = list(
     country = "US",
     region = c("US-OR", "US-WA"),
-    family = "Pinaceae",
-    genus = "Pseudotsuga",
-    species = "menziesii"
+    taxa = Taxa(
+      Taxon(
+        family = "Pinaceae",
+        genus = "Pseudotsuga",
+        species = "menziesii"
+      )
+    )
   )
 )
 
 hstix_df <- FixedEffectsModel(
-  response_unit = list(
+  response = list(
     hstix50 = units::as_units("ft")
   ),
-  covariate_units = list(
+  covariates = list(
     hst = units::as_units("ft"),
     atb = units::as_units("years")
   ),

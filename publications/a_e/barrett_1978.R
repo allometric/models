@@ -10,19 +10,23 @@ barrett_1978 <- Publication(
     doi = "https://doi.org/10.5962/bhl.title.94197"
   ),
   descriptors = list(
-    family = "Pinaceae",
-    genus = "Pinus",
-    species = "ponderosa",
+    taxa = Taxa(
+      Taxon(
+        family = "Pinaceae",
+        genus = "Pinus",
+        species = "ponderosa"
+      )
+    ),
     region = c("US-WA", "US-OR"),
     country = "US"
   )
 )
 
 hstix100 <- FixedEffectsModel(
-  response_unit = list(
+  response = list(
     hstix100 = units::as_units("ft")
   ),
-  covariate_units = list(
+  covariates = list(
     hst = units::as_units("ft"),
     atb = units::as_units("years")
   ),

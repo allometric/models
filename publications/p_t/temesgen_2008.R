@@ -1,34 +1,36 @@
-temesgen_2008_citation <- RefManageR::BibEntry(
-  bibtype = "article",
-  key = "temesgen_2008",
-  title = "Analysis and comparison of nonlinear tree height prediction
-        strategies for Douglas-fir forests",
-  author = "Temesgen, Hailemariam and Monleon, Vicente J. and Hann, David W.",
-  journal = "Canadian Journal of Forest Research",
-  year = 2008,
-  volume = 38,
-  number = 3,
-  pages = "553-565",
-  year = 2008,
-  doi = "https://doi.org/10.1139/X07-104"
-)
-
 temesgen_2008 <- Publication(
-  citation = temesgen_2008_citation,
+  citation = RefManageR::BibEntry(
+    bibtype = "article",
+    key = "temesgen_2008",
+    title = "Analysis and comparison of nonlinear tree height prediction
+          strategies for Douglas-fir forests",
+    author = "Temesgen, Hailemariam and Monleon, Vicente J. and Hann, David W.",
+    journal = "Canadian Journal of Forest Research",
+    year = 2008,
+    volume = 38,
+    number = 3,
+    pages = "553-565",
+    year = 2008,
+    doi = "https://doi.org/10.1139/X07-104"
+  ),
   descriptors = list(
     country = "US",
     region = "US-OR",
-    family = "Pinaceae",
-    genus = "Pseudotsuga",
-    species = "menziesii"
+    taxa = Taxa(
+      Taxon(
+        family = "Pinaceae",
+        genus = "Pseudotsuga",
+        species = "menziesii"
+      )
+    )
   )
 )
 
 temesgen_2008 <- add_model(temesgen_2008, FixedEffectsModel(
-  response_unit = list(
+  response = list(
     hst = units::as_units("m")
   ),
-  covariate_units = list(
+  covariates = list(
     dsob = units::as_units("cm")
   ),
   parameters = list(
@@ -42,10 +44,10 @@ temesgen_2008 <- add_model(temesgen_2008, FixedEffectsModel(
 ))
 
 temesgen_2008 <- add_model(temesgen_2008, MixedEffectsModel(
-  response_unit = list(
+  response = list(
     hst = units::as_units("m")
   ),
-  covariate_units = list(
+  covariates = list(
     dsob = units::as_units("cm")
   ),
   parameters = list(
@@ -68,10 +70,10 @@ temesgen_2008 <- add_model(temesgen_2008, MixedEffectsModel(
 ))
 
 temesgen_2008 <- add_model(temesgen_2008, MixedEffectsModel(
-  response_unit = list(
+  response = list(
     hst = units::as_units("m")
   ),
-  covariate_units = list(
+  covariates = list(
     dsob = units::as_units("cm")
   ),
   parameters = list(
@@ -89,10 +91,10 @@ temesgen_2008 <- add_model(temesgen_2008, MixedEffectsModel(
 ))
 
 temesgen_2008 <- add_model(temesgen_2008, FixedEffectsModel(
-  response_unit = list(
+  response = list(
     hst = units::as_units("m")
   ),
-  covariate_units = list(
+  covariates = list(
     ccfl = units::as_units("m2 / ha"),
     gs_s = units::as_units("m2 / ha"),
     dsob = units::as_units("cm")
@@ -114,10 +116,10 @@ temesgen_2008 <- add_model(temesgen_2008, FixedEffectsModel(
 ))
 
 temesgen_2008 <- add_model(temesgen_2008, MixedEffectsModel(
-  response_unit = list(
+  response = list(
     hst = units::as_units("m")
   ),
-  covariate_units = list(
+  covariates = list(
     ccfl = units::as_units("m2 / ha"),
     gs_s = units::as_units("m2 / ha"),
     dsob = units::as_units("cm")
@@ -143,10 +145,10 @@ temesgen_2008 <- add_model(temesgen_2008, MixedEffectsModel(
 ))
 
 temesgen_2008 <- add_model(temesgen_2008, MixedEffectsModel(
-  response_unit = list(
+  response = list(
     hst = units::as_units("m")
   ),
-  covariate_units = list(
+  covariates = list(
     ccfl = units::as_units("m2 / ha"),
     gs_s = units::as_units("m2 / ha"),
     dsob = units::as_units("cm")

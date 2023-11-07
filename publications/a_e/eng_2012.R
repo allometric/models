@@ -15,7 +15,8 @@ eng_2012 <- Publication(
   )
 )
 
-params <- load_parameter_frame("hst_eng_2012")
+params <- load_parameter_frame("hst_eng_2012") %>%
+  aggregate_taxa()
 
 predict_fns <- list(
   function(dsob) {
@@ -54,7 +55,7 @@ for(eq_no in eq_nos) {
     dplyr::filter(eq_no == {{eq_no}}) %>%
     dplyr::select_if(~sum(!is.na(.)) > 0)
 
-  param_names <- colnames(params_eq)[!colnames(params_eq) %in% c("family", "genus", "species", "eq_no")]
+  param_names <- colnames(params_eq)[!colnames(params_eq) %in% c("taxa", "eq_no")]
 
 
   model_specifications <- params_eq %>% dplyr::select(-c(eq_no))
@@ -63,20 +64,20 @@ for(eq_no in eq_nos) {
 
   if(eq_no %in% c(1, 2)) {
     set <- FixedEffectsSet(
-      response_unit = list(
+      response = list(
         hst = units::as_units("ft")
       ),
-      covariate_units = covt_units[[eq_no]],
+      covariates = covt_units[[eq_no]],
       parameter_names = param_names,
       predict_fn = predict_fn,
       model_specifications = model_specifications
     )
   } else {
     set <- FixedEffectsSet(
-      response_unit = list(
+      response = list(
         hst = units::as_units("ft")
       ),
-      covariate_units = covt_units[[eq_no]],
+      covariates = covt_units[[eq_no]],
       parameter_names = param_names,
       predict_fn = predict_fn,
       model_specifications = model_specifications,

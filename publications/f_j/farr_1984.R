@@ -16,10 +16,10 @@ farr_1984 <- Publication(
 )
 
 pisi_hstix50 <- FixedEffectsModel(
-  response_unit = list(
+  response = list(
     hstix50 = units::as_units("ft")
   ),
-  covariate_units = list(
+  covariates = list(
     hst = units::as_units("ft"),
     atb = units::as_units("years")
   ),
@@ -48,17 +48,21 @@ pisi_hstix50 <- FixedEffectsModel(
     a - exp(x4) * exp(x5) + exp(x4) * (hst - 4.5)
   },
   descriptors = list(
-    family = "Pinaceae",
-    genus = "Picea",
-    species = "sitchensis"
+    taxa = Taxa(
+      Taxon(
+        family = "Pinaceae",
+        genus = "Picea",
+        species = "sitchensis"
+      )
+    )
   )
 )
 
 tshe_hstix50 <- FixedEffectsModel(
-  response_unit = list(
+  response = list(
     hstix50 = units::as_units("ft")
   ),
-  covariate_units = list(
+  covariates = list(
     hst = units::as_units("ft"),
     atb = units::as_units("years")
   ),
@@ -88,9 +92,13 @@ tshe_hstix50 <- FixedEffectsModel(
     a - exp(x1) * exp(x2) + exp(x1) * (hst - 4.5)
   },
   descriptors = list(
-    family = "Pinaceae",
-    genus = "Tsuga",
-    species = "heterophylla"
+    taxa = Taxa(
+      Taxon(
+        family = "Pinaceae",
+        genus = "Tsuga",
+        species = "heterophylla"
+      )
+    )
   )
 )
 

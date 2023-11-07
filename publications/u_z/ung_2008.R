@@ -20,7 +20,17 @@ ung_2008 <- Publication(
   )
 )
 
-b_params <- load_parameter_frame('b_ung_2008')
+b_params <- load_parameter_frame('b_ung_2008') %>%
+  aggregate_taxa()
+
+taxa_key <- b_params %>%
+  dplyr::select(model, region, code, taxa) %>%
+  dplyr::group_by(model, region, code) %>%
+  dplyr::filter(dplyr::row_number() == 1)
+
+b_params <- b_params %>%
+  dplyr::mutate(na_genus = purrr::map_lgl(taxa, ~ "NA" %in% .)) %>%
+  dplyr::select(-c(taxa))
 
 dia_b_params <- b_params %>% dplyr::filter(model == "DBH")
 dia_b_params_names <- unique(dia_b_params$parameter)
@@ -58,13 +68,13 @@ diaht_response_funcs <- list(
   }
 )
 
-dia_covariate_units <- list(dsob = units::as_units("cm"))
-diaht_covariate_units <- list(
+dia_covariates <- list(dsob = units::as_units("cm"))
+diaht_covariates <- list(
   dsob = units::as_units("cm"),
   hst = units::as_units("m")
 )
 
-response_unit_defs <- list(
+response_defs <- list(
   wood = "bs",
   bark = "bk",
   branches = "bb",
@@ -72,37 +82,39 @@ response_unit_defs <- list(
 )
 
 construct_ung_set <- function(category, b_params, b_params_names,
-  covariate_units, response_funcs, na_genus) {
-  response_unit <- list()
-  response_unit[[response_unit_defs[[category]]]] <- units::as_units("kg")
+  covariates, response_funcs, na_genus) {
+  response <- list()
+  response[[response_defs[[category]]]] <- units::as_units("kg")
 
 
   parameter_names <- b_params_names[grepl(category, b_params_names, fixed=T)]
 
   if(!na_genus) {
-    b_params <- b_params %>% dplyr::filter(genus != "NA")
+    b_params <- b_params %>% dplyr::filter(na_genus != "NA")
   } else {
-    b_params <- b_params %>% dplyr::filter(genus == "NA")
+    b_params <- b_params %>% dplyr::filter(na_genus == "NA")
   }
 
   if(!na_genus) {
     model_specifications <- b_params %>%
-      dplyr::filter(genus != "NA", parameter %in% parameter_names) %>%
+      dplyr::filter(parameter %in% parameter_names) %>%
       tidyr::pivot_wider(names_from = parameter, values_from = estimate) %>%
+      dplyr::left_join(taxa_key, by = c("model", "region", "code")) %>%
       dplyr::select(-c(model, code)) %>%
       dplyr::mutate(region = as.list(strsplit(region, ", ")))
   } else {
     model_specifications <- b_params %>%
-      dplyr::filter(genus == "NA", parameter %in% parameter_names) %>%
+      dplyr::filter(parameter %in% parameter_names) %>%
       tidyr::pivot_wider(names_from = parameter, values_from = estimate) %>%
+      dplyr::left_join(taxa_key, by = c("model", "region", "code")) %>%
       dplyr::mutate(region = as.list(strsplit(region, ", "))) %>%
       dplyr::mutate(species_group = dplyr::recode(code, UNKN.HWD = "hardwood", UNKN.SWD = "softwood", UNKN.SPP = "all")) %>%
-      dplyr::select(-c(model, code, family, genus, species))
+      dplyr::select(-c(model, code))
   }
 
   FixedEffectsSet(
-    response_unit = response_unit,
-    covariate_units = covariate_units,
+    response = response,
+    covariates = covariates,
     parameter_names = parameter_names,
     predict_fn = response_funcs[[category]],
     model_specifications = model_specifications
@@ -117,7 +129,7 @@ for (i in seq_along(dia_response_funcs)) {
     category,
     dia_b_params,
     dia_b_params_names,
-    dia_covariate_units,
+    dia_covariates,
     dia_response_funcs,
     na_genus = FALSE
   )
@@ -133,7 +145,7 @@ for (i in seq_along(dia_response_funcs)) {
     category,
     diaht_b_params,
     diaht_b_params_names,
-    diaht_covariate_units,
+    diaht_covariates,
     diaht_response_funcs,
     na_genus = FALSE
   )
@@ -149,7 +161,7 @@ for (i in seq_along(dia_response_funcs)) {
     category,
     dia_b_params,
     dia_b_params_names,
-    dia_covariate_units,
+    dia_covariates,
     dia_response_funcs,
     na_genus = TRUE
   )
@@ -165,7 +177,7 @@ for (i in seq_along(dia_response_funcs)) {
     category,
     diaht_b_params,
     diaht_b_params_names,
-    diaht_covariate_units,
+    diaht_covariates,
     diaht_response_funcs,
     na_genus = TRUE
   )

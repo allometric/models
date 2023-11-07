@@ -26,10 +26,10 @@ geog_region_frame <- country_frame %>%
   dplyr::ungroup()
 
 geog_region_set <- FixedEffectsSet(
-  response_unit = list(
+  response = list(
     hst = units::as_units("m")
   ),
-  covariate_units = list(
+  covariates = list(
     dsob = units::as_units("cm")
   ),
   parameter_names = c("a", "b", "c"),
@@ -59,10 +59,10 @@ continent_frame <- country_frame %>%
   tibble::as_tibble()
 
 generic_set <- FixedEffectsSet(
-  response_unit = list(
+  response = list(
     hst = units::as_units("m")
   ),
-  covariate_units = list(
+  covariates = list(
     dsob = units::as_units("cm")
   ),
   parameter_names = c("a", "b", "c"),
@@ -79,10 +79,10 @@ pantropical_frame <- country_frame %>%
   dplyr::mutate(a = 50.874, b = 0.0420, c = 0.784)
 
 pantropical_model <- FixedEffectsModel(
-  response_unit = list(
+  response = list(
     hst = units::as_units("m")
   ),
-  covariate_units = list(
+  covariates = list(
     dsob = units::as_units("cm")
   ),
   parameters = list(
@@ -91,7 +91,7 @@ pantropical_model <- FixedEffectsModel(
   predict_fn = function(dsob) {
     a * (1 - exp(-b * dsob^c))
   },
-  descriptors = pantropical_frame[, "country"]
+  descriptors = list(country = unique(pantropical_frame$country[[1]]))
 )
 
 # Unfortunately, Feldpascuh et al. do not specify the source of the biomass
@@ -100,10 +100,10 @@ pantropical_model <- FixedEffectsModel(
 # simply referred to as a pantropical model in the descriptors.
 
 bt_1 <- FixedEffectsModel(
-  response_unit = list(
+  response = list(
     bt = units::as_units("kg")
   ),
-  covariate_units = list(
+  covariates = list(
     dsob = units::as_units("cm"),
     rwd = units::as_units("g / cm^3")
   ),
@@ -125,10 +125,10 @@ bt_1 <- FixedEffectsModel(
 )
 
 bt_2 <- FixedEffectsModel(
-  response_unit = list(
+  response = list(
     bt = units::as_units("kg")
   ),
-  covariate_units = list(
+  covariates = list(
     dsob = units::as_units("cm"),
     rwd = units::as_units("g / cm^3"),
     hst = units::as_units("m")

@@ -15,10 +15,10 @@ fvs_2008 <- Publication(
 
 # Curtis-Arney functional form, 4.1.1a
 curtis_arney_not_df <- FixedEffectsSet(
-  response_unit = list(
+  response = list(
     hst = units::as_units("ft")
   ),
-  covariate_units = list(
+  covariates = list(
     dsob = units::as_units("in")
   ),
   parameter_names = c("p2", "p3", "p4"),
@@ -37,14 +37,14 @@ curtis_arney_not_df <- FixedEffectsSet(
             "612 - Siuslaw, 712 - BLM Coos", "708 - BLM Salem"
           )
       ) | genus != "Pseudotsuga"
-    )
+    ) %>% aggregate_taxa()
 )
 
 curtis_arney_df <- FixedEffectsSet(
-  response_unit = list(
+  response = list(
     hst = units::as_units("ft")
   ),
-  covariate_units = list(
+  covariates = list(
     dsob = units::as_units("in")
   ),
   parameter_names = c("p2", "p3", "p4"),
@@ -61,30 +61,30 @@ curtis_arney_df <- FixedEffectsSet(
         geographic_region %in% c(
           "612 - Siuslaw, 712 - BLM Coos", "708 - BLM Salem"
         )
-    )
+    ) %>% aggregate_taxa()
 )
 
 # Eq. 4.1.2
 wykoff <- FixedEffectsSet(
-  response_unit = list(
+  response = list(
     hst = units::as_units("ft")
   ),
-  covariate_units = list(
+  covariates = list(
     dsob = units::as_units("in")
   ),
   parameter_names = c("b1", "b2"),
   predict_fn = function(dsob) {
     4.5 + exp(b1 + b2 / (dsob + 1))
   },
-  load_parameter_frame("hst_fvs_2008_2")
+  load_parameter_frame("hst_fvs_2008_2") %>% aggregate_taxa()
 )
 
 # Eq. 4.1.3. first group
 first_413 <- FixedEffectsSet(
-  response_unit = list(
+  response = list(
     hst = units::as_units("ft")
   ),
-  covariate_units = list(
+  covariates = list(
     dsob = units::as_units("in"),
     rc = units::as_units("ft/ft")
   ),
@@ -92,16 +92,16 @@ first_413 <- FixedEffectsSet(
   predict_fn = function(dsob, rc) {
     exp(h1 + (h2 * dsob) + (h3 * rc * 100) + (h4 * dsob^2) + h5)
   },
-  load_parameter_frame("hst_fvs_2008_3")
+  load_parameter_frame("hst_fvs_2008_3") %>% aggregate_taxa()
 )
 
 
 # Eq. 4.1.3. second group
 second_413 <- FixedEffectsSet(
-  response_unit = list(
+  response = list(
     hst = units::as_units("ft")
   ),
-  covariate_units = list(
+  covariates = list(
     dsob = units::as_units("in"),
     rc = units::as_units("ft/ft")
   ),
@@ -109,17 +109,17 @@ second_413 <- FixedEffectsSet(
   predict_fn = function(dsob, rc) {
     h1 + (h2 * dsob) + (h3 * rc * 100) + (h4 * dsob^2) + h5
   },
-  load_parameter_frame("hst_fvs_2008_4")
+  load_parameter_frame("hst_fvs_2008_4") %>% aggregate_taxa()
 )
 
 # Eq. 4.1.3. third group TODO
 
 # Eq. 4.3.1.1. & 4.3.1.2.
 rc <- FixedEffectsSet(
-  response_unit = list(
+  response = list(
     rc = units::as_units("ft / ft")
   ),
-  covariate_units = list(
+  covariates = list(
     hst = units::as_units("ft"),
     gs_s = units::as_units("ft^2 / acre")
   ),
@@ -128,7 +128,8 @@ rc <- FixedEffectsSet(
     x <- r1 + r2 * hst + r3 * gs_s
     ((x - 1) * 10 + 1) / 100
   },
-  model_specifications = load_parameter_frame("rc_fvs_2008")
+  model_specifications = load_parameter_frame("rc_fvs_2008") %>%
+    aggregate_taxa()
 )
 
 fvs_2008 <- fvs_2008 %>%

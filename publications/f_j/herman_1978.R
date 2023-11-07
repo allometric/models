@@ -9,19 +9,23 @@ herman_1978 <- Publication(
     institution = "Department of Agriculture, Forest Service, Pacific Northwest Forest and Range Experiment Station"
   ),
   descriptors = list(
-    family = "Pinaceae",
-    genus = "Abies",
-    species = "procera",
     region = c("US-OR", "US-WA"),
-    country = "US"
+    country = "US",
+    taxa = Taxa(
+      Taxon(
+        family = "Pinaceae",
+        genus = "Abies",
+        species = "procera"
+      )
+    )
   )
 )
 
 hstix100 <- FixedEffectsModel(
-  response_unit = list(
+  response = list(
     hstix100 = units::as_units("ft")
   ),
-  covariate_units = list(
+  covariates = list(
     hst = units::as_units("ft"),
     atb = units::as_units("years")
   ),

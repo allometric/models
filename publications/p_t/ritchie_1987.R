@@ -14,10 +14,10 @@ ritchie_1987 <- Publication(
 )
 
 rc_1 <- FixedEffectsSet(
-  response_unit = list(
+  response = list(
     rc = units::as_units("ft / ft")
   ),
-  covariate_units = list(
+  covariates = list(
     hst = units::as_units("ft"),
     ccfl = units::as_units("ft^2 / ft^2"),
     gs_s = units::as_units("ft^2 / acre"),
@@ -28,17 +28,18 @@ rc_1 <- FixedEffectsSet(
   predict_fn = function(hst, ccfl, gs_s, dsob, hstix50) {
     1 - ((1) / (1 + exp(b_0 + b_1 * hst + b_2 * ccfl + b_3 * log(gs_s) + b_4 * (dsob / hst) + b_5 * (hstix50 - 4.5))))
   },
-  model_specifications = load_parameter_frame("rc_ritchie_1987_1"),
+  model_specifications = load_parameter_frame("rc_ritchie_1987_1") %>%
+    aggregate_taxa(),
   covariate_definitions = list(
     ccfl = "crown competition factor of large trees"
   )
 )
 
 rc_2 <- FixedEffectsSet(
-  response_unit = list(
+  response = list(
     rc = units::as_units("ft / ft")
   ),
-  covariate_units = list(
+  covariates = list(
     hst = units::as_units("ft"),
     ccfl = units::as_units("ft^2 / ft^2"),
     gs_s = units::as_units("ft^2 / acre")
@@ -47,17 +48,18 @@ rc_2 <- FixedEffectsSet(
   predict_fn = function(hst, ccfl, gs_s) {
     1 - ((1) / (1 + exp(b_0 + b_1 * hst + b_2 * ccfl + b_3 * log(gs_s))))
   },
-  model_specifications = load_parameter_frame("rc_ritchie_1987_2"),
+  model_specifications = load_parameter_frame("rc_ritchie_1987_2") %>%
+    aggregate_taxa(),
   covariate_definitions = list(
     ccfl = "crown competition factor of large trees"
   )
 )
 
 rc_3 <- FixedEffectsSet(
-  response_unit = list(
+  response = list(
     rc = units::as_units("ft / ft")
   ),
-  covariate_units = list(
+  covariates = list(
     hst = units::as_units("ft"),
     ccfl = units::as_units("ft^2 / ft^2"),
     gs_s = units::as_units("ft^2 / acre"),
@@ -68,34 +70,36 @@ rc_3 <- FixedEffectsSet(
     1 - ((1) / (1 + exp(b_0 + b_2 * ccfl + b_3 * log(gs_s) +
       b_4 * (dsob / hst))))
   },
-  model_specifications = load_parameter_frame("rc_ritchie_1987_3"),
+  model_specifications = load_parameter_frame("rc_ritchie_1987_3") %>%
+    aggregate_taxa(),
   covariate_definitions = list(
     ccfl = "crown competition factor of large trees"
   )
 )
 
 rc_4 <- FixedEffectsSet(
-  response_unit = list(
+  response = list(
     rc = units::as_units("ft / ft")
   ),
-  covariate_units = list(
+  covariates = list(
     ccfl = units::as_units("ft^2 / ft^2")
   ),
   parameter_names = c("b_0", "b_2"),
   predict_fn = function(ccfl) {
     1 - ((1) / (1 + exp(b_0 + b_2 * ccfl)))
   },
-  model_specifications = load_parameter_frame("rc_ritchie_1987_4"),
+  model_specifications = load_parameter_frame("rc_ritchie_1987_4") %>%
+    aggregate_taxa(),
   covariate_definitions = list(
     ccfl = "crown competition factor of large trees"
   )
 )
 
 rc_tanoak <- FixedEffectsModel(
-  response_unit = list(
+  response = list(
     rc = units::as_units("ft / ft")
   ),
-  covariate_units = list(
+  covariates = list(
     ccfl = units::as_units("ft^2 / ft^2")
   ),
   parameters = list(
@@ -105,9 +109,13 @@ rc_tanoak <- FixedEffectsModel(
     1 - ((1) / (1 + exp(b_2 * ccfl)))
   },
   descriptors = list(
-    family = "Fagaceae",
-    genus = "Notholithocarpus",
-    species = "densiflorus"
+    taxa = Taxa(
+      Taxon(
+        family = "Fagaceae",
+        genus = "Notholithocarpus",
+        species = "densiflorus"
+      )
+    )
   ),
   covariate_definitions = list(
     ccfl = "crown competition factor of large trees"
@@ -115,10 +123,10 @@ rc_tanoak <- FixedEffectsModel(
 )
 
 rc_canyon_live_oak <- FixedEffectsModel(
-  response_unit = list(
+  response = list(
     rc = units::as_units("ft / ft")
   ),
-  covariate_units = list(
+  covariates = list(
     gs_s = units::as_units("ft^2 / acre")
   ),
   parameters = list(
@@ -129,17 +137,21 @@ rc_canyon_live_oak <- FixedEffectsModel(
     1 - ((1) / (1 + exp(b_0 + b_3 * log(gs_s))))
   },
   descriptors = list(
-    family = "Fagaceae",
-    genus = "Quercus",
-    species = "chrysolepis"
+    taxa = Taxa(
+      Taxon(
+        family = "Fagaceae",
+        genus = "Quercus",
+        species = "chrysolepis"
+      )
+    )
   )
 )
 
 rc_black_oak <- FixedEffectsModel(
-  response_unit = list(
+  response = list(
     rc = units::as_units("ft / ft")
   ),
-  covariate_units = list(
+  covariates = list(
     hst = units::as_units("ft"),
     dsob = units::as_units("in"),
     gs_s = units::as_units("ft^2 / acre")
@@ -153,17 +165,21 @@ rc_black_oak <- FixedEffectsModel(
     1 - ((1) / (1 + exp(b_0 + b_3 * log(gs_s) + b_4 * (dsob / hst))))
   },
   descriptors = list(
-    family = "Fagaceae",
-    genus = "Quercus",
-    species = "kelloggii"
+    taxa = Taxa(
+      Taxon(
+        family = "Fagaceae",
+        genus = "Quercus",
+        species = "kelloggii"
+      )
+    )
   )
 )
 
 rc_bigleaf_maple <- FixedEffectsModel(
-  response_unit = list(
+  response = list(
     rc = units::as_units("ft / ft")
   ),
-  covariate_units = list(
+  covariates = list(
     hst = units::as_units("ft"),
     ccfl = units::as_units("ft^2 / ft^2")
   ),
@@ -176,9 +192,13 @@ rc_bigleaf_maple <- FixedEffectsModel(
     1 - ((1) / (1 + exp(b_0 + b_1 * hst + b_2 * ccfl)))
   },
   descriptors = list(
-    family = "Fagaceae",
-    genus = "Quercus",
-    species = "kelloggii"
+    taxa = Taxa(
+      Taxon(
+        family = "Fagaceae",
+        genus = "Quercus",
+        species = "kelloggii"
+      )
+    )
   ),
   covariate_definitions = list(
     ccfl = "crown competition factor of large trees"

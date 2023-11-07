@@ -10,19 +10,23 @@ zeide_2002 <- Publication(
     organization = "General Technical Report SRS-48. USDA, Forest Service. Southern Research Station"
   ),
   descriptors = list(
-    family = "Pinaceae",
-    genus = "Pinus",
-    species = "taeda",
+    taxa = Taxa(
+      Taxon(
+        family = "Pinaceae",
+        genus = "Pinus",
+        species = "taeda"
+      )
+    ),
     country = "US",
     region = "US-AR"
   )
 )
 
 normal <- FixedEffectsModel(
-  response_unit = list(
+  response = list(
     hst_s = units::as_units("ft")
   ),
-  covariate_units = list(
+  covariates = list(
     dsob_s = units::as_units("in")
   ),
   parameters = list(

@@ -15,17 +15,21 @@ rustagi_1991 <- Publication(
   descriptors = list(
     country = c("US", "CA"),
     region = c("US-OR", "US-WA", "CA-BC"),
-    family = "Pinaceae",
-    genus = "Pseudotsuga",
-    species = "menziesii"
+    taxa = Taxa(
+      Taxon(
+        family = "Pinaceae",
+        genus = "Pseudotsuga",
+        species = "menziesii"
+      )
+    )
   )
 )
 
 eq_20 <- FixedEffectsModel(
-  response_unit = list(
+  response = list(
     vsio = units::as_units("m^3")
   ),
-  covariate_units = list(
+  covariates = list(
     dsib = units::as_units("cm"),
     hso = units::as_units("m"),
     hsdip75 = units::as_units("m")
@@ -40,10 +44,10 @@ eq_20 <- FixedEffectsModel(
 )
 
 eq_21 <- FixedEffectsModel(
-  response_unit = list(
+  response = list(
     vsio = units::as_units("m^3")
   ),
-  covariate_units = list(
+  covariates = list(
     dsib = units::as_units("cm"),
     hso = units::as_units("m"),
     hsdop67 = units::as_units("m")
@@ -60,10 +64,10 @@ eq_21 <- FixedEffectsModel(
 # The authors transformed the parameter estimates away from eq. 13, so I use
 # a-f as parameter names
 eq_22 <- FixedEffectsModel(
-  response_unit = list(
+  response = list(
     vsio = units::as_units("m^3")
   ),
-  covariate_units = list(
+  covariates = list(
     dsob = units::as_units("cm"),
     hso = units::as_units("m"),
     hsdop67 = units::as_units("m")

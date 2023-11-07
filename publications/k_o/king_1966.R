@@ -9,19 +9,23 @@ king_1966 <- Publication(
     institution = "Weyerhaeuser Forestry Research Center"
   ),
   descriptors = list(
-    family = "Pinaceae",
-    genus = "Pseudotsuga",
-    species = "menziesii",
+    taxa = Taxa(
+      Taxon(
+        family = "Pinaceae",
+        genus = "Pseudotsuga",
+        species = "menziesii"
+      )
+    ),
     country = "US",
     region = "US-WA"
   )
 )
 
 hstix50 <- FixedEffectsModel(
-  response_unit = list(
+  response = list(
     hstix50 = units::as_units("ft")
   ),
-  covariate_units = list(
+  covariates = list(
     hst = units::as_units("ft"),
     atb = units::as_units("years")
   ),
