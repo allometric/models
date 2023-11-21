@@ -70,10 +70,10 @@ model_group <- list(
     parameter_names = c("alpha", "beta", "beta_1"),
     covariates = list(
       dsob = units::as_units("cm"),
-      rwd = units::as_units("kg / m^3")
+      rws = units::as_units("kg / m^3")
     ),
-    predict_fn = function(dsob, rwd) {
-      alpha * dsob^beta * rwd^beta_1
+    predict_fn = function(dsob, rws) {
+      alpha * dsob^beta * rws^beta_1
     }
   ),
   "8" = list(
@@ -81,10 +81,10 @@ model_group <- list(
     covariates = list(
       dsob = units::as_units("cm"),
       hst = units::as_units("m"),
-      rwd = units::as_units("kg / m^3")
+      rws = units::as_units("kg / m^3")
     ),
-    predict_fn = function(dsob, hst, rwd) {
-      alpha * dsob^beta + hst^beta_1 + rwd^beta_2
+    predict_fn = function(dsob, hst, rws) {
+      alpha * dsob^beta + hst^beta_1 + rws^beta_2
     }
   ),
   "9" = list(
@@ -92,10 +92,10 @@ model_group <- list(
     covariates = list(
       dsob = units::as_units("cm"),
       hst = units::as_units("m"),
-      rwd = units::as_units("kg / m^3")
+      rws = units::as_units("kg / m^3")
     ),
-    predict_fn = function(dsob, hst, rwd) {
-      alpha * (dsob^2 * hst * rwd)^beta
+    predict_fn = function(dsob, hst, rws) {
+      alpha * (dsob^2 * hst * rws)^beta
     }
   ),
   "10" = list(
@@ -162,11 +162,11 @@ model_group <- list(
     covariates = list(
       dsob = units::as_units("cm"),
       hst = units::as_units("m"),
-      rwd = units::as_units("kg / m^3"),
+      rws = units::as_units("kg / m^3"),
       dc = units::as_units("m")
     ),
-    predict_fn = function(dsob, hst, rwd, dc) {
-      alpha * dsob^beta * hst^beta_1 * rwd^beta_2 * dc^beta_3
+    predict_fn = function(dsob, hst, rws, dc) {
+      alpha * dsob^beta * hst^beta_1 * rws^beta_2 * dc^beta_3
     }
   ),
   "17" = list(
@@ -174,11 +174,11 @@ model_group <- list(
     covariates = list(
       dsob = units::as_units("cm"),
       hst = units::as_units("m"),
-      rwd = units::as_units("kg / m^3"),
+      rws = units::as_units("kg / m^3"),
       dc = units::as_units("m")
     ),
-    predict_fn = function(dsob, hst, rwd, dc) {
-      alpha * (dsob^2 * hst * rwd * dc)^beta
+    predict_fn = function(dsob, hst, rws, dc) {
+      alpha * (dsob^2 * hst * rws * dc)^beta
     }
   ),
   "18" = list(
@@ -227,11 +227,11 @@ model_group <- list(
     covariates = list(
       dsob = units::as_units("cm"),
       hst = units::as_units("m"),
-      rwd = units::as_units("kg / m^3"),
+      rws = units::as_units("kg / m^3"),
       vc = units::as_units("cm^3")
     ),
-    predict_fn = function(dsob, hst, rwd, vc) {
-      alpha * dsob^beta * hst^beta_1 * rwd^beta_2 * vc^beta_3
+    predict_fn = function(dsob, hst, rws, vc) {
+      alpha * dsob^beta * hst^beta_1 * rws^beta_2 * vc^beta_3
     }
   ),
   "23" = list(
@@ -239,11 +239,11 @@ model_group <- list(
     covariates = list(
       dsob = units::as_units("cm"),
       hst = units::as_units("m"),
-      rwd = units::as_units("kg / m^3"),
+      rws = units::as_units("kg / m^3"),
       vc = units::as_units("cm^3")
     ),
-    predict_fn = function(dsob, hst, rwd, vc) {
-      alpha * (dsob^2 * hst * rwd * vc)^beta
+    predict_fn = function(dsob, hst, rws, vc) {
+      alpha * (dsob^2 * hst * rws * vc)^beta
     }
   )
 )

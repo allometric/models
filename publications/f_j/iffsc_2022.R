@@ -19,7 +19,7 @@ pantropical <- FixedEffectsModel(
   ),
   covariates = list(
     dsob = units::as_units("cm"),
-    rwd = units::as_units("g / cm^3")
+    rws = units::as_units("g / cm^3")
   ),
   parameters = list(
     a = 0.05678,
@@ -27,8 +27,8 @@ pantropical <- FixedEffectsModel(
     c = 30.0868,
     d = 0.9894
   ),
-  predict_fn = function(dsob, rwd) {
-    a * (dsob^2 * (1.3 + ((b * dsob) / (c * dsob))) * rwd)^d
+  predict_fn = function(dsob, rws) {
+    a * (dsob^2 * (1.3 + ((b * dsob) / (c * dsob))) * rws)^d
   },
   descriptors = list(
     geographic_region = "pantropical",
@@ -122,7 +122,7 @@ mixed_ombrophilous <- FixedEffectsModel(
   ),
   covariates = list(
     dsob = units::as_units("cm"),
-    rwd = units::as_units("g / cm^3")
+    rws = units::as_units("g / cm^3")
   ),
   parameters = list(
     a = 0.05678,
@@ -130,8 +130,8 @@ mixed_ombrophilous <- FixedEffectsModel(
     c = 25.3497,
     d = 0.9894
   ),
-  predict_fn = function(dsob, rwd) {
-    a * (dsob^2 * (1.3 + ((b * dsob) / (c + dsob))) * rwd)^d
+  predict_fn = function(dsob, rws) {
+    a * (dsob^2 * (1.3 + ((b * dsob) / (c + dsob))) * rws)^d
   },
   descriptors = list(
     forest_type = "mixed ombrophilous"
@@ -144,7 +144,7 @@ araucaria_angustifolia <- FixedEffectsModel(
   ),
   covariates = list(
     dsob = units::as_units("cm"),
-    rwd = units::as_units("g / cm^3")
+    rws = units::as_units("g / cm^3")
   ),
   parameters = list(
     a = 0.05678,
@@ -152,8 +152,8 @@ araucaria_angustifolia <- FixedEffectsModel(
     c = -10.0152,
     d = 0.9894
   ),
-  predict_fn = function(dsob, rwd) {
-    a * (dsob^2 * (1.3 + b * exp(c / dsob)) * rwd)^d
+  predict_fn = function(dsob, rws) {
+    a * (dsob^2 * (1.3 + b * exp(c / dsob)) * rws)^d
   },
   descriptors = list(
     taxa = Taxa(
@@ -172,7 +172,7 @@ deciduous <- FixedEffectsModel(
   ),
   covariates = list(
     dsob = units::as_units("cm"),
-    rwd = units::as_units("g / cm^3")
+    rws = units::as_units("g / cm^3")
   ),
   parameters = list(
     a = 0.05678,
@@ -180,8 +180,8 @@ deciduous <- FixedEffectsModel(
     c = 0.037056,
     d = 0.9894
   ),
-  predict_fn = function(dsob, rwd) {
-    a * (dsob^2 * (1.3 + b * (1 - exp(c * dsob))) * rwd)^d
+  predict_fn = function(dsob, rws) {
+    a * (dsob^2 * (1.3 + b * (1 - exp(c * dsob))) * rws)^d
   },
   descriptors = list(
     forest_type = "deciduous"

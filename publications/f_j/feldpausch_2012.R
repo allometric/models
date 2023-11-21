@@ -105,7 +105,7 @@ bt_1 <- FixedEffectsModel(
   ),
   covariates = list(
     dsob = units::as_units("cm"),
-    rwd = units::as_units("g / cm^3")
+    rws = units::as_units("g / cm^3")
   ),
   parameters = list(
     a = -1.8222,
@@ -115,10 +115,10 @@ bt_1 <- FixedEffectsModel(
     e = 0.9792,
     rse = 0.3595
   ),
-  predict_fn = function(dsob, rwd) {
+  predict_fn = function(dsob, rws) {
     cf <- exp(rse^2 / 2)
     cf * exp(
-      a + b * log(dsob) + c * log(dsob)^2 + d * log(dsob)^3 + e * log(rwd)
+      a + b * log(dsob) + c * log(dsob)^2 + d * log(dsob)^3 + e * log(rws)
     )
   },
   descriptors = list(geographic_region = "pantropical")
@@ -130,7 +130,7 @@ bt_2 <- FixedEffectsModel(
   ),
   covariates = list(
     dsob = units::as_units("cm"),
-    rwd = units::as_units("g / cm^3"),
+    rws = units::as_units("g / cm^3"),
     hst = units::as_units("m")
   ),
   parameters = list(
@@ -138,9 +138,9 @@ bt_2 <- FixedEffectsModel(
     b = 0.9894,
     rse = 0.3222
   ),
-  predict_fn = function(dsob, rwd, hst) {
+  predict_fn = function(dsob, rws, hst) {
     cf <- exp(rse^2 / 2)
-    cf * exp(a + b * log(dsob^2 * rwd * hst))
+    cf * exp(a + b * log(dsob^2 * rws * hst))
   },
   descriptors = list(geographic_region = "pantropical")
 )
