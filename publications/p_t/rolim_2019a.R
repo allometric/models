@@ -1,9 +1,12 @@
-rolim_2019 <- Publication(
+rolim_2019a <- Publication(
   citation = RefManageR::BibEntry(
-    key = "rolim_2019",
-    bibtype = "book",
-    title = "Silviculture and Wood Properties of the Native Species of the Atlantic Forest of Brazil",
-    author = "Rolim, Samir and Piotto, Daniel",
+    key = "rolim_2019a",
+    bibtype = "incollection",
+    title = "Biometric Models for Mixed-species Plantation in the North of Espirito Santo, Brazil",
+    author = "Rolim, Samir and Orellano, Enrique and Piotto, Daniel and de Souza Vismara, Edgar",
+    booktitle = "Silviculture and Wood Properties of Native Species of the Atlantic Forest of Brazil",
+    editor = "Rolim, Samir and Piotto, Daniel",
+    pages = "21--29",
     year = 2019
   ),
   descriptors = list(
@@ -91,7 +94,7 @@ table_4_model_5 <- FixedEffectsModel(
   predict_fn = model_5_func
 )
 
-rolim_2019 <- rolim_2019 %>%
+rolim_2019a <- rolim_2019a %>%
   add_model(table_2_naslund_hst) %>%
   add_model(table_2_logistic_hsm) %>%
   add_model(table_3_schumacher_hall_vs) %>%
