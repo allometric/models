@@ -36,7 +36,7 @@ params <- load_parameter_frame("dsob_rolim_2019b") %>%
 pred_fns <- unique(params$pred_fn)
 
 for(pred_fn_name in pred_fns) {
-  func <- dia_gro_funcs[[pred_fn]]
+  func <- dia_gro_funcs[[pred_fn_name]]
 
   set <- FixedEffectsSet(
     response = list(
