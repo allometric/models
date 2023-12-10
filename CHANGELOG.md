@@ -1,5 +1,16 @@
 # allometric/models changelog
 
+# [2.1.0](https://github.com/allometric/models/compare/v2.0.0...v2.1.0) (2023-12-10)
+
+
+### Features
+
+* adding barrett_2006, closes [#39](https://github.com/allometric/models/issues/39) ([e41c224](https://github.com/allometric/models/commit/e41c224096f556185a4fb121f906eaf9dbd9600a))
+* adding castaneda_2005, closes [#35](https://github.com/allometric/models/issues/35) ([56ac7b8](https://github.com/allometric/models/commit/56ac7b875a6a092bdaa12dac6d4c60f11399640f))
+* adding hughes_1999, closes [#36](https://github.com/allometric/models/issues/36) ([1def94e](https://github.com/allometric/models/commit/1def94ec70f68b4f567352666d2771e27a18a51d))
+* adding rolim_2019, updates [#37](https://github.com/allometric/models/issues/37) ([b53e024](https://github.com/allometric/models/commit/b53e024e75cd1d16fc3b28ad5e040b618b3d6ed3))
+* adding rolim_2019b, closes [#37](https://github.com/allometric/models/issues/37) ([dac3c33](https://github.com/allometric/models/commit/dac3c33692607d71bd3d13ba7d07055f6ced2600))
+
 # [2.0.0](https://github.com/allometric/models/compare/v1.1.2...v2.0.0) (2023-10-29)
 
 
