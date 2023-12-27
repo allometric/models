@@ -12,7 +12,7 @@ jobs:
     strategy:
       matrix:
         config:
-          - {os: windows-latest, r: 'release'}
+          - {os: ubuntu-latest, r: 'release'}
     permissions:
       contents: write
 
@@ -32,11 +32,12 @@ jobs:
       - name: Clone allometric/allometric.
         run: |
           git clone https://github.com/allometric/allometric.git
+          git checkout lfs
 
       - name: Install allometric, generate the models.RDS file.
         run: |
-          devtools::install("./allometric");
-          devtools::load_all("./allometric");
+          devtools::install("./allometric", reload = FALSE);
+          library(allometric)
           models <- ingest_models(FALSE, pub_path = "./publications", params_path = "./parameters");
           warnings();
           saveRDS(models, "./models.RDS")
