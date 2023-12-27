@@ -38,6 +38,7 @@ jobs:
           devtools::install("./allometric");
           devtools::load_all("./allometric");
           models <- ingest_models(FALSE, pub_path = "./publications", params_path = "./parameters");
+          warnings();
           saveRDS(models, "./models.RDS")
         shell: Rscript {0}
 
