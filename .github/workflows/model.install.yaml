@@ -32,7 +32,6 @@ jobs:
       - name: Clone allometric/allometric.
         run: |
           git clone -b lfs https://github.com/allometric/allometric.git
-          ls
 
       - name: Install allometric, generate the models.RDS file.
         run: |
