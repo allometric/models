@@ -12,7 +12,7 @@ jobs:
     strategy:
       matrix:
         config:
-          - {os: ubuntu-latest, r: 'release'}
+          - {os: windows-latest, r: 'release'}
     permissions:
       contents: write
 
