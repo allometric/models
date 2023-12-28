@@ -1,5 +1,12 @@
 # allometric/models changelog
 
+# [2.2.0](https://github.com/allometric/models/compare/v2.1.0...v2.2.0) (2023-12-28)
+
+
+### Features
+
+* implemented direct model.RDS downloading ([4994439](https://github.com/allometric/models/commit/49944390b3b58eba3312f74c32ba6dddd2c0f2d4))
+
 # [2.1.0](https://github.com/allometric/models/compare/v2.0.0...v2.1.0) (2023-12-10)
 
 
