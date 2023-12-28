@@ -1,4 +1,4 @@
-name: test-model-install
+name: model-install
 
 on:
   push:
@@ -13,6 +13,8 @@ jobs:
       matrix:
         config:
           - {os: windows-latest, r: 'release'}
+    permissions:
+      contents: write
 
     steps:
       - uses: actions/checkout@v3
@@ -31,13 +33,17 @@ jobs:
         run: |
           git clone https://github.com/allometric/allometric.git
 
-      - name: Run install models test.
+      - name: Install allometric, generate the models.RDS file.
         run: |
-          devtools::install("./allometric");
-          devtools::load_all("./allometric");
-          exit_data <- testthat::test_file("./allometric/tests/testthat/test-install.R");
-          exit_data <- as.data.frame(exit_data);
-          exit_code <- ifelse(sum(exit_data$failed, exit_data$error) == 0, 0, 1);
-          quit(save = "no", status = exit_code, runLast = FALSE);
+          devtools::install("./allometric", reload = FALSE);
+          library(allometric)
+          models <- ingest_models(FALSE, pub_path = "./publications", params_path = "./parameters");
+          warnings();
+          saveRDS(models, "./models.RDS")
         shell: Rscript {0}
 
+      - uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          branch: main
+          commit_message: Updating models.RDS
+          file_pattern: '*.RDS'
