@@ -50,6 +50,3 @@ Versioning Philosophy:
   - Fix releases - Are meant to accommodate edits to publication files and
     parameters, but not additions. Edits to models should be added as `fix` and
     a new release should be made for each fix.
-    
-    
-

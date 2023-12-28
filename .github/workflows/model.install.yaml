@@ -2,9 +2,9 @@ name: model-install
 
 on:
   push:
-    branches: [ lfs ]
+    branches: [ main ]
   pull_request:
-    branches: [ lfs ]
+    branches: [ main ]
 
 jobs:
   build:
@@ -31,7 +31,7 @@ jobs:
 
       - name: Clone allometric/allometric.
         run: |
-          git clone -b lfs https://github.com/allometric/allometric.git
+          git clone https://github.com/allometric/allometric.git
 
       - name: Install allometric, generate the models.RDS file.
         run: |
@@ -44,6 +44,6 @@ jobs:
 
       - uses: stefanzweifel/git-auto-commit-action@v5
         with:
-          branch: lfs
+          branch: main
           commit_message: Updating models.RDS
           file_pattern: '*.RDS'
