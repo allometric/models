@@ -1,0 +1,16 @@
+dia_class,family,genus,species,beta_0,beta_1
+> 10 cm,Manzanillo,Alseis,yucatenensis,0,0.0301
+> 10 cm,Moraceae,Brosimum,alicastrum,0,0.0336
+> 10 cm,Sapotaceae,Manilkara,zapota,0,0.0447
+> 10 cm,Sapotaceae,Pouteria,campechiana,0,0.0358
+> 10 cm,Sapotaceae,Pouteria,unilocularis,0,0.0465
+> 10 cm,Meliaceae,Trichilia,minutiflora,0,0.0465
+< 10 cm,Manzanillo,Alseis,yucatenensis,0.0867,0.0429
+< 10 cm,Sapotaceae,Manilkara,zapota,0.0034,0.0482
+< 10 cm,Sapotaceae,Pouteria,unilocularis,0.8322,0.0429
+< 10 cm,Meliaceae,Trichilia,minutiflora,0.4125,0.0421
+< 10 cm,Piperaceae,Piper,,0.3627,0.0322
+< 10 cm,Sapindaceae,Talisia,olivaeformis,0.0493,0.048
+< 10 cm,Euphorbiaceae,Croton,arboreus,0.2385,0.058
+< 10 cm,Euphorbiaceae,Croton,lundellii,0.178,0.0638
+< 10 cm,Myrtaceae,Eugenia,,0.46,0.037
