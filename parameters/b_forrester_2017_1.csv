@@ -1,0 +1,475 @@
+"family","genus","species","taxa_id","equation","component","beta_0","beta_1","beta_2","beta_3","cf"
+"Pinaceae","Abies","alba",1,3,"aboveground",0.0910997699469385,2.4497,,,1.00068043755297
+"Pinaceae","Abies","alba",1,3,"stem mass",0.0380710929516234,2.5768,,,0.987286775425715
+"Sapindaceae","Acer","pseudoplatanus",2,3,"foliage mass",0.0172059504258514,2.0662,,,1.00318132717147
+"Sapindaceae","Acer","pseudoplatanus",2,3,"stem + branch mass",0.099102560543817,2.4186,,,1.01050171061617
+"Sapindaceae","Acer","pseudoplatanus",2,5,"stem + branch mass",0.00392103354693319,2.3994,1.4328,,0.960089747309227
+"Sapindaceae","Acer","pseudoplatanus",2,6,"stem + branch mass",213.449442212341,2.399,-0.7938,,0.958610734624076
+"Sapindaceae","Acer","pseudoplatanus",2,16,"stem + branch mass",40904.6897797916,2.3992,-0.5541,-0.01,0.959345297829502
+"Sapindaceae","Acer","pseudoplatanus",2,17,"stem + branch mass",0.00135751426218194,2.3992,-0.3073,0.9245,0.959345297829494
+"Sapindaceae","Acer","pseudoplatanus",2,3,"stem mass",0.077119431525885,2.4634,,,0.972105286308657
+"Sapindaceae","Acer","pseudoplatanus",2,5,"stem mass",0.00499558877977183,2.4645,1.1883,,0.97111504009953
+"Sapindaceae","Acer","pseudoplatanus",2,6,"stem mass",51.1161247361523,2.4634,-0.678,,0.972280804014403
+"Sapindaceae","Acer","pseudoplatanus",2,7,"stem mass",1.91796712669226e-09,2.4634,0.3423,,0.971374563460415
+"Sapindaceae","Acer","pseudoplatanus",2,9,"stem mass",2.38673295168279e-05,2.4634,1.0229,,0.971472368952302
+"Sapindaceae","Acer","pseudoplatanus",2,16,"stem mass",2614.16496380762,2.4648,-0.4982,-0.0075,0.972109687844963
+"Sapindaceae","Acer","pseudoplatanus",2,17,"stem mass",0.00650815026901657,2.4648,-0.3133,0.6927,0.972109687842699
+"Sapindaceae","Acer","pseudoplatanus",2,18,"stem mass",3.84860428026117e-06,2.4648,-0.2695,0.2441,0.972109687840969
+"Sapindaceae","Acer","pseudoplatanus",2,3,"total branch",0.0263628356805222,2.1608,,,0.905259145679678
+"Sapindaceae","Acer","pseudoplatanus",2,5,"total branch",1.06133278744326e-05,2.1605,3.3968,,0.912592531407633
+"Sapindaceae","Acer","pseudoplatanus",2,6,"total branch",918961.952958144,2.1607,-1.8124,,0.90628005902181
+"Sapindaceae","Acer","pseudoplatanus",2,7,"total branch",1.79884039420324e-24,2.1605,0.9978,,0.907294687035649
+"Sapindaceae","Acer","pseudoplatanus",2,19,"total branch",0.00132757673815386,2.1633,2.8865,-0.005,0.904938849818014
+"Betulaceae","Alnus","glutinosa",3,3,"aboveground",0.106960037028323,2.3772,,,1.03987460826762
+"Betulaceae","Alnus","glutinosa",3,7,"aboveground",0.0271412654204764,2.3775,0.025,,1.04023995050143
+"Betulaceae","Alnus","glutinosa",3,9,"aboveground",0.157363006375992,2.3744,-0.0441,,1.0402410189738
+"Betulaceae","Alnus","glutinosa",3,3,"foliage mass",0.017370185837919,1.4192,,,0.976461558585908
+"Betulaceae","Alnus","glutinosa",3,4,"foliage mass",0.1917045297195,1.4503,-0.1303,,0.977122163997492
+"Betulaceae","Alnus","glutinosa",3,6,"foliage mass",2.73932231074706e-06,1.4503,0.9863,,0.977122163997479
+"Betulaceae","Alnus","glutinosa",3,4,"leaf area",3.25697874392949,1.4503,-0.1385,,0.973130650973278
+"Betulaceae","Alnus","glutinosa",3,5,"leaf area",105.583277317891,1.4194,-1.9713,,0.974237644846024
+"Betulaceae","Alnus","glutinosa",3,6,"leaf area",2.32338567598806e-05,1.4503,1.0478,,0.973130650973263
+"Betulaceae","Alnus","glutinosa",3,3,"stem + branch mass",0.126135317485873,2.3219,,,0.972060408643237
+"Betulaceae","Alnus","glutinosa",3,3,"stem mass",0.0733216025002117,2.4486,,,1.06626422699513
+"Betulaceae","Alnus","glutinosa",3,4,"stem mass",0.179084055421645,2.1434,0.0038,,0.980089538755889
+"Betulaceae","Alnus","glutinosa",3,6,"stem mass",0.248776593528617,2.1434,-0.0291,,0.980089538755889
+"Betulaceae","Alnus","glutinosa",3,3,"total branch",0.00258792210843712,2.639,,,1.02337046532708
+"Betulaceae","Alnus","glutinosa",3,4,"total branch",0.00649579652328031,3.2401,-0.136,,0.999915164347181
+"Betulaceae","Alnus","glutinosa",3,6,"total branch",5.70464493549125e-08,3.2401,1.0294,,0.99991516434717
+"Betulaceae","Alnus","glutinosa",4,3,"aboveground",0.0915014920752759,2.4204,,,1.02346500810336
+"Betulaceae","Alnus","incana",4,3,"aboveground",0.0915014920752759,2.4204,,,1.02346500810336
+"Betulaceae","Alnus","glutinosa",4,3,"foliage mass",0.011453040939584,1.7623,,,0.974649208346138
+"Betulaceae","Alnus","incana",4,3,"foliage mass",0.011453040939584,1.7623,,,0.974649208346138
+"Betulaceae","Alnus","glutinosa",4,3,"leaf area",0.162626356647716,1.7622,,,0.972926081572581
+"Betulaceae","Alnus","incana",4,3,"leaf area",0.162626356647716,1.7622,,,0.972926081572581
+"Betulaceae","Alnus","glutinosa",4,3,"root mass",0.352114102880748,1.7129,,,1.09036469663229
+"Betulaceae","Alnus","incana",4,3,"root mass",0.352114102880748,1.7129,,,1.09036469663229
+"Betulaceae","Alnus","glutinosa",4,3,"stem + branch mass",0.101084346175828,2.4028,,,0.977788848936548
+"Betulaceae","Alnus","incana",4,3,"stem + branch mass",0.101084346175828,2.4028,,,0.977788848936548
+"Betulaceae","Alnus","glutinosa",4,4,"stem + branch mass",0.19699045562931,2.3053,-0.019,,0.97482353233902
+"Betulaceae","Alnus","incana",4,4,"stem + branch mass",0.19699045562931,2.3053,-0.019,,0.97482353233902
+"Betulaceae","Alnus","glutinosa",4,7,"stem + branch mass",185.916937241701,2.4013,-0.1265,,0.977004329364279
+"Betulaceae","Alnus","incana",4,7,"stem + branch mass",185.916937241701,2.4013,-0.1265,,0.977004329364279
+"Betulaceae","Alnus","glutinosa",4,21,"stem + branch mass",82.5744243488204,2.4038,-0.1487,-0.1058,0.977796750920929
+"Betulaceae","Alnus","incana",4,21,"stem + branch mass",82.5744243488204,2.4038,-0.1487,-0.1058,0.977796750920929
+"Betulaceae","Alnus","glutinosa",4,3,"stem mass",0.0669506164011073,2.4723,,,1.0497685606646
+"Betulaceae","Alnus","incana",4,3,"stem mass",0.0669506164011073,2.4723,,,1.0497685606646
+"Betulaceae","Alnus","glutinosa",4,8,"stem mass",0.188944869923459,2.4726,-0.0015,,1.0503249099749
+"Betulaceae","Alnus","incana",4,8,"stem mass",0.188944869923459,2.4726,-0.0015,,1.0503249099749
+"Betulaceae","Alnus","glutinosa",4,21,"stem mass",127.740389846029,2.4215,-0.1341,-0.1164,0.973692009310517
+"Betulaceae","Alnus","incana",4,21,"stem mass",127.740389846029,2.4215,-0.1341,-0.1164,0.973692009310517
+"Betulaceae","Alnus","glutinosa",4,3,"total branch",0.00581450279811935,2.5153,,,0.98614005291734
+"Betulaceae","Alnus","incana",4,3,"total branch",0.00581450279811935,2.5153,,,0.98614005291734
+"Betulaceae","Alnus","glutinosa",4,12,"total branch",4.96479518989075e-22,2.8886,-0.0721,0.7432,0.945183594682092
+"Betulaceae","Alnus","incana",4,12,"total branch",4.96479518989075e-22,2.8886,-0.0721,0.7432,0.945183594682092
+"Betulaceae","Alnus","glutinosa",4,16,"total branch",5.14394922379177e-12,2.892,0.2563,0.0277,0.943442756066924
+"Betulaceae","Alnus","incana",4,16,"total branch",5.14394922379177e-12,2.892,0.2563,0.0277,0.943442756066924
+"Betulaceae","Alnus","incana",5,3,"aboveground",0.0798743902592968,2.4667,,,0.999917676577875
+"Betulaceae","Alnus","incana",5,4,"aboveground",0.0561740709243441,2.4139,0.0134,,0.988296289279207
+"Betulaceae","Alnus","incana",5,9,"aboveground",0.0709556673842725,2.4667,0.0232,,0.999927539041819
+"Betulaceae","Alnus","incana",5,3,"stem + branch mass",0.0858889582640294,2.4739,,,1.00053906851442
+"Betulaceae","Alnus","incana",5,4,"stem + branch mass",0.210325278795492,2.3981,-0.0305,,0.990100485187148
+"Betulaceae","Alnus","incana",5,5,"stem + branch mass",0.229328455400287,2.4745,-0.3688,,1.00077621960561
+"Betulaceae","Alnus","incana",5,7,"stem + branch mass",1790.41013806547,2.4733,-0.1661,,1.00048597995252
+"Betulaceae","Alnus","incana",5,20,"stem + branch mass",4.78746000296594,2.4773,-0.3056,-0.5019,1.00116899145549
+"Betulaceae","Alnus","incana",5,3,"stem mass",0.0604221209619125,2.5021,,,1.00329417475165
+"Betulaceae","Alnus","incana",5,4,"stem mass",0.117079744433191,2.3908,-0.0161,,0.99173423002668
+"Betulaceae","Alnus","incana",5,5,"stem mass",0.12489273875622,2.508,-0.2518,,1.00444711586983
+"Betulaceae","Alnus","incana",5,6,"stem mass",0.054715951179941,2.3908,0.0297,,0.991734230026681
+"Betulaceae","Alnus","incana",5,3,"total branch",0.0110546956011479,2.3987,,,0.983574864586086
+"Betulaceae","Betula","pendula",6,3,"aboveground",0.13515946167718,2.3683,,,1.03510114513607
+"Betulaceae","Betula","pendula",6,5,"aboveground",0.0758119004981862,2.3675,0.2499,,1.03453968820589
+"Betulaceae","Betula","pendula",6,6,"aboveground",0.0121588254304516,2.3078,0.258,,0.994926016578234
+"Betulaceae","Betula","pendula",6,3,"foliage mass",0.0238373881560377,1.5836,,,1.1112758500924
+"Betulaceae","Betula","pendula",6,3,"leaf area",0.297422973537222,1.5839,,,1.12423881614796
+"Betulaceae","Betula","pendula",6,3,"stem + branch mass",0.111648470483182,2.3965,,,0.990291376498952
+"Betulaceae","Betula","pendula",6,7,"stem + branch mass",0.0230152094768764,2.3999,0.0287,,0.993899658010252
+"Betulaceae","Betula","pendula",6,3,"stem mass",0.0905548078484377,2.3746,,,0.964956907968395
+"Betulaceae","Betula","pendula",6,7,"stem mass",0.00599997485857717,2.3799,0.0495,,0.968976687314036
+"Betulaceae","Betula","pendula",6,3,"total branch",0.0209734065190723,2.4053,,,1.03718528206471
+"Betulaceae","Betula","pendula",6,6,"total branch",0.0646737421423392,2.545,-0.1771,,0.993247505319412
+"Betulaceae","Betula","pendula",6,10,"total branch",0.00644919475599438,2.5452,-0.0725,0.6955,0.994644095494438
+"Betulaceae","Betula","pendula",6,20,"total branch",0.00116154995225716,2.4034,0.7342,0.1346,1.03595293495746
+"Betulaceae","Betula","pendula",7,3,"dead branch",0.00624483847769057,2.1355,,,1.10384017341093
+"Betulaceae","Betula","pubescens",7,3,"dead branch",0.00624483847769057,2.1355,,,1.10384017341093
+"Betulaceae","Betula","pendula",7,5,"dead branch",0.000224104073537994,2.1405,1.0769,,1.10200127964903
+"Betulaceae","Betula","pubescens",7,5,"dead branch",0.000224104073537994,2.1405,1.0769,,1.10200127964903
+"Betulaceae","Betula","pendula",7,6,"dead branch",0.000224104073537994,2.1405,1.0769,,0.0433293031448936
+"Betulaceae","Betula","pubescens",7,6,"dead branch",0.000224104073537994,2.1405,1.0769,,0.0433293031448936
+"Betulaceae","Betula","pendula",7,3,"foliage mass",0.0159706917835636,1.8861,,,1.16320558291801
+"Betulaceae","Betula","pubescens",7,3,"foliage mass",0.0159706917835636,1.8861,,,1.16320558291801
+"Betulaceae","Betula","pendula",7,3,"leaf area",0.208816375358993,1.8857,,,1.16922519887079
+"Betulaceae","Betula","pubescens",7,3,"leaf area",0.208816375358993,1.8857,,,1.16922519887079
+"Betulaceae","Betula","pendula",7,3,"live branch",0.0351019006641707,1.7765,,,1.59511060832127
+"Betulaceae","Betula","pubescens",7,3,"live branch",0.0351019006641707,1.7765,,,1.59511060832127
+"Betulaceae","Betula","pendula",7,5,"live branch",7.75855147329441e-07,1.7604,3.0326,,1.67762250013792
+"Betulaceae","Betula","pubescens",7,5,"live branch",7.75855147329441e-07,1.7604,3.0326,,1.67762250013792
+"Betulaceae","Betula","pendula",7,6,"live branch",7.75855147329441e-07,1.7604,3.0326,,0.0120624230417141
+"Betulaceae","Betula","pubescens",7,6,"live branch",7.75855147329441e-07,1.7604,3.0326,,0.0120624230417141
+"Betulaceae","Betula","pendula",7,3,"root mass",0.172786249574504,1.8764,,,1.04358242753246
+"Betulaceae","Betula","pubescens",7,3,"root mass",0.172786249574504,1.8764,,,1.04358242753246
+"Betulaceae","Betula","pendula",7,5,"root mass",0.0367175660304709,2.2239,0.272,,0.878352651485412
+"Betulaceae","Betula","pubescens",7,5,"root mass",0.0367175660304709,2.2239,0.272,,0.878352651485412
+"Betulaceae","Betula","pendula",7,6,"root mass",0.0367175660304709,2.2239,0.272,,0.0193625298087748
+"Betulaceae","Betula","pubescens",7,6,"root mass",0.0367175660304709,2.2239,0.272,,0.0193625298087748
+"Betulaceae","Betula","pendula",7,3,"stem + branch mass",0.109503364956653,2.3771,,,1.00798896508317
+"Betulaceae","Betula","pubescens",7,3,"stem + branch mass",0.109503364956653,2.3771,,,1.00798896508317
+"Betulaceae","Betula","pendula",7,4,"stem + branch mass",0.0731604722829394,2.4076,0.0263,,0.964734787213366
+"Betulaceae","Betula","pubescens",7,4,"stem + branch mass",0.0731604722829394,2.4076,0.0263,,0.964734787213366
+"Betulaceae","Betula","pendula",7,3,"stem mass",0.0978617021056391,2.338,,,0.968924126684733
+"Betulaceae","Betula","pubescens",7,3,"stem mass",0.0978617021056391,2.338,,,0.968924126684733
+"Betulaceae","Betula","pendula",7,4,"stem mass",0.0555706552680937,2.3591,0.0373,,0.948923862999813
+"Betulaceae","Betula","pubescens",7,4,"stem mass",0.0555706552680937,2.3591,0.0373,,0.948923862999813
+"Betulaceae","Betula","pendula",7,12,"stem mass",0.0161974735922681,2.3631,0.0257,0.0254,0.947950897635476
+"Betulaceae","Betula","pubescens",7,12,"stem mass",0.0161974735922681,2.3631,0.0257,0.0254,0.947950897635476
+"Betulaceae","Betula","pendula",7,3,"total branch",0.0219453501537449,2.3314,,,1.14807047003496
+"Betulaceae","Betula","pubescens",7,3,"total branch",0.0219453501537449,2.3314,,,1.14807047003496
+"Betulaceae","Betula","pendula",7,4,"total branch",0.0273237224472926,2.5544,-0.0414,,1.0447064149135
+"Betulaceae","Betula","pubescens",7,4,"total branch",0.0273237224472926,2.5544,-0.0414,,1.0447064149135
+"Betulaceae","Betula","pendula",7,6,"total branch",0.103054222214581,2.339,-0.1927,,1.1490681071202
+"Betulaceae","Betula","pubescens",7,6,"total branch",0.103054222214581,2.339,-0.1927,,1.1490681071202
+"Betulaceae","Betula","pendula",7,12,"total branch",0.0906363438612034,2.556,-0.0297,-0.0251,1.04704978860163
+"Betulaceae","Betula","pubescens",7,12,"total branch",0.0906363438612034,2.556,-0.0297,-0.0251,1.04704978860163
+"Betulaceae","Betula","pendula",7,20,"total branch",0.00289983917622968,2.3328,0.4448,0.1333,1.15491742275615
+"Betulaceae","Betula","pubescens",7,20,"total branch",0.00289983917622968,2.3328,0.4448,0.1333,1.15491742275615
+"Betulaceae","Betula","pubescens",8,3,"aboveground",0.147386041766983,2.2081,,,1.02641340852689
+"Betulaceae","Betula","pubescens",8,3,"foliage mass",0.0183706683082576,1.7881,,,0.980172674522751
+"Betulaceae","Betula","pubescens",8,3,"leaf area",0.249623873506364,1.7797,,,0.986989905216437
+"Betulaceae","Betula","pubescens",8,3,"stem + branch mass",0.102735248789969,2.3803,,,0.979049642841207
+"Betulaceae","Betula","pubescens",8,4,"stem + branch mass",0.0647255018371705,2.4551,0.019,,0.960159989664689
+"Betulaceae","Betula","pubescens",8,6,"stem + branch mass",0.45036361012149,2.407,-0.1497,,0.97708908341899
+"Betulaceae","Betula","pubescens",8,3,"stem mass",0.0865009398314379,2.3749,,,0.973420627427033
+"Betulaceae","Betula","pubescens",8,6,"stem mass",0.177373074339108,2.3849,-0.0642,,0.966900741630362
+"Betulaceae","Betula","pubescens",8,3,"total branch",0.0160154723841417,2.5007,,,1.00658270318518
+"Betulaceae","Betula","pubescens",8,4,"total branch",0.0140322082834654,2.5577,-0.0069,,1.0178787794101
+"Betulaceae","Betula","pubescens",8,6,"total branch",0.00822563320404246,2.5378,0.0439,,1.02406764293976
+"Betulaceae","Carpinus","betulus",9,3,"stem + branch mass",0.331277131043089,2.1407,,,0.934572770835255
+"Betulaceae","Carpinus","betulus",9,7,"stem + branch mass",6.78354617582679,2.1396,-0.0634,,0.934395705792591
+"Betulaceae","Carpinus","betulus",9,9,"stem + branch mass",0.07493756341172,2.1412,0.1584,,0.934224502005334
+"Betulaceae","Carpinus","betulus",9,3,"stem mass",0.0917947658376764,2.5301,,,0.877045417060892
+"Betulaceae","Carpinus","betulus",9,6,"stem mass",0.211887458795838,2.5249,-0.1014,,0.874621140618674
+"Betulaceae","Carpinus","betulus",9,3,"total branch",0.290224650208862,1.6859,,,1.01581133947298
+"Betulaceae","Carpinus","betulus",9,6,"total branch",8.05666742361243,1.5155,-0.3574,,0.990228848996541
+"Betulaceae","Carpinus","betulus",9,7,"total branch",12.9280581531352,1.6666,-0.0798,,1.01509711328077
+"Fagaceae","Castania","sativa",10,3,"aboveground",0.159597541215982,2.2916,,,0.978402100603133
+"Fagaceae","Castania","sativa",10,5,"aboveground",0.0719200639238745,2.3224,0.1734,,1.0081446646821
+"Fagaceae","Castania","sativa",10,3,"foliage mass",0.00184550929302798,2.3956,,,0.879020420633428
+"Fagaceae","Castania","sativa",10,4,"foliage mass",1.57369260530445e-52,3.1256,3.8925,,1.11447747146903
+"Fagaceae","Castania","sativa",10,3,"leaf area",0.0264658514899321,2.3956,,,0.879020420570301
+"Fagaceae","Castania","sativa",10,4,"leaf area",2.25655596733542e-51,3.1256,3.8925,,1.11447747154502
+"Fagaceae","Castania","sativa",10,3,"stem + branch mass",0.1577726825408,2.2903,,,0.962193688153995
+"Fagaceae","Castania","sativa",10,5,"stem + branch mass",0.0379077387152412,2.2923,0.3724,,0.949885074038356
+"Fagaceae","Castania","sativa",10,3,"stem mass",0.107528430135795,2.3129,,,0.962206104962489
+"Fagaceae","Castania","sativa",10,5,"stem mass",0.0394192895498953,2.2776,0.3112,,0.958344515767715
+"Fagaceae","Castania","sativa",10,3,"total branch",0.025137362344495,2.3812,,,0.936672747552509
+"Fagaceae","Castania","sativa",10,4,"total branch",3.31389499878245e+62,2.7938,-5.2314,,0.897450728219563
+"Fagaceae","Fagus","sylvatica",11,3,"aboveground",0.190253097721444,2.3589,,,0.996923865219428
+"Fagaceae","Fagus","sylvatica",11,6,"aboveground",0.292672805126135,2.3623,-0.0734,,0.985421316008311
+"Fagaceae","Fagus","sylvatica",11,3,"foliage mass",0.0113186892901519,1.9073,,,1.08751755461533
+"Fagaceae","Fagus","sylvatica",11,4,"foliage mass",0.0479258621809221,1.9131,-0.0474,,1.15611376067989
+"Fagaceae","Fagus","sylvatica",11,5,"foliage mass",0.103788510832276,1.9809,-0.6139,,1.07261504604178
+"Fagaceae","Fagus","sylvatica",11,3,"leaf area",0.241955851811238,1.8909,,,1.09759380988188
+"Fagaceae","Fagus","sylvatica",11,3,"live branch",0.00515133177834619,3.0439,,,0.86066008358464
+"Fagaceae","Fagus","sylvatica",11,4,"live branch",0.000153332774763901,3.0424,0.1637,,0.8599772713863
+"Fagaceae","Fagus","sylvatica",11,5,"live branch",0.00020751643844701,3.0424,0.8588,,0.859977271386299
+"Fagaceae","Fagus","sylvatica",11,6,"live branch",0.00020751643844701,3.0424,0.8588,,0.236582447335673
+"Fagaceae","Fagus","sylvatica",11,3,"root mass",0.0343449598615815,2.3424,,,0.997693174070132
+"Fagaceae","Fagus","sylvatica",11,4,"root mass",0.0431445143204121,2.3794,-0.0125,,1.01677384871589
+"Fagaceae","Fagus","sylvatica",11,5,"root mass",0.072934025991959,2.3752,-0.2142,,1.01701002731391
+"Fagaceae","Fagus","sylvatica",11,8,"root mass",0.239572306893222,2.3406,-0.0028,,0.997629809456582
+"Fagaceae","Fagus","sylvatica",11,19,"root mass",0.366447505440527,2.3745,-0.1598,-0.0026,1.0166499785021
+"Fagaceae","Fagus","sylvatica",11,3,"stem + branch mass",0.16791456006276,2.3895,,,1.09215353960064
+"Fagaceae","Fagus","sylvatica",11,4,"stem + branch mass",0.14915041285096,2.3234,0.0165,,1.08649724683808
+"Fagaceae","Fagus","sylvatica",11,5,"stem + branch mass",0.108522256283547,2.3244,0.1749,,1.09188999193131
+"Fagaceae","Fagus","sylvatica",11,6,"stem + branch mass",0.49673430173112,2.3119,-0.11,,1.08586129183824
+"Fagaceae","Fagus","sylvatica",11,3,"stem mass",0.234875427766133,2.1661,,,0.997918893742347
+"Fagaceae","Fagus","sylvatica",11,5,"stem mass",0.0822411083785881,2.1439,0.2827,,1.00474916964847
+"Fagaceae","Fagus","sylvatica",11,6,"stem mass",0.543405206878252,2.1583,-0.1121,,0.998100875252414
+"Fagaceae","Fagus","sylvatica",11,3,"total branch",0.0132733103574017,2.7599,,,1.41660113531847
+"Fagaceae","Fagus","sylvatica",11,4,"total branch",0.0230658986753993,2.8003,-0.0247,,1.46653457042711
+"Oleaceae","Fraxinus","excelsior",12,3,"aboveground",0.0592790099133707,2.8048,,,0.862783549064318
+"Oleaceae","Fraxinus","excelsior",12,3,"foliage mass",0.00782681203027304,2.4064,,,0.809231089855005
+"Oleaceae","Fraxinus","excelsior",12,5,"foliage mass",0.0447260130142665,2.4999,-0.6679,,0.975938980382932
+"Oleaceae","Fraxinus","excelsior",12,6,"foliage mass",4.77037760847936e-05,2.3517,0.5816,,0.984344962749988
+"Oleaceae","Fraxinus","excelsior",12,8,"foliage mass",0.0933779540142606,2.4061,-0.0029,,0.799676945179476
+"Oleaceae","Fraxinus","excelsior",12,3,"leaf area",0.148480743878385,2.3915,,,0.79265374604228
+"Oleaceae","Fraxinus","excelsior",12,6,"leaf area",0.000157135824879703,2.3517,0.7889,,0.986325239388924
+"Oleaceae","Fraxinus","excelsior",12,3,"root mass",0.0432957846892572,2.2156,,,0.998467389761722
+"Oleaceae","Fraxinus","excelsior",12,5,"root mass",0.097023700041287,2.2159,-0.4478,,0.998886699950482
+"Oleaceae","Fraxinus","excelsior",12,6,"root mass",0.097023700041287,2.2159,-0.4478,,0.754189088805263
+"Oleaceae","Fraxinus","excelsior",12,3,"stem + branch mass",0.0785829911929856,2.6184,,,0.946312338911717
+"Oleaceae","Fraxinus","excelsior",12,5,"stem + branch mass",0.00723807494148613,2.6341,0.9922,,0.91704765425331
+"Oleaceae","Fraxinus","excelsior",12,16,"stem + branch mass",518295.074008056,2.4392,-1.2315,-0.0048,1.00643877731194
+"Oleaceae","Fraxinus","excelsior",12,18,"stem + branch mass",1.67267721402426e-05,2.4392,-0.7841,0.3176,1.00731059978432
+"Oleaceae","Fraxinus","excelsior",12,3,"stem mass",0.0572115201300396,2.6921,,,0.916918551480792
+"Oleaceae","Fraxinus","excelsior",12,5,"stem mass",0.00663232405505791,2.6915,0.9001,,0.917826894894603
+"Oleaceae","Fraxinus","excelsior",12,6,"stem mass",3896.36754742165,2.4983,-1.1316,,0.99413314862322
+"Oleaceae","Fraxinus","excelsior",12,3,"total branch",0.00997772670176586,2.6843,,,0.937251613397954
+"Oleaceae","Fraxinus","excelsior",12,4,"total branch",0.00137568980128217,2.3669,0.1608,,1.07137057121506
+"Oleaceae","Fraxinus","excelsior",12,5,"total branch",8.44036424755809e-05,2.683,1.9936,,0.937779131128293
+"Oleaceae","Fraxinus","excelsior",12,15,"total branch",3.70588136566916e-12,2.5283,5.4243,0.9764,0.966140726157767
+"Oleaceae","Fraxinus","excelsior",12,16,"total branch",176995375495654560,2.5283,-1.2954,-0.0424,0.966140726157677
+"Oleaceae","Fraxinus","excelsior",12,20,"total branch",8.60175142802658e-09,2.6851,2.5617,0.9733,0.940913599408794
+"Pinaceae","Larix","decidua",13,3,"aboveground",0.19181958695105,2.2312,,,1.02915947159889
+"Pinaceae","Larix","decidua",13,5,"aboveground",0.00967703235107148,2.2406,0.9139,,1.00498789389584
+"Pinaceae","Larix","decidua",13,6,"aboveground",9.22674386504474e-13,2.2406,3.3383,,1.0049878938958
+"Pinaceae","Larix","decidua",13,3,"dead branch",0.0364541489943422,1.73,,,1.08866856880842
+"Pinaceae","Larix","decidua",13,3,"foliage mass",0.0205498836470492,1.7502,,,0.956852217638524
+"Pinaceae","Larix","decidua",13,5,"foliage mass",31.7883541178151,2.1786,-2.6752,,1.01154937760138
+"Pinaceae","Larix","decidua",13,6,"foliage mass",6.84314355538493e+30,2.1786,-9.7719,,1.01154937760147
+"Pinaceae","Larix","decidua",13,3,"leaf area",0.252183066713318,1.7507,,,0.957284803474913
+"Pinaceae","Larix","decidua",13,5,"leaf area",332.021591021762,2.1817,-2.6236,,1.01298114159687
+"Pinaceae","Larix","decidua",13,6,"leaf area",1.94072597537337e+31,2.1817,-9.5833,,1.01298114159693
+"Pinaceae","Larix","decidua",13,3,"live branch",0.0224986493604047,2.249,,,0.911685708529261
+"Pinaceae","Larix","decidua",13,6,"live branch",26170258784561392,2.6638,-5.5075,,1.05681715626018
+"Pinaceae","Larix","decidua",13,3,"stem + branch mass",0.185852858811082,2.2509,,,1.00516036460557
+"Pinaceae","Larix","decidua",13,5,"stem + branch mass",0.00614817493341269,2.2557,1.0313,,1.00256642312799
+"Pinaceae","Larix","decidua",13,6,"stem + branch mass",3.02705833653398e-14,2.2557,3.767,,1.00256642312795
+"Pinaceae","Larix","decidua",13,3,"stem mass",0.0897703981500024,2.424,,,1.01854983592874
+"Pinaceae","Larix","decidua",13,5,"stem mass",0.000707622357455406,2.315,1.5783,,0.97974640897092
+"Pinaceae","Larix","decidua",13,6,"stem mass",3.50428656813965e-21,2.315,5.765,,0.97974640897092
+"Pinaceae","Larix","decidua",13,3,"total branch",0.0391286634500182,2.1412,,,0.967330408815134
+"Pinaceae","Larix","decidua",13,6,"total branch",4900433179012637,2.3923,-5.1314,,1.05845349596079
+"Pinaceae","Larix","decidua",13,8,"total branch",0.293405402504112,2.1436,-0.0023,,0.967649830589433
+"Pinaceae","Picea","abies",14,3,"aboveground",0.151601486562606,2.3034,,,1.05914076643193
+"Pinaceae","Picea","abies",14,3,"dead branch",0.0185571522166424,1.918,,,1.01106514230726
+"Pinaceae","Picea","abies",14,12,"dead branch",1592.24460347348,2,-0.0994,-0.145,1.02792484495449
+"Pinaceae","Picea","abies",14,3,"foliage mass",0.0610721088902066,1.8688,,,1.02002720915149
+"Pinaceae","Picea","abies",14,4,"foliage mass",0.11877789005767,2.0087,-0.0324,,1.04450283517212
+"Pinaceae","Picea","abies",14,5,"foliage mass",0.253067253871734,2.0258,-0.4916,,1.03874922140454
+"Pinaceae","Picea","abies",14,6,"foliage mass",0.00498411212878628,2.0209,0.2956,,1.06016590987491
+"Pinaceae","Picea","abies",14,8,"foliage mass",0.109142599442789,1.9671,-0.001,,1.0165341234993
+"Pinaceae","Picea","abies",14,10,"foliage mass",0.208378321088707,2.0522,-0.0212,-0.2748,1.05332913396574
+"Pinaceae","Picea","abies",14,19,"foliage mass",3.02769014373322,2.0453,-0.9729,-9e-04,1.03698647332726
+"Pinaceae","Picea","abies",14,3,"leaf area",0.260956905061311,1.857,,,1.01109464120685
+"Pinaceae","Picea","abies",14,4,"leaf area",0.588428414672027,2.0078,-0.0389,,1.0445732746054
+"Pinaceae","Picea","abies",14,6,"leaf area",0.01424712709445,2.0126,0.3321,,1.06160375831507
+"Pinaceae","Picea","abies",14,7,"leaf area",0.0484317349179942,1.9617,0.0264,,1.00390729470122
+"Pinaceae","Picea","abies",14,3,"live branch",0.0298879467078219,2.2219,,,1.00209797697655
+"Pinaceae","Picea","abies",14,3,"root mass",0.0237850035462936,2.4323,,,1.18250040821357
+"Pinaceae","Picea","abies",14,4,"root mass",0.106660967816931,2.0883,-0.0104,,1.05547579492479
+"Pinaceae","Picea","abies",14,3,"stem + branch mass",0.12919918444484,2.3048,,,1.03300173193056
+"Pinaceae","Picea","abies",14,4,"stem + branch mass",0.0980478160919375,2.2256,0.0134,,1.02546165662086
+"Pinaceae","Picea","abies",14,5,"stem + branch mass",0.0680985062991779,2.2288,0.2358,,1.00325128036449
+"Pinaceae","Picea","abies",14,21,"stem + branch mass",0.0809923964259865,2.1916,0.4234,-0.0141,0.999590377941311
+"Pinaceae","Picea","abies",14,3,"stem mass",0.0818636680583361,2.3404,,,1.05988395278679
+"Pinaceae","Picea","abies",14,4,"stem mass",0.0715542053302746,2.2549,0.01,,1.00019632184897
+"Pinaceae","Picea","abies",14,5,"stem mass",0.0119323748178041,2.253,0.611,,0.998609222316524
+"Pinaceae","Picea","abies",14,3,"total branch",0.0362868450031605,2.1983,,,1.00803763592252
+"Pinaceae","Picea","abies",14,4,"total branch",0.0466165337162291,2.2056,-0.0078,,1.05990132226578
+"Pinaceae","Picea","abies",14,5,"total branch",0.0829514319239336,2.2313,-0.2567,,1.0368899674679
+"Pinaceae","Pinus","cembra",15,3,"aboveground",0.0465373529316478,2.5298,,,1.00463257950056
+"Pinaceae","Pinus","nigra",16,3,"aboveground",0.132178763982646,2.3345,,,0.981101187025695
+"Pinaceae","Pinus","nigra",16,3,"foliage mass",0.543079261547503,0.8705,,,1.00178093903222
+"Pinaceae","Pinus","nigra",16,3,"root mass",0.0190345410554588,2.4473,,,0.999132950376855
+"Pinaceae","Pinus","nigra",16,3,"stem mass",0.0776844632325439,2.3691,,,0.982755821577271
+"Pinaceae","Pinus","nigra",16,3,"total branch",0.321389980729315,1.468,,,0.999485916239175
+"Pinaceae","Pinus","pinaster",17,3,"aboveground",0.0748851254727516,2.422,,,1.04858635027713
+"Pinaceae","Pinus","pinaster",17,4,"aboveground",0.0647190296106036,2.3671,0.0061,,1.03170798618819
+"Pinaceae","Pinus","pinaster",17,10,"aboveground",0.0424851787146599,2.3608,0.0043,0.1576,1.03313713149677
+"Pinaceae","Pinus","pinaster",17,21,"aboveground",0.211845085541545,2.3993,0.1719,-0.0373,1.028344555102
+"Pinaceae","Pinus","pinaster",17,3,"foliage mass",0.0129883821741657,2.2347,,,0.98492370810868
+"Pinaceae","Pinus","pinaster",17,5,"foliage mass",0.183030952701133,2.2454,-0.838,,0.984654712015503
+"Pinaceae","Pinus","pinaster",17,3,"leaf area",0.0422014794710087,2.2352,,,0.984567647616738
+"Pinaceae","Pinus","pinaster",17,3,"live branch",1.76354407795703e-05,4.1304,,,1.01434769651356
+"Pinaceae","Pinus","pinaster",17,3,"root mass",0.00712461207445621,2.7517,,,1.01949500393962
+"Pinaceae","Pinus","pinaster",17,5,"root mass",0.0260744336074866,2.7525,-0.4107,,1.01935578334267
+"Pinaceae","Pinus","pinaster",17,7,"root mass",0.101337373193254,2.7536,-0.0686,,1.01924683377201
+"Pinaceae","Pinus","pinaster",17,3,"stem + branch mass",0.108348759507926,2.2519,,,1.12524419497405
+"Pinaceae","Pinus","pinaster",17,5,"stem + branch mass",0.0222703295475037,2.208,0.5154,,1.14450173098769
+"Pinaceae","Pinus","pinaster",17,3,"stem mass",0.0745861832538879,2.3107,,,1.06700057720734
+"Pinaceae","Pinus","pinaster",17,5,"stem mass",0.0437046838806793,2.2947,0.1799,,1.07056883436527
+"Pinaceae","Pinus","pinaster",17,7,"stem mass",0.0329060087864849,2.2452,0.026,,1.06387075035764
+"Pinaceae","Pinus","pinaster",17,3,"total branch",0.0160539556793459,2.3395,,,1.04738469875735
+"Pinaceae","Pinus","sylvestris",18,3,"aboveground",0.115613794532175,2.3097,,,1.11870669937239
+"Pinaceae","Pinus","sylvestris",18,5,"aboveground",0.0390504843282995,2.1926,0.3784,,1.05433213196414
+"Pinaceae","Pinus","sylvestris",18,20,"aboveground",0.0273428557488799,2.1916,0.43,0.0239,1.05323409418768
+"Pinaceae","Pinus","sylvestris",18,3,"dead branch",0.0040497505190323,2.3136,,,0.94634734457085
+"Pinaceae","Pinus","sylvestris",18,3,"foliage mass",0.0293753321308384,1.7471,,,1.01041397065013
+"Pinaceae","Pinus","sylvestris",18,4,"foliage mass",0.089617918117897,1.8683,-0.0537,,1.03396760040159
+"Pinaceae","Pinus","sylvestris",18,5,"foliage mass",0.0467472429181205,1.849,-0.2065,,1.0310593500733
+"Pinaceae","Pinus","sylvestris",18,6,"foliage mass",0.00470090610758328,1.9095,0.182,,1.03668026310891
+"Pinaceae","Pinus","sylvestris",18,10,"foliage mass",0.12381088481746,1.9034,-0.0406,-0.1858,1.03942361397408
+"Pinaceae","Pinus","sylvestris",18,15,"foliage mass",0.000110499451590575,1.9105,0.4397,0.463,1.03622058203922
+"Pinaceae","Pinus","sylvestris",18,21,"foliage mass",0.000854153190744106,1.8187,0.3667,0.0361,1.01767840379472
+"Pinaceae","Pinus","sylvestris",18,3,"leaf area",0.126818290567995,1.746,,,1.00960517724702
+"Pinaceae","Pinus","sylvestris",18,4,"leaf area",0.387941780839551,1.8664,-0.0536,,1.03255068188788
+"Pinaceae","Pinus","sylvestris",18,5,"leaf area",0.201694722391279,1.8474,-0.2057,,1.02968399491242
+"Pinaceae","Pinus","sylvestris",18,6,"leaf area",0.0205211339394345,1.9074,0.1812,,1.03502574259778
+"Pinaceae","Pinus","sylvestris",18,10,"leaf area",0.534459138244347,1.9014,-0.0405,-0.1846,1.0378940368032
+"Pinaceae","Pinus","sylvestris",18,15,"leaf area",0.000484157640870439,1.9084,0.4392,0.4619,1.03457552410769
+"Pinaceae","Pinus","sylvestris",18,21,"leaf area",0.00369675452375521,1.8168,0.3767,0.0355,1.01575876021216
+"Pinaceae","Pinus","sylvestris",18,3,"live branch",0.0215430935223697,2.1775,,,1.08238853467464
+"Pinaceae","Pinus","sylvestris",18,12,"live branch",1.74387658580765e-06,2.363,0.0774,0.1181,1.06191834784197
+"Pinaceae","Pinus","sylvestris",18,16,"live branch",0.000426584536852325,2.1423,0.2707,0.0026,1.14181592734594
+"Pinaceae","Pinus","sylvestris",18,3,"root mass",0.0263918507551362,2.3038,,,0.950649723440268
+"Pinaceae","Pinus","sylvestris",18,5,"root mass",0.00680702576125136,2.1433,0.4428,,1.05159154273599
+"Pinaceae","Pinus","sylvestris",18,15,"root mass",0.00174639782176648,2.1458,0.5666,0.1174,1.05120801690007
+"Pinaceae","Pinus","sylvestris",18,3,"stem + branch mass",0.119887676945457,2.2679,,,1.05029030291757
+"Pinaceae","Pinus","sylvestris",18,4,"stem + branch mass",0.0665767407780667,2.3023,0.0237,,1.02486650096243
+"Pinaceae","Pinus","sylvestris",18,5,"stem + branch mass",0.0632538046888651,2.2336,0.2035,,1.02616265262887
+"Pinaceae","Pinus","sylvestris",18,6,"stem + branch mass",0.439595628838327,2.198,-0.1467,,1.02468715273915
+"Pinaceae","Pinus","sylvestris",18,8,"stem + branch mass",0.062449315702288,2.2832,9e-04,,1.05596181581968
+"Pinaceae","Pinus","sylvestris",18,10,"stem + branch mass",0.0529662691060567,2.2742,0.0128,0.1526,1.01045779914786
+"Pinaceae","Pinus","sylvestris",18,16,"stem + branch mass",0.237473319681739,2.208,-0.1412,8e-04,1.02896930584249
+"Pinaceae","Pinus","sylvestris",18,19,"stem + branch mass",0.0425574649443611,2.2459,0.1944,6e-04,1.03053558960702
+"Pinaceae","Pinus","sylvestris",18,3,"stem mass",0.0945808740903059,2.308,,,1.03342764129309
+"Pinaceae","Pinus","sylvestris",18,5,"stem mass",0.0202682430425134,2.2954,0.4211,,1.03029069044898
+"Pinaceae","Pinus","sylvestris",18,3,"total branch",0.025627225410669,2.1601,,,1.04508984648314
+"Salicaceae","Populus",,19,3,"aboveground",0.0991620399221724,2.3538,,,1.12300232063444
+"Salicaceae","Populus",,19,4,"aboveground",0.00819361570924372,2.6651,0.0497,,1.01865556813854
+"Salicaceae","Populus",,19,3,"foliage mass",0.0158370998442465,1.948,,,1.01172409861652
+"Salicaceae","Populus",,19,3,"leaf area",0.175257317377829,1.9479,,,1.0163960074832
+"Salicaceae","Populus",,19,3,"stem + branch mass",0.104695410168368,2.3607,,,1.0449241537245
+"Salicaceae","Populus",,19,3,"stem mass",0.072381828403166,2.4029,,,1.05272298184016
+"Salicaceae","Populus",,19,3,"total branch",0.0210006896777579,2.3701,,,1.09325563475978
+"Salicaceae","Populus",,19,7,"total branch",0.149478904968069,2.3637,-0.0367,,1.09069509787049
+"Salicaceae","Populus",,19,9,"total branch",0.0106691380446602,2.3659,0.0919,,1.09010480380167
+"Salicaceae","Populus",,19,10,"total branch",0.260461557670732,2.5031,-0.0213,-0.8474,1.11964418178678
+"Salicaceae","Populus",,19,18,"total branch",0.170656929150034,2.5445,0.1577,-0.0688,1.12433808305261
+"Salicaceae","Populus",,19,21,"total branch",0.224989847504045,2.3768,-0.2193,-0.0339,1.09160791201311
+"Rosaceae","Prunus",,20,3,"foliage mass",0.0164768320986905,1.3212,,,0.956409793546885
+"Rosaceae","Prunus",,20,3,"leaf area",0.0887883350200172,1.42,,,1.00110712749651
+"Rosaceae","Prunus",,20,3,"stem + branch mass",0.333937977285237,2.092,,,1.02628541135498
+"Rosaceae","Prunus",,20,3,"stem mass",0.334606521561236,1.9656,,,0.99681072385509
+"Rosaceae","Prunus",,20,3,"total branch",0.0688241897936662,2.2061,,,1.13489786341797
+"Rosaceae","Prunus","avium",21,3,"foliage mass",0.00714316016792254,1.42,,,1.00110712672703
+"Rosaceae","Prunus","avium",21,3,"leaf area",0.0887883350200172,1.42,,,1.00110712749651
+"Rosaceae","Prunus","serotina",22,3,"stem + branch mass",0.333937977285237,2.092,,,1.02628541135498
+"Rosaceae","Prunus","serotina",22,3,"stem mass",0.334606521561236,1.9656,,,0.99681072385509
+"Rosaceae","Prunus","serotina",22,3,"total branch",0.0688241897936662,2.2061,,,1.13489786341797
+"Pinaceae","Pseudotuga","menziesii",23,3,"aboveground",0.0973152081849953,2.4818,,,1.00300367137778
+"Pinaceae","Pseudotuga","menziesii",23,6,"aboveground",0.0244408345101954,2.4954,0.1743,,0.966474218092476
+"Pinaceae","Pseudotuga","menziesii",23,8,"aboveground",0.131401205328744,2.4722,-2e-04,,1.00652936175467
+"Pinaceae","Pseudotuga","menziesii",23,3,"dead branch",0.00211246450762151,2.5142,,,1.01890493733024
+"Pinaceae","Pseudotuga","menziesii",23,4,"dead branch",0.000370372982228624,2.2155,0.0416,,0.976156366031997
+"Pinaceae","Pseudotuga","menziesii",23,5,"dead branch",0.000223992049509566,2.3634,0.7584,,1.01072858727281
+"Pinaceae","Pseudotuga","menziesii",23,6,"dead branch",2.6361263763594e-06,2.1933,1.2716,,1.1007085536649
+"Pinaceae","Pseudotuga","menziesii",23,15,"dead branch",2.59463689221547e-17,2.2444,0.0375,0.6626,0.972583751678496
+"Pinaceae","Pseudotuga","menziesii",23,3,"foliage mass",0.0311575091062089,1.9428,,,0.97287177093655
+"Pinaceae","Pseudotuga","menziesii",23,4,"foliage mass",0.0938460129565653,2.2854,-0.053,,0.940597687539453
+"Pinaceae","Pseudotuga","menziesii",23,5,"foliage mass",0.245121812039117,2.3887,-0.9417,,1.01672942614623
+"Pinaceae","Pseudotuga","menziesii",23,6,"foliage mass",0.000162846910152828,2.4791,0.461,,1.01208162454721
+"Pinaceae","Pseudotuga","menziesii",23,7,"foliage mass",0.00766416277216376,1.9689,0.0291,,0.973413861626866
+"Pinaceae","Pseudotuga","menziesii",23,8,"foliage mass",0.0388324127862721,1.9754,-3e-04,,0.970730637119955
+"Pinaceae","Pseudotuga","menziesii",23,10,"foliage mass",0.223845320306888,2.4033,-0.0256,-0.6619,1.0132841713531
+"Pinaceae","Pseudotuga","menziesii",23,15,"foliage mass",0.000692363120062341,2.5183,-0.2246,0.3566,1.00783842489501
+"Pinaceae","Pseudotuga","menziesii",23,20,"foliage mass",3.06976189512476,2.4347,-1.2283,-0.2053,1.00633643923366
+"Pinaceae","Pseudotuga","menziesii",23,3,"leaf area",0.199987582872299,1.9025,,,0.970451431025646
+"Pinaceae","Pseudotuga","menziesii",23,5,"leaf area",2.09509730794105,2.3402,-1.018,,1.02391980443587
+"Pinaceae","Pseudotuga","menziesii",23,6,"leaf area",0.000652891237991728,2.4205,0.5288,,1.01631510325134
+"Pinaceae","Pseudotuga","menziesii",23,7,"leaf area",0.03374240243643,1.9306,0.0369,,0.973565438020226
+"Pinaceae","Pseudotuga","menziesii",23,10,"leaf area",1.89004379356214,2.3424,-0.0259,-0.7175,1.02250668991961
+"Pinaceae","Pseudotuga","menziesii",23,12,"leaf area",8.71198792839406,2.2159,-0.0611,-0.0503,0.91790041264565
+"Pinaceae","Pseudotuga","menziesii",23,15,"leaf area",0.0172197206935647,2.4513,-0.4353,0.2886,1.01391926824243
+"Pinaceae","Pseudotuga","menziesii",23,19,"leaf area",8.08491516430506,2.3773,-1.2538,-6e-04,1.01568324119734
+"Pinaceae","Pseudotuga","menziesii",23,20,"leaf area",14.8827079688323,2.3775,-1.26,-0.1526,1.01571535581372
+"Pinaceae","Pseudotuga","menziesii",23,3,"live branch",0.038208395883239,2.0274,,,1.05513760908063
+"Pinaceae","Pseudotuga","menziesii",23,4,"live branch",0.227751535687459,2.1099,-0.0367,,1.093493048084
+"Pinaceae","Pseudotuga","menziesii",23,5,"live branch",0.338138399950097,2.4749,-0.9915,,1.11771857683654
+"Pinaceae","Pseudotuga","menziesii",23,6,"live branch",4.27218525208684e-05,2.7314,0.6457,,1.0272883274223
+"Pinaceae","Pseudotuga","menziesii",23,3,"root mass",0.00910528741116852,2.6673,,,1.0191262162639
+"Pinaceae","Pseudotuga","menziesii",23,9,"root mass",0.00649774555457737,2.6583,0.044,,1.02519088449636
+"Pinaceae","Pseudotuga","menziesii",23,3,"stem + branch mass",0.0822411083785881,2.5226,,,0.992305399249949
+"Pinaceae","Pseudotuga","menziesii",23,4,"stem + branch mass",0.0727300963539088,2.4966,0.005,,0.989324495717559
+"Pinaceae","Pseudotuga","menziesii",23,5,"stem + branch mass",0.0709414776698143,2.4664,0.0871,,0.975653933533381
+"Pinaceae","Pseudotuga","menziesii",23,6,"stem + branch mass",0.126856341762559,2.4866,-0.0442,,0.972216062300811
+"Pinaceae","Pseudotuga","menziesii",23,9,"stem + branch mass",0.208524236978073,2.5455,-0.1206,,0.985447013284335
+"Pinaceae","Pseudotuga","menziesii",23,3,"stem mass",0.0536217773273229,2.598,,,0.985014118345995
+"Pinaceae","Pseudotuga","menziesii",23,5,"stem mass",0.0163194113391783,2.4523,0.4635,,0.989264659453973
+"Pinaceae","Pseudotuga","menziesii",23,6,"stem mass",0.0143500765829472,2.4933,0.2112,,0.976213458619566
+"Pinaceae","Pseudotuga","menziesii",23,7,"stem mass",0.205810384020778,2.6025,-0.0293,,0.984518818645438
+"Pinaceae","Pseudotuga","menziesii",23,8,"stem mass",0.0723456465351852,2.603,-3e-04,,0.985349862661243
+"Pinaceae","Pseudotuga","menziesii",23,9,"stem mass",0.0965011841237545,2.6025,-0.0787,,0.985095746756323
+"Pinaceae","Pseudotuga","menziesii",23,19,"stem mass",0.0300077379173506,2.453,0.3645,-3e-04,0.989671946431388
+"Pinaceae","Pseudotuga","menziesii",23,3,"total branch",0.0218009877626558,2.2587,,,0.965911306993524
+"Pinaceae","Pseudotuga","menziesii",23,4,"total branch",0.108685161816577,2.5342,-0.0564,,0.912482574911686
+"Pinaceae","Pseudotuga","menziesii",23,5,"total branch",0.255023393198004,2.5432,-0.9339,,1.04465555368524
+"Pinaceae","Pseudotuga","menziesii",23,7,"total branch",0.00508581493390863,2.2908,0.0305,,0.991361078784172
+"Pinaceae","Pseudotuga","menziesii",23,10,"total branch",0.306726134364665,2.5554,-0.023,-0.7119,1.03347929757971
+"Pinaceae","Pseudotuga","menziesii",23,18,"total branch",0.000101525556804416,2.7485,0.2554,0.0427,1.06115262762762
+"Fagaceae","Quercus","ilex",24,3,"aboveground",0.175222269419266,2.3699,,,1.02679894571924
+"Fagaceae","Quercus","ilex",24,3,"foliage mass",0.0111112185597447,2.1018,,,1.00714087276559
+"Fagaceae","Quercus","ilex",24,3,"leaf area",0.0512571581242291,2.1009,,,1.00719086951636
+"Fagaceae","Quercus","ilex",24,3,"root mass",0.150363437311916,2.0642,,,0.97641462664806
+"Fagaceae","Quercus","ilex",24,4,"root mass",0.157662280308311,2.2126,-0.0273,,0.999495577150128
+"Fagaceae","Quercus","ilex",24,5,"root mass",0.374598684771276,2.2126,-0.3684,,0.999495577150129
+"Fagaceae","Quercus","ilex",24,6,"root mass",83553691.9049422,2.2126,-2.7365,,0.999495577150148
+"Fagaceae","Quercus","ilex",24,3,"stem + branch mass",0.126640869185147,2.295,,,1.01222550648407
+"Fagaceae","Quercus","ilex",24,3,"stem mass",0.112939839030962,2.2686,,,0.922810923449851
+"Fagaceae","Quercus","ilex",24,9,"stem mass",0.040705176821121,2.2664,0.0688,,0.922703974322664
+"Fagaceae","Quercus","ilex",24,20,"stem mass",0.0653760039452407,2.5671,-0.2086,0.055,0.990298734651754
+"Fagaceae","Quercus","ilex",24,3,"total branch",0.0505395035491347,2.3093,,,0.970280416119254
+"Fagaceae","Quercus","ilex",24,4,"total branch",0.121286471320286,2.3168,-0.0305,,0.970607645656989
+"Fagaceae","Quercus","petraea",25,3,"stem + branch mass",0.0966750426809369,2.5068,,,0.96881138013023
+"Fagaceae","Quercus","petraea",25,7,"stem + branch mass",6.65654113137389,2.5331,-0.0835,,0.994949503217937
+"Fagaceae","Quercus","petraea",25,8,"stem + branch mass",0.175555508207762,2.5334,-7e-04,,0.994894719644703
+"Fagaceae","Quercus","petraea",25,9,"stem + branch mass",0.00677646296319605,2.5302,0.3479,,0.995388963703099
+"Fagaceae","Quercus","petraea",25,3,"stem mass",0.109361103072469,2.3031,,,0.972439970971582
+"Fagaceae","Quercus","petraea",25,4,"stem mass",0.0755621335686394,2.2913,0.028,,0.973506675674976
+"Fagaceae","Quercus","petraea",25,3,"total branch",0.17006067395328,1.8617,,,1.06949970673308
+"Fagaceae","Quercus","petraea",26,3,"aboveground",0.0682894493122845,2.7274,,,1.0227726239165
+"Fagaceae","Quercus","robur",26,3,"aboveground",0.0682894493122845,2.7274,,,1.0227726239165
+"Fagaceae","Quercus","petraea",26,3,"foliage mass",0.0114897493727592,2.1375,,,0.966326573037955
+"Fagaceae","Quercus","robur",26,3,"foliage mass",0.0114897493727592,2.1375,,,0.966326573037955
+"Fagaceae","Quercus","petraea",26,3,"leaf area",0.167981739321741,2.1375,,,0.966326573052703
+"Fagaceae","Quercus","robur",26,3,"leaf area",0.167981739321741,2.1375,,,0.966326573052703
+"Fagaceae","Quercus","petraea",26,3,"root mass",0.0375117898281621,2.3275,,,0.988154231654512
+"Fagaceae","Quercus","robur",26,3,"root mass",0.0375117898281621,2.3275,,,0.988154231654512
+"Fagaceae","Quercus","petraea",26,4,"root mass",0.0218774249067978,2.2076,0.0275,,0.996828349095421
+"Fagaceae","Quercus","robur",26,4,"root mass",0.0218774249067978,2.2076,0.0275,,0.996828349095421
+"Fagaceae","Quercus","petraea",26,3,"stem + branch mass",0.0987760611143791,2.5133,,,1.03670083747681
+"Fagaceae","Quercus","robur",26,3,"stem + branch mass",0.0987760611143791,2.5133,,,1.03670083747681
+"Fagaceae","Quercus","petraea",26,4,"stem + branch mass",0.0951881328397068,2.6138,-0.0073,,1.06562967177982
+"Fagaceae","Quercus","robur",26,4,"stem + branch mass",0.0951881328397068,2.6138,-0.0073,,1.06562967177982
+"Fagaceae","Quercus","petraea",26,8,"stem + branch mass",0.139917824019109,2.5768,-6e-04,,1.04914520728215
+"Fagaceae","Quercus","robur",26,8,"stem + branch mass",0.139917824019109,2.5768,-6e-04,,1.04914520728215
+"Fagaceae","Quercus","petraea",26,3,"stem mass",0.086172860006535,2.4221,,,1.02735758390777
+"Fagaceae","Quercus","robur",26,3,"stem mass",0.086172860006535,2.4221,,,1.02735758390777
+"Fagaceae","Quercus","petraea",26,5,"stem mass",0.056960342437624,2.4095,0.131,,1.02859489299228
+"Fagaceae","Quercus","robur",26,5,"stem mass",0.056960342437624,2.4095,0.131,,1.02859489299228
+"Fagaceae","Quercus","petraea",26,19,"stem mass",0.0896268803578133,2.4101,0.1912,-8e-04,1.02854443241867
+"Fagaceae","Quercus","robur",26,19,"stem mass",0.0896268803578133,2.4101,0.1912,-8e-04,1.02854443241867
+"Fagaceae","Quercus","petraea",26,21,"stem mass",0.00463833413424552,2.4091,0.1952,0.0462,1.02898087371311
+"Fagaceae","Quercus","robur",26,21,"stem mass",0.00463833413424552,2.4091,0.1952,0.0462,1.02898087371311
+"Fagaceae","Quercus","petraea",26,3,"total branch",0.0294282553452776,2.5993,,,1.27671228832826
+"Fagaceae","Quercus","robur",26,3,"total branch",0.0294282553452776,2.5993,,,1.27671228832826
+"Fagaceae","Quercus","petraea",26,4,"total branch",0.0403203086596125,2.683,-0.0214,,1.29121098656196
+"Fagaceae","Quercus","robur",26,4,"total branch",0.0403203086596125,2.683,-0.0214,,1.29121098656196
+"Fagaceae","Quercus","petraea",26,5,"total branch",0.0913734796160007,2.8005,-0.474,,1.20167525986093
+"Fagaceae","Quercus","robur",26,5,"total branch",0.0913734796160007,2.8005,-0.474,,1.20167525986093
+"Fagaceae","Quercus","petraea",26,6,"total branch",0.00346029996009883,2.6862,0.2583,,1.28756119142698
+"Fagaceae","Quercus","robur",26,6,"total branch",0.00346029996009883,2.6862,0.2583,,1.28756119142698
+"Fagaceae","Quercus","robur",27,3,"aboveground",0.0682894493122845,2.7274,,,1.0227726239165
+"Fagaceae","Quercus","robur",27,3,"foliage mass",0.0114897493727592,2.1375,,,0.966326573037955
+"Fagaceae","Quercus","robur",27,3,"leaf area",0.167981739321741,2.1375,,,0.966326573052703
+"Fagaceae","Quercus","robur",27,3,"root mass",0.0570972114365759,2.208,,,0.996927741790179
+"Fagaceae","Quercus","robur",27,4,"root mass",0.0218774249067978,2.2076,0.0275,,0.996828349095421
+"Fagaceae","Quercus","robur",27,5,"root mass",0.00180697699228776,2.2076,0.7759,,0.996828349095421
+"Fagaceae","Quercus","robur",27,6,"root mass",0.000255701451272204,2.2076,0.8803,,0.996828349095421
+"Fagaceae","Quercus","robur",27,3,"stem + branch mass",0.0543234111712481,2.7443,,,1.02673620522291
+"Fagaceae","Quercus","robur",27,4,"stem + branch mass",0.0873004204497359,2.7627,-0.0186,,1.02355943783771
+"Fagaceae","Quercus","robur",27,5,"stem + branch mass",0.0719200639238745,2.7535,-0.0843,,1.02479749835411
+"Fagaceae","Quercus","robur",27,6,"stem + branch mass",0.0130717743905275,2.764,0.1863,,1.02275045078973
+"Fagaceae","Quercus","robur",27,7,"stem + branch mass",0.00400424592333869,2.7619,0.0536,,1.02408935761527
+"Fagaceae","Quercus","robur",27,8,"stem + branch mass",0.10893542538153,2.7704,-9e-04,,1.02069470637707
+"Fagaceae","Quercus","robur",27,9,"stem + branch mass",0.164770777207555,2.7731,-0.1296,,1.0197733801967
+"Fagaceae","Quercus","robur",27,18,"stem + branch mass",0.00321830646605785,2.7673,0.135,0.037,1.0226323507677
+"Fagaceae","Quercus","robur",27,3,"stem mass",0.0668435810659679,2.5279,,,1.00752481601099
+"Fagaceae","Quercus","robur",27,3,"total branch",0.0118681136550819,2.9526,,,1.18147968000752
+"Fagaceae","Quercus","robur",27,5,"total branch",0.126248890371743,2.9902,-0.704,,1.18327825429796
+"Fagaceae","Quercus","robur",27,6,"total branch",0.000405698615653297,2.9591,0.4442,,1.17398186331417
+"Fabaceae","Robinia","pseudoacacia",28,3,"aboveground",0.157741131159535,2.2656,,,0.963869708019867
+"Fabaceae","Robinia","pseudoacacia",28,3,"foliage mass",0.0609013461646947,1.1278,,,1.02069130676726
+"Fabaceae","Robinia","pseudoacacia",28,9,"foliage mass",0.00872903895961222,1.1294,0.1927,,1.02083997846788
+"Fabaceae","Robinia","pseudoacacia",28,3,"leaf area",1.51285712688439,1.1278,,,1.02069130806197
+"Fabaceae","Robinia","pseudoacacia",28,9,"leaf area",0.216839029554267,1.1294,0.1927,,1.0208399797611
+"Fabaceae","Robinia","pseudoacacia",28,3,"root mass",0.064447779709768,2.0246,,,1.0366097184811
+"Fabaceae","Robinia","pseudoacacia",28,5,"root mass",0.0022579453869895,2.0246,1.3532,,1.0365426300669
+"Fabaceae","Robinia","pseudoacacia",28,3,"stem + branch mass",0.0793092905662537,2.4598,,,1.02109893580449
+"Fabaceae","Robinia","pseudoacacia",28,4,"stem + branch mass",0.0258770190376562,2.5527,0.043,,1.01209684564323
+"Fabaceae","Robinia","pseudoacacia",28,3,"stem mass",0.0538097823648624,2.528,,,0.987558590509864
+"Fabaceae","Robinia","pseudoacacia",28,4,"stem mass",0.12319337545326,2.3799,-0.0097,,0.996283525907445
+"Fabaceae","Robinia","pseudoacacia",28,3,"total branch",0.0335741115021894,2.1634,,,1.13104934920599
+"Fabaceae","Robinia","pseudoacacia",28,4,"total branch",0.00599757534856773,2.7277,0.0062,,0.988404030338315
+"Fabaceae","Robinia","pseudoacacia",28,19,"total branch",0.0213949578329218,2.1301,0.4438,-9e-04,1.13221454619549
