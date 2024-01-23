@@ -57,12 +57,12 @@ pred_fns <- list(
     )
   ),
   "7" = list(
-    fn = function(dsob, noa) {
-      exp(log(beta_0) + beta_1 * log(dsob) + beta_2 * noa) * cf
+    fn = function(dsob, nol) {
+      exp(log(beta_0) + beta_1 * log(dsob) + beta_2 * nol) * cf
     },
     covts = list(
       dsob = units::as_units("cm"),
-      noa = units::as_units("degree")
+      nol = units::as_units("degree")
     )
   ),
   "8" = list(
@@ -106,13 +106,13 @@ pred_fns <- list(
     )
   ),
   "12" = list(
-    fn = function(dsob, gs_s, noa) {
-      exp(log(beta_0) + beta_1 * log(dsob) + beta_2 * gs_s + beta_3 * noa) * cf
+    fn = function(dsob, gs_s, nol) {
+      exp(log(beta_0) + beta_1 * log(dsob) + beta_2 * gs_s + beta_3 * nol) * cf
     },
     covts = list(
       dsob = units::as_units("cm"),
       gs_s = units::as_units("m^2 * ha^-1"),
-      noa = units::as_units("degree")
+      nol = units::as_units("degree")
     )
   ),
   "13" = list(
@@ -168,14 +168,14 @@ pred_fns <- list(
     )
   ),
   "18" = list(
-    fn = function(dsob, en, noa) {
-      exp(log(beta_0) + beta_1 * log(dsob) + beta_2 * log(en) + beta_3 * noa) *
+    fn = function(dsob, en, nol) {
+      exp(log(beta_0) + beta_1 * log(dsob) + beta_2 * log(en) + beta_3 * nol) *
         cf
     },
     covts = list(
       dsob = units::as_units("cm"),
       en = units::as_units("ha^-1"),
-      noa = units::as_units("degree")
+      nol = units::as_units("degree")
     )
   ),
   "19" = list(
@@ -201,14 +201,14 @@ pred_fns <- list(
     )
   ),
   "21" = list(
-    fn = function(dsob, att, noa) {
-      exp(log(beta_0) + beta_1 * log(dsob) + beta_2 * log(att) + beta_3 * noa) *
+    fn = function(dsob, att, nol) {
+      exp(log(beta_0) + beta_1 * log(dsob) + beta_2 * log(att) + beta_3 * nol) *
         cf
     },
     covts = list(
       dsob = units::as_units("cm"),
       att = units::as_units("years"),
-      noa = units::as_units("degree")
+      nol = units::as_units("degree")
     )
   )
 )
