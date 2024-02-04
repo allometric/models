@@ -48,12 +48,12 @@ pred_fns <- list(
     )
   ),
   "6" = list(
-    fn = function(dsob, en) {
-      exp(log(beta_0) + beta_1 * log(dsob) + beta_2 * log(en)) * cf
+    fn = function(dsob, es) {
+      exp(log(beta_0) + beta_1 * log(dsob) + beta_2 * log(es)) * cf
     },
     covts = list(
       dsob = units::as_units("cm"),
-      en = units::as_units("ha^-1")
+      es =  units::as_units("ha^-1")
     )
   ),
   "7" = list(
@@ -95,14 +95,14 @@ pred_fns <- list(
     )
   ),
   "11" = list(
-    fn = function(dsob, gs_s, en) {
-      exp(log(beta_0) + beta_1 * log(dsob) + beta_2 * gs_s + beta_3 * log(en)) *
+    fn = function(dsob, gs_s, es) {
+      exp(log(beta_0) + beta_1 * log(dsob) + beta_2 * gs_s + beta_3 * log(es)) *
         cf
     },
     covts = list(
       dsob = units::as_units("cm"),
       gs_s = units::as_units("m^2 * ha^-1"),
-      en = units::as_units("ha^-1")
+      es =  units::as_units("ha^-1")
     )
   ),
   "12" = list(
@@ -136,45 +136,45 @@ pred_fns <- list(
     )
   ),
   "15" = list(
-    fn = function(dsob, att, en) {
+    fn = function(dsob, att, es) {
       exp(
-        log(beta_0) + beta_1 * log(dsob) + beta_2 * log(att) + beta_3 * log(en)
+        log(beta_0) + beta_1 * log(dsob) + beta_2 * log(att) + beta_3 * log(es)
       ) * cf
     },
     covts = list(
       dsob = units::as_units("cm"),
       att = units::as_units("years"),
-      en = units::as_units("ha^-1")
+      es =  units::as_units("ha^-1")
     )
   ),
   "16" = list(
-    fn = function(dsob, en, lp) {
-      exp(log(beta_0) + beta_1 * log(dsob) + beta_2 * log(en) + beta_3 * lp) * cf
+    fn = function(dsob, es, lp) {
+      exp(log(beta_0) + beta_1 * log(dsob) + beta_2 * log(es) + beta_3 * lp) * cf
     },
     covts = list(
       dsob = units::as_units("cm"),
-      en = units::as_units("ha^-1"),
+      es =  units::as_units("ha^-1"),
       lp = units::as_units("mm")
     )
   ),
   "17" = list(
-    fn = function(dsob, en, lt) {
-      exp(log(beta_0) + beta_1 * log(dsob) + beta_2 * log(en) + beta_3 * lt) * cf
+    fn = function(dsob, es, lt) {
+      exp(log(beta_0) + beta_1 * log(dsob) + beta_2 * log(es) + beta_3 * lt) * cf
     },
     covts = list(
       dsob = units::as_units("cm"),
-      en = units::as_units("ha^-1"),
+      es =  units::as_units("ha^-1"),
       lt = units::as_units("C")
     )
   ),
   "18" = list(
-    fn = function(dsob, en, noa) {
-      exp(log(beta_0) + beta_1 * log(dsob) + beta_2 * log(en) + beta_3 * noa) *
+    fn = function(dsob, es, noa) {
+      exp(log(beta_0) + beta_1 * log(dsob) + beta_2 * log(es) + beta_3 * noa) *
         cf
     },
     covts = list(
       dsob = units::as_units("cm"),
-      en = units::as_units("ha^-1"),
+      es =  units::as_units("ha^-1"),
       noa = units::as_units("degree")
     )
   ),
