@@ -151,14 +151,14 @@
 "DBH","CA-ON","FRAX.PEN","Oleaceae","Fraxinus","pennsylvanica","bbranches2",2.337
 "DBH","CA-ON","FRAX.PEN","Oleaceae","Fraxinus","pennsylvanica","bfoliage1",0.1041
 "DBH","CA-ON","FRAX.PEN","Oleaceae","Fraxinus","pennsylvanica","bfoliage2",1.2185
-"DBH","CA-NS, CA-ON, CA-QC","ACER.RUB","Sapindaceae","Acer","rubra","bwood1",0.1014
-"DBH","CA-NS, CA-ON, CA-QC","ACER.RUB","Sapindaceae","Acer","rubra","bwood2",2.3448
-"DBH","CA-NS, CA-ON, CA-QC","ACER.RUB","Sapindaceae","Acer","rubra","bbark1",0.0291
-"DBH","CA-NS, CA-ON, CA-QC","ACER.RUB","Sapindaceae","Acer","rubra","bbark2",2.0893
-"DBH","CA-NS, CA-ON, CA-QC","ACER.RUB","Sapindaceae","Acer","rubra","bbranches1",0.0175
-"DBH","CA-NS, CA-ON, CA-QC","ACER.RUB","Sapindaceae","Acer","rubra","bbranches2",2.4846
-"DBH","CA-NS, CA-ON, CA-QC","ACER.RUB","Sapindaceae","Acer","rubra","bfoliage1",0.0515
-"DBH","CA-NS, CA-ON, CA-QC","ACER.RUB","Sapindaceae","Acer","rubra","bfoliage2",1.1598
+"DBH","CA-NS, CA-ON, CA-QC","ACER.RUB","Sapindaceae","Acer","rubrum","bwood1",0.1014
+"DBH","CA-NS, CA-ON, CA-QC","ACER.RUB","Sapindaceae","Acer","rubrum","bwood2",2.3448
+"DBH","CA-NS, CA-ON, CA-QC","ACER.RUB","Sapindaceae","Acer","rubrum","bbark1",0.0291
+"DBH","CA-NS, CA-ON, CA-QC","ACER.RUB","Sapindaceae","Acer","rubrum","bbark2",2.0893
+"DBH","CA-NS, CA-ON, CA-QC","ACER.RUB","Sapindaceae","Acer","rubrum","bbranches1",0.0175
+"DBH","CA-NS, CA-ON, CA-QC","ACER.RUB","Sapindaceae","Acer","rubrum","bbranches2",2.4846
+"DBH","CA-NS, CA-ON, CA-QC","ACER.RUB","Sapindaceae","Acer","rubrum","bfoliage1",0.0515
+"DBH","CA-NS, CA-ON, CA-QC","ACER.RUB","Sapindaceae","Acer","rubrum","bfoliage2",1.1598
 "DBH","CA-ON","QUER.RUB","Fagaceae","Quercus","rubra","bwood1",0.1754
 "DBH","CA-ON","QUER.RUB","Fagaceae","Quercus","rubra","bwood2",2.1616
 "DBH","CA-ON","QUER.RUB","Fagaceae","Quercus","rubra","bbark1",0.0381
@@ -515,18 +515,18 @@
 "DBHHT","CA-ON","FRAX.PEN","Oleaceae","Fraxinus","pennsylvanica","bfoliage1",0.0761
 "DBHHT","CA-ON","FRAX.PEN","Oleaceae","Fraxinus","pennsylvanica","bfoliage2",1.3077
 "DBHHT","CA-ON","FRAX.PEN","Oleaceae","Fraxinus","pennsylvanica","bfoliage3",0
-"DBHHT","CA-NS, CA-ON, CA-QC","ACER.RUB","Sapindaceae","Acer","rubra","bwood1",0.0315
-"DBHHT","CA-NS, CA-ON, CA-QC","ACER.RUB","Sapindaceae","Acer","rubra","bwood2",2.0342
-"DBHHT","CA-NS, CA-ON, CA-QC","ACER.RUB","Sapindaceae","Acer","rubra","bwood3",0.7485
-"DBHHT","CA-NS, CA-ON, CA-QC","ACER.RUB","Sapindaceae","Acer","rubra","bbark1",0.0283
-"DBHHT","CA-NS, CA-ON, CA-QC","ACER.RUB","Sapindaceae","Acer","rubra","bbark2",2.0907
-"DBHHT","CA-NS, CA-ON, CA-QC","ACER.RUB","Sapindaceae","Acer","rubra","bbark3",0
-"DBHHT","CA-NS, CA-ON, CA-QC","ACER.RUB","Sapindaceae","Acer","rubra","bbranches1",0.0225
-"DBHHT","CA-NS, CA-ON, CA-QC","ACER.RUB","Sapindaceae","Acer","rubra","bbranches2",2.4106
-"DBHHT","CA-NS, CA-ON, CA-QC","ACER.RUB","Sapindaceae","Acer","rubra","bbranches3",0
-"DBHHT","CA-NS, CA-ON, CA-QC","ACER.RUB","Sapindaceae","Acer","rubra","bfoliage1",0.0571
-"DBHHT","CA-NS, CA-ON, CA-QC","ACER.RUB","Sapindaceae","Acer","rubra","bfoliage2",1.4898
-"DBHHT","CA-NS, CA-ON, CA-QC","ACER.RUB","Sapindaceae","Acer","rubra","bfoliage3",0
+"DBHHT","CA-NS, CA-ON, CA-QC","ACER.RUB","Sapindaceae","Acer","rubrum","bwood1",0.0315
+"DBHHT","CA-NS, CA-ON, CA-QC","ACER.RUB","Sapindaceae","Acer","rubrum","bwood2",2.0342
+"DBHHT","CA-NS, CA-ON, CA-QC","ACER.RUB","Sapindaceae","Acer","rubrum","bwood3",0.7485
+"DBHHT","CA-NS, CA-ON, CA-QC","ACER.RUB","Sapindaceae","Acer","rubrum","bbark1",0.0283
+"DBHHT","CA-NS, CA-ON, CA-QC","ACER.RUB","Sapindaceae","Acer","rubrum","bbark2",2.0907
+"DBHHT","CA-NS, CA-ON, CA-QC","ACER.RUB","Sapindaceae","Acer","rubrum","bbark3",0
+"DBHHT","CA-NS, CA-ON, CA-QC","ACER.RUB","Sapindaceae","Acer","rubrum","bbranches1",0.0225
+"DBHHT","CA-NS, CA-ON, CA-QC","ACER.RUB","Sapindaceae","Acer","rubrum","bbranches2",2.4106
+"DBHHT","CA-NS, CA-ON, CA-QC","ACER.RUB","Sapindaceae","Acer","rubrum","bbranches3",0
+"DBHHT","CA-NS, CA-ON, CA-QC","ACER.RUB","Sapindaceae","Acer","rubrum","bfoliage1",0.0571
+"DBHHT","CA-NS, CA-ON, CA-QC","ACER.RUB","Sapindaceae","Acer","rubrum","bfoliage2",1.4898
+"DBHHT","CA-NS, CA-ON, CA-QC","ACER.RUB","Sapindaceae","Acer","rubrum","bfoliage3",0
 "DBHHT","CA-ON","QUER.RUB","Fagaceae","Quercus","rubra","bwood1",0.0285
 "DBHHT","CA-ON","QUER.RUB","Fagaceae","Quercus","rubra","bwood2",1.8501
 "DBHHT","CA-ON","QUER.RUB","Fagaceae","Quercus","rubra","bwood3",1.0204
