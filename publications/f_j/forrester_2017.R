@@ -66,21 +66,21 @@ pred_fns <- list(
     )
   ),
   "8" = list(
-    fn = function(dsob, lp) {
-      exp(log(beta_0) + beta_1 * log(dsob) + beta_2 * lp) * cf
+    fn = function(dsob, hlp) {
+      exp(log(beta_0) + beta_1 * log(dsob) + beta_2 * hlp) * cf
     },
     covts = list(
       dsob = units::as_units("cm"),
-      lp = units::as_units("mm")
+      hlp = units::as_units("mm")
     )
   ),
   "9" = list(
-    fn = function(dsob, lt) {
-      exp(log(beta_0) + beta_1 * log(dsob) + beta_2 * lt) * cf
+    fn = function(dsob, tl) {
+      exp(log(beta_0) + beta_1 * log(dsob) + beta_2 * tl) * cf
     },
     covts = list(
       dsob = units::as_units("cm"),
-      lt = units::as_units("C")
+      tl = units::as_units("C")
     )
   ),
   "10" = list(
@@ -116,23 +116,23 @@ pred_fns <- list(
     )
   ),
   "13" = list(
-    fn = function(dsob, gs_s, lp) {
-      exp(log(beta_0) + beta_1 * log(dsob) + beta_2 * gs_s + beta_3 * lp) * cf
+    fn = function(dsob, gs_s, hlp) {
+      exp(log(beta_0) + beta_1 * log(dsob) + beta_2 * gs_s + beta_3 * hlp) * cf
     },
     covts = list(
       dsob = units::as_units("cm"),
       gs_s = units::as_units("m^2 * ha^-1"),
-      lp = units::as_units("mm")
+      hlp = units::as_units("mm")
     )
   ),
   "14" = list(
-    fn = function(dsob, gs_s, lt) {
-      exp(log(beta_0) + beta_1 * log(dsob) + beta_2 * gs_s + beta_3 * lt) * cf
+    fn = function(dsob, gs_s, tl) {
+      exp(log(beta_0) + beta_1 * log(dsob) + beta_2 * gs_s + beta_3 * tl) * cf
     },
     covts = list(
       dsob = units::as_units("cm"),
       gs_s = units::as_units("m^2 * ha^-1"),
-      lt = units::as_units("C")
+      tl = units::as_units("C")
     )
   ),
   "15" = list(
@@ -148,23 +148,23 @@ pred_fns <- list(
     )
   ),
   "16" = list(
-    fn = function(dsob, es, lp) {
-      exp(log(beta_0) + beta_1 * log(dsob) + beta_2 * log(es) + beta_3 * lp) * cf
+    fn = function(dsob, es, hlp) {
+      exp(log(beta_0) + beta_1 * log(dsob) + beta_2 * log(es) + beta_3 * hlp) * cf
     },
     covts = list(
       dsob = units::as_units("cm"),
       es =  units::as_units("ha^-1"),
-      lp = units::as_units("mm")
+      hlp = units::as_units("mm")
     )
   ),
   "17" = list(
-    fn = function(dsob, es, lt) {
-      exp(log(beta_0) + beta_1 * log(dsob) + beta_2 * log(es) + beta_3 * lt) * cf
+    fn = function(dsob, es, tl) {
+      exp(log(beta_0) + beta_1 * log(dsob) + beta_2 * log(es) + beta_3 * tl) * cf
     },
     covts = list(
       dsob = units::as_units("cm"),
       es =  units::as_units("ha^-1"),
-      lt = units::as_units("C")
+      tl = units::as_units("C")
     )
   ),
   "18" = list(
@@ -179,25 +179,25 @@ pred_fns <- list(
     )
   ),
   "19" = list(
-    fn = function(dsob, att, lp) {
-      exp(log(beta_0) + beta_1 * log(dsob) + beta_2 * log(att) + beta_3 * lp) *
+    fn = function(dsob, att, hlp) {
+      exp(log(beta_0) + beta_1 * log(dsob) + beta_2 * log(att) + beta_3 * hlp) *
         cf
     },
     covts = list(
       dsob = units::as_units("cm"),
       att = units::as_units("years"),
-      lp = units::as_units("mm")
+      hlp = units::as_units("mm")
     )
   ),
   "20" = list(
-    fn = function(dsob, att, lt) {
-      exp(log(beta_0) + beta_1 * log(dsob) + beta_2 * log(att) + beta_3 * lt) *
+    fn = function(dsob, att, tl) {
+      exp(log(beta_0) + beta_1 * log(dsob) + beta_2 * log(att) + beta_3 * tl) *
         cf
     },
     covts = list(
       dsob = units::as_units("cm"),
       att = units::as_units("years"),
-      lt = units::as_units("C")
+      tl = units::as_units("C")
     )
   ),
   "21" = list(
@@ -278,17 +278,14 @@ add_model_group <- function(params_group, key) {
       dplyr::select(-c("equation", "component", "proc_group", "species_group"))
   }
 
-
-
   if(nrow(params_group) == 1) {
     # Add a standalone model
     mod_params <- as.list(param_vals)
 
-
     if(proc_group == "taxa") {
       descriptors <- list(
         eq_no = eq_no,
-        taxa = agged_params$taxa
+        taxa = agged_params$taxa[[1]]
       )
     } else if (proc_group == "nontaxa") {
       descriptors <- list(
