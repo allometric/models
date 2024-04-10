@@ -15,14 +15,15 @@ hstix50 <- FixedEffectsModel(
     "hstix50" = units::as_units("ft")
   ),
   covariates = list(
-    "atb" = units::as_units("year")
+    "atb" = units::as_units("year"),
+    "hst" = units::as_units("ft")
   ),
   parameters = c(
     a = 22.6,
     b = 0.014482,
     c = 0.001162
   ),
-  predict_fn = function(atb) {
+  predict_fn = function(atb, hst) {
     4.5 + a * exp((b - c * log(atb)) * (hst - 4.5))
   }
 )
