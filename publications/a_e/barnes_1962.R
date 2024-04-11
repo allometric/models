@@ -7,6 +7,17 @@ barnes_1962 <- Publication(
     number = 1273,
     year = 1962,
     institution = "Department of Agriculture, Forest Service"
+  ),
+  descriptors = list(
+    country = "US",
+    region = c("US-OR", "US-WA"),
+    taxa = Taxa(
+      Taxon(
+        family = "Pinaceae",
+        genus = "Tsuga",
+        species = "heterophylla"
+      )
+    )
   )
 )
 

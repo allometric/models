@@ -7,6 +7,17 @@ brickell_1966 <- Publication(
     volume = 42,
     year = 1966,
     institution = "US Department of Agriculture, Forest Service"
+  ),
+  descriptors = list(
+    country = "US",
+    region = c("US-ID", "US-MT", "US-WY", "US-CO", "US-UT"),
+    taxa = Taxa(
+      Taxon(
+        family = "Pinaceae",
+        genus = "Picea",
+        species = "engelmanii"
+      )
+    )
   )
 )
 
