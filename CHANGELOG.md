@@ -1,5 +1,22 @@
 # allometric/models changelog
 
+# [2.3.0](https://github.com/allometric/models/compare/v2.2.0...v2.3.0) (2024-04-13)
+
+
+### Bug Fixes
+
+* adjusting barnes_1962 prediction function ([437fed0](https://github.com/allometric/models/commit/437fed053a2405a94e0b8630f7576a4486fd9e8e))
+* removing model install run on PR, closes [#55](https://github.com/allometric/models/issues/55) ([e251928](https://github.com/allometric/models/commit/e2519283b7d4c5fc69fc0a2e00913c9ad2822ce2))
+* resolved issues in forrester_2017 variable names and taxa ([20989c0](https://github.com/allometric/models/commit/20989c0faa4e197907f1ff3e33905221651d3469))
+
+
+### Features
+
+* added cairns_2003, closes [#43](https://github.com/allometric/models/issues/43) ([dd4e412](https://github.com/allometric/models/commit/dd4e4128fc8fa6b9dfe2c8bcaa3e0eeb688b0a46))
+* adding barnes_1962 ([abbbc1b](https://github.com/allometric/models/commit/abbbc1b7c3c062d13fd8ed673ad235d0d425313f))
+* adding bricnkell_1966 ([d3aebd7](https://github.com/allometric/models/commit/d3aebd7e83b055ea7a951bf8e4dd1534c4cf9253))
+* adding forrester_2017, closes [#38](https://github.com/allometric/models/issues/38) ([62e8c8f](https://github.com/allometric/models/commit/62e8c8f1d8240f6cb2653d3c5673c49c4923c522))
+
 # [2.2.0](https://github.com/allometric/models/compare/v2.1.0...v2.2.0) (2023-12-28)
 
 
