@@ -35,12 +35,14 @@ jobs:
 
       - name: Install allometric, update mongodb.
         env:
-          MONGODB_URL: ${{secrets.MONGODB_URL}}
+          MONGODB_URL: ${{ secrets.MONGODB_URL }}
         run: |
           url <- Sys.getenv("MONGODB_URL")
           devtools::install("./allometric", reload = FALSE);
           library(allometric)
           library(mongolite)
+
+          print(url)
 
           model_con <- mongo("models", url = url)
 
