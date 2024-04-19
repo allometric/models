@@ -1,0 +1,5 @@
+response,zone,geographic_region,size_class,a,b,c
+br,1,North and High area of Mission,>= 5 cm,-4.53,5.65,-5.93
+br,2,Southern Misiones and Correntes NE,>= 5 cm,-4.37,5.65,-5.93
+br,1,North and High area of Mission,< 5 cm,-1.81,2.67,-1.09
+br,2,Southern Misiones and Correntes NE,< 5 cm,-1.71,2.67,-1.09
