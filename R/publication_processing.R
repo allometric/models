@@ -208,5 +208,5 @@ ingest_models <- function(verbose, pub_path = NULL, params_path = NULL) {
 
   order_cols <- c(out_order, not_in_order)
 
-  new_model_tbl(allometric_models[, order_cols])
+  allometric:::new_model_tbl(allometric_models[, order_cols])
 }

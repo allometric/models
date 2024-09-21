@@ -41,7 +41,7 @@ test_that("aggregate_pub_models runs", {
 test_that("ingest_models runs correctly with locally specified data", {
   pub_path <- system.file("testdata/test_publications", package = "models")
   params_path <- system.file("testdata/test_parameters", package = "models")
-  
+
   models_ingested <- ingest_models(
     FALSE, pub_path = pub_path, params_path = params_path
   )
