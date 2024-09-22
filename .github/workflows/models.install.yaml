@@ -2,9 +2,9 @@ name: model-install
 
 on:
   push:
-    branches: [ migrate_processing ]
+    branches: [ main ]
   pull_request:
-    branches: migrate_processing
+    branches: main
 
 jobs:
   build:
@@ -31,7 +31,7 @@ jobs:
 
       - name: Clone allometric/allometric.
         run: |
-          git clone --branch migrate_processing https://github.com/allometric/allometric.git
+          git clone https://github.com/allometric/allometric.git
 
       - name: Install allometric, generate the models.RDS file.
         run: |
