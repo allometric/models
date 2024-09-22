@@ -1,5 +1,27 @@
 # allometric/models changelog
 
+# [3.0.0](https://github.com/allometric/models/compare/v2.3.0...v3.0.0) (2024-09-22)
+
+
+### Bug Fixes
+
+* fixed pull request trigger on yaml ([52cd897](https://github.com/allometric/models/commit/52cd89733c8db997cd919bd7f240e6206921d5f4))
+
+
+* Updating models.RDS ([33a3031](https://github.com/allometric/models/commit/33a303113ce0afb4c117d0fa9bce510ef9290fcc))
+
+
+### Features
+
+* adding sharma_2015, updates [#61](https://github.com/allometric/models/issues/61) ([0282af3](https://github.com/allometric/models/commit/0282af3c2dd34a959fcb2d24e7a27f49a85eaf20))
+* adding winck_2015, closes [#57](https://github.com/allometric/models/issues/57) ([4e19f7e](https://github.com/allometric/models/commit/4e19f7e8d5a83ecd04ef0853fffe3718e0501a6e))
+
+
+### BREAKING CHANGES
+
+* Migrating publication processing from allometric into
+models
+
 # [2.3.0](https://github.com/allometric/models/compare/v2.2.0...v2.3.0) (2024-04-13)
 
 
