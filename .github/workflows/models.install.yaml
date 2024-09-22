@@ -3,7 +3,7 @@ name: model-install
 on:
   push:
     branches: [ migrate_processing ]
-  pull-request:
+  pull_request:
     branches: migrate_processing
 
 jobs:
