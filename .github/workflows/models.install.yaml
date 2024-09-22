@@ -3,6 +3,8 @@ name: model-install
 on:
   push:
     branches: [ main ]
+  pull_request:
+    branches: main
 
 jobs:
   build:
@@ -35,6 +37,7 @@ jobs:
         run: |
           devtools::install("./allometric", reload = FALSE);
           library(allometric)
+          devtools::load_all(".")
           models <- ingest_models(FALSE, pub_path = "./publications", params_path = "./parameters");
           warnings();
           saveRDS(models, "./models.RDS")
