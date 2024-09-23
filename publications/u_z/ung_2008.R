@@ -29,7 +29,6 @@ taxa_key <- b_params %>%
   dplyr::filter(dplyr::row_number() == 1)
 
 b_params <- b_params %>%
-  dplyr::mutate(na_genus = purrr::map_lgl(taxa, ~ "NA" %in% .)) %>%
   dplyr::select(-c(taxa))
 
 dia_b_params <- b_params %>% dplyr::filter(model == "DBH")
@@ -90,9 +89,9 @@ construct_ung_set <- function(category, b_params, b_params_names,
   parameter_names <- b_params_names[grepl(category, b_params_names, fixed=T)]
 
   if(!na_genus) {
-    b_params <- b_params %>% dplyr::filter(na_genus != "NA")
+    b_params <- b_params %>% dplyr::filter(!na_genus)
   } else {
-    b_params <- b_params %>% dplyr::filter(na_genus == "NA")
+    b_params <- b_params %>% dplyr::filter(na_genus)
   }
 
   if(!na_genus) {

@@ -55,7 +55,7 @@ hstix50_wf <- FixedEffectsModel(
 )
 
 hstix50_gf <- hstix50_wf
-descriptors(hstix50_gf) <- tibble::tibble(
+allometric:::descriptors(hstix50_gf) <- tibble::tibble(
   taxa = list(
     Taxa(
       Taxon(family = "Pinaceae", genus = "Abies", species = "grandis")
