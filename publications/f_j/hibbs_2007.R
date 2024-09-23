@@ -1,7 +1,7 @@
 hibbs_2007 <- Publication(
   citation = RefManageR::BibEntry(
     bibtype = "article",
-    key = "hibbs_2011",
+    key = "hibbs_2007",
     title = "Stem taper and volume of managed red alder",
     author = "Hibbs, David and Bluhm, Andrew and Garber, Sean",
     journal = "Western Journal of Applied Forestry",
