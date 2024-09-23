@@ -22,7 +22,6 @@ for (b_param_name in b_param_names) {
   response[[b_param_name]] <- units::as_units("kg")
   covariates <- list(dsob = units::as_units("cm"))
 
-
   # Nest the regions
   model_spec <- b_params %>%
     dplyr::filter(allo_var == b_param_name) %>%
@@ -50,7 +49,6 @@ for (b_param_name in b_param_names) {
 # Branch biomass
 bb_params <- load_parameter_frame("bb_montero_2005")
 
-#
 bb_spec <- bb_params %>%
   dplyr::select(-name) %>%
   dplyr::group_by(family, genus, species, branch_size, a, b, cf) %>%
@@ -58,9 +56,10 @@ bb_spec <- bb_params %>%
   dplyr::ungroup() %>%
   aggregate_taxa()
 
+
 bb_set <- FixedEffectsSet(
   response = list(bb = units::as_units("kg")),
-  covariates = covariates,
+  covariates = list(dsob = units::as_units("cm")),
   parameter_names = c("a", "b", "cf"),
   predict_fn = function(dsob) {
     cf * exp(a) * dsob^b
