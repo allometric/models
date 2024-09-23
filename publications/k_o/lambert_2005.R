@@ -26,7 +26,6 @@ taxa_key <- b_params %>%
   dplyr::filter(dplyr::row_number() == 1)
 
 b_params <- b_params %>%
-  dplyr::mutate(na_genus = purrr::map_lgl(taxa, ~ "NA" %in% .)) %>%
   dplyr::select(-c(taxa))
 
 dia_b_params <- b_params %>% dplyr::filter(model == "DBH")
