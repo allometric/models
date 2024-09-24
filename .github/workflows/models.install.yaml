@@ -36,9 +36,13 @@ jobs:
       - name: Install allometric, generate the models.RDS file.
         run: |
           devtools::install("./allometric", reload = FALSE);
-          library(allometric)
-          devtools::load_all(".")
-          upsert_models(FALSE, pub_path = "./publications", params_path = "./parameters");
+          library(allometric);
+          devtools::load_all(".");
+          url <- ${{ secrets.MONGODB_URL_DEV }};
+          model_con <- get_model_con(url);
+          pub_con <- get_pub_con(url);
+          update_con <- get_update_con_con(url);
+          update_db(pub_con, model_con, update_con, last_commit = "abbbc1b")
           warnings();
         shell: Rscript {0}
 
