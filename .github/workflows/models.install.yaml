@@ -33,12 +33,14 @@ jobs:
         run: |
           git clone https://github.com/allometric/allometric.git
 
-      - name: Install allometric, generate the models.RDS file.
+      - name: Update database
+        env:
+          MONGODB_URL_DEV: ${{secrets.MONGODB_URL_DEV}}
         run: |
           devtools::install("./allometric", reload = FALSE);
           library(allometric);
           devtools::load_all(".");
-          url <- ${{ secrets.MONGODB_URL_DEV }};
+          url <- Sys.getenv("MONGODB_URL_DEV");
           model_con <- get_model_con(url);
           pub_con <- get_pub_con(url);
           update_con <- get_update_con_con(url);
