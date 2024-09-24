@@ -6,12 +6,12 @@ parse_parameter_names <- function(filenames) {
 }
 
 get_modified_files <- function() {
+  # FIXME assumes one commit is pushed at a time...
   files <- system("git diff --name-only HEAD~1 HEAD", intern = TRUE)
 
   modified_via_params <- files[startsWith(files, "parameters")] |>
     basename() |>
     parse_parameter_names()
-
 
   modified_via_pubs <- files[startsWith(files, "publications")] |>
     basename() |>

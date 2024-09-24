@@ -2,9 +2,9 @@ name: model-install
 
 on:
   push:
-    branches: [ main ]
+    branches: [ mongo_upsert ]
   pull_request:
-    branches: main
+    branches: mongo_upsert
 
 jobs:
   build:
@@ -38,9 +38,8 @@ jobs:
           devtools::install("./allometric", reload = FALSE);
           library(allometric)
           devtools::load_all(".")
-          models <- ingest_models(FALSE, pub_path = "./publications", params_path = "./parameters");
+          upsert_models(FALSE, pub_path = "./publications", params_path = "./parameters");
           warnings();
-          saveRDS(models, "./models.RDS")
         shell: Rscript {0}
 
       - uses: stefanzweifel/git-auto-commit-action@v5

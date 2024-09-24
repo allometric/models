@@ -20,7 +20,30 @@ get_pub_file_specs <- function(pub_path) {
     pub_names <- c(pub_names, names)
   }
 
-  list(pub_paths = pub_paths, pub_names = pub_names)
+  pub_ids <- tools::file_path_sans_ext(pub_names)
+
+  data.frame(pub_paths = pub_paths, pub_names = pub_names, pub_id = pub_ids)
+}
+
+#' Get the currently stored publication file IDs from the publications directory
+get_current_pub_ids <- function() {
+  pub_path <- system.file("publications", package = "models")
+
+  file_names <- basename(list.files(pub_path, recursive = TRUE))
+  r_names <- file_names[endsWith(file_names, ".R")]
+
+  tools::file_path_sans_ext(r_names)
+}
+
+#' Get the currently stored publication file IDs from the parameters directory
+get_current_pub_ids_params <- function() {
+  params_path <- system.file("parameters", package = "models")
+  filenames <- list.files(params_path)
+
+  pattern <- "(?:.*_)?([a-zA-Z]+)_(\\d{4}[a-zA-Z]?)(?:_.*)?\\.csv"
+  matches <- stringr::str_match(filenames, pattern)
+
+  unique(paste0(matches[,2], "_", matches[,3]))
 }
 
 #' Hashes a function string
@@ -125,7 +148,7 @@ aggregate_pub_models <- function(pub) {
 #' @param params_path An optional path to a parameters directory, by
 #' default the internally stored set of parameter files is used.
 #' @export
-map_publications <- function(verbose, func, pub_path = NULL, params_path = NULL) {
+map_publications <- function(verbose, func, pub_path = NULL, params_path = NULL, subset_ids = NULL) {
   if(is.null(pub_path)) {
     pub_path <- system.file("models-main/publications", package = "allometric")
   }
@@ -135,6 +158,10 @@ map_publications <- function(verbose, func, pub_path = NULL, params_path = NULL)
   }
 
   pub_specs <- get_pub_file_specs(pub_path)
+
+  if(!is.null(subset_ids)) {
+    pub_specs <- pub_specs |> dplyr::filter(pub_id %in% subset_ids)
+  }
 
   n_pubs <- length(pub_specs$pub_paths)
 
@@ -153,31 +180,21 @@ map_publications <- function(verbose, func, pub_path = NULL, params_path = NULL)
     pub_r_file <- pub_specs$pub_names[[i]]
     pub_name <- tools::file_path_sans_ext(pub_r_file)
 
-    tryCatch({
-      source(pub_r_path, local = pub_env)
-      pub <- get(pub_name, envir = pub_env)
-      output[[pub_name]] <- func(pub)
-    }, error = function(e) {
-      warning(
-        paste(
-          "Publication file",
-          pub_name,
-          "encountered an error during execution:",
-          e
-        )
-      )
-    })
-
     if (verbose) {
-      pb$tick(tokens = list(pub_id = pub_name))
+      print(paste("Processing pub file:", pub_name))
     }
+
+    source(pub_r_path, local = pub_env)
+    pub <- get(pub_name, envir = pub_env)
+    output[[pub_name]] <- func(pub)
+
 
     # Remove pub_env from memory
     rm("pub_env")
   }
 
   # reset the param search path
-  if(!is.null(params_path)) {
+  if (!is.null(params_path)) {
     set_params_path("pacakge")
   }
 
