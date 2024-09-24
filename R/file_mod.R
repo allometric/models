@@ -2,12 +2,16 @@ parse_parameter_names <- function(filenames) {
   pattern <- "(?:.*_)?([a-zA-Z]+)_(\\d{4}[a-zA-Z]?)(?:_.*)?\\.csv"
   matches <- stringr::str_match(filenames, pattern)
 
-  unique(paste0(matches[,2], "_", matches[,3]))
+  if(nrow(matches) == 0) {
+    return(NULL)
+  } else {
+    return(unique(paste0(matches[,2], "_", matches[,3])))
+  }
 }
 
-get_modified_files <- function() {
-  # FIXME assumes one commit is pushed at a time...
-  files <- system("git diff --name-only HEAD~1 HEAD", intern = TRUE)
+get_modified_files <- function(last_commit) {
+  sys_string <- paste0("git diff --name-only ", last_commit, " HEAD")
+  files <- system(sys_string, intern = TRUE)
 
   modified_via_params <- files[startsWith(files, "parameters")] |>
     basename() |>
@@ -17,5 +21,6 @@ get_modified_files <- function() {
     basename() |>
     tools::file_path_sans_ext()
 
-  unique(c(modified_via_params, modified_via_pubs))
+  unique_files <- unique(c(modified_via_params, modified_via_pubs))
+  return(unique_files)
 }
