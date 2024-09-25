@@ -1,16 +1,28 @@
 # models
 
-This repository stores allometric models used in the R package
-[`allometric`](https://github.com/allometric). Because there are thousands of
-allometric models in existence, a separate repository is needed to store and
-track their development. This repository is used for this purpose. We treat
-`models` as a data repository, and not as an R package.
+This repository stores allometric models used in
+[`allometric`](https://github.com/allometric), which is a family of software
+packages that makes allometric models used in forest monitoring more transparent
+and readily availale to end users. Because there are thousands of allometric
+models in existence, a separate repository is needed to store and track their
+development. This repository is used for this purpose.
 
-Users interested in *contributing* models to `allometric` are in the right 
-location.
+In addition to storing R representations of models, `models` implements
+infrastructure that converts the R representation into JSON, which is
+subsequently stored in a backend Mongo database, which powers our API
+(forthcoming) and our interactive web application (forthcoming).
 
-Users interested in *using* allometric models for analysis, please
-refer to the `allometric` package.
+In a sense `models` is the most upstream part of `allometric`:
+
+```
+models -> mongo database -> API -> allometric R package
+                                -> interactive web application
+                                -> other apps
+```
+
+Thus, changes made in `models` eventually propagates to all other products.
+This allows for rapid fixing and delivery of bugs and quality assurance
+improvements.
 
 # How Can I Help?
 
