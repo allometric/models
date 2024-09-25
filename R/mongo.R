@@ -90,7 +90,7 @@ get_last_update_commit <- function(update_con) {
   if (nrow(res) == 0) { # The collection is empty
     return(NULL)
   } else {
-    commit_id <- substr(res$commit_id, 1, 7)
+    commit_id <- substr(res$commit_id[[1]], 1, 7)
     return(commit_id)
   }
 }
