@@ -19,6 +19,7 @@ jobs:
     steps:
       - name: Get runner IP
         run: echo "RUNNER_IP=$(curl ifconfig.me)" >> $GITHUB_ENV
+        shell: bash
 
       - name: Whitelist IP
         env:
@@ -34,8 +35,8 @@ jobs:
               "ipAddress": "'$RUNNER_IP'/32",
               "comment": "Added via GitHub db-update action"
             }
-          ]
-          '
+          ]'
+        shell: bash
 
       - uses: actions/checkout@v3
         with:
