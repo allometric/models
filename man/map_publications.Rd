@@ -4,7 +4,13 @@
 \alias{map_publications}
 \title{Iteratively process publication files}
 \usage{
-map_publications(verbose, func, pub_path = NULL, params_path = NULL)
+map_publications(
+  verbose,
+  func,
+  pub_path = NULL,
+  params_path = NULL,
+  subset_ids = NULL
+)
 }
 \arguments{
 \item{verbose}{Whether or not to print verbose messages to console}

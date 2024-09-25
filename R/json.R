@@ -1,3 +1,7 @@
+#' Convert citation authors to JSON
+#'
+#' @param authors A list of Person objects
+#' @return A list containing each author, with `given` and `family` name fields
 authors_to_json <- function(authors) {
   out <- list()
 
@@ -13,6 +17,11 @@ authors_to_json <- function(authors) {
   out
 }
 
+#' Convert citation to JSON
+#'
+#' @param citation The citation of a publication, as a `RefManageR::BibEntry`
+#'  object
+#' @return A JSON representation of the citation
 citation_to_json <- function(citation) {
   # Prepare output list with required fields
   unclassed_citation <- attributes(unclass(citation)[[1]])
@@ -47,6 +56,11 @@ citation_to_json <- function(citation) {
   required
 }
 
+#' Convert variables to JSON
+#'
+#' @param variables A list containing variables, via `response` or `covariates`
+#'  slots of a model
+#' @return A list of parsed variables
 variables_to_json <- function(variables) {
   variable_names <- names(variables)
   out <- list()
@@ -61,6 +75,10 @@ variables_to_json <- function(variables) {
   out
 }
 
+#' Unbox the elements of a nested list
+#'
+#' @param object A nested list
+#' @return A list with nested elements unboxed
 unbox_nested <- function(object) {
   for(i in 1:length(object)) {
     for(j in 1:length(object[[i]])) {
@@ -70,6 +88,10 @@ unbox_nested <- function(object) {
   object
 }
 
+#' Unbox the elements of a list
+#'
+#' @param object A nonnested list
+#' @return A list with each element unboxed
 unbox_nonnested <- function(object) {
   for(i in 1:length(object)) {
     object[[i]] <- jsonlite::unbox(object[[i]])
@@ -78,6 +100,10 @@ unbox_nonnested <- function(object) {
   object
 }
 
+#' Convert a taxa object to JSON
+#'
+#' @param taxa An `allometric::Taxa()` object
+#' @return A list of taxons in list format
 taxa_to_json <- function(taxa) {
   out <- list()
 
@@ -94,6 +120,10 @@ taxa_to_json <- function(taxa) {
   out
 }
 
+#' Convert descriptors to JSON
+#' 
+#' @param descriptors A list containing descriptors
+#' @return A list containing descriptors converted to JSON format
 descriptors_to_json <- function(descriptors) {
   descriptors_list <- as.list(descriptors)
   if(length(descriptors_list) == 0) {
@@ -114,6 +144,10 @@ descriptors_to_json <- function(descriptors) {
   descriptors_list
 }
 
+#' Generate an inline citation
+#'
+#' @param citation A `RefManageR::BibEntry` object
+#' @return A string containing the inline citation
 prepare_inline_citation <- function(citation) {
   n_authors <- length(citation$author)
 
@@ -147,6 +181,10 @@ prepare_inline_citation <- function(citation) {
   out
 }
 
+#' Parse a function into a string
+#'
+#' @param func_body The body of a function
+#' @return A string representation of the function
 parse_func_body <- function(func_body) {
   body_list <- as.list(body(func_body))[-1]
   body_characters <- c()
@@ -162,6 +200,10 @@ parse_func_body <- function(func_body) {
   body_characters
 }
 
+#' Convert covariate definitions to JSON
+#'
+#' @param covt_def_data A list of covariate definitions
+#' @return A list of covariate definitions parsable to JSON
 covariate_definitions_to_json <- function(covt_def_data) {
   if(length(covt_def_data) == 0) {
     return(list())
@@ -181,6 +223,10 @@ covariate_definitions_to_json <- function(covt_def_data) {
   }
 }
 
+#' Convert model to JSON
+#'
+#' @param model A model object, i.e., `allometric::FixedEffectsModel()`
+#' @return A list containing a parsable form of the model object
 model_to_json <- function(model) {
   proxy_id <- get_model_hash(
     model@predict_fn_populated, model@descriptors
