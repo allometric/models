@@ -17,6 +17,28 @@ jobs:
       contents: write
 
     steps:
+      - name: Get runner IP
+        run: echo "RUNNER_IP=$(curl ifconfig.me)" >> $GITHUB_ENV
+
+      - name: Whitelist IP
+        env:
+          MONGO_API_PUBLIC: ${{secrets.MONGO_API_PUBLIC}}
+          MONGO_API_PRIVATE: ${{secrets.MONGO_API_PRIVATE}}
+          MONGODB_PROJECT_ID: ${{secrets.MONGODB_PROJECT_ID}}
+        run: |
+          curl --location "https://cloud.mongodb.com/api/atlas/v1.0/groups/$MONGODB_PROJECT_ID/accessList" \
+          --digest -u "$MONGO_API_PUBLIC:$MONGO_API_PRIVATE"
+          --header "Content-Type: application/json"
+          --data "[
+            {
+              "ipAddress": "'$IP_ADDRESS'/32",
+              "comment": "Added via GitHub db-update action"
+            }
+          ]
+          "
+
+
+
       - uses: actions/checkout@v3
         with:
           fetch-depth: 0
