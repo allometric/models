@@ -24,6 +24,12 @@ jobs:
           extra-packages: any::covr
           needs: coverage
 
+      - name: Install allometric
+        run: |
+          install.packages('remotes')
+          remotes::install_github("allometric/allometric")
+        shell: Rscript{0}
+
       - name: Test coverage
         run: |
           covr::codecov(
