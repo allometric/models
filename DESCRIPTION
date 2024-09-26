@@ -10,7 +10,8 @@ Encoding: UTF-8
 Imports:
     devtools,
     magrittr,
-    mongolite
+    mongolite,
+    dplyr
 Remotes:
     allometric/allometric
 Depends: 
