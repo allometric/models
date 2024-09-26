@@ -11,7 +11,8 @@ Imports:
     devtools,
     magrittr,
     mongolite,
-    dplyr
+    dplyr,
+    units
 Remotes:
     allometric/allometric
 Depends: 
