@@ -165,12 +165,6 @@ map_publications <- function(verbose, func, pub_path = NULL, params_path = NULL,
 
   n_pubs <- length(pub_specs$pub_paths)
 
-  pb <- progress::progress_bar$new(
-    format = "Running publication file: :pub_id [:bar] :percent",
-    total = n_pubs,
-    width = 75
-  )
-
   output <- list()
 
   for (i in 1:n_pubs) {
