@@ -37,7 +37,7 @@ load_parameter_frame <- function(name) {
 #' @export
 set_params_path <- function(params_path) {
   params_path <- list(params_path = params_path)
-  rds_path <- file.path(system.file("extdata", package = "allometric"), "params_path.RDS")
+  rds_path <- file.path(system.file("extdata", package = "models"), "params_path.RDS")
   saveRDS(params_path, rds_path)
 }
 
@@ -46,7 +46,7 @@ set_params_path <- function(params_path) {
 #' @return A string containing the currently set parameter search path
 #' @export
 get_params_path <- function() {
-  rds_path <- file.path(system.file("extdata", package = "allometric"), "params_path.RDS")
+  rds_path <- file.path(system.file("extdata", package = "models"), "params_path.RDS")
   rds <- readRDS(rds_path)
   rds$params_path
 }
