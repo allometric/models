@@ -71,3 +71,31 @@ test_that("append_search_descriptors creates a valid tibble row", {
 
   expect_equal(row, test_row)
 })
+
+test_that("get_current_pub_ids returns valid publication ids", {
+  current_pub_ids <- get_current_pub_ids()
+  underscore_check <- grepl("_", current_pub_ids)
+
+  # All pub_ids contain an underscore
+  expect_true(all(underscore_check))
+
+  # All pub_ids contain a 4 digit string
+  all(grepl("\\d{4}", current_pub_ids))
+
+  # All pub_ids contain only characters before the year
+  all(grepl("^[a-zA-Z]+_\\d{4}[a-zA-Z]?$", current_pub_ids))
+})
+
+test_that("get_current_pub_ids_params returns valid publication ids", {
+  current_pub_ids <- get_current_pub_ids_params()
+  underscore_check <- grepl("_", current_pub_ids)
+
+  # All pub_ids contain an underscore
+  expect_true(all(underscore_check))
+
+  # All pub_ids contain a 4 digit string
+  all(grepl("\\d{4}", current_pub_ids))
+
+  # All pub_ids contain only characters before the year
+  all(grepl("^[a-zA-Z]+_\\d{4}[a-zA-Z]?$", current_pub_ids))
+})
