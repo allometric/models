@@ -18,7 +18,9 @@ Remotes:
 Depends: 
     R (>= 2.10)
 Suggests: 
-    testthat (>= 3.0.0)
+    testthat (>= 3.0.0),
+    covr,
+    RefManageR
 Config/testthat/edition: 3
 LazyData: true
 BugReports: https://github.com/allometric/models/issues
