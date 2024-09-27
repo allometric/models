@@ -8,6 +8,8 @@ parse_parameter_names <- function(filenames) {
 
   if(nrow(matches) == 0) {
     return(NULL)
+  } else if(length(filenames) == 1 && filenames[[1]] == "") { 
+    return(NULL)
   } else {
     return(unique(paste0(matches[,2], "_", matches[,3])))
   }
@@ -16,8 +18,10 @@ parse_parameter_names <- function(filenames) {
 #' Get publication IDs modified since a specified commit
 #'
 #' @param last_commit The commit ID to check to
-get_modified_files <- function(last_commit) {
-  sys_string <- paste0("git diff --name-only ", last_commit, " HEAD")
+get_modified_files <- function(last_commit, end_commit = "HEAD") {
+  end_commit <- paste0(" ", end_commit)
+
+  sys_string <- paste0("git diff --name-only ", last_commit, end_commit)
   files <- system(sys_string, intern = TRUE)
 
   modified_via_params <- files[startsWith(files, "parameters")] |>
