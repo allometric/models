@@ -102,22 +102,14 @@ test_that("descriptors_to_json returns correct value", {
     descriptors_to_json(descriptors_null)
   ))
 
-  descriptors_taxa <- list(
-    taxa = allometric::Taxa(
-      allometric::Taxon(
-        family = "Pinaceae",
-        genus = "Pinus",
-        species = "ponderosa"
-      )
-    )
-  )
+  descriptors_with_taxa <- allometric::brackett_acer@descriptors
 
-  parsed_taxa <- descriptors_to_json(descriptors_taxa)
+  parsed_taxa <- descriptors_to_json(descriptors_with_taxa)["taxa"]
 
   expect_equal(names(parsed_taxa)[[1]], "taxa")
-  expect_equal(parsed_taxa[[1]][[1]][["family"]], "Pinaceae")
-  expect_equal(parsed_taxa[[1]][[1]][["genus"]], "Pinus")
-  expect_equal(parsed_taxa[[1]][[1]][["species"]], "ponderosa")
+  expect_equal(parsed_taxa[[1]][[1]][["family"]], "Aceraceae")
+  expect_equal(parsed_taxa[[1]][[1]][["genus"]], "Acer")
+  expect_true(is.na(parsed_taxa[[1]][[1]][["species"]]))
 })
 
 test_that("prepare_inline_ciation returns correct value", {
@@ -177,4 +169,29 @@ test_that("covariate_definitions_to_json returns correct value", {
     parsed[[1]][["definition"]],
     jsonlite::unbox("the total height of the tree but different")
   )
+})
+
+test_that("model_to_json runs", {
+  parsed <- model_to_json(allometric::brackett_acer)
+
+  field_names <- names(parsed)
+  all_check <- all(
+    field_names %in% c(
+      "_id", "pub_id", "model_type", "model_class", "response", "covariates",
+      "descriptors", "parameters", "predict_fn_body"
+    )
+  )
+
+  expect_true(all_check)
+})
+
+test_that("publication_to_json_runs", {
+  pub_file <- system.file("testdata/test_publications/a_e/barrett_1978.R", package = "models")
+  source(pub_file)
+
+  parsed <- publication_to_json(barrett_1978)
+
+  names(parsed) == c("pub_json", "models_json")
+
+  expect_equal(parsed$models_json[[1]][["model_type"]], jsonlite::unbox("site index"))
 })

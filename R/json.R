@@ -126,12 +126,17 @@ taxa_to_json <- function(taxa) {
 #' @return A list containing descriptors converted to JSON format
 descriptors_to_json <- function(descriptors) {
   descriptors_list <- as.list(descriptors)
+  descriptors_names <- names(descriptors_list)
+
   if(length(descriptors_list) == 0) {
     return(NULL) # A null value will be encoded as an empty object in JSON
   } else {
-    for(i in 1:length(descriptors_list)) {
-      if (inherits(descriptors_list[[i]], "Taxa")) {
-        descriptors_list[[i]] <- taxa_to_json(descriptors_list[[i]])
+    for(i in seq_along(descriptors_list)) {
+      descriptor <- descriptors_list[[i]]
+      descriptor_name <- descriptors_names[[i]]
+
+      if (descriptor_name == "taxa") {
+        descriptors_list[[i]] <- taxa_to_json(descriptor[[1]])
       } else if(typeof(descriptors_list[[i]]) == "list")  {
         descriptors_list[[i]] <- unlist(descriptors_list[[i]])
       } else if(is.na(descriptors_list[[i]])) {
