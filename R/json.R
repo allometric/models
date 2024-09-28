@@ -121,7 +121,7 @@ taxa_to_json <- function(taxa) {
 }
 
 #' Convert descriptors to JSON
-#' 
+#'
 #' @param descriptors A list containing descriptors
 #' @return A list containing descriptors converted to JSON format
 descriptors_to_json <- function(descriptors) {
@@ -130,10 +130,9 @@ descriptors_to_json <- function(descriptors) {
     return(NULL) # A null value will be encoded as an empty object in JSON
   } else {
     for(i in 1:length(descriptors_list)) {
-      if (inherits(descriptors_list[[i]][[1]], "Taxa")) {
-        descriptors_list[[i]] <- taxa_to_json(descriptors_list[[i]][[1]])
-      }
-      else if(typeof(descriptors_list[[i]]) == "list")  {
+      if (inherits(descriptors_list[[i]], "Taxa")) {
+        descriptors_list[[i]] <- taxa_to_json(descriptors_list[[i]])
+      } else if(typeof(descriptors_list[[i]]) == "list")  {
         descriptors_list[[i]] <- unlist(descriptors_list[[i]])
       } else if(is.na(descriptors_list[[i]])) {
         descriptors_list[[i]] <- list()
@@ -183,10 +182,10 @@ prepare_inline_citation <- function(citation) {
 
 #' Parse a function into a string
 #'
-#' @param func_body The body of a function
+#' @param func A function
 #' @return A string representation of the function
-parse_func_body <- function(func_body) {
-  body_list <- as.list(body(func_body))[-1]
+parse_func_body <- function(func) {
+  body_list <- as.list(body(func))[-1]
   body_characters <- c()
 
   for(i in 1:length(body_list)) {
