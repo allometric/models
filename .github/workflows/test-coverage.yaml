@@ -13,6 +13,27 @@ jobs:
       GITHUB_PAT: ${{ secrets.GITHUB_TOKEN }}
 
     steps:
+      - name: Get runner IP
+        run: echo "RUNNER_IP=$(curl ifconfig.me)" >> $GITHUB_ENV
+        shell: bash
+
+      - name: Whitelist IP
+        env:
+          MONGO_API_PUBLIC: ${{secrets.MONGO_API_PUBLIC}}
+          MONGO_API_PRIVATE: ${{secrets.MONGO_API_PRIVATE}}
+          MONGODB_PROJECT_ID: ${{secrets.MONGODB_PROJECT_ID}}
+        run: |
+          curl --location "https://cloud.mongodb.com/api/atlas/v1.0/groups/$MONGODB_PROJECT_ID/accessList" \
+          --digest -u "$MONGO_API_PUBLIC:$MONGO_API_PRIVATE" \
+          --header "Content-Type: application/json" \
+          --data '[
+            {
+              "ipAddress": "'$RUNNER_IP'/32",
+              "comment": "Added via GitHub db-update action"
+            }
+          ]'
+        shell: bash
+
       - uses: actions/checkout@v3
 
       - uses: r-lib/actions/setup-r@v2
@@ -49,3 +70,14 @@ jobs:
         with:
           name: coverage-test-failures
           path: ${{ runner.temp }}/package
+
+      - name: Remove IP
+        env:
+          MONGO_API_PUBLIC: ${{secrets.MONGO_API_PUBLIC}}
+          MONGO_API_PRIVATE: ${{secrets.MONGO_API_PRIVATE}}
+          MONGODB_PROJECT_ID: ${{secrets.MONGODB_PROJECT_ID}}
+        run: |
+          curl --request DELETE \
+          --location "https://cloud.mongodb.com/api/atlas/v1.0/groups/$MONGODB_PROJECT_ID/accessList/${RUNNER_IP}%2F32" \
+          --digest -u "$MONGO_API_PUBLIC:$MONGO_API_PRIVATE"
+        shell: bash
