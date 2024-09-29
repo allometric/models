@@ -194,4 +194,6 @@ test_that("publication_to_json_runs", {
   names(parsed) == c("pub_json", "models_json")
 
   expect_equal(parsed$models_json[[1]][["model_type"]], jsonlite::unbox("site index"))
+
+  expect_true("taxa" %in% names(parsed$models_json[[1]][["descriptors"]]))
 })
