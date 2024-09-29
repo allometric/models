@@ -48,7 +48,7 @@ jobs:
       - name: Test coverage
         env:
           MONGODB_URL_DEV: ${{secrets.MONGODB_URL_DEV}}
-          CODECOV_TOKEN: ${{secretrs.CODECOV_TOKEN}}
+          CODECOV_TOKEN: ${{secrets.CODECOV_TOKEN}}
         run: |
           install.packages('remotes')
           remotes::install_github("allometric/allometric")
