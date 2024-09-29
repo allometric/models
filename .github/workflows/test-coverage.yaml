@@ -46,6 +46,8 @@ jobs:
           needs: coverage
 
       - name: Test coverage
+        env:
+          MONGODB_URL_DEV: ${{secrets.MONGODB_URL_DEV}}
         run: |
           install.packages('remotes')
           remotes::install_github("allometric/allometric")
