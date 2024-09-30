@@ -57,6 +57,8 @@ delete_pub <- function(pub_con, model_con, pub_id, verbose = TRUE) {
   pub_con$remove(pub_find)
 }
 
+#' Get a vector of pub_ids that do not exist in the set of currently maintained
+#' pub ids
 get_nonexistent_pubs <- function(pub_con, verbose = TRUE) {
   pub_find <- list(
     "_id" = list(
@@ -64,14 +66,14 @@ get_nonexistent_pubs <- function(pub_con, verbose = TRUE) {
     )
   ) |> jsonlite::toJSON()
 
-  nonexistent_pubs <- pub_con$find(pub_find)
+  nonexistent_pubs <- pub_con$find(pub_find, fields = '{}')
 
   if(verbose) {
     print(paste("Found", nrow(nonexistent_pubs), "nonexistent publications"))
   }
 
   if(nrow(nonexistent_pubs) > 0) {
-    return(nonexistent_pubs$pub_id)
+    return(nonexistent_pubs$`_id`)
   } else {
     return(NULL)
   }
@@ -110,7 +112,7 @@ write_update_commit <- function(update_con) {
 #'
 #' This is the main function for updating the database. It proceeds in five
 #' phases, meant to remove old/"hangnail" publications and models.
-#'  1. Delete all nonexistent publications from db (i.e., in publications
+#'  1. Delete all nonexistent publications from db (i.e., publications
 #'     no longer in directory) and their models
 #'  2. Determine which publications have been modified since last commit
 #'  3. Generate JSON for modified publications+models, retain newly generated
