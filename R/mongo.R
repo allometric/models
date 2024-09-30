@@ -97,8 +97,10 @@ get_last_update_commit <- function(update_con) {
   }
 }
 
-write_update_commit <- function(update_con) {
-  current_commit <- system("git rev-parse HEAD", intern = TRUE)
+write_update_commit <- function(update_con, current_commit = NULL) {
+  if(!is.null(current_commit)) {
+    current_commit <- system("git rev-parse HEAD", intern = TRUE)
+  }
 
   insert_obj <- list(
     datetime = as.integer(Sys.time()) |> jsonlite::unbox(),
