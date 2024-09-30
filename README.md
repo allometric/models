@@ -1,6 +1,6 @@
 # models
 
-[![codecov](https://codecov.io/gh/allometric/models/graph/badge.svg?token=XHS9EGNX27)](https://codecov.io/gh/allometric/models)
+[![codecov](https://codecov.io/github/allometric/models/branch/mongo_upsert/graph/badge.svg?token=XHS9EGNX27)](https://codecov.io/github/allometric/models)
 
 This repository stores allometric models used in
 [`allometric`](https://github.com/allometric), which is a family of software
