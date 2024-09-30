@@ -135,7 +135,7 @@ test_that("get_last_update_commit gets most recent commit", {
 
 test_that("write_update_commit writes an update", {
   with_mocked_update_conn(function(update_conn) {
-    write_update_commit(update_conn)
+    write_update_commit(update_conn, "ccccccc")
 
     update_res <- update_conn$find('{}')
 
