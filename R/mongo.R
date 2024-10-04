@@ -122,6 +122,9 @@ write_update_commit <- function(update_con, current_commit = NULL) {
 #'  4. Upsert the JSON for modified publications
 #'  5. Delete any models belonging to the modified publications that are not in
 #'     the set of new model IDs. These should represent modified models
+#' @inheritParams upsert_publication
+#' @param update_con A connection to the update collection
+#' @param last_commit The 7 character ID of a previous commit to update from
 update_db <- function(pub_con, model_con, update_con, verbose = TRUE, last_commit = NULL) {
   nonexistent_pubs <- get_nonexistent_pubs(pub_con, verbose = verbose)
 

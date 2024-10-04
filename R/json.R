@@ -233,11 +233,11 @@ covariate_definitions_to_json <- function(covt_def_data) {
 #' @return A list containing a parsable form of the model object
 model_to_json <- function(model) {
   proxy_id <- get_model_hash(
-    model@predict_fn_populated, allometric:::descriptors(model)
+    model@predict_fn_populated, allometric::descriptors(model)
   )
 
   model_id <- substr(proxy_id, 1, 8)
-  model_descriptors <- allometric:::descriptors(model)
+  model_descriptors <- allometric::descriptors(model)
   model_class <- as.character(class(model))
 
   response_definition <- ifelse(
