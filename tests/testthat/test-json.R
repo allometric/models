@@ -90,9 +90,9 @@ test_that("taxa_to_json returns correct value", {
 
   parsed <- taxa_to_json(taxa)
 
-  expect_equal(parsed[[1]][["family"]], "Pinaceae")
-  expect_equal(parsed[[1]][["genus"]], "Pinus")
-  expect_equal(parsed[[1]][["species"]], "ponderosa")
+  expect_equal(parsed[[1]][["family"]], jsonlite::unbox("Pinaceae"))
+  expect_equal(parsed[[1]][["genus"]], jsonlite::unbox("Pinus"))
+  expect_equal(parsed[[1]][["species"]], jsonlite::unbox("ponderosa"))
 })
 
 test_that("descriptors_to_json returns correct value", {
@@ -107,8 +107,8 @@ test_that("descriptors_to_json returns correct value", {
   parsed_taxa <- descriptors_to_json(descriptors_with_taxa)["taxa"]
 
   expect_equal(names(parsed_taxa)[[1]], "taxa")
-  expect_equal(parsed_taxa[[1]][[1]][["family"]], "Aceraceae")
-  expect_equal(parsed_taxa[[1]][[1]][["genus"]], "Acer")
+  expect_equal(parsed_taxa[[1]][[1]][["family"]], jsonlite::unbox("Aceraceae"))
+  expect_equal(parsed_taxa[[1]][[1]][["genus"]], jsonlite::unbox("Acer"))
   expect_true(is.na(parsed_taxa[[1]][[1]][["species"]]))
 })
 

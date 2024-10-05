@@ -117,7 +117,7 @@ taxa_to_json <- function(taxa) {
     )
   }
 
-  out
+  unbox_nested(out)
 }
 
 #' Convert descriptors to JSON
