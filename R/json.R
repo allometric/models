@@ -278,6 +278,8 @@ model_to_json <- function(model) {
 #'  representations of models in the publication.
 publication_to_json <- function(publication) {
   citation_json <- citation_to_json(publication@citation)
+  inline_citation <- prepare_inline_citation(publication@citation)
+
   models_json <- list()
   model_ids <- c()
 
@@ -289,8 +291,12 @@ publication_to_json <- function(publication) {
 
       for (k in 1:length(model_set_ij@models)) {
         model_ijk <- model_set_ij@models[[k]]
-        models_json[[l]] <- model_to_json(model_ijk)
-        model_ids <- c(model_ids, models_json[[l]][["_id"]])
+
+        model_json <- model_to_json(model_ijk)
+        model_json$inline_citation <- jsonlite::unbox(inline_citation)
+
+        models_json[[l]] <- model_json
+        model_ids <- c(model_ids, models_json[["_id"]])
 
         l <- l + 1
       }
