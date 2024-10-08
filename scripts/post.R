@@ -31,9 +31,41 @@ counts <- list(
 
 summary_con$update(counts, upsert = TRUE)
 
-# Get unique model types
-
+# Get distinct model types
 model_con$distinct("model_type")
+
+# Get distinct countries
+country_pipeline <- '[ 
+  { "$match": { 
+      "descriptors.country": { "$ne": null }
+    } 
+  },
+  { "$unwind": "$descriptors.country" },
+  { "$group": { 
+      "_id": { 
+        "country": "$descriptors.country"
+      }
+    } 
+  },
+  { "$project": { 
+      "country": "$_id.country", 
+      "_id": 0 
+    } 
+  }
+]'
+
+countries <- model_con$aggregate(country_pipeline) |>
+  dplyr::left_join(ISOcodes::ISO_3166_1, by = c("country" = "Alpha_2")) |>
+  dplyr::select(country, Name) |>
+  dplyr::rename(iso = country, name = Name)
+
+countries <- list(
+  "_id" = jsonlite::unbox("countries"),
+  "iso" = countries$iso,
+  "name" = countries$name
+) |> jsonlite::toJSON()
+
+summary_con$update(countries, upsert = TRUE)
 
 distinct <- list(
   "_id" = jsonlite::unbox("distinct"),
