@@ -296,7 +296,7 @@ publication_to_json <- function(publication) {
         model_json$inline_citation <- jsonlite::unbox(inline_citation)
 
         models_json[[l]] <- model_json
-        model_ids <- c(model_ids, models_json[["_id"]])
+        model_ids <- c(model_ids, model_json[["_id"]])
 
         l <- l + 1
       }
