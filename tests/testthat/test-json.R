@@ -53,8 +53,11 @@ test_that("variables_to_json returns correct value", {
 
   expect_equal(parsed[[1]][["name"]], "hst")
   expect_equal(parsed[[1]][["unit"]], "m")
-
+  expect_equal(parsed[[1]][["description"]], "total height of the stem")
   expect_equal(length(parsed), 1)
+
+  parsed <- variables_to_json(variables, list("hst" = "something else"))
+  expect_equal(parsed[[1]][["description"]], "something else")
 })
 
 test_that("unbox nested unboxes a nested list", {

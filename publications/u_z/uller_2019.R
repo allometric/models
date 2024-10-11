@@ -112,7 +112,7 @@ mod_7 <- FixedEffectsModel(
   response = list(bt = units::as_units("kg")),
   covariates = list(
     dsob = units::as_units("cm"),
-    rsd = units::as_units("kg / m^3")
+    rws = units::as_units("kg / m^3")
   ),
   parameters = list(
     beta_0 = -9.0086,
@@ -120,8 +120,8 @@ mod_7 <- FixedEffectsModel(
     beta_2 = 1.0895,
     bcf = 1.0206
   ),
-  predict_fn = function(dsob, rsd) {
-    exp(log(beta_0) + beta_1 * log(dsob) + beta_2 * log(rsd)) * bcf
+  predict_fn = function(dsob, rws) {
+    exp(log(beta_0) + beta_1 * log(dsob) + beta_2 * log(rws)) * bcf
   }
 )
 
@@ -130,14 +130,14 @@ mod_8 <- FixedEffectsModel(
   covariates = list(
     dsob = units::as_units("cm"),
     hst = units::as_units("m"),
-    rsd = units::as_units("kg / m^3")
+    rws = units::as_units("kg / m^3")
   ),
   parameters = list(
     beta_0 = 10.2861,
     beta_1 = 0.00005
   ),
-  predict_fn = function(dsob, hst, rsd) {
-    beta_0 + beta_1 * (dsob^2 * hst * rsd)
+  predict_fn = function(dsob, hst, rws) {
+    beta_0 + beta_1 * (dsob^2 * hst * rws)
   }
 )
 
@@ -146,15 +146,15 @@ mod_9 <- FixedEffectsModel(
   covariates = list(
     dsob = units::as_units("cm"),
     hst = units::as_units("m"),
-    rsd = units::as_units("kg / m^3")
+    rws = units::as_units("kg / m^3")
   ),
   parameters = list(
     beta_0 = -9.1954,
     beta_1 = 0.9561,
     bcf = 1.0209
   ),
-  predict_fn = function(dsob, hst, rsd) {
-    exp(log(beta_0) + beta_1 * log(dsob^2 * hst * rsd)) * bcf
+  predict_fn = function(dsob, hst, rws) {
+    exp(log(beta_0) + beta_1 * log(dsob^2 * hst * rws)) * bcf
   }
 )
 
@@ -163,7 +163,7 @@ mod_10 <- FixedEffectsModel(
   covariates = list(
     dsob = units::as_units("cm"),
     hst = units::as_units("m"),
-    rsd = units::as_units("kg / m^3")
+    rws = units::as_units("kg / m^3")
   ),
   parameters = list(
     beta_0 = -8.8907,
@@ -172,9 +172,9 @@ mod_10 <- FixedEffectsModel(
     beta_3 = 0.9999,
     bcf = 1.0175
   ),
-  predict_fn = function(dsob, hst, rsd) {
+  predict_fn = function(dsob, hst, rws) {
     exp(log(beta_0) + beta_1 * log(dsob) + beta_2 * log(hst) +
-      beta_3 * log(rsd)) * bcf
+      beta_3 * log(rws)) * bcf
   }
 )
 

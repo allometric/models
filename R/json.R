@@ -61,14 +61,24 @@ citation_to_json <- function(citation) {
 #' @param variables A list containing variables, via `response` or `covariates`
 #'  slots of a model
 #' @return A list of parsed variables
-variables_to_json <- function(variables) {
+variables_to_json <- function(variables, variable_descriptions = list()) {
   variable_names <- names(variables)
   out <- list()
 
-  for(i in 1:length(variables)) {
+  for (i in seq_along(variables)) {
+    variable_name <- variable_names[[i]]
+
+    if(variable_name %in% names(variable_descriptions)) {
+      description <- variable_descriptions[[variable_name]]
+    } else {
+      def <- allometric::get_variable_def(variable_name, return_exact_only = TRUE)
+      description <- as.character(def$description[[1]])
+    }
+
     out[[i]] <- list(
       name = variable_names[[i]],
-      unit = allometric:::parse_unit_str(variables[i])
+      unit = allometric:::parse_unit_str(variables[i]),
+      description = description
     )
   }
 
@@ -240,29 +250,28 @@ model_to_json <- function(model) {
   model_descriptors <- allometric::descriptors(model)
   model_class <- as.character(class(model))
 
-  response_definition <- ifelse(
-    is.na(model@response_definition), "", model@response_definition
+
+  res_defs <- ifelse(
+    is.na(model@response_definition),
+    list(),
+    model@response_definition
   )
+
+  if(!is.null(names(res_defs))) {
+    browser()
+  }
 
   required <- list(
     "_id" = jsonlite::unbox(model_id),
     pub_id = jsonlite::unbox(model@pub_id),
     model_type = jsonlite::unbox(allometric:::get_model_type(names(model@response))[[1]]),
     model_class = jsonlite::unbox(model_class),
-    response = unbox_nested(variables_to_json(model@response))[[1]],
-    covariates = unbox_nested(variables_to_json(model@covariates)),
+    response = unbox_nested(variables_to_json(model@response, res_defs))[[1]],
+    covariates = unbox_nested(variables_to_json(model@covariates, model@covariate_definitions)),
     descriptors = descriptors_to_json(model_descriptors),
     parameters = unbox_nonnested(as.list(model@parameters)),
     predict_fn_body = parse_func_body(model@predict_fn)
   )
-
-  if(!is.na(model@response_definition)) {
-    required[["response_definition"]] <- jsonlite::unbox(response_definition)
-  }
-
-  if(!length(model@covariate_definitions) == 0) {
-    required[["covariate_definitions"]] <- covariate_definitions_to_json(model@covariate_definitions)
-  }
 
   required
 }

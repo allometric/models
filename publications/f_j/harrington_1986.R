@@ -22,7 +22,7 @@ harrington_1986 <- Publication(
 
 hstix20 <- FixedEffectsModel(
   response = list(
-    hstix = units::as_units("ft")
+    hstix20 = units::as_units("ft")
   ),
   covariates = list(
     hst = units::as_units("ft"),
