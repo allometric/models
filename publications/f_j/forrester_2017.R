@@ -75,12 +75,12 @@ pred_fns <- list(
     )
   ),
   "9" = list(
-    fn = function(dsob, tl) {
-      exp(log(beta_0) + beta_1 * log(dsob) + beta_2 * tl) * cf
+    fn = function(dsob, tlt) {
+      exp(log(beta_0) + beta_1 * log(dsob) + beta_2 * tlt) * cf
     },
     covts = list(
       dsob = units::as_units("cm"),
-      tl = units::as_units("C")
+      tlt = units::as_units("C")
     )
   ),
   "10" = list(
@@ -126,13 +126,13 @@ pred_fns <- list(
     )
   ),
   "14" = list(
-    fn = function(dsob, gs_s, tl) {
-      exp(log(beta_0) + beta_1 * log(dsob) + beta_2 * gs_s + beta_3 * tl) * cf
+    fn = function(dsob, gs_s, tlt) {
+      exp(log(beta_0) + beta_1 * log(dsob) + beta_2 * gs_s + beta_3 * tlt) * cf
     },
     covts = list(
       dsob = units::as_units("cm"),
       gs_s = units::as_units("m^2 * ha^-1"),
-      tl = units::as_units("C")
+      tlt = units::as_units("C")
     )
   ),
   "15" = list(
@@ -158,13 +158,14 @@ pred_fns <- list(
     )
   ),
   "17" = list(
-    fn = function(dsob, es, tl) {
-      exp(log(beta_0) + beta_1 * log(dsob) + beta_2 * log(es) + beta_3 * tl) * cf
+    fn = function(dsob, es, tlt) {
+      exp(log(beta_0) + beta_1 * log(dsob) + beta_2 * log(es) + beta_3 * tlt) *
+        cf
     },
     covts = list(
       dsob = units::as_units("cm"),
       es =  units::as_units("ha^-1"),
-      tl = units::as_units("C")
+      tlt = units::as_units("C")
     )
   ),
   "18" = list(
@@ -190,14 +191,14 @@ pred_fns <- list(
     )
   ),
   "20" = list(
-    fn = function(dsob, att, tl) {
-      exp(log(beta_0) + beta_1 * log(dsob) + beta_2 * log(att) + beta_3 * tl) *
+    fn = function(dsob, att, tlt) {
+      exp(log(beta_0) + beta_1 * log(dsob) + beta_2 * log(att) + beta_3 * tlt) *
         cf
     },
     covts = list(
       dsob = units::as_units("cm"),
       att = units::as_units("years"),
-      tl = units::as_units("C")
+      tlt = units::as_units("C")
     )
   ),
   "21" = list(
@@ -329,7 +330,7 @@ for(i in 1:nrow(iter_keys)) {
 
   model_group <- add_model_group(iter_data, iter_key)
 
-  if(names(model_group)[[1]] == "model") {
+ if(names(model_group)[[1]] == "model") {
     forrester_2017 <- add_model(forrester_2017, model_group[[1]])
   } else if(names(model_group)[[1]] == "set") {
     forrester_2017 <- add_set(forrester_2017, model_group[[1]])
