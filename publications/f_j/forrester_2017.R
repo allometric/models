@@ -8,7 +8,8 @@ forrester_2017 <- Publication(
     volume = 396,
     pages = "160--175",
     year = 2017,
-    publisher = "Elsevier"
+    publisher = "Elsevier",
+    doi = "https://doi.org/10.1016/j.foreco.2017.04.011"
   ),
   descriptors = list(
     country = c(

@@ -9,7 +9,8 @@ cairns_2003 <- Publication(
     number = "1-3",
     pages = "125--132",
     year = 2003,
-    publisher = "Elsevier"
+    publisher = "Elsevier",
+    doi = "https://doi.org/10.1016/S0378-1127(03)00229-9"
   ),
   descriptors = list(
     country = "MX",

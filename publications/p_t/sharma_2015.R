@@ -9,7 +9,8 @@ sharma_2015 <- Publication(
     number = 1,
     pages = "45--53",
     year = 2015,
-    publisher = "Taylor & Francis"
+    publisher = "Taylor & Francis",
+    doi = "https://doi.org/10.1080/21580103.2014.957354"
   ),
   descriptors = list(
     country = "NO"

@@ -8,7 +8,8 @@ curtis_1974 <- Publication(
     number = 4,
     pages = "307--316",
     year = 1974,
-    journal = "Forest Science"
+    journal = "Forest Science",
+    doi = "https://doi.org/10.1093/forestscience/20.4.307"
   ),
   descriptors = list(
     taxa = Taxa(

@@ -6,7 +6,8 @@ dolph_1991 <- Publication(
     author = "Dolph, K Leroy",
     volume = 206,
     year = 1991,
-    institution = "US Department of Agriculture, Forest Service, Pacific Southwest Research Station"
+    institution = "US Department of Agriculture, Forest Service, Pacific Southwest Research Station",
+    doi = "https://doi.org/10.2737/PSW-RP-206"
   ),
   descriptors = list(
     country = "US",

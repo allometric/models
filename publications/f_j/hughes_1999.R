@@ -9,7 +9,8 @@ hughes_1999 <- Publication(
     number = 6,
     pages = "1892--1907",
     year = 1999,
-    publisher = "Wiley Online Library"
+    publisher = "Wiley Online Library",
+    doi = "https://doi.org/10.1890/0012-9658(1999)080[1892:BCANDO]2.0.CO;2"
   ),
   descriptors = list(
     country = "MX",

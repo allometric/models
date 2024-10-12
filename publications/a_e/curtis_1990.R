@@ -5,7 +5,8 @@ curtis_1990 <- Publication(
     title = "Height growth and site index curves for western white pine in the Cascade Range of Washington and Oregon",
     author = "Curtis, Robert O and Diaz, Nancy M and Clendenen, Gary W",
     year = 1990,
-    institution = "US Department of Agriculture, Forest Service, Pacific Northwest Research Station"
+    institution = "US Department of Agriculture, Forest Service, Pacific Northwest Research Station",
+    doi = "https://doi.org/10.2737/PNW-RP-423"
   ),
   descriptors = list(
     taxa = Taxa(

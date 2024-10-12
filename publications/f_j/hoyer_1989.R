@@ -6,7 +6,8 @@ hoyer_1989 <- Publication(
     author = "Hoyer, Gerald E and Herman, Francis R",
     volume = 418,
     year = 1989,
-    institution = "US Department of Agriculture, Forest Service, Pacific Northwest Research Station"
+    institution = "US Department of Agriculture, Forest Service, Pacific Northwest Research Station",
+    doi = "	https://doi.org/10.2737/PNW-RP-418"
   ),
   descriptors = list(
     taxa = Taxa(
