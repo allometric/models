@@ -5,7 +5,8 @@ iffsc_2022 <- Publication(
     title = "Modelos de biomassa para espécies arbóreas nativas de Santa Catarina",
     year = 2022,
     institution = "Inventário Florístico Florestal de Santa Catarina",
-    author = "IFFSC"
+    author = "IFFSC",
+    doi = "http://dx.doi.org/10.13140/RG.2.2.26165.83681"
   ),
   descriptors = list(
     country = "BR",

@@ -6,7 +6,8 @@ hann_1978 <- Publication(
     institution = "Research Paper, Intermountain Forest and Range Experiment Station, USDA Forest Service",
     author = "Hann, DW and Bare, BB",
     number = "INT-209/No. INT-210",
-    year = 1978
+    year = 1978,
+    doi = "https://doi.org/10.5962/bhl.title.68868"
   ),
   descriptors = list(
     country = "US",
