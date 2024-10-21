@@ -20,6 +20,8 @@ summary_con <- mongolite::mongo(
   url = con_string, db = "allodev", collection = "summary"
 )
 
+summary_con$drop()
+
 n_models <- model_con$count()
 n_pubs <- pub_con$count()
 

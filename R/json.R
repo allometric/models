@@ -30,7 +30,7 @@ citation_to_json <- function(citation) {
   optional <- c(
     "institution", "publisher", "journal", "volume", "number", "pages",
     "address", "month", "school", "note", "organization", "series", "booktitle",
-    "editor", "howpublished"
+    "editor", "howpublished", "doi"
   )
 
   required <- list(
@@ -270,7 +270,8 @@ model_to_json <- function(model) {
     covariates = unbox_nested(variables_to_json(model@covariates, model@covariate_definitions)),
     descriptors = descriptors_to_json(model_descriptors),
     parameters = unbox_nonnested(as.list(model@parameters)),
-    predict_fn_body = parse_func_body(model@predict_fn)
+    predict_fn_body = parse_func_body(model@predict_fn),
+    predict_fn_body_populated = parse_func_body(model@predict_fn_populated)
   )
 
   required
