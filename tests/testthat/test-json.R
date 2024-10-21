@@ -181,7 +181,7 @@ test_that("model_to_json runs", {
   all_check <- all(
     field_names %in% c(
       "_id", "pub_id", "model_type", "model_class", "response", "covariates",
-      "descriptors", "parameters", "predict_fn_body"
+      "descriptors", "parameters", "predict_fn_body", "predict_fn_body_populated"
     )
   )
 
