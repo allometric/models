@@ -7,8 +7,8 @@ authors_to_json <- function(authors) {
 
   for(i in seq_along(authors)) {
     author_parsed <- list(
-      given = paste(authors[[i]]$given, collapse = " "),
-      family = paste(authors[[i]]$family, collapse = " ")
+      given = jsonlite::unbox(paste(authors[[i]]$given, collapse = " ")),
+      family = jsonlite::unbox(paste(authors[[i]]$family, collapse = " "))
     )
 
     out[[i]] <- author_parsed
