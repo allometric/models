@@ -24,7 +24,7 @@ two_params <- FixedEffectsSet(
   ),
   parameter_names = c("a", "b"),
   predict_fn = function(dsoc, hst) {
-    (a + b * (dsoc^2 * hst))^3
+    (a + b * (dsoc^2 * hst)^(1 / 3))^3
   },
   model_specifications = load_parameter_frame("vsa_chojnacky_1985_1") %>%
     aggregate_taxa()
@@ -42,7 +42,7 @@ three_params <- FixedEffectsSet(
   ),
   parameter_names = c("a", "b", "c"),
   predict_fn = function(dsoc, hst, single_stem) {
-    (a + b * (dsoc^2 * hst + c * single_stem))^3
+    (a + b * (dsoc^2 * hst)^(1 / 3) + c * single_stem)^3
   },
   model_specifications = load_parameter_frame("vsa_chojnacky_1985_2") %>%
     aggregate_taxa(),
@@ -62,7 +62,7 @@ hardwoods <- FixedEffectsSet(
   ),
   parameter_names = c("a", "b"),
   predict_fn = function(dsoc, hst) {
-    (a + b * (dsoc^2 * hst))^3
+    (a + b * (dsoc^2 * hst)^(1 / 3))^3
   },
   model_specifications = load_parameter_frame("vsa_chojnacky_1985_3")
 )
