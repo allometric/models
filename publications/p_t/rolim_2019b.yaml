@@ -9,10 +9,7 @@ models:
   type: fixed_effects_set
   response: {dsob: cm}
   covariates: {att: years}
-  parameter_names:
-  - A
-  - k
-  - c
+  prediction_function: A * (1 + c * exp(-k * log(att)))^-1
   specifications:
   - {parameters: {A: 26.11, k: 2.32, c: 344.74}, descriptors: {pred_fn: H}, taxa: [{family: Fabaceae, genus: Amburana, species: cearensis}]}
   - {parameters: {A: 83.54, k: 0.8551, c: 42.02}, descriptors: {pred_fn: H}, taxa: [{family: Fabaceae, genus: Bowdichia, species: virgilioides}]}
@@ -26,10 +23,7 @@ models:
   type: fixed_effects_set
   response: {dsob: cm}
   covariates: {att: years}
-  parameter_names:
-  - A
-  - k
-  - c
+  prediction_function: A * (1 - exp(-k * att^c))
   specifications:
   - {parameters: {A: 53.88, k: 0.0348, c: 0.7192}, descriptors: {pred_fn: W}, taxa: [{family: Aponyaceae, genus: Aspidosperma, species: pyricollum}]}
   - {parameters: {A: 29.124, k: 0.0413, c: 1.3736}, descriptors: {pred_fn: W}, taxa: [{family: Malvaceae, genus: Pachira, species: endecaphylla}]}
@@ -37,10 +31,7 @@ models:
   type: fixed_effects_set
   response: {dsob: cm}
   covariates: {att: years}
-  parameter_names:
-  - A
-  - k
-  - c
+  prediction_function: A * exp(-k * att^(-c))
   specifications:
   - {parameters: {A: 23.66, k: 3.99, c: 0.8775}, descriptors: {pred_fn: K}, taxa: [{family: Anacardiaceae, genus: Astronium, species: concinnum}]}
   - {parameters: {A: 47.11, k: 4.2, c: 0.5434}, descriptors: {pred_fn: K}, taxa: [{family: Fabaceae, genus: Barnebydendron, species: riedelii}]}
@@ -67,10 +58,7 @@ models:
   type: fixed_effects_set
   response: {dsob: cm}
   covariates: {att: years}
-  parameter_names:
-  - A
-  - k
-  - c
+  prediction_function: A * exp(-c * exp(-k * att))
   specifications:
   - {parameters: {A: 39.24, k: 0.03925, c: 1.81}, descriptors: {pred_fn: G}, taxa: [{family: Anacardiaceae, genus: Astronium, species: graveolens}]}
   - {parameters: {A: 36.23, k: 0.1038, c: 4.92}, descriptors: {pred_fn: G}, taxa: [{family: Moraceae, genus: Clarisia, species: racemosa}]}

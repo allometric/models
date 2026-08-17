@@ -9,10 +9,7 @@ models:
   type: fixed_effects_set
   response: {dsib: in}
   covariates: {dsob: in, rc: ft ft-1}
-  parameter_names:
-  - b_1
-  - b_2
-  - b_3
+  prediction_function: b_1 * dsob^b_2 * exp(b_3 * (1 - rc)^(0.5))
   specifications:
   - {parameters: {b_1: 0.92443655, b_2: 0.988866545, b_3: -0.034145503}, taxa: [{family: Pinaceae, genus: Pseudotsuga, species: menziesii}]}
   - {parameters: {b_1: 0.878755351, b_2: 1.0, b_3: -0.076960555}, taxa: [{family: Cupressaceae, genus: Calocedrus, species: null}]}
@@ -23,30 +20,18 @@ models:
   type: fixed_effects_set
   response: {dui1: in}
   covariates: {dsob: in, rc: ft ft-1}
-  parameter_names:
-  - b_1
-  - b_2
-  - b_3
-  - b_4
-  - b_5
+  prediction_function: b_1 + b_2 * dsob^b_3 * exp(b_4 * rc^b_5)
   specifications:
   - {parameters: {b_1: 0.149809111, b_2: 0.900790279, b_3: 1.021366311, b_4: 0.133648456, b_5: 3.67532829}, taxa: [{family: Pinaceae, genus: Pseudotsuga, species: menziesii}]}
   - {parameters: {b_1: 0.451569966, b_2: 0.831752493, b_3: 1.056002686, b_4: 0.216216295, b_5: 7.00446878}, taxa: [{family: Cupressaceae, genus: Calocedrus, species: null}]}
   - {parameters: {b_1: 0.0, b_2: 1.00221381, b_3: 0.0, b_4: 0.0, b_5: 0.0}, taxa: [{family: Pinaceae, genus: Pinus, species: ponderosa}]}
   - {parameters: {b_1: 0.0, b_2: 1.04030514, b_3: 0.0, b_4: 0.0, b_5: 0.0}, taxa: [{family: Pinaceae, genus: Pinus, species: lambertiana}]}
-  - {parameters: {b_1: 0.393048214, b_2: 0.729932627, b_4: 0.120814754, b_5: 1.0}, taxa: [{family: Pinaceae, genus: Abies, species: concolor}, {family: Pinaceae, genus: Abies, species: grandis}]}
+  - {parameters: {b_1: 0.393048214, b_2: 0.729932627, b_4: 0.120814754, b_5: 1.0, b_3: 1.0978510098}, taxa: [{family: Pinaceae, genus: Abies, species: concolor}, {family: Pinaceae, genus: Abies, species: grandis}]}
 - name: vsio
   type: fixed_effects_set
   response: {vsio: ft3}
   covariates: {hso: ft, dsob: in, hsv: ft}
-  parameter_names:
-  - b_1
-  - b_2
-  - b_3
-  - b_4
-  - k
-  - b_5
-  - b_7
+  prediction_function: b_1 * (hso/dsob)^(b_2 * (1 - exp(b_3 * dsob^b_4)))^k * exp(b_5 * (hsv/hso)) * dsob^b_7 * dsob^2 * hso
   specifications:
   - {parameters: {b_1: 0.001244856, b_2: 0.346490193, b_3: -0.56574969, b_4: 0.632239239, k: 1.0, b_5: -0.152406551, b_7: -0.051186711}, descriptors: {b_6: 4.55802463}, taxa: [{family: Pinaceae, genus: Pseudotsuga, species: menziesii}]}
   - {parameters: {b_1: 0.000907633, b_2: 0.342846727, b_3: -0.638653879, b_4: 1.5857204, k: 1.0, b_5: 0.0, b_7: 0.0}, descriptors: {b_6: 0}, taxa: [{family: Cupressaceae, genus: Calocedrus, species: null}]}

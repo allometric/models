@@ -13,9 +13,7 @@ models:
     species: engelmannii
   response: {vsoa: ft3}
   covariates: {dsob: in, hst: ft}
-  parameter_names:
-  - a
-  - b
+  prediction_function: a + b * dsob^2 * hst
   specifications:
   - {parameters: {a: 0.06439, b: 0.00239}, descriptors: {top_dsib: 0, size_class: <= 22500}}
   - {parameters: {a: 10.41663, b: 0.00193}, descriptors: {top_dsib: 0, size_class: '> 22500'}}
@@ -30,9 +28,7 @@ models:
   response: {vsom: board_foot}
   covariates: {dsob: in, hsm: ''}
   covt_defs: {hsm: Number of 16 foot logs to merchantable top}
-  parameter_names:
-  - a
-  - b
+  prediction_function: a + b * dsob^2 * hsm
   specifications:
   - {parameters: {a: 5.37508, b: 0.23522}, descriptors: {top_dsib: 6, bdft_rule: Scribner, size_class: <= 2530}}
   - {parameters: {a: 16.11994, b: 0.23097}, descriptors: {top_dsib: 6, bdft_rule: Scribner, size_class: '> 2530'}}
@@ -50,9 +46,7 @@ models:
     species: engelmannii
   response: {rsvg: ft3 ft-2}
   covariates: {dsob: in, hst: ft}
-  parameter_names:
-  - a
-  - b
+  prediction_function: a * hst - b/dsob^2
   specifications:
   - {parameters: {a: 0.4254, b: -152.2002}, descriptors: {top_dsib: 4, size_class: small}}
   - {parameters: {a: 0.3337, b: 2404.3271}, descriptors: {top_dsib: 4, size_class: large}}
@@ -72,9 +66,7 @@ models:
   response: {rsvg: ft3 ft-2}
   covariates: {dsob: in, hsm: ''}
   covt_defs: {hsm: Number of 16 foot logs to merchantable top}
-  parameter_names:
-  - a
-  - b
+  prediction_function: a * hsm + b/dsob^2
   specifications:
   - {parameters: {a: 43.128, b: 985.5299}, descriptors: {top_dsib: 6, bdft_rule: Scribner, size_class: small}}
   - {parameters: {a: 42.3487, b: 2955.6179}, descriptors: {top_dsib: 6, bdft_rule: Scribner, size_class: large}}
@@ -92,9 +84,7 @@ models:
     species: engelmannii
   response: {vsim: board_foot}
   covariates: {dsob: in, hst: ft}
-  parameter_names:
-  - a
-  - b
+  prediction_function: a + b * dsob^2 * hst
   specifications:
   - {parameters: {a: -15.14666, b: 0.01097}, descriptors: {top_dsib: 6, bdft_rule: Scribner, size_class: <= 12000}}
   - {parameters: {a: -27.91343, b: 0.01202}, descriptors: {top_dsib: 6, bdft_rule: Scribner, size_class: '> 12000'}}

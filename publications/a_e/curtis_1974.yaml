@@ -14,8 +14,8 @@ models:
   response: {hstix100: ft}
   covariates: {hst: ft, atb: years}
   parameters: {alpha_1: 0.010006, beta_1: 1.0, beta_2: 0.00549779, beta_3: 1.46842e-14}
-  equation: alpha <- alpha_1 * (100 - atb)^2; beta <- beta_1 + beta_2 * (100 - atb) + beta_3 * (100 - atb)^7; alpha + beta * (hst - 4.5) + 4.5
   descriptors: {age_class: <= 100}
+  prediction_function: alpha <- alpha_1 * (100 - atb)^2; beta <- beta_1 + beta_2 * (100 - atb) + beta_3 * (100 - atb)^7; alpha + beta * (hst - 4.5) + 4.5
 - name: hstix100_2
   type: fixed_effects
   taxa:
@@ -25,5 +25,5 @@ models:
   response: {hstix100: ft}
   covariates: {hst: ft, atb: years}
   parameters: {alpha_1: 7.66772, alpha_2: -0.95, beta_1: 1.0, beta_2: -0.730948, beta_3: 0.8}
-  equation: alpha <- alpha_1 * (exp(alpha_2 * (100/(atb - 100))^2)); beta <- beta_1 + beta_2 * (log(atb, base = 10) - 2)^beta_3; alpha + beta * (hst - 4.5) + 4.5
   descriptors: {age_class: '> 100'}
+  prediction_function: alpha <- alpha_1 * (exp(alpha_2 * (100/(atb - 100))^2)); beta <- beta_1 + beta_2 * (log(atb, base = 10) - 2)^beta_3; alpha + beta * (hst - 4.5) + 4.5

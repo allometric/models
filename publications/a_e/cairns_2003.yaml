@@ -9,9 +9,7 @@ models:
   type: fixed_effects_set
   response: {bt: kg}
   covariates: {dsob: cm, hst: m}
-  parameter_names:
-  - beta_0
-  - beta_1
+  prediction_function: beta_0 + beta_1 * dsob^2 * hst
   specifications:
   - {parameters: {beta_0: 0.0, beta_1: 0.0301}, descriptors: {dia_class: '> 10 cm'}, taxa: [{family: Manzanillo, genus: Alseis, species: yucatenensis}]}
   - {parameters: {beta_0: 0.0, beta_1: 0.0336}, descriptors: {dia_class: '> 10 cm'}, taxa: [{family: Moraceae, genus: Brosimum, species: alicastrum}]}

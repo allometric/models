@@ -9,10 +9,7 @@ models:
   type: fixed_effects_set
   response: {hst: m}
   covariates: {dsob: cm}
-  parameter_names:
-  - alpha
-  - beta
-  - gamma
+  prediction_function: 1.37 + alpha * (1 - exp(-beta * dsob)^gamma)
   specifications:
   - {parameters: {alpha: 54.74, beta: 0.0202, gamma: 1.3666}, taxa: [{family: Pincaeae, genus: Abies, species: amabilis}]}
   - {parameters: {alpha: 51.11, beta: 0.015, gamma: 1.151}, taxa: [{family: Pincaeae, genus: Abies, species: concolor}]}
@@ -38,7 +35,7 @@ models:
   - {parameters: {alpha: 12.66, beta: 0.0414, gamma: 1.6531}, taxa: [{family: Pincaeae, genus: Pinus, species: monophylla}]}
   - {parameters: {alpha: 29.98, beta: 0.0461, gamma: 1.7471}, taxa: [{family: Pincaeae, genus: Pinus, species: monticola}]}
   - {parameters: {alpha: 58.81, beta: 0.0123, gamma: 1.1766}, taxa: [{family: Pincaeae, genus: Pinus, species: ponderosa}]}
-  - {parameters: {alpha: 41.28, gamma: 1.0008}, taxa: [{family: Pincaeae, genus: Pinus, species: sahiniana}]}
+  - {parameters: {alpha: 41.28, gamma: 1.0008, beta: 0.0117}, taxa: [{family: Pincaeae, genus: Pinus, species: sahiniana}]}
   - {parameters: {alpha: 45.99, beta: 0.0203, gamma: 0.9477}, taxa: [{family: Salicaceae, genus: Populus, species: balsamifera}]}
   - {parameters: {alpha: 62.57, beta: 0.0131, gamma: 0.9936}, taxa: [{family: Pincaeae, genus: Pseudotsuga, species: menziesii}]}
   - {parameters: {alpha: 23.15, beta: 0.0087, gamma: 0.6139}, taxa: [{family: Fagaceae, genus: Quercus, species: agrifolia}]}

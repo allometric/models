@@ -9,10 +9,7 @@ models:
   type: fixed_effects_set
   response: {vsia: ft3}
   covariates: {dsob: in, hst: ft}
-  parameter_names:
-  - a
-  - b
-  - c
+  prediction_function: 10^a * dsob^b * hst^c
   specifications:
   - {parameters: {a: -2.658025, b: 1.739925, c: 1.133187}, descriptors: {geographic_region: coastal, age_class: < 140 years}, taxa: [{family: Pinaceae, genus: Pseudotsuga, species: menziesii}]}
   - {parameters: {a: -2.712153, b: 1.659012, c: 1.195715}, descriptors: {geographic_region: coastal, age_class: '>= 80 years'}, taxa: [{family: Pinaceae, genus: Pseudotsuga, species: menziesii}]}

@@ -13,10 +13,7 @@ models:
     species: grandis
   response: {bb: kg}
   covariates: {dsob: cm, hst: m}
-  parameter_names:
-  - a
-  - b
-  - c
+  prediction_function: exp(a + b * log(dsob) + c * log(hst))
   specifications:
   - {parameters: {a: -2.68, b: 3.73, c: -1.77}, descriptors: {response: bb, zone: 1, geographic_region: North and High area of Mission}}
   - {parameters: {a: -2.67, b: 3.73, c: -1.77}, descriptors: {response: bb, zone: 2, geographic_region: Southern Misiones and Correntes NE}}
@@ -32,10 +29,7 @@ models:
     species: grandis
   response: {bs: kg}
   covariates: {dsob: cm, hst: m}
-  parameter_names:
-  - a
-  - b
-  - c
+  prediction_function: exp(a + b * log(dsob) + c * log(hst))
   specifications:
   - {parameters: {a: -4.51, b: 1.83, c: 1.22}, descriptors: {response: bs, zone: 1, geographic_region: North and High area of Mission}}
   - {parameters: {a: -4.48, b: 1.83, c: 1.22}, descriptors: {response: bs, zone: 2, geographic_region: Southern Misiones and Correntes NE}}
@@ -47,10 +41,7 @@ models:
     species: grandis
   response: {bt: kg}
   covariates: {dsob: cm, hst: m}
-  parameter_names:
-  - a
-  - b
-  - c
+  prediction_function: exp(a + b * log(dsob) + c * log(hst))
   specifications:
   - {parameters: {a: -3.36, b: 2.12, c: 0.65}, descriptors: {response: bt, zone: 1, geographic_region: North and High area of Mission}}
   - {parameters: {a: -3.32, b: 2.12, c: 0.65}, descriptors: {response: bt, zone: 2, geographic_region: Southern Misiones and Correntes NE}}
@@ -62,13 +53,7 @@ models:
     species: grandis
   response: {bf: kg}
   covariates: {dsob: cm, hst: m, att: years, gs_s: m2 ha-1, es_s: ha-1}
-  parameter_names:
-  - a
-  - b
-  - c
-  - d
-  - e
-  - f
+  prediction_function: exp(a + b * dsob + c * hst + d * att + e * gs_s + f * es_s)
   specifications:
   - {parameters: {a: -6.12, b: 3.26, c: -1.08, d: -0.65, e: -0.43, f: 0.71}}
   - {parameters: {a: -5.63, b: 3.26, c: -1.08, d: -0.65, e: -0.43, f: 0.71}}

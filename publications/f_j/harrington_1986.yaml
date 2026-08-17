@@ -14,4 +14,4 @@ models:
   response: {hstix: ft}
   covariates: {hst: ft, atb: years}
   parameters: {a1: 16.5158, a2: -1.40726, a3: 0.033727, a4: -0.00023267, b1: 1.25934, b2: -0.012989, b3: 3.522}
-  equation: a <- a1 + a2 * atb + a3 * atb^2 + a4 * atb^3; b <- b1 + b2 * atb + b3 * (1/atb)^3; a + b * hst
+  prediction_function: a <- a1 + a2 * atb + a3 * atb^2 + a4 * atb^3; b <- b1 + b2 * atb + b3 * (1/atb)^3; a + b * hst

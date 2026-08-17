@@ -9,9 +9,7 @@ models:
   type: fixed_effects_set
   response: {hcl: m}
   covariates: {hst: m, es: ha-1}
-  parameter_names:
-  - a0
-  - a1
+  prediction_function: hst/(1 + a0 * exp(-a1 * (10000/es)^(-0.5)))
   specifications:
   - {parameters: {a0: 0.589, a1: 0.051}, taxa: [{family: Pinaceae, genus: Pinus, species: pinaster}]}
   - {parameters: {a0: 0.626, a1: 0.024}, taxa: [{family: Pinaceae, genus: Pinus, species: pinea}]}
@@ -29,10 +27,7 @@ models:
   type: fixed_effects_set
   response: {dc: m}
   covariates: {dsob: cm, es: ha-1}
-  parameter_names:
-  - b0
-  - b1
-  - b2
+  prediction_function: b0 * (dsob^b1) * ((10000/es)^(-0.5))^b2
   specifications:
   - {parameters: {b0: 0.225, b1: 0.851, b2: 0.078}, taxa: [{family: Pinaceae, genus: Pinus, species: pinaster}]}
   - {parameters: {b0: 0.277, b1: 0.859, b2: 0.043}, taxa: [{family: Pinaceae, genus: Pinus, species: pinea}]}

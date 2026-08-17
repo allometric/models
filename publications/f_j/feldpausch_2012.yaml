@@ -9,10 +9,7 @@ models:
   type: fixed_effects_set
   response: {hst: m}
   covariates: {dsob: cm}
-  parameter_names:
-  - a
-  - b
-  - c
+  prediction_function: a * (1 - exp(-b * dsob^c))
   specifications:
   - {parameters: {a: 50.45, b: 0.0471, c: 0.812}, descriptors: {continent: Africa, geographic_region: C. Africa, country: [CM, GA]}}
   - {parameters: {a: 43.97, b: 0.0334, c: 0.8546}, descriptors: {continent: Africa, geographic_region: E. Africa, country: TZ}}
@@ -30,12 +27,12 @@ models:
   response: {bt: kg}
   covariates: {dsob: cm, rws: g cm-3}
   parameters: {a: -1.8222, b: 2.337, c: 0.1632, d: -0.0248, e: 0.9792, rse: 0.3595}
-  equation: cf <- exp(rse^2/2); cf * exp(a + b * log(dsob) + c * log(dsob)^2 + d * log(dsob)^3 + e * log(rws))
   descriptors: {geographic_region: pantropical}
+  prediction_function: cf <- exp(rse^2/2); cf * exp(a + b * log(dsob) + c * log(dsob)^2 + d * log(dsob)^3 + e * log(rws))
 - name: bt_2
   type: fixed_effects
   response: {bt: kg}
   covariates: {dsob: cm, rws: g cm-3, hst: m}
   parameters: {a: -2.9205, b: 0.9894, rse: 0.3222}
-  equation: cf <- exp(rse^2/2); cf * exp(a + b * log(dsob^2 * rws * hst))
   descriptors: {geographic_region: pantropical}
+  prediction_function: cf <- exp(rse^2/2); cf * exp(a + b * log(dsob^2 * rws * hst))

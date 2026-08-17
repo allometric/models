@@ -9,10 +9,7 @@ models:
   type: fixed_effects_set
   response: {hht: m}
   covariates: {ah: years}
-  parameter_names:
-  - c1
-  - c2
-  - c3
+  prediction_function: c1^2 * ah + c2 * ah + c3
   specifications:
   - {parameters: {c1: 0.0014, c2: 0.0826, c3: 0.5649}, taxa: [{family: Apocynaceae, genus: Nerium, species: oleander}]}
   - {parameters: {c1: 0.0111, c2: 0.3556, c3: -0.3444}, taxa: [{family: Rosaceae, genus: Rosa, species: canina}]}
@@ -46,17 +43,14 @@ models:
   response: {hht: m}
   covariates: {ah: years}
   parameters: {c1: 0.1322, c2: 0.7778}
-  equation: c1 * ah^c2
   taxa:
   - {family: Ericaceae, genus: Erica, species: scoparia}
+  prediction_function: c1 * ah^c2
 - name: dh
   type: fixed_effects_set
   response: {dh: mm}
   covariates: {ah: years}
-  parameter_names:
-  - c1
-  - c2
-  - c3
+  prediction_function: c1^2 * ah + c2 * ah + c3
   specifications:
   - {parameters: {c1: 0.232, c2: -4.2743, c3: 32.954}, taxa: [{family: Apocynaceae, genus: Nerium, species: oleander}]}
   - {parameters: {c1: 0.0563, c2: -1.6003, c3: 22.055}, taxa: [{family: Rosaceae, genus: Crataegus, species: monogyna}]}
@@ -101,17 +95,14 @@ models:
   response: {dh: mm}
   covariates: {ah: years}
   parameters: {c1: 1.246, c2: 0.9504}
-  equation: c1 * ah^c2
   taxa:
   - {family: Anacardiaceae, genus: Pistacia, species: lentiscus}
+  prediction_function: c1 * ah^c2
 - name: bh_p
   type: fixed_effects_set
   response: {bh_p: t ha-1}
   covariates: {rv_p: m2 m-2, hht_p: dm}
-  parameter_names:
-  - c1
-  - c2
-  - c3
+  prediction_function: c1 * hht_p * c3 * acos(sqrt(rv_p))^c2
   specifications:
   - {parameters: {c1: 4.515059, c2: 0.428802, c3: 1.0}, taxa: [{family: Buxaceae, genus: Buxus, species: sempervirens}]}
   - {parameters: {c1: 0.3768846, c2: 1.5295796, c3: 1.0172503}, taxa: [{family: Fagaceae, genus: Quercus, species: ilex}]}
@@ -136,10 +127,7 @@ models:
   type: fixed_effects_set
   response: {i_bh_p: t ha-1 year-1}
   covariates: {rv_p: m2 m-2, hht_p: dm}
-  parameter_names:
-  - c1
-  - c2
-  - c3
+  prediction_function: c1 * hht_p * c3 * acos(sqrt(rv_p))^c2
   specifications:
   - {parameters: {c1: 0.2209653, c2: 0.277532, c3: 1.0}, taxa: [{family: Buxaceae, genus: Buxus, species: sempervirens}]}
   - {parameters: {c1: 0.0756024, c2: 1.0, c3: 1.0}, taxa: [{family: Fagaceae, genus: Quercus, species: ilex}]}
@@ -147,7 +135,7 @@ models:
   - {parameters: {c1: 0.04661061, c2: 1.0, c3: 1.0}, taxa: [{family: Ericaceae, genus: Rhododendron, species: ferrugineum}]}
   - {parameters: {c1: 0.1871867, c2: 1.0, c3: 1.0}, taxa: [{family: Ericaceae, genus: Erica, species: arborea}]}
   - {parameters: {c1: 0.788735, c2: 0.4639552, c3: 1.0}, taxa: [{family: Fabaceae, genus: Cytisus, species: oromediterraneus}]}
-  - {parameters: {c1: 18.900532, c2: -0.569899}, taxa: [{family: Fabaceae, genus: Cytisus, species: scoparius}]}
+  - {parameters: {c1: 18.900532, c2: -0.569899, c3: 1.614888}, taxa: [{family: Fabaceae, genus: Cytisus, species: scoparius}]}
   - {parameters: {c1: 0.1439749, c2: 1.0, c3: 1.0}, taxa: [{family: Fabaceae, genus: Retama, species: sphaerocarpa}]}
   - {parameters: {c1: 0.2278959, c2: 1.0, c3: 1.0}, taxa: [{family: Fabaceae, genus: Ulex, species: europaeus}]}
   - {parameters: {c1: 0.125447, c2: 1.0, c3: 1.0}, taxa: [{family: Fabaceae, genus: Ulex, species: parviflorous}]}
@@ -164,16 +152,14 @@ models:
   response: {i_bh_p: t ha-1 year-1}
   covariates: {rv_p: m2 m-2, hht_p: dm}
   parameters: {c1: -0.1694, c2: 0.3119, c3: 1.6414, c4: 0.6606}
-  equation: c4 * exp(c1) * rv_p^c2 * hht_p^c3
   taxa:
   - {family: Anacardiaceae, genus: Pistacia, species: lentiscus}
+  prediction_function: c4 * exp(c1) * rv_p^c2 * hht_p^c3
 - name: i_bh_p_3
   type: fixed_effects_set
   response: {i_bh_p: t ha-1}
   covariates: {ah_p: years}
-  parameter_names:
-  - c1
-  - c2
+  prediction_function: c1 * ah_p^c2
   specifications:
   - {parameters: {c1: 4.211, c2: 0.841}, taxa: [{family: Fagaceae, genus: Quercus, species: coccifera}]}
   - {parameters: {c1: 5.5262, c2: 0.5641}, taxa: [{family: Anacardiaceae, genus: Pistacia, species: lentiscus}]}

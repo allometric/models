@@ -14,7 +14,7 @@ models:
   response: {hst: m}
   covariates: {dsob: cm}
   parameters: {b_0: 51.9954, b_1: -0.0208, b_2: 1.0182}
-  equation: 1.37 + b_0 * (1 - exp(b_1 * dsob)^b_2)
+  prediction_function: 1.37 + b_0 * (1 - exp(b_1 * dsob)^b_2)
 - name: hst_2
   type: fixed_effects
   taxa:
@@ -24,7 +24,7 @@ models:
   response: {hst: m}
   covariates: {dsob: cm}
   parameters: {beta_0: 40.4218, beta_1: -0.0276, beta_2: 0.936, sigma_sq_b: 6.544, sigma_sq_epsilon: 2.693}
-  equation: 1.37 + (beta_0 + b_i) * (1 - exp(beta_1 * dsob)^beta_2)
+  prediction_function: 1.37 + (beta_0 + b_i) * (1 - exp(beta_1 * dsob)^beta_2)
 - name: hst_3
   type: fixed_effects
   taxa:
@@ -34,7 +34,7 @@ models:
   response: {hst: m}
   covariates: {dsob: cm}
   parameters: {beta_0: 41.8199, beta_1: -0.0241, beta_2: 0.8604}
-  equation: 1.37 + (beta_0 + b_0_i) * (1 - exp(beta_1 * dsob)^(beta_2 + b_2_i))
+  prediction_function: 1.37 + (beta_0 + b_0_i) * (1 - exp(beta_1 * dsob)^(beta_2 + b_2_i))
 - name: hst_4
   type: fixed_effects
   taxa:
@@ -45,7 +45,7 @@ models:
   covariates: {ccfl: m2 ha-1, gs_s: m2 ha-1, dsob: cm}
   covt_defs: {ccfl: crown competition factor of large trees}
   parameters: {beta_00: 43.7195, beta_01: 0.0644, beta_02: 0.128, beta_1: -0.0194, beta_2: 1.0805}
-  equation: 1.37 + (beta_00 + beta_01 * ccfl + beta_02 * gs_s) * (1 - exp(beta_1 * dsob)^beta_2)
+  prediction_function: 1.37 + (beta_00 + beta_01 * ccfl + beta_02 * gs_s) * (1 - exp(beta_1 * dsob)^beta_2)
 - name: hst_5
   type: fixed_effects
   taxa:
@@ -56,7 +56,7 @@ models:
   covariates: {ccfl: m2 ha-1, gs_s: m2 ha-1, dsob: cm}
   covt_defs: {ccfl: crown competition factor of large trees}
   parameters: {beta_00: 32.4635, beta_01: 0.0363, beta_02: 0.2585, beta_1: -0.021, beta_2: 0.9906}
-  equation: 1.37 + (beta_00 + beta_01 * ccfl + beta_02 * gs_s + b_i) * (1 - exp(beta_1 * dsob)^beta_2)
+  prediction_function: 1.37 + (beta_00 + beta_01 * ccfl + beta_02 * gs_s + b_i) * (1 - exp(beta_1 * dsob)^beta_2)
 - name: hst_6
   type: fixed_effects
   taxa:
@@ -67,4 +67,4 @@ models:
   covariates: {ccfl: m2 ha-1, gs_s: m2 ha-1, dsob: cm}
   covt_defs: {ccfl: crown competition factor of large trees}
   parameters: {beta_00: 35.7419, beta_01: 0.0431, beta_02: 0.2447, beta_1: -0.0184, beta_2: 0.961}
-  equation: 1.37 + (beta_00 + beta_01 * ccfl + beta_02 * gs_s + b_0_i) * (1 - exp(beta_1 * dsob)^(beta_2 + b_2_i))
+  prediction_function: 1.37 + (beta_00 + beta_01 * ccfl + beta_02 * gs_s + b_0_i) * (1 - exp(beta_1 * dsob)^(beta_2 + b_2_i))

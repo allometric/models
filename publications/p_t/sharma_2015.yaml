@@ -9,9 +9,7 @@ models:
   type: fixed_effects_set
   response: {hst: m}
   covariates: {dsob: cm}
-  parameter_names:
-  - b_1
-  - b_2
+  prediction_function: 1.3 + (dsob/(b_1 + b_2 * dsob))^3
   specifications:
   - {parameters: {b_1: 2.2131, b_2: 0.3046}, taxa: [{family: Pinaceae, genus: Picea, species: abies}]}
   - {parameters: {b_1: 2.2845, b_2: 0.3318}, taxa: [{family: Pinaceae, genus: Pinus, species: sylvestris}]}

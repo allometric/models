@@ -13,9 +13,7 @@ models:
     species: citriodora
   response: {bt: kg}
   covariates: {dsob: cm}
-  parameter_names:
-  - alpha
-  - beta
+  prediction_function: alpha * dsob^beta
   specifications:
   - {parameters: {alpha: 0.0822, beta: 2.64134}, descriptors: {equation_no: '3'}}
   - {parameters: {alpha: 0.10606, beta: 2.56803}, descriptors: {equation_no: '10'}}
@@ -27,9 +25,7 @@ models:
     species: citriodora
   response: {bt: kg}
   covariates: {hst: m}
-  parameter_names:
-  - alpha
-  - beta
+  prediction_function: alpha * hst^beta
   specifications:
   - {parameters: {alpha: 0.00622, beta: 3.49873}, descriptors: {equation_no: '4'}}
   - {parameters: {alpha: 0.00027, beta: 4.45063}, descriptors: {equation_no: '11'}}
@@ -42,8 +38,8 @@ models:
   response: {bt: kg}
   covariates: {dsob: cm, hst: m}
   parameters: {alpha: 0.05251, beta: 2.40238, beta_1: 0.38285}
-  equation: alpha * dsob^beta * hst^beta_1
   descriptors: {equation_no: '5'}
+  prediction_function: alpha * dsob^beta * hst^beta_1
 - name: bt_4
   type: fixed_effects
   taxa:
@@ -53,8 +49,8 @@ models:
   response: {bt: kg}
   covariates: {dsob: cm, hst: m}
   parameters: {alpha: 0.02533, beta: 1.00656}
-  equation: alpha * (dsob^2 * hst)^beta
   descriptors: {equation_no: '6'}
+  prediction_function: alpha * (dsob^2 * hst)^beta
 - name: bt_5
   type: fixed_effects
   taxa:
@@ -64,8 +60,8 @@ models:
   response: {bt: kg}
   covariates: {dsob: cm, rws: kg m-3}
   parameters: {alpha: 0.05252, beta: 2.40266, beta_1: 0.38253}
-  equation: alpha * dsob^beta * rws^beta_1
   descriptors: {equation_no: '7'}
+  prediction_function: alpha * dsob^beta * rws^beta_1
 - name: bt_6
   type: fixed_effects
   taxa:
@@ -75,8 +71,8 @@ models:
   response: {bt: kg}
   covariates: {dsob: cm, hst: m, rws: kg m-3}
   parameters: {alpha: 0.00233, beta: 2.42585, beta_1: 0.30576, beta_2: 0.4989}
-  equation: alpha * dsob^beta + hst^beta_1 + rws^beta_2
   descriptors: {equation_no: '8'}
+  prediction_function: alpha * dsob^beta + hst^beta_1 + rws^beta_2
 - name: bt_7
   type: fixed_effects
   taxa:
@@ -86,8 +82,8 @@ models:
   response: {bt: kg}
   covariates: {dsob: cm, hst: m, rws: kg m-3}
   parameters: {alpha: 4.0e-05, beta: 0.99037}
-  equation: alpha * (dsob^2 * hst * rws)^beta
   descriptors: {equation_no: '9'}
+  prediction_function: alpha * (dsob^2 * hst * rws)^beta
 - name: bt_8
   type: fixed_effects
   taxa:
@@ -97,8 +93,8 @@ models:
   response: {bt: kg}
   covariates: {dc: m}
   parameters: {alpha: 33.24309, beta: 1.61825}
-  equation: alpha * dc^beta
   descriptors: {equation_no: '12'}
+  prediction_function: alpha * dc^beta
 - name: bt_9
   type: fixed_effects
   taxa:
@@ -108,8 +104,8 @@ models:
   response: {bt: kg}
   covariates: {dsob: cm, dc: m}
   parameters: {alpha: 2.30247, beta: 1.07425}
-  equation: alpha * dsob^beta * dc^beta_1
   descriptors: {equation_no: '13'}
+  prediction_function: alpha * dsob^beta * dc^beta_1
 - name: bt_10
   type: fixed_effects
   taxa:
@@ -119,8 +115,8 @@ models:
   response: {bt: kg}
   covariates: {dsob: cm, hst: m, dc: m}
   parameters: {alpha: 0.05153, beta: 2.18627, beta_1: 0.54648, beta_2: 0.11719}
-  equation: alpha * dsob^beta * hst^beta_1 * dc^beta_2
   descriptors: {equation_no: '14'}
+  prediction_function: alpha * dsob^beta * hst^beta_1 * dc^beta_2
 - name: bt_11
   type: fixed_effects
   taxa:
@@ -130,8 +126,8 @@ models:
   response: {bt: kg}
   covariates: {dsob: cm, hst: m, dc: m}
   parameters: {alpha: 0.19568, beta: 0.68009}
-  equation: alpha * (dsob^2 * hst * dc)^beta
   descriptors: {equation_no: '15'}
+  prediction_function: alpha * (dsob^2 * hst * dc)^beta
 - name: bt_12
   type: fixed_effects
   taxa:
@@ -141,8 +137,8 @@ models:
   response: {bt: kg}
   covariates: {dsob: cm, hst: m, rws: kg m-3, dc: m}
   parameters: {alpha: 0.00079, beta: 2.07194, beta_1: 0.69202, beta_2: 0.60292, beta_3: 0.18009}
-  equation: alpha * dsob^beta * hst^beta_1 * rws^beta_2 * dc^beta_3
   descriptors: {equation_no: '16'}
+  prediction_function: alpha * dsob^beta * hst^beta_1 * rws^beta_2 * dc^beta_3
 - name: bt_13
   type: fixed_effects
   taxa:
@@ -152,8 +148,8 @@ models:
   response: {bt: kg}
   covariates: {dsob: cm, hst: m, rws: kg m-3, dc: m}
   parameters: {alpha: 0.00156, beta: 0.69886}
-  equation: alpha * (dsob^2 * hst * rws * dc)^beta
   descriptors: {equation_no: '17'}
+  prediction_function: alpha * (dsob^2 * hst * rws * dc)^beta
 - name: bt_14
   type: fixed_effects
   taxa:
@@ -163,8 +159,8 @@ models:
   response: {bt: kg}
   covariates: {vc: cm3}
   parameters: {alpha: 15.35139, beta: 0.53941}
-  equation: alpha * vc^beta
   descriptors: {equation_no: '18'}
+  prediction_function: alpha * vc^beta
 - name: bt_15
   type: fixed_effects
   taxa:
@@ -174,8 +170,8 @@ models:
   response: {bt: kg}
   covariates: {dsob: cm, vc: cm3}
   parameters: {alpha: 0.09881, beta: 2.61161}
-  equation: alpha * dsob^beta * vc^beta_1
   descriptors: {equation_no: '19'}
+  prediction_function: alpha * dsob^beta * vc^beta_1
 - name: bt_16
   type: fixed_effects
   taxa:
@@ -185,8 +181,8 @@ models:
   response: {bt: kg}
   covariates: {dsob: cm, hst: m, vc: cm3}
   parameters: {alpha: 0.04872, beta: 2.18625, beta_1: 0.5465, beta_2: 0.03907}
-  equation: alpha * dsob^beta * hst^beta_1 * vc^beta_2
   descriptors: {equation_no: '20'}
+  prediction_function: alpha * dsob^beta * hst^beta_1 * vc^beta_2
 - name: bt_17
   type: fixed_effects
   taxa:
@@ -196,8 +192,8 @@ models:
   response: {bt: kg}
   covariates: {dsob: cm, hst: m, vc: cm3}
   parameters: {alpha: 0.95382, beta: 0.38323}
-  equation: alpha * (dsob^2 * hst * vc)^beta
   descriptors: {equation_no: '21'}
+  prediction_function: alpha * (dsob^2 * hst * vc)^beta
 - name: bt_18
   type: fixed_effects
   taxa:
@@ -207,8 +203,8 @@ models:
   response: {bt: kg}
   covariates: {dsob: cm, hst: m, rws: kg m-3, vc: cm3}
   parameters: {alpha: 0.00072, beta: 2.07191, beta_1: 0.69205, beta_2: 0.60293, beta_3: 0.06004}
-  equation: alpha * dsob^beta * hst^beta_1 * rws^beta_2 * vc^beta_3
   descriptors: {equation_no: '22'}
+  prediction_function: alpha * dsob^beta * hst^beta_1 * rws^beta_2 * vc^beta_3
 - name: bt_19
   type: fixed_effects
   taxa:
@@ -218,5 +214,5 @@ models:
   response: {bt: kg}
   covariates: {dsob: cm, hst: m, rws: kg m-3, vc: cm3}
   parameters: {alpha: 0.06581, beta: 0.38942}
-  equation: alpha * (dsob^2 * hst * rws * vc)^beta
   descriptors: {equation_no: '23'}
+  prediction_function: alpha * (dsob^2 * hst * rws * vc)^beta

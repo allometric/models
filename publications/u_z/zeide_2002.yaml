@@ -13,4 +13,4 @@ models:
   covariates: {dsob_s: in}
   covt_defs: {dsob_s: Quadratic mean diameter}
   parameters: {a: 9.4734, b: 0.7374}
-  equation: a * dsob_s^b
+  prediction_function: a * dsob_s^b

@@ -9,10 +9,7 @@ models:
   type: fixed_effects_set
   response: {vsoa: ft3}
   covariates: {dsoc: in, hst: ft}
-  parameter_names:
-  - beta_0
-  - beta_1
-  - beta_2
+  prediction_function: X <- dsoc^2 * hst/1000; beta_0 + beta_1 * X + beta_2 * X^2
   specifications:
   - {parameters: {beta_0: -0.129, beta_1: 2.0255, beta_2: 0.1011}, descriptors: {species_group: juniper, X_threshold: <= 6, single_stem: false}, taxa: [{family: Cupressaceae, genus: Juniperus, species: osteosperma}, {family: Cupressaceae, genus: Juniperus, species: monosperma}]}
   - {parameters: {beta_0: -0.032, beta_1: 2.1076, beta_2: 0.1454}, descriptors: {species_group: juniper, X_threshold: <= 6, single_stem: true}, taxa: [{family: Cupressaceae, genus: Juniperus, species: osteosperma}, {family: Cupressaceae, genus: Juniperus, species: monosperma}]}
@@ -25,10 +22,7 @@ models:
   type: fixed_effects_set
   response: {vsoa: ft3}
   covariates: {dsoc: in, hst: ft}
-  parameter_names:
-  - beta_3
-  - beta_1
-  - beta_4
+  prediction_function: X <- dsoc^2 * hst/1000; beta_3 + beta_1 * X + beta_4/X
   specifications:
   - {parameters: {beta_3: 10.786, beta_1: 2.0255, beta_4: -43.663}, descriptors: {species_group: juniper, X_threshold: '> 6', single_stem: false}, taxa: [{family: Cupressaceae, genus: Juniperus, species: osteosperma}, {family: Cupressaceae, genus: Juniperus, species: monosperma}]}
   - {parameters: {beta_3: 15.675, beta_1: 2.1076, beta_4: -62.827}, descriptors: {species_group: juniper, X_threshold: '> 6', single_stem: true}, taxa: [{family: Cupressaceae, genus: Juniperus, species: osteosperma}, {family: Cupressaceae, genus: Juniperus, species: monosperma}]}

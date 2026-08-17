@@ -13,9 +13,7 @@ models:
     species: ponderosa
   response: {vsom: ft3}
   covariates: {dsob: in, hst: ft}
-  parameter_names:
-  - a
-  - b
+  prediction_function: a + b * dsob^2 * hst
   specifications:
   - {parameters: {a: 0.030288, b: 0.002213}, descriptors: {d2h: <= 6000}}
   - {parameters: {a: -1.557103, b: 0.002474}, descriptors: {d2h: '> 6000'}}
@@ -29,9 +27,7 @@ models:
     species: ponderosa
   response: {vsom: board_foot}
   covariates: {dsob: in, hst: ft}
-  parameter_names:
-  - a
-  - b
+  prediction_function: a + b * dsob^2 * hst
   specifications:
   - {parameters: {a: -34.16717, b: 0.012331}, descriptors: {bdft_rule: Scribner, d2h: <= 16000}}
   - {parameters: {a: -99.21272, b: 0.016318}, descriptors: {bdft_rule: Scribner, d2h: '> 16000'}}
@@ -46,9 +42,7 @@ models:
   response: {vsom: board_foot}
   covariates: {dsob: in, hsm: ft}
   covt_defs: {hsm: Number of 16-foot logs to 8-inch top}
-  parameter_names:
-  - a
-  - b
+  prediction_function: a + b * dsob^2 * hsm
   specifications:
   - {parameters: {a: 1.7378, b: 0.264275}, descriptors: {bdft_rule: Scribner, d2h: <= 1200}}
   - {parameters: {a: -56.18807, b: 0.312659}, descriptors: {bdft_rule: Scribner, d2h: '> 1200'}}
@@ -62,9 +56,7 @@ models:
     species: ponderosa
   response: {rsvg: ft3 ft-2}
   covariates: {dsob: in, hst: ft}
-  parameter_names:
-  - a
-  - b
+  prediction_function: a * hst + b/dsob^2
   specifications:
   - {parameters: {a: -189.2734, b: 0.4212}, descriptors: {tree_size: small}}
   - {parameters: {a: -413.9575, b: 0.4413}, descriptors: {tree_size: large}}
@@ -76,9 +68,7 @@ models:
     species: ponderosa
   response: {rsvg: board_foot ft-2}
   covariates: {dsob: in, hst: ft}
-  parameter_names:
-  - a
-  - b
+  prediction_function: a * hst + b/dsob^2
   specifications:
   - {parameters: {a: 2.609, b: -6264.6076}, descriptors: {bdft_rule: Scribner, tree_size: small}}
   - {parameters: {a: 2.9919, b: -18190.8177}, descriptors: {bdft_rule: Scribner, tree_size: large}}
@@ -93,9 +83,7 @@ models:
   response: {rsvg: board_foot ft-2}
   covariates: {dsob: in, hsm: ft}
   covt_defs: {hsm: Number of 16-foot logs to 8-inch top}
-  parameter_names:
-  - a
-  - b
+  prediction_function: a * hsm + b/dsob^2
   specifications:
   - {parameters: {a: 48.4538, b: 318.6285}, descriptors: {bdft_rule: Scribner, tree_size: small}}
   - {parameters: {a: 57.3247, b: -10302.1764}, descriptors: {bdft_rule: Scribner, tree_size: large}}

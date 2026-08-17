@@ -14,7 +14,7 @@ models:
   response: {vsio: m3}
   covariates: {dsib: cm, hso: m, hsdip75: m}
   parameters: {kb_0: 1.4599e-05, kb_1: 5.2801e-05}
-  equation: kb_0 * (dsib)^2 * hso + kb_1 * (dsib)^2 * (hsdip75 - 1.37)
+  prediction_function: kb_0 * (dsib)^2 * hso + kb_1 * (dsib)^2 * (hsdip75 - 1.37)
 - name: vsio_2
   type: fixed_effects
   taxa:
@@ -24,7 +24,7 @@ models:
   response: {vsio: m3}
   covariates: {dsib: cm, hso: m, hsdop67: m}
   parameters: {kb_0: 1.0912e-05, kb_1: 5.161e-05}
-  equation: kb_0 * (dsib)^2 * hso + kb_1 * (dsib)^2 * (hsdop67 - 1.37)
+  prediction_function: kb_0 * (dsib)^2 * hso + kb_1 * (dsib)^2 * (hsdop67 - 1.37)
 - name: vsio_3
   type: fixed_effects
   taxa:
@@ -34,4 +34,4 @@ models:
   response: {vsio: m3}
   covariates: {dsob: cm, hso: m, hsdop67: m}
   parameters: {k: 7.854e-05, a: 0.0067803, b: -0.042807, c: 0.067566, d: 0.065611, e: -0.41423, f: 0.6538}
-  equation: k * (a * hso + b * dsob * hso + c * dsob^2 * hso + d * (hsdop67 - 1.37)) + e * dsob * (hsdop67 - 1.37) + f * dsob^2 * (hsdop67 - 1.37)
+  prediction_function: k * (a * hso + b * dsob * hso + c * dsob^2 * hso + d * (hsdop67 - 1.37)) + e * dsob * (hsdop67 - 1.37) + f * dsob^2 * (hsdop67 - 1.37)

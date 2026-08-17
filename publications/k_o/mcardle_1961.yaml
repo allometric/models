@@ -13,11 +13,7 @@ models:
     species: menziesii
   response: {hstix50: ft}
   covariates: {hst: ft, atb: years}
-  parameter_names:
-  - a
-  - b
-  - c
-  - d
+  prediction_function: exp(a + (b * log(atb))) * (c * hst + d)
   specifications:
   - {parameters: {a: 3.3, b: -0.8, c: 0.96, d: -2.66}, descriptors: {age_class: < 40}}
   - {parameters: {a: 2.1, b: -0.47, c: 0.96, d: -2.66}, descriptors: {age_class: '>= 40'}}

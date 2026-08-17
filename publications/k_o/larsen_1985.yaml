@@ -9,9 +9,7 @@ models:
   type: fixed_effects_set
   response: {dsib: in}
   covariates: {dsob: in}
-  parameter_names:
-  - b1
-  - b2
+  prediction_function: b1 * (dsob)^b2
   specifications:
   - {parameters: {b1: 0.903563, b2: 0.989388}, taxa: [{family: Pinaceae, genus: Pseudotsuga, species: menziesii}]}
   - {parameters: {b1: 0.90497, b2: 1.0}, taxa: [{family: Pinaceae, genus: Abies, species: grandis}, {family: Pinaceae, genus: Abies, species: concolor}]}

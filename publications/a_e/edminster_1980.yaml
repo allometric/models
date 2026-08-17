@@ -14,7 +14,7 @@ models:
   response: {vsia: ft3}
   covariates: {dsob: in, hst: ft}
   parameters: {a: 0.0, b: 0.00226}
-  equation: a + b * dsob^2 * hst
+  prediction_function: a + b * dsob^2 * hst
 - name: vsim
   type: fixed_effects
   taxa:
@@ -24,4 +24,4 @@ models:
   response: {vsim: ft3}
   covariates: {dsob: in, hst: ft}
   parameters: {a: -0.4467, b: 0.00216}
-  equation: a + b * dsob^2 * hst
+  prediction_function: a + b * dsob^2 * hst

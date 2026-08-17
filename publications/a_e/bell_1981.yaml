@@ -14,4 +14,4 @@ models:
   response: {vsia: ft3}
   covariates: {dsob: in, hst: ft}
   parameters: {a: -2.956054, b: 1.8140497, c: 1.2744923}
-  equation: 10^a * dsob^b * hst^c
+  prediction_function: 10^a * dsob^b * hst^c

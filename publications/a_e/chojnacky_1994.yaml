@@ -9,10 +9,7 @@ models:
   type: fixed_effects_set
   response: {vsoa: ft3}
   covariates: {dsoc: in, hst: ft}
-  parameter_names:
-  - beta_0
-  - beta_1
-  - beta_2
+  prediction_function: X <- dsoc^2 * hst/1000; beta_0 + beta_1 * X + beta_2 * X^2
   specifications:
   - {parameters: {beta_0: 0.0255, beta_1: 1.7479, beta_2: 0.1994}, descriptors: {min_branch_dia: 1.5, X_0: 4.0021}, taxa: [{family: Cupressaceae, genus: Juniperus, species: deppeana}, {family: Cupressaceae, genus: Juniperus, species: scopulorum}]}
   - {parameters: {beta_0: -0.0601, beta_1: 1.3846, beta_2: 0.1566}, descriptors: {min_branch_dia: 3, X_0: 5.2101}, taxa: [{family: Cupressaceae, genus: Juniperus, species: deppeana}, {family: Cupressaceae, genus: Juniperus, species: scopulorum}]}
@@ -24,11 +21,7 @@ models:
   type: fixed_effects_set
   response: {vsoa: ft3}
   covariates: {dsoc: in, hst: ft}
-  parameter_names:
-  - beta_0
-  - beta_1
-  - beta_2
-  - X_0
+  prediction_function: X <- dsoc^2 * hst/1000; beta_0 + beta_1 * X + beta_2 * (3 * X_0^2 - 2 * X_0^3/X)
   specifications:
   - {parameters: {beta_0: 0.0255, beta_1: 1.7479, beta_2: 0.1994, X_0: 4.0021}, descriptors: {min_branch_dia: 1.5}, taxa: [{family: Cupressaceae, genus: Juniperus, species: deppeana}, {family: Cupressaceae, genus: Juniperus, species: scopulorum}]}
   - {parameters: {beta_0: -0.0601, beta_1: 1.3846, beta_2: 0.1566, X_0: 5.2101}, descriptors: {min_branch_dia: 3}, taxa: [{family: Cupressaceae, genus: Juniperus, species: deppeana}, {family: Cupressaceae, genus: Juniperus, species: scopulorum}]}

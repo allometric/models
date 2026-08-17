@@ -10,11 +10,7 @@ models:
   response: {vsia: ft3}
   covariates: {hstix50: ft, dsob: in}
   covt_defs: {hstix50: Site index at an un-specified base age.}
-  parameter_names:
-  - b_1
-  - b_2
-  - b_3
-  - b_4
+  prediction_function: b_1 * hstix50^b_2 * (1 - exp(b_3 * dsob^b_4))
   specifications:
   - {parameters: {b_1: 122.77, b_2: 0.4148, b_3: -2.397e-05, b_4: 2.724}, taxa: [{family: Pinaceae, genus: Pinus, species: resinosa}, {family: Pinaceae, genus: Pinus, species: strobus}, {family: Pinaceae, genus: Pinus, species: banksiana}, {family: Pinaceae, genus: Pinus, species: sylvestris}]}
   - {parameters: {b_1: 122.58, b_2: 0.2068, b_3: -5.767e-05, b_4: 2.772}, taxa: [{family: Pinaceae, genus: Pinus, species: echinata}, {family: Pinaceae, genus: Pinus, species: virginiana}, {family: Pinaceae, genus: Pinus, species: taeda}]}
@@ -44,11 +40,7 @@ models:
   response: {vsia: board_foot}
   covariates: {hstix50: ft, dsob: in}
   covt_defs: {hstix50: Site index at an un-specified base age.}
-  parameter_names:
-  - b_1
-  - b_2
-  - b_3
-  - b_4
+  prediction_function: b_1 * hstix50^b_2 * (1 - exp(b_3 * dsob^b_4))
   specifications:
   - {parameters: {b_1: 925.5, b_2: 0.264, b_3: -1.818e-05, b_4: 2.926}, taxa: [{family: Pinaceae, genus: Pinus, species: resinosa}, {family: Pinaceae, genus: Pinus, species: strobus}, {family: Pinaceae, genus: Pinus, species: banksiana}, {family: Pinaceae, genus: Pinus, species: sylvestris}]}
   - {parameters: {b_1: 815.5, b_2: 0.1327, b_3: -4.169e-05, b_4: 2.931}, taxa: [{family: Pinaceae, genus: Pinus, species: echinata}, {family: Pinaceae, genus: Pinus, species: virginiana}, {family: Pinaceae, genus: Pinus, species: taeda}]}

@@ -14,4 +14,4 @@ models:
   response: {hstix100: ft}
   covariates: {hst: ft, att: years}
   parameters: {a: -0.0968, b: 0.02679, c: -9.309e-05}
-  equation: hst/(a + b * att + c * att^2)
+  prediction_function: hst/(a + b * att + c * att^2)

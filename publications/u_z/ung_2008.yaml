@@ -9,9 +9,7 @@ models:
   type: fixed_effects_set
   response: {bs: kg}
   covariates: {dsob: cm}
-  parameter_names:
-  - bwood1
-  - bwood2
+  prediction_function: bwood1 * dsob^bwood2
   specifications:
   - {parameters: {bwood1: 0.025036, bwood2: 2.637781}, region: [CA-AB, CA-BC], descriptors: {na_genus: false}, taxa: [{family: Pinaceae, genus: Abies, species: lasiocarpa}]}
   - {parameters: {bwood1: 0.0494, bwood2: 2.5025}, region: [CA-AB, CA-BC, CA-MB, CA-NL, CA-NS, CA-NT, CA-ON, CA-QC, CA-SK, CA-YT], descriptors: {na_genus: false}, taxa: [{family: Pinaceae, genus: Picea, species: mariana}]}
@@ -33,10 +31,7 @@ models:
   type: fixed_effects_set
   response: {bs: kg}
   covariates: {dsob: cm, hst: m}
-  parameter_names:
-  - bwood1
-  - bwood2
-  - bwood3
+  prediction_function: bwood1 * dsob^bwood2 * hst^bwood3
   specifications:
   - {parameters: {bwood1: 0.022, bwood2: 1.6469, bwood3: 1.1714}, region: [CA-AB, CA-BC], descriptors: {na_genus: false}, taxa: [{family: Pinaceae, genus: Abies, species: lasiocarpa}]}
   - {parameters: {bwood1: 0.0335, bwood2: 1.7389, bwood3: 0.9835}, region: [CA-AB, CA-BC, CA-MB, CA-NL, CA-NS, CA-NT, CA-ON, CA-QC, CA-SK, CA-YT], descriptors: {na_genus: false}, taxa: [{family: Pinaceae, genus: Picea, species: mariana}]}
@@ -58,9 +53,7 @@ models:
   type: fixed_effects_set
   response: {bk: kg}
   covariates: {dsob: cm}
-  parameter_names:
-  - bbark1
-  - bbark2
+  prediction_function: bbark1 * dsob^bbark2
   specifications:
   - {parameters: {bbark1: 0.006119, bbark2: 2.537534}, region: [CA-AB, CA-BC], descriptors: {na_genus: false}, taxa: [{family: Pinaceae, genus: Abies, species: lasiocarpa}]}
   - {parameters: {bbark1: 0.0148, bbark2: 2.2494}, region: [CA-AB, CA-BC, CA-MB, CA-NL, CA-NS, CA-NT, CA-ON, CA-QC, CA-SK, CA-YT], descriptors: {na_genus: false}, taxa: [{family: Pinaceae, genus: Picea, species: mariana}]}
@@ -82,10 +75,7 @@ models:
   type: fixed_effects_set
   response: {bk: kg}
   covariates: {dsob: cm, hst: m}
-  parameter_names:
-  - bbark1
-  - bbark2
-  - bbark3
+  prediction_function: bbark1 * dsob^bbark2 * hst^bbark3
   specifications:
   - {parameters: {bbark1: 0.0061, bbark2: 1.8603, bbark3: 0.7693}, region: [CA-AB, CA-BC], descriptors: {na_genus: false}, taxa: [{family: Pinaceae, genus: Abies, species: lasiocarpa}]}
   - {parameters: {bbark1: 0.0132, bbark2: 1.7657, bbark3: 0.5775}, region: [CA-AB, CA-BC, CA-MB, CA-NL, CA-NS, CA-NT, CA-ON, CA-QC, CA-SK, CA-YT], descriptors: {na_genus: false}, taxa: [{family: Pinaceae, genus: Picea, species: mariana}]}
@@ -107,9 +97,7 @@ models:
   type: fixed_effects_set
   response: {bb: kg}
   covariates: {dsob: cm}
-  parameter_names:
-  - bbranches1
-  - bbranches2
+  prediction_function: bbranches1 * dsob^bbranches2
   specifications:
   - {parameters: {bbranches1: 0.017837, bbranches2: 2.425492}, region: [CA-AB, CA-BC], descriptors: {na_genus: false}, taxa: [{family: Pinaceae, genus: Abies, species: lasiocarpa}]}
   - {parameters: {bbranches1: 0.0291, bbranches2: 2.0751}, region: [CA-AB, CA-BC, CA-MB, CA-NL, CA-NS, CA-NT, CA-ON, CA-QC, CA-SK, CA-YT], descriptors: {na_genus: false}, taxa: [{family: Pinaceae, genus: Picea, species: mariana}]}
@@ -131,10 +119,7 @@ models:
   type: fixed_effects_set
   response: {bb: kg}
   covariates: {dsob: cm, hst: m}
-  parameter_names:
-  - bbranches1
-  - bbranches2
-  - bbranches3
+  prediction_function: bbranches1 * dsob^bbranches2 * hst^bbranches3
   specifications:
   - {parameters: {bbranches1: 0.0265, bbranches2: 3.6747, bbranches3: -1.5958}, region: [CA-AB, CA-BC], descriptors: {na_genus: false}, taxa: [{family: Pinaceae, genus: Abies, species: lasiocarpa}]}
   - {parameters: {bbranches1: 0.0405, bbranches2: 3.1917, bbranches3: -1.3674}, region: [CA-AB, CA-BC, CA-MB, CA-NL, CA-NS, CA-NT, CA-ON, CA-QC, CA-SK, CA-YT], descriptors: {na_genus: false}, taxa: [{family: Pinaceae, genus: Picea, species: mariana}]}
@@ -156,9 +141,7 @@ models:
   type: fixed_effects_set
   response: {bf: kg}
   covariates: {dsob: cm}
-  parameter_names:
-  - bfoliage1
-  - bfoliage2
+  prediction_function: bfoliage1 * dsob^bfoliage2
   specifications:
   - {parameters: {bfoliage1: 0.041575, bfoliage2: 2.013012}, region: [CA-AB, CA-BC], descriptors: {na_genus: false}, taxa: [{family: Pinaceae, genus: Abies, species: lasiocarpa}]}
   - {parameters: {bfoliage1: 0.1631, bfoliage2: 1.4222}, region: [CA-AB, CA-BC, CA-MB, CA-NL, CA-NS, CA-NT, CA-ON, CA-QC, CA-SK, CA-YT], descriptors: {na_genus: false}, taxa: [{family: Pinaceae, genus: Picea, species: mariana}]}
@@ -180,10 +163,7 @@ models:
   type: fixed_effects_set
   response: {bf: kg}
   covariates: {dsob: cm, hst: m}
-  parameter_names:
-  - bfoliage1
-  - bfoliage2
-  - bfoliage3
+  prediction_function: bfoliage1 * dsob^bfoliage2 * hst^bfoliage3
   specifications:
   - {parameters: {bfoliage1: 0.0509, bfoliage2: 2.9909, bfoliage3: -1.2271}, region: [CA-AB, CA-BC], descriptors: {na_genus: false}, taxa: [{family: Pinaceae, genus: Abies, species: lasiocarpa}]}
   - {parameters: {bfoliage1: 0.2078, bfoliage2: 2.5517, bfoliage3: -1.3453}, region: [CA-AB, CA-BC, CA-MB, CA-NL, CA-NS, CA-NT, CA-ON, CA-QC, CA-SK, CA-YT], descriptors: {na_genus: false}, taxa: [{family: Pinaceae, genus: Picea, species: mariana}]}

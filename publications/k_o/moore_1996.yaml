@@ -9,15 +9,13 @@ models:
   type: fixed_effects_set
   response: {hst: ft}
   covariates: {dsob: in}
-  parameter_names:
-  - a
-  - b
+  prediction_function: 4.5 + exp(a + (b/(dsob + 1)))
   specifications:
   - {parameters: {a: 5.3004, b: -12.4386}, taxa: [{family: Pinaceae, genus: Pinus, species: monticola}]}
   - {parameters: {a: 5.2554, b: -11.276}, taxa: [{family: Pinaceae, genus: Larix, species: occidentalis}]}
   - {parameters: {a: 5.0207, b: -9.8882}, taxa: [{family: Pinaceae, genus: Pseudotsuga, species: menziesii}]}
   - {parameters: {a: 5.1472, b: -10.3828}, taxa: [{family: Pinaceae, genus: Abies, species: grandis}]}
-  - {parameters: {b: -8.0119}, taxa: [{family: Pinaceae, genus: Tsuga, species: heterophylla}]}
+  - {parameters: {b: -8.0119, a: 4.9079}, taxa: [{family: Pinaceae, genus: Tsuga, species: heterophylla}]}
   - {parameters: {a: 5.1039, b: -14.5886}, taxa: [{family: Cupressaceae, genus: Thuja, species: plicata}]}
   - {parameters: {a: 4.7979, b: -7.5469}, taxa: [{family: Pinaceae, genus: Pinus, species: contorta}]}
   - {parameters: {a: 5.1282, b: -12.768}, taxa: [{family: Pinaceae, genus: Picea, species: engelmannii}]}
@@ -27,10 +25,7 @@ models:
   type: fixed_effects_set
   response: {hst: ft}
   covariates: {dsob: in}
-  parameter_names:
-  - a
-  - b
-  - c
+  prediction_function: 4.5 + a * exp(-b * dsob^(-c))
   specifications:
   - {parameters: {a: 267.4, b: 6.2339, c: 0.6493}, taxa: [{family: Pinaceae, genus: Pinus, species: monticola}]}
   - {parameters: {a: 1286.04, b: 5.4879, c: 0.2623}, taxa: [{family: Pinaceae, genus: Larix, species: occidentalis}]}

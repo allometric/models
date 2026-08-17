@@ -9,10 +9,7 @@ models:
   type: fixed_effects_set
   response: {dcm: feet}
   covariates: {dsob: in}
-  parameter_names:
-  - a0
-  - a1
-  - a2
+  prediction_function: a0 + a1 * dsob + a2 * dsob^2
   specifications:
   - {parameters: {a0: 3.3625, a1: 2.0303, a2: -0.0073307}, taxa: [{family: Fagaceae, genus: Quercus, species: kelloggii}]}
   - {parameters: {a0: 2.9794, a1: 1.5512, a2: -0.014161}, taxa: [{family: Fagaceae, genus: Chrysolepis, species: chrysophylla}]}

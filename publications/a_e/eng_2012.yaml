@@ -9,10 +9,7 @@ models:
   type: fixed_effects_set
   response: {hst: ft}
   covariates: {dsob: in}
-  parameter_names:
-  - a
-  - b
-  - c
+  prediction_function: 4.5 + exp(a + b * dsob^c)
   specifications:
   - {parameters: {a: 5.6911, b: -7.3644, c: -0.6294}, taxa: [{family: Cupressaceae, genus: Sequoia, species: sempervirens}]}
   - {parameters: {a: 5.9429, b: -6.2041, c: -0.5531}, taxa: [{family: Pinaceae, genus: Pseudotsuga, species: meniziesii}]}
@@ -22,10 +19,7 @@ models:
   type: fixed_effects_set
   response: {hst: ft}
   covariates: {dsob: in}
-  parameter_names:
-  - a
-  - b
-  - c
+  prediction_function: a * (1 - exp(b * dsob^c))
   specifications:
   - {parameters: {a: 162.7225, b: -0.05723, c: 0.9763}, taxa: [{family: Pinaceae, genus: Tsuga, species: heterophylla}]}
   - {parameters: {a: 68.9322, b: -0.1767, c: 0.8723}, taxa: [{family: Ericaceae, genus: Arbutus, species: meniziesii}]}
@@ -34,11 +28,7 @@ models:
   response: {hst: ft}
   covariates: {asc: '', dsob: in}
   covt_defs: {asc: 'Aggregated site class, 1 denotes site class II or better, 0 denotes site class III or worse.'}
-  parameter_names:
-  - b
-  - c
-  - a_0
-  - a_1
+  prediction_function: a_0 + a_1 * asc + b * dsob^c
   specifications:
   - {parameters: {b: -7.7612, c: -0.6782, a_0: 5.5535, a_1: 0.0775}, taxa: [{family: Cupressaceae, genus: Sequoia, species: sempervirens}]}
   - {parameters: {b: -6.6508, c: -0.6601, a_0: 5.6268, a_1: 0.1138}, taxa: [{family: Pinaceae, genus: Pseudotsuga, species: meniziesii}]}
@@ -49,12 +39,7 @@ models:
   response: {hst: ft}
   covariates: {asc: '', rc: ft ft-1, dsob: in}
   covt_defs: {asc: 'Aggregated site class, 1 denotes site class II or better, 0 denotes site class III or worse.'}
-  parameter_names:
-  - b
-  - c
-  - a_0
-  - a_1
-  - a_2
+  prediction_function: 4.5 + exp(a_0 + a_1 * asc + a_2 * rc + b * dsob^c)
   specifications:
   - {parameters: {b: -6.812, c: -0.5656, a_0: 5.9093, a_1: 0.0753, a_2: -0.0036}, taxa: [{family: Cupressaceae, genus: Sequoia, species: sempervirens}]}
   - {parameters: {b: -6.2817, c: -0.6101, a_0: 5.8146, a_1: 0.111, a_2: -0.0027}, taxa: [{family: Pinaceae, genus: Pseudotsuga, species: meniziesii}]}

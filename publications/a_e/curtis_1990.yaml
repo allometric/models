@@ -14,4 +14,4 @@ models:
   response: {hstix50: ft}
   covariates: {hst: ft, atb: years}
   parameters: {a: -2.608801, b: -0.715601, c: 0.408404, d: 0.138199}
-  equation: log_50 <- log(50); log_atb <- log(atb); exp(a * (log_atb - log_50) + b * (log_atb - log_50)^2) * hst^(1 + c * (log_atb - log_50) + d * (log_atb - log_50)^2)
+  prediction_function: log_50 <- log(50); log_atb <- log(atb); exp(a * (log_atb - log_50) + b * (log_atb - log_50)^2) * hst^(1 + c * (log_atb - log_50) + d * (log_atb - log_50)^2)

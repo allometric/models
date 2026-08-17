@@ -13,9 +13,7 @@ models:
     species: oldhamii
   response: {bs: g}
   covariates: {dsob: cm}
-  parameter_names:
-  - alpha
-  - beta
+  prediction_function: alpha * dsob^beta
   specifications:
   - {parameters: {alpha: 6.74, beta: 1.23}, descriptors: {age: 1}}
   - {parameters: {alpha: 5.46, beta: 1.89}, descriptors: {age: 2}}
@@ -29,9 +27,7 @@ models:
     species: oldhamii
   response: {bb: g}
   covariates: {dsob: cm}
-  parameter_names:
-  - alpha
-  - beta
+  prediction_function: alpha * dsob^beta
   specifications:
   - {parameters: {alpha: 2.75, beta: 1.82}, descriptors: {age: 2}}
   - {parameters: {alpha: 3.93, beta: 1.47}, descriptors: {age: 3}}
@@ -44,9 +40,7 @@ models:
     species: oldhamii
   response: {bf: g}
   covariates: {dsob: cm}
-  parameter_names:
-  - alpha
-  - beta
+  prediction_function: alpha * dsob^beta
   specifications:
   - {parameters: {alpha: 4.57, beta: 1.29}, descriptors: {age: 1}}
   - {parameters: {alpha: 4.36, beta: 1.48}, descriptors: {age: 2}}
@@ -60,9 +54,7 @@ models:
     species: oldhamii
   response: {bt: g}
   covariates: {dsob: cm}
-  parameter_names:
-  - alpha
-  - beta
+  prediction_function: alpha * dsob^beta
   specifications:
   - {parameters: {alpha: 6.85, beta: 1.24}, descriptors: {age: 1}}
   - {parameters: {alpha: 5.75, beta: 1.84}, descriptors: {age: 2}}

@@ -9,10 +9,7 @@ models:
   type: fixed_effects_set
   response: {dcl: ft}
   covariates: {dsob: in, hst: ft, rc: ft ft-1, dcm: ft}
-  parameter_names:
-  - b0
-  - b1
-  - b2
+  prediction_function: dcm * rc^(b0 + b1 * (rc * hst) + b2 * (dsob/hst))
   specifications:
   - {parameters: {b0: 0.0, b1: 0.00436324, b2: 0.602002}, descriptors: {common_name: Douglas-fir, geographic_region: Northwest Oregon}, taxa: [{family: Pinaceae, genus: Pseudotsuga, species: menziesii}]}
   - {parameters: {b0: 0.0, b1: 0.00371834, b2: 0.808121}, descriptors: {common_name: Douglas-fir, geographic_region: Southwest Oregon}, taxa: [{family: Pinaceae, genus: Pseudotsuga, species: menziesii}]}

@@ -9,10 +9,7 @@ models:
   type: fixed_effects_set
   response: {bt: kg}
   covariates: {dsob: cm}
-  parameter_names:
-  - a
-  - b
-  - cf
+  prediction_function: cf * exp(a) * dsob^b
   specifications:
   - {parameters: {a: -0.637183, b: 2.96456, cf: 1.0260066551228}, region: [ES-TF], taxa: [{family: Aquifoliaceae, genus: Ilex, species: canariensis}]}
   - {parameters: {a: -0.824827, b: 2.9009, cf: 1.04510180481211}, region: [ES-GI], taxa: [{family: Betulaceae, genus: Alnus, species: glutinosa}]}
@@ -52,10 +49,7 @@ models:
   type: fixed_effects_set
   response: {bs: kg}
   covariates: {dsob: cm}
-  parameter_names:
-  - a
-  - b
-  - cf
+  prediction_function: cf * exp(a) * dsob^b
   specifications:
   - {parameters: {a: -1.17012, b: 2.93218, cf: 1.04618710730711}, region: [ES-TF], taxa: [{family: Aquifoliaceae, genus: Ilex, species: canariensis}]}
   - {parameters: {a: -1.37963, b: 2.98387, cf: 1.0864586157969}, region: [ES-GI], taxa: [{family: Betulaceae, genus: Alnus, species: glutinosa}]}
@@ -88,10 +82,7 @@ models:
   type: fixed_effects_set
   response: {bf: kg}
   covariates: {dsob: cm}
-  parameter_names:
-  - a
-  - b
-  - cf
+  prediction_function: cf * exp(a) * dsob^b
   specifications:
   - {parameters: {a: -3.00803, b: 2.44689, cf: 1.14450393295456}, region: [ES-GI], taxa: [{family: Betulaceae, genus: Alnus, species: glutinosa}]}
   - {parameters: {a: -3.28444, b: 2.59452, cf: 1.07744843963558}, region: [ES-GA], taxa: [{family: Betulaceae, genus: Betula, species: NA}]}
@@ -112,10 +103,7 @@ models:
   type: fixed_effects_set
   response: {br: kg}
   covariates: {dsob: cm}
-  parameter_names:
-  - a
-  - b
-  - cf
+  prediction_function: cf * exp(a) * dsob^b
   specifications:
   - {parameters: {a: -2.09999, b: 2.16573, cf: 1.01792507324638}, region: [ES-GI], taxa: [{family: Betulaceae, genus: Alnus, species: glutinosa}]}
   - {parameters: {a: -2.41805, b: 2.01124, cf: 1.08457956093289}, region: [ES-GA], taxa: [{family: Betulaceae, genus: Betula, species: NA}]}
@@ -149,10 +137,7 @@ models:
   type: fixed_effects_set
   response: {bb: kg}
   covariates: {dsob: cm}
-  parameter_names:
-  - a
-  - b
-  - cf
+  prediction_function: cf * exp(a) * dsob^b
   specifications:
   - {parameters: {a: -1.45821, b: 2.76279, cf: 1.05260885361421}, region: [ES-TF], descriptors: {branch_size: < 2 cm}, taxa: [{family: Aquifoliaceae, genus: Ilex, species: canariensis}]}
   - {parameters: {a: -2.54028, b: 2.75008, cf: 1.01122344251892}, region: [ES-TF], descriptors: {branch_size: '> 7 cm'}, taxa: [{family: Aquifoliaceae, genus: Ilex, species: canariensis}]}

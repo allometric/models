@@ -9,9 +9,7 @@ models:
   type: fixed_effects_set
   response: {vsoa: ft3}
   covariates: {dsoc: in, hst: ft}
-  parameter_names:
-  - a
-  - b
+  prediction_function: (a + b * (dsoc^2 * hst)^(1/3))^3
   specifications:
   - {parameters: {a: 0.02434, b: 0.119106}, region: [US-CO], descriptors: {geographic_region: entire State}, taxa: [{family: Cupressaceae, genus: Juniperus, species: scopulorum}]}
   - {parameters: {a: -0.136, b: 0.145743}, region: [US-CO], descriptors: {geographic_region: entire State}, taxa: [{family: Fagaceae, genus: Quercus, species: gambelii}]}
@@ -28,10 +26,7 @@ models:
   response: {vsoa: ft3}
   covariates: {dsoc: in, hst: ft, single_stem: ''}
   covt_defs: {single_stem: 'Equal to 1 if the tree has one stem, 0 otherwise'}
-  parameter_names:
-  - a
-  - b
-  - c
+  prediction_function: (a + b * (dsoc^2 * hst)^(1/3) + c * single_stem)^3
   specifications:
   - {parameters: {a: -0.19321, b: 0.136101, c: 0.038187}, region: [US-CO], descriptors: {geographic_region: eastern Colorado}, taxa: [{family: Cupressaceae, genus: Juniperus, species: monosperma}]}
   - {parameters: {a: -0.08728, b: 0.13542, c: -0.019587}, region: [US-CO], descriptors: {geographic_region: western Colorado}, taxa: [{family: Cupressaceae, genus: Juniperus, species: osteosperma}]}

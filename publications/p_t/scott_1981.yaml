@@ -9,13 +9,7 @@ models:
   type: fixed_effects_set
   response: {vsia: ft3}
   covariates: {dsob: in, hsm: ft}
-  parameter_names:
-  - b_0
-  - b_1
-  - b_2
-  - b_3
-  - b_4
-  - b_5
+  prediction_function: b_0 + b_1 * dsob^b_2 + b_3 * dsob^(b_4) * hsm^b_5
   specifications:
   - {parameters: {b_0: 0.11, b_1: -0.05977, b_2: 2.0498, b_3: 0.04965, b_4: 2.0198, b_5: 0.3468}, taxa: [{family: Pinaceae, genus: Pinus, species: strobus}, {family: Pinaceae, genus: Pinus, species: resinosa}]}
   - {parameters: {b_0: 0.17, b_1: -0.06315, b_2: 2.0654, b_3: 0.05122, b_4: 2.0264, b_5: 0.3508}, taxa: [{family: Pinaceae, genus: Picea, species: rubens}, {family: Pinaceae, genus: Picea, species: glauca}, {family: Pinaceae, genus: Picea, species: mariana}]}

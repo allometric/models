@@ -9,10 +9,7 @@ models:
   type: fixed_effects_set
   response: {hst: ft}
   covariates: {dsob: in}
-  parameter_names:
-  - p2
-  - p3
-  - p4
+  prediction_function: if (dsob >= 3) { 4.5 + p2 * exp(-p3 * dsob^p4) } else { ((4.5 + p2 * exp(-p3 * 3^p4) - 4.51) * ((dsob - 0.3)/2.7)) + 4.51 }
   specifications:
   - {parameters: {p2: 89.0298, p3: 6.9507, p4: -0.9871}, descriptors: {species_code: AF, geographic_region: '609 - Olympic, 800 - Quinalt'}, taxa: [{family: Pinaceae, genus: Abies, species: lasiocarpa}]}
   - {parameters: {p2: 133.8689, p3: 6.7798, p4: -0.7375}, descriptors: {species_code: AF, geographic_region: '612 - Siuslaw, 712 - BLM Coos'}, taxa: [{family: Pinaceae, genus: Abies, species: lasiocarpa}]}
@@ -168,10 +165,7 @@ models:
   type: fixed_effects_set
   response: {hst: ft}
   covariates: {dsob: in}
-  parameter_names:
-  - p2
-  - p3
-  - p4
+  prediction_function: if (dsob >= 5) { 4.5 + p2 * exp(-p3 * dsob^p4) } else { ((4.5 + p2 * exp(-p3 * 5^p4) - 4.51) * (dsob - 0.3)/4.7) + 4.51 }
   specifications:
   - {parameters: {p2: 407.1595, p3: 7.2885, p4: -0.5908}, descriptors: {species_code: DF, geographic_region: '612 - Siuslaw, 712 - BLM Coos'}, taxa: [{family: Pinaceae, genus: Pseudotsuga, species: menziesii}]}
   - {parameters: {p2: 949.1046, p3: 5.8482, p4: -0.3251}, descriptors: {species_code: DF, geographic_region: 708 - BLM Salem}, taxa: [{family: Pinaceae, genus: Pseudotsuga, species: menziesii}]}
@@ -179,9 +173,7 @@ models:
   type: fixed_effects_set
   response: {hst: ft}
   covariates: {dsob: in}
-  parameter_names:
-  - b1
-  - b2
+  prediction_function: 4.5 + exp(b1 + b2/(dsob + 1))
   specifications:
   - {parameters: {b1: 5.313, b2: -15.321}, descriptors: {species_code: AF}, taxa: [{family: Pinaceae, genus: Abies, species: lasiocarpa}]}
   - {parameters: {b1: 5.152, b2: -13.576}, descriptors: {species_code: AS}, taxa: [{family: Salicaceae, genus: Populus, species: tremuloides}]}
@@ -225,12 +217,7 @@ models:
   type: fixed_effects_set
   response: {hst: ft}
   covariates: {dsob: in, rc: ft ft-1}
-  parameter_names:
-  - h1
-  - h2
-  - h3
-  - h4
-  - h5
+  prediction_function: exp(h1 + (h2 * dsob) + (h3 * rc * 100) + (h4 * dsob^2) + h5)
   specifications:
   - {parameters: {h1: 1.4261, h2: 0.3334, h3: 0.0, h4: 0.0, h5: 0.0}, descriptors: {species_code: AF}, taxa: [{family: Pinaceae, genus: Abies, species: lasiocarpa}]}
   - {parameters: {h1: 1.4769, h2: 0.3579, h3: 0.0, h4: 0.0, h5: 0.0}, descriptors: {species_code: GF}, taxa: [{family: Pinaceae, genus: Abies, species: grandis}]}
@@ -257,12 +244,7 @@ models:
   type: fixed_effects_set
   response: {hst: ft}
   covariates: {dsob: in, rc: ft ft-1}
-  parameter_names:
-  - h1
-  - h2
-  - h3
-  - h4
-  - h5
+  prediction_function: h1 + (h2 * dsob) + (h3 * rc * 100) + (h4 * dsob^2) + h5
   specifications:
   - {parameters: {h1: 0.0994, h2: 4.9767, h3: 0.0, h4: 0.0, h5: 0.0}, descriptors: {species_code: AS}, taxa: [{family: Salicaceae, genus: Populus, species: tremuloides}]}
   - {parameters: {h1: 0.0994, h2: 4.9767, h3: 0.0, h4: 0.0, h5: 0.0}, descriptors: {species_code: BM}, taxa: [{family: Aceraceae, genus: Acer, species: macrophyllum}]}
@@ -286,10 +268,7 @@ models:
   type: fixed_effects_set
   response: {rc: ft ft-1}
   covariates: {hst: ft, gs_s: ft2 acre-1}
-  parameter_names:
-  - r1
-  - r2
-  - r3
+  prediction_function: x <- r1 + r2 * hst + r3 * gs_s; ((x - 1) * 10 + 1)/100
   specifications:
   - {parameters: {r1: 8.042774, r2: 0.007198, r3: -0.016163}, descriptors: {species_code: AF}, taxa: [{family: Pinaceae, genus: Abies, species: lasiocarpa}]}
   - {parameters: {r1: 5.0, r2: 0.0, r3: 0.0}, descriptors: {species_code: AS}, taxa: [{family: Salicaceae, genus: Populus, species: tremuloides}]}

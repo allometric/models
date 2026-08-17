@@ -9,15 +9,7 @@ models:
   type: fixed_effects_set
   response: {dsih: cm}
   covariates: {hst: m, hsd: m, dsob: cm}
-  parameter_names:
-  - a_0
-  - a_1
-  - a_2
-  - b_1
-  - b_2
-  - b_3
-  - b_4
-  - b_5
+  prediction_function: x <- (1 - sqrt(hsd/hst))/(1 - sqrt(p)); z <- hsd/hst; a_0 * dsob^a_1 * a_2^dsob * x^(b_1 * z^2 + b_2 * log(z + 0.001) + b_3 * sqrt(z) + b_4 * exp(z) + b_5 * (dsob/hst))
   specifications:
   - {parameters: {a_0: 1.02453, a_1: 0.88809, a_2: 1.00035, b_1: 0.95086, b_2: -0.1809, b_3: 0.61407, b_4: -0.35106, b_5: 0.05686}, descriptors: {p: 0.25}, taxa: [{family: Pinaceae, genus: Pseudotsuga, species: menziesii}]}
   - {parameters: {a_0: 1.21697, a_1: 0.84256, a_2: 1.00001, b_1: 1.55322, b_2: -0.39719, b_3: 2.11018, b_4: -1.11416, b_5: 0.0942}, descriptors: {p: 0.3}, taxa: [{family: Cupressaceae, genus: Thuja, species: plicata}]}

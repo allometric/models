@@ -9,9 +9,7 @@ models:
   type: fixed_effects_set
   response: {vsia: ft3}
   covariates: {dsob: in, hst: ft}
-  parameter_names:
-  - a_0
-  - a_1
+  prediction_function: a_0 + a_1 * dsob^2 * hst
   specifications:
   - {parameters: {a_0: 0.160888987, a_1: 0.0020325}, descriptors: {national_forest: 'Lincoln, Santa Fe, Carson'}, taxa: [{family: Pinaceae, genus: Pinus, species: strobus}]}
   - {parameters: {a_0: 0.225466084, a_1: 0.0021697}, descriptors: {national_forest: 'Lincoln, Santa Fe, Carson'}, taxa: [{family: Pinaceae, genus: Picea, species: engelmanii}]}

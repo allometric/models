@@ -14,4 +14,4 @@ models:
   response: {hstix50: ft}
   covariates: {hst: ft, atb: years}
   parameters: {b0: 1.42956, b1: 0.379, b2: 65.11, b3: -0.022733, b4: 1.27157}
-  equation: 39.77 + (b0/exp(atb/50) + b1 * exp(atb/300)) * (hst - b2 * (1 - exp(b3 * atb))^b4)
+  prediction_function: 39.77 + (b0/exp(atb/50) + b1 * exp(atb/300)) * (hst - b2 * (1 - exp(b3 * atb))^b4)

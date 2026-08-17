@@ -9,9 +9,7 @@ models:
   type: fixed_effects_set
   response: {bf: kg}
   covariates: {dsob: cm}
-  parameter_names:
-  - a
-  - b
+  prediction_function: exp(a + (b * log(dsob)))
   specifications:
   - {parameters: {a: -2.846, b: 1.701}, taxa: [{family: Pinaceae, genus: Pseudotsuga, species: menziesii}]}
   - {parameters: {a: -4.13, b: 2.128}, taxa: [{family: Pinaceae, genus: Tsuga, species: heterophylla}]}

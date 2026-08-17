@@ -9,12 +9,7 @@ models:
   type: fixed_effects_set
   response: {rsdodi: cm cm-1}
   covariates: {hst: m, hsd: m}
-  parameter_names:
-  - b_1
-  - b_2
-  - b_3
-  - b_4
-  - b_5
+  prediction_function: x <- (hst - hsd)/(hst - 1.3); b_1 + b_2 * x + b_3 * x^2 + b_4 * x^3 + b_5 * x^4
   specifications:
   - {parameters: {b_1: 0.02435, b_2: 0.85814, b_3: 2.57379, b_4: -5.55862, b_5: 3.05029}, taxa: [{family: Pinaceae, genus: Pseudotsuga, species: menziesii}]}
   - {parameters: {b_1: 0.0308, b_2: 0.42992, b_3: 4.12143, b_4: -7.85114, b_5: 4.27438}, taxa: [{family: Pinaceae, genus: Tsuga, species: heterophylla}]}
@@ -22,14 +17,7 @@ models:
   type: fixed_effects_set
   response: {rsdodi: cm cm-1}
   covariates: {hst: m, hsd: m, dsob: cm}
-  parameter_names:
-  - b_1
-  - b_2
-  - b_3
-  - b_4
-  - b_5
-  - b_6
-  - b_7
+  prediction_function: t <- hsd/hst; ((log(sin(t * pi/2)))/(log(sin((1.37/hst) * pi/2))))^(b_1 + b_2 * sin(t * pi/2) + b_3 * cos(t * (3 * pi/2)) + b_4 * ((sin((pi/2) * t))/(t)) + b_5 * dsob + b_6 * t * sqrt(dsob) + b_7 * t * sqrt(hst))
   specifications:
   - {parameters: {b_1: 0.1403, b_2: 0.7296, b_3: 0.1544, b_4: -0.1214, b_5: 0.00124, b_6: 0.02678, b_7: -0.09579}, taxa: [{family: Pinaceae, genus: Pseudotsuga, species: menziesii}]}
   - {parameters: {b_1: 1.84835, b_2: 0.01014, b_3: 0.00175, b_4: -1.04746, b_5: 0.0029, b_6: 0.03483, b_7: -0.13071}, taxa: [{family: Pinaceae, genus: Tsuga, species: heterophylla}]}
@@ -37,16 +25,7 @@ models:
   type: fixed_effects_set
   response: {dsih: cm}
   covariates: {hst: m, hsd: m, dsob: cm}
-  parameter_names:
-  - b_1
-  - b_2
-  - b_3
-  - b_4
-  - b_5
-  - b_6
-  - b_7
-  - b_8
-  - p
+  prediction_function: t <- hsd/hst; k <- 1.3/hst; b_1 * dsob^b_2 * b_3^dsob * ((1 - sqrt(t))/(1 - sqrt(p)))^(b_4 * t^2 + b_5 * log(t + 0.001) + b_6 * sqrt(t) + b_7 * exp(t) + b_8 * (dsob/hst))
   specifications:
   - {parameters: {b_1: 0.79314, b_2: 1.02189, b_3: 0.99754, b_4: 1.10118, b_5: -0.18022, b_6: 1.19183, b_7: -0.61055, b_8: 0.15539, p: 0.25}, taxa: [{family: Pinaceae, genus: Pseudotsuga, species: menziesii}]}
   - {parameters: {b_1: 0.92336, b_2: 1.00547, b_3: 0.99796, b_4: 1.0505, b_5: -0.1624, b_6: -0.24448, b_7: -0.31429, b_8: 0.30181, p: 0.12}, taxa: [{family: Pinaceae, genus: Tsuga, species: heterophylla}]}
@@ -54,14 +33,7 @@ models:
   type: fixed_effects_set
   response: {dsih: cm}
   covariates: {hst: m, hsd: m, dsob: cm}
-  parameter_names:
-  - b_1
-  - b_2
-  - b_3
-  - b_4
-  - b_5
-  - b_6
-  - b_7
+  prediction_function: k <- 1.3/hst; t <- hsd/hst; b_1 * dsob^b_2 * hst^b_3 * ((1 - t^(1/3))/(1 - k^(1/3)))^(b_4 * t^4 + b_5 * (1/exp(dsob/hst)) + b_6 * ((1 - t^(1/3))/(1 - k^(1/3)))^(0.1) + b_7 * (1/dsob) + b_8 * (hst^(1 - (hsd/hst)^(1/3))) + b_9 * ((1 - t^(1/3))/(1 - k^(1/3))))
   specifications:
   - {parameters: {b_1: 1.04208, b_2: 0.99771, b_3: -0.03111, b_4: 0.53788, b_5: -1.01291, b_6: 0.56813, b_7: 4.96019}, descriptors: {b_8: 0.04124, b_9: -0.34417}, taxa: [{family: Pinaceae, genus: Pseudotsuga, species: menziesii}]}
   - {parameters: {b_1: 1.05981, b_2: 0.99433, b_3: -0.01684, b_4: 0.64632, b_5: -1.56599, b_6: 0.74293, b_7: 4.75618}, descriptors: {b_8: 0.0389, b_9: -0.19425}, taxa: [{family: Pinaceae, genus: Tsuga, species: heterophylla}]}
@@ -69,10 +41,7 @@ models:
   type: fixed_effects_set
   response: {dsih: cm}
   covariates: {hst: m, hsd: m, dsob: cm}
-  parameter_names:
-  - b_1
-  - b_2
-  - b_3
+  prediction_function: 2 * (((b_1 * dsob)/(1 - exp(b_3 * (1.3 - hst)))) + (dsob/2 - b_1 * dsob) * (1 - (1/(1 - exp(b_2 * (1.3 - hst))))) + exp(-b_2 * hsd) * ((dsob/2 - b_1 * dsob) * exp(1.3 * b_2)/(1 - exp(b_2 * (1.3 - hst)))) - exp(b_3 * hsd) * ((b_1 * dsob * exp(-b_3 * hst))/(1 - exp(b_3 * (1.3 - hst)))))
   specifications:
   - {parameters: {b_1: 0.30853, b_2: 0.0862, b_3: 0.07768}, taxa: [{family: Pinaceae, genus: Pseudotsuga, species: menziesii}]}
   - {parameters: {b_1: 0.04561, b_2: -0.02362, b_3: -0.86616}, taxa: [{family: Pinaceae, genus: Tsuga, species: heterophylla}]}
