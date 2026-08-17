@@ -7,6 +7,10 @@ publication:
 models:
 - name: hstix
   type: fixed_effects
+  taxa:
+  - family: Betulaceae
+    genus: Alnus
+    species: rubra
   response: {hstix: ft}
   covariates: {hst: ft, atb: years}
   parameters: {a1: 16.5158, a2: -1.40726, a3: 0.033727, a4: -0.00023267, b1: 1.25934, b2: -0.012989, b3: 3.522}

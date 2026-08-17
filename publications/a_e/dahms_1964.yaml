@@ -7,6 +7,10 @@ publication:
 models:
 - name: hstix100
   type: fixed_effects
+  taxa:
+  - family: Pinaceae
+    genus: Pinus
+    species: contorta
   response: {hstix100: ft}
   covariates: {hst: ft, att: years}
   parameters: {a: -0.0968, b: 0.02679, c: -9.309e-05}

@@ -7,6 +7,10 @@ publication:
 models:
 - name: hstix50
   type: fixed_effects
+  taxa:
+  - family: Pinaceae
+    genus: Tsuga
+    species: heterophylla
   response: {hstix50: ft}
   covariates: {hst: ft, atb: years}
   parameters: {a: 0.1394, b: 0.0137, c: 7.0e-05, d: -1.7307, e: -0.0616, f: 0.00192}

@@ -7,6 +7,10 @@ publication:
 models:
 - name: hst
   type: fixed_effects
+  taxa:
+  - family: Pinaceae
+    genus: Abies
+    species: magnifica
   response: {hst: ft}
   covariates: {hstix50: ft, atb: years}
   parameters: {b1: 1.51744, b2: 1.41512e-06, b3: -0.0440853, b4: -3049510.0, b5: 0.000572474}

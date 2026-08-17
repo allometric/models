@@ -7,6 +7,10 @@ publication:
 models:
 - name: bb
   type: fixed_effects_set
+  taxa:
+  - family: Myrtaceae
+    genus: Eucalyptus
+    species: grandis
   response: {bb: kg}
   covariates: {dsob: cm, hst: m}
   parameter_names:
@@ -22,6 +26,10 @@ models:
   - {parameters: {a: -1.71, b: 2.67, c: -1.09}, descriptors: {response: br, zone: 2, geographic_region: Southern Misiones and Correntes NE, size_class: < 5 cm}}
 - name: bs
   type: fixed_effects_set
+  taxa:
+  - family: Myrtaceae
+    genus: Eucalyptus
+    species: grandis
   response: {bs: kg}
   covariates: {dsob: cm, hst: m}
   parameter_names:
@@ -33,6 +41,10 @@ models:
   - {parameters: {a: -4.48, b: 1.83, c: 1.22}, descriptors: {response: bs, zone: 2, geographic_region: Southern Misiones and Correntes NE}}
 - name: bt
   type: fixed_effects_set
+  taxa:
+  - family: Myrtaceae
+    genus: Eucalyptus
+    species: grandis
   response: {bt: kg}
   covariates: {dsob: cm, hst: m}
   parameter_names:
@@ -44,6 +56,10 @@ models:
   - {parameters: {a: -3.32, b: 2.12, c: 0.65}, descriptors: {response: bt, zone: 2, geographic_region: Southern Misiones and Correntes NE}}
 - name: bf
   type: fixed_effects_set
+  taxa:
+  - family: Myrtaceae
+    genus: Eucalyptus
+    species: grandis
   response: {bf: kg}
   covariates: {dsob: cm, hst: m, att: years, gs_s: m2 ha-1, es_s: ha-1}
   parameter_names:

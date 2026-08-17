@@ -7,6 +7,10 @@ publication:
 models:
 - name: hstix50
   type: fixed_effects
+  taxa:
+  - family: Pinaceae
+    genus: Larix
+    species: occidentalis
   response: {hstix50: ft}
   covariates: {atb: years, hst: ft}
   parameters: {a: 78.07, b1: 3.51412, b2: -0.125483, b3: 0.0023559, b4: -2.028e-05, b5: 6.4782e-08, b6: 1.46897, b7: 0.0092466, b8: -0.00023957, b9: 1.1122e-06}

@@ -7,6 +7,10 @@ publication:
 models:
 - name: bs
   type: fixed_effects_set
+  taxa:
+  - family: Pinaceae
+    genus: Larix
+    species: cajanderi
   response: {bs: kg}
   covariates: {dsob: cm}
   parameter_names:
@@ -17,6 +21,10 @@ models:
   - {parameters: {a: 0.128, b: 2.227}, region: [RU-SAK], descriptors: {response_name: bs, dbh_range_cm: 1.8-18.9}}
 - name: bsi
   type: fixed_effects_set
+  taxa:
+  - family: Pinaceae
+    genus: Larix
+    species: cajanderi
   response: {bsi: kg}
   covariates: {dsob: cm}
   parameter_names:
@@ -27,6 +35,10 @@ models:
   - {parameters: {a: 0.084, b: 2.308}, region: [RU-SAK], descriptors: {response_name: bsi, dbh_range_cm: 1.8-18.9}}
 - name: bk
   type: fixed_effects_set
+  taxa:
+  - family: Pinaceae
+    genus: Larix
+    species: cajanderi
   response: {bk: kg}
   covariates: {dsob: cm}
   parameter_names:
@@ -37,6 +49,10 @@ models:
   - {parameters: {a: 0.046, b: 2.006}, region: [RU-SAK], descriptors: {response_name: bk, dbh_range_cm: 1.8-18.9}}
 - name: br
   type: fixed_effects_set
+  taxa:
+  - family: Pinaceae
+    genus: Larix
+    species: cajanderi
   response: {br: kg}
   covariates: {dsob: cm}
   parameter_names:
@@ -47,6 +63,10 @@ models:
   - {parameters: {a: 0.105, b: 1.757}, region: [RU-SAK], descriptors: {response_name: br, dbh_range_cm: 1.8-18.9}}
 - name: bf
   type: fixed_effects_set
+  taxa:
+  - family: Pinaceae
+    genus: Larix
+    species: cajanderi
   response: {bf: kg}
   covariates: {dsob: cm}
   parameter_names:
@@ -57,6 +77,10 @@ models:
   - {parameters: {a: 0.043, b: 1.642}, region: [RU-SAK], descriptors: {response_name: bf, dbh_range_cm: 1.8-18.9}}
 - name: bt
   type: fixed_effects_set
+  taxa:
+  - family: Pinaceae
+    genus: Larix
+    species: cajanderi
   response: {bt: kg}
   covariates: {dsob: cm}
   parameter_names:

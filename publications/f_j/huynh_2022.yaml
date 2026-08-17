@@ -7,6 +7,10 @@ publication:
 models:
 - name: bt
   type: fixed_effects_set
+  taxa:
+  - family: Myrtaceae
+    genus: Corymbia
+    species: citriodora
   response: {bt: kg}
   covariates: {dsob: cm}
   parameter_names:
@@ -17,6 +21,10 @@ models:
   - {parameters: {alpha: 0.10606, beta: 2.56803}, descriptors: {equation_no: '10'}}
 - name: bt_2
   type: fixed_effects_set
+  taxa:
+  - family: Myrtaceae
+    genus: Corymbia
+    species: citriodora
   response: {bt: kg}
   covariates: {hst: m}
   parameter_names:
@@ -27,6 +35,10 @@ models:
   - {parameters: {alpha: 0.00027, beta: 4.45063}, descriptors: {equation_no: '11'}}
 - name: bt_3
   type: fixed_effects
+  taxa:
+  - family: Myrtaceae
+    genus: Corymbia
+    species: citriodora
   response: {bt: kg}
   covariates: {dsob: cm, hst: m}
   parameters: {alpha: 0.05251, beta: 2.40238, beta_1: 0.38285}
@@ -34,6 +46,10 @@ models:
   descriptors: {equation_no: '5'}
 - name: bt_4
   type: fixed_effects
+  taxa:
+  - family: Myrtaceae
+    genus: Corymbia
+    species: citriodora
   response: {bt: kg}
   covariates: {dsob: cm, hst: m}
   parameters: {alpha: 0.02533, beta: 1.00656}
@@ -41,6 +57,10 @@ models:
   descriptors: {equation_no: '6'}
 - name: bt_5
   type: fixed_effects
+  taxa:
+  - family: Myrtaceae
+    genus: Corymbia
+    species: citriodora
   response: {bt: kg}
   covariates: {dsob: cm, rws: kg m-3}
   parameters: {alpha: 0.05252, beta: 2.40266, beta_1: 0.38253}
@@ -48,6 +68,10 @@ models:
   descriptors: {equation_no: '7'}
 - name: bt_6
   type: fixed_effects
+  taxa:
+  - family: Myrtaceae
+    genus: Corymbia
+    species: citriodora
   response: {bt: kg}
   covariates: {dsob: cm, hst: m, rws: kg m-3}
   parameters: {alpha: 0.00233, beta: 2.42585, beta_1: 0.30576, beta_2: 0.4989}
@@ -55,6 +79,10 @@ models:
   descriptors: {equation_no: '8'}
 - name: bt_7
   type: fixed_effects
+  taxa:
+  - family: Myrtaceae
+    genus: Corymbia
+    species: citriodora
   response: {bt: kg}
   covariates: {dsob: cm, hst: m, rws: kg m-3}
   parameters: {alpha: 4.0e-05, beta: 0.99037}
@@ -62,6 +90,10 @@ models:
   descriptors: {equation_no: '9'}
 - name: bt_8
   type: fixed_effects
+  taxa:
+  - family: Myrtaceae
+    genus: Corymbia
+    species: citriodora
   response: {bt: kg}
   covariates: {dc: m}
   parameters: {alpha: 33.24309, beta: 1.61825}
@@ -69,6 +101,10 @@ models:
   descriptors: {equation_no: '12'}
 - name: bt_9
   type: fixed_effects
+  taxa:
+  - family: Myrtaceae
+    genus: Corymbia
+    species: citriodora
   response: {bt: kg}
   covariates: {dsob: cm, dc: m}
   parameters: {alpha: 2.30247, beta: 1.07425}
@@ -76,6 +112,10 @@ models:
   descriptors: {equation_no: '13'}
 - name: bt_10
   type: fixed_effects
+  taxa:
+  - family: Myrtaceae
+    genus: Corymbia
+    species: citriodora
   response: {bt: kg}
   covariates: {dsob: cm, hst: m, dc: m}
   parameters: {alpha: 0.05153, beta: 2.18627, beta_1: 0.54648, beta_2: 0.11719}
@@ -83,6 +123,10 @@ models:
   descriptors: {equation_no: '14'}
 - name: bt_11
   type: fixed_effects
+  taxa:
+  - family: Myrtaceae
+    genus: Corymbia
+    species: citriodora
   response: {bt: kg}
   covariates: {dsob: cm, hst: m, dc: m}
   parameters: {alpha: 0.19568, beta: 0.68009}
@@ -90,6 +134,10 @@ models:
   descriptors: {equation_no: '15'}
 - name: bt_12
   type: fixed_effects
+  taxa:
+  - family: Myrtaceae
+    genus: Corymbia
+    species: citriodora
   response: {bt: kg}
   covariates: {dsob: cm, hst: m, rws: kg m-3, dc: m}
   parameters: {alpha: 0.00079, beta: 2.07194, beta_1: 0.69202, beta_2: 0.60292, beta_3: 0.18009}
@@ -97,6 +145,10 @@ models:
   descriptors: {equation_no: '16'}
 - name: bt_13
   type: fixed_effects
+  taxa:
+  - family: Myrtaceae
+    genus: Corymbia
+    species: citriodora
   response: {bt: kg}
   covariates: {dsob: cm, hst: m, rws: kg m-3, dc: m}
   parameters: {alpha: 0.00156, beta: 0.69886}
@@ -104,6 +156,10 @@ models:
   descriptors: {equation_no: '17'}
 - name: bt_14
   type: fixed_effects
+  taxa:
+  - family: Myrtaceae
+    genus: Corymbia
+    species: citriodora
   response: {bt: kg}
   covariates: {vc: cm3}
   parameters: {alpha: 15.35139, beta: 0.53941}
@@ -111,6 +167,10 @@ models:
   descriptors: {equation_no: '18'}
 - name: bt_15
   type: fixed_effects
+  taxa:
+  - family: Myrtaceae
+    genus: Corymbia
+    species: citriodora
   response: {bt: kg}
   covariates: {dsob: cm, vc: cm3}
   parameters: {alpha: 0.09881, beta: 2.61161}
@@ -118,6 +178,10 @@ models:
   descriptors: {equation_no: '19'}
 - name: bt_16
   type: fixed_effects
+  taxa:
+  - family: Myrtaceae
+    genus: Corymbia
+    species: citriodora
   response: {bt: kg}
   covariates: {dsob: cm, hst: m, vc: cm3}
   parameters: {alpha: 0.04872, beta: 2.18625, beta_1: 0.5465, beta_2: 0.03907}
@@ -125,6 +189,10 @@ models:
   descriptors: {equation_no: '20'}
 - name: bt_17
   type: fixed_effects
+  taxa:
+  - family: Myrtaceae
+    genus: Corymbia
+    species: citriodora
   response: {bt: kg}
   covariates: {dsob: cm, hst: m, vc: cm3}
   parameters: {alpha: 0.95382, beta: 0.38323}
@@ -132,6 +200,10 @@ models:
   descriptors: {equation_no: '21'}
 - name: bt_18
   type: fixed_effects
+  taxa:
+  - family: Myrtaceae
+    genus: Corymbia
+    species: citriodora
   response: {bt: kg}
   covariates: {dsob: cm, hst: m, rws: kg m-3, vc: cm3}
   parameters: {alpha: 0.00072, beta: 2.07191, beta_1: 0.69205, beta_2: 0.60293, beta_3: 0.06004}
@@ -139,6 +211,10 @@ models:
   descriptors: {equation_no: '22'}
 - name: bt_19
   type: fixed_effects
+  taxa:
+  - family: Myrtaceae
+    genus: Corymbia
+    species: citriodora
   response: {bt: kg}
   covariates: {dsob: cm, hst: m, rws: kg m-3, vc: cm3}
   parameters: {alpha: 0.06581, beta: 0.38942}

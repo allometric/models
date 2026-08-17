@@ -7,6 +7,10 @@ publication:
 models:
 - name: vsia
   type: fixed_effects
+  taxa:
+  - family: Pinaceae
+    genus: Pseudotsuga
+    species: menziesii
   response: {vsia: ft3}
   covariates: {hst: ft, dsob: in}
   parameters: {a: 0.406098, b: 0.0762998, c: 0.00262615, d: 0.005454154}
@@ -14,6 +18,10 @@ models:
   descriptors: {hst: <= 18 ft hst}
 - name: vsia_2
   type: fixed_effects
+  taxa:
+  - family: Pinaceae
+    genus: Pseudotsuga
+    species: menziesii
   response: {vsia: ft3}
   covariates: {hst: ft, dsob: in}
   parameters: {a: 0.480961, b: 42.46542, c: 10.99643, d: 0.107809, e: 0.00409083, f: 0.005454154}

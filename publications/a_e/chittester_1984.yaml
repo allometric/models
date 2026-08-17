@@ -7,12 +7,20 @@ publication:
 models:
 - name: vsia
   type: fixed_effects
+  taxa:
+  - family: Cupressaceae
+    genus: Juniperus
+    species: occidentalis
   response: {vsia: ft3}
   covariates: {dsob: in, hst: ft}
   parameters: {a: 0.307, b: 0.00086, c: -0.0037}
   equation: f <- a + b * hst + c * dsob * hst/(hst - 4.5); ba <- 0.005454154 * dsob^2; ba * f * hst * (hst/(hst - 4.5))^2
 - name: vsim
   type: fixed_effects
+  taxa:
+  - family: Cupressaceae
+    genus: Juniperus
+    species: occidentalis
   response: {vsim: ft3}
   covariates: {vsoa: ft3, dsob: in}
   parameters: {a: 3.48, b: 1.18052, c: 0.32736, d: 2.948}

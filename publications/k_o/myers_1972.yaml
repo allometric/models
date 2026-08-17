@@ -7,6 +7,10 @@ publication:
 models:
 - name: vsoa
   type: fixed_effects_set
+  taxa:
+  - family: Pinaceae
+    genus: Picea
+    species: engelmannii
   response: {vsoa: ft3}
   covariates: {dsob: in, hst: ft}
   parameter_names:
@@ -19,6 +23,10 @@ models:
   - {parameters: {a: 13.1132, b: 0.00182}, descriptors: {top_dsib: 4, size_class: '> 27900'}}
 - name: vsom
   type: fixed_effects_set
+  taxa:
+  - family: Pinaceae
+    genus: Picea
+    species: engelmannii
   response: {vsom: board_foot}
   covariates: {dsob: in, hsm: ''}
   covt_defs: {hsm: Number of 16 foot logs to merchantable top}
@@ -36,6 +44,10 @@ models:
   - {parameters: {a: 73.92559, b: 0.24647}, descriptors: {top_dsib: 8, bdft_rule: International 1/4-inch, size_class: '> 1060'}}
 - name: rsvg
   type: fixed_effects_set
+  taxa:
+  - family: Pinaceae
+    genus: Picea
+    species: engelmannii
   response: {rsvg: ft3 ft-2}
   covariates: {dsob: in, hst: ft}
   parameter_names:
@@ -53,6 +65,10 @@ models:
   - {parameters: {a: 2.3597, b: -3929.5049}, descriptors: {top_dsib: 8, bdft_rule: International 1/4-inch, size_class: large}}
 - name: rsvg_2
   type: fixed_effects_set
+  taxa:
+  - family: Pinaceae
+    genus: Picea
+    species: engelmannii
   response: {rsvg: ft3 ft-2}
   covariates: {dsob: in, hsm: ''}
   covt_defs: {hsm: Number of 16 foot logs to merchantable top}
@@ -70,6 +86,10 @@ models:
   - {parameters: {a: 45.1907, b: 13554.3803}, descriptors: {top_dsib: 8, bdft_rule: International 1/4-inch, size_class: large}}
 - name: vsim
   type: fixed_effects_set
+  taxa:
+  - family: Pinaceae
+    genus: Picea
+    species: engelmannii
   response: {vsim: board_foot}
   covariates: {dsob: in, hst: ft}
   parameter_names:

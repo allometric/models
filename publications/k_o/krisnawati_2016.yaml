@@ -7,24 +7,40 @@ publication:
 models:
 - name: vsoa
   type: fixed_effects
+  taxa:
+  - family: Fabaceae
+    genus: Acacia
+    species: mangium
   response: {vsoa: m3}
   covariates: {dsob: cm, hst: m}
   parameters: {a: 6.36e-05, b: 1.736, c: 1.0734}
   equation: a * dsob^b * hst^c
 - name: vsia
   type: fixed_effects
+  taxa:
+  - family: Fabaceae
+    genus: Acacia
+    species: mangium
   response: {vsia: m3}
   covariates: {dsob: cm, hst: m}
   parameters: {a: 5.42e-05, b: 1.0778, c: 1.04}
   equation: a * dsob^b * hst^c
 - name: dsoh
   type: fixed_effects
+  taxa:
+  - family: Fabaceae
+    genus: Acacia
+    species: mangium
   response: {dsoh: cm}
   covariates: {dsob: cm, hst: m, hsl: m}
   parameters: {a: 1.384, b: 0.8678, c: -0.6393, d: 0.676}
   equation: a * dsob^b * hst^c * hsl^d
 - name: dsih
   type: fixed_effects
+  taxa:
+  - family: Fabaceae
+    genus: Acacia
+    species: mangium
   response: {dsih: cm}
   covariates: {dsob: cm, hst: m, hsl: m}
   parameters: {a: 1.256, b: 0.889, c: -0.6213, d: 0.643}
@@ -32,6 +48,10 @@ models:
   descriptors: {volume_type: merchantable volume outside bark to specified height}
 - name: vsim
   type: fixed_effects
+  taxa:
+  - family: Fabaceae
+    genus: Acacia
+    species: mangium
   response: {vsim: m3}
   covariates: {dsob: cm, hst: m, dsih: cm}
   parameters: {a: 5.42e-05, b: 1.778, c: -1.2426, d: 2.286, e: 0.445, f: 3.555, g: -3.161, h: 2.209}
@@ -39,6 +59,10 @@ models:
   descriptors: {volume_type: merchantable volume inside bark to specified height}
 - name: vsom
   type: fixed_effects
+  taxa:
+  - family: Fabaceae
+    genus: Acacia
+    species: mangium
   response: {vsom: m3}
   covariates: {dsob: cm, hst: m, dsoh: cm}
   parameters: {a: 6.36e-05, b: 1.736, c: -1.2786, d: 2.352, e: 0.326, f: 3.479, g: -3.019, h: 2.224}

@@ -7,6 +7,10 @@ publication:
 models:
 - name: vsom
   type: fixed_effects_set
+  taxa:
+  - family: Pinaceae
+    genus: Pinus
+    species: ponderosa
   response: {vsom: ft3}
   covariates: {dsob: in, hst: ft}
   parameter_names:
@@ -19,6 +23,10 @@ models:
   - {parameters: {a: -2.257724, b: 0.002407}, descriptors: {d2h: '> 6700'}}
 - name: vsom_2
   type: fixed_effects_set
+  taxa:
+  - family: Pinaceae
+    genus: Pinus
+    species: ponderosa
   response: {vsom: board_foot}
   covariates: {dsob: in, hst: ft}
   parameter_names:
@@ -31,6 +39,10 @@ models:
   - {parameters: {a: -68.7502, b: 0.016991}, descriptors: {bdft_rule: International 1/4-inch, d2h: '> 13000'}}
 - name: vsom_3
   type: fixed_effects_set
+  taxa:
+  - family: Pinaceae
+    genus: Pinus
+    species: ponderosa
   response: {vsom: board_foot}
   covariates: {dsob: in, hsm: ft}
   covt_defs: {hsm: Number of 16-foot logs to 8-inch top}
@@ -44,6 +56,10 @@ models:
   - {parameters: {a: -5.93961, b: 0.318669}, descriptors: {bdft_rule: International 1/4-inch, d2h: '> 1100'}}
 - name: rsvg
   type: fixed_effects_set
+  taxa:
+  - family: Pinaceae
+    genus: Pinus
+    species: ponderosa
   response: {rsvg: ft3 ft-2}
   covariates: {dsob: in, hst: ft}
   parameter_names:
@@ -54,6 +70,10 @@ models:
   - {parameters: {a: -413.9575, b: 0.4413}, descriptors: {tree_size: large}}
 - name: rsvg_2
   type: fixed_effects_set
+  taxa:
+  - family: Pinaceae
+    genus: Pinus
+    species: ponderosa
   response: {rsvg: board_foot ft-2}
   covariates: {dsob: in, hst: ft}
   parameter_names:
@@ -66,6 +86,10 @@ models:
   - {parameters: {a: 3.1153, b: -12605.4639}, descriptors: {bdft_rule: International 1/4-inch, tree_size: large}}
 - name: rsvg_3
   type: fixed_effects_set
+  taxa:
+  - family: Pinaceae
+    genus: Pinus
+    species: ponderosa
   response: {rsvg: board_foot ft-2}
   covariates: {dsob: in, hsm: ft}
   covt_defs: {hsm: Number of 16-foot logs to 8-inch top}

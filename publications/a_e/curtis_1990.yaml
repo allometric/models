@@ -7,6 +7,10 @@ publication:
 models:
 - name: hstix50
   type: fixed_effects
+  taxa:
+  - family: Pinaceae
+    genus: Pinus
+    species: monticola
   response: {hstix50: ft}
   covariates: {hst: ft, atb: years}
   parameters: {a: -2.608801, b: -0.715601, c: 0.408404, d: 0.138199}

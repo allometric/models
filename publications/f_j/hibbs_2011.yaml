@@ -7,6 +7,10 @@ publication:
 models:
 - name: dsih
   type: fixed_effects
+  taxa:
+  - family: Betulaceae
+    genus: Alnus
+    species: rubra
   response: {dsih: in}
   covariates: {dsob: in, hst: ft, hsd: in}
   parameters: {a_1: 0.8995, a_2: 1.0205, a_3: 0.2631, a_4: -18.899, a_5: 4.2549, a_6: 0.6221}

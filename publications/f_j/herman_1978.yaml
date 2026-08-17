@@ -7,6 +7,10 @@ publication:
 models:
 - name: hstix100
   type: fixed_effects
+  taxa:
+  - family: Pinaceae
+    genus: Abies
+    species: procera
   response: {hstix100: ft}
   covariates: {hst: ft, atb: years}
   parameters: {a1: -62.755, a2: 672.55, b1: 0.9484, b2: 516.49, c1: -0.00144, c2: 0.1442}

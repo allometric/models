@@ -7,6 +7,10 @@ publication:
 models:
 - name: vsia
   type: fixed_effects
+  taxa:
+  - family: Pinaceae
+    genus: Tsuga
+    species: mertensiana
   response: {vsia: ft3}
   covariates: {dsob: in, hst: ft}
   parameters: {a: -2.956054, b: 1.8140497, c: 1.2744923}

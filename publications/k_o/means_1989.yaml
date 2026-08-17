@@ -7,6 +7,10 @@ publication:
 models:
 - name: hstix50
   type: fixed_effects
+  taxa:
+  - family: Pinaceae
+    genus: Pseudotsuga
+    species: menziesii
   response: {hstix50: ft}
   covariates: {hst: ft, atb: years}
   parameters: {b0: 1.42956, b1: 0.379, b2: 65.11, b3: -0.022733, b4: 1.27157}

@@ -7,6 +7,10 @@ publication:
 models:
 - name: hstix50
   type: fixed_effects
+  taxa:
+  - family: Pinaceae
+    genus: Picea
+    species: engelmannii
   response: {hstix50: ft}
   covariates: {atb: year, hst: ft}
   parameters: {b1: 10.717283, b2: 0.0046314777, b3: 0.74471147, b4: -26413.763, b5: -0.042819823, b6: -0.0047812062, b7: 4.9254336e-06, b8: 2.1975906e-07, b9: 5.1675949, b10: -1.4349139e-08, b11: -9.481014}

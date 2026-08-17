@@ -7,6 +7,10 @@ publication:
 models:
 - name: bs
   type: fixed_effects_set
+  taxa:
+  - family: Poaceae
+    genus: Bambusa
+    species: oldhamii
   response: {bs: g}
   covariates: {dsob: cm}
   parameter_names:
@@ -19,6 +23,10 @@ models:
   - {parameters: {alpha: 5.66, beta: 1.7}, descriptors: {age: 4}}
 - name: bb
   type: fixed_effects_set
+  taxa:
+  - family: Poaceae
+    genus: Bambusa
+    species: oldhamii
   response: {bb: g}
   covariates: {dsob: cm}
   parameter_names:
@@ -30,6 +38,10 @@ models:
   - {parameters: {alpha: 3.4, beta: 1.7}, descriptors: {age: 4}}
 - name: bf
   type: fixed_effects_set
+  taxa:
+  - family: Poaceae
+    genus: Bambusa
+    species: oldhamii
   response: {bf: g}
   covariates: {dsob: cm}
   parameter_names:
@@ -42,6 +54,10 @@ models:
   - {parameters: {alpha: 4.59, beta: 1.36}, descriptors: {age: 4}}
 - name: bt
   type: fixed_effects_set
+  taxa:
+  - family: Poaceae
+    genus: Bambusa
+    species: oldhamii
   response: {bt: g}
   covariates: {dsob: cm}
   parameter_names:
