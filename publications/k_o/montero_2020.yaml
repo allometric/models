@@ -1,0 +1,186 @@
+publication:
+  key: montero_2020
+  bibtype: techreport
+  title: Biomass production and carbon sequestration by Spanish shrublands and by the superficial organic horizon of forest soils
+  author: Montero, G and López-Leiva, C and Ruiz-Peinado, R and López-Senespleda, E and Onrubia, R and Pasalodos, M
+  year: 2020
+models:
+- name: hht
+  type: fixed_effects_set
+  response: {hht: m}
+  covariates: {ah: years}
+  parameter_names:
+  - c1
+  - c2
+  - c3
+  specifications:
+  - {parameters: {c1: 0.0014, c2: 0.0826, c3: 0.5649}, taxa: [{family: Apocynaceae, genus: Nerium, species: oleander}]}
+  - {parameters: {c1: 0.0111, c2: 0.3556, c3: -0.3444}, taxa: [{family: Rosaceae, genus: Rosa, species: canina}]}
+  - {parameters: {c1: 0.0033, c2: 0.03, c3: 0.5539}, taxa: [{family: Berberidaceae, genus: Berberis, species: vulgaris}]}
+  - {parameters: {c1: -0.0005, c2: 0.1023, c3: -0.0301}, taxa: [{family: Buxaceae, genus: Buxus, species: sempervirens}]}
+  - {parameters: {c1: 0.0058, c2: 0.0476, c3: 1.4616}, taxa: [{family: Fagaceae, genus: Quercus, species: ilex}]}
+  - {parameters: {c1: -7.0e-05, c2: 0.1011, c3: 0.2614}, taxa: [{family: Fagaceae, genus: Quercus, species: coccifera}]}
+  - {parameters: {c1: -0.0003, c2: 0.00548, c3: 0.8119}, taxa: [{family: Anacardiaceae, genus: Pistacia, species: lentiscus}]}
+  - {parameters: {c1: 0.0508, c2: -2.9492, c3: 76.484}, taxa: [{family: Ericaceae, genus: Arbutus, species: unedo}]}
+  - {parameters: {c1: 0.0023, c2: -0.0186, c3: 1.3475}, taxa: [{family: Myrtaceae, genus: Myrtus, species: communis}]}
+  - {parameters: {c1: -0.001, c2: 0.1099, c3: 8.577}, taxa: [{family: Ericaceae, genus: Erica, species: arborea}]}
+  - {parameters: {c1: 6.0e-17, c2: 0.04, c3: 0.65}, taxa: [{family: Ericaceae, genus: Erica, species: australis}]}
+  - {parameters: {c1: 0.0125, c2: 0.105, c3: 1.1}, taxa: [{family: Fabaceae, genus: Cytisus, species: scoparius}]}
+  - {parameters: {c1: -0.0056, c2: 0.2678, c3: -0.8022}, taxa: [{family: Fabaceae, genus: Retama, species: sphaerocarpa}]}
+  - {parameters: {c1: -0.0062, c2: 0.2075, c3: 0.425}, taxa: [{family: Fabaceae, genus: Ulex, species: europaeus}]}
+  - {parameters: {c1: -0.0139, c2: 0.4294, c3: -1.6206}, taxa: [{family: Fabaceae, genus: Ulex, species: australis}]}
+  - {parameters: {c1: -0.0006, c2: 0.0916, c3: 0.1816}, taxa: [{family: Fabaceae, genus: Ulex, species: parviflorous}]}
+  - {parameters: {c1: -0.002, c2: 0.102, c3: 0.1083}, taxa: [{family: Fabaceae, genus: Genista, species: scorpius}]}
+  - {parameters: {c1: -0.0016, c2: 0.1646, c3: 0.3256}, taxa: [{family: Fabaceae, genus: Calicotome, species: ssp}]}
+  - {parameters: {c1: -0.0029, c2: 0.16, c3: 0.6121}, taxa: [{family: Cistaceae, genus: Cistus, species: ladanifer}]}
+  - {parameters: {c1: 0.0009, c2: 0.0788, c3: 0.5652}, taxa: [{family: Cistaceae, genus: Cistus, species: albidus}]}
+  - {parameters: {c1: -0.0033, c2: 0.1754, c3: -0.1258}, taxa: [{family: Cistaceae, genus: Cistus, species: populifolius}]}
+  - {parameters: {c1: -0.0028, c2: 0.0906, c3: 0.0872}, taxa: [{family: Cistaceae, genus: Cistus, species: salviifolius}]}
+  - {parameters: {c1: 0.0008, c2: 0.056, c3: 0.4632}, taxa: [{family: Cistaceae, genus: Halimium, species: halimifolium}]}
+  - {parameters: {c1: -7.0e-05, c2: 0.0652, c3: 0.2355}, taxa: [{family: Lamiaceae, genus: Rosmarinus, species: officinalis}]}
+  - {parameters: {c1: -0.002, c2: 0.0994, c3: -0.306}, taxa: [{family: Lamiaceae, genus: Lavandula, species: stoechas}]}
+  - {parameters: {c1: -0.0056, c2: 0.2411, c3: -0.4756}, taxa: [{family: Lamiaceae, genus: Phlomis, species: purpurea}]}
+  - {parameters: {c1: -0.0008, c2: 0.0687, c3: -0.4222}, taxa: [{family: Lamiaceae, genus: Thymus, species: spp}]}
+- name: hht_2
+  type: fixed_effects
+  response: {hht: m}
+  covariates: {ah: years}
+  parameters: {c1: 0.1322, c2: 0.7778}
+  equation: c1 * ah^c2
+  taxa:
+  - {family: Ericaceae, genus: Erica, species: scoparia}
+- name: dh
+  type: fixed_effects_set
+  response: {dh: mm}
+  covariates: {ah: years}
+  parameter_names:
+  - c1
+  - c2
+  - c3
+  specifications:
+  - {parameters: {c1: 0.232, c2: -4.2743, c3: 32.954}, taxa: [{family: Apocynaceae, genus: Nerium, species: oleander}]}
+  - {parameters: {c1: 0.0563, c2: -1.6003, c3: 22.055}, taxa: [{family: Rosaceae, genus: Crataegus, species: monogyna}]}
+  - {parameters: {c1: -0.0694, c2: 18.0, c3: -0.3444}, taxa: [{family: Rosaceae, genus: Rosa, species: canina}]}
+  - {parameters: {c1: 0.0048, c2: 0.0027, c3: 10.738}, taxa: [{family: Berberidaceae, genus: Berberis, species: vulgaris}]}
+  - {parameters: {c1: -0.0006, c2: 0.8453, c3: -1.7782}, taxa: [{family: Buxaceae, genus: Buxus, species: sempervirens}]}
+  - {parameters: {c1: 0.0218, c2: 0.5558, c3: 2.3856}, taxa: [{family: Fagaceae, genus: Quercus, species: ilex}]}
+  - {parameters: {c1: 0.0068, c2: 0.9482, c3: 0.5985}, taxa: [{family: Fagaceae, genus: Quercus, species: coccifera}]}
+  - {parameters: {c1: 0.0059, c2: 0.8805, c3: 2.8547}, taxa: [{family: Oleaceae, genus: Phillyrea, species: angustifolia}]}
+  - {parameters: {c1: -0.0095, c2: 0.7574, c3: 3.81}, taxa: [{family: Myrtaceae, genus: Myrtus, species: communis}]}
+  - {parameters: {c1: 0.0416, c2: -0.5795, c3: 13.825}, taxa: [{family: Rhamnaceae, genus: Rhamnus, species: lycioides}]}
+  - {parameters: {c1: -0.0276, c2: 2.0494, c3: -8.5839}, taxa: [{family: Ericaceae, genus: Erica, species: australis}]}
+  - {parameters: {c1: 0.017, c2: -0.1705, c3: 11.589}, taxa: [{family: Ericaceae, genus: Erica, species: scoparia}]}
+  - {parameters: {c1: -0.0035, c2: 0.8083, c3: 2.6451}, taxa: [{family: Ericaceae, genus: Calluna, species: vulgaris}]}
+  - {parameters: {c1: -0.0213, c2: 1.8589, c3: -0.6042}, taxa: [{family: Fabaceae, genus: Cytisus, species: oromediterraneus}]}
+  - {parameters: {c1: 0.0222, c2: 0.5689, c3: 5.2089}, taxa: [{family: Fabaceae, genus: Cytisus, species: scoparius}]}
+  - {parameters: {c1: 0.0027, c2: 0.9843, c3: 1.3785}, taxa: [{family: Fabaceae, genus: Cytisus, species: multiflorus}]}
+  - {parameters: {c1: 0.0032, c2: 1.732, c3: 3.4541}, taxa: [{family: Fabaceae, genus: Genista, species: florida}]}
+  - {parameters: {c1: 0.0698, c2: 0.0386, c3: 5.0063}, taxa: [{family: Fabaceae, genus: Genista, species: cinerea}]}
+  - {parameters: {c1: -0.1944, c2: 6.4389, c3: -36.844}, taxa: [{family: Fabaceae, genus: Genista, species: tinctoria}]}
+  - {parameters: {c1: 0.0199, c2: 1.2578, c3: 5.5393}, taxa: [{family: Fabaceae, genus: Genista, species: linifolia}]}
+  - {parameters: {c1: -0.0179, c2: 1.3815, c3: 1.5456}, taxa: [{family: Fabaceae, genus: Adenocarpus, species: spp}]}
+  - {parameters: {c1: 0.1317, c2: -0.9206, c3: 9.8746}, taxa: [{family: Fabaceae, genus: Retama, species: sphaerocarpa}]}
+  - {parameters: {c1: -0.0365, c2: 1.7035, c3: 0.753}, taxa: [{family: Fabaceae, genus: Ulex, species: australis}]}
+  - {parameters: {c1: -0.0019, c2: 0.4453, c3: 6.9666}, taxa: [{family: Fabaceae, genus: Ulex, species: parviflorous}]}
+  - {parameters: {c1: -0.0133, c2: 0.5903, c3: -0.0895}, taxa: [{family: Fabaceae, genus: Genista, species: scorpius}]}
+  - {parameters: {c1: 0.056, c2: -0.101, c3: 8.7293}, taxa: [{family: Fabaceae, genus: Calicotome, species: ssp}]}
+  - {parameters: {c1: 0.0253, c2: 0.3976, c3: 1.129}, taxa: [{family: Cistaceae, genus: Cistus, species: laurifolius}]}
+  - {parameters: {c1: 0.0173, c2: 0.3042, c3: 5.6118}, taxa: [{family: Cistaceae, genus: Cistus, species: ladanifer}]}
+  - {parameters: {c1: 0.0538, c2: -0.3841, c3: 7.486}, taxa: [{family: Cistaceae, genus: Cistus, species: monspeliensi}]}
+  - {parameters: {c1: 0.0208, c2: -0.0585, c3: 8.0353}, taxa: [{family: Cistaceae, genus: Cistus, species: albidus}]}
+  - {parameters: {c1: 0.0573, c2: -0.507, c3: 8.5497}, taxa: [{family: Cistaceae, genus: Cistus, species: populifolius}]}
+  - {parameters: {c1: -0.0062, c2: 0.7653, c3: 2.4909}, taxa: [{family: Cistaceae, genus: Cistus, species: salviifolius}]}
+  - {parameters: {c1: 0.053, c2: -0.7224, c3: 10.512}, taxa: [{family: Cistaceae, genus: Cistus, species: libanotis}]}
+  - {parameters: {c1: 0.0684, c2: -0.7332, c3: 10.2}, taxa: [{family: Cistaceae, genus: Halimium, species: halimifolium}]}
+  - {parameters: {c1: -0.0023, c2: 0.8024, c3: 3.6739}, taxa: [{family: Lamiaceae, genus: Rosmarinus, species: officinalis}]}
+  - {parameters: {c1: -0.0283, c2: 1.1574, c3: 0.5316}, taxa: [{family: Lamiaceae, genus: Lavandula, species: stoechas}]}
+  - {parameters: {c1: 0.022, c2: -0.0323, c3: 6.4075}, taxa: [{family: Lamiaceae, genus: Phlomis, species: purpurea}]}
+  - {parameters: {c1: -0.0138, c2: 0.4069, c3: 4.7902}, taxa: [{family: Lamiaceae, genus: Thymus, species: spp}]}
+- name: dh_2
+  type: fixed_effects
+  response: {dh: mm}
+  covariates: {ah: years}
+  parameters: {c1: 1.246, c2: 0.9504}
+  equation: c1 * ah^c2
+  taxa:
+  - {family: Anacardiaceae, genus: Pistacia, species: lentiscus}
+- name: bh_p
+  type: fixed_effects_set
+  response: {bh_p: t ha-1}
+  covariates: {rv_p: m2 m-2, hht_p: dm}
+  parameter_names:
+  - c1
+  - c2
+  - c3
+  specifications:
+  - {parameters: {c1: 4.515059, c2: 0.428802, c3: 1.0}, taxa: [{family: Buxaceae, genus: Buxus, species: sempervirens}]}
+  - {parameters: {c1: 0.3768846, c2: 1.5295796, c3: 1.0172503}, taxa: [{family: Fagaceae, genus: Quercus, species: ilex}]}
+  - {parameters: {c1: 2.0135328, c2: 0.8191936, c3: 0.9125035}, taxa: [{family: Fagaceae, genus: Quercus, species: coccifera}]}
+  - {parameters: {c1: 2.5800701, c2: 0.8037841, c3: 1.0}, taxa: [{family: Anacardiaceae, genus: Pistacia, species: lentiscus}]}
+  - {parameters: {c1: 0.14436873, c2: 1.0, c3: 1.0}, taxa: [{family: Ericaceae, genus: Rhododendron, species: ferrugineum}]}
+  - {parameters: {c1: 1.189603, c2: 1.0, c3: 1.0}, taxa: [{family: Ericaceae, genus: Erica, species: arborea}]}
+  - {parameters: {c1: 11.831024, c2: 0.463955, c3: 1.0}, taxa: [{family: Fabaceae, genus: Cytisus, species: oromediterraneus}]}
+  - {parameters: {c1: 0.3696343, c2: 1.2075982, c3: 1.0}, taxa: [{family: Fabaceae, genus: Cytisus, species: scoparius}]}
+  - {parameters: {c1: 1.6152778, c2: 1.0, c3: 1.0}, taxa: [{family: Fabaceae, genus: Retama, species: sphaerocarpa}]}
+  - {parameters: {c1: 1.429399, c2: 1.0, c3: 1.0}, taxa: [{family: Fabaceae, genus: Ulex, species: europaeus}]}
+  - {parameters: {c1: 1.577036, c2: 1.017956, c3: 1.0}, taxa: [{family: Fabaceae, genus: Ulex, species: parviflorous}]}
+  - {parameters: {c1: 0.2127759, c2: 2.1722167, c3: 0.6170022}, taxa: [{family: Fabaceae, genus: Genista, species: scorpius}]}
+  - {parameters: {c1: 1.3981378, c2: 0.9987021, c3: 1.0}, taxa: [{family: Cistaceae, genus: Cistus, species: ladanifer}]}
+  - {parameters: {c1: 1.7313566, c2: 0.7218292, c3: 0.6361264}, taxa: [{family: Cistaceae, genus: Cistus, species: albidus}]}
+  - {parameters: {c1: 1.336776, c2: 1.0, c3: 1.0}, taxa: [{family: Cistaceae, genus: Halimium, species: halimifolium}]}
+  - {parameters: {c1: 1.025574, c2: 1.133836, c3: 1.0}, taxa: [{family: Lamiaceae, genus: Rosmarinus, species: officinalis}]}
+  - {parameters: {c1: 1.952115, c2: 0.6468343, c3: 1.0}, taxa: [{family: Lamiaceae, genus: Lavandula, species: stoechas}]}
+  - {parameters: {c1: 1.024665, c2: 1.0, c3: 1.0}, taxa: [{family: Lamiaceae, genus: Phlomis, species: purpurea}]}
+  - {parameters: {c1: 1.3520818, c2: 0.8747779, c3: 1.0}, taxa: [{family: Lamiaceae, genus: Thymus, species: spp}]}
+- name: i_bh_p
+  type: fixed_effects_set
+  response: {i_bh_p: t ha-1 year-1}
+  covariates: {rv_p: m2 m-2, hht_p: dm}
+  parameter_names:
+  - c1
+  - c2
+  - c3
+  specifications:
+  - {parameters: {c1: 0.2209653, c2: 0.277532, c3: 1.0}, taxa: [{family: Buxaceae, genus: Buxus, species: sempervirens}]}
+  - {parameters: {c1: 0.0756024, c2: 1.0, c3: 1.0}, taxa: [{family: Fagaceae, genus: Quercus, species: ilex}]}
+  - {parameters: {c1: 5.570363, c2: -0.353561, c3: 1.436201}, taxa: [{family: Fagaceae, genus: Quercus, species: coccifera}]}
+  - {parameters: {c1: 0.04661061, c2: 1.0, c3: 1.0}, taxa: [{family: Ericaceae, genus: Rhododendron, species: ferrugineum}]}
+  - {parameters: {c1: 0.1871867, c2: 1.0, c3: 1.0}, taxa: [{family: Ericaceae, genus: Erica, species: arborea}]}
+  - {parameters: {c1: 0.788735, c2: 0.4639552, c3: 1.0}, taxa: [{family: Fabaceae, genus: Cytisus, species: oromediterraneus}]}
+  - {parameters: {c1: 18.900532, c2: -0.569899}, taxa: [{family: Fabaceae, genus: Cytisus, species: scoparius}]}
+  - {parameters: {c1: 0.1439749, c2: 1.0, c3: 1.0}, taxa: [{family: Fabaceae, genus: Retama, species: sphaerocarpa}]}
+  - {parameters: {c1: 0.2278959, c2: 1.0, c3: 1.0}, taxa: [{family: Fabaceae, genus: Ulex, species: europaeus}]}
+  - {parameters: {c1: 0.125447, c2: 1.0, c3: 1.0}, taxa: [{family: Fabaceae, genus: Ulex, species: parviflorous}]}
+  - {parameters: {c1: 0.5264417, c2: 0.6434965, c3: 1.0}, taxa: [{family: Fabaceae, genus: Genista, species: scorpius}]}
+  - {parameters: {c1: 0.1250345, c2: 1.0, c3: 1.0}, taxa: [{family: Cistaceae, genus: Cistus, species: ladanifer}]}
+  - {parameters: {c1: 3.442917, c2: -0.201704, c3: 1.0}, taxa: [{family: Cistaceae, genus: Cistus, species: albidus}]}
+  - {parameters: {c1: 0.1066242, c2: 1.0, c3: 1.0}, taxa: [{family: Cistaceae, genus: Halimium, species: halimifolium}]}
+  - {parameters: {c1: 3.1620475, c2: -0.0412884, c3: 1.1083937}, taxa: [{family: Lamiaceae, genus: Rosmarinus, species: officinalis}]}
+  - {parameters: {c1: 0.1592441, c2: 0.6173933, c3: 1.0}, taxa: [{family: Lamiaceae, genus: Lavandula, species: stoechas}]}
+  - {parameters: {c1: 0.1020098, c2: 1.0, c3: 1.0}, taxa: [{family: Lamiaceae, genus: Phlomis, species: purpurea}]}
+  - {parameters: {c1: 0.1022028, c2: 0.511909, c3: 1.0}, taxa: [{family: Lamiaceae, genus: Thymus, species: spp}]}
+- name: i_bh_p_2
+  type: fixed_effects
+  response: {i_bh_p: t ha-1 year-1}
+  covariates: {rv_p: m2 m-2, hht_p: dm}
+  parameters: {c1: -0.1694, c2: 0.3119, c3: 1.6414, c4: 0.6606}
+  equation: c4 * exp(c1) * rv_p^c2 * hht_p^c3
+  taxa:
+  - {family: Anacardiaceae, genus: Pistacia, species: lentiscus}
+- name: i_bh_p_3
+  type: fixed_effects_set
+  response: {i_bh_p: t ha-1}
+  covariates: {ah_p: years}
+  parameter_names:
+  - c1
+  - c2
+  specifications:
+  - {parameters: {c1: 4.211, c2: 0.841}, taxa: [{family: Fagaceae, genus: Quercus, species: coccifera}]}
+  - {parameters: {c1: 5.5262, c2: 0.5641}, taxa: [{family: Anacardiaceae, genus: Pistacia, species: lentiscus}]}
+  - {parameters: {c1: 9.9052, c2: 0.3435}, taxa: [{family: Ericaceae, genus: Erica, species: arborea}]}
+  - {parameters: {c1: 8.4777, c2: 0.6648}, taxa: [{family: Fabaceae, genus: Cytisus, species: scoparius}]}
+  - {parameters: {c1: 8.03001, c2: 0.7801}, taxa: [{family: Fabaceae, genus: Ulex, species: europaeus}]}
+  - {parameters: {c1: 0.6495, c2: 1.5413}, taxa: [{family: Fabaceae, genus: Genista, species: scorpius}]}
+  - {parameters: {c1: 4.6257, c2: 0.5128}, taxa: [{family: Cistaceae, genus: Cistus, species: ladanifer}]}
+  - {parameters: {c1: 5.1568, c2: 0.4451}, taxa: [{family: Cistaceae, genus: Cistus, species: albidus}]}
+  - {parameters: {c1: 1.4549, c2: 1.0314}, taxa: [{family: Lamiaceae, genus: Rosmarinus, species: officinalis}]}

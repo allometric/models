@@ -1,0 +1,25 @@
+publication:
+  key: hann_1978
+  bibtype: techreport
+  title: Comprehensive tree volume equations for major species of New Mexico and Arizona. I. Results and methodology. II. Tables for unforked trees
+  author: Hann, DW and Bare, BB
+  year: 1978
+models:
+- name: vsia
+  type: fixed_effects_set
+  response: {vsia: ft3}
+  covariates: {dsob: in, hst: ft}
+  parameter_names:
+  - a_0
+  - a_1
+  specifications:
+  - {parameters: {a_0: 0.160888987, a_1: 0.0020325}, descriptors: {national_forest: 'Lincoln, Santa Fe, Carson'}, taxa: [{family: Pinaceae, genus: Pinus, species: strobus}]}
+  - {parameters: {a_0: 0.225466084, a_1: 0.0021697}, descriptors: {national_forest: 'Lincoln, Santa Fe, Carson'}, taxa: [{family: Pinaceae, genus: Picea, species: engelmanii}]}
+  - {parameters: {a_0: 0.237204154, a_1: 0.002211229}, descriptors: {national_forest: 'Coconino, Tonto, Lincoln, Santa Fe, Carson'}, taxa: [{family: Pinaceae, genus: Pinus, species: jeffreyi}]}
+  - {parameters: {a_0: 0.08107248, a_1: 0.00198351}, descriptors: {national_forest: 'Coconino, Tonto, Lincoln'}, taxa: [{family: Pinaceae, genus: Pinus, species: ponderosa}]}
+  - {parameters: {a_0: 0.048308295, a_1: 0.002049684}, descriptors: {national_forest: 'Santa Fe, Carson'}, taxa: [{family: Pinaceae, genus: Pinus, species: ponderosa}]}
+  - {parameters: {a_0: 0.438373815, a_1: 0.001756427}, descriptors: {national_forest: Lincoln}, taxa: [{family: Pinaceae, genus: Pseudotsuga, species: menziesii}]}
+  - {parameters: {a_0: 0.341133398, a_1: 0.00191797}, descriptors: {national_forest: 'Santa Fe, Carson'}, taxa: [{family: Pinaceae, genus: Pseudotsuga, species: menziesii}]}
+  - {parameters: {a_0: 0.0327, a_1: 0.002311235}, descriptors: {national_forest: 'Santa Fe, Carson'}, taxa: [{family: Salicaceae, genus: Populus, species: tremuloides}]}
+  - {parameters: {a_0: 0.210903832, a_1: 0.001839958}, descriptors: {national_forest: Lincoln}, taxa: [{family: Pinaceae, genus: Abies, species: concolor}]}
+  - {parameters: {a_0: 0.157776859, a_1: 0.002009123}, descriptors: {national_forest: 'Santa Fe, Carson'}, taxa: [{family: Pinaceae, genus: Abies, species: concolor}]}

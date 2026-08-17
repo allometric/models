@@ -1,0 +1,20 @@
+publication:
+  key: larsen_1985
+  bibtype: techreport
+  title: Equations for predicting diameter and squared diameter inside bark at breast height for six major conifers of southwest Oregon
+  author: Larsen, David Rolf and Hann, David W
+  year: 1985
+models:
+- name: dsib
+  type: fixed_effects_set
+  response: {dsib: in}
+  covariates: {dsob: in}
+  parameter_names:
+  - b1
+  - b2
+  specifications:
+  - {parameters: {b1: 0.903563, b2: 0.989388}, taxa: [{family: Pinaceae, genus: Pseudotsuga, species: menziesii}]}
+  - {parameters: {b1: 0.90497, b2: 1.0}, taxa: [{family: Pinaceae, genus: Abies, species: grandis}, {family: Pinaceae, genus: Abies, species: concolor}]}
+  - {parameters: {b1: 0.809427, b2: 1.016866}, taxa: [{family: Pinaceae, genus: Pinus, species: ponderosa}]}
+  - {parameters: {b1: 0.85904, b2: 1.0}, taxa: [{family: Pinaceae, genus: Pinus, species: lambertiana}]}
+  - {parameters: {b1: 0.83729, b2: 1.0}, taxa: [{family: Cupressaceae, genus: Calocedrus, species: decurrens}]}

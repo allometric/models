@@ -1,0 +1,203 @@
+publication:
+  key: ung_2008
+  bibtype: article
+  title: 'Canadian national biomass equations: new parameter estimates that include British Columbia data'
+  author: Ung, Chhun-Huor and Bernier, Pierre and Guo, Xiao-Jing
+  year: 2008
+models:
+- name: bs
+  type: fixed_effects_set
+  response: {bs: kg}
+  covariates: {dsob: cm}
+  parameter_names:
+  - bwood1
+  - bwood2
+  specifications:
+  - {parameters: {bwood1: 0.025036, bwood2: 2.637781}, region: [CA-AB, CA-BC], descriptors: {na_genus: false}, taxa: [{family: Pinaceae, genus: Abies, species: lasiocarpa}]}
+  - {parameters: {bwood1: 0.0494, bwood2: 2.5025}, region: [CA-AB, CA-BC, CA-MB, CA-NL, CA-NS, CA-NT, CA-ON, CA-QC, CA-SK, CA-YT], descriptors: {na_genus: false}, taxa: [{family: Pinaceae, genus: Picea, species: mariana}]}
+  - {parameters: {bwood1: 0.0323, bwood2: 2.6825}, region: [CA-AB, CA-BC], descriptors: {na_genus: false}, taxa: [{family: Pinaceae, genus: Pinus, species: contorta}]}
+  - {parameters: {bwood1: 0.0608, bwood2: 2.4735}, region: [CA-AB, CA-BC, CA-MB, CA-NL, CA-NS, CA-NT, CA-ON, CA-QC, CA-SK, CA-YT], descriptors: {na_genus: false}, taxa: [{family: Salicaceae, genus: Populus, species: tremuloides}]}
+  - {parameters: {bwood1: 0.0604, bwood2: 2.4959}, region: [CA-AB, CA-BC, CA-MB, CA-NL, CA-NS, CA-ON, CA-QC, CA-SK], descriptors: {na_genus: false}, taxa: [{family: Betulaceae, genus: Betula, species: papyrifera}]}
+  - {parameters: {bwood1: 0.0334, bwood2: 2.598}, region: [CA-AB, CA-BC, CA-MB, CA-NL, CA-NS, CA-NT, CA-ON, CA-QC, CA-SK, CA-YT], descriptors: {na_genus: false}, taxa: [{family: Pinaceae, genus: Picea, species: glauca}]}
+  - {parameters: {bwood1: 0.0204, bwood2: 2.6974}, region: [CA-BC], descriptors: {na_genus: false}, taxa: [{family: Pinaceae, genus: Pseudotsuga, species: menziesii}]}
+  - {parameters: {bwood1: 0.0223, bwood2: 2.7169}, region: [CA-BC], descriptors: {na_genus: false}, taxa: [{family: Pinaceae, genus: Picea, species: engelmannii}]}
+  - {parameters: {bwood1: 0.0424, bwood2: 2.4289}, region: [CA-BC], descriptors: {na_genus: false}, taxa: [{family: Pinaceae, genus: Abies, species: amabilis}]}
+  - {parameters: {bwood1: 0.046, bwood2: 2.4312}, region: [CA-BC], descriptors: {na_genus: false}, taxa: [{family: Salicaceae, genus: Populus, species: trichocarpa}, {family: Betulaceae, genus: Alnus, species: rubra}]}
+  - {parameters: {bwood1: 0.0302, bwood2: 2.5776}, region: [CA-BC], descriptors: {na_genus: false}, taxa: [{family: Pinaceae, genus: Picea, species: sitchensis}]}
+  - {parameters: {bwood1: 0.0141, bwood2: 2.8668}, region: [CA-BC], descriptors: {na_genus: false}, taxa: [{family: Pinaceae, genus: Tsuga, species: heterophylla}]}
+  - {parameters: {bwood1: 0.0111, bwood2: 2.8027}, region: [CA-BC], descriptors: {na_genus: false}, taxa: [{family: Cupressaceae, genus: Thuja, species: plicata}]}
+  - {parameters: {bwood1: 0.0864, bwood2: 2.3715}, region: [CA-AB, CA-BC, CA-MB, CA-NL, CA-NS, CA-NT, CA-ON, CA-QC, CA-SK, CA-YT], descriptors: {na_genus: true}, taxa: [{family: NA, genus: NA, species: NA}]}
+  - {parameters: {bwood1: 0.0564, bwood2: 2.4347}, region: [CA-AB, CA-BC, CA-MB, CA-NL, CA-NS, CA-NT, CA-ON, CA-QC, CA-SK, CA-YT], descriptors: {na_genus: true}, taxa: [{family: NA, genus: NA, species: NA}]}
+  - {parameters: {bwood1: 0.0741, bwood2: 2.3875}, region: [CA-AB, CA-BC, CA-MB, CA-NL, CA-NS, CA-NT, CA-ON, CA-QC, CA-SK, CA-YT], descriptors: {na_genus: true}, taxa: [{family: NA, genus: NA, species: NA}]}
+- name: bs_2
+  type: fixed_effects_set
+  response: {bs: kg}
+  covariates: {dsob: cm, hst: m}
+  parameter_names:
+  - bwood1
+  - bwood2
+  - bwood3
+  specifications:
+  - {parameters: {bwood1: 0.022, bwood2: 1.6469, bwood3: 1.1714}, region: [CA-AB, CA-BC], descriptors: {na_genus: false}, taxa: [{family: Pinaceae, genus: Abies, species: lasiocarpa}]}
+  - {parameters: {bwood1: 0.0335, bwood2: 1.7389, bwood3: 0.9835}, region: [CA-AB, CA-BC, CA-MB, CA-NL, CA-NS, CA-NT, CA-ON, CA-QC, CA-SK, CA-YT], descriptors: {na_genus: false}, taxa: [{family: Pinaceae, genus: Picea, species: mariana}]}
+  - {parameters: {bwood1: 0.0239, bwood2: 1.6827, bwood3: 1.1878}, region: [CA-AB, CA-BC], descriptors: {na_genus: false}, taxa: [{family: Pinaceae, genus: Pinus, species: contorta}]}
+  - {parameters: {bwood1: 0.0143, bwood2: 1.9369, bwood3: 1.0579}, region: [CA-AB, CA-BC, CA-MB, CA-NL, CA-NS, CA-NT, CA-ON, CA-QC, CA-SK, CA-YT], descriptors: {na_genus: false}, taxa: [{family: Salicaceae, genus: Populus, species: tremuloides}]}
+  - {parameters: {bwood1: 0.0333, bwood2: 2.0794, bwood3: 0.6811}, region: [CA-AB, CA-BC, CA-MB, CA-NL, CA-NS, CA-ON, CA-QC, CA-SK], descriptors: {na_genus: false}, taxa: [{family: Betulaceae, genus: Betula, species: papyrifera}]}
+  - {parameters: {bwood1: 0.0265, bwood2: 1.7952, bwood3: 0.9733}, region: [CA-AB, CA-BC, CA-MB, CA-NL, CA-NS, CA-NT, CA-ON, CA-QC, CA-SK, CA-YT], descriptors: {na_genus: false}, taxa: [{family: Pinaceae, genus: Picea, species: glauca}]}
+  - {parameters: {bwood1: 0.0353, bwood2: 2.0249, bwood3: 0.7048}, region: [CA-AB, CA-BC, CA-MB, CA-NL, CA-NS, CA-NT, CA-ON, CA-QC, CA-SK, CA-YT], descriptors: {na_genus: true}, taxa: [{family: NA, genus: NA, species: NA}]}
+  - {parameters: {bwood1: 0.0276, bwood2: 1.6868, bwood3: 1.0953}, region: [CA-AB, CA-BC, CA-MB, CA-NL, CA-NS, CA-NT, CA-ON, CA-QC, CA-SK, CA-YT], descriptors: {na_genus: true}, taxa: [{family: NA, genus: NA, species: NA}]}
+  - {parameters: {bwood1: 0.0283, bwood2: 1.8298, bwood3: 0.9546}, region: [CA-AB, CA-BC, CA-MB, CA-NL, CA-NS, CA-NT, CA-ON, CA-QC, CA-SK, CA-YT], descriptors: {na_genus: true}, taxa: [{family: NA, genus: NA, species: NA}]}
+  - {parameters: {bwood1: 0.0191, bwood2: 1.5365, bwood3: 1.3634}, region: [CA-BC], descriptors: {na_genus: false}, taxa: [{family: Pinaceae, genus: Pseudotsuga, species: menziesii}]}
+  - {parameters: {bwood1: 0.0133, bwood2: 1.3303, bwood3: 1.6877}, region: [CA-BC], descriptors: {na_genus: false}, taxa: [{family: Pinaceae, genus: Picea, species: engelmannii}]}
+  - {parameters: {bwood1: 0.0315, bwood2: 1.8297, bwood3: 0.8056}, region: [CA-BC], descriptors: {na_genus: false}, taxa: [{family: Pinaceae, genus: Abies, species: amabilis}]}
+  - {parameters: {bwood1: 0.0051, bwood2: 1.0697, bwood3: 2.2748}, region: [CA-BC], descriptors: {na_genus: false}, taxa: [{family: Salicaceae, genus: Populus, species: trichocarpa}, {family: Betulaceae, genus: Alnus, species: rubra}]}
+  - {parameters: {bwood1: 0.0237, bwood2: 2.5813, bwood3: 0.0822}, region: [CA-BC], descriptors: {na_genus: false}, taxa: [{family: Pinaceae, genus: Picea, species: sitchensis}]}
+  - {parameters: {bwood1: 0.0113, bwood2: 1.9332, bwood3: 1.1125}, region: [CA-BC], descriptors: {na_genus: false}, taxa: [{family: Pinaceae, genus: Tsuga, species: heterophylla}]}
+  - {parameters: {bwood1: 0.0188, bwood2: 1.3376, bwood3: 1.5293}, region: [CA-BC], descriptors: {na_genus: false}, taxa: [{family: Cupressaceae, genus: Thuja, species: plicata}]}
+- name: bk
+  type: fixed_effects_set
+  response: {bk: kg}
+  covariates: {dsob: cm}
+  parameter_names:
+  - bbark1
+  - bbark2
+  specifications:
+  - {parameters: {bbark1: 0.006119, bbark2: 2.537534}, region: [CA-AB, CA-BC], descriptors: {na_genus: false}, taxa: [{family: Pinaceae, genus: Abies, species: lasiocarpa}]}
+  - {parameters: {bbark1: 0.0148, bbark2: 2.2494}, region: [CA-AB, CA-BC, CA-MB, CA-NL, CA-NS, CA-NT, CA-ON, CA-QC, CA-SK, CA-YT], descriptors: {na_genus: false}, taxa: [{family: Pinaceae, genus: Picea, species: mariana}]}
+  - {parameters: {bbark1: 0.0144, bbark2: 2.1768}, region: [CA-AB, CA-BC], descriptors: {na_genus: false}, taxa: [{family: Pinaceae, genus: Pinus, species: contorta}]}
+  - {parameters: {bbark1: 0.0159, bbark2: 2.4123}, region: [CA-AB, CA-BC, CA-MB, CA-NL, CA-NS, CA-NT, CA-ON, CA-QC, CA-SK, CA-YT], descriptors: {na_genus: false}, taxa: [{family: Salicaceae, genus: Populus, species: tremuloides}]}
+  - {parameters: {bbark1: 0.014, bbark2: 2.3923}, region: [CA-AB, CA-BC, CA-MB, CA-NL, CA-NS, CA-ON, CA-QC, CA-SK], descriptors: {na_genus: false}, taxa: [{family: Betulaceae, genus: Betula, species: papyrifera}]}
+  - {parameters: {bbark1: 0.0114, bbark2: 2.3057}, region: [CA-AB, CA-BC, CA-MB, CA-NL, CA-NS, CA-NT, CA-ON, CA-QC, CA-SK, CA-YT], descriptors: {na_genus: false}, taxa: [{family: Pinaceae, genus: Picea, species: glauca}]}
+  - {parameters: {bbark1: 0.0069, bbark2: 2.5462}, region: [CA-BC], descriptors: {na_genus: false}, taxa: [{family: Pinaceae, genus: Pseudotsuga, species: menziesii}]}
+  - {parameters: {bbark1: 0.0118, bbark2: 2.2733}, region: [CA-BC], descriptors: {na_genus: false}, taxa: [{family: Pinaceae, genus: Picea, species: engelmannii}]}
+  - {parameters: {bbark1: 0.0057, bbark2: 2.4786}, region: [CA-BC], descriptors: {na_genus: false}, taxa: [{family: Pinaceae, genus: Abies, species: amabilis}]}
+  - {parameters: {bbark1: 0.0074, bbark2: 2.4442}, region: [CA-BC], descriptors: {na_genus: false}, taxa: [{family: Salicaceae, genus: Populus, species: trichocarpa}, {family: Betulaceae, genus: Alnus, species: rubra}]}
+  - {parameters: {bbark1: 0.0066, bbark2: 2.4433}, region: [CA-BC], descriptors: {na_genus: false}, taxa: [{family: Pinaceae, genus: Picea, species: sitchensis}]}
+  - {parameters: {bbark1: 0.0025, bbark2: 2.8062}, region: [CA-BC], descriptors: {na_genus: false}, taxa: [{family: Pinaceae, genus: Tsuga, species: heterophylla}]}
+  - {parameters: {bbark1: 0.0003, bbark2: 3.2721}, region: [CA-BC], descriptors: {na_genus: false}, taxa: [{family: Cupressaceae, genus: Thuja, species: plicata}]}
+  - {parameters: {bbark1: 0.0226, bbark2: 2.2151}, region: [CA-AB, CA-BC, CA-MB, CA-NL, CA-NS, CA-NT, CA-ON, CA-QC, CA-SK, CA-YT], descriptors: {na_genus: true}, taxa: [{family: NA, genus: NA, species: NA}]}
+  - {parameters: {bbark1: 0.0153, bbark2: 2.211}, region: [CA-AB, CA-BC, CA-MB, CA-NL, CA-NS, CA-NT, CA-ON, CA-QC, CA-SK, CA-YT], descriptors: {na_genus: true}, taxa: [{family: NA, genus: NA, species: NA}]}
+  - {parameters: {bbark1: 0.0182, bbark2: 2.2181}, region: [CA-AB, CA-BC, CA-MB, CA-NL, CA-NS, CA-NT, CA-ON, CA-QC, CA-SK, CA-YT], descriptors: {na_genus: true}, taxa: [{family: NA, genus: NA, species: NA}]}
+- name: bk_2
+  type: fixed_effects_set
+  response: {bk: kg}
+  covariates: {dsob: cm, hst: m}
+  parameter_names:
+  - bbark1
+  - bbark2
+  - bbark3
+  specifications:
+  - {parameters: {bbark1: 0.0061, bbark2: 1.8603, bbark3: 0.7693}, region: [CA-AB, CA-BC], descriptors: {na_genus: false}, taxa: [{family: Pinaceae, genus: Abies, species: lasiocarpa}]}
+  - {parameters: {bbark1: 0.0132, bbark2: 1.7657, bbark3: 0.5775}, region: [CA-AB, CA-BC, CA-MB, CA-NL, CA-NS, CA-NT, CA-ON, CA-QC, CA-SK, CA-YT], descriptors: {na_genus: false}, taxa: [{family: Pinaceae, genus: Picea, species: mariana}]}
+  - {parameters: {bbark1: 0.0117, bbark2: 1.6398, bbark3: 0.6524}, region: [CA-AB, CA-BC], descriptors: {na_genus: false}, taxa: [{family: Pinaceae, genus: Pinus, species: contorta}]}
+  - {parameters: {bbark1: 0.0063, bbark2: 2.0744, bbark3: 0.6691}, region: [CA-AB, CA-BC, CA-MB, CA-NL, CA-NS, CA-NT, CA-ON, CA-QC, CA-SK, CA-YT], descriptors: {na_genus: false}, taxa: [{family: Salicaceae, genus: Populus, species: tremuloides}]}
+  - {parameters: {bbark1: 0.0079, bbark2: 1.9905, bbark3: 0.6553}, region: [CA-AB, CA-BC, CA-MB, CA-NL, CA-NS, CA-ON, CA-QC, CA-SK], descriptors: {na_genus: false}, taxa: [{family: Betulaceae, genus: Betula, species: papyrifera}]}
+  - {parameters: {bbark1: 0.0124, bbark2: 1.6962, bbark3: 0.6489}, region: [CA-AB, CA-BC, CA-MB, CA-NL, CA-NS, CA-NT, CA-ON, CA-QC, CA-SK, CA-YT], descriptors: {na_genus: false}, taxa: [{family: Pinaceae, genus: Picea, species: glauca}]}
+  - {parameters: {bbark1: 0.009, bbark2: 1.8677, bbark3: 0.7144}, region: [CA-AB, CA-BC, CA-MB, CA-NL, CA-NS, CA-NT, CA-ON, CA-QC, CA-SK, CA-YT], descriptors: {na_genus: true}, taxa: [{family: NA, genus: NA, species: NA}]}
+  - {parameters: {bbark1: 0.0101, bbark2: 1.8486, bbark3: 0.5525}, region: [CA-AB, CA-BC, CA-MB, CA-NL, CA-NS, CA-NT, CA-ON, CA-QC, CA-SK, CA-YT], descriptors: {na_genus: true}, taxa: [{family: NA, genus: NA, species: NA}]}
+  - {parameters: {bbark1: 0.012, bbark2: 1.6378, bbark3: 0.7746}, region: [CA-AB, CA-BC, CA-MB, CA-NL, CA-NS, CA-NT, CA-ON, CA-QC, CA-SK, CA-YT], descriptors: {na_genus: true}, taxa: [{family: NA, genus: NA, species: NA}]}
+  - {parameters: {bbark1: 0.0083, bbark2: 2.4811, bbark3: 0.0}, region: [CA-BC], descriptors: {na_genus: false}, taxa: [{family: Pinaceae, genus: Pseudotsuga, species: menziesii}]}
+  - {parameters: {bbark1: 0.0086, bbark2: 1.6216, bbark3: 0.8192}, region: [CA-BC], descriptors: {na_genus: false}, taxa: [{family: Pinaceae, genus: Picea, species: engelmannii}]}
+  - {parameters: {bbark1: 0.0067, bbark2: 2.697, bbark3: -0.3105}, region: [CA-BC], descriptors: {na_genus: false}, taxa: [{family: Pinaceae, genus: Abies, species: amabilis}]}
+  - {parameters: {bbark1: 0.0009, bbark2: 1.3061, bbark3: 2.0109}, region: [CA-BC], descriptors: {na_genus: false}, taxa: [{family: Salicaceae, genus: Populus, species: trichocarpa}, {family: Betulaceae, genus: Alnus, species: rubra}]}
+  - {parameters: {bbark1: 0.0045, bbark2: 1.2275, bbark3: 1.519}, region: [CA-BC], descriptors: {na_genus: false}, taxa: [{family: Pinaceae, genus: Picea, species: sitchensis}]}
+  - {parameters: {bbark1: 0.0019, bbark2: 2.3356, bbark3: 0.6371}, region: [CA-BC], descriptors: {na_genus: false}, taxa: [{family: Pinaceae, genus: Tsuga, species: heterophylla}]}
+  - {parameters: {bbark1: 0.0002, bbark2: 2.4369, bbark3: 1.1315}, region: [CA-BC], descriptors: {na_genus: false}, taxa: [{family: Cupressaceae, genus: Thuja, species: plicata}]}
+- name: bb
+  type: fixed_effects_set
+  response: {bb: kg}
+  covariates: {dsob: cm}
+  parameter_names:
+  - bbranches1
+  - bbranches2
+  specifications:
+  - {parameters: {bbranches1: 0.017837, bbranches2: 2.425492}, region: [CA-AB, CA-BC], descriptors: {na_genus: false}, taxa: [{family: Pinaceae, genus: Abies, species: lasiocarpa}]}
+  - {parameters: {bbranches1: 0.0291, bbranches2: 2.0751}, region: [CA-AB, CA-BC, CA-MB, CA-NL, CA-NS, CA-NT, CA-ON, CA-QC, CA-SK, CA-YT], descriptors: {na_genus: false}, taxa: [{family: Pinaceae, genus: Picea, species: mariana}]}
+  - {parameters: {bbranches1: 0.0209, bbranches2: 2.1772}, region: [CA-AB, CA-BC], descriptors: {na_genus: false}, taxa: [{family: Pinaceae, genus: Pinus, species: contorta}]}
+  - {parameters: {bbranches1: 0.0082, bbranches2: 2.5139}, region: [CA-AB, CA-BC, CA-MB, CA-NL, CA-NS, CA-NT, CA-ON, CA-QC, CA-SK, CA-YT], descriptors: {na_genus: false}, taxa: [{family: Salicaceae, genus: Populus, species: tremuloides}]}
+  - {parameters: {bbranches1: 0.0147, bbranches2: 2.5227}, region: [CA-AB, CA-BC, CA-MB, CA-NL, CA-NS, CA-ON, CA-QC, CA-SK], descriptors: {na_genus: false}, taxa: [{family: Betulaceae, genus: Betula, species: papyrifera}]}
+  - {parameters: {bbranches1: 0.0302, bbranches2: 2.0927}, region: [CA-AB, CA-BC, CA-MB, CA-NL, CA-NS, CA-NT, CA-ON, CA-QC, CA-SK, CA-YT], descriptors: {na_genus: false}, taxa: [{family: Pinaceae, genus: Picea, species: glauca}]}
+  - {parameters: {bbranches1: 0.0404, bbranches2: 2.1388}, region: [CA-BC], descriptors: {na_genus: false}, taxa: [{family: Pinaceae, genus: Pseudotsuga, species: menziesii}]}
+  - {parameters: {bbranches1: 0.0336, bbranches2: 2.2123}, region: [CA-BC], descriptors: {na_genus: false}, taxa: [{family: Pinaceae, genus: Picea, species: engelmannii}]}
+  - {parameters: {bbranches1: 0.0322, bbranches2: 2.1313}, region: [CA-BC], descriptors: {na_genus: false}, taxa: [{family: Pinaceae, genus: Abies, species: amabilis}]}
+  - {parameters: {bbranches1: 0.0086, bbranches2: 2.7326}, region: [CA-BC], descriptors: {na_genus: false}, taxa: [{family: Salicaceae, genus: Populus, species: trichocarpa}, {family: Betulaceae, genus: Alnus, species: rubra}]}
+  - {parameters: {bbranches1: 0.0739, bbranches2: 1.8342}, region: [CA-BC], descriptors: {na_genus: false}, taxa: [{family: Pinaceae, genus: Picea, species: sitchensis}]}
+  - {parameters: {bbranches1: 0.0703, bbranches2: 1.9547}, region: [CA-BC], descriptors: {na_genus: false}, taxa: [{family: Pinaceae, genus: Tsuga, species: heterophylla}]}
+  - {parameters: {bbranches1: 0.1158, bbranches2: 1.7196}, region: [CA-BC], descriptors: {na_genus: false}, taxa: [{family: Cupressaceae, genus: Thuja, species: plicata}]}
+  - {parameters: {bbranches1: 0.0186, bbranches2: 2.4462}, region: [CA-AB, CA-BC, CA-MB, CA-NL, CA-NS, CA-NT, CA-ON, CA-QC, CA-SK, CA-YT], descriptors: {na_genus: true}, taxa: [{family: NA, genus: NA, species: NA}]}
+  - {parameters: {bbranches1: 0.0194, bbranches2: 2.2408}, region: [CA-AB, CA-BC, CA-MB, CA-NL, CA-NS, CA-NT, CA-ON, CA-QC, CA-SK, CA-YT], descriptors: {na_genus: true}, taxa: [{family: NA, genus: NA, species: NA}]}
+  - {parameters: {bbranches1: 0.0227, bbranches2: 2.2797}, region: [CA-AB, CA-BC, CA-MB, CA-NL, CA-NS, CA-NT, CA-ON, CA-QC, CA-SK, CA-YT], descriptors: {na_genus: true}, taxa: [{family: NA, genus: NA, species: NA}]}
+- name: bb_2
+  type: fixed_effects_set
+  response: {bb: kg}
+  covariates: {dsob: cm, hst: m}
+  parameter_names:
+  - bbranches1
+  - bbranches2
+  - bbranches3
+  specifications:
+  - {parameters: {bbranches1: 0.0265, bbranches2: 3.6747, bbranches3: -1.5958}, region: [CA-AB, CA-BC], descriptors: {na_genus: false}, taxa: [{family: Pinaceae, genus: Abies, species: lasiocarpa}]}
+  - {parameters: {bbranches1: 0.0405, bbranches2: 3.1917, bbranches3: -1.3674}, region: [CA-AB, CA-BC, CA-MB, CA-NL, CA-NS, CA-NT, CA-ON, CA-QC, CA-SK, CA-YT], descriptors: {na_genus: false}, taxa: [{family: Pinaceae, genus: Picea, species: mariana}]}
+  - {parameters: {bbranches1: 0.0285, bbranches2: 3.3764, bbranches3: -1.4395}, region: [CA-AB, CA-BC], descriptors: {na_genus: false}, taxa: [{family: Pinaceae, genus: Pinus, species: contorta}]}
+  - {parameters: {bbranches1: 0.015, bbranches2: 2.9068, bbranches3: -0.6306}, region: [CA-AB, CA-BC, CA-MB, CA-NL, CA-NS, CA-NT, CA-ON, CA-QC, CA-SK, CA-YT], descriptors: {na_genus: false}, taxa: [{family: Salicaceae, genus: Populus, species: tremuloides}]}
+  - {parameters: {bbranches1: 0.0253, bbranches2: 3.1518, bbranches3: -0.9083}, region: [CA-AB, CA-BC, CA-MB, CA-NL, CA-NS, CA-ON, CA-QC, CA-SK], descriptors: {na_genus: false}, taxa: [{family: Betulaceae, genus: Betula, species: papyrifera}]}
+  - {parameters: {bbranches1: 0.0325, bbranches2: 2.8573, bbranches3: -0.9127}, region: [CA-AB, CA-BC, CA-MB, CA-NL, CA-NS, CA-NT, CA-ON, CA-QC, CA-SK, CA-YT], descriptors: {na_genus: false}, taxa: [{family: Pinaceae, genus: Picea, species: glauca}]}
+  - {parameters: {bbranches1: 0.0448, bbranches2: 2.6855, bbranches3: -0.5911}, region: [CA-AB, CA-BC, CA-MB, CA-NL, CA-NS, CA-NT, CA-ON, CA-QC, CA-SK, CA-YT], descriptors: {na_genus: true}, taxa: [{family: NA, genus: NA, species: NA}]}
+  - {parameters: {bbranches1: 0.0313, bbranches2: 2.9974, bbranches3: -1.0383}, region: [CA-AB, CA-BC, CA-MB, CA-NL, CA-NS, CA-NT, CA-ON, CA-QC, CA-SK, CA-YT], descriptors: {na_genus: true}, taxa: [{family: NA, genus: NA, species: NA}]}
+  - {parameters: {bbranches1: 0.0338, bbranches2: 2.6624, bbranches3: -0.5743}, region: [CA-AB, CA-BC, CA-MB, CA-NL, CA-NS, CA-NT, CA-ON, CA-QC, CA-SK, CA-YT], descriptors: {na_genus: true}, taxa: [{family: NA, genus: NA, species: NA}]}
+  - {parameters: {bbranches1: 0.0351, bbranches2: 2.2421, bbranches3: 0.0}, region: [CA-BC], descriptors: {na_genus: false}, taxa: [{family: Pinaceae, genus: Pseudotsuga, species: menziesii}]}
+  - {parameters: {bbranches1: 0.0428, bbranches2: 2.7965, bbranches3: -0.7328}, region: [CA-BC], descriptors: {na_genus: false}, taxa: [{family: Pinaceae, genus: Picea, species: engelmannii}]}
+  - {parameters: {bbranches1: 0.042, bbranches2: 2.0313, bbranches3: 0.0}, region: [CA-BC], descriptors: {na_genus: false}, taxa: [{family: Pinaceae, genus: Abies, species: amabilis}]}
+  - {parameters: {bbranches1: 0.0131, bbranches2: 2.576, bbranches3: 0.0}, region: [CA-BC], descriptors: {na_genus: false}, taxa: [{family: Salicaceae, genus: Populus, species: trichocarpa}, {family: Betulaceae, genus: Alnus, species: rubra}]}
+  - {parameters: {bbranches1: 0.0498, bbranches2: 1.9671, bbranches3: 0.0}, region: [CA-BC], descriptors: {na_genus: false}, taxa: [{family: Pinaceae, genus: Picea, species: sitchensis}]}
+  - {parameters: {bbranches1: 0.0609, bbranches2: 2.0021, bbranches3: 0.0}, region: [CA-BC], descriptors: {na_genus: false}, taxa: [{family: Pinaceae, genus: Tsuga, species: heterophylla}]}
+  - {parameters: {bbranches1: 0.0611, bbranches2: 1.9208, bbranches3: 0.0}, region: [CA-BC], descriptors: {na_genus: false}, taxa: [{family: Cupressaceae, genus: Thuja, species: plicata}]}
+- name: bf
+  type: fixed_effects_set
+  response: {bf: kg}
+  covariates: {dsob: cm}
+  parameter_names:
+  - bfoliage1
+  - bfoliage2
+  specifications:
+  - {parameters: {bfoliage1: 0.041575, bfoliage2: 2.013012}, region: [CA-AB, CA-BC], descriptors: {na_genus: false}, taxa: [{family: Pinaceae, genus: Abies, species: lasiocarpa}]}
+  - {parameters: {bfoliage1: 0.1631, bfoliage2: 1.4222}, region: [CA-AB, CA-BC, CA-MB, CA-NL, CA-NS, CA-NT, CA-ON, CA-QC, CA-SK, CA-YT], descriptors: {na_genus: false}, taxa: [{family: Pinaceae, genus: Picea, species: mariana}]}
+  - {parameters: {bfoliage1: 0.0584, bfoliage2: 1.6432}, region: [CA-AB, CA-BC], descriptors: {na_genus: false}, taxa: [{family: Pinaceae, genus: Pinus, species: contorta}]}
+  - {parameters: {bfoliage1: 0.0235, bfoliage2: 1.6656}, region: [CA-AB, CA-BC, CA-MB, CA-NL, CA-NS, CA-NT, CA-ON, CA-QC, CA-SK, CA-YT], descriptors: {na_genus: false}, taxa: [{family: Salicaceae, genus: Populus, species: tremuloides}]}
+  - {parameters: {bfoliage1: 0.0591, bfoliage2: 1.6036}, region: [CA-AB, CA-BC, CA-MB, CA-NL, CA-NS, CA-ON, CA-QC, CA-SK], descriptors: {na_genus: false}, taxa: [{family: Betulaceae, genus: Betula, species: papyrifera}]}
+  - {parameters: {bfoliage1: 0.1515, bfoliage2: 1.5012}, region: [CA-AB, CA-BC, CA-MB, CA-NL, CA-NS, CA-NT, CA-ON, CA-QC, CA-SK, CA-YT], descriptors: {na_genus: false}, taxa: [{family: Pinaceae, genus: Picea, species: glauca}]}
+  - {parameters: {bfoliage1: 0.1233, bfoliage2: 1.6636}, region: [CA-BC], descriptors: {na_genus: false}, taxa: [{family: Pinaceae, genus: Pseudotsuga, species: menziesii}]}
+  - {parameters: {bfoliage1: 0.0683, bfoliage2: 1.8022}, region: [CA-BC], descriptors: {na_genus: false}, taxa: [{family: Pinaceae, genus: Picea, species: engelmannii}]}
+  - {parameters: {bfoliage1: 0.0645, bfoliage2: 1.94}, region: [CA-BC], descriptors: {na_genus: false}, taxa: [{family: Pinaceae, genus: Abies, species: amabilis}]}
+  - {parameters: {bfoliage1: 0.0114, bfoliage2: 2.086}, region: [CA-BC], descriptors: {na_genus: false}, taxa: [{family: Salicaceae, genus: Populus, species: trichocarpa}, {family: Betulaceae, genus: Alnus, species: rubra}]}
+  - {parameters: {bfoliage1: 0.0157, bfoliage2: 2.3113}, region: [CA-BC], descriptors: {na_genus: false}, taxa: [{family: Pinaceae, genus: Picea, species: sitchensis}]}
+  - {parameters: {bfoliage1: 0.1676, bfoliage2: 1.4339}, region: [CA-BC], descriptors: {na_genus: false}, taxa: [{family: Pinaceae, genus: Tsuga, species: heterophylla}]}
+  - {parameters: {bfoliage1: 0.1233, bfoliage2: 1.5152}, region: [CA-BC], descriptors: {na_genus: false}, taxa: [{family: Cupressaceae, genus: Thuja, species: plicata}]}
+  - {parameters: {bfoliage1: 0.0385, bfoliage2: 1.6255}, region: [CA-AB, CA-BC, CA-MB, CA-NL, CA-NS, CA-NT, CA-ON, CA-QC, CA-SK, CA-YT], descriptors: {na_genus: true}, taxa: [{family: NA, genus: NA, species: NA}]}
+  - {parameters: {bfoliage1: 0.0935, bfoliage2: 1.6106}, region: [CA-AB, CA-BC, CA-MB, CA-NL, CA-NS, CA-NT, CA-ON, CA-QC, CA-SK, CA-YT], descriptors: {na_genus: true}, taxa: [{family: NA, genus: NA, species: NA}]}
+  - {parameters: {bfoliage1: 0.0764, bfoliage2: 1.5861}, region: [CA-AB, CA-BC, CA-MB, CA-NL, CA-NS, CA-NT, CA-ON, CA-QC, CA-SK, CA-YT], descriptors: {na_genus: true}, taxa: [{family: NA, genus: NA, species: NA}]}
+- name: bf_2
+  type: fixed_effects_set
+  response: {bf: kg}
+  covariates: {dsob: cm, hst: m}
+  parameter_names:
+  - bfoliage1
+  - bfoliage2
+  - bfoliage3
+  specifications:
+  - {parameters: {bfoliage1: 0.0509, bfoliage2: 2.9909, bfoliage3: -1.2271}, region: [CA-AB, CA-BC], descriptors: {na_genus: false}, taxa: [{family: Pinaceae, genus: Abies, species: lasiocarpa}]}
+  - {parameters: {bfoliage1: 0.2078, bfoliage2: 2.5517, bfoliage3: -1.3453}, region: [CA-AB, CA-BC, CA-MB, CA-NL, CA-NS, CA-NT, CA-ON, CA-QC, CA-SK, CA-YT], descriptors: {na_genus: false}, taxa: [{family: Pinaceae, genus: Picea, species: mariana}]}
+  - {parameters: {bfoliage1: 0.0769, bfoliage2: 2.6834, bfoliage3: -1.2484}, region: [CA-AB, CA-BC], descriptors: {na_genus: false}, taxa: [{family: Pinaceae, genus: Pinus, species: contorta}]}
+  - {parameters: {bfoliage1: 0.0284, bfoliage2: 1.602, bfoliage3: 0.0}, region: [CA-AB, CA-BC, CA-MB, CA-NL, CA-NS, CA-NT, CA-ON, CA-QC, CA-SK, CA-YT], descriptors: {na_genus: false}, taxa: [{family: Salicaceae, genus: Populus, species: tremuloides}]}
+  - {parameters: {bfoliage1: 0.1361, bfoliage2: 2.2978, bfoliage3: -1.0934}, region: [CA-AB, CA-BC, CA-MB, CA-NL, CA-NS, CA-ON, CA-QC, CA-SK], descriptors: {na_genus: false}, taxa: [{family: Betulaceae, genus: Betula, species: papyrifera}]}
+  - {parameters: {bfoliage1: 0.202, bfoliage2: 2.3802, bfoliage3: -1.1103}, region: [CA-AB, CA-BC, CA-MB, CA-NL, CA-NS, CA-NT, CA-ON, CA-QC, CA-SK, CA-YT], descriptors: {na_genus: false}, taxa: [{family: Pinaceae, genus: Picea, species: glauca}]}
+  - {parameters: {bfoliage1: 0.0869, bfoliage2: 1.8541, bfoliage3: -0.5491}, region: [CA-AB, CA-BC, CA-MB, CA-NL, CA-NS, CA-NT, CA-ON, CA-QC, CA-SK, CA-YT], descriptors: {na_genus: true}, taxa: [{family: NA, genus: NA, species: NA}]}
+  - {parameters: {bfoliage1: 0.1379, bfoliage2: 2.3981, bfoliage3: -1.0418}, region: [CA-AB, CA-BC, CA-MB, CA-NL, CA-NS, CA-NT, CA-ON, CA-QC, CA-SK, CA-YT], descriptors: {na_genus: true}, taxa: [{family: NA, genus: NA, species: NA}]}
+  - {parameters: {bfoliage1: 0.1699, bfoliage2: 2.3289, bfoliage3: -1.1316}, region: [CA-AB, CA-BC, CA-MB, CA-NL, CA-NS, CA-NT, CA-ON, CA-QC, CA-SK, CA-YT], descriptors: {na_genus: true}, taxa: [{family: NA, genus: NA, species: NA}]}
+  - {parameters: {bfoliage1: 0.0718, bfoliage2: 2.2935, bfoliage3: -0.4744}, region: [CA-BC], descriptors: {na_genus: false}, taxa: [{family: Pinaceae, genus: Pseudotsuga, species: menziesii}]}
+  - {parameters: {bfoliage1: 0.0854, bfoliage2: 2.4388, bfoliage3: -0.763}, region: [CA-BC], descriptors: {na_genus: false}, taxa: [{family: Pinaceae, genus: Picea, species: engelmannii}]}
+  - {parameters: {bfoliage1: 0.0453, bfoliage2: 2.4867, bfoliage3: -0.4982}, region: [CA-BC], descriptors: {na_genus: false}, taxa: [{family: Pinaceae, genus: Abies, species: amabilis}]}
+  - {parameters: {bfoliage1: 0.0224, bfoliage2: 1.8368, bfoliage3: 0.0}, region: [CA-BC], descriptors: {na_genus: false}, taxa: [{family: Salicaceae, genus: Populus, species: trichocarpa}, {family: Betulaceae, genus: Alnus, species: rubra}]}
+  - {parameters: {bfoliage1: 0.014, bfoliage2: 3.1305, bfoliage3: -0.907}, region: [CA-BC], descriptors: {na_genus: false}, taxa: [{family: Pinaceae, genus: Picea, species: sitchensis}]}
+  - {parameters: {bfoliage1: 0.2656, bfoliage2: 2.0107, bfoliage3: -0.7963}, region: [CA-BC], descriptors: {na_genus: false}, taxa: [{family: Pinaceae, genus: Tsuga, species: heterophylla}]}
+  - {parameters: {bfoliage1: 0.1097, bfoliage2: 1.553, bfoliage3: 0.0}, region: [CA-BC], descriptors: {na_genus: false}, taxa: [{family: Cupressaceae, genus: Thuja, species: plicata}]}

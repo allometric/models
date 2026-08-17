@@ -1,0 +1,18 @@
+publication:
+  key: sharma_2015
+  bibtype: article
+  title: Modeling height-diameter relationships for Norway spruce, Scots pine, and downy birch using Norwegian national forest inventory data
+  author: Sharma, Ram P and Breidenbach, Johannes
+  year: 2015
+models:
+- name: hst
+  type: fixed_effects_set
+  response: {hst: m}
+  covariates: {dsob: cm}
+  parameter_names:
+  - b_1
+  - b_2
+  specifications:
+  - {parameters: {b_1: 2.2131, b_2: 0.3046}, taxa: [{family: Pinaceae, genus: Picea, species: abies}]}
+  - {parameters: {b_1: 2.2845, b_2: 0.3318}, taxa: [{family: Pinaceae, genus: Pinus, species: sylvestris}]}
+  - {parameters: {b_1: 1.649, b_2: 0.373}, taxa: [{family: Betulaceae, genus: Betula, species: pubescens}]}

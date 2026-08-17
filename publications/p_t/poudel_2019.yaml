@@ -1,0 +1,200 @@
+publication:
+  key: poudel_2019
+  bibtype: article
+  title: Estimating individual-tree aboveground biomass of tree species in the western USA
+  author: Poudel, Krishna P and Temesgen, Hailemariam and Radtke, Philip J and Gray, Andrew N
+  year: 2019
+models:
+- name: vsia
+  type: fixed_effects_set
+  response: {vsia: m3}
+  covariates: {dsob: cm, hst: m}
+  parameter_names:
+  - a
+  - b
+  - c
+  specifications:
+  - {parameters: {a: -10.0535, b: 1.596, c: 1.345}, taxa: [{family: Pinaceae, genus: Abies, species: concolor}]}
+  - {parameters: {a: -9.1826, b: 1.5459, c: 1.173}, taxa: [{family: Pinaceae, genus: Abies, species: grandis}]}
+  - {parameters: {a: -9.8457, b: 1.7032, c: 1.148}, taxa: [{family: Pinaceae, genus: Abies, species: lasiocarpa}]}
+  - {parameters: {a: -10.267, b: 1.6937, c: 1.308}, taxa: [{family: Pinaceae, genus: Abies, species: magnifica}]}
+  - {parameters: {a: -9.6022, b: 1.8398, c: 0.95}, taxa: [{family: Cupressaceae, genus: Chamaecyparis, species: nootkatensis}]}
+  - {parameters: {a: -11.3275, b: 1.9347, c: 1.334}, taxa: [{family: Pinaceae, genus: Larix, species: occidentalis}]}
+  - {parameters: {a: -9.6396, b: 1.6648, c: 1.08}, taxa: [{family: Cupressaceae, genus: Calocedrus, species: decurrens}]}
+  - {parameters: {a: -10.3812, b: 1.8241, c: 1.188}, taxa: [{family: Pinaceae, genus: Picea, species: null}]}
+  - {parameters: {a: -10.3011, b: 1.688, c: 1.321}, taxa: [{family: Pinaceae, genus: Picea, species: engelmannii}]}
+  - {parameters: {a: -10.5658, b: 2.1248, c: 0.894}, taxa: [{family: Pinaceae, genus: Picea, species: glauca}]}
+  - {parameters: {a: -10.1366, b: 1.864, c: 1.083}, taxa: [{family: Pinaceae, genus: Picea, species: sitchensis}]}
+  - {parameters: {a: -10.0258, b: 1.858, c: 1.063}, taxa: [{family: Pinaceae, genus: Pinus, species: contorta}]}
+  - {parameters: {a: -11.4217, b: 2.1371, c: 1.197}, taxa: [{family: Pinaceae, genus: Pinus, species: flexilis}]}
+  - {parameters: {a: -10.4643, b: 2.0332, c: 0.941}, taxa: [{family: Pinaceae, genus: Pinus, species: jeffreyi}]}
+  - {parameters: {a: -10.6985, b: 2.4396, c: 0.489}, taxa: [{family: Pinaceae, genus: Pinus, species: lambertiana}]}
+  - {parameters: {a: -9.5997, b: 1.4028, c: 1.411}, taxa: [{family: Pinaceae, genus: Pinus, species: monticola}]}
+  - {parameters: {a: -10.5808, b: 2.111, c: 0.912}, taxa: [{family: Pinaceae, genus: Pinus, species: ponderosa}]}
+  - {parameters: {a: -9.5504, b: 1.742, c: 1.021}, taxa: [{family: Pinaceae, genus: Pseudotsuga, species: menziesii}]}
+  - {parameters: {a: -10.7638, b: 2.0497, c: 0.947}, taxa: [{family: Cupressaceae, genus: Sequoia, species: sempervirens}]}
+  - {parameters: {a: -9.5468, b: 2.0363, c: 0.66}, taxa: [{family: Cupressaceae, genus: Thuja, species: plicata}]}
+  - {parameters: {a: -9.4684, b: 1.8321, c: 0.936}, taxa: [{family: Pinaceae, genus: Tsuga, species: null}]}
+  - {parameters: {a: -9.9763, b: 1.9583, c: 0.925}, taxa: [{family: Pinaceae, genus: Tsuga, species: heterophylla}]}
+  - {parameters: {a: -10.9806, b: 1.8803, c: 1.302}, taxa: [{family: Pinaceae, genus: Tsuga, species: mertensiana}]}
+  - {parameters: {a: -10.3462, b: 2.0513, c: 0.944}, taxa: [{family: Betulaceae, genus: Alnus, species: rubra}]}
+  - {parameters: {a: -10.7487, b: 1.8981, c: 1.24}, taxa: [{family: Salicaceae, genus: Populus, species: tremuloides}]}
+- name: bt
+  type: fixed_effects_set
+  response: {bt: kg}
+  covariates: {dsob: cm, hst: m}
+  parameter_names:
+  - a
+  - b
+  - c
+  - cf
+  specifications:
+  - {parameters: {a: -2.7231, b: 1.8546, c: 0.7567, cf: 1.0}, taxa: [{family: Pinaceae, genus: Abies, species: amabilis}]}
+  - {parameters: {a: -2.6483, b: 1.4762, c: 1.1357, cf: 1.0}, taxa: [{family: Pinaceae, genus: Picea, species: engelmannii}]}
+  - {parameters: {a: -1.9682, b: 1.9401, c: 0.421, cf: 1.0}, taxa: [{family: Pinaceae, genus: Picea, species: glauca}]}
+  - {parameters: {a: -2.6988, b: 1.9463, c: 0.6183, cf: 1.0}, taxa: [{family: Pinaceae, genus: Picea, species: mariana}]}
+  - {parameters: {a: -2.5826, b: 1.8196, c: 0.7108, cf: 1.0091}, taxa: [{family: Pinaceae, genus: Picea, species: sitchensis}]}
+  - {parameters: {a: -1.8641, b: 1.801, c: 0.5617, cf: 1.0}, taxa: [{family: Pinaceae, genus: Pinus, species: contorta}]}
+  - {parameters: {a: -0.5048, b: 1.4016, c: 0.8522, cf: 1.0}, taxa: [{family: Pinaceae, genus: Pinus, species: monophylla}]}
+  - {parameters: {a: -2.8246, b: 1.6385, c: 1.0474, cf: 1.0}, taxa: [{family: Pinaceae, genus: Pseudotsuga, species: menziesii}]}
+  - {parameters: {a: -3.0491, b: 1.9407, c: 0.6876, cf: 1.0205}, taxa: [{family: Cupressaceae, genus: Sequoia, species: sempervirens}]}
+  - {parameters: {a: -3.8735, b: 2.1251, c: 0.601, cf: 1.0356}, taxa: [{family: Cupressaceae, genus: Sequoiadendron, species: giganteum}]}
+  - {parameters: {a: -2.5443, b: 1.5701, c: 0.9162, cf: 1.0151}, taxa: [{family: Cupressaceae, genus: Thuja, species: plicata}]}
+  - {parameters: {a: -2.7552, b: 1.8521, c: 0.7642, cf: 1.0209}, taxa: [{family: Pinaceae, genus: Tsuga, species: heterophylla}]}
+  - {parameters: {a: -3.8516, b: 2.3174, c: 0.6283, cf: 1.0281}, taxa: [{family: Betulaceae, genus: Alnus, species: rubra}]}
+  - {parameters: {a: -3.0439, b: 2.0345, c: 0.642, cf: 1.0}, taxa: [{family: Salicaceae, genus: Populus, species: tremuloides}]}
+  - {parameters: {a: -3.8009, b: 1.63, c: 1.3354, cf: 1.0}, taxa: [{family: Salicaceae, genus: Populus, species: balsamifera}]}
+  - {parameters: {a: -5.5175, b: 2.6795, c: 1.2805, cf: 1.0}, taxa: [{family: Pinaceae, genus: Abies, species: lasiocarpa}]}
+- name: bt_2
+  type: fixed_effects
+  response: {bt: kg}
+  covariates: {dsob: cm, hst: m}
+  parameters: {a: -0.6616, b: 0.8288, c: 0.2127, d: 0.4145, cf: 1.0246}
+  equation: cf * exp(a + b * log(dsob) + c * log(dsob)^2 + d * log(hst))
+  taxa:
+  - {family: Pinaceae, genus: Pinus, species: ponderosa}
+- name: bt_3
+  type: fixed_effects_set
+  response: {bt: kg}
+  covariates: {dsob: cm}
+  parameter_names:
+  - a
+  - b
+  - cf
+  specifications:
+  - {parameters: {a: -1.5759, b: 2.2315, cf: 1.0089}, taxa: [{family: Pinaceae, genus: Abies, species: concolor}]}
+  - {parameters: {a: -2.2106, b: 2.4297, cf: 1.0}, taxa: [{family: Pinaceae, genus: Abies, species: grandis}]}
+  - {parameters: {a: -0.7457, b: 1.8999, cf: 1.0}, taxa: [{family: Cupressaceae, genus: Juniperus, species: osteosperma}]}
+  - {parameters: {a: -3.1894, b: 3.2244, cf: 1.0258}, taxa: [{family: Pinaceae, genus: Pinus, species: jeffreyi}]}
+  - {parameters: {a: -0.9861, b: 2.0975, cf: 1.0}, taxa: [{family: Pinaceae, genus: Tsuga, species: mertensiana}]}
+  - {parameters: {a: -2.5782, b: 2.5299, cf: 1.0179}, taxa: [{family: Betulaceae, genus: Betula, species: papyrifera}]}
+- name: bt_4
+  type: fixed_effects_set
+  response: {bt: kg}
+  covariates: {vsia: m3}
+  parameter_names:
+  - a
+  - b
+  - cf
+  specifications:
+  - {parameters: {a: 6.3389, b: 0.869, cf: 1.0333}, taxa: [{family: Pinaceae, genus: Abies, species: amabilis}]}
+  - {parameters: {a: 6.4429, b: 0.8396, cf: 1.0165}, taxa: [{family: Pinaceae, genus: Abies, species: concolor}]}
+  - {parameters: {a: 6.317, b: 1.015, cf: 1.0271}, taxa: [{family: Pinaceae, genus: Abies, species: grandis}]}
+  - {parameters: {a: 6.2418, b: 0.8175, cf: 1.0382}, taxa: [{family: Pinaceae, genus: Abies, species: lasiocarpa}]}
+  - {parameters: {a: 6.1041, b: 0.7423, cf: 1.0469}, taxa: [{family: Pinaceae, genus: Picea, species: engelmannii}]}
+  - {parameters: {a: 6.3052, b: 0.789, cf: 1.0265}, taxa: [{family: Pinaceae, genus: Picea, species: glauca}]}
+  - {parameters: {a: 6.1913, b: 0.7655, cf: 1.0373}, taxa: [{family: Pinaceae, genus: Picea, species: mariana}]}
+  - {parameters: {a: 6.1467, b: 0.8489, cf: 1.0101}, taxa: [{family: Pinaceae, genus: Picea, species: sitchensis}]}
+  - {parameters: {a: 6.2043, b: 0.8057, cf: 1.0531}, taxa: [{family: Pinaceae, genus: Pinus, species: contorta}]}
+  - {parameters: {a: 6.66, b: 0.95, cf: 1.0071}, taxa: [{family: Pinaceae, genus: Pinus, species: jeffreyi}]}
+  - {parameters: {a: 6.4661, b: 0.7567, cf: 1.0482}, taxa: [{family: Pinaceae, genus: Pinus, species: ponderosa}]}
+  - {parameters: {a: 6.3278, b: 0.7959, cf: 1.0706}, taxa: [{family: Pinaceae, genus: Pinus, species: monophylla}]}
+  - {parameters: {a: 6.4313, b: 0.9589, cf: 1.0242}, taxa: [{family: Pinaceae, genus: Pseudotsuga, species: menziesii}]}
+  - {parameters: {a: 6.4452, b: 0.9011, cf: 1.0209}, taxa: [{family: Cupressaceae, genus: Sequoia, species: sempervirens}]}
+  - {parameters: {a: 6.2848, b: 0.9323, cf: 1.0247}, taxa: [{family: Cupressaceae, genus: Sequoiadendron, species: giganteum}]}
+  - {parameters: {a: 6.1092, b: 0.9114, cf: 1.0167}, taxa: [{family: Cupressaceae, genus: Thuja, species: plicata}]}
+  - {parameters: {a: 6.3161, b: 0.9079, cf: 1.0209}, taxa: [{family: Pinaceae, genus: Tsuga, species: heterophylla}]}
+  - {parameters: {a: 6.5393, b: 0.8812, cf: 1.0136}, taxa: [{family: Pinaceae, genus: Tsuga, species: mertensiana}]}
+  - {parameters: {a: 6.3749, b: 1.0025, cf: 1.0288}, taxa: [{family: Betulaceae, genus: Alnus, species: rubra}]}
+  - {parameters: {a: 6.3147, b: 0.9525, cf: 1.0209}, taxa: [{family: Betulaceae, genus: Betula, species: papyrifera}, {family: Salicaceae, genus: Populus, species: balsamifera}]}
+  - {parameters: {a: 6.2622, b: 0.9157, cf: 1.0106}, taxa: [{family: Salicaceae, genus: Populus, species: tremuloides}]}
+- name: rfbt
+  type: fixed_effects_set
+  response: {rfbt: kg kg-1}
+  covariates: {dsob: cm, hst: m}
+  parameter_names:
+  - a_1
+  - a_2
+  - a_3
+  - a_4
+  - b_1
+  - b_2
+  - b_3
+  - b_4
+  - c_1
+  - c_2
+  - c_3
+  - c_4
+  specifications:
+  - {parameters: {a_1: -1.7196, a_2: -1.4062, a_3: 1.9428, a_4: 0.8862, b_1: -0.6652, b_2: -0.1796, b_3: -0.228, b_4: -0.3819, c_1: 1.537, c_2: 0.753, c_3: -0.1462, c_4: 0.3627}, descriptors: {group: softwood}}
+  - {parameters: {a_1: -3.596, a_2: -2.7325, a_3: 4.6466, a_4: 3.6937, b_1: -1.9231, b_2: -1.5205, b_3: 0.0086, b_4: -0.173, c_1: 2.7287, c_2: 1.8614, c_3: -0.9938, c_4: -0.3566}, descriptors: {group: hardwood}}
+- name: rkbt
+  type: fixed_effects_set
+  response: {rkbt: kg kg-1}
+  covariates: {dsob: cm, hst: m}
+  parameter_names:
+  - a_1
+  - a_2
+  - a_3
+  - a_4
+  - b_1
+  - b_2
+  - b_3
+  - b_4
+  - c_1
+  - c_2
+  - c_3
+  - c_4
+  specifications:
+  - {parameters: {a_1: -1.7196, a_2: -1.4062, a_3: 1.9428, a_4: 0.8862, b_1: -0.6652, b_2: -0.1796, b_3: -0.228, b_4: -0.3819, c_1: 1.537, c_2: 0.753, c_3: -0.1462, c_4: 0.3627}, descriptors: {group: softwood}}
+  - {parameters: {a_1: -3.596, a_2: -2.7325, a_3: 4.6466, a_4: 3.6937, b_1: -1.9231, b_2: -1.5205, b_3: 0.0086, b_4: -0.173, c_1: 2.7287, c_2: 1.8614, c_3: -0.9938, c_4: -0.3566}, descriptors: {group: hardwood}}
+- name: rsbt
+  type: fixed_effects_set
+  response: {rsbt: kg kg-1}
+  covariates: {dsob: cm, hst: m}
+  parameter_names:
+  - a_1
+  - a_2
+  - a_3
+  - a_4
+  - b_1
+  - b_2
+  - b_3
+  - b_4
+  - c_1
+  - c_2
+  - c_3
+  - c_4
+  specifications:
+  - {parameters: {a_1: -1.7196, a_2: -1.4062, a_3: 1.9428, a_4: 0.8862, b_1: -0.6652, b_2: -0.1796, b_3: -0.228, b_4: -0.3819, c_1: 1.537, c_2: 0.753, c_3: -0.1462, c_4: 0.3627}, descriptors: {group: softwood}}
+  - {parameters: {a_1: -3.596, a_2: -2.7325, a_3: 4.6466, a_4: 3.6937, b_1: -1.9231, b_2: -1.5205, b_3: 0.0086, b_4: -0.173, c_1: 2.7287, c_2: 1.8614, c_3: -0.9938, c_4: -0.3566}, descriptors: {group: hardwood}}
+- name: rbbt
+  type: fixed_effects_set
+  response: {rbbt: kg kg-1}
+  covariates: {dsob: cm, hst: m}
+  parameter_names:
+  - a_1
+  - a_2
+  - a_3
+  - a_4
+  - b_1
+  - b_2
+  - b_3
+  - b_4
+  - c_1
+  - c_2
+  - c_3
+  - c_4
+  specifications:
+  - {parameters: {a_1: -1.7196, a_2: -1.4062, a_3: 1.9428, a_4: 0.8862, b_1: -0.6652, b_2: -0.1796, b_3: -0.228, b_4: -0.3819, c_1: 1.537, c_2: 0.753, c_3: -0.1462, c_4: 0.3627}, descriptors: {group: softwood}}
+  - {parameters: {a_1: -3.596, a_2: -2.7325, a_3: 4.6466, a_4: 3.6937, b_1: -1.9231, b_2: -1.5205, b_3: 0.0086, b_4: -0.173, c_1: 2.7287, c_2: 1.8614, c_3: -0.9938, c_4: -0.3566}, descriptors: {group: hardwood}}

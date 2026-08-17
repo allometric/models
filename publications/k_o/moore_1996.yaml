@@ -1,0 +1,44 @@
+publication:
+  key: moore_1996
+  bibtype: article
+  title: Height-diameter equations for ten tree species in the Inland Northwest
+  author: Moore, James A and Zhang, Lianjun and Stuck, Dean
+  year: 1996
+models:
+- name: hst
+  type: fixed_effects_set
+  response: {hst: ft}
+  covariates: {dsob: in}
+  parameter_names:
+  - a
+  - b
+  specifications:
+  - {parameters: {a: 5.3004, b: -12.4386}, taxa: [{family: Pinaceae, genus: Pinus, species: monticola}]}
+  - {parameters: {a: 5.2554, b: -11.276}, taxa: [{family: Pinaceae, genus: Larix, species: occidentalis}]}
+  - {parameters: {a: 5.0207, b: -9.8882}, taxa: [{family: Pinaceae, genus: Pseudotsuga, species: menziesii}]}
+  - {parameters: {a: 5.1472, b: -10.3828}, taxa: [{family: Pinaceae, genus: Abies, species: grandis}]}
+  - {parameters: {b: -8.0119}, taxa: [{family: Pinaceae, genus: Tsuga, species: heterophylla}]}
+  - {parameters: {a: 5.1039, b: -14.5886}, taxa: [{family: Cupressaceae, genus: Thuja, species: plicata}]}
+  - {parameters: {a: 4.7979, b: -7.5469}, taxa: [{family: Pinaceae, genus: Pinus, species: contorta}]}
+  - {parameters: {a: 5.1282, b: -12.768}, taxa: [{family: Pinaceae, genus: Picea, species: engelmannii}]}
+  - {parameters: {a: 4.918, b: -9.8747}, taxa: [{family: Pinaceae, genus: Abies, species: lasiocarpa}]}
+  - {parameters: {a: 5.1094, b: -11.9354}, taxa: [{family: Pinaceae, genus: Pinus, species: ponderosa}]}
+- name: hst_2
+  type: fixed_effects_set
+  response: {hst: ft}
+  covariates: {dsob: in}
+  parameter_names:
+  - a
+  - b
+  - c
+  specifications:
+  - {parameters: {a: 267.4, b: 6.2339, c: 0.6493}, taxa: [{family: Pinaceae, genus: Pinus, species: monticola}]}
+  - {parameters: {a: 1286.04, b: 5.4879, c: 0.2623}, taxa: [{family: Pinaceae, genus: Larix, species: occidentalis}]}
+  - {parameters: {a: 995.29, b: 4.9996, c: 0.249}, taxa: [{family: Pinaceae, genus: Pseudotsuga, species: menziesii}]}
+  - {parameters: {a: 314.37, b: 4.7162, c: 0.4783}, taxa: [{family: Pinaceae, genus: Abies, species: grandis}]}
+  - {parameters: {a: 132.12, b: 7.1246, c: 1.0019}, taxa: [{family: Pinaceae, genus: Tsuga, species: heterophylla}]}
+  - {parameters: {a: 186.37, b: 7.7294, c: 0.752}, taxa: [{family: Cupressaceae, genus: Thuja, species: plicata}]}
+  - {parameters: {a: 120.21, b: 5.493, c: 0.9132}, taxa: [{family: Pinaceae, genus: Pinus, species: contorta}]}
+  - {parameters: {a: 559.23, b: 4.9596, c: 0.3337}, taxa: [{family: Pinaceae, genus: Picea, species: engelmannii}]}
+  - {parameters: {a: 172.15, b: 5.2187, c: 0.6674}, taxa: [{family: Pinaceae, genus: Abies, species: lasiocarpa}]}
+  - {parameters: {a: 1769.17, b: 5.7742, c: 0.2197}, taxa: [{family: Pinaceae, genus: Pinus, species: ponderosa}]}

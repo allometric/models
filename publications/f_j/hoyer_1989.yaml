@@ -1,0 +1,19 @@
+publication:
+  key: hoyer_1989
+  bibtype: techreport
+  title: Height-age and site index curves for Pacific silver fir in the Pacific Northwest
+  author: Hoyer, Gerald E and Herman, Francis R
+  year: 1989
+models:
+- name: hst
+  type: fixed_effects
+  response: {hst: ft}
+  covariates: {hstix100: ft, atb: years}
+  parameters: {c: 0.0071839, d: 5.71e-05, f: 1.39005}
+  equation: hstix100 * (1 - exp(-(c + d * hstix100) * atb))^f/(1 - exp(-(c + d * S) * 100))
+- name: hstix100
+  type: fixed_effects
+  response: {hstix100: ft}
+  covariates: {hst: ft, atb: years}
+  parameters: {a: -0.0268797, b: 0.0046259, c: -0.0015862, d: -0.0761453, e: 0.0891105}
+  equation: hst * exp(a * (atb - 100)/atb + b * (atb - 100)^2/100 + c * (atb - 100)^3/10000 + d * (atb - 100)/sqrt(hst) + e * (atb - 100)/hst)

@@ -1,0 +1,54 @@
+publication:
+  key: barrett_2006
+  bibtype: article
+  title: Optimizing efficiency of height modeling for extensive forest inventories
+  author: Barrett, T.M.
+  year: 2006
+models:
+- name: hst
+  type: fixed_effects_set
+  response: {hst: m}
+  covariates: {dsob: cm}
+  parameter_names:
+  - alpha
+  - beta
+  - gamma
+  specifications:
+  - {parameters: {alpha: 54.74, beta: 0.0202, gamma: 1.3666}, taxa: [{family: Pincaeae, genus: Abies, species: amabilis}]}
+  - {parameters: {alpha: 51.11, beta: 0.015, gamma: 1.151}, taxa: [{family: Pincaeae, genus: Abies, species: concolor}]}
+  - {parameters: {alpha: 44.4, beta: 0.0226, gamma: 1.2217}, taxa: [{family: Pincaeae, genus: Abies, species: grandis}]}
+  - {parameters: {alpha: 28.55, beta: 0.0492, gamma: 1.8173}, taxa: [{family: Pincaeae, genus: Abies, species: lasiocarpa}]}
+  - {parameters: {alpha: 45.6, beta: 0.1788, gamma: 1.3217}, taxa: [{family: Pincaeae, genus: Abies, species: magnifica}]}
+  - {parameters: {alpha: 65.53, beta: 0.0132, gamma: 1.1224}, taxa: [{family: Pincaeae, genus: Abies, species: procera}]}
+  - {parameters: {alpha: 28.99, beta: 0.0371, gamma: 0.9646}, taxa: [{family: Aceraceae, genus: Acer, species: macrophyllum}]}
+  - {parameters: {alpha: 28.26, beta: 0.059, gamma: 1.304}, taxa: [{family: Betulaceae, genus: Alnus, species: rubra}]}
+  - {parameters: {alpha: 23.12, beta: 0.0276, gamma: 0.8787}, taxa: [{family: Ericaceae, genus: Arbutus, species: menziesii}]}
+  - {parameters: {alpha: 53.97, beta: 0.0101, gamma: 1.0974}, taxa: [{family: Cupressaceae, genus: Calocedrus, species: decurrens}]}
+  - {parameters: {alpha: 54.51, beta: 0.014, gamma: 1.1258}, taxa: [{family: Cupressaceae, genus: Chamaecyparis, species: lawsoniana}]}
+  - {parameters: {alpha: 42.81, beta: 0.021, gamma: 1.322}, taxa: [{family: Cupressaceae, genus: Chamaecyparis, species: nookatensis}]}
+  - {parameters: {alpha: 16.25, beta: 0.0133, gamma: 0.74}, taxa: [{family: Cupressaceae, genus: Juniperus, species: occidentalis}]}
+  - {parameters: {alpha: 45.56, beta: 0.0226, gamma: 0.905}, taxa: [{family: Pincaeae, genus: Larix, species: occidentalis}]}
+  - {parameters: {alpha: 32.17, beta: 0.0193, gamma: 0.9017}, taxa: [{family: Fagaceae, genus: Notholithocarpus, species: densiflorus}]}
+  - {parameters: {alpha: 42.44, beta: 0.0269, gamma: 1.2909}, taxa: [{family: Pincaeae, genus: Picea, species: engelmannii}]}
+  - {parameters: {alpha: 49.62, beta: 0.0163, gamma: 0.9973}, taxa: [{family: Pincaeae, genus: Picea, species: sitchensis}]}
+  - {parameters: {alpha: 14.68, beta: 0.0658, gamma: 1.8074}, taxa: [{family: Pincaeae, genus: Pinus, species: albicaulis}]}
+  - {parameters: {alpha: 22.78, beta: 0.076, gamma: 1.8067}, taxa: [{family: Pincaeae, genus: Pinus, species: contorta}]}
+  - {parameters: {alpha: 49.48, beta: 0.0105, gamma: 1.1339}, taxa: [{family: Pincaeae, genus: Pinus, species: jeffreyi}]}
+  - {parameters: {alpha: 77.7, beta: 0.0066, gamma: 0.9542}, taxa: [{family: Pincaeae, genus: Pinus, species: lambertiana}]}
+  - {parameters: {alpha: 12.66, beta: 0.0414, gamma: 1.6531}, taxa: [{family: Pincaeae, genus: Pinus, species: monophylla}]}
+  - {parameters: {alpha: 29.98, beta: 0.0461, gamma: 1.7471}, taxa: [{family: Pincaeae, genus: Pinus, species: monticola}]}
+  - {parameters: {alpha: 58.81, beta: 0.0123, gamma: 1.1766}, taxa: [{family: Pincaeae, genus: Pinus, species: ponderosa}]}
+  - {parameters: {alpha: 41.28, gamma: 1.0008}, taxa: [{family: Pincaeae, genus: Pinus, species: sahiniana}]}
+  - {parameters: {alpha: 45.99, beta: 0.0203, gamma: 0.9477}, taxa: [{family: Salicaceae, genus: Populus, species: balsamifera}]}
+  - {parameters: {alpha: 62.57, beta: 0.0131, gamma: 0.9936}, taxa: [{family: Pincaeae, genus: Pseudotsuga, species: menziesii}]}
+  - {parameters: {alpha: 23.15, beta: 0.0087, gamma: 0.6139}, taxa: [{family: Fagaceae, genus: Quercus, species: agrifolia}]}
+  - {parameters: {alpha: 19.12, beta: 0.0296, gamma: 1.1314}, taxa: [{family: Fagaceae, genus: Quercus, species: chrysolepis}]}
+  - {parameters: {alpha: 13.47, beta: 0.0282, gamma: 0.8303}, taxa: [{family: Fagaceae, genus: Quercus, species: douglasii}]}
+  - {parameters: {alpha: 19.6, beta: 0.0467, gamma: 1.4919}, taxa: [{family: Fagaceae, genus: Quercus, species: garryana}]}
+  - {parameters: {alpha: 27.93, beta: 0.0129, gamma: 0.6968}, taxa: [{family: Fagaceae, genus: Quercus, species: kelloggii}]}
+  - {parameters: {alpha: 16.85, beta: 0.0242, gamma: 0.8143}, taxa: [{family: Fagaceae, genus: Quercus, species: wisilenzi}]}
+  - {parameters: {alpha: 89.17, beta: 0.0056, gamma: 0.8684}, taxa: [{family: Cupressaceae, genus: Sequoia, species: sempervirens}]}
+  - {parameters: {alpha: 60.58, beta: 0.0089, gamma: 0.8721}, taxa: [{family: Cupressaceae, genus: Thuja, species: plicata}]}
+  - {parameters: {alpha: 53.85, beta: 0.0201, gamma: 1.1832}, taxa: [{family: Pincaeae, genus: Tsuga, species: heterophylla}]}
+  - {parameters: {alpha: 35.24, beta: 0.0306, gamma: 1.6109}, taxa: [{family: Pincaeae, genus: Tsuga, species: mertensiana}]}
+  - {parameters: {alpha: 22.9, beta: 0.0355, gamma: 1.0355}, taxa: [{family: Lauraceae, genus: Umbellularia, species: californica}]}

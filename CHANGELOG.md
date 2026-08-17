@@ -1,5 +1,27 @@
 # allometric/models changelog
 
+# [4.0.0](https://github.com/allometric/models/compare/v3.0.0...v4.0.0) (2026-08-16)
+
+
+### Features
+
+* Rebuilt the models repository as a YAML truth source. Each publication is
+  now a single YAML file under `publications/`, authored per the v4 schema
+  (publication block + fixed-effects models and parameterized sets). Models
+  are content-addressed by an 8-character hash of their YAML, validated and
+  indexed by the `orc` tooling.
+* Migrated all 74 publications (2,806 models) from the R publication files to
+  YAML. The migration tooling lives in `allometric/orc/scripts/`.
+
+
+### BREAKING CHANGES
+
+* Removed the R package interface entirely: `R/`, `parameters/`, `man/`,
+  `inst/`, `tests/`, `NAMESPACE`, and `models.RDS` are deleted, along with the
+  R ingest pipeline (`ingest_models`, `map_publications`,
+  `load_parameter_frame`). The repository no longer installs as an R package;
+  the YAML corpus is consumed via `allometric/orc`.
+
 # [3.0.0](https://github.com/allometric/models/compare/v2.3.0...v3.0.0) (2024-09-22)
 
 

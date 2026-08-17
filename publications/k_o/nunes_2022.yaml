@@ -1,0 +1,48 @@
+publication:
+  key: nunes_2022
+  bibtype: article
+  title: Bulk Density of Shrub Types and Tree Crowns to Use with Forest Inventories in the Iberian Peninsula
+  author: Nunes, Leonia and Pasalodos-Tato, Maria and Alberdi, Iciar and Sequeira, Ana Catarina and Vega, Jose Antonio and Silva, Vasco and Vieira, Pedro and Rego, Francisco Castro
+  year: 2022
+models:
+- name: hcl
+  type: fixed_effects_set
+  response: {hcl: m}
+  covariates: {hst: m, es: ha-1}
+  parameter_names:
+  - a0
+  - a1
+  specifications:
+  - {parameters: {a0: 0.589, a1: 0.051}, taxa: [{family: Pinaceae, genus: Pinus, species: pinaster}]}
+  - {parameters: {a0: 0.626, a1: 0.024}, taxa: [{family: Pinaceae, genus: Pinus, species: pinea}]}
+  - {parameters: {a0: 0.455, a1: 0.059}, taxa: [{family: Pinaceae, genus: Pinus, species: halepensis}]}
+  - {parameters: {a0: 0.451, a1: 0.09}, taxa: [{family: Pinaceae, genus: Pinus, species: sylvestris}]}
+  - {parameters: {a0: 0.662, a1: 0.039}, taxa: [{family: Mirtaceae, genus: Eucalyptus, species: null}]}
+  - {parameters: {a0: 0.49, a1: 0.014}, taxa: [{family: Fagaceae, genus: Quercus, species: suber}]}
+  - {parameters: {a0: 0.478, a1: 0.064}, taxa: [{family: Fagaceae, genus: Quercus, species: ilex}]}
+  - {parameters: {a0: 0.379, a1: 0.034}, taxa: [{family: Fagaceae, genus: Quercus, species: pyrenaica}]}
+  - {parameters: {a0: 0.384, a1: 0.026}, descriptors: {species_group: Other oaks}, taxa: [{family: Fagaceae, genus: Quercus, species: null}]}
+  - {parameters: {a0: 0.357, a1: 0.027}, taxa: [{family: Fagaceae, genus: Castanea, species: sativa}]}
+  - {parameters: {a0: 0.369, a1: 0.061}, descriptors: {species_group: Other conifers}}
+  - {parameters: {a0: 0.267, a1: 0.026}, descriptors: {species_group: Other broadleaves}}
+- name: dc
+  type: fixed_effects_set
+  response: {dc: m}
+  covariates: {dsob: cm, es: ha-1}
+  parameter_names:
+  - b0
+  - b1
+  - b2
+  specifications:
+  - {parameters: {b0: 0.225, b1: 0.851, b2: 0.078}, taxa: [{family: Pinaceae, genus: Pinus, species: pinaster}]}
+  - {parameters: {b0: 0.277, b1: 0.859, b2: 0.043}, taxa: [{family: Pinaceae, genus: Pinus, species: pinea}]}
+  - {parameters: {b0: 0.421, b1: 0.731, b2: 0.052}, taxa: [{family: Pinaceae, genus: Pinus, species: halepensis}]}
+  - {parameters: {b0: 0.527, b1: 0.65, b2: 0.047}, taxa: [{family: Pinaceae, genus: Pinus, species: sylvestris}]}
+  - {parameters: {b0: 0.256, b1: 0.843, b2: 0.078}, taxa: [{family: Mirtaceae, genus: Eucalyptus, species: null}]}
+  - {parameters: {b0: 0.362, b1: 0.758, b2: 0.088}, taxa: [{family: Fagaceae, genus: Quercus, species: suber}]}
+  - {parameters: {b0: 0.579, b1: 0.64, b2: 0.078}, taxa: [{family: Fagaceae, genus: Quercus, species: ilex}]}
+  - {parameters: {b0: 0.608, b1: 0.638, b2: 0.039}, taxa: [{family: Fagaceae, genus: Quercus, species: pyrenaica}]}
+  - {parameters: {b0: 0.679, b1: 0.634, b2: 0.036}, descriptors: {species_group: Other oaks}, taxa: [{family: Fagaceae, genus: Quercus, species: null}]}
+  - {parameters: {b0: 1.236, b1: 0.455, b2: 0.06}, taxa: [{family: Fagaceae, genus: Castanea, species: sativa}]}
+  - {parameters: {b0: 0.416, b1: 0.705, b2: 0.035}, descriptors: {species_group: Other conifers}}
+  - {parameters: {b0: 0.585, b1: 0.69, b2: 0.051}, descriptors: {species_group: Other broadleaves}}

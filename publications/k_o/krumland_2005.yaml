@@ -1,0 +1,82 @@
+publication:
+  key: krumland_2005
+  bibtype: techreport
+  title: Site index systems for major young-growth forest and woodland species in northern California
+  author: Krumland, Helge
+  year: 2005
+models:
+- name: hstixi
+  type: fixed_effects_set
+  response: {hstixi: ft}
+  covariates: {hst: ft, atb: years, ati: years}
+  parameter_names:
+  - b_1
+  - b_2
+  specifications:
+  - {parameters: {b_1: -0.0161, b_2: 1.096}, descriptors: {model: CR1, species_zone: North California Coast}, taxa: [{family: Cupressaceae, genus: Sequoia, species: sempervirens}]}
+  - {parameters: {b_1: -0.03357, b_2: 1.658}, descriptors: {model: CR1, species_zone: North California Coast}, taxa: [{family: Pinaceae, genus: Abies, species: grandis}]}
+  - {parameters: {b_1: -0.007455, b_2: 0.7743}, descriptors: {model: CR1}, taxa: [{family: Fagaceae, genus: Notholithocarpus, species: densiflorus}]}
+- name: hstixi_2
+  type: fixed_effects_set
+  response: {hstixi: ft}
+  covariates: {hst: ft, atb: years, ati: years}
+  parameter_names:
+  - b_1
+  - b_2
+  - b_3
+  specifications:
+  - {parameters: {b_1: -0.01564, b_2: -6.26, b_3: 38.98}, descriptors: {model: CR2, species_zone: Main Mixed Conifer}, taxa: [{family: Pinaceae, genus: Pseudotsuga, species: menziesii}]}
+  - {parameters: {b_1: -0.01441, b_2: -5.777, b_3: 36.85}, descriptors: {model: CR2, species_zone: Main Mixed Conifer}, taxa: [{family: Pinaceae, genus: Pinus, species: ponderosa}]}
+  - {parameters: {b_1: -0.01862, b_2: -9.153, b_3: 54.31}, descriptors: {model: CR2, species_zone: Main Mixed Conifer}, taxa: [{family: Pinaceae, genus: Pinus, species: lambertiana}]}
+  - {parameters: {b_1: -0.01524, b_2: -4.191, b_3: 28.35}, descriptors: {model: CR2, species_group: MC3, species_zone: Main Mixed Conifer}, taxa: [{family: Pinaceae, genus: Pseudotsuga, species: menziesii}, {family: Pinaceae, genus: Pinus, species: ponderosa}, {family: Pinaceae, genus: Pinus, species: lambertiana}]}
+  - {parameters: {b_1: -0.01267, b_2: -10.56, b_3: 64.26}, descriptors: {model: CR2, species_group: MC3, species_zone: McCloud Area}, taxa: [{family: Pinaceae, genus: Pseudotsuga, species: menziesii}, {family: Pinaceae, genus: Pinus, species: ponderosa}, {family: Pinaceae, genus: Pinus, species: lambertiana}]}
+  - {parameters: {b_1: -0.01684, b_2: -1.255, b_3: 12.53}, descriptors: {model: CR2, species_group: MC3, species_zone: Other Mixed Conifer}, taxa: [{family: Pinaceae, genus: Pseudotsuga, species: menziesii}, {family: Pinaceae, genus: Pinus, species: ponderosa}, {family: Pinaceae, genus: Pinus, species: lambertiana}]}
+  - {parameters: {b_1: -0.02834, b_2: -4.336, b_3: 31.51}, descriptors: {model: CR2}, taxa: [{family: Pinaceae, genus: Abies, species: concolor}]}
+  - {parameters: {b_1: -0.01684, b_2: -1.255, b_3: 12.53}, descriptors: {model: CR2}, taxa: [{family: Pinaceae, genus: Pinus, species: contorta}]}
+- name: hstixi_3
+  type: fixed_effects_set
+  response: {hstixi: ft}
+  covariates: {hst: ft, atb: years, ati: years}
+  parameter_names:
+  - b_1
+  - b_2
+  - b_3
+  specifications:
+  - {parameters: {b_1: 1.089, b_2: -0.2131, b_3: 203.4}, descriptors: {model: KP1, species_zone: North California Coast}, taxa: [{family: Cupressaceae, genus: Sequoia, species: sempervirens}]}
+  - {parameters: {b_1: 1.221, b_2: -0.8755, b_3: 402.8}, descriptors: {model: KP1, species_zone: North California Coast}, taxa: [{family: Pinaceae, genus: Pseudotsuga, species: menziesii}]}
+  - {parameters: {b_1: 1.741, b_2: -110.3, b_3: 20100.0}, descriptors: {model: KP1}, taxa: [{family: Pinaceae, genus: Abies, species: magnifica}]}
+- name: hstixi_4
+  type: fixed_effects_set
+  response: {hstixi: ft}
+  covariates: {hst: ft, atb: years, ati: years}
+  parameter_names:
+  - b_1
+  - b_2
+  - b_3
+  specifications:
+  - {parameters: {b_1: 234.1, b_2: 3.923, b_3: -1.237}, descriptors: {model: LG1}, taxa: [{family: Cupressaceae, genus: Calocedrus, species: decurrens}]}
+  - {parameters: {b_1: 233.4, b_2: 4.984, b_3: -1.016}, descriptors: {model: LG1}, taxa: [{family: Fagaceae, genus: Quercus, species: kelloggii}]}
+- name: hstixi_5
+  type: fixed_effects_set
+  response: {hstixi: ft}
+  covariates: {hst: ft, atb: years, ati: years}
+  parameter_names:
+  - b_1
+  - b_2
+  specifications:
+  - {parameters: {b_1: -9.033, b_2: -0.4802}, descriptors: {model: SH1, species_zone: North California Coast}, taxa: [{family: Pinaceae, genus: Pseudotsuga, species: menziesii}]}
+  - {parameters: {b_1: -7.236, b_2: -0.7772}, descriptors: {model: SH1}, taxa: [{family: Betulaceae, genus: Alnus, species: rubra}]}
+  - {parameters: {b_1: -5.3508, b_2: -0.3883}, descriptors: {model: SH1}, taxa: [{family: Ericaceae, genus: Arbutus, species: menziesii}]}
+  - {parameters: {b_1: -6.455, b_2: -0.3725}, descriptors: {model: SH1}, taxa: [{family: Fagaceae, genus: Quercus, species: agrifolia}, {family: Fagaceae, genus: Quercus, species: garryana}, {family: Fagaceae, genus: Quercus, species: chrysolepis}, {family: Fagaceae, genus: Quercus, species: douglasii}, {family: Fagaceae, genus: Quercus, species: wislizeni}]}
+  - {parameters: {b_1: -99.58, b_2: -0.007382}, descriptors: {model: SH1}, taxa: [{family: Lauraceae, genus: Umbellularia, species: californica}]}
+- name: hstixi_6
+  type: fixed_effects_set
+  response: {hstixi: ft}
+  covariates: {hst: ft, atb: years, ati: years}
+  parameter_names:
+  - b_1
+  - b_2
+  - b_3
+  - b_4
+  specifications:
+  - {parameters: {b_1: 0.3879, b_2: -1171.0, b_3: 194.4, b_4: -0.3486}, descriptors: {model: SH2}, taxa: [{family: Pinaceae, genus: Pinus, species: jeffreyi}, {family: Pinaceae, genus: Pinus, species: contorta}]}

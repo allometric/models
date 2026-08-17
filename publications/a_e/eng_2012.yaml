@@ -1,0 +1,61 @@
+publication:
+  key: eng_2012
+  bibtype: inproceedings
+  title: Tree height estimation in redwood/Douglas-fir stands in Mendocino County
+  author: Eng, Helge
+  year: 2012
+models:
+- name: hst
+  type: fixed_effects_set
+  response: {hst: ft}
+  covariates: {dsob: in}
+  parameter_names:
+  - a
+  - b
+  - c
+  specifications:
+  - {parameters: {a: 5.6911, b: -7.3644, c: -0.6294}, taxa: [{family: Cupressaceae, genus: Sequoia, species: sempervirens}]}
+  - {parameters: {a: 5.9429, b: -6.2041, c: -0.5531}, taxa: [{family: Pinaceae, genus: Pseudotsuga, species: meniziesii}]}
+  - {parameters: {a: 5.8095, b: -6.3265, c: -0.6015}, taxa: [{family: Pinaceae, genus: Abies, species: grandis}]}
+  - {parameters: {a: 4.5343, b: -6.4926, c: -1.0345}, taxa: [{family: Fagaceae, genus: Notholithocarpus, species: densiflorus}]}
+- name: hst_2
+  type: fixed_effects_set
+  response: {hst: ft}
+  covariates: {dsob: in}
+  parameter_names:
+  - a
+  - b
+  - c
+  specifications:
+  - {parameters: {a: 162.7225, b: -0.05723, c: 0.9763}, taxa: [{family: Pinaceae, genus: Tsuga, species: heterophylla}]}
+  - {parameters: {a: 68.9322, b: -0.1767, c: 0.8723}, taxa: [{family: Ericaceae, genus: Arbutus, species: meniziesii}]}
+- name: hst_3
+  type: fixed_effects_set
+  response: {hst: ft}
+  covariates: {asc: '', dsob: in}
+  covt_defs: {asc: 'Aggregated site class, 1 denotes site class II or better, 0 denotes site class III or worse.'}
+  parameter_names:
+  - b
+  - c
+  - a_0
+  - a_1
+  specifications:
+  - {parameters: {b: -7.7612, c: -0.6782, a_0: 5.5535, a_1: 0.0775}, taxa: [{family: Cupressaceae, genus: Sequoia, species: sempervirens}]}
+  - {parameters: {b: -6.6508, c: -0.6601, a_0: 5.6268, a_1: 0.1138}, taxa: [{family: Pinaceae, genus: Pseudotsuga, species: meniziesii}]}
+  - {parameters: {b: -6.1524, c: -0.5855, a_0: 5.7813, a_1: 0.0686}, taxa: [{family: Pinaceae, genus: Abies, species: grandis}]}
+  - {parameters: {b: -5.3565, c: -0.8725, a_0: 4.597, a_1: 0.1162}, taxa: [{family: Fagaceae, genus: Notholithocarpus, species: densiflorus}]}
+- name: hst_4
+  type: fixed_effects_set
+  response: {hst: ft}
+  covariates: {asc: '', rc: ft ft-1, dsob: in}
+  covt_defs: {asc: 'Aggregated site class, 1 denotes site class II or better, 0 denotes site class III or worse.'}
+  parameter_names:
+  - b
+  - c
+  - a_0
+  - a_1
+  - a_2
+  specifications:
+  - {parameters: {b: -6.812, c: -0.5656, a_0: 5.9093, a_1: 0.0753, a_2: -0.0036}, taxa: [{family: Cupressaceae, genus: Sequoia, species: sempervirens}]}
+  - {parameters: {b: -6.2817, c: -0.6101, a_0: 5.8146, a_1: 0.111, a_2: -0.0027}, taxa: [{family: Pinaceae, genus: Pseudotsuga, species: meniziesii}]}
+  - {parameters: {b: -5.0244, c: -0.7834, a_0: 4.756, a_1: 0.0996, a_2: -0.0019}, taxa: [{family: Fagaceae, genus: Notholithocarpus, species: densiflorus}]}

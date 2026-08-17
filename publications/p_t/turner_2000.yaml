@@ -1,0 +1,18 @@
+publication:
+  key: turner_2000
+  bibtype: article
+  title: Assessing alternative allometric algorithms for estimating leaf area of Douglas-fir trees and stands
+  author: Turner, David P and Acker, Steven A and Means, Joseph E and Garman, Steven L
+  year: 2000
+models:
+- name: bf
+  type: fixed_effects_set
+  response: {bf: kg}
+  covariates: {dsob: cm}
+  parameter_names:
+  - a
+  - b
+  specifications:
+  - {parameters: {a: -2.846, b: 1.701}, taxa: [{family: Pinaceae, genus: Pseudotsuga, species: menziesii}]}
+  - {parameters: {a: -4.13, b: 2.128}, taxa: [{family: Pinaceae, genus: Tsuga, species: heterophylla}]}
+  - {parameters: {a: -2.617, b: 1.782}, taxa: [{family: Cupressaceae, genus: Thuja, species: plicata}]}

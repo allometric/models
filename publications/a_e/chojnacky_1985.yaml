@@ -1,0 +1,56 @@
+publication:
+  key: chojnacky_1985
+  bibtype: techreport
+  title: Pinyon-juniper volume equations for the central Rocky Mountain States
+  author: Chojnacky, David C
+  year: 1985
+models:
+- name: vsoa
+  type: fixed_effects_set
+  response: {vsoa: ft3}
+  covariates: {dsoc: in, hst: ft}
+  parameter_names:
+  - a
+  - b
+  specifications:
+  - {parameters: {a: 0.02434, b: 0.119106}, region: [US-CO], descriptors: {geographic_region: entire State}, taxa: [{family: Cupressaceae, genus: Juniperus, species: scopulorum}]}
+  - {parameters: {a: -0.136, b: 0.145743}, region: [US-CO], descriptors: {geographic_region: entire State}, taxa: [{family: Fagaceae, genus: Quercus, species: gambelii}]}
+  - {parameters: {a: 0.02434, b: 0.119106}, region: [US-ID], descriptors: {geographic_region: southern Idaho}, taxa: [{family: Cupressaceae, genus: Juniperus, species: scopulorum}]}
+  - {parameters: {a: 0.12853, b: 0.105885}, region: [US-SD], descriptors: {geographic_region: Black Hills}, taxa: [{family: Fagaceae, genus: Quercus, species: macrocarpa}]}
+  - {parameters: {a: 0.02434, b: 0.119106}, region: [US-UT], descriptors: {geographic_region: eastern Utah}, taxa: [{family: Cupressaceae, genus: Juniperus, species: scopulorum}]}
+  - {parameters: {a: 0.02434, b: 0.119106}, region: [US-WY], descriptors: {geographic_region: entire State}, taxa: [{family: Cupressaceae, genus: Juniperus, species: scopulorum}]}
+  - {parameters: {a: 0.12853, b: 0.105885}, region: [US-WY], descriptors: {geographic_region: Black Hills}, taxa: [{family: Fagaceae, genus: Quercus, species: macrocarpa}]}
+  - {parameters: {a: -0.13822, b: 0.12185}, region: [US-CO], descriptors: {species_group: hardwoods, geographic_region: entire State}}
+  - {parameters: {a: -0.13822, b: 0.12185}, region: [US-ID], descriptors: {species_group: hardwoods, geographic_region: southern Idaho}}
+  - {parameters: {a: -0.13822, b: 0.12185}, region: [US-WY], descriptors: {species_group: hardwoods, geographic_region: entire State}}
+- name: vsoa_2
+  type: fixed_effects_set
+  response: {vsoa: ft3}
+  covariates: {dsoc: in, hst: ft, single_stem: ''}
+  covt_defs: {single_stem: 'Equal to 1 if the tree has one stem, 0 otherwise'}
+  parameter_names:
+  - a
+  - b
+  - c
+  specifications:
+  - {parameters: {a: -0.19321, b: 0.136101, c: 0.038187}, region: [US-CO], descriptors: {geographic_region: eastern Colorado}, taxa: [{family: Cupressaceae, genus: Juniperus, species: monosperma}]}
+  - {parameters: {a: -0.08728, b: 0.13542, c: -0.019587}, region: [US-CO], descriptors: {geographic_region: western Colorado}, taxa: [{family: Cupressaceae, genus: Juniperus, species: osteosperma}]}
+  - {parameters: {a: -0.20296, b: 0.150283, c: 0.054178}, region: [US-CO], descriptors: {geographic_region: entire State}, taxa: [{family: Pinaceae, genus: Pinus, species: edulis}]}
+  - {parameters: {a: -0.13363, b: 0.128222, c: 0.080208}, region: [US-ID], descriptors: {geographic_region: southern Idaho}, taxa: [{family: Rosaceae, genus: Cercocarpus, species: ledifolius}]}
+  - {parameters: {a: -0.22048, b: 0.125468, c: 0.100092}, region: [US-ID], descriptors: {geographic_region: southern Idaho}, taxa: [{family: Cupressaceae, genus: Juniperus, species: occidentalis}]}
+  - {parameters: {a: -0.13386, b: 0.133726, c: 0.036329}, region: [US-ID], descriptors: {geographic_region: southern Idaho}, taxa: [{family: Cupressaceae, genus: Juniperus, species: osteosperma}]}
+  - {parameters: {a: -0.1424, b: 0.14819, c: -0.016712}, region: [US-ID], descriptors: {geographic_region: southern Idaho}, taxa: [{family: Pinaceae, genus: Pinus, species: monophylla}]}
+  - {parameters: {a: -0.13363, b: 0.128222, c: 0.080208}, region: [US-NV], descriptors: {geographic_region: entire State}, taxa: [{family: Rosaceae, genus: Cercocarpus, species: ledifolius}]}
+  - {parameters: {a: -0.22048, b: 0.125468, c: 0.100092}, region: [US-NV], descriptors: {geographic_region: entire State}, taxa: [{family: Cupressaceae, genus: Juniperus, species: occidentalis}]}
+  - {parameters: {a: -0.13386, b: 0.133726, c: 0.036329}, region: [US-NV], descriptors: {geographic_region: 'Carson City, Battle Mountain, Elko, and Las Vegas'}, taxa: [{family: Cupressaceae, genus: Juniperus, species: osteosperma}]}
+  - {parameters: {a: -0.03655, b: 0.135689, c: -0.018476}, region: [US-NV], descriptors: {geographic_region: Elya}, taxa: [{family: Cupressaceae, genus: Juniperus, species: osteosperma}]}
+  - {parameters: {a: 0.04829, b: 0.114358, c: -0.045779}, region: [US-NV], descriptors: {geographic_region: Winnemucca and Susanville}, taxa: [{family: Cupressaceae, genus: Juniperus, species: osteosperma}]}
+  - {parameters: {a: -0.1424, b: 0.14819, c: -0.016712}, region: [US-NV], descriptors: {geographic_region: entire State}, taxa: [{family: Pinaceae, genus: Pinus, species: monophylla}]}
+  - {parameters: {a: -0.13363, b: 0.128222, c: 0.080208}, region: [US-UT], descriptors: {geographic_region: eastern Utah}, taxa: [{family: Rosaceae, genus: Cercocarpus, species: ledifolius}]}
+  - {parameters: {a: -0.08728, b: 0.13542, c: -0.019587}, region: [US-UT], descriptors: {geographic_region: eastern Utah}, taxa: [{family: Cupressaceae, genus: Juniperus, species: osteosperma}]}
+  - {parameters: {a: -0.13386, b: 0.133726, c: 0.036329}, region: [US-UT], descriptors: {geographic_region: western Utah}, taxa: [{family: Cupressaceae, genus: Juniperus, species: osteosperma}]}
+  - {parameters: {a: -0.20296, b: 0.150283, c: 0.054178}, region: [US-UT], descriptors: {geographic_region: eastern Utah}, taxa: [{family: Pinaceae, genus: Pinus, species: edulis}]}
+  - {parameters: {a: -0.1424, b: 0.14819, c: -0.016712}, region: [US-UT], descriptors: {geographic_region: western Utah}, taxa: [{family: Pinaceae, genus: Pinus, species: monophylla}]}
+  - {parameters: {a: -0.13363, b: 0.128222, c: 0.080208}, region: [US-WY], descriptors: {geographic_region: entire State}, taxa: [{family: Rosaceae, genus: Cercocarpus, species: ledifolius}]}
+  - {parameters: {a: -0.08728, b: 0.13542, c: -0.019587}, region: [US-WY], descriptors: {geographic_region: entire State}, taxa: [{family: Cupressaceae, genus: Juniperus, species: osteosperma}]}
+  - {parameters: {a: -0.20296, b: 0.150283, c: 0.054178}, region: [US-WY], descriptors: {geographic_region: entire State}, taxa: [{family: Pinaceae, genus: Pinus, species: edulis}]}

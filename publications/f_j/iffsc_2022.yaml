@@ -1,0 +1,48 @@
+publication:
+  key: iffsc_2022
+  bibtype: techreport
+  title: Modelos de biomassa para espécies arbóreas nativas de Santa Catarina
+  author: 'IFFSC, '
+  year: 2022
+models:
+- name: bt
+  type: fixed_effects
+  response: {bt: kg}
+  covariates: {dsob: cm, rws: g cm-3}
+  parameters: {a: 0.05678, b: 31.1785, c: 30.0868, d: 0.9894}
+  equation: a * (dsob^2 * (1.3 + ((b * dsob)/(c * dsob))) * rws)^d
+  descriptors: {geographic_region: pantropical, forest_type: dense ombrophilous}
+- name: bt_2
+  type: fixed_effects
+  response: {bt: kg}
+  covariates: {dsoc: cm, hst: m}
+  parameters: {a: 295.6, b: 6.1366, c: -0.1161, d: -0.1522}
+  equation: a/(1 + exp(b + c * dsoc + d * hst))
+  taxa:
+  - {family: Uritaceae, genus: Cecropia, species: galaziovii}
+- name: bt_3
+  type: fixed_effects_set
+  response: {bt: kg}
+  covariates: {dsob: cm, hst: m}
+  parameter_names:
+  - a
+  - b
+  - c
+  specifications:
+  - {parameters: {a: 0.1523, b: 1.1254, c: 1.0338}, taxa: [{family: Cyatheaceae, genus: Cyathea, species: delgadii}]}
+  - {parameters: {a: 0.0175, b: 1.5288, c: 1.66}, taxa: [{family: Arecaceae, genus: Euterpe, species: edulist}]}
+- name: bt_4
+  type: fixed_effects
+  response: {bt: kg}
+  covariates: {dsob: cm, rws: g cm-3}
+  parameters: {a: 0.05678, b: 23.1311, c: -10.0152, d: 0.9894}
+  equation: a * (dsob^2 * (1.3 + b * exp(c/dsob)) * rws)^d
+  taxa:
+  - {family: Araucariaceae, genus: Araucaria, species: angustifolia}
+- name: bt_5
+  type: fixed_effects
+  response: {bt: kg}
+  covariates: {dsob: cm, rws: g cm-3}
+  parameters: {a: 0.05678, b: 20.6603, c: 0.037056, d: 0.9894}
+  equation: a * (dsob^2 * (1.3 + b * (1 - exp(c * dsob))) * rws)^d
+  descriptors: {forest_type: deciduous}

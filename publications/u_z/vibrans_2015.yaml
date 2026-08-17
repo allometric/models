@@ -1,0 +1,36 @@
+publication:
+  key: vibrans_2015
+  bibtype: article
+  title: Generic and specific stem volume models for three subtropical forest types in southern Brazil
+  author: Vibrans, Alexander C and Moser, Paolo and Oliveira, Laio Z and de, João P
+  year: 2015
+models:
+- name: vsoa
+  type: fixed_effects_set
+  response: {vsoa: m3}
+  covariates: {dsob: cm, hst: m}
+  parameter_names:
+  - beta_0
+  - beta_1
+  - beta_2
+  specifications:
+  - {parameters: {beta_0: -17.72, beta_1: 0.95, beta_2: 0.69}, descriptors: {forest_type: seasonal deciduous}, taxa: [{family: Lauraceae, genus: Nectandra, species: megapotamica}]}
+  - {parameters: {beta_0: -17.52, beta_1: 0.93, beta_2: 0.68}, descriptors: {forest_type: seasonal deciduous}, taxa: [{family: Lauraceae, genus: Ocotea, species: puberula}]}
+  - {parameters: {beta_0: -18.57, beta_1: 1.02, beta_2: 0.75}, descriptors: {forest_type: seasonal deciduous}, taxa: [{family: Meliaceae, genus: Cedrela, species: fissilis}]}
+  - {parameters: {beta_0: -18.31, beta_1: 0.99, beta_2: 0.76}, descriptors: {forest_type: mixed ombrophilous}, taxa: [{family: Clethraceae, genus: Clethra, species: scabra}]}
+  - {parameters: {beta_0: -18.03, beta_1: 0.99, beta_2: 0.61}, descriptors: {forest_type: mixed ombrophilous}, taxa: [{family: Sapindaceae, genus: Matayba, species: elaeagnoides}]}
+  - {parameters: {beta_0: -18.3, beta_1: 1.0, beta_2: 0.74}, descriptors: {forest_type: mixed ombrophilous}, taxa: [{family: Lauraceae, genus: Ocotea, species: puberula}]}
+  - {parameters: {beta_0: -18.48, beta_1: 1.02, beta_2: 0.74}, descriptors: {forest_type: mixed ombrophilous}, taxa: [{family: Rosaceae, genus: Prunus, species: myrtifolia}]}
+  - {parameters: {beta_0: -18.1, beta_1: 1.05, beta_2: 0.51}, descriptors: {forest_type: dense ombrophilous}, taxa: [{family: Euphorbiaceae, genus: Alchornea, species: triplinervia}]}
+  - {parameters: {beta_0: -17.8, beta_1: 1.03, beta_2: 0.46}, descriptors: {forest_type: dense ombrophilous}, taxa: [{family: Meliaceae, genus: Cedrela, species: fissilis}]}
+  - {parameters: {beta_0: -17.74, beta_1: 1.02, beta_2: 0.45}, descriptors: {forest_type: dense ombrophilous}, taxa: [{family: Phyllanthaceae, genus: Hieronyma, species: alchorneoides}]}
+  - {parameters: {beta_0: -17.53, beta_1: 0.97, beta_2: 0.59}, descriptors: {forest_type: dense ombrophilous}, taxa: [{family: Melastomataceae, genus: Miconia, species: cinnamomifolia}]}
+  - {parameters: {beta_0: -17.89, beta_1: 0.99, beta_2: 0.64}, descriptors: {forest_type: dense ombrophilous}, taxa: [{family: Lauraceae, genus: Nectandra, species: oppositifolia}]}
+  - {parameters: {beta_0: -17.93, beta_1: 1.01, beta_2: 0.58}, descriptors: {forest_type: dense ombrophilous}, taxa: [{family: Lauraceae, genus: Ocotea, species: puberula}]}
+  - {parameters: {beta_0: -18.35, beta_1: 1.04, beta_2: 0.59}, descriptors: {forest_type: dense ombrophilous}, taxa: [{family: Asteraceae, genus: Piptocarpha, species: angustifolia}]}
+  - {parameters: {beta_0: -17.86, beta_1: 0.95, beta_2: 0.82}, descriptors: {forest_type: dense ombrophilous}, taxa: [{family: Anacardiaceae, genus: Tapirira, species: guianensis}]}
+  - {parameters: {beta_0: -17.98, beta_1: 0.98, beta_2: 0.64}, descriptors: {forest_type: dense ombrophilous}, taxa: [{family: Myristicaceae, genus: Virola, species: bicuhyba}]}
+  - {parameters: {beta_0: -17.68, beta_1: 0.95, beta_2: 0.67}, descriptors: {forest_type: DEC, forest_type_description: seasonal deciduous}}
+  - {parameters: {beta_0: -17.96, beta_1: 0.96, beta_2: 0.76}, descriptors: {forest_type: MIX, forest_type_description: mixed ombrophilous}}
+  - {parameters: {beta_0: -17.75, beta_1: 0.98, beta_2: 0.57}, descriptors: {forest_type: DEN, forest_type_description: dense ombrophilous}}
+  - {parameters: {beta_0: -17.84, beta_1: 0.96, beta_2: 0.69}, descriptors: {forest_type: ALL, forest_type_description: overall generic}}

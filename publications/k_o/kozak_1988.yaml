@@ -1,0 +1,25 @@
+publication:
+  key: kozak_1988
+  bibtype: article
+  title: A variable-exponent taper equation
+  author: Kozak, A
+  year: 1988
+models:
+- name: dsih
+  type: fixed_effects_set
+  response: {dsih: cm}
+  covariates: {hst: m, hsd: m, dsob: cm}
+  parameter_names:
+  - a_0
+  - a_1
+  - a_2
+  - b_1
+  - b_2
+  - b_3
+  - b_4
+  - b_5
+  specifications:
+  - {parameters: {a_0: 1.02453, a_1: 0.88809, a_2: 1.00035, b_1: 0.95086, b_2: -0.1809, b_3: 0.61407, b_4: -0.35106, b_5: 0.05686}, descriptors: {p: 0.25}, taxa: [{family: Pinaceae, genus: Pseudotsuga, species: menziesii}]}
+  - {parameters: {a_0: 1.21697, a_1: 0.84256, a_2: 1.00001, b_1: 1.55322, b_2: -0.39719, b_3: 2.11018, b_4: -1.11416, b_5: 0.0942}, descriptors: {p: 0.3}, taxa: [{family: Cupressaceae, genus: Thuja, species: plicata}]}
+  - {parameters: {a_0: 0.7746, a_1: 1.04032, a_2: 0.99698, b_1: 0.74575, b_2: -0.13018, b_3: 0.55882, b_4: -0.32418, b_5: 0.19869}, descriptors: {p: 0.25}, taxa: [{family: Pinaceae, genus: Pinus, species: contorta}]}
+  - {parameters: {a_0: 0.85258, a_1: 0.95297, a_2: 1.00048, b_1: 0.73191, b_2: -0.08419, b_3: 0.19634, b_4: -0.06985, b_5: 0.14828}, descriptors: {p: 0.25}, taxa: [{family: Salicaceae, genus: Populus, species: trichocarpa}]}

@@ -1,0 +1,65 @@
+publication:
+  key: huy_2019
+  bibtype: article
+  title: Taxon-specific modeling systems for improving reliability of tree aboveground biomass and its components estimates in tropical dry dipterocarp forests
+  author: Huy, Bao and Tinh, Nguyen Thi and Poudel, Krishna P and Frank, Bryce Michael and Temesgen, Hailemariam
+  year: 2019
+models:
+- name: bs
+  type: fixed_effects_set
+  response: {bs: kg}
+  covariates: {dsob: cm, hst: m, es: g cm-3}
+  parameter_names:
+  - a_1
+  - b_11
+  - b_12
+  - b_13
+  specifications:
+  - {parameters: {a_1: 0.02055, b_11: 2.35241, b_12: 0.59142, b_13: 0.6909}, taxa: [{family: Dipterocarpaceae, genus: Dipterocarpus, species: null}, {family: Dipterocarpaceae, genus: Shorea, species: null}]}
+  - {parameters: {a_1: 0.02548, b_11: 2.25377, b_12: 0.69531, b_13: 0.95381}, taxa: [{family: Dipterocarpaceae, genus: null, species: null}]}
+- name: bs_2
+  type: fixed_effects_set
+  response: {bs: kg}
+  covariates: {dsob: cm}
+  parameter_names:
+  - a_1
+  - b_11
+  specifications:
+  - {parameters: {a_1: 0.01831, b_11: 2.76361}, taxa: [{family: Dipterocarpaceae, genus: Dipterocarpus, species: null}]}
+  - {parameters: {a_1: 0.03925, b_11: 2.47118}, taxa: [{family: Dipterocarpaceae, genus: Shorea, species: null}]}
+- name: bb
+  type: fixed_effects_set
+  response: {bb: kg}
+  covariates: {dsob: cm}
+  parameter_names:
+  - a_2
+  - b_21
+  specifications:
+  - {parameters: {a_2: 0.00669, b_21: 2.85742}, taxa: [{family: Dipterocarpaceae, genus: Dipterocarpus, species: null}, {family: Dipterocarpaceae, genus: Shorea, species: null}]}
+  - {parameters: {a_2: 0.01097, b_21: 2.73663}, taxa: [{family: Dipterocarpaceae, genus: null, species: null}]}
+  - {parameters: {a_2: 0.00481, b_21: 2.96217}, taxa: [{family: Dipterocarpaceae, genus: Dipterocarpus, species: null}]}
+  - {parameters: {a_2: 0.0213, b_21: 2.49004}, taxa: [{family: Dipterocarpaceae, genus: Shorea, species: null}]}
+- name: bf
+  type: fixed_effects_set
+  response: {bf: kg}
+  covariates: {dsob: cm}
+  parameter_names:
+  - a_3
+  - b_31
+  specifications:
+  - {parameters: {a_3: 0.03701, b_31: 1.68095}, taxa: [{family: Dipterocarpaceae, genus: Dipterocarpus, species: null}, {family: Dipterocarpaceae, genus: Shorea, species: null}]}
+  - {parameters: {a_3: 0.04559, b_31: 1.63322}, taxa: [{family: Dipterocarpaceae, genus: null, species: null}]}
+  - {parameters: {a_3: 0.08921, b_31: 1.4384}, taxa: [{family: Dipterocarpaceae, genus: Dipterocarpus, species: null}]}
+  - {parameters: {a_3: 0.05119, b_31: 1.50629}, taxa: [{family: Dipterocarpaceae, genus: Shorea, species: null}]}
+- name: bk
+  type: fixed_effects_set
+  response: {bk: kg}
+  covariates: {dsob: cm}
+  parameter_names:
+  - a_4
+  - b_41
+  specifications:
+  - {parameters: {a_4: 0.01541, b_41: 2.43959}, taxa: [{family: Dipterocarpaceae, genus: Dipterocarpus, species: null}, {family: Dipterocarpaceae, genus: Shorea, species: null}]}
+  - {parameters: {a_4: 0.00399, b_41: 2.8367}, taxa: [{family: Dipterocarpaceae, genus: null, species: null}]}
+  - {parameters: {a_4: 0.00116, b_41: 3.1934}, taxa: [{family: Dipterocarpaceae, genus: Dipterocarpus, species: null}]}
+  - {parameters: {a_4: 0.31967, b_41: 1.4738}, taxa: [{family: Dipterocarpaceae, genus: Shorea, species: null}]}

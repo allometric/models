@@ -1,0 +1,94 @@
+publication:
+  key: ritche_1987
+  bibtype: techreport
+  title: Equations for predicting height to crown base for fourteen tree species in southwest Oregon
+  author: Ritchie, Martin W and Hann, David W
+  year: 1987
+models:
+- name: rc
+  type: fixed_effects_set
+  response: {rc: ft ft-1}
+  covariates: {hst: ft, ccfl: ft2 ft-2, gs_s: ft2 acre-1, dsob: in, hstix50: ft}
+  covt_defs: {ccfl: crown competition factor of large trees}
+  parameter_names:
+  - b_0
+  - b_1
+  - b_2
+  - b_3
+  - b_4
+  - b_5
+  specifications:
+  - {parameters: {b_0: 2.59959, b_1: -0.0072595, b_2: -0.00458228, b_3: -0.441557, b_4: 1.61311, b_5: 0.00467539}, taxa: [{family: Pinaceae, genus: Pseudotsuga, species: menziesii}]}
+  - {parameters: {b_0: 2.71071, b_1: -0.00366952, b_2: -0.00455308, b_3: -0.505344, b_4: 1.72963, b_5: 0.0047274}, taxa: [{family: Pinaceae, genus: Abies, species: grandis}, {family: Pinaceae, genus: Abies, species: concolor}]}
+  - {parameters: {b_0: 2.34665, b_1: -0.00206403, b_2: -0.00260411, b_3: -0.622085, b_4: 3.09805, b_5: 0.00426037}, taxa: [{family: Pinaceae, genus: Pinus, species: ponderosa}]}
+- name: rc_2
+  type: fixed_effects_set
+  response: {rc: ft ft-1}
+  covariates: {hst: ft, ccfl: ft2 ft-2, gs_s: ft2 acre-1}
+  covt_defs: {ccfl: crown competition factor of large trees}
+  parameter_names:
+  - b_0
+  - b_1
+  - b_2
+  - b_3
+  specifications:
+  - {parameters: {b_0: 2.59959, b_1: -0.0072595, b_2: -0.00458228, b_3: -0.441557}, taxa: [{family: Pinaceae, genus: Pinus, species: lambertiana}]}
+  - {parameters: {b_0: 2.71071, b_1: -0.00366952, b_2: -0.00455308, b_3: -0.505344}, taxa: [{family: Ericaceae, genus: Arbutus, species: menziesii}]}
+- name: rc_3
+  type: fixed_effects_set
+  response: {rc: ft ft-1}
+  covariates: {hst: ft, ccfl: ft2 ft-2, gs_s: ft2 acre-1, dsob: in}
+  covt_defs: {ccfl: crown competition factor of large trees}
+  parameter_names:
+  - b_0
+  - b_2
+  - b_3
+  - b_4
+  specifications:
+  - {parameters: {b_0: 4.40376, b_2: -0.00267306, b_3: -0.844515, b_4: 1.08515}, taxa: [{family: Cupressaceae, genus: Calocedrus, species: decurrens}]}
+  - {parameters: {b_0: 1.65623, b_2: -0.00240594, b_3: -0.355275, b_4: 1.24983}, taxa: [{family: Fagaceae, genus: Chrysolepis, species: chrysophylla}]}
+- name: rc_4
+  type: fixed_effects_set
+  response: {rc: ft ft-1}
+  covariates: {ccfl: ft2 ft-2}
+  covt_defs: {ccfl: crown competition factor of large trees}
+  parameter_names:
+  - b_0
+  - b_2
+  specifications:
+  - {parameters: {b_0: 0.791433, b_2: -0.00255926}, taxa: [{family: Pinaceae, genus: Tsuga, species: heterophylla}]}
+  - {parameters: {b_0: 0.36163, b_2: -0.00647642}, taxa: [{family: Fagaceae, genus: Quercus, species: garryana}]}
+- name: rc_5
+  type: fixed_effects
+  response: {rc: ft ft-1}
+  covariates: {ccfl: ft2 ft-2}
+  covt_defs: {ccfl: crown competition factor of large trees}
+  parameters: {b_2: -0.00088567}
+  equation: 1 - ((1)/(1 + exp(b_2 * ccfl)))
+  taxa:
+  - {family: Fagaceae, genus: Notholithocarpus, species: densiflorus}
+- name: rc_6
+  type: fixed_effects
+  response: {rc: ft ft-1}
+  covariates: {gs_s: ft2 acre-1}
+  parameters: {b_0: 2.22352, b_3: -0.426931}
+  equation: 1 - ((1)/(1 + exp(b_0 + b_3 * log(gs_s))))
+  taxa:
+  - {family: Fagaceae, genus: Quercus, species: chrysolepis}
+- name: rc_7
+  type: fixed_effects
+  response: {rc: ft ft-1}
+  covariates: {hst: ft, dsob: in, gs_s: ft2 acre-1}
+  parameters: {b_0: 2.65524, b_3: -0.646829, b_4: 0.728396}
+  equation: 1 - ((1)/(1 + exp(b_0 + b_3 * log(gs_s) + b_4 * (dsob/hst))))
+  taxa:
+  - {family: Fagaceae, genus: Quercus, species: kelloggii}
+- name: rc_8
+  type: fixed_effects
+  response: {rc: ft ft-1}
+  covariates: {hst: ft, ccfl: ft2 ft-2}
+  covt_defs: {ccfl: crown competition factor of large trees}
+  parameters: {b_0: 0.919152, b_1: -0.00768402, b_2: -0.00618461}
+  equation: 1 - ((1)/(1 + exp(b_0 + b_1 * hst + b_2 * ccfl)))
+  taxa:
+  - {family: Fagaceae, genus: Quercus, species: kelloggii}

@@ -1,0 +1,75 @@
+publication:
+  key: hahn_1991
+  bibtype: article
+  title: Cubic and board foot volume models for the Central States
+  author: Hahn, Jerold T and Hansen, Mark H
+  year: 1991
+models:
+- name: vsia
+  type: fixed_effects_set
+  response: {vsia: ft3}
+  covariates: {hstix50: ft, dsob: in}
+  covt_defs: {hstix50: Site index at an un-specified base age.}
+  parameter_names:
+  - b_1
+  - b_2
+  - b_3
+  - b_4
+  specifications:
+  - {parameters: {b_1: 122.77, b_2: 0.4148, b_3: -2.397e-05, b_4: 2.724}, taxa: [{family: Pinaceae, genus: Pinus, species: resinosa}, {family: Pinaceae, genus: Pinus, species: strobus}, {family: Pinaceae, genus: Pinus, species: banksiana}, {family: Pinaceae, genus: Pinus, species: sylvestris}]}
+  - {parameters: {b_1: 122.58, b_2: 0.2068, b_3: -5.767e-05, b_4: 2.772}, taxa: [{family: Pinaceae, genus: Pinus, species: echinata}, {family: Pinaceae, genus: Pinus, species: virginiana}, {family: Pinaceae, genus: Pinus, species: taeda}]}
+  - {parameters: {b_1: 454.13, b_2: 0.1367, b_3: -2.547e-05, b_4: 2.625}, taxa: [{family: Cupressaceae, genus: Thuja, species: occidentalis}, {family: Pinaceae, genus: Larix, species: laricina}, {family: Pinaceae, genus: Tsuga, species: canadensis}, {family: Pinaceae, genus: Abies, species: balsamea}, {family: Pinaceae, genus: Picea, species: glauca}, {family: Pinaceae, genus: Picea, species: mariana}]}
+  - {parameters: {b_1: 337.22, b_2: 0.1158, b_3: -8.18e-06, b_4: 3.2}, taxa: [{family: Cupressaceae, genus: Taxodium, species: distichum}]}
+  - {parameters: {b_1: 112.59, b_2: 0.125, b_3: -0.00010633, b_4: 2.626}, taxa: [{family: Cupressaceae, genus: Juniperus, species: virginiana}]}
+  - {parameters: {b_1: 138.51, b_2: 0.1769, b_3: -7.041e-05, b_4: 2.667}, taxa: [{family: Fagaceae, genus: Quercus, species: alba}, {family: Fagaceae, genus: Quercus, species: macrocarpa}, {family: Fagaceae, genus: Quercus, species: muehlenbergii}, {family: Fagaceae, genus: Quercus, species: bicolor}, {family: Fagaceae, genus: Quercus, species: michauxii}]}
+  - {parameters: {b_1: 146.07, b_2: 0.2422, b_3: -5.269e-05, b_4: 2.632}, taxa: [{family: Fagaceae, genus: Quercus, species: stellata}, {family: Fagaceae, genus: Quercus, species: prinus}, {family: Fagaceae, genus: Quercus, species: lyrata}]}
+  - {parameters: {b_1: 167.98, b_2: 0.2828, b_3: -4.617e-05, b_4: 2.59}, taxa: [{family: Fagaceae, genus: Quercus, species: rubra}, {family: Fagaceae, genus: Quercus, species: pagoda}, {family: Fagaceae, genus: Quercus, species: shumardii}]}
+  - {parameters: {b_1: 151.65, b_2: 0.2597, b_3: -4.408e-05, b_4: 2.672}, taxa: [{family: Fagaceae, genus: Quercus, species: velutina}, {family: Fagaceae, genus: Quercus, species: coccinea}, {family: Fagaceae, genus: Quercus, species: palustris}, {family: Fagaceae, genus: Quercus, species: marilandica}, {family: Fagaceae, genus: Quercus, species: imbricaria}, {family: Fagaceae, genus: Quercus, species: falcata}, {family: Fagaceae, genus: Quercus, species: ellipsoidalis}, {family: Fagaceae, genus: Quercus, species: phellos}]}
+  - {parameters: {b_1: 84.15, b_2: 0.2452, b_3: -6.483e-05, b_4: 2.822}, taxa: [{family: Juglandaceae, genus: Carya, species: ovata}, {family: Juglandaceae, genus: Carya, species: alba}, {family: Juglandaceae, genus: Carya, species: laciniosa}, {family: Juglandaceae, genus: Carya, species: illinoinensis}]}
+  - {parameters: {b_1: 60.55, b_2: 0.2965, b_3: -6.537e-05, b_4: 2.874}, taxa: [{family: Juglandaceae, genus: Carya, species: glabra}, {family: Juglandaceae, genus: Carya, species: cordiformis}, {family: Juglandaceae, genus: Carya, species: texana}]}
+  - {parameters: {b_1: 194.75, b_2: 0.1745, b_3: -4.508e-05, b_4: 2.732}, taxa: [{family: Malvaceae, genus: Tilia, species: americana}, {family: Fagaceae, genus: Fagus, species: grandifolia}, {family: Betulaceae, genus: Betula, species: alleghaniensis}]}
+  - {parameters: {b_1: 118.8, b_2: 0.2106, b_3: -7.184e-05, b_4: 2.724}, taxa: [{family: Sapindaceae, genus: Acer, species: saccharum}, {family: Sapindaceae, genus: Acer, species: nigrum}]}
+  - {parameters: {b_1: 431.19, b_2: 0.0194, b_3: -4.663e-05, b_4: 2.678}, taxa: [{family: Sapindaceae, genus: Acer, species: saccharinum}, {family: Sapindaceae, genus: Acer, species: rubrum}]}
+  - {parameters: {b_1: 191.45, b_2: 0.1609, b_3: -4.209e-05, b_4: 2.747}, taxa: [{family: Ulmaceae, genus: Ulmus, species: americana}, {family: Ulmaceae, genus: Ulmus, species: rubra}, {family: Cannabaceae, genus: Celtis, species: occidentalis}, {family: Ulmaceae, genus: Ulmus, species: alata}, {family: Ulmaceae, genus: Ulmus, species: thomasii}]}
+  - {parameters: {b_1: 73.72, b_2: 0.2283, b_3: -8.079e-05, b_4: 2.8}, taxa: [{family: Oleaceae, genus: Fraxinus, species: americana}, {family: Oleaceae, genus: Fraxinus, species: pennsylvanica}, {family: Oleaceae, genus: Fraxinus, species: nigra}, {family: Oleaceae, genus: Fraxinus, species: quadrangulata}]}
+  - {parameters: {b_1: 326.3, b_2: 0.1977, b_3: -3.24e-05, b_4: 2.67}, taxa: [{family: Platanaceae, genus: Platanus, species: occidentalis}]}
+  - {parameters: {b_1: 479.95, b_2: 0.1104, b_3: -3.05e-05, b_4: 2.652}, taxa: [{family: Salicaceae, genus: Populus, species: deltoides}]}
+  - {parameters: {b_1: 39.02, b_2: 0.3854, b_3: -8.776e-05, b_4: 2.769}, taxa: [{family: Salicaceae, genus: Salix, species: nigra}]}
+  - {parameters: {b_1: 61.22, b_2: 0.284, b_3: -0.00011838, b_4: 2.631}, taxa: [{family: Salicaceae, genus: Populus, species: tremuloides}, {family: Salicaceae, genus: Populus, species: grandidentata}, {family: Salicaceae, genus: Populus, species: balsamifera}]}
+  - {parameters: {b_1: 232.88, b_2: 0.2093, b_3: -3.379e-05, b_4: 2.76}, taxa: [{family: Magnoliaceae, genus: Liriodendron, species: tulipifera}]}
+  - {parameters: {b_1: 137.32, b_2: 0.1399, b_3: -7.431e-05, b_4: 2.7}, taxa: [{family: Juglandaceae, genus: Juglans, species: nigra}]}
+  - {parameters: {b_1: 94.99, b_2: 0.2409, b_3: -4.946e-05, b_4: 2.845}, taxa: [{family: Rosaceae, genus: Prunus, species: serotina}, {family: Lauraceae, genus: Sassafras, species: albidum}, {family: Altingiaceae, genus: Liquidambar, species: styraciflua}, {family: Sapindaceae, genus: Acer, species: negundo}, {family: Fabaceae, genus: Gleditsia, species: triacanthos}, {family: Betulaceae, genus: Betula, species: nigra}, {family: Fabaceae, genus: Robinia, species: pseudoacacia}, {family: Nyssaceae, genus: Nyssa, species: biflora}, {family: Ebenaceae, genus: Diospyros, species: kaki}, {family: Moraceae, genus: Maclura, species: pomifera}, {family: Juglandaceae, genus: Juglans, species: cinerea}, {family: Cornaceae, genus: Cornus, species: florida}, {family: Moraceae, genus: Morus, species: rubra}, {family: Sapindaceae, genus: Aesculus, species: glabra}, {family: Fabaceae, genus: Gymnocladus, species: dioicus}, {family: Betulaceae, genus: Ostrya, species: virginiana}, {family: Betulaceae, genus: Betula, species: papyrifera}, {family: Fabaceae, genus: Cercis, species: canadensis}, {family: Rosaceae, genus: Crataegus, species: NA}, {family: Bignoniaceae, genus: Catalpa, species: speciosa}, {family: Cannabaceae, genus: Celtis, species: laevigata}, {family: Magnoliaceae, genus: Magnolia, species: acuminata}, {family: Moraceae, genus: Morus, species: alba}, {family: Betulaceae, genus: Carpinus, species: caroliniana}, {family: Simaroubaceae, genus: Ailanthus, species: NA}, {family: Simaroubaceae, genus: Ailanthus, species: altissima}, {family: Rosaceae, genus: Malus, species: NA}, {family: Nyssaceae, genus: Nyssa, species: sylvatica}]}
+- name: vsia_2
+  type: fixed_effects_set
+  response: {vsia: board_foot}
+  covariates: {hstix50: ft, dsob: in}
+  covt_defs: {hstix50: Site index at an un-specified base age.}
+  parameter_names:
+  - b_1
+  - b_2
+  - b_3
+  - b_4
+  specifications:
+  - {parameters: {b_1: 925.5, b_2: 0.264, b_3: -1.818e-05, b_4: 2.926}, taxa: [{family: Pinaceae, genus: Pinus, species: resinosa}, {family: Pinaceae, genus: Pinus, species: strobus}, {family: Pinaceae, genus: Pinus, species: banksiana}, {family: Pinaceae, genus: Pinus, species: sylvestris}]}
+  - {parameters: {b_1: 815.5, b_2: 0.1327, b_3: -4.169e-05, b_4: 2.931}, taxa: [{family: Pinaceae, genus: Pinus, species: echinata}, {family: Pinaceae, genus: Pinus, species: virginiana}, {family: Pinaceae, genus: Pinus, species: taeda}]}
+  - {parameters: {b_1: 915.5, b_2: 0.2719, b_3: -3.436e-05, b_4: 2.644}, taxa: [{family: Cupressaceae, genus: Thuja, species: occidentalis}, {family: Pinaceae, genus: Larix, species: laricina}, {family: Pinaceae, genus: Tsuga, species: canadensis}, {family: Pinaceae, genus: Abies, species: balsamea}, {family: Pinaceae, genus: Picea, species: glauca}, {family: Pinaceae, genus: Picea, species: mariana}]}
+  - {parameters: {b_1: 859.7, b_2: 0.0028, b_3: -3.44e-06, b_4: 3.496}, taxa: [{family: Cupressaceae, genus: Taxodium, species: distichum}]}
+  - {parameters: {b_1: 629.3, b_2: 0.1133, b_3: -0.0002294, b_4: 2.31}, taxa: [{family: Cupressaceae, genus: Juniperus, species: virginiana}]}
+  - {parameters: {b_1: 749.1, b_2: 0.2214, b_3: -4.853e-05, b_4: 2.729}, taxa: [{family: Fagaceae, genus: Quercus, species: alba}, {family: Fagaceae, genus: Quercus, species: macrocarpa}, {family: Fagaceae, genus: Quercus, species: muehlenbergii}, {family: Fagaceae, genus: Quercus, species: bicolor}, {family: Fagaceae, genus: Quercus, species: michauxii}]}
+  - {parameters: {b_1: 416.1, b_2: 0.4001, b_3: -3.862e-05, b_4: 2.75}, taxa: [{family: Fagaceae, genus: Quercus, species: stellata}, {family: Fagaceae, genus: Quercus, species: prinus}, {family: Fagaceae, genus: Quercus, species: lyrata}]}
+  - {parameters: {b_1: 744.2, b_2: 0.2627, b_3: -3.487e-05, b_4: 2.804}, taxa: [{family: Fagaceae, genus: Quercus, species: rubra}, {family: Fagaceae, genus: Quercus, species: pagoda}, {family: Fagaceae, genus: Quercus, species: shumardii}]}
+  - {parameters: {b_1: 904.2, b_2: 0.2229, b_3: -2.808e-05, b_4: 2.861}, taxa: [{family: Fagaceae, genus: Quercus, species: velutina}, {family: Fagaceae, genus: Quercus, species: coccinea}, {family: Fagaceae, genus: Quercus, species: palustris}, {family: Fagaceae, genus: Quercus, species: marilandica}, {family: Fagaceae, genus: Quercus, species: imbricaria}, {family: Fagaceae, genus: Quercus, species: falcata}, {family: Fagaceae, genus: Quercus, species: ellipsoidalis}, {family: Fagaceae, genus: Quercus, species: phellos}]}
+  - {parameters: {b_1: 731.9, b_2: 0.2265, b_3: -3.128e-05, b_4: 2.926}, taxa: [{family: Juglandaceae, genus: Carya, species: ovata}, {family: Juglandaceae, genus: Carya, species: alba}, {family: Juglandaceae, genus: Carya, species: laciniosa}, {family: Juglandaceae, genus: Carya, species: illinoinensis}]}
+  - {parameters: {b_1: 394.5, b_2: 0.3271, b_3: -3.303e-05, b_4: 2.999}, taxa: [{family: Juglandaceae, genus: Carya, species: glabra}, {family: Juglandaceae, genus: Carya, species: cordiformis}, {family: Juglandaceae, genus: Carya, species: texana}]}
+  - {parameters: {b_1: 1325.2, b_2: 0.1748, b_3: -2.803e-05, b_4: 2.827}, taxa: [{family: Malvaceae, genus: Tilia, species: americana}, {family: Fagaceae, genus: Fagus, species: grandifolia}, {family: Betulaceae, genus: Betula, species: alleghaniensis}]}
+  - {parameters: {b_1: 585.0, b_2: 0.259, b_3: -3.684e-05, b_4: 2.925}, taxa: [{family: Sapindaceae, genus: Acer, species: saccharum}, {family: Sapindaceae, genus: Acer, species: nigrum}]}
+  - {parameters: {b_1: 2373.9, b_2: 0.0291, b_3: -2.323e-05, b_4: 2.88}, taxa: [{family: Sapindaceae, genus: Acer, species: saccharinum}, {family: Sapindaceae, genus: Acer, species: rubrum}]}
+  - {parameters: {b_1: 751.4, b_2: 0.2845, b_3: -2.692e-05, b_4: 2.819}, taxa: [{family: Ulmaceae, genus: Ulmus, species: americana}, {family: Ulmaceae, genus: Ulmus, species: rubra}, {family: Cannabaceae, genus: Celtis, species: occidentalis}, {family: Ulmaceae, genus: Ulmus, species: alata}, {family: Ulmaceae, genus: Ulmus, species: thomasii}]}
+  - {parameters: {b_1: 418.9, b_2: 0.23, b_3: -3.323e-05, b_4: 3.09}, taxa: [{family: Oleaceae, genus: Fraxinus, species: americana}, {family: Oleaceae, genus: Fraxinus, species: pennsylvanica}, {family: Oleaceae, genus: Fraxinus, species: nigra}, {family: Oleaceae, genus: Fraxinus, species: quadrangulata}]}
+  - {parameters: {b_1: 819.4, b_2: 0.3402, b_3: -1.626e-05, b_4: 2.955}, taxa: [{family: Platanaceae, genus: Platanus, species: occidentalis}]}
+  - {parameters: {b_1: 916.0, b_2: 0.2283, b_3: -2.029e-05, b_4: 2.995}, taxa: [{family: Salicaceae, genus: Populus, species: deltoides}]}
+  - {parameters: {b_1: 103.9, b_2: 0.5745, b_3: -3.99e-05, b_4: 2.996}, taxa: [{family: Salicaceae, genus: Salix, species: nigra}]}
+  - {parameters: {b_1: 117.0, b_2: 0.3714, b_3: -3.645e-05, b_4: 3.361}, taxa: [{family: Salicaceae, genus: Populus, species: tremuloides}, {family: Salicaceae, genus: Populus, species: grandidentata}, {family: Salicaceae, genus: Populus, species: balsamifera}]}
+  - {parameters: {b_1: 569.2, b_2: 0.3497, b_3: -1.767e-05, b_4: 3.063}, taxa: [{family: Magnoliaceae, genus: Liriodendron, species: tulipifera}]}
+  - {parameters: {b_1: 527.2, b_2: 0.2073, b_3: -4.31e-05, b_4: 2.918}, taxa: [{family: Juglandaceae, genus: Juglans, species: nigra}]}
+  - {parameters: {b_1: 648.1, b_2: 0.2008, b_3: -2.784e-05, b_4: 3.014}, taxa: [{family: Rosaceae, genus: Prunus, species: serotina}, {family: Lauraceae, genus: Sassafras, species: albidum}, {family: Altingiaceae, genus: Liquidambar, species: styraciflua}, {family: Sapindaceae, genus: Acer, species: negundo}, {family: Fabaceae, genus: Gleditsia, species: triacanthos}, {family: Betulaceae, genus: Betula, species: nigra}, {family: Fabaceae, genus: Robinia, species: pseudoacacia}, {family: Nyssaceae, genus: Nyssa, species: biflora}, {family: Ebenaceae, genus: Diospyros, species: kaki}, {family: Moraceae, genus: Maclura, species: pomifera}, {family: Juglandaceae, genus: Juglans, species: cinerea}, {family: Cornaceae, genus: Cornus, species: florida}, {family: Moraceae, genus: Morus, species: rubra}, {family: Sapindaceae, genus: Aesculus, species: glabra}, {family: Fabaceae, genus: Gymnocladus, species: dioicus}, {family: Betulaceae, genus: Ostrya, species: virginiana}, {family: Betulaceae, genus: Betula, species: papyrifera}, {family: Fabaceae, genus: Cercis, species: canadensis}, {family: Rosaceae, genus: Crataegus, species: NA}, {family: Bignoniaceae, genus: Catalpa, species: speciosa}, {family: Cannabaceae, genus: Celtis, species: laevigata}, {family: Magnoliaceae, genus: Magnolia, species: acuminata}, {family: Moraceae, genus: Morus, species: alba}, {family: Betulaceae, genus: Carpinus, species: caroliniana}, {family: Simaroubaceae, genus: Ailanthus, species: NA}, {family: Simaroubaceae, genus: Ailanthus, species: altissima}, {family: Rosaceae, genus: Malus, species: NA}, {family: Nyssaceae, genus: Nyssa, species: sylvatica}]}

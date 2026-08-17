@@ -1,0 +1,13 @@
+publication:
+  key: barnes_1962
+  bibtype: techreport
+  title: Yield of even-aged stands of western hemlock
+  author: Barnes, George H
+  year: 1962
+models:
+- name: hstix50
+  type: fixed_effects
+  response: {hstix50: ft}
+  covariates: {atb: year, hst: ft}
+  parameters: {a: 22.6, b: 0.014482, c: 0.001162}
+  equation: 4.5 + a * exp((b - c * log(atb)) * (hst - 4.5))

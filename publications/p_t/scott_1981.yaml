@@ -1,0 +1,40 @@
+publication:
+  key: scott_1981
+  bibtype: techreport
+  title: Northeastern forest survey revised cubic-foot volume equations
+  author: Scott, Charles Thomas
+  year: 1981
+models:
+- name: vsia
+  type: fixed_effects_set
+  response: {vsia: ft3}
+  covariates: {dsob: in, hsm: ft}
+  parameter_names:
+  - b_0
+  - b_1
+  - b_2
+  - b_3
+  - b_4
+  - b_5
+  specifications:
+  - {parameters: {b_0: 0.11, b_1: -0.05977, b_2: 2.0498, b_3: 0.04965, b_4: 2.0198, b_5: 0.3468}, taxa: [{family: Pinaceae, genus: Pinus, species: strobus}, {family: Pinaceae, genus: Pinus, species: resinosa}]}
+  - {parameters: {b_0: 0.17, b_1: -0.06315, b_2: 2.0654, b_3: 0.05122, b_4: 2.0264, b_5: 0.3508}, taxa: [{family: Pinaceae, genus: Picea, species: rubens}, {family: Pinaceae, genus: Picea, species: glauca}, {family: Pinaceae, genus: Picea, species: mariana}]}
+  - {parameters: {b_0: -0.1, b_1: -0.05444, b_2: 2.1194, b_3: 0.04821, b_4: 2.0427, b_5: 0.3579}, taxa: [{family: Pinaceae, genus: Abies, species: balsamea}]}
+  - {parameters: {b_0: 0.24, b_1: -0.05895, b_2: 2.0362, b_3: 0.04947, b_4: 2.0172, b_5: 0.3366}, taxa: [{family: Pinaceae, genus: Tsuga, species: canadensis}]}
+  - {parameters: {b_0: -0.03, b_1: -0.05604, b_2: 2.0473, b_3: 0.05022, b_4: 2.0198, b_5: 0.3242}, taxa: [{family: Pinaceae, genus: Larix, species: laricina}]}
+  - {parameters: {b_0: 0.19, b_1: -0.05904, b_2: 1.9935, b_3: 0.04981, b_4: 2.0027, b_5: 0.3214}, taxa: [{family: Pinaceae, genus: Picea, species: abies}]}
+  - {parameters: {b_0: -0.19, b_1: -0.01171, b_2: 1.8949, b_3: 0.0134, b_4: 1.9928, b_5: 0.6471}, taxa: [{family: Sapindaceae, genus: Acer, species: saccharum}]}
+  - {parameters: {b_0: -0.45, b_1: -0.00523, b_2: 2.2323, b_3: 0.01338, b_4: 2.0093, b_5: 0.6384}, taxa: [{family: Sapindaceae, genus: Acer, species: saccharinum}, {family: Magnoliaceae, genus: Liriodendron, species: tulipifera}]}
+  - {parameters: {b_0: -0.04, b_1: -0.01783, b_2: 1.8109, b_3: 0.01358, b_4: 1.9905, b_5: 0.6553}, taxa: [{family: Rosaceae, genus: Prunus, species: serotina}]}
+  - {parameters: {b_0: -0.6, b_1: -0.00711, b_2: 2.2693, b_3: 0.01399, b_4: 2.019, b_5: 0.6518}, taxa: [{family: Fagaceae, genus: Fagus, species: grandifolia}]}
+  - {parameters: {b_0: -0.39, b_1: -0.00622, b_2: 2.0066, b_3: 0.0131, b_4: 1.9939, b_5: 0.6494}, taxa: [{family: Malvaceae, genus: Tilia, species: americana}]}
+  - {parameters: {b_0: -0.13, b_1: -0.00536, b_2: 1.1972, b_3: 0.01131, b_4: 1.9975, b_5: 0.6549}, taxa: [{family: Altingiaceae, genus: Liquidambar, species: styraciflua}]}
+  - {parameters: {b_0: -0.26, b_1: 0.00038, b_2: 2.0, b_3: 0.01068, b_4: 1.998, b_5: 0.6438}, taxa: [{family: Nyssaceae, genus: Nyssa, species: sylvatica}, {family: Fagaceae, genus: Quercus, species: prinus}]}
+  - {parameters: {b_0: -0.03, b_1: -0.05604, b_2: 2.0473, b_3: 0.05022, b_4: 2.0198, b_5: 0.3242}, descriptors: {species_group: hard pines}}
+  - {parameters: {b_0: 0.19, b_1: -0.05904, b_2: 1.9935, b_3: 0.04981, b_4: 2.0027, b_5: 0.3214}, descriptors: {species_group: cedar}}
+  - {parameters: {b_0: 0.06, b_1: -0.02437, b_2: 1.5419, b_3: 0.01299, b_4: 1.9885, b_5: 0.6453}, descriptors: {species_group: ash}}
+  - {parameters: {b_0: 0.06, b_1: -0.02437, b_2: 1.5419, b_3: 0.01299, b_4: 1.9885, b_5: 0.6453}, descriptors: {species_group: aspen}}
+  - {parameters: {b_0: -0.27, b_1: -0.00675, b_2: 1.9738, b_3: 0.01327, b_4: 1.9967, b_5: 0.6407}, descriptors: {species_group: birch}}
+  - {parameters: {b_0: -0.13, b_1: -0.00536, b_2: 1.1972, b_3: 0.01131, b_4: 1.9975, b_5: 0.6549}, descriptors: {species_group: red oaks}}
+  - {parameters: {b_0: -0.27, b_1: -0.00466, b_2: 2.1575, b_3: 0.01174, b_4: 2.0035, b_5: 0.664}, descriptors: {species_group: hickory}}
+  - {parameters: {b_0: 0.13, b_1: -0.00183, b_2: 2.36, b_3: 0.00944, b_4: 2.0608, b_5: 0.6516}, descriptors: {species_group: other hardwoods}}

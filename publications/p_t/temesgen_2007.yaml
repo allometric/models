@@ -1,0 +1,26 @@
+publication:
+  key: temesgen_2007
+  bibtype: article
+  title: Regional height--diameter equations for major tree species of southwest Oregon
+  author: Temesgen, Hailemariam and Hann, David W and Monleon, Vincente J
+  year: 2007
+models:
+- name: hst
+  type: fixed_effects_set
+  response: {hst: m}
+  covariates: {dsob: cm}
+  parameter_names:
+  - a
+  - b
+  - c
+  specifications:
+  - {parameters: {a: 14.7373, b: -15.4469, c: -0.0728}, taxa: [{family: Cupressaceae, genus: Calocedrus, species: decurrens}]}
+  - {parameters: {a: 5.3528, b: -7.3394, c: -0.3505}, taxa: [{family: Pinaceae, genus: Abies, species: grandis}, {family: Pinaceae, genus: Abies, species: concolor}]}
+  - {parameters: {a: 4.893, b: -7.9038, c: -0.4113}, taxa: [{family: Pinaceae, genus: Pinus, species: lambertiana}]}
+  - {parameters: {a: 4.5503, b: -11.4582, c: -0.5994}, taxa: [{family: Pinaceae, genus: Pinus, species: ponderosa}]}
+  - {parameters: {a: 5.7567, b: -6.7792, c: -0.2795}, taxa: [{family: Pinaceae, genus: Pseudotsuga, species: menziesii}]}
+  - {parameters: {a: 6.2681, b: -6.5453, c: -0.189}, taxa: [{family: Ericaceae, genus: Arbutus, species: menziesii}]}
+  - {parameters: {a: 11.1522, b: -11.7201, c: -0.1003}, taxa: [{family: Fagaceae, genus: Chrysolepis, species: chysophylla}]}
+  - {parameters: {a: 10.2252, b: -10.4533, c: -0.1018}, taxa: [{family: Fagaceae, genus: Notholithocarpus, species: densiflorus}]}
+  - {parameters: {a: 8.2443, b: -8.6686, c: -0.1248}, taxa: [{family: Fagaceae, genus: Quercus, species: chrysolepis}]}
+  - {parameters: {a: 3.1434, b: -7.3865, c: -0.85}, taxa: [{family: Fagaceae, genus: Quercus, species: kelloggii}]}

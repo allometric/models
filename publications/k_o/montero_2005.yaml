@@ -1,0 +1,212 @@
+publication:
+  key: montero_2005
+  bibtype: techreport
+  title: Biomass production and CO2 fixation by Spanish forests
+  author: Montero, Gregorio and Ruiz-Peinado, Ricardo and Munoz, Marta
+  year: 2005
+models:
+- name: bt
+  type: fixed_effects_set
+  response: {bt: kg}
+  covariates: {dsob: cm}
+  parameter_names:
+  - a
+  - b
+  - cf
+  specifications:
+  - {parameters: {a: -0.637183, b: 2.96456, cf: 1.0260066551228}, region: [ES-TF], taxa: [{family: Aquifoliaceae, genus: Ilex, species: canariensis}]}
+  - {parameters: {a: -0.824827, b: 2.9009, cf: 1.04510180481211}, region: [ES-GI], taxa: [{family: Betulaceae, genus: Alnus, species: glutinosa}]}
+  - {parameters: {a: -1.60855, b: 2.26855, cf: 1.00783667353787}, region: [ES-GA], taxa: [{family: Betulaceae, genus: Betula, species: NA}]}
+  - {parameters: {a: -0.520337, b: 2.29201, cf: 1.04939761931028}, region: [ES-MA], taxa: [{family: Cupressaceae, genus: Juniperus, species: oxycedrus}]}
+  - {parameters: {a: -0.605689, b: 2.69417, cf: 1.00012568255539}, region: [ES-MA], taxa: [{family: Cupressaceae, genus: Juniperus, species: phoenicea}]}
+  - {parameters: {a: -1.48238, b: 2.03163, cf: 1.02041616730943}, region: [ES-GU], taxa: [{family: Cupressaceae, genus: Juniperus, species: thurifera}]}
+  - {parameters: {a: -0.949661, b: 2.00644, cf: 1.05129744063939}, region: [ES-TF], taxa: [{family: Ericaceae, genus: Erica, species: arborea}]}
+  - {parameters: {a: -1.51118, b: 2.16178, cf: 1.05214412983953}, region: [ES-MA], taxa: [{family: Fabaceae, genus: Ceratonia, species: siliqua}]}
+  - {parameters: {a: -1.70831, b: 2.21544, cf: 1.02521485092176}, region: [ES-CC, ES-MA], taxa: [{family: Fagaceae, genus: Castanea, species: sativa}]}
+  - {parameters: {a: -1.84548, b: 2.3706, cf: 1.01481844717924}, region: [ES-NC, ES-S], taxa: [{family: Fagaceae, genus: Fagus, species: sylvatica}]}
+  - {parameters: {a: -1.40683, b: 2.111, cf: 1.06380421858377}, region: [ES-CA], taxa: [{family: Fagaceae, genus: Quercus, species: canariensis}]}
+  - {parameters: {a: -2.89305, b: 2.52426, cf: 1.01458199727391}, region: [ES-GU], taxa: [{family: Fagaceae, genus: Quercus, species: faginea}]}
+  - {parameters: {a: -2.31596, b: 2.47745, cf: 1.03272467133533}, region: [ES-CC, ES-M, ES-TO], taxa: [{family: Fagaceae, genus: Quercus, species: ilex}]}
+  - {parameters: {a: -2.59695, b: 2.53453, cf: 1.03105556366171}, region: [ES-LO, ES-M, ES-SG, ES-CC], taxa: [{family: Fagaceae, genus: Quercus, species: pyrenaica}]}
+  - {parameters: {a: -2.30619, b: 2.50077, cf: 1.01604093307258}, region: [ES-GA], taxa: [{family: Fagaceae, genus: Quercus, species: robur}]}
+  - {parameters: {a: -3.36627, b: 2.60685, cf: 1.09067837081755}, region: [ES-CA], taxa: [{family: Fagaceae, genus: Quercus, species: suber}]}
+  - {parameters: {a: -1.92595, b: 2.49131, cf: 1.01641619477186}, region: [ES-TF], taxa: [{family: Lauraceae, genus: Laurus, species: azorica}]}
+  - {parameters: {a: -1.17881, b: 2.18018, cf: 1.02195660637252}, region: [ES-TF], taxa: [{family: Myricaceae, genus: Myrica, species: faya}]}
+  - {parameters: {a: -1.33002, b: 2.19404, cf: 1.01253623929061}, region: [ES-H], taxa: [{family: Myrtaceae, genus: Eucalyptus, species: NA}]}
+  - {parameters: {a: -1.47166, b: 2.21865, cf: 1.02842655367236}, region: [ES-GI, ES-CA], taxa: [{family: Oleaceae, genus: Fraxinus, species: NA}]}
+  - {parameters: {a: -0.943709, b: 2.94124, cf: 1.03007640330653}, region: [ES-CA], taxa: [{family: Oleaceae, genus: Olea, species: europaea}]}
+  - {parameters: {a: -2.52726, b: 2.31499, cf: 1.02303077192533}, region: [ES-MA], taxa: [{family: Pinaceae, genus: Abies, species: pinsapo}]}
+  - {parameters: {a: -3.04507, b: 2.66892, cf: 1.01009043869269}, region: [ES-TF], taxa: [{family: Pinaceae, genus: Pinus, species: canariensis}]}
+  - {parameters: {a: -2.0939, b: 2.20988, cf: 1.01156323312622}, region: [ES-AB], taxa: [{family: Pinaceae, genus: Pinus, species: halepensis}]}
+  - {parameters: {a: -2.7773, b: 2.51564, cf: 1.00907475872831}, region: [ES-GU], taxa: [{family: Pinaceae, genus: Pinus, species: nigra}]}
+  - {parameters: {a: -3.00347, b: 2.49641, cf: 1.01516337846006}, region: [ES-CR, ES-GU], taxa: [{family: Pinaceae, genus: Pinus, species: pinaster}]}
+  - {parameters: {a: -2.18117, b: 2.42414, cf: 1.03569671036859}, region: [ES-VA, ES-H], taxa: [{family: Pinaceae, genus: Pinus, species: pinea}]}
+  - {parameters: {a: -2.61093, b: 2.48739, cf: 1.01885214588904}, region: [ES-GA], taxa: [{family: Pinaceae, genus: Pinus, species: radiata}]}
+  - {parameters: {a: -2.50275, b: 2.41194, cf: 1.03094576087728}, region: [ES-SG, ES-M], taxa: [{family: Pinaceae, genus: Pinus, species: sylvestris}]}
+  - {parameters: {a: -1.86138, b: 2.31611, cf: 1.03217049448669}, region: [ES-GI], taxa: [{family: Pinaceae, genus: Pinus, species: uncinata}]}
+  - {parameters: {a: -2.94077, b: 2.56677, cf: 1.00292404565064}, region: [ES-SA, ES-SG, ES-SO], taxa: [{family: Salicaceae, genus: Populus, species: euramericana}]}
+  - {parameters: {a: -2.21637, b: 2.35162, cf: 1.002727}, descriptors: {species_group: conifers}}
+  - {parameters: {a: -1.87511, b: 2.29843, cf: 1.000108}, descriptors: {species_group: hardwoods}}
+  - {parameters: {a: -1.36216, b: 2.2644, cf: 1.00024}, descriptors: {species_group: subtropical}}
+- name: bs
+  type: fixed_effects_set
+  response: {bs: kg}
+  covariates: {dsob: cm}
+  parameter_names:
+  - a
+  - b
+  - cf
+  specifications:
+  - {parameters: {a: -1.17012, b: 2.93218, cf: 1.04618710730711}, region: [ES-TF], taxa: [{family: Aquifoliaceae, genus: Ilex, species: canariensis}]}
+  - {parameters: {a: -1.37963, b: 2.98387, cf: 1.0864586157969}, region: [ES-GI], taxa: [{family: Betulaceae, genus: Alnus, species: glutinosa}]}
+  - {parameters: {a: -2.09231, b: 2.3256, cf: 1.01306279861009}, region: [ES-GA], taxa: [{family: Betulaceae, genus: Betula, species: NA}]}
+  - {parameters: {a: -1.89714, b: 2.95148, cf: 1.02030860740279}, region: [ES-GU], taxa: [{family: Cupressaceae, genus: Juniperus, species: thurifera}]}
+  - {parameters: {a: -1.8135, b: 2.05303, cf: 1.05569726599865}, region: [ES-TF], taxa: [{family: Ericaceae, genus: Erica, species: arborea}]}
+  - {parameters: {a: -2.01208, b: 2.99344, cf: 1.02287234045337}, region: [ES-MA], taxa: [{family: Fabaceae, genus: Ceratonia, species: siliqua}]}
+  - {parameters: {a: -2.43261, b: 2.14736, cf: 1.03325842845332}, region: [ES-CC, ES-MA], taxa: [{family: Fagaceae, genus: Castanea, species: sativa}]}
+  - {parameters: {a: -1.63732, b: 2.21464, cf: 1.02744927543867}, region: [ES-NC, ES-S], taxa: [{family: Fagaceae, genus: Fagus, species: sylvatica}]}
+  - {parameters: {a: -0.820331, b: 2.7342, cf: 1.04569179969677}, region: [ES-CA], taxa: [{family: Fagaceae, genus: Quercus, species: canariensis}]}
+  - {parameters: {a: -2.88755, b: 2.29324, cf: 1.01792488136701}, region: [ES-GU], taxa: [{family: Fagaceae, genus: Quercus, species: faginea}]}
+  - {parameters: {a: -1.99607, b: 2.01754, cf: 1.03809912844372}, region: [ES-CC, ES-M, ES-TO], taxa: [{family: Fagaceae, genus: Quercus, species: ilex}]}
+  - {parameters: {a: -2.63669, b: 2.49279, cf: 1.02057692292753}, region: [ES-GA], taxa: [{family: Fagaceae, genus: Quercus, species: robur}]}
+  - {parameters: {a: -3.01942, b: 2.25213, cf: 1.08562640122932}, region: [ES-CA], taxa: [{family: Fagaceae, genus: Quercus, species: suber}]}
+  - {parameters: {a: -2.96854, b: 2.57608, cf: 1.02493242581243}, region: [ES-TF], taxa: [{family: Lauraceae, genus: Laurus, species: azorica}]}
+  - {parameters: {a: -1.67388, b: 2.02138, cf: 1.05839951980603}, region: [ES-TF], taxa: [{family: Myricaceae, genus: Myrica, species: faya}]}
+  - {parameters: {a: -1.42476, b: 2.9494, cf: 1.05972483956782}, region: [ES-GI, ES-CA], taxa: [{family: Oleaceae, genus: Fraxinus, species: NA}]}
+  - {parameters: {a: -1.0421, b: 2.60779, cf: 1.05135498611037}, region: [ES-CA], taxa: [{family: Oleaceae, genus: Olea, species: europaea}]}
+  - {parameters: {a: -3.77566, b: 2.46487, cf: 1.03453280211969}, region: [ES-MA], taxa: [{family: Pinaceae, genus: Abies, species: pinsapo}]}
+  - {parameters: {a: -3.05487, b: 2.59425, cf: 1.00963516983441}, region: [ES-TF], taxa: [{family: Pinaceae, genus: Pinus, species: canariensis}]}
+  - {parameters: {a: -2.51839, b: 2.13609, cf: 1.02711606053122}, region: [ES-AB], taxa: [{family: Pinaceae, genus: Pinus, species: halepensis}]}
+  - {parameters: {a: -3.14006, b: 2.4975, cf: 1.012207931594}, region: [ES-GU], taxa: [{family: Pinaceae, genus: Pinus, species: nigra}]}
+  - {parameters: {a: -3.43957, b: 2.56636, cf: 1.01852340757834}, region: [ES-CR, ES-GU], taxa: [{family: Pinaceae, genus: Pinus, species: pinaster}]}
+  - {parameters: {a: -3.36491, b: 2.52494, cf: 1.02012815793774}, region: [ES-VA, ES-H], taxa: [{family: Pinaceae, genus: Pinus, species: pinea}]}
+  - {parameters: {a: -3.02878, b: 2.56358, cf: 1.02021664603099}, region: [ES-GA], taxa: [{family: Pinaceae, genus: Pinus, species: radiata}]}
+  - {parameters: {a: -3.80519, b: 2.70808, cf: 1.04309738735301}, region: [ES-SG, ES-M], taxa: [{family: Pinaceae, genus: Pinus, species: sylvestris}]}
+  - {parameters: {a: -3.44774, b: 2.70666, cf: 1.03599278574299}, region: [ES-GI], taxa: [{family: Pinaceae, genus: Pinus, species: uncinata}]}
+  - {parameters: {a: -3.15383, b: 2.53766, cf: 1.00963824610861}, region: [ES-SA, ES-SG, ES-SO], taxa: [{family: Salicaceae, genus: Populus, species: euramericana}]}
+- name: bf
+  type: fixed_effects_set
+  response: {bf: kg}
+  covariates: {dsob: cm}
+  parameter_names:
+  - a
+  - b
+  - cf
+  specifications:
+  - {parameters: {a: -3.00803, b: 2.44689, cf: 1.14450393295456}, region: [ES-GI], taxa: [{family: Betulaceae, genus: Alnus, species: glutinosa}]}
+  - {parameters: {a: -3.28444, b: 2.59452, cf: 1.07744843963558}, region: [ES-GA], taxa: [{family: Betulaceae, genus: Betula, species: NA}]}
+  - {parameters: {a: -2.48528, b: 2.68286, cf: 1.05105765336404}, region: [ES-GU], taxa: [{family: Cupressaceae, genus: Juniperus, species: thurifera}]}
+  - {parameters: {a: -2.19442, b: 2.62588, cf: 1.06476635254682}, region: [ES-MA], taxa: [{family: Fabaceae, genus: Ceratonia, species: siliqua}]}
+  - {parameters: {a: -4.5692, b: 2.66513, cf: 1.17864051830828}, region: [ES-CA], taxa: [{family: Fagaceae, genus: Quercus, species: canariensis}]}
+  - {parameters: {a: -3.98028, b: 2.96752, cf: 1.05388615933047}, region: [ES-GU], taxa: [{family: Fagaceae, genus: Quercus, species: faginea}]}
+  - {parameters: {a: -4.13268, b: 2.97313, cf: 1.09862040791291}, region: [ES-CC, ES-M, ES-TO], taxa: [{family: Fagaceae, genus: Quercus, species: ilex}]}
+  - {parameters: {a: -3.69674, b: 2.73143, cf: 1.04366509379575}, region: [ES-GA], taxa: [{family: Fagaceae, genus: Quercus, species: robur}]}
+  - {parameters: {a: -6.05826, b: 2.14483, cf: 1.39791260641068}, region: [ES-CA], taxa: [{family: Fagaceae, genus: Quercus, species: suber}]}
+  - {parameters: {a: -2.05864, b: 2.61762, cf: 1.05712269415944}, region: [ES-H], taxa: [{family: Myrtaceae, genus: Eucalyptus, species: NA}]}
+  - {parameters: {a: -3.52781, b: 2.53326, cf: 1.06813901960037}, region: [ES-CA], taxa: [{family: Oleaceae, genus: Olea, species: europaea}]}
+  - {parameters: {a: -4.03904, b: 2.15862, cf: 1.04616667459102}, region: [ES-VA, ES-H], taxa: [{family: Pinaceae, genus: Pinus, species: pinea}]}
+  - {parameters: {a: -5.03445, b: 2.05803, cf: 1.20412853298783}, region: [ES-GA], taxa: [{family: Pinaceae, genus: Pinus, species: radiata}]}
+  - {parameters: {a: -2.36531, b: 2.5099, cf: 1.15082020639475}, region: [ES-SG, ES-M], taxa: [{family: Pinaceae, genus: Pinus, species: sylvestris}]}
+  - {parameters: {a: -3.36508, b: 2.5955, cf: 1.11603392842611}, region: [ES-SA, ES-SG, ES-SO], taxa: [{family: Salicaceae, genus: Populus, species: euramericana}]}
+- name: br
+  type: fixed_effects_set
+  response: {br: kg}
+  covariates: {dsob: cm}
+  parameter_names:
+  - a
+  - b
+  - cf
+  specifications:
+  - {parameters: {a: -2.09999, b: 2.16573, cf: 1.01792507324638}, region: [ES-GI], taxa: [{family: Betulaceae, genus: Alnus, species: glutinosa}]}
+  - {parameters: {a: -2.41805, b: 2.01124, cf: 1.08457956093289}, region: [ES-GA], taxa: [{family: Betulaceae, genus: Betula, species: NA}]}
+  - {parameters: {a: -2.2799, b: 2.70033, cf: 1.08907903244403}, region: [ES-MA], taxa: [{family: Cupressaceae, genus: Juniperus, species: oxycedrus}]}
+  - {parameters: {a: -1.10127, b: 2.60599, cf: 1.05722034269011}, region: [ES-MA], taxa: [{family: Cupressaceae, genus: Juniperus, species: phoenicea}]}
+  - {parameters: {a: -1.68253, b: 2.73984, cf: 1.04653520105121}, region: [ES-GU], taxa: [{family: Cupressaceae, genus: Juniperus, species: thurifera}]}
+  - {parameters: {a: -1.03055, b: 2.99274, cf: 1.03641338913773}, region: [ES-MA], taxa: [{family: Fabaceae, genus: Ceratonia, species: siliqua}]}
+  - {parameters: {a: -3.97491, b: 2.83892, cf: 1.01021420205783}, region: [ES-CC, ES-MA], taxa: [{family: Fagaceae, genus: Castanea, species: sativa}]}
+  - {parameters: {a: -1.72224, b: 2.25755, cf: 1.11146407766786}, region: [ES-NC, ES-S], taxa: [{family: Fagaceae, genus: Fagus, species: sylvatica}]}
+  - {parameters: {a: -4.1867, b: 2.58308, cf: 1.07318661017781}, region: [ES-CA], taxa: [{family: Fagaceae, genus: Quercus, species: canariensis}]}
+  - {parameters: {a: -3.09335, b: 2.34356, cf: 1.05761998052575}, region: [ES-GU], taxa: [{family: Fagaceae, genus: Quercus, species: faginea}]}
+  - {parameters: {a: -0.730281, b: 2.7893, cf: 1.13133085489761}, region: [ES-CC, ES-M, ES-TO], taxa: [{family: Fagaceae, genus: Quercus, species: ilex}]}
+  - {parameters: {a: -2.4543, b: 2.13346, cf: 1.02975107730282}, region: [ES-LO, ES-M, ES-SG, ES-CC], taxa: [{family: Fagaceae, genus: Quercus, species: pyrenaica}]}
+  - {parameters: {a: -2.46349, b: 2.15149, cf: 1.08746981222353}, region: [ES-GA], taxa: [{family: Fagaceae, genus: Quercus, species: robur}]}
+  - {parameters: {a: -2.81593, b: 2.07774, cf: 1.06562725189259}, region: [ES-CA], taxa: [{family: Fagaceae, genus: Quercus, species: suber}]}
+  - {parameters: {a: -1.02234, b: 2.98752, cf: 1.05012915565647}, region: [ES-GI, ES-CA], taxa: [{family: Oleaceae, genus: Fraxinus, species: NA}]}
+  - {parameters: {a: -2.33764, b: 2.11152, cf: 1.05994271240441}, region: [ES-CA], taxa: [{family: Oleaceae, genus: Olea, species: europaea}]}
+  - {parameters: {a: -4.61516, b: 2.72887, cf: 1.04557060225323}, region: [ES-TF], taxa: [{family: Pinaceae, genus: Pinus, species: canariensis}]}
+  - {parameters: {a: -3.68133, b: 2.29823, cf: 1.1293506807926}, region: [ES-AB], taxa: [{family: Pinaceae, genus: Pinus, species: halepensis}]}
+  - {parameters: {a: -3.76193, b: 2.38784, cf: 1.01619338238793}, region: [ES-GU], taxa: [{family: Pinaceae, genus: Pinus, species: nigra}]}
+  - {parameters: {a: -3.85184, b: 2.37592, cf: 1.01291876070429}, region: [ES-CR, ES-GU], taxa: [{family: Pinaceae, genus: Pinus, species: pinaster}]}
+  - {parameters: {a: -4.01758, b: 2.47024, cf: 1.01940824875384}, region: [ES-VA, ES-H], taxa: [{family: Pinaceae, genus: Pinus, species: pinea}]}
+  - {parameters: {a: -2.78485, b: 2.14449, cf: 1.04907491654201}, region: [ES-GA], taxa: [{family: Pinaceae, genus: Pinus, species: radiata}]}
+  - {parameters: {a: -4.56044, b: 2.62841, cf: 1.04103845991377}, region: [ES-SG, ES-M], taxa: [{family: Pinaceae, genus: Pinus, species: sylvestris}]}
+  - {parameters: {a: -4.50582, b: 2.7558, cf: 1.03925311084769}, region: [ES-GI], taxa: [{family: Pinaceae, genus: Pinus, species: uncinata}]}
+  - {parameters: {a: -5.00204, b: 2.82049, cf: 1.03538635471519}, region: [ES-SA, ES-SG, ES-SO], taxa: [{family: Salicaceae, genus: Populus, species: euramericana}]}
+  - {parameters: {a: -2.46359, b: 2.13727, cf: 1.026789}, descriptors: {species_group: conifers}}
+  - {parameters: {a: -1.38199, b: 1.96764, cf: 1.002029}, descriptors: {species_group: hardwoods}}
+  - {parameters: {a: -1.38356, b: 2.05614, cf: 1.000693}, descriptors: {species_group: subtropical}}
+- name: bb
+  type: fixed_effects_set
+  response: {bb: kg}
+  covariates: {dsob: cm}
+  parameter_names:
+  - a
+  - b
+  - cf
+  specifications:
+  - {parameters: {a: -1.45821, b: 2.76279, cf: 1.05260885361421}, region: [ES-TF], descriptors: {branch_size: < 2 cm}, taxa: [{family: Aquifoliaceae, genus: Ilex, species: canariensis}]}
+  - {parameters: {a: -2.54028, b: 2.75008, cf: 1.01122344251892}, region: [ES-TF], descriptors: {branch_size: '> 7 cm'}, taxa: [{family: Aquifoliaceae, genus: Ilex, species: canariensis}]}
+  - {parameters: {a: -2.40443, b: 2.44591, cf: 1.14388036340978}, region: [ES-GI], descriptors: {branch_size: < 2 cm}, taxa: [{family: Betulaceae, genus: Alnus, species: glutinosa}]}
+  - {parameters: {a: -7.21999, b: 2.74362, cf: 1.24260546865803}, region: [ES-GI], descriptors: {branch_size: '> 7 cm'}, taxa: [{family: Betulaceae, genus: Alnus, species: glutinosa}]}
+  - {parameters: {a: -2.65716, b: 2.64983, cf: 1.07214921541903}, region: [ES-GA], descriptors: {branch_size: < 2 cm}, taxa: [{family: Betulaceae, genus: Betula, species: NA}]}
+  - {parameters: {a: -7.84245, b: 2.25429, cf: 1.26290151717637}, region: [ES-GA], descriptors: {branch_size: '> 7 cm'}, taxa: [{family: Betulaceae, genus: Betula, species: NA}]}
+  - {parameters: {a: -2.4053, b: 2.68286, cf: 1.05107523498286}, region: [ES-GU], descriptors: {branch_size: < 2 cm}, taxa: [{family: Cupressaceae, genus: Juniperus, species: thurifera}]}
+  - {parameters: {a: -13.4535, b: 2.6002, cf: 1.11372078909856}, region: [ES-GU], descriptors: {branch_size: '> 7 cm'}, taxa: [{family: Cupressaceae, genus: Juniperus, species: thurifera}]}
+  - {parameters: {a: -1.21581, b: 2.61609, cf: 1.08029179061943}, region: [ES-TF], descriptors: {branch_size: < 2 cm}, taxa: [{family: Ericaceae, genus: Erica, species: arborea}]}
+  - {parameters: {a: -6.92178, b: 2.38826, cf: 1.36344466685267}, region: [ES-TF], descriptors: {branch_size: '> 7 cm'}, taxa: [{family: Ericaceae, genus: Erica, species: arborea}]}
+  - {parameters: {a: -1.81674, b: 2.6254, cf: 1.06505867996319}, region: [ES-MA], descriptors: {branch_size: < 2 cm}, taxa: [{family: Fabaceae, genus: Ceratonia, species: siliqua}]}
+  - {parameters: {a: -4.98516, b: 2.82065, cf: 1.21904424359465}, region: [ES-MA], descriptors: {branch_size: '> 7 cm'}, taxa: [{family: Fabaceae, genus: Ceratonia, species: siliqua}]}
+  - {parameters: {a: -1.55218, b: 2.69381, cf: 1.05369138260126}, region: [ES-MA, ES-CC], descriptors: {branch_size: < 2 cm}, taxa: [{family: Fagaceae, genus: Castanea, species: sativa}]}
+  - {parameters: {a: -7.80901, b: 2.49096, cf: 1.10912779271276}, region: [ES-MA, ES-CC], descriptors: {branch_size: '> 7 cm'}, taxa: [{family: Fagaceae, genus: Castanea, species: sativa}]}
+  - {parameters: {a: -2.57396, b: 2.84345, cf: 1.09453533963298}, region: [ES-S, ES-NC], descriptors: {branch_size: < 2 cm}, taxa: [{family: Fagaceae, genus: Fagus, species: sylvatica}]}
+  - {parameters: {a: -10.811, b: 2.08961, cf: 1.21898900552394}, region: [ES-NC, ES-S], descriptors: {branch_size: '> 7 cm'}, taxa: [{family: Fagaceae, genus: Fagus, species: sylvatica}]}
+  - {parameters: {a: -3.20772, b: 2.66513, cf: 1.17864051830828}, region: [ES-CA], descriptors: {branch_size: < 2 cm}, taxa: [{family: Fagaceae, genus: Quercus, species: canariensis}]}
+  - {parameters: {a: -3.78626, b: 2.42751, cf: 1.42724395652001}, region: [ES-CA], descriptors: {branch_size: '> 7 cm'}, taxa: [{family: Fagaceae, genus: Quercus, species: canariensis}]}
+  - {parameters: {a: -3.44735, b: 2.96728, cf: 1.05387523360596}, region: [ES-GU], descriptors: {branch_size: < 2 cm}, taxa: [{family: Fagaceae, genus: Quercus, species: faginea}]}
+  - {parameters: {a: -13.9784, b: 2.21419, cf: 1.56001908793444}, region: [ES-GU], descriptors: {branch_size: '> 7 cm'}, taxa: [{family: Fagaceae, genus: Quercus, species: faginea}]}
+  - {parameters: {a: -2.66407, b: 2.97498, cf: 1.09870858096544}, region: [ES-CC, ES-M, ES-TO], descriptors: {branch_size: < 2 cm}, taxa: [{family: Fagaceae, genus: Quercus, species: ilex}]}
+  - {parameters: {a: -5.347, b: 2.04363, cf: 1.15807858833291}, region: [ES-CC, ES-TO, ES-M], descriptors: {branch_size: '> 7 cm'}, taxa: [{family: Fagaceae, genus: Quercus, species: ilex}]}
+  - {parameters: {a: -4.85139, b: 2.38766, cf: 1.17172848477165}, region: [ES-CC, ES-SG, ES-LO, ES-M], descriptors: {branch_size: < 2 cm}, taxa: [{family: Fagaceae, genus: Quercus, species: pyrenaica}]}
+  - {parameters: {a: -2.47029, b: 2.62158, cf: 1.05626503384343}, region: [ES-GA], descriptors: {branch_size: < 2 cm}, taxa: [{family: Fagaceae, genus: Quercus, species: robur}]}
+  - {parameters: {a: -13.2304, b: 2.83512, cf: 1.33241525239402}, region: [ES-GA], descriptors: {branch_size: '> 7 cm'}, taxa: [{family: Fagaceae, genus: Quercus, species: robur}]}
+  - {parameters: {a: -5.33638, b: 2.10315, cf: 1.32890296837944}, region: [ES-CA], descriptors: {branch_size: < 2 cm}, taxa: [{family: Fagaceae, genus: Quercus, species: suber}]}
+  - {parameters: {a: -6.43076, b: 2.21136, cf: 1.17936787263363}, region: [ES-CA], descriptors: {branch_size: '> 7 cm'}, taxa: [{family: Fagaceae, genus: Quercus, species: suber}]}
+  - {parameters: {a: -2.2519, b: 2.09193, cf: 1.06933928467734}, region: [ES-TF], descriptors: {branch_size: < 2 cm}, taxa: [{family: Lauraceae, genus: Laurus, species: azorica}]}
+  - {parameters: {a: -3.98432, b: 2.54256, cf: 1.33306477087776}, region: [ES-TF], descriptors: {branch_size: '> 7 cm'}, taxa: [{family: Lauraceae, genus: Laurus, species: azorica}]}
+  - {parameters: {a: -1.66978, b: 2.8878, cf: 1.03857019731653}, region: [ES-TF], descriptors: {branch_size: < 2 cm}, taxa: [{family: Myricaceae, genus: Myrica, species: faya}]}
+  - {parameters: {a: -6.67499, b: 2.49039, cf: 1.07446042465035}, region: [ES-TF], descriptors: {branch_size: '> 7 cm'}, taxa: [{family: Myricaceae, genus: Myrica, species: faya}]}
+  - {parameters: {a: -2.64825, b: 2.61429, cf: 1.05704097846081}, region: [ES-H], descriptors: {branch_size: < 2 cm}, taxa: [{family: Myrtaceae, genus: Eucalyptus, species: NA}]}
+  - {parameters: {a: -1.69368, b: 2.73303, cf: 1.13215291044904}, region: [ES-GI, ES-CA], descriptors: {branch_size: < 2 cm}, taxa: [{family: Oleaceae, genus: Fraxinus, species: NA}]}
+  - {parameters: {a: -5.4098, b: 2.84214, cf: 1.25617378579627}, region: [ES-CA, ES-GI], descriptors: {branch_size: '> 7 cm'}, taxa: [{family: Oleaceae, genus: Fraxinus, species: NA}]}
+  - {parameters: {a: -1.56349, b: 2.53326, cf: 1.06813901960037}, region: [ES-CA], descriptors: {branch_size: < 2 cm}, taxa: [{family: Oleaceae, genus: Olea, species: europaea}]}
+  - {parameters: {a: -4.65302, b: 2.68734, cf: 1.19981681911963}, region: [ES-CA], descriptors: {branch_size: '> 7 cm'}, taxa: [{family: Oleaceae, genus: Olea, species: europaea}]}
+  - {parameters: {a: -0.860115, b: 2.36973, cf: 1.17001526400712}, region: [ES-MA], descriptors: {branch_size: < 2 cm}, taxa: [{family: Pinaceae, genus: Abies, species: pinsapo}]}
+  - {parameters: {a: -16.252, b: 2.39755, cf: 1.11411299342841}, region: [ES-MA], descriptors: {branch_size: '> 7 cm'}, taxa: [{family: Pinaceae, genus: Abies, species: pinsapo}]}
+  - {parameters: {a: -5.07419, b: 2.59996, cf: 1.16888065670363}, region: [ES-TF], descriptors: {branch_size: < 2 cm}, taxa: [{family: Pinaceae, genus: Pinus, species: canariensis}]}
+  - {parameters: {a: -11.6241, b: 2.28166, cf: 1.37834321242743}, region: [ES-TF], descriptors: {branch_size: '> 7 cm'}, taxa: [{family: Pinaceae, genus: Pinus, species: canariensis}]}
+  - {parameters: {a: -2.74498, b: 2.03748, cf: 1.02592882976775}, region: [ES-AB], descriptors: {branch_size: < 2 cm}, taxa: [{family: Pinaceae, genus: Pinus, species: halepensis}]}
+  - {parameters: {a: -9.55046, b: 2.61115, cf: 1.53478294796614}, region: [ES-AB], descriptors: {branch_size: '> 7 cm'}, taxa: [{family: Pinaceae, genus: Pinus, species: halepensis}]}
+  - {parameters: {a: -2.83503, b: 2.04538, cf: 1.02246957160653}, region: [ES-GU], descriptors: {branch_size: < 2 cm}, taxa: [{family: Pinaceae, genus: Pinus, species: nigra}]}
+  - {parameters: {a: -13.8099, b: 2.63179, cf: 1.58260721003665}, region: [ES-GU], descriptors: {branch_size: '> 7 cm'}, taxa: [{family: Pinaceae, genus: Pinus, species: nigra}]}
+  - {parameters: {a: -4.66658, b: 2.38009, cf: 1.14931499409481}, region: [ES-GU, ES-CR], descriptors: {branch_size: < 2 cm}, taxa: [{family: Pinaceae, genus: Pinus, species: pinaster}]}
+  - {parameters: {a: -23.0418, b: 2.52359, cf: 1.05398659523454}, region: [ES-GU, ES-CR], descriptors: {branch_size: '> 7 cm'}, taxa: [{family: Pinaceae, genus: Pinus, species: pinaster}]}
+  - {parameters: {a: -2.55308, b: 2.93944, cf: 1.12318322598755}, region: [ES-H, ES-VA], descriptors: {branch_size: < 2 cm}, taxa: [{family: Pinaceae, genus: Pinus, species: pinea}]}
+  - {parameters: {a: -4.33663, b: 2.59988, cf: 1.15529453088648}, region: [ES-VA, ES-H], descriptors: {branch_size: '> 7 cm'}, taxa: [{family: Pinaceae, genus: Pinus, species: pinea}]}
+  - {parameters: {a: -3.53532, b: 2.75877, cf: 1.20897434886997}, region: [ES-GA], descriptors: {branch_size: < 2 cm}, taxa: [{family: Pinaceae, genus: Pinus, species: radiata}]}
+  - {parameters: {a: -10.5693, b: 2.64861, cf: 1.14795925424552}, region: [ES-GA], descriptors: {branch_size: '> 7 cm'}, taxa: [{family: Pinaceae, genus: Pinus, species: radiata}]}
+  - {parameters: {a: -2.08375, b: 2.51001, cf: 1.1507561656968}, region: [ES-SG, ES-M], descriptors: {branch_size: < 2 cm}, taxa: [{family: Pinaceae, genus: Pinus, species: sylvestris}]}
+  - {parameters: {a: -15.0469, b: 2.80367, cf: 1.26758810892564}, region: [ES-SG, ES-M], descriptors: {branch_size: '> 7 cm'}, taxa: [{family: Pinaceae, genus: Pinus, species: sylvestris}]}
+  - {parameters: {a: -2.63317, b: 2.79147, cf: 1.11573084885704}, region: [ES-GI], descriptors: {branch_size: < 2 cm}, taxa: [{family: Pinaceae, genus: Pinus, species: uncinata}]}
+  - {parameters: {a: -4.65925, b: 2.96208, cf: 1.22706678864452}, region: [ES-GI], descriptors: {branch_size: '> 7 cm'}, taxa: [{family: Pinaceae, genus: Pinus, species: uncinata}]}
+  - {parameters: {a: -2.42121, b: 2.60846, cf: 1.11752564293969}, region: [ES-SG, ES-SO, ES-SA], descriptors: {branch_size: < 2 cm}, taxa: [{family: Salicaceae, genus: Populus, species: euramericana}]}
+  - {parameters: {a: -12.0573, b: 2.34719, cf: 1.17930758567849}, region: [ES-SG, ES-SO, ES-SA], descriptors: {branch_size: '> 7 cm'}, taxa: [{family: Salicaceae, genus: Populus, species: euramericana}]}

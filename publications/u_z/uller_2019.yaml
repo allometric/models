@@ -1,0 +1,67 @@
+publication:
+  key: uller_2019
+  bibtype: article
+  title: Aboveground biomass quantification and tree-level prediction models for the Brazilian subtropical Atlantic Forest
+  author: Uller, Heitor Felippe and Zimermann Oliveira, Laio and Klitzke, Aline Renata and Roberto Eleotério, Jackson and Fantini, Alfredo Celso and Vibrans, Alexander Christian
+  year: 2019
+models:
+- name: bt
+  type: fixed_effects
+  response: {bt: kg}
+  covariates: {dsob: cm}
+  parameters: {beta_0: -48.4365, beta_1: 0.6467}
+  equation: beta_0 + beta_1 * dsob^2
+- name: bt_2
+  type: fixed_effects
+  response: {bt: kg}
+  covariates: {dsob: cm}
+  parameters: {beta_0: -2.3702, beta_1: 2.5179, bcf: 1.0542}
+  equation: exp(log(beta_0) + beta_1 * log(dsob)) * bcf
+- name: bt_3
+  type: fixed_effects
+  response: {bt: kg}
+  covariates: {dsob: cm, hst: m}
+  parameters: {beta_0: 25.931, beta_1: 0.0258}
+  equation: beta_0 + beta_1 * (dsob^2 * hst)
+- name: bt_4
+  type: fixed_effects
+  response: {bt: kg}
+  covariates: {dsob: cm, hst: m}
+  parameters: {beta_0: -3.4062, beta_1: 0.9774, bcf: 1.0494}
+  equation: exp(log(beta_0) + beta_1 * log(dsob^2 * hst)) * bcf
+- name: bt_5
+  type: fixed_effects
+  response: {bt: kg}
+  covariates: {dsob: cm, hst: m}
+  parameters: {beta_0: -3.1284, beta_1: 2.1077, beta_2: -0.7103, bcf: 1.0468}
+  equation: exp(log(beta_0) + beta_1 * log(dsob) + beta_2 * log(hst)) * bcf
+- name: bt_6
+  type: fixed_effects
+  response: {bt: kg}
+  covariates: {dsob: cm, hst: m}
+  parameters: {beta_0: -3.1501, beta_1: 2.0693, beta_2: 0.7595, bcf: 1.0456}
+  equation: exp(log(beta_0) + beta_1 * log(dsob^2) + beta_2 * log(hst)) * bcf
+- name: bt_7
+  type: fixed_effects
+  response: {bt: kg}
+  covariates: {dsob: cm, rsd: kg m-3}
+  parameters: {beta_0: -9.0086, beta_1: 2.4606, beta_2: 1.0895, bcf: 1.0206}
+  equation: exp(log(beta_0) + beta_1 * log(dsob) + beta_2 * log(rsd)) * bcf
+- name: bt_8
+  type: fixed_effects
+  response: {bt: kg}
+  covariates: {dsob: cm, hst: m, rsd: kg m-3}
+  parameters: {beta_0: 10.2861, beta_1: 5.0e-05}
+  equation: beta_0 + beta_1 * (dsob^2 * hst * rsd)
+- name: bt_9
+  type: fixed_effects
+  response: {bt: kg}
+  covariates: {dsob: cm, hst: m, rsd: kg m-3}
+  parameters: {beta_0: -9.1954, beta_1: 0.9561, bcf: 1.0209}
+  equation: exp(log(beta_0) + beta_1 * log(dsob^2 * hst * rsd)) * bcf
+- name: bt_10
+  type: fixed_effects
+  response: {bt: kg}
+  covariates: {dsob: cm, hst: m, rsd: kg m-3}
+  parameters: {beta_0: -8.8907, beta_1: 2.1642, beta_2: 0.5072, beta_3: 0.9999, bcf: 1.0175}
+  equation: exp(log(beta_0) + beta_1 * log(dsob) + beta_2 * log(hst) + beta_3 * log(rsd)) * bcf

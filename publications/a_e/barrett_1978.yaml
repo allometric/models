@@ -1,0 +1,13 @@
+publication:
+  key: barrett_1978
+  bibtype: techreport
+  title: Height growth and site index curves for managed, even-aged stands of ponderosa pine in the Pacific Northwest
+  author: Barrett, James Willis
+  year: 1978
+models:
+- name: hstix100
+  type: fixed_effects
+  response: {hstix100: ft}
+  covariates: {hst: ft, atb: years}
+  parameters: {a: 100.43, b: 1.198632, c: 0.00283073, d: 8.44441, e: 128.8952205, f: 0.016959, g: 1.23114}
+  equation: a - (b - c * atb + d/atb) * (e * (1 - exp(-f * atb)^g)) + ((b - c * atb + d/atb) * (hst - 4.5)) + 4.5

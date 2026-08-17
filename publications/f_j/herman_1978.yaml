@@ -1,0 +1,13 @@
+publication:
+  key: herman_1978
+  bibtype: techreport
+  title: Height growth and site index estimates for noble fir in high elevation forests of the Oregon-Washington Cascades
+  author: Herman, Francis R and Curtis, Robert O and DeMars, Donald J
+  year: 1978
+models:
+- name: hstix100
+  type: fixed_effects
+  response: {hstix100: ft}
+  covariates: {hst: ft, atb: years}
+  parameters: {a1: -62.755, a2: 672.55, b1: 0.9484, b2: 516.49, c1: -0.00144, c2: 0.1442}
+  equation: a <- a1 + a2 * (1/atb)^(0.5); b <- b1 + b2 * (1/atb)^2; c <- c1 + c2 * (1/atb); a + b * (hst - 4.5) + c * (hst - 4.5)^2

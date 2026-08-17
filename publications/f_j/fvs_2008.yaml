@@ -1,0 +1,330 @@
+publication:
+  key: fvs_2008
+  bibtype: techreport
+  title: Pacific Northwest Coast (PN) Variant Overview - Forest Vegetation Simulator
+  author: Staff, FVS
+  year: 2008
+models:
+- name: hst
+  type: fixed_effects_set
+  response: {hst: ft}
+  covariates: {dsob: in}
+  parameter_names:
+  - p2
+  - p3
+  - p4
+  specifications:
+  - {parameters: {p2: 89.0298, p3: 6.9507, p4: -0.9871}, descriptors: {species_code: AF, geographic_region: '609 - Olympic, 800 - Quinalt'}, taxa: [{family: Pinaceae, genus: Abies, species: lasiocarpa}]}
+  - {parameters: {p2: 133.8689, p3: 6.7798, p4: -0.7375}, descriptors: {species_code: AF, geographic_region: '612 - Siuslaw, 712 - BLM Coos'}, taxa: [{family: Pinaceae, genus: Abies, species: lasiocarpa}]}
+  - {parameters: {p2: 290.5142, p3: 6.4143, p4: -0.4724}, descriptors: {species_code: AF, geographic_region: 708 - BLM Salem}, taxa: [{family: Pinaceae, genus: Abies, species: lasiocarpa}]}
+  - {parameters: {p2: 133.8689, p3: 6.7798, p4: -0.7375}, descriptors: {species_code: AF, geographic_region: 709 - BLM Eugene}, taxa: [{family: Pinaceae, genus: Abies, species: lasiocarpa}]}
+  - {parameters: {p2: 1709.723, p3: 5.8887, p4: -0.2286}, descriptors: {species_code: AS, geographic_region: '609 - Olympic, 800 - Quinalt'}, taxa: [{family: Salicaceae, genus: Populus, species: tremuloides}]}
+  - {parameters: {p2: 1709.723, p3: 5.8887, p4: -0.2286}, descriptors: {species_code: AS, geographic_region: '612 - Siuslaw, 712 - BLM Coos'}, taxa: [{family: Salicaceae, genus: Populus, species: tremuloides}]}
+  - {parameters: {p2: 1709.723, p3: 5.8887, p4: -0.2286}, descriptors: {species_code: AS, geographic_region: 708 - BLM Salem}, taxa: [{family: Salicaceae, genus: Populus, species: tremuloides}]}
+  - {parameters: {p2: 1709.723, p3: 5.8887, p4: -0.2286}, descriptors: {species_code: AS, geographic_region: 709 - BLM Eugene}, taxa: [{family: Salicaceae, genus: Populus, species: tremuloides}]}
+  - {parameters: {p2: 600.0957, p3: 3.8297, p4: -0.238}, descriptors: {species_code: BM, geographic_region: '609 - Olympic, 800 - Quinalt'}, taxa: [{family: Aceraceae, genus: Acer, species: macrophyllum}]}
+  - {parameters: {p2: 92.2964, p3: 4.189, p4: -0.983}, descriptors: {species_code: BM, geographic_region: '612 - Siuslaw, 712 - BLM Coos'}, taxa: [{family: Aceraceae, genus: Acer, species: macrophyllum}]}
+  - {parameters: {p2: 76.517, p3: 2.2107, p4: -0.6365}, descriptors: {species_code: BM, geographic_region: 708 - BLM Salem}, taxa: [{family: Aceraceae, genus: Acer, species: macrophyllum}]}
+  - {parameters: {p2: 160.2171, p3: 3.3044, p4: -0.5299}, descriptors: {species_code: BM, geographic_region: 709 - BLM Eugene}, taxa: [{family: Aceraceae, genus: Acer, species: macrophyllum}]}
+  - {parameters: {p2: 73.3348, p3: 2.6548, p4: -1.246}, descriptors: {species_code: CH, geographic_region: '609 - Olympic, 800 - Quinalt'}, taxa: [{family: Pinaceae, genus: Prunus, species: emarginata}]}
+  - {parameters: {p2: 73.3348, p3: 2.6548, p4: -1.246}, descriptors: {species_code: CH, geographic_region: '612 - Siuslaw, 712 - BLM Coos'}, taxa: [{family: Pinaceae, genus: Prunus, species: emarginata}]}
+  - {parameters: {p2: 73.3348, p3: 2.6548, p4: -1.246}, descriptors: {species_code: CH, geographic_region: 708 - BLM Salem}, taxa: [{family: Pinaceae, genus: Prunus, species: emarginata}]}
+  - {parameters: {p2: 73.3348, p3: 2.6548, p4: -1.246}, descriptors: {species_code: CH, geographic_region: 709 - BLM Eugene}, taxa: [{family: Pinaceae, genus: Prunus, species: emarginata}]}
+  - {parameters: {p2: 178.6441, p3: 4.5852, p4: -0.6746}, descriptors: {species_code: CW, geographic_region: '609 - Olympic, 800 - Quinalt'}, taxa: [{family: Salicaceae, genus: Populus, species: trichocarpa}]}
+  - {parameters: {p2: 178.6441, p3: 4.5852, p4: -0.6746}, descriptors: {species_code: CW, geographic_region: '612 - Siuslaw, 712 - BLM Coos'}, taxa: [{family: Salicaceae, genus: Populus, species: trichocarpa}]}
+  - {parameters: {p2: 178.6441, p3: 4.5852, p4: -0.6746}, descriptors: {species_code: CW, geographic_region: 708 - BLM Salem}, taxa: [{family: Salicaceae, genus: Populus, species: trichocarpa}]}
+  - {parameters: {p2: 178.6441, p3: 4.5852, p4: -0.6746}, descriptors: {species_code: CW, geographic_region: 709 - BLM Eugene}, taxa: [{family: Salicaceae, genus: Populus, species: trichocarpa}]}
+  - {parameters: {p2: 1091.853, p3: 5.2936, p4: -0.2648}, descriptors: {species_code: DF, geographic_region: '609 - Olympic, 800 - Quinalt'}, taxa: [{family: Pinaceae, genus: Pseudotsuga, species: menziesii}]}
+  - {parameters: {p2: 439.1195, p3: 5.8176, p4: -0.4854}, descriptors: {species_code: DF, geographic_region: 709 - BLM Eugene}, taxa: [{family: Pinaceae, genus: Pseudotsuga, species: menziesii}]}
+  - {parameters: {p2: 403.3221, p3: 4.3271, p4: -0.2422}, descriptors: {species_code: DG, geographic_region: '609 - Olympic, 800 - Quinalt'}, taxa: [{family: Cornaceae, genus: Cornus, species: nuttallii}]}
+  - {parameters: {p2: 403.3221, p3: 4.3271, p4: -0.2422}, descriptors: {species_code: DG, geographic_region: '612 - Siuslaw, 712 - BLM Coos'}, taxa: [{family: Cornaceae, genus: Cornus, species: nuttallii}]}
+  - {parameters: {p2: 403.3221, p3: 4.3271, p4: -0.2422}, descriptors: {species_code: DG, geographic_region: 708 - BLM Salem}, taxa: [{family: Cornaceae, genus: Cornus, species: nuttallii}]}
+  - {parameters: {p2: 444.5618, p3: 3.9205, p4: -0.2397}, descriptors: {species_code: DG, geographic_region: 709 - BLM Eugene}, taxa: [{family: Cornaceae, genus: Cornus, species: nuttallii}]}
+  - {parameters: {p2: 206.3211, p3: 9.1227, p4: -0.8281}, descriptors: {species_code: ES, geographic_region: '609 - Olympic, 800 - Quinalt'}, taxa: [{family: Pinaceae, genus: Picea, species: engelmannii}]}
+  - {parameters: {p2: 206.3211, p3: 9.1227, p4: -0.8281}, descriptors: {species_code: ES, geographic_region: '612 - Siuslaw, 712 - BLM Coos'}, taxa: [{family: Pinaceae, genus: Picea, species: engelmannii}]}
+  - {parameters: {p2: 206.3211, p3: 9.1227, p4: -0.8281}, descriptors: {species_code: ES, geographic_region: 708 - BLM Salem}, taxa: [{family: Pinaceae, genus: Picea, species: engelmannii}]}
+  - {parameters: {p2: 206.3211, p3: 9.1277, p4: -0.8281}, descriptors: {species_code: ES, geographic_region: 709 - BLM Eugene}, taxa: [{family: Pinaceae, genus: Picea, species: engelmannii}]}
+  - {parameters: {p2: 10707.39, p3: 8.467, p4: -0.1863}, descriptors: {species_code: GC, geographic_region: '609 - Olympic, 800 - Quinalt'}, taxa: [{family: Fagaceae, genus: Chrysolepis, species: chrysophylla}]}
+  - {parameters: {p2: 10707.39, p3: 8.467, p4: -0.1863}, descriptors: {species_code: GC, geographic_region: '612 - Siuslaw, 712 - BLM Coos'}, taxa: [{family: Fagaceae, genus: Chrysolepis, species: chrysophylla}]}
+  - {parameters: {p2: 10707.39, p3: 8.467, p4: -0.1863}, descriptors: {species_code: GC, geographic_region: 708 - BLM Salem}, taxa: [{family: Fagaceae, genus: Chrysolepis, species: chrysophylla}]}
+  - {parameters: {p2: 10707.39, p3: 8.467, p4: -0.1863}, descriptors: {species_code: GC, geographic_region: 709 - BLM Eugene}, taxa: [{family: Fagaceae, genus: Chrysolepis, species: chrysophylla}]}
+  - {parameters: {p2: 356.1148, p3: 6.41, p4: -0.5572}, descriptors: {species_code: GF, geographic_region: '609 - Olympic, 800 - Quinalt'}, taxa: [{family: Pinaceae, genus: Abies, species: grandis}]}
+  - {parameters: {p2: 432.2186, p3: 6.2941, p4: -0.5028}, descriptors: {species_code: GF, geographic_region: '612 - Siuslaw, 712 - BLM Coos'}, taxa: [{family: Pinaceae, genus: Abies, species: grandis}]}
+  - {parameters: {p2: 432.2186, p3: 6.2941, p4: -0.5028}, descriptors: {species_code: GF, geographic_region: 708 - BLM Salem}, taxa: [{family: Pinaceae, genus: Abies, species: grandis}]}
+  - {parameters: {p2: 432.2186, p3: 6.2941, p4: -0.5028}, descriptors: {species_code: GF, geographic_region: 709 - BLM Eugene}, taxa: [{family: Pinaceae, genus: Abies, species: grandis}]}
+  - {parameters: {p2: 55.0, p3: 5.5, p4: -0.95}, descriptors: {species_code: HT, geographic_region: '609 - Olympic, 800 - Quinalt'}, taxa: [{family: Rosaceae, genus: Crataegus, species: NA}]}
+  - {parameters: {p2: 55.0, p3: 5.5, p4: -0.95}, descriptors: {species_code: HT, geographic_region: '612 - Siuslaw, 712 - BLM Coos'}, taxa: [{family: Rosaceae, genus: Crataegus, species: NA}]}
+  - {parameters: {p2: 55.0, p3: 5.5, p4: -0.95}, descriptors: {species_code: HT, geographic_region: 708 - BLM Salem}, taxa: [{family: Rosaceae, genus: Crataegus, species: NA}]}
+  - {parameters: {p2: 55.0, p3: 5.5, p4: -0.95}, descriptors: {species_code: HT, geographic_region: 709 - BLM Eugene}, taxa: [{family: Rosaceae, genus: Crataegus, species: NA}]}
+  - {parameters: {p2: 4691.634, p3: 7.4671, p4: -0.1989}, descriptors: {species_code: IC, geographic_region: '609 - Olympic, 800 - Quinalt'}, taxa: [{family: Cupressaceae, genus: Calocedrus, species: decurrens}]}
+  - {parameters: {p2: 4691.634, p3: 7.4671, p4: -0.1989}, descriptors: {species_code: IC, geographic_region: '612 - Siuslaw, 712 - BLM Coos'}, taxa: [{family: Cupressaceae, genus: Calocedrus, species: decurrens}]}
+  - {parameters: {p2: 4691.634, p3: 7.4671, p4: -0.1989}, descriptors: {species_code: IC, geographic_region: 708 - BLM Salem}, taxa: [{family: Cupressaceae, genus: Calocedrus, species: decurrens}]}
+  - {parameters: {p2: 4691.634, p3: 7.4671, p4: -0.1989}, descriptors: {species_code: IC, geographic_region: 709 - BLM Eugene}, taxa: [{family: Cupressaceae, genus: Calocedrus, species: decurrens}]}
+  - {parameters: {p2: 1031.52, p3: 7.6616, p4: -0.3599}, descriptors: {species_code: JP, geographic_region: '609 - Olympic, 800 - Quinalt'}, taxa: [{family: Pinaceae, genus: Pinus, species: jeffreyi}]}
+  - {parameters: {p2: 1031.52, p3: 7.6616, p4: -0.3599}, descriptors: {species_code: JP, geographic_region: '612 - Siuslaw, 712 - BLM Coos'}, taxa: [{family: Pinaceae, genus: Pinus, species: jeffreyi}]}
+  - {parameters: {p2: 1031.52, p3: 7.6616, p4: -0.3599}, descriptors: {species_code: JP, geographic_region: 708 - BLM Salem}, taxa: [{family: Pinaceae, genus: Pinus, species: jeffreyi}]}
+  - {parameters: {p2: 1031.52, p3: 7.6616, p4: -0.3599}, descriptors: {species_code: JP, geographic_region: 709 - BLM Eugene}, taxa: [{family: Pinaceae, genus: Pinus, species: jeffreyi}]}
+  - {parameters: {p2: 34749.47, p3: 9.1287, p4: -0.1417}, descriptors: {species_code: KP, geographic_region: '609 - Olympic, 800 - Quinalt'}, taxa: [{family: Pinaceae, genus: Pinus, species: attenuata}]}
+  - {parameters: {p2: 34749.47, p3: 9.1287, p4: -0.1417}, descriptors: {species_code: KP, geographic_region: '612 - Siuslaw, 712 - BLM Coos'}, taxa: [{family: Pinaceae, genus: Pinus, species: attenuata}]}
+  - {parameters: {p2: 34749.47, p3: 9.1287, p4: -0.1417}, descriptors: {species_code: KP, geographic_region: 708 - BLM Salem}, taxa: [{family: Pinaceae, genus: Pinus, species: attenuata}]}
+  - {parameters: {p2: 34749.47, p3: 9.1287, p4: -0.1417}, descriptors: {species_code: KP, geographic_region: 709 - BLM Eugene}, taxa: [{family: Pinaceae, genus: Pinus, species: attenuata}]}
+  - {parameters: {p2: 503.6619, p3: 4.9544, p4: -0.2085}, descriptors: {species_code: LL, geographic_region: '609 - Olympic, 800 - Quinalt'}, taxa: [{family: Pinaceae, genus: Larix, species: lyallii}]}
+  - {parameters: {p2: 503.6619, p3: 4.9544, p4: -0.2085}, descriptors: {species_code: LL, geographic_region: '612 - Siuslaw, 712 - BLM Coos'}, taxa: [{family: Pinaceae, genus: Larix, species: lyallii}]}
+  - {parameters: {p2: 503.6619, p3: 4.9544, p4: -0.2085}, descriptors: {species_code: LL, geographic_region: 708 - BLM Salem}, taxa: [{family: Pinaceae, genus: Larix, species: lyallii}]}
+  - {parameters: {p2: 503.6619, p3: 4.9544, p4: -0.2085}, descriptors: {species_code: LL, geographic_region: 709 - BLM Eugene}, taxa: [{family: Pinaceae, genus: Larix, species: lyallii}]}
+  - {parameters: {p2: 100.0, p3: 6.0, p4: -0.86}, descriptors: {species_code: LP, geographic_region: '609 - Olympic, 800 - Quinalt'}, taxa: [{family: Pinaceae, genus: Pinus, species: contorta}]}
+  - {parameters: {p2: 100.0, p3: 6.0, p4: -0.86}, descriptors: {species_code: LP, geographic_region: '612 - Siuslaw, 712 - BLM Coos'}, taxa: [{family: Pinaceae, genus: Pinus, species: contorta}]}
+  - {parameters: {p2: 139.7159, p3: 4.0091, p4: -0.708}, descriptors: {species_code: LP, geographic_region: 708 - BLM Salem}, taxa: [{family: Pinaceae, genus: Pinus, species: contorta}]}
+  - {parameters: {p2: 105.4453, p3: 7.9694, p4: -1.0916}, descriptors: {species_code: LP, geographic_region: 709 - BLM Eugene}, taxa: [{family: Pinaceae, genus: Pinus, species: contorta}]}
+  - {parameters: {p2: 170.2653, p3: 10.0684, p4: -0.8791}, descriptors: {species_code: MH, geographic_region: '609 - Olympic, 800 - Quinalt'}, taxa: [{family: Pinaceae, genus: Tsuga, species: mertensiana}]}
+  - {parameters: {p2: 170.2653, p3: 10.0684, p4: -0.8791}, descriptors: {species_code: MH, geographic_region: '612 - Siuslaw, 712 - BLM Coos'}, taxa: [{family: Pinaceae, genus: Tsuga, species: mertensiana}]}
+  - {parameters: {p2: 2478.099, p3: 7.0762, p4: -0.2456}, descriptors: {species_code: MH, geographic_region: 708 - BLM Salem}, taxa: [{family: Pinaceae, genus: Tsuga, species: mertensiana}]}
+  - {parameters: {p2: 192.9609, p3: 7.3876, p4: -0.7231}, descriptors: {species_code: MH, geographic_region: 709 - BLM Eugene}, taxa: [{family: Pinaceae, genus: Tsuga, species: mertensiana}]}
+  - {parameters: {p2: 483.3751, p3: 7.2443, p4: -0.5111}, descriptors: {species_code: NF, geographic_region: '609 - Olympic, 800 - Quinalt'}, taxa: [{family: Pinaceae, genus: Abies, species: procera}]}
+  - {parameters: {p2: 483.3751, p3: 7.2443, p4: -0.5111}, descriptors: {species_code: NF, geographic_region: '612 - Siuslaw, 712 - BLM Coos'}, taxa: [{family: Pinaceae, genus: Abies, species: procera}]}
+  - {parameters: {p2: 247.7348, p3: 6.183, p4: -0.6335}, descriptors: {species_code: NF, geographic_region: 708 - BLM Salem}, taxa: [{family: Pinaceae, genus: Abies, species: procera}]}
+  - {parameters: {p2: 483.3751, p3: 7.2443, p4: -0.5111}, descriptors: {species_code: NF, geographic_region: 709 - BLM Eugene}, taxa: [{family: Pinaceae, genus: Abies, species: procera}]}
+  - {parameters: {p2: 1709.723, p3: 5.8887, p4: -0.2286}, descriptors: {species_code: OT, geographic_region: '609 - Olympic, 800 - Quinalt'}, taxa: [{family: NA, genus: NA, species: NA}]}
+  - {parameters: {p2: 1709.723, p3: 5.8887, p4: -0.2286}, descriptors: {species_code: OT, geographic_region: '612 - Siuslaw, 712 - BLM Coos'}, taxa: [{family: NA, genus: NA, species: NA}]}
+  - {parameters: {p2: 1709.723, p3: 5.8887, p4: -0.2286}, descriptors: {species_code: OT, geographic_region: 708 - BLM Salem}, taxa: [{family: NA, genus: NA, species: NA}]}
+  - {parameters: {p2: 1709.723, p3: 5.8887, p4: -0.2286}, descriptors: {species_code: OT, geographic_region: 709 - BLM Eugene}, taxa: [{family: NA, genus: NA, species: NA}]}
+  - {parameters: {p2: 1709.723, p3: 5.8887, p4: -0.2286}, descriptors: {species_code: PB, geographic_region: '609 - Olympic, 800 - Quinalt'}, taxa: [{family: Betulaceae, genus: Betula, species: papyrifera}]}
+  - {parameters: {p2: 1709.723, p3: 5.8887, p4: -0.2286}, descriptors: {species_code: PB, geographic_region: '612 - Siuslaw, 712 - BLM Coos'}, taxa: [{family: Betulaceae, genus: Betula, species: papyrifera}]}
+  - {parameters: {p2: 1709.723, p3: 5.8887, p4: -0.2286}, descriptors: {species_code: PB, geographic_region: 708 - BLM Salem}, taxa: [{family: Betulaceae, genus: Betula, species: papyrifera}]}
+  - {parameters: {p2: 1709.723, p3: 5.8887, p4: -0.2286}, descriptors: {species_code: PB, geographic_region: 709 - BLM Eugene}, taxa: [{family: Betulaceae, genus: Betula, species: papyrifera}]}
+  - {parameters: {p2: 1181.724, p3: 6.6981, p4: -0.3151}, descriptors: {species_code: PP, geographic_region: '609 - Olympic, 800 - Quinalt'}, taxa: [{family: Pinaceae, genus: Pinus, species: ponderosa}]}
+  - {parameters: {p2: 1181.724, p3: 6.6981, p4: -0.3151}, descriptors: {species_code: PP, geographic_region: '612 - Siuslaw, 712 - BLM Coos'}, taxa: [{family: Pinaceae, genus: Pinus, species: ponderosa}]}
+  - {parameters: {p2: 1181.724, p3: 6.6981, p4: -0.3151}, descriptors: {species_code: PP, geographic_region: 708 - BLM Salem}, taxa: [{family: Pinaceae, genus: Pinus, species: ponderosa}]}
+  - {parameters: {p2: 1181.724, p3: 6.6981, p4: -0.3151}, descriptors: {species_code: PP, geographic_region: 709 - BLM Eugene}, taxa: [{family: Pinaceae, genus: Pinus, species: ponderosa}]}
+  - {parameters: {p2: 127.1698, p3: 4.8977, p4: -0.4668}, descriptors: {species_code: PY, geographic_region: '609 - Olympic, 800 - Quinalt'}, taxa: [{family: Taxaceae, genus: Taxus, species: brevifolia}]}
+  - {parameters: {p2: 139.0727, p3: 5.2062, p4: -0.5409}, descriptors: {species_code: PY, geographic_region: '612 - Siuslaw, 712 - BLM Coos'}, taxa: [{family: Taxaceae, genus: Taxus, species: brevifolia}]}
+  - {parameters: {p2: 77.2207, p3: 3.5181, p4: -0.5894}, descriptors: {species_code: PY, geographic_region: 708 - BLM Salem}, taxa: [{family: Taxaceae, genus: Taxus, species: brevifolia}]}
+  - {parameters: {p2: 139.0727, p3: 5.2062, p4: -0.5409}, descriptors: {species_code: PY, geographic_region: 709 - BLM Eugene}, taxa: [{family: Taxaceae, genus: Taxus, species: brevifolia}]}
+  - {parameters: {p2: 139.4551, p3: 4.6989, p4: -0.7682}, descriptors: {species_code: RA, geographic_region: '609 - Olympic, 800 - Quinalt'}, taxa: [{family: Betulaceae, genus: Alnus, species: rubra}]}
+  - {parameters: {p2: 254.9634, p3: 3.8495, p4: -0.4149}, descriptors: {species_code: RA, geographic_region: '612 - Siuslaw, 712 - BLM Coos'}, taxa: [{family: Betulaceae, genus: Alnus, species: rubra}]}
+  - {parameters: {p2: 484.4591, p3: 4.5713, p4: -0.3643}, descriptors: {species_code: RA, geographic_region: 708 - BLM Salem}, taxa: [{family: Betulaceae, genus: Alnus, species: rubra}]}
+  - {parameters: {p2: 10099.72, p3: 7.6375, p4: -0.1621}, descriptors: {species_code: RA, geographic_region: 709 - BLM Eugene}, taxa: [{family: Betulaceae, genus: Alnus, species: rubra}]}
+  - {parameters: {p2: 665.0944, p3: 5.5002, p4: -0.3246}, descriptors: {species_code: RC, geographic_region: '609 - Olympic, 800 - Quinalt'}, taxa: [{family: Cupressaceae, genus: Thuja, species: plicata}]}
+  - {parameters: {p2: 227.14, p3: 6.1092, p4: -0.6009}, descriptors: {species_code: RC, geographic_region: '612 - Siuslaw, 712 - BLM Coos'}, taxa: [{family: Cupressaceae, genus: Thuja, species: plicata}]}
+  - {parameters: {p2: 1560.685, p3: 6.2328, p4: -0.2541}, descriptors: {species_code: RC, geographic_region: 708 - BLM Salem}, taxa: [{family: Cupressaceae, genus: Thuja, species: plicata}]}
+  - {parameters: {p2: 1012.127, p3: 6.0957, p4: -0.3083}, descriptors: {species_code: RC, geographic_region: 709 - BLM Eugene}, taxa: [{family: Cupressaceae, genus: Thuja, species: plicata}]}
+  - {parameters: {p2: 202.886, p3: 8.7469, p4: -0.8317}, descriptors: {species_code: RF, geographic_region: '609 - Olympic, 800 - Quinalt'}, taxa: [{family: Pinaceae, genus: Abies, species: magnifica}]}
+  - {parameters: {p2: 202.886, p3: 8.7469, p4: -0.8317}, descriptors: {species_code: RF, geographic_region: '612 - Siuslaw, 712 - BLM Coos'}, taxa: [{family: Pinaceae, genus: Abies, species: magnifica}]}
+  - {parameters: {p2: 375.382, p3: 6.088, p4: -0.472}, descriptors: {species_code: RF, geographic_region: 708 - BLM Salem}, taxa: [{family: Pinaceae, genus: Abies, species: magnifica}]}
+  - {parameters: {p2: 375.382, p3: 6.088, p4: -0.472}, descriptors: {species_code: RF, geographic_region: 709 - BLM Eugene}, taxa: [{family: Pinaceae, genus: Abies, species: magnifica}]}
+  - {parameters: {p2: 595.1068, p3: 5.8103, p4: -0.3821}, descriptors: {species_code: RW, geographic_region: '609 - Olympic, 800 - Quinalt'}, taxa: [{family: Cupressaceae, genus: Sequoia, species: sempervirens}]}
+  - {parameters: {p2: 595.1068, p3: 5.8103, p4: -0.3821}, descriptors: {species_code: RW, geographic_region: '612 - Siuslaw, 712 - BLM Coos'}, taxa: [{family: Cupressaceae, genus: Sequoia, species: sempervirens}]}
+  - {parameters: {p2: 595.1068, p3: 5.8103, p4: -0.3821}, descriptors: {species_code: RW, geographic_region: 708 - BLM Salem}, taxa: [{family: Cupressaceae, genus: Sequoia, species: sempervirens}]}
+  - {parameters: {p2: 595.1068, p3: 5.8103, p4: -0.3821}, descriptors: {species_code: RW, geographic_region: 709 - BLM Eugene}, taxa: [{family: Cupressaceae, genus: Sequoia, species: sempervirens}]}
+  - {parameters: {p2: 697.6316, p3: 6.6807, p4: -0.4161}, descriptors: {species_code: SF, geographic_region: '609 - Olympic, 800 - Quinalt'}, taxa: [{family: Pinaceae, genus: Abies, species: amabilis}]}
+  - {parameters: {p2: 697.6316, p3: 6.6807, p4: -0.4161}, descriptors: {species_code: SF, geographic_region: '612 - Siuslaw, 712 - BLM Coos'}, taxa: [{family: Pinaceae, genus: Abies, species: amabilis}]}
+  - {parameters: {p2: 223.3492, p3: 6.3964, p4: -0.6566}, descriptors: {species_code: SF, geographic_region: 708 - BLM Salem}, taxa: [{family: Pinaceae, genus: Abies, species: amabilis}]}
+  - {parameters: {p2: 237.9189, p3: 7.7948, p4: -0.7261}, descriptors: {species_code: SF, geographic_region: 709 - BLM Eugene}, taxa: [{family: Pinaceae, genus: Abies, species: amabilis}]}
+  - {parameters: {p2: 702.1856, p3: 5.7025, p4: -0.3798}, descriptors: {species_code: SP, geographic_region: '609 - Olympic, 800 - Quinalt'}, taxa: [{family: Pinaceae, genus: Pinus, species: lambertiana}]}
+  - {parameters: {p2: 702.1856, p3: 5.7025, p4: -0.3798}, descriptors: {species_code: SP, geographic_region: '612 - Siuslaw, 712 - BLM Coos'}, taxa: [{family: Pinaceae, genus: Pinus, species: lambertiana}]}
+  - {parameters: {p2: 702.1856, p3: 5.7025, p4: -0.3798}, descriptors: {species_code: SP, geographic_region: 708 - BLM Salem}, taxa: [{family: Pinaceae, genus: Pinus, species: lambertiana}]}
+  - {parameters: {p2: 702.1856, p3: 5.7025, p4: -0.3798}, descriptors: {species_code: SP, geographic_region: 709 - BLM Eugene}, taxa: [{family: Pinaceae, genus: Pinus, species: lambertiana}]}
+  - {parameters: {p2: 3844.388, p3: 7.068, p4: -0.2122}, descriptors: {species_code: SS, geographic_region: '609 - Olympic, 800 - Quinalt'}, taxa: [{family: Pinaceae, genus: Picea, species: sitchensis}]}
+  - {parameters: {p2: 708.7788, p3: 5.7677, p4: -0.3629}, descriptors: {species_code: SS, geographic_region: '612 - Siuslaw, 712 - BLM Coos'}, taxa: [{family: Pinaceae, genus: Picea, species: sitchensis}]}
+  - {parameters: {p2: 375.382, p3: 6.088, p4: -0.472}, descriptors: {species_code: SS, geographic_region: 708 - BLM Salem}, taxa: [{family: Pinaceae, genus: Picea, species: sitchensis}]}
+  - {parameters: {p2: 375.382, p3: 6.088, p4: -0.472}, descriptors: {species_code: SS, geographic_region: 709 - BLM Eugene}, taxa: [{family: Pinaceae, genus: Picea, species: sitchensis}]}
+  - {parameters: {p2: 139.4551, p3: 4.6989, p4: -0.7682}, descriptors: {species_code: WA, geographic_region: '609 - Olympic, 800 - Quinalt'}, taxa: [{family: Betulaceae, genus: Alnus, species: rhombifolia}]}
+  - {parameters: {p2: 254.8634, p3: 3.8495, p4: -0.4149}, descriptors: {species_code: WA, geographic_region: '612 - Siuslaw, 712 - BLM Coos'}, taxa: [{family: Betulaceae, genus: Alnus, species: rhombifolia}]}
+  - {parameters: {p2: 133.7965, p3: 6.405, p4: -0.8329}, descriptors: {species_code: WA, geographic_region: 708 - BLM Salem}, taxa: [{family: Betulaceae, genus: Alnus, species: rhombifolia}]}
+  - {parameters: {p2: 133.7965, p3: 6.405, p4: -0.8329}, descriptors: {species_code: WA, geographic_region: 709 - BLM Eugene}, taxa: [{family: Betulaceae, genus: Alnus, species: rhombifolia}]}
+  - {parameters: {p2: 89.5535, p3: 4.2281, p4: -0.6438}, descriptors: {species_code: WB, geographic_region: '609 - Olympic, 800 - Quinalt'}, taxa: [{family: Pinaceae, genus: Pinus, species: albicaulis}]}
+  - {parameters: {p2: 89.5535, p3: 4.2281, p4: -0.6438}, descriptors: {species_code: WB, geographic_region: '612 - Siuslaw, 712 - BLM Coos'}, taxa: [{family: Pinaceae, genus: Pinus, species: albicaulis}]}
+  - {parameters: {p2: 73.9147, p3: 3.963, p4: -0.8277}, descriptors: {species_code: WB, geographic_region: 708 - BLM Salem}, taxa: [{family: Pinaceae, genus: Pinus, species: albicaulis}]}
+  - {parameters: {p2: 73.9147, p3: 3.963, p4: -0.8277}, descriptors: {species_code: WB, geographic_region: 709 - BLM Eugene}, taxa: [{family: Pinaceae, genus: Pinus, species: albicaulis}]}
+  - {parameters: {p2: 604.845, p3: 5.9835, p4: -0.3789}, descriptors: {species_code: WF, geographic_region: '609 - Olympic, 800 - Quinalt'}, taxa: [{family: Pinaceae, genus: Abies, species: concolor}]}
+  - {parameters: {p2: 604.845, p3: 5.9835, p4: -0.3789}, descriptors: {species_code: WF, geographic_region: '612 - Siuslaw, 712 - BLM Coos'}, taxa: [{family: Pinaceae, genus: Abies, species: concolor}]}
+  - {parameters: {p2: 475.1698, p3: 6.2472, p4: -0.4812}, descriptors: {species_code: WF, geographic_region: 708 - BLM Salem}, taxa: [{family: Pinaceae, genus: Abies, species: concolor}]}
+  - {parameters: {p2: 475.1698, p3: 6.2472, p4: -0.4812}, descriptors: {species_code: WF, geographic_region: 709 - BLM Eugene}, taxa: [{family: Pinaceae, genus: Abies, species: concolor}]}
+  - {parameters: {p2: 609.4235, p3: 5.5919, p4: -0.3841}, descriptors: {species_code: WH, geographic_region: '609 - Olympic, 800 - Quinalt'}, taxa: [{family: Pinaceae, genus: Tsuga, species: heterophylla}]}
+  - {parameters: {p2: 1196.619, p3: 5.7904, p4: -0.2906}, descriptors: {species_code: WH, geographic_region: '612 - Siuslaw, 712 - BLM Coos'}, taxa: [{family: Pinaceae, genus: Tsuga, species: heterophylla}]}
+  - {parameters: {p2: 317.8257, p3: 6.8287, p4: -0.6034}, descriptors: {species_code: WH, geographic_region: 708 - BLM Salem}, taxa: [{family: Pinaceae, genus: Tsuga, species: heterophylla}]}
+  - {parameters: {p2: 395.4976, p3: 6.4222, p4: -0.532}, descriptors: {species_code: WH, geographic_region: 709 - BLM Eugene}, taxa: [{family: Pinaceae, genus: Tsuga, species: heterophylla}]}
+  - {parameters: {p2: 149.5861, p3: 2.4231, p4: -0.18}, descriptors: {species_code: WI, geographic_region: '609 - Olympic, 800 - Quinalt'}, taxa: [{family: Salicaceae, genus: Salix, species: Salix}]}
+  - {parameters: {p2: 149.5861, p3: 2.4231, p4: -0.18}, descriptors: {species_code: WI, geographic_region: '612 - Siuslaw, 712 - BLM Coos'}, taxa: [{family: Salicaceae, genus: Salix, species: Salix}]}
+  - {parameters: {p2: 149.5861, p3: 2.4231, p4: -0.18}, descriptors: {species_code: WI, geographic_region: 708 - BLM Salem}, taxa: [{family: Salicaceae, genus: Salix, species: Salix}]}
+  - {parameters: {p2: 149.5861, p3: 2.4231, p4: -0.18}, descriptors: {species_code: WI, geographic_region: 709 - BLM Eugene}, taxa: [{family: Salicaceae, genus: Salix, species: Salix}]}
+  - {parameters: {p2: 503.6619, p3: 4.9544, p4: -0.2085}, descriptors: {species_code: WJ, geographic_region: '609 - Olympic, 800 - Quinalt'}, taxa: [{family: Pinaceae, genus: Juniperus, species: occidentalis}]}
+  - {parameters: {p2: 503.6619, p3: 4.9544, p4: -0.2085}, descriptors: {species_code: WJ, geographic_region: '612 - Siuslaw, 712 - BLM Coos'}, taxa: [{family: Pinaceae, genus: Juniperus, species: occidentalis}]}
+  - {parameters: {p2: 503.6619, p3: 4.9544, p4: -0.2085}, descriptors: {species_code: WJ, geographic_region: 708 - BLM Salem}, taxa: [{family: Pinaceae, genus: Juniperus, species: occidentalis}]}
+  - {parameters: {p2: 503.6619, p3: 4.9544, p4: -0.2085}, descriptors: {species_code: WJ, geographic_region: 709 - BLM Eugene}, taxa: [{family: Pinaceae, genus: Juniperus, species: occidentalis}]}
+  - {parameters: {p2: 89.4301, p3: 6.6321, p4: -0.8876}, descriptors: {species_code: WO, geographic_region: '609 - Olympic, 800 - Quinalt'}, taxa: [{family: Fagaceae, genus: Quercus, species: garryana}]}
+  - {parameters: {p2: 89.4301, p3: 6.6321, p4: -0.8876}, descriptors: {species_code: WO, geographic_region: '612 - Siuslaw, 712 - BLM Coos'}, taxa: [{family: Fagaceae, genus: Quercus, species: garryana}]}
+  - {parameters: {p2: 59.4214, p3: 5.3178, p4: -1.367}, descriptors: {species_code: WO, geographic_region: 708 - BLM Salem}, taxa: [{family: Fagaceae, genus: Quercus, species: garryana}]}
+  - {parameters: {p2: 55.0, p3: 5.5, p4: -0.95}, descriptors: {species_code: WO, geographic_region: 709 - BLM Eugene}, taxa: [{family: Fagaceae, genus: Quercus, species: garryana}]}
+  - {parameters: {p2: 433.7807, p3: 6.3318, p4: -0.4988}, descriptors: {species_code: WP, geographic_region: '609 - Olympic, 800 - Quinalt'}, taxa: [{family: Pinaceae, genus: Pinus, species: monticola}]}
+  - {parameters: {p2: 514.1575, p3: 6.3004, p4: -0.4651}, descriptors: {species_code: WP, geographic_region: '612 - Siuslaw, 712 - BLM Coos'}, taxa: [{family: Pinaceae, genus: Pinus, species: monticola}]}
+  - {parameters: {p2: 1333.818, p3: 6.6219, p4: -0.312}, descriptors: {species_code: WP, geographic_region: 708 - BLM Salem}, taxa: [{family: Pinaceae, genus: Pinus, species: monticola}]}
+  - {parameters: {p2: 514.1575, p3: 6.3004, p4: -0.4651}, descriptors: {species_code: WP, geographic_region: 709 - BLM Eugene}, taxa: [{family: Pinaceae, genus: Pinus, species: monticola}]}
+  - {parameters: {p2: 1220.096, p3: 7.2995, p4: -0.3211}, descriptors: {species_code: YC, geographic_region: '609 - Olympic, 800 - Quinalt'}, taxa: [{family: Cupressaceae, genus: Callitropsis, species: nootkatensis}]}
+  - {parameters: {p2: 1220.096, p3: 7.2995, p4: -0.3211}, descriptors: {species_code: YC, geographic_region: '612 - Siuslaw, 712 - BLM Coos'}, taxa: [{family: Cupressaceae, genus: Callitropsis, species: nootkatensis}]}
+  - {parameters: {p2: 255.4638, p3: 5.5577, p4: -0.6054}, descriptors: {species_code: YC, geographic_region: 708 - BLM Salem}, taxa: [{family: Cupressaceae, genus: Callitropsis, species: nootkatensis}]}
+  - {parameters: {p2: 97.7769, p3: 8.8202, p4: -1.0534}, descriptors: {species_code: YC, geographic_region: 709 - BLM Eugene}, taxa: [{family: Cupressaceae, genus: Callitropsis, species: nootkatensis}]}
+- name: hst_2
+  type: fixed_effects_set
+  response: {hst: ft}
+  covariates: {dsob: in}
+  parameter_names:
+  - p2
+  - p3
+  - p4
+  specifications:
+  - {parameters: {p2: 407.1595, p3: 7.2885, p4: -0.5908}, descriptors: {species_code: DF, geographic_region: '612 - Siuslaw, 712 - BLM Coos'}, taxa: [{family: Pinaceae, genus: Pseudotsuga, species: menziesii}]}
+  - {parameters: {p2: 949.1046, p3: 5.8482, p4: -0.3251}, descriptors: {species_code: DF, geographic_region: 708 - BLM Salem}, taxa: [{family: Pinaceae, genus: Pseudotsuga, species: menziesii}]}
+- name: hst_3
+  type: fixed_effects_set
+  response: {hst: ft}
+  covariates: {dsob: in}
+  parameter_names:
+  - b1
+  - b2
+  specifications:
+  - {parameters: {b1: 5.313, b2: -15.321}, descriptors: {species_code: AF}, taxa: [{family: Pinaceae, genus: Abies, species: lasiocarpa}]}
+  - {parameters: {b1: 5.152, b2: -13.576}, descriptors: {species_code: AS}, taxa: [{family: Salicaceae, genus: Populus, species: tremuloides}]}
+  - {parameters: {b1: 4.7, b2: -6.326}, descriptors: {species_code: BM}, taxa: [{family: Aceraceae, genus: Acer, species: macrophyllum}]}
+  - {parameters: {b1: 5.152, b2: -13.576}, descriptors: {species_code: CH}, taxa: [{family: Pinaceae, genus: Prunus, species: emarginata}]}
+  - {parameters: {b1: 5.152, b2: -13.576}, descriptors: {species_code: CW}, taxa: [{family: Salicaceae, genus: Populus, species: trichocarpa}]}
+  - {parameters: {b1: 5.563, b2: -16.475}, descriptors: {species_code: DF}, taxa: [{family: Pinaceae, genus: Pseudotsuga, species: menziesii}]}
+  - {parameters: {b1: 5.152, b2: -13.576}, descriptors: {species_code: DG}, taxa: [{family: Cornaceae, genus: Cornus, species: nuttallii}]}
+  - {parameters: {b1: 5.188, b2: -13.801}, descriptors: {species_code: ES}, taxa: [{family: Pinaceae, genus: Picea, species: engelmannii}]}
+  - {parameters: {b1: 5.152, b2: -13.576}, descriptors: {species_code: GC}, taxa: [{family: Fagaceae, genus: Chrysolepis, species: chrysophylla}]}
+  - {parameters: {b1: 5.308, b2: -13.624}, descriptors: {species_code: GF}, taxa: [{family: Pinaceae, genus: Abies, species: grandis}]}
+  - {parameters: {b1: 5.152, b2: -13.576}, descriptors: {species_code: HT}, taxa: [{family: Rosaceae, genus: Crataegus, species: NA}]}
+  - {parameters: {b1: 5.188, b2: -13.801}, descriptors: {species_code: IC}, taxa: [{family: Cupressaceae, genus: Calocedrus, species: decurrens}]}
+  - {parameters: {b1: 5.333, b2: -17.762}, descriptors: {species_code: JP}, taxa: [{family: Pinaceae, genus: Pinus, species: jeffreyi}]}
+  - {parameters: {b1: 5.188, b2: -13.801}, descriptors: {species_code: KP}, taxa: [{family: Pinaceae, genus: Pinus, species: attenuata}]}
+  - {parameters: {b1: 5.188, b2: -13.801}, descriptors: {species_code: LL}, taxa: [{family: Pinaceae, genus: Larix, species: lyallii}]}
+  - {parameters: {b1: 4.865, b2: -9.305}, descriptors: {species_code: LP}, taxa: [{family: Pinaceae, genus: Pinus, species: contorta}]}
+  - {parameters: {b1: 5.081, b2: -13.43}, descriptors: {species_code: MH}, taxa: [{family: Pinaceae, genus: Tsuga, species: mertensiana}]}
+  - {parameters: {b1: 5.327, b2: -15.45}, descriptors: {species_code: NF}, taxa: [{family: Pinaceae, genus: Abies, species: procera}]}
+  - {parameters: {b1: 5.152, b2: -13.576}, descriptors: {species_code: OT}, taxa: [{family: NA, genus: NA, species: NA}]}
+  - {parameters: {b1: 5.152, b2: -13.576}, descriptors: {species_code: PB}, taxa: [{family: Betulaceae, genus: Betula, species: papyrifera}]}
+  - {parameters: {b1: 5.333, b2: -17.762}, descriptors: {species_code: PP}, taxa: [{family: Pinaceae, genus: Pinus, species: ponderosa}]}
+  - {parameters: {b1: 5.188, b2: -13.801}, descriptors: {species_code: PY}, taxa: [{family: Taxaceae, genus: Taxus, species: brevifolia}]}
+  - {parameters: {b1: 4.875, b2: -8.639}, descriptors: {species_code: RA}, taxa: [{family: Betulaceae, genus: Alnus, species: rubra}]}
+  - {parameters: {b1: 5.233, b2: -14.737}, descriptors: {species_code: RC}, taxa: [{family: Cupressaceae, genus: Thuja, species: plicata}]}
+  - {parameters: {b1: 5.313, b2: -15.321}, descriptors: {species_code: RF}, taxa: [{family: Pinaceae, genus: Abies, species: magnifica}]}
+  - {parameters: {b1: 5.3401, b2: -15.9354}, descriptors: {species_code: RW}, taxa: [{family: Cupressaceae, genus: Sequoia, species: sempervirens}]}
+  - {parameters: {b1: 5.487, b2: -16.701}, descriptors: {species_code: SF}, taxa: [{family: Pinaceae, genus: Abies, species: amabilis}]}
+  - {parameters: {b1: 5.382, b2: -15.866}, descriptors: {species_code: SP}, taxa: [{family: Pinaceae, genus: Pinus, species: lambertiana}]}
+  - {parameters: {b1: 5.517, b2: -17.944}, descriptors: {species_code: SS}, taxa: [{family: Pinaceae, genus: Picea, species: sitchensis}]}
+  - {parameters: {b1: 5.152, b2: -13.576}, descriptors: {species_code: WA}, taxa: [{family: Betulaceae, genus: Alnus, species: rhombifolia}]}
+  - {parameters: {b1: 5.188, b2: -13.801}, descriptors: {species_code: WB}, taxa: [{family: Pinaceae, genus: Pinus, species: albicaulis}]}
+  - {parameters: {b1: 5.308, b2: -13.624}, descriptors: {species_code: WF}, taxa: [{family: Pinaceae, genus: Abies, species: concolor}]}
+  - {parameters: {b1: 5.355, b2: -13.878}, descriptors: {species_code: WH}, taxa: [{family: Pinaceae, genus: Tsuga, species: heterophylla}]}
+  - {parameters: {b1: 5.152, b2: -13.576}, descriptors: {species_code: WI}, taxa: [{family: Salicaceae, genus: Salix, species: Salix}]}
+  - {parameters: {b1: 5.152, b2: -13.576}, descriptors: {species_code: WJ}, taxa: [{family: Pinaceae, genus: Juniperus, species: occidentalis}]}
+  - {parameters: {b1: 5.152, b2: -13.576}, descriptors: {species_code: WO}, taxa: [{family: Fagaceae, genus: Quercus, species: garryana}]}
+  - {parameters: {b1: 5.382, b2: -15.866}, descriptors: {species_code: WP}, taxa: [{family: Pinaceae, genus: Pinus, species: monticola}]}
+  - {parameters: {b1: 5.143, b2: -13.497}, descriptors: {species_code: YC}, taxa: [{family: Cupressaceae, genus: Callitropsis, species: nootkatensis}]}
+- name: hst_4
+  type: fixed_effects_set
+  response: {hst: ft}
+  covariates: {dsob: in, rc: ft ft-1}
+  parameter_names:
+  - h1
+  - h2
+  - h3
+  - h4
+  - h5
+  specifications:
+  - {parameters: {h1: 1.4261, h2: 0.3334, h3: 0.0, h4: 0.0, h5: 0.0}, descriptors: {species_code: AF}, taxa: [{family: Pinaceae, genus: Abies, species: lasiocarpa}]}
+  - {parameters: {h1: 1.4769, h2: 0.3579, h3: 0.0, h4: 0.0, h5: 0.0}, descriptors: {species_code: GF}, taxa: [{family: Pinaceae, genus: Abies, species: grandis}]}
+  - {parameters: {h1: 1.71, h2: 0.2943, h3: 0.0, h4: 0.0, h5: 0.1054}, descriptors: {species_code: NF}, taxa: [{family: Pinaceae, genus: Abies, species: procera}]}
+  - {parameters: {h1: 1.3526, h2: 0.3335, h3: 0.0367, h4: 0.0, h5: 0.0}, descriptors: {species_code: RF}, taxa: [{family: Pinaceae, genus: Abies, species: magnifica}]}
+  - {parameters: {h1: 1.3134, h2: 0.3432, h3: 0.0366, h4: 0.0, h5: 0.0}, descriptors: {species_code: SF}, taxa: [{family: Pinaceae, genus: Abies, species: amabilis}]}
+  - {parameters: {h1: 1.4769, h2: 0.3579, h3: 0.0, h4: 0.0, h5: 0.0}, descriptors: {species_code: WF}, taxa: [{family: Pinaceae, genus: Abies, species: concolor}]}
+  - {parameters: {h1: 1.5907, h2: 0.304, h3: 0.0, h4: 0.0, h5: 0.0}, descriptors: {species_code: YC}, taxa: [{family: Cupressaceae, genus: Callitropsis, species: nootkatensis}]}
+  - {parameters: {h1: 1.5907, h2: 0.304, h3: 0.0, h4: 0.0, h5: 0.0}, descriptors: {species_code: IC}, taxa: [{family: Cupressaceae, genus: Calocedrus, species: decurrens}]}
+  - {parameters: {h1: 1.5907, h2: 0.304, h3: 0.0, h4: 0.0, h5: 0.0}, descriptors: {species_code: LL}, taxa: [{family: Pinaceae, genus: Larix, species: lyallii}]}
+  - {parameters: {h1: 0.0994, h2: 4.9767, h3: 0.0, h4: 0.0, h5: 0.0}, descriptors: {species_code: OT}, taxa: [{family: NA, genus: NA, species: NA}]}
+  - {parameters: {h1: 1.5907, h2: 0.304, h3: 0.0, h4: 0.0, h5: 0.0}, descriptors: {species_code: ES}, taxa: [{family: Pinaceae, genus: Picea, species: engelmannii}]}
+  - {parameters: {h1: 1.3526, h2: 0.3335, h3: 0.0367, h4: 0.0, h5: 0.0}, descriptors: {species_code: SS}, taxa: [{family: Pinaceae, genus: Picea, species: sitchensis}]}
+  - {parameters: {h1: 1.0756, h2: 0.4369, h3: 0.0, h4: 0.0, h5: 0.0}, descriptors: {species_code: JP}, taxa: [{family: Pinaceae, genus: Pinus, species: jeffreyi}]}
+  - {parameters: {h1: 0.9717, h2: 0.3934, h3: 0.0339, h4: 0.0, h5: 0.3044}, descriptors: {species_code: LP}, taxa: [{family: Pinaceae, genus: Pinus, species: contorta}]}
+  - {parameters: {h1: 0.9717, h2: 0.3934, h3: 0.0339, h4: 0.0, h5: 0.3044}, descriptors: {species_code: SP}, taxa: [{family: Pinaceae, genus: Pinus, species: lambertiana}]}
+  - {parameters: {h1: 0.9717, h2: 0.3934, h3: 0.0339, h4: 0.0, h5: 0.3044}, descriptors: {species_code: WP}, taxa: [{family: Pinaceae, genus: Pinus, species: monticola}]}
+  - {parameters: {h1: 0.0994, h2: 4.9767, h3: 0.0, h4: 0.0, h5: 0.0}, descriptors: {species_code: CW}, taxa: [{family: Salicaceae, genus: Populus, species: trichocarpa}]}
+  - {parameters: {h1: 0.0994, h2: 4.9767, h3: 0.0, h4: 0.0, h5: 0.0}, descriptors: {species_code: CH}, taxa: [{family: Pinaceae, genus: Prunus, species: emarginata}]}
+  - {parameters: {h1: 0.0994, h2: 4.9767, h3: 0.0, h4: 0.0, h5: 0.0}, descriptors: {species_code: WI}, taxa: [{family: Salicaceae, genus: Salix, species: Salix}]}
+  - {parameters: {h1: 1.5907, h2: 0.304, h3: 0.0, h4: 0.0, h5: 0.0}, descriptors: {species_code: PY}, taxa: [{family: Taxaceae, genus: Taxus, species: brevifolia}]}
+  - {parameters: {h1: 1.2278, h2: 0.4, h3: 0.0, h4: 0.0, h5: 0.0}, descriptors: {species_code: MH}, taxa: [{family: Pinaceae, genus: Tsuga, species: mertensiana}]}
+- name: hst_5
+  type: fixed_effects_set
+  response: {hst: ft}
+  covariates: {dsob: in, rc: ft ft-1}
+  parameter_names:
+  - h1
+  - h2
+  - h3
+  - h4
+  - h5
+  specifications:
+  - {parameters: {h1: 0.0994, h2: 4.9767, h3: 0.0, h4: 0.0, h5: 0.0}, descriptors: {species_code: AS}, taxa: [{family: Salicaceae, genus: Populus, species: tremuloides}]}
+  - {parameters: {h1: 0.0994, h2: 4.9767, h3: 0.0, h4: 0.0, h5: 0.0}, descriptors: {species_code: BM}, taxa: [{family: Aceraceae, genus: Acer, species: macrophyllum}]}
+  - {parameters: {h1: 0.0994, h2: 4.9767, h3: 0.0, h4: 0.0, h5: 0.0}, descriptors: {species_code: CH}, taxa: [{family: Pinaceae, genus: Prunus, species: emarginata}]}
+  - {parameters: {h1: 7.1391, h2: 4.2891, h3: -0.715, h4: 0.275, h5: 2.0393}, descriptors: {species_code: DF}, taxa: [{family: Pinaceae, genus: Pseudotsuga, species: menziesii}]}
+  - {parameters: {h1: 0.0994, h2: 4.9767, h3: 0.0, h4: 0.0, h5: 0.0}, descriptors: {species_code: DG}, taxa: [{family: Cornaceae, genus: Cornus, species: nuttallii}]}
+  - {parameters: {h1: 0.0994, h2: 4.9767, h3: 0.0, h4: 0.0, h5: 0.0}, descriptors: {species_code: GC}, taxa: [{family: Fagaceae, genus: Chrysolepis, species: chrysophylla}]}
+  - {parameters: {h1: 0.0994, h2: 4.9767, h3: 0.0, h4: 0.0, h5: 0.0}, descriptors: {species_code: HT}, taxa: [{family: Rosaceae, genus: Crataegus, species: NA}]}
+  - {parameters: {h1: 1.5907, h2: 0.304, h3: 0.0, h4: 0.0, h5: 0.0}, descriptors: {species_code: KP}, taxa: [{family: Pinaceae, genus: Pinus, species: attenuata}]}
+  - {parameters: {h1: 0.0994, h2: 4.9767, h3: 0.0, h4: 0.0, h5: 0.0}, descriptors: {species_code: OT}, taxa: [{family: NA, genus: NA, species: NA}]}
+  - {parameters: {h1: 0.0994, h2: 4.9767, h3: 0.0, h4: 0.0, h5: 0.0}, descriptors: {species_code: PB}, taxa: [{family: Betulaceae, genus: Betula, species: papyrifera}]}
+  - {parameters: {h1: 0.0994, h2: 4.9767, h3: 0.0, h4: 0.0, h5: 0.0}, descriptors: {species_code: RA}, taxa: [{family: Betulaceae, genus: Alnus, species: rubra}]}
+  - {parameters: {h1: 2.3115, h2: 0.237, h3: -0.0556, h4: 0.0, h5: 0.3218}, descriptors: {species_code: RC}, taxa: [{family: Cupressaceae, genus: Thuja, species: plicata}]}
+  - {parameters: {h1: 0.0994, h2: 4.9767, h3: 0.0, h4: 0.0, h5: 0.0}, descriptors: {species_code: WA}, taxa: [{family: Betulaceae, genus: Alnus, species: rhombifolia}]}
+  - {parameters: {h1: 1.5907, h2: 0.304, h3: 0.0, h4: 0.0, h5: 0.0}, descriptors: {species_code: WB}, taxa: [{family: Pinaceae, genus: Pinus, species: albicaulis}]}
+  - {parameters: {h1: 1.3608, h2: 0.6151, h3: 0.0, h4: -0.0442, h5: 0.0829}, descriptors: {species_code: WH}, taxa: [{family: Pinaceae, genus: Tsuga, species: heterophylla}]}
+  - {parameters: {h1: 0.0994, h2: 4.9767, h3: 0.0, h4: 0.0, h5: 0.0}, descriptors: {species_code: WI}, taxa: [{family: Salicaceae, genus: Salix, species: Salix}]}
+  - {parameters: {h1: 0.0994, h2: 4.9767, h3: 0.0, h4: 0.0, h5: 0.0}, descriptors: {species_code: WJ}, taxa: [{family: Pinaceae, genus: Juniperus, species: occidentalis}]}
+  - {parameters: {h1: 0.0994, h2: 4.9767, h3: 0.0, h4: 0.0, h5: 0.0}, descriptors: {species_code: WO}, taxa: [{family: Fagaceae, genus: Quercus, species: garryana}]}
+- name: rc
+  type: fixed_effects_set
+  response: {rc: ft ft-1}
+  covariates: {hst: ft, gs_s: ft2 acre-1}
+  parameter_names:
+  - r1
+  - r2
+  - r3
+  specifications:
+  - {parameters: {r1: 8.042774, r2: 0.007198, r3: -0.016163}, descriptors: {species_code: AF}, taxa: [{family: Pinaceae, genus: Abies, species: lasiocarpa}]}
+  - {parameters: {r1: 5.0, r2: 0.0, r3: 0.0}, descriptors: {species_code: AS}, taxa: [{family: Salicaceae, genus: Populus, species: tremuloides}]}
+  - {parameters: {r1: 5.0, r2: 0.0, r3: 0.0}, descriptors: {species_code: BM}, taxa: [{family: Aceraceae, genus: Acer, species: macrophyllum}]}
+  - {parameters: {r1: 5.0, r2: 0.0, r3: 0.0}, descriptors: {species_code: CH}, taxa: [{family: Pinaceae, genus: Prunus, species: emarginata}]}
+  - {parameters: {r1: 5.0, r2: 0.0, r3: 0.0}, descriptors: {species_code: CW}, taxa: [{family: Salicaceae, genus: Populus, species: trichocarpa}]}
+  - {parameters: {r1: 8.477025, r2: -0.018033, r3: -0.01814}, descriptors: {species_code: DF}, taxa: [{family: Pinaceae, genus: Pseudotsuga, species: menziesii}]}
+  - {parameters: {r1: 5.0, r2: 0.0, r3: 0.0}, descriptors: {species_code: DG}, taxa: [{family: Cornaceae, genus: Cornus, species: nuttallii}]}
+  - {parameters: {r1: 8.042774, r2: 0.007198, r3: -0.016163}, descriptors: {species_code: ES}, taxa: [{family: Pinaceae, genus: Picea, species: engelmannii}]}
+  - {parameters: {r1: 5.0, r2: 0.0, r3: 0.0}, descriptors: {species_code: GC}, taxa: [{family: Fagaceae, genus: Chrysolepis, species: chrysophylla}]}
+  - {parameters: {r1: 8.042774, r2: 0.007198, r3: -0.016163}, descriptors: {species_code: GF}, taxa: [{family: Pinaceae, genus: Abies, species: grandis}]}
+  - {parameters: {r1: 5.0, r2: 0.0, r3: 0.0}, descriptors: {species_code: HT}, taxa: [{family: Rosaceae, genus: Crataegus, species: NA}]}
+  - {parameters: {r1: 7.558538, r2: -0.015637, r3: -0.009064}, descriptors: {species_code: IC}, taxa: [{family: Cupressaceae, genus: Calocedrus, species: decurrens}]}
+  - {parameters: {r1: 6.489813, r2: -0.029815, r3: -0.009276}, descriptors: {species_code: JP}, taxa: [{family: Pinaceae, genus: Pinus, species: jeffreyi}]}
+  - {parameters: {r1: 6.489813, r2: -0.029815, r3: -0.009276}, descriptors: {species_code: KP}, taxa: [{family: Pinaceae, genus: Pinus, species: attenuata}]}
+  - {parameters: {r1: 6.489813, r2: -0.029815, r3: -0.009276}, descriptors: {species_code: LL}, taxa: [{family: Pinaceae, genus: Larix, species: lyallii}]}
+  - {parameters: {r1: 6.489813, r2: -0.029815, r3: -0.009276}, descriptors: {species_code: LP}, taxa: [{family: Pinaceae, genus: Pinus, species: contorta}]}
+  - {parameters: {r1: 5.0, r2: 0.0, r3: 0.0}, descriptors: {species_code: MH}, taxa: [{family: Pinaceae, genus: Tsuga, species: mertensiana}]}
+  - {parameters: {r1: 8.042774, r2: 0.007198, r3: -0.016163}, descriptors: {species_code: NF}, taxa: [{family: Pinaceae, genus: Abies, species: procera}]}
+  - {parameters: {r1: 5.0, r2: 0.0, r3: 0.0}, descriptors: {species_code: OT}, taxa: [{family: NA, genus: NA, species: NA}]}
+  - {parameters: {r1: 5.0, r2: 0.0, r3: 0.0}, descriptors: {species_code: PB}, taxa: [{family: Betulaceae, genus: Betula, species: papyrifera}]}
+  - {parameters: {r1: 8.477025, r2: -0.018033, r3: -0.01814}, descriptors: {species_code: PP}, taxa: [{family: Pinaceae, genus: Pinus, species: ponderosa}]}
+  - {parameters: {r1: 6.489813, r2: -0.029815, r3: -0.009276}, descriptors: {species_code: PY}, taxa: [{family: Taxaceae, genus: Taxus, species: brevifolia}]}
+  - {parameters: {r1: 5.0, r2: 0.0, r3: 0.0}, descriptors: {species_code: RA}, taxa: [{family: Betulaceae, genus: Alnus, species: rubra}]}
+  - {parameters: {r1: 7.558538, r2: -0.015637, r3: -0.009064}, descriptors: {species_code: RC}, taxa: [{family: Cupressaceae, genus: Thuja, species: plicata}]}
+  - {parameters: {r1: 8.042774, r2: 0.007198, r3: -0.016163}, descriptors: {species_code: RF}, taxa: [{family: Pinaceae, genus: Abies, species: magnifica}]}
+  - {parameters: {r1: 8.042774, r2: 0.007198, r3: -0.016163}, descriptors: {species_code: SF}, taxa: [{family: Pinaceae, genus: Abies, species: amabilis}]}
+  - {parameters: {r1: 6.489813, r2: -0.029815, r3: -0.009276}, descriptors: {species_code: SP}, taxa: [{family: Pinaceae, genus: Pinus, species: lambertiana}]}
+  - {parameters: {r1: 8.042774, r2: 0.007198, r3: -0.016163}, descriptors: {species_code: SS}, taxa: [{family: Pinaceae, genus: Picea, species: sitchensis}]}
+  - {parameters: {r1: 5.0, r2: 0.0, r3: 0.0}, descriptors: {species_code: WA}, taxa: [{family: Betulaceae, genus: Alnus, species: rhombifolia}]}
+  - {parameters: {r1: 6.489813, r2: -0.029815, r3: -0.009276}, descriptors: {species_code: WB}, taxa: [{family: Pinaceae, genus: Pinus, species: albicaulis}]}
+  - {parameters: {r1: 8.042774, r2: 0.007198, r3: -0.016163}, descriptors: {species_code: WF}, taxa: [{family: Pinaceae, genus: Abies, species: concolor}]}
+  - {parameters: {r1: 7.558538, r2: -0.015637, r3: -0.009064}, descriptors: {species_code: WH}, taxa: [{family: Pinaceae, genus: Tsuga, species: heterophylla}]}
+  - {parameters: {r1: 5.0, r2: 0.0, r3: 0.0}, descriptors: {species_code: WI}, taxa: [{family: Salicaceae, genus: Salix, species: Salix}]}
+  - {parameters: {r1: 9.0, r2: 0.0, r3: 0.0}, descriptors: {species_code: WJ}, taxa: [{family: Pinaceae, genus: Juniperus, species: occidentalis}]}
+  - {parameters: {r1: 5.0, r2: 0.0, r3: 0.0}, descriptors: {species_code: WO}, taxa: [{family: Fagaceae, genus: Quercus, species: garryana}]}
+  - {parameters: {r1: 6.489813, r2: -0.029815, r3: -0.009276}, descriptors: {species_code: WP}, taxa: [{family: Pinaceae, genus: Pinus, species: monticola}]}
+  - {parameters: {r1: 7.558538, r2: -0.015637, r3: -0.009064}, descriptors: {species_code: YC}, taxa: [{family: Cupressaceae, genus: Callitropsis, species: nootkatensis}]}

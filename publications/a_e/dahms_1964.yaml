@@ -1,0 +1,13 @@
+publication:
+  key: dahms_1964
+  bibtype: techreport
+  title: Gross and net yield tables for lodgepole pine
+  author: Dahms, Walter G
+  year: 1964
+models:
+- name: hstix100
+  type: fixed_effects
+  response: {hstix100: ft}
+  covariates: {hst: ft, att: years}
+  parameters: {a: -0.0968, b: 0.02679, c: -9.309e-05}
+  equation: hst/(a + b * att + c * att^2)

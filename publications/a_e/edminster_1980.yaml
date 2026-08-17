@@ -1,0 +1,19 @@
+publication:
+  key: edminster_1980
+  bibtype: techreport
+  title: Volume tables and point-sampling factors for ponderosa pine in the Front Range of Colorado
+  author: Edminster, Carleton B and Beeson, Robert T and Metcalf, Gary E
+  year: 1980
+models:
+- name: vsia
+  type: fixed_effects
+  response: {vsia: ft3}
+  covariates: {dsob: in, hst: ft}
+  parameters: {a: 0.0, b: 0.00226}
+  equation: a + b * dsob^2 * hst
+- name: vsim
+  type: fixed_effects
+  response: {vsim: ft3}
+  covariates: {dsob: in, hst: ft}
+  parameters: {a: -0.4467, b: 0.00216}
+  equation: a + b * dsob^2 * hst

@@ -1,0 +1,31 @@
+publication:
+  key: paine_1982
+  bibtype: techreport
+  title: Maximum crown-width equations for southwestern Oregon tree species
+  author: Paine, D.W.
+  year: 1982
+models:
+- name: dcm
+  type: fixed_effects_set
+  response: {dcm: feet}
+  covariates: {dsob: in}
+  parameter_names:
+  - a0
+  - a1
+  - a2
+  specifications:
+  - {parameters: {a0: 3.3625, a1: 2.0303, a2: -0.0073307}, taxa: [{family: Fagaceae, genus: Quercus, species: kelloggii}]}
+  - {parameters: {a0: 2.9794, a1: 1.5512, a2: -0.014161}, taxa: [{family: Fagaceae, genus: Chrysolepis, species: chrysophylla}]}
+  - {parameters: {a0: 4.6366, a1: 1.6078, a2: -0.009625}, taxa: [{family: Pinaceae, genus: Pseudotsuga, species: menziesii}]}
+  - {parameters: {a0: 3.2837, a1: 1.2031, a2: -0.0071858}, taxa: [{family: Cupressaceae, genus: Calocedrus, species: decurrens}]}
+  - {parameters: {a0: 5.303, a1: 0.9293, a2: 0.0}, taxa: [{family: Pinaceae, genus: Pinus, species: jeffreyi}]}
+  - {parameters: {a0: 3.4299, a1: 1.3532, a2: 0.0}, taxa: [{family: Ericaceae, genus: Arbutus, species: menziesii}]}
+  - {parameters: {a0: 3.6883, a1: 0.8627, a2: 0.0}, taxa: [{family: Pinaceae, genus: Abies, species: procera}]}
+  - {parameters: {a0: 3.0786, a1: 1.9242, a2: 0.0}, taxa: [{family: Fagaceae, genus: Quercus, species: garryana}]}
+  - {parameters: {a0: 3.4835, a1: 1.343, a2: -0.0082544}, taxa: [{family: Pinaceae, genus: Pinus, species: ponderosa}]}
+  - {parameters: {a0: 3.0884, a1: 0.7871, a2: 0.0}, taxa: [{family: Pinaceae, genus: Abies, species: magnifica}]}
+  - {parameters: {a0: 4.6601, a1: 1.0702, a2: 0.0}, taxa: [{family: Pinaceae, genus: Pinus, species: lambertiana}]}
+  - {parameters: {a0: 4.4443, a1: 1.704, a2: 0.0}, taxa: [{family: Fagaceae, genus: Notholithocarpus, species: densiflorus}]}
+  - {parameters: {a0: 4.5652, a1: 1.4147, a2: 0.0}, taxa: [{family: Pinaceae, genus: Tsuga, species: heterophylla}]}
+  - {parameters: {a0: 3.2095, a1: 1.2633, a2: -0.0082873}, taxa: [{family: Pinaceae, genus: Pinus, species: monticola}]}
+  - {parameters: {a0: 6.188, a1: 1.0069, a2: 0.0}, taxa: [{family: Pinaceae, genus: Abies, species: concolor}, {family: Pinaceae, genus: Abies, species: grandis}]}

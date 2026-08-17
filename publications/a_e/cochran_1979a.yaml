@@ -1,0 +1,29 @@
+publication:
+  key: cochran_1979a
+  bibtype: techreport
+  title: Site index and height growth curves for managed, even-aged stands of white or grand fir east of the Cascades in Oregon and Washington
+  author: Cochran, PH
+  year: 1979
+  taxa:
+  - family: Pinaceae
+    genus: Abies
+    species: concolor
+models:
+- name: hstix50
+  type: fixed_effects_set
+  response: {hstix50: ft}
+  covariates: {hst: ft, atb: years}
+  parameter_names:
+  - a
+  - b
+  - c
+  - d
+  - e
+  - f
+  - g
+  - h
+  - i
+  - j
+  - k
+  specifications:
+  - {parameters: {a: 3.886, b: -1.8017, c: 0.2105, d: -2.885e-07, e: 1.187e-18, f: -0.30935, g: 1.2383, h: 0.001762, i: -5.4e-06, j: 2.046e-07, k: -4.04e-13}}

@@ -1,0 +1,85 @@
+publication:
+  key: myers_1972
+  bibtype: techreport
+  title: Volume tables and point-sampling factors for Engelmann spruce in Colorado and Wyoming
+  author: Myers, Clifford A and Edminster, Carleton B
+  year: 1972
+models:
+- name: vsoa
+  type: fixed_effects_set
+  response: {vsoa: ft3}
+  covariates: {dsob: in, hst: ft}
+  parameter_names:
+  - a
+  - b
+  specifications:
+  - {parameters: {a: 0.06439, b: 0.00239}, descriptors: {top_dsib: 0, size_class: <= 22500}}
+  - {parameters: {a: 10.41663, b: 0.00193}, descriptors: {top_dsib: 0, size_class: '> 22500'}}
+  - {parameters: {a: -8.301, b: 0.00232}, descriptors: {top_dsib: 4, size_class: <= 27900}}
+  - {parameters: {a: 13.1132, b: 0.00182}, descriptors: {top_dsib: 4, size_class: '> 27900'}}
+- name: vsom
+  type: fixed_effects_set
+  response: {vsom: board_foot}
+  covariates: {dsob: in, hsm: ''}
+  covt_defs: {hsm: Number of 16 foot logs to merchantable top}
+  parameter_names:
+  - a
+  - b
+  specifications:
+  - {parameters: {a: 5.37508, b: 0.23522}, descriptors: {top_dsib: 6, bdft_rule: Scribner, size_class: <= 2530}}
+  - {parameters: {a: 16.11994, b: 0.23097}, descriptors: {top_dsib: 6, bdft_rule: Scribner, size_class: '> 2530'}}
+  - {parameters: {a: 8.19211, b: 0.25726}, descriptors: {top_dsib: 8, bdft_rule: Scribner, size_class: <= 1160}}
+  - {parameters: {a: 28.40381, b: 0.23987}, descriptors: {top_dsib: 8, bdft_rule: Scribner, size_class: '> 1160'}}
+  - {parameters: {a: 3.79359, b: 0.2872}, descriptors: {top_dsib: 6, bdft_rule: International 1/4-inch, size_class: <= 1350}}
+  - {parameters: {a: 66.44465, b: 0.23616}, descriptors: {top_dsib: 6, bdft_rule: International 1/4-inch, size_class: '> 1350'}}
+  - {parameters: {a: 8.14191, b: 0.30857}, descriptors: {top_dsib: 8, bdft_rule: International 1/4-inch, size_class: <= 1060}}
+  - {parameters: {a: 73.92559, b: 0.24647}, descriptors: {top_dsib: 8, bdft_rule: International 1/4-inch, size_class: '> 1060'}}
+- name: rsvg
+  type: fixed_effects_set
+  response: {rsvg: ft3 ft-2}
+  covariates: {dsob: in, hst: ft}
+  parameter_names:
+  - a
+  - b
+  specifications:
+  - {parameters: {a: 0.4254, b: -152.2002}, descriptors: {top_dsib: 4, size_class: small}}
+  - {parameters: {a: 0.3337, b: 2404.3271}, descriptors: {top_dsib: 4, size_class: large}}
+  - {parameters: {a: 2.0114, b: -2776.7987}, descriptors: {top_dsib: 6, bdft_rule: Scribner, size_class: small}}
+  - {parameters: {a: 2.2039, b: -5117.974}, descriptors: {top_dsib: 6, bdft_rule: Scribner, size_class: large}}
+  - {parameters: {a: 2.2277, b: -7144.8882}, descriptors: {top_dsib: 8, bdft_rule: Scribner, size_class: NA}}
+  - {parameters: {a: 2.5504, b: 4695.6766}, descriptors: {top_dsib: 6, bdft_rule: International 1/4-inch, size_class: small}}
+  - {parameters: {a: 2.2644, b: 3120.7902}, descriptors: {top_dsib: 6, bdft_rule: International 1/4-inch, size_class: large}}
+  - {parameters: {a: 2.5798, b: -8082.5339}, descriptors: {top_dsib: 8, bdft_rule: International 1/4-inch, size_class: small}}
+  - {parameters: {a: 2.3597, b: -3929.5049}, descriptors: {top_dsib: 8, bdft_rule: International 1/4-inch, size_class: large}}
+- name: rsvg_2
+  type: fixed_effects_set
+  response: {rsvg: ft3 ft-2}
+  covariates: {dsob: in, hsm: ''}
+  covt_defs: {hsm: Number of 16 foot logs to merchantable top}
+  parameter_names:
+  - a
+  - b
+  specifications:
+  - {parameters: {a: 43.128, b: 985.5299}, descriptors: {top_dsib: 6, bdft_rule: Scribner, size_class: small}}
+  - {parameters: {a: 42.3487, b: 2955.6179}, descriptors: {top_dsib: 6, bdft_rule: Scribner, size_class: large}}
+  - {parameters: {a: 47.1691, b: 1502.037}, descriptors: {top_dsib: 8, bdft_rule: Scribner, size_class: small}}
+  - {parameters: {a: 43.9806, b: 5207.886}, descriptors: {top_dsib: 8, bdft_rule: Scribner, size_class: large}}
+  - {parameters: {a: 51.8372, b: 695.5611}, descriptors: {top_dsib: 6, bdft_rule: International 1/4-inch, size_class: small}}
+  - {parameters: {a: 43.3003, b: 12182.7374}, descriptors: {top_dsib: 6, bdft_rule: International 1/4-inch, size_class: large}}
+  - {parameters: {a: 56.5768, b: 1492.8328}, descriptors: {top_dsib: 8, bdft_rule: International 1/4-inch, size_class: small}}
+  - {parameters: {a: 45.1907, b: 13554.3803}, descriptors: {top_dsib: 8, bdft_rule: International 1/4-inch, size_class: large}}
+- name: vsim
+  type: fixed_effects_set
+  response: {vsim: board_foot}
+  covariates: {dsob: in, hst: ft}
+  parameter_names:
+  - a
+  - b
+  specifications:
+  - {parameters: {a: -15.14666, b: 0.01097}, descriptors: {top_dsib: 6, bdft_rule: Scribner, size_class: <= 12000}}
+  - {parameters: {a: -27.91343, b: 0.01202}, descriptors: {top_dsib: 6, bdft_rule: Scribner, size_class: '> 12000'}}
+  - {parameters: {a: -38.96822, b: 0.01215}, descriptors: {top_dsib: 8, bdft_rule: Scribner, size_class: NA}}
+  - {parameters: {a: -25.61022, b: 0.01391}, descriptors: {top_dsib: 6, bdft_rule: International 1/4-inch, size_class: <= 27300}}
+  - {parameters: {a: 17.02079, b: 0.01235}, descriptors: {top_dsib: 6, bdft_rule: International 1/4-inch, size_class: '> 27300'}}
+  - {parameters: {a: -44.08214, b: 0.01407}, descriptors: {top_dsib: 8, bdft_rule: International 1/4-inch, size_class: <= 18900}}
+  - {parameters: {a: -21.43152, b: 0.01287}, descriptors: {top_dsib: 8, bdft_rule: International 1/4-inch, size_class: '> 18900'}}

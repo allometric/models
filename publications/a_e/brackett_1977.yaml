@@ -1,0 +1,40 @@
+publication:
+  key: brackett_1977
+  bibtype: techreport
+  title: Notes on tarif tree volume computation
+  author: Brackett, Michael
+  year: 1977
+models:
+- name: vsia
+  type: fixed_effects_set
+  response: {vsia: ft3}
+  covariates: {dsob: in, hst: ft}
+  parameter_names:
+  - a
+  - b
+  - c
+  specifications:
+  - {parameters: {a: -2.658025, b: 1.739925, c: 1.133187}, descriptors: {geographic_region: coastal, age_class: < 140 years}, taxa: [{family: Pinaceae, genus: Pseudotsuga, species: menziesii}]}
+  - {parameters: {a: -2.712153, b: 1.659012, c: 1.195715}, descriptors: {geographic_region: coastal, age_class: '>= 80 years'}, taxa: [{family: Pinaceae, genus: Pseudotsuga, species: menziesii}]}
+  - {parameters: {a: -2.734532, b: 1.739418, c: 1.166033}, descriptors: {geographic_region: interior}, taxa: [{family: Pinaceae, genus: Pseudotsuga, species: menziesii}]}
+  - {parameters: {a: -2.702922, b: 1.84268, c: 1.123661}, descriptors: {geographic_region: coastal, age_class: < 140 years}, taxa: [{family: Pinaceae, genus: Tsuga, species: heterophylla}]}
+  - {parameters: {a: -2.663834, b: 1.79023, c: 1.124873}, descriptors: {geographic_region: coastal, age_class: '>= 80 years'}, taxa: [{family: Pinaceae, genus: Tsuga, species: heterophylla}]}
+  - {parameters: {a: -2.571619, b: 1.96971, c: 0.977003}, descriptors: {geographic_region: interior}, taxa: [{family: Pinaceae, genus: Tsuga, species: heterophylla}]}
+  - {parameters: {a: -2.441193, b: 1.720761, c: 1.049976}, descriptors: {geographic_region: coastal, age_class: < 140 years}, taxa: [{family: Cupressaceae, genus: Thuja, species: plicata}]}
+  - {parameters: {a: -2.379642, b: 1.6823, c: 1.039712}, descriptors: {geographic_region: coastal, age_class: '>= 80 years'}, taxa: [{family: Cupressaceae, genus: Thuja, species: plicata}]}
+  - {parameters: {a: -2.464614, b: 1.701993, c: 1.067038}, descriptors: {geographic_region: interior}, taxa: [{family: Cupressaceae, genus: Thuja, species: plicata}]}
+  - {parameters: {a: -2.575642, b: 1.806775, c: 1.094665}, descriptors: {geographic_region: coastal}, taxa: [{family: Pinaceae, genus: Abies, species: balsamea}]}
+  - {parameters: {a: -2.502332, b: 1.864963, c: 1.004903}, descriptors: {geographic_region: interior}, taxa: [{family: Pinaceae, genus: Abies, species: balsamea}]}
+  - {parameters: {a: -2.550299, b: 1.835678, c: 1.042599}, descriptors: {age_class: < 140 years}, taxa: [{family: Pinaceae, genus: Picea, species: stichensis}]}
+  - {parameters: {a: -2.700574, b: 1.754171, c: 1.164531}, descriptors: {age_class: '>= 140 years'}, taxa: [{family: Pinaceae, genus: Picea, species: stichensis}]}
+  - {parameters: {a: -2.539944, b: 1.841226, c: 1.034051}, descriptors: {geographic_region: interior}, taxa: [{family: Pinaceae, genus: Picea, species: stichensis}]}
+  - {parameters: {a: -2.729937, b: 1.909478, c: 1.085681}, taxa: [{family: Pinaceae, genus: Pinus, species: ponderosa}]}
+  - {parameters: {a: -2.615591, b: 1.847504, c: 1.085772}, taxa: [{family: Pinaceae, genus: Pinus, species: contorta}]}
+  - {parameters: {a: -2.480145, b: 1.867286, c: 0.994351}, taxa: [{family: Pinaceae, genus: Pinus, species: monticola}]}
+  - {parameters: {a: -2.624325, b: 1.847123, c: 1.044007}, taxa: [{family: Pinaceae, genus: Larix, species: occidentalis}]}
+  - {parameters: {a: -2.454348, b: 1.741044, c: 1.058437}, taxa: [{family: Cupressaceae, genus: Cupressus, species: nootkatensis}]}
+  - {parameters: {a: -2.672775, b: 1.920617, c: 1.074024}, taxa: [{family: Betulaceae, genus: Alnus, species: rubra}]}
+  - {parameters: {a: -2.770324, b: 1.885813, c: 1.119043}, taxa: [{family: Aceraceae, genus: Acer, species: null}]}
+  - {parameters: {a: -2.63536, b: 1.946034, c: 1.024793}, taxa: [{family: Salicaceae, genus: Populus, species: tremuloides}]}
+  - {parameters: {a: -2.757813, b: 1.911681, c: 1.105403}, taxa: [{family: Betulaceae, genus: Betula, species: null}]}
+  - {parameters: {a: -2.945047, b: 2.0, c: 1.238853}, taxa: [{family: Salicaceae, genus: Populus, species: null}]}

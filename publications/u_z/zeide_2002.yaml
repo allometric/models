@@ -1,0 +1,16 @@
+publication:
+  key: zeide_2002
+  bibtype: inproceedings
+  title: The effect of density on the height-diameter relationship
+  author: Zeide, Boris and Vanderschaaf, Curtis
+  year: 2002
+  descriptors:
+    model_name: Normal height-diameter relationship
+models:
+- name: hst_s
+  type: fixed_effects
+  response: {hst_s: ft}
+  covariates: {dsob_s: in}
+  covt_defs: {dsob_s: Quadratic mean diameter}
+  parameters: {a: 9.4734, b: 0.7374}
+  equation: a * dsob_s^b

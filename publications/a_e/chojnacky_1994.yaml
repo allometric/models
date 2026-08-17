@@ -1,0 +1,38 @@
+publication:
+  key: chojnacky_1994
+  bibtype: techreport
+  title: Volume equations for New Mexico's pinyon-juniper dryland forests. Forest Service research paper
+  author: Chojnacky, DC
+  year: 1994
+models:
+- name: vsoa
+  type: fixed_effects_set
+  response: {vsoa: ft3}
+  covariates: {dsoc: in, hst: ft}
+  parameter_names:
+  - beta_0
+  - beta_1
+  - beta_2
+  specifications:
+  - {parameters: {beta_0: 0.0255, beta_1: 1.7479, beta_2: 0.1994}, descriptors: {min_branch_dia: 1.5, X_0: 4.0021}, taxa: [{family: Cupressaceae, genus: Juniperus, species: deppeana}, {family: Cupressaceae, genus: Juniperus, species: scopulorum}]}
+  - {parameters: {beta_0: -0.0601, beta_1: 1.3846, beta_2: 0.1566}, descriptors: {min_branch_dia: 3, X_0: 5.2101}, taxa: [{family: Cupressaceae, genus: Juniperus, species: deppeana}, {family: Cupressaceae, genus: Juniperus, species: scopulorum}]}
+  - {parameters: {beta_0: -0.0192, beta_1: 2.1297, beta_2: 0.11}, descriptors: {min_branch_dia: 1.5, X_0: 2.5757}, taxa: [{family: Cupressaceae, genus: Juniperus, species: monosperma}, {family: Cupressaceae, genus: Juniperus, species: osteosperma}]}
+  - {parameters: {beta_0: -0.1063, beta_1: 1.4373, beta_2: 0.1324}, descriptors: {min_branch_dia: 3, X_0: 4.0243}, taxa: [{family: Cupressaceae, genus: Juniperus, species: monosperma}, {family: Cupressaceae, genus: Juniperus, species: osteosperma}]}
+  - {parameters: {beta_0: -0.0594, beta_1: 2.6358, beta_2: 0.3248}, descriptors: {min_branch_dia: 1.5, X_0: 2.0773}, taxa: [{family: Pinaceae, genus: Pinus, species: edulis}]}
+  - {parameters: {beta_0: -0.1231, beta_1: 2.0741, beta_2: 0.1831}, descriptors: {min_branch_dia: 3, X_0: 3.5503}, taxa: [{family: Pinaceae, genus: Pinus, species: edulis}]}
+- name: vsoa_2
+  type: fixed_effects_set
+  response: {vsoa: ft3}
+  covariates: {dsoc: in, hst: ft}
+  parameter_names:
+  - beta_0
+  - beta_1
+  - beta_2
+  - X_0
+  specifications:
+  - {parameters: {beta_0: 0.0255, beta_1: 1.7479, beta_2: 0.1994, X_0: 4.0021}, descriptors: {min_branch_dia: 1.5}, taxa: [{family: Cupressaceae, genus: Juniperus, species: deppeana}, {family: Cupressaceae, genus: Juniperus, species: scopulorum}]}
+  - {parameters: {beta_0: -0.0601, beta_1: 1.3846, beta_2: 0.1566, X_0: 5.2101}, descriptors: {min_branch_dia: 3}, taxa: [{family: Cupressaceae, genus: Juniperus, species: deppeana}, {family: Cupressaceae, genus: Juniperus, species: scopulorum}]}
+  - {parameters: {beta_0: -0.0192, beta_1: 2.1297, beta_2: 0.11, X_0: 2.5757}, descriptors: {min_branch_dia: 1.5}, taxa: [{family: Cupressaceae, genus: Juniperus, species: monosperma}, {family: Cupressaceae, genus: Juniperus, species: osteosperma}]}
+  - {parameters: {beta_0: -0.1063, beta_1: 1.4373, beta_2: 0.1324, X_0: 4.0243}, descriptors: {min_branch_dia: 3}, taxa: [{family: Cupressaceae, genus: Juniperus, species: monosperma}, {family: Cupressaceae, genus: Juniperus, species: osteosperma}]}
+  - {parameters: {beta_0: -0.0594, beta_1: 2.6358, beta_2: 0.3248, X_0: 2.0773}, descriptors: {min_branch_dia: 1.5}, taxa: [{family: Pinaceae, genus: Pinus, species: edulis}]}
+  - {parameters: {beta_0: -0.1231, beta_1: 2.0741, beta_2: 0.1831, X_0: 3.5503}, descriptors: {min_branch_dia: 3}, taxa: [{family: Pinaceae, genus: Pinus, species: edulis}]}

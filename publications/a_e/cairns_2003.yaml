@@ -1,0 +1,29 @@
+publication:
+  key: cairns_2003
+  bibtype: article
+  title: Composition and aboveground tree biomass of a dry semi-evergreen forest on Mexico’s Yucatan Peninsula
+  author: Cairns, Michael A and Olmsted, Ingrid and Granados, Juli'an and Argaez, Jorge
+  year: 2003
+models:
+- name: bt
+  type: fixed_effects_set
+  response: {bt: kg}
+  covariates: {dsob: cm, hst: m}
+  parameter_names:
+  - beta_0
+  - beta_1
+  specifications:
+  - {parameters: {beta_0: 0.0, beta_1: 0.0301}, descriptors: {dia_class: '> 10 cm'}, taxa: [{family: Manzanillo, genus: Alseis, species: yucatenensis}]}
+  - {parameters: {beta_0: 0.0, beta_1: 0.0336}, descriptors: {dia_class: '> 10 cm'}, taxa: [{family: Moraceae, genus: Brosimum, species: alicastrum}]}
+  - {parameters: {beta_0: 0.0, beta_1: 0.0447}, descriptors: {dia_class: '> 10 cm'}, taxa: [{family: Sapotaceae, genus: Manilkara, species: zapota}]}
+  - {parameters: {beta_0: 0.0, beta_1: 0.0358}, descriptors: {dia_class: '> 10 cm'}, taxa: [{family: Sapotaceae, genus: Pouteria, species: campechiana}]}
+  - {parameters: {beta_0: 0.0, beta_1: 0.0465}, descriptors: {dia_class: '> 10 cm'}, taxa: [{family: Sapotaceae, genus: Pouteria, species: unilocularis}, {family: Meliaceae, genus: Trichilia, species: minutiflora}]}
+  - {parameters: {beta_0: 0.0867, beta_1: 0.0429}, descriptors: {dia_class: < 10 cm}, taxa: [{family: Manzanillo, genus: Alseis, species: yucatenensis}]}
+  - {parameters: {beta_0: 0.0034, beta_1: 0.0482}, descriptors: {dia_class: < 10 cm}, taxa: [{family: Sapotaceae, genus: Manilkara, species: zapota}]}
+  - {parameters: {beta_0: 0.8322, beta_1: 0.0429}, descriptors: {dia_class: < 10 cm}, taxa: [{family: Sapotaceae, genus: Pouteria, species: unilocularis}]}
+  - {parameters: {beta_0: 0.4125, beta_1: 0.0421}, descriptors: {dia_class: < 10 cm}, taxa: [{family: Meliaceae, genus: Trichilia, species: minutiflora}]}
+  - {parameters: {beta_0: 0.3627, beta_1: 0.0322}, descriptors: {dia_class: < 10 cm}, taxa: [{family: Piperaceae, genus: Piper, species: null}]}
+  - {parameters: {beta_0: 0.0493, beta_1: 0.048}, descriptors: {dia_class: < 10 cm}, taxa: [{family: Sapindaceae, genus: Talisia, species: olivaeformis}]}
+  - {parameters: {beta_0: 0.2385, beta_1: 0.058}, descriptors: {dia_class: < 10 cm}, taxa: [{family: Euphorbiaceae, genus: Croton, species: arboreus}]}
+  - {parameters: {beta_0: 0.178, beta_1: 0.0638}, descriptors: {dia_class: < 10 cm}, taxa: [{family: Euphorbiaceae, genus: Croton, species: lundellii}]}
+  - {parameters: {beta_0: 0.46, beta_1: 0.037}, descriptors: {dia_class: < 10 cm}, taxa: [{family: Myrtaceae, genus: Eugenia, species: null}]}

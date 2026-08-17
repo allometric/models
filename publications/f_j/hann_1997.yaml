@@ -1,0 +1,31 @@
+publication:
+  key: hann_1997
+  bibtype: techreport
+  title: Equations for predicting the largest crown width of stand-grown trees in western Oregon
+  author: Hann, D.W.
+  year: 1997
+models:
+- name: dcl
+  type: fixed_effects_set
+  response: {dcl: ft}
+  covariates: {dsob: in, hst: ft, rc: ft ft-1, dcm: ft}
+  parameter_names:
+  - b0
+  - b1
+  - b2
+  specifications:
+  - {parameters: {b0: 0.0, b1: 0.00436324, b2: 0.602002}, descriptors: {common_name: Douglas-fir, geographic_region: Northwest Oregon}, taxa: [{family: Pinaceae, genus: Pseudotsuga, species: menziesii}]}
+  - {parameters: {b0: 0.0, b1: 0.00371834, b2: 0.808121}, descriptors: {common_name: Douglas-fir, geographic_region: Southwest Oregon}, taxa: [{family: Pinaceae, genus: Pseudotsuga, species: menziesii}]}
+  - {parameters: {b0: -0.251389, b1: 0.00692512, b2: 0.985922}, descriptors: {common_name: Incense-cedar, geographic_region: Western Oregon}, taxa: [{family: Cupressaceae, genus: Calocedrus, species: decurrens}]}
+  - {parameters: {b0: 0.355532, b1: 0.0, b2: 0.0}, descriptors: {common_name: Ponderosa pine, geographic_region: Western Oregon}, taxa: [{family: Pinaceae, genus: Pinus, species: ponderosa}]}
+  - {parameters: {b0: 0.0, b1: 0.00339675, b2: 0.532418}, descriptors: {common_name: Sugar pine, geographic_region: Western Oregon}, taxa: [{family: Pinaceae, genus: Pinus, species: lambertiana}]}
+  - {parameters: {b0: 0.0, b1: 0.00308402, b2: 0.0}, descriptors: {common_name: True firs, geographic_region: Western Oregon}, taxa: [{family: Pinaceae, genus: Abies, species: concolor}, {family: Pinaceae, genus: Abies, species: grandis}, {family: Pinaceae, genus: Abies, species: magnifica}, {family: Pinaceae, genus: Abies, species: procera}, {family: Pinaceae, genus: Abies, species: lasiocarpa}, {family: Pinaceae, genus: Abies, species: amabilis}]}
+  - {parameters: {b0: 0.0, b1: 0.0, b2: 0.0}, descriptors: {common_name: Western hemlock, geographic_region: Western Oregon}, taxa: [{family: Pinaceae, genus: Tsuga, species: heterophylla}]}
+  - {parameters: {b0: 0.0, b1: 0.0, b2: 1.47018}, descriptors: {common_name: Bigleaf maple, geographic_region: Western Oregon}, taxa: [{family: Sapindaceae, genus: Acer, species: macrophyllum}]}
+  - {parameters: {b0: 0.0, b1: 0.0, b2: 1.27196}, descriptors: {common_name: California black oak, geographic_region: Western Oregon}, taxa: [{family: Fagaceae, genus: Quercus, species: kelloggii}]}
+  - {parameters: {b0: 0.0, b1: 0.0207676, b2: 0.0}, descriptors: {common_name: Canyon live oak, geographic_region: Western Oregon}, taxa: [{family: Fagaceae, genus: Quercus, species: chrysolepis}]}
+  - {parameters: {b0: 0.0, b1: 0.0, b2: 1.16144}, descriptors: {common_name: Golden chinkapin, geographic_region: Western Oregon}, taxa: [{family: Fagaceae, genus: Chrysolepis, species: chrysophylla}]}
+  - {parameters: {b0: 0.364811, b1: 0.0, b2: 0.0}, descriptors: {common_name: Oregon white oak, geographic_region: Western Oregon}, taxa: [{family: Fagaceae, genus: Quercus, species: garryana}]}
+  - {parameters: {b0: 0.118621, b1: 0.00384872, b2: 0.0}, descriptors: {common_name: Pacific madrone, geographic_region: Western Oregon}, taxa: [{family: Ericaceae, genus: Arbutus, species: menziesii}]}
+  - {parameters: {b0: 0.322714, b1: 0.0, b2: 0.0}, descriptors: {common_name: Red alder, geographic_region: Western Oregon}, taxa: [{family: Betulaceae, genus: Alnus, species: rubra}]}
+  - {parameters: {b0: 0.0, b1: 0.0111972, b2: 0.0}, descriptors: {common_name: Tanoak, geographic_region: Western Oregon}, taxa: [{family: Fagaceae, genus: Notholithocarpus, species: densiflorus}]}

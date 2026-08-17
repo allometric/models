@@ -1,0 +1,67 @@
+publication:
+  key: delcourt_2022
+  bibtype: article
+  title: Allometric equations and wood density parameters for estimating aboveground and woody debris biomass in Cajander larch (Larix cajanderi) forests of northeast Siberia
+  author: Delcourt, Clement Jean Fr'ed'eric and Veraverbeke, Sander
+  year: 2022
+models:
+- name: bs
+  type: fixed_effects_set
+  response: {bs: kg}
+  covariates: {dsob: cm}
+  parameter_names:
+  - a
+  - b
+  specifications:
+  - {parameters: {a: 0.066, b: 2.493}, region: [RU-MAG], descriptors: {response_name: bs, dbh_range_cm: 3.9-52.8}}
+  - {parameters: {a: 0.128, b: 2.227}, region: [RU-SAK], descriptors: {response_name: bs, dbh_range_cm: 1.8-18.9}}
+- name: bsi
+  type: fixed_effects_set
+  response: {bsi: kg}
+  covariates: {dsob: cm}
+  parameter_names:
+  - a
+  - b
+  specifications:
+  - {parameters: {a: 0.058, b: 2.505}, region: [RU-MAG], descriptors: {response_name: bsi, dbh_range_cm: 3.9-52.8}}
+  - {parameters: {a: 0.084, b: 2.308}, region: [RU-SAK], descriptors: {response_name: bsi, dbh_range_cm: 1.8-18.9}}
+- name: bk
+  type: fixed_effects_set
+  response: {bk: kg}
+  covariates: {dsob: cm}
+  parameter_names:
+  - a
+  - b
+  specifications:
+  - {parameters: {a: 0.006, b: 2.556}, region: [RU-MAG], descriptors: {response_name: bk, dbh_range_cm: 3.9-52.8}}
+  - {parameters: {a: 0.046, b: 2.006}, region: [RU-SAK], descriptors: {response_name: bk, dbh_range_cm: 1.8-18.9}}
+- name: br
+  type: fixed_effects_set
+  response: {br: kg}
+  covariates: {dsob: cm}
+  parameter_names:
+  - a
+  - b
+  specifications:
+  - {parameters: {a: 0.031, b: 2.136}, region: [RU-MAG], descriptors: {response_name: br, dbh_range_cm: 3.9-52.8}}
+  - {parameters: {a: 0.105, b: 1.757}, region: [RU-SAK], descriptors: {response_name: br, dbh_range_cm: 1.8-18.9}}
+- name: bf
+  type: fixed_effects_set
+  response: {bf: kg}
+  covariates: {dsob: cm}
+  parameter_names:
+  - a
+  - b
+  specifications:
+  - {parameters: {a: 0.016, b: 1.835}, region: [RU-MAG], descriptors: {response_name: bf, dbh_range_cm: 3.9-52.8}}
+  - {parameters: {a: 0.043, b: 1.642}, region: [RU-SAK], descriptors: {response_name: bf, dbh_range_cm: 1.8-18.9}}
+- name: bt
+  type: fixed_effects_set
+  response: {bt: kg}
+  covariates: {dsob: cm}
+  parameter_names:
+  - a
+  - b
+  specifications:
+  - {parameters: {a: 0.097, b: 2.423}, region: [RU-MAG], descriptors: {response_name: bt, dbh_range_cm: 3.9-52.8}}
+  - {parameters: {a: 0.26, b: 2.062}, region: [RU-SAK], descriptors: {response_name: bt, dbh_range_cm: 1.8-18.9}}

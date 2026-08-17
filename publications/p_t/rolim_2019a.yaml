@@ -1,0 +1,31 @@
+publication:
+  key: rolim_2019a
+  bibtype: incollection
+  title: Biometric Models for Mixed-species Plantation in the North of Espirito Santo, Brazil
+  author: Rolim, Samir and Orellano, Enrique and Piotto, Daniel and de, Edgar
+  year: 2019
+models:
+- name: hst
+  type: fixed_effects
+  response: {hst: m}
+  covariates: {dsob: cm}
+  parameters: {beta_0: 0.1749, beta_1: 1.608}
+  equation: (dsob/(beta_0 * dsob + beta_1))^2
+- name: hsm
+  type: fixed_effects
+  response: {hsm: m}
+  covariates: {dsob: cm}
+  parameters: {beta_0: 12.0811, beta_1: 0.163, beta_2: 9.3199}
+  equation: beta_0/(1 + beta_2 * exp(-beta_1 * dsob))
+- name: vsim
+  type: fixed_effects
+  response: {vsim: m3}
+  covariates: {dsob: cm, hsm: m}
+  parameters: {beta_0: 0.000111, beta_1: 2.0479, beta_2: 0.6352}
+  equation: beta_0 * dsob^beta_1 * hsm^beta_2
+- name: bt
+  type: fixed_effects
+  response: {bt: kg}
+  covariates: {dsob: cm, hst: m, rwd: g cm-3}
+  parameters: {beta_0: 0.1009, beta_1: 2.2472, beta_2: 0.4333, beta_3: 0.7865}
+  equation: beta_0 * dsob^beta_1 * hst^beta_2 * rwd^beta_3

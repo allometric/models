@@ -1,0 +1,13 @@
+publication:
+  key: bell_1981
+  bibtype: techreport
+  title: Tarif tables for mountain hemlock developed from an equation of total stem cubic-foot volume
+  author: Bell, John F and Marshall, David D and Johnson, Gregory P
+  year: 1981
+models:
+- name: vsia
+  type: fixed_effects
+  response: {vsia: ft3}
+  covariates: {dsob: in, hst: ft}
+  parameters: {a: -2.956054, b: 1.8140497, c: 1.2744923}
+  equation: 10^a * dsob^b * hst^c

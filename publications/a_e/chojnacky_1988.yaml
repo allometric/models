@@ -1,0 +1,39 @@
+publication:
+  key: chojnacky_1988
+  bibtype: techreport
+  title: Juniper, pinyon, oak, and mesquite volume equations for Arizona
+  author: Chojnacky, David C
+  year: 1988
+models:
+- name: vsoa
+  type: fixed_effects_set
+  response: {vsoa: ft3}
+  covariates: {dsoc: in, hst: ft}
+  parameter_names:
+  - beta_0
+  - beta_1
+  - beta_2
+  specifications:
+  - {parameters: {beta_0: -0.129, beta_1: 2.0255, beta_2: 0.1011}, descriptors: {species_group: juniper, X_threshold: <= 6, single_stem: false}, taxa: [{family: Cupressaceae, genus: Juniperus, species: osteosperma}, {family: Cupressaceae, genus: Juniperus, species: monosperma}]}
+  - {parameters: {beta_0: -0.032, beta_1: 2.1076, beta_2: 0.1454}, descriptors: {species_group: juniper, X_threshold: <= 6, single_stem: true}, taxa: [{family: Cupressaceae, genus: Juniperus, species: osteosperma}, {family: Cupressaceae, genus: Juniperus, species: monosperma}]}
+  - {parameters: {beta_0: -0.06, beta_1: 2.5139, beta_2: 0.1466}, descriptors: {species_group: pinyon, X_threshold: <= 3}, taxa: [{family: Pinaceae, genus: Pinus, species: edulis}, {family: Pinaceae, genus: Pinus, species: cembroides}]}
+  - {parameters: {beta_0: 0.02, beta_1: 1.8972, beta_2: 0.5756}, descriptors: {species_group: mesquite, X_threshold: <= 2, single_stem: false}, taxa: [{family: Fabaceae, genus: Prosopis, species: velutina}, {family: Fabaceae, genus: Senegalia, species: gregii}, {family: Fabaceae, genus: Olneya, species: tesota}]}
+  - {parameters: {beta_0: -0.043, beta_1: 2.3378, beta_2: 0.8024}, descriptors: {species_group: mesquite, X_threshold: <= 2, single_stem: true}, taxa: [{family: Fabaceae, genus: Prosopis, species: velutina}, {family: Fabaceae, genus: Senegalia, species: gregii}, {family: Fabaceae, genus: Olneya, species: tesota}]}
+  - {parameters: {beta_0: -0.028, beta_1: 1.9545, beta_2: 0.14}, descriptors: {species_group: oak, X_threshold: <= 4, single_stem: false}, taxa: [{family: Fagaceae, genus: Quercus, species: emoryi}, {family: Fagaceae, genus: Quercus, species: arizonica}, {family: Fagaceae, genus: Quercus, species: oblongifolia}, {family: Fagaceae, genus: Quercus, species: gambelii}, {family: Fagaceae, genus: Quercus, species: turbinella}, {family: Fagaceae, genus: Quercus, species: chysolepis}]}
+  - {parameters: {beta_0: -0.068, beta_1: 2.4048, beta_2: 0.1383}, descriptors: {species_group: oak, X_threshold: <= 4, single_stem: true}, taxa: [{family: Fagaceae, genus: Quercus, species: emoryi}, {family: Fagaceae, genus: Quercus, species: arizonica}, {family: Fagaceae, genus: Quercus, species: oblongifolia}, {family: Fagaceae, genus: Quercus, species: gambelii}, {family: Fagaceae, genus: Quercus, species: turbinella}, {family: Fagaceae, genus: Quercus, species: chysolepis}]}
+- name: vsoa_2
+  type: fixed_effects_set
+  response: {vsoa: ft3}
+  covariates: {dsoc: in, hst: ft}
+  parameter_names:
+  - beta_3
+  - beta_1
+  - beta_4
+  specifications:
+  - {parameters: {beta_3: 10.786, beta_1: 2.0255, beta_4: -43.663}, descriptors: {species_group: juniper, X_threshold: '> 6', single_stem: false}, taxa: [{family: Cupressaceae, genus: Juniperus, species: osteosperma}, {family: Cupressaceae, genus: Juniperus, species: monosperma}]}
+  - {parameters: {beta_3: 15.675, beta_1: 2.1076, beta_4: -62.827}, descriptors: {species_group: juniper, X_threshold: '> 6', single_stem: true}, taxa: [{family: Cupressaceae, genus: Juniperus, species: osteosperma}, {family: Cupressaceae, genus: Juniperus, species: monosperma}]}
+  - {parameters: {beta_3: 3.898, beta_1: 2.5139, beta_4: -7.917}, descriptors: {species_group: pinyon, X_threshold: '> 3'}, taxa: [{family: Pinaceae, genus: Pinus, species: edulis}, {family: Pinaceae, genus: Pinus, species: cembroides}]}
+  - {parameters: {beta_3: 6.927, beta_1: 1.8972, beta_4: -9.21}, descriptors: {species_group: mesquite, X_threshold: '> 2', single_stem: false}, taxa: [{family: Fabaceae, genus: Prosopis, species: velutina}, {family: Fabaceae, genus: Senegalia, species: gregii}, {family: Fabaceae, genus: Olneya, species: tesota}]}
+  - {parameters: {beta_3: 9.586, beta_1: 2.3378, beta_4: -12.839}, descriptors: {species_group: mesquite, X_threshold: '> 2', single_stem: true}, taxa: [{family: Fabaceae, genus: Prosopis, species: velutina}, {family: Fabaceae, genus: Senegalia, species: gregii}, {family: Fabaceae, genus: Olneya, species: tesota}]}
+  - {parameters: {beta_3: 6.691, beta_1: 1.9545, beta_4: -17.918}, descriptors: {species_group: oak, X_threshold: '> 4', single_stem: false}, taxa: [{family: Fagaceae, genus: Quercus, species: emoryi}, {family: Fagaceae, genus: Quercus, species: arizonica}, {family: Fagaceae, genus: Quercus, species: oblongifolia}, {family: Fagaceae, genus: Quercus, species: gambelii}, {family: Fagaceae, genus: Quercus, species: turbinella}, {family: Fagaceae, genus: Quercus, species: chysolepis}]}
+  - {parameters: {beta_3: 6.571, beta_1: 2.4048, beta_4: -17.704}, descriptors: {species_group: oak, X_threshold: '> 4', single_stem: true}, taxa: [{family: Fagaceae, genus: Quercus, species: emoryi}, {family: Fagaceae, genus: Quercus, species: arizonica}, {family: Fagaceae, genus: Quercus, species: oblongifolia}, {family: Fagaceae, genus: Quercus, species: gambelii}, {family: Fagaceae, genus: Quercus, species: turbinella}, {family: Fagaceae, genus: Quercus, species: chysolepis}]}
