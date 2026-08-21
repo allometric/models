@@ -4,7 +4,8 @@ publication:
   title: Notes on tarif tree volume computation
   author: Brackett, Michael
   year: 1977
-models:
+models: []
+model_sets:
 - name: vsia
   type: fixed_effects_set
   response: {vsia: ft3}

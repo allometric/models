@@ -4,7 +4,8 @@ publication:
   title: Allometric equations and wood density parameters for estimating aboveground and woody debris biomass in Cajander larch (Larix cajanderi) forests of northeast Siberia
   author: Delcourt, Clement Jean Fr'ed'eric and Veraverbeke, Sander
   year: 2022
-models:
+models: []
+model_sets:
 - name: bs
   type: fixed_effects_set
   taxa:

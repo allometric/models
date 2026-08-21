@@ -4,7 +4,8 @@ publication:
   title: Generic and specific stem volume models for three subtropical forest types in southern Brazil
   author: Vibrans, Alexander C and Moser, Paolo and Oliveira, Laio Z and de, João P
   year: 2015
-models:
+models: []
+model_sets:
 - name: vsoa
   type: fixed_effects_set
   response: {vsoa: m3}

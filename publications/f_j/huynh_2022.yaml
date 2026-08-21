@@ -5,30 +5,6 @@ publication:
   author: Huynh, Trinh and Lewis, Tom and Applegate, Grahame and Pachas, Anibal Nahuel A and Lee, David J
   year: 2022
 models:
-- name: bt
-  type: fixed_effects_set
-  taxa:
-  - family: Myrtaceae
-    genus: Corymbia
-    species: citriodora
-  response: {bt: kg}
-  covariates: {dsob: cm}
-  prediction_function: alpha * dsob^beta
-  specifications:
-  - {parameters: {alpha: 0.0822, beta: 2.64134}, descriptors: {equation_no: '3'}}
-  - {parameters: {alpha: 0.10606, beta: 2.56803}, descriptors: {equation_no: '10'}}
-- name: bt_2
-  type: fixed_effects_set
-  taxa:
-  - family: Myrtaceae
-    genus: Corymbia
-    species: citriodora
-  response: {bt: kg}
-  covariates: {hst: m}
-  prediction_function: alpha * hst^beta
-  specifications:
-  - {parameters: {alpha: 0.00622, beta: 3.49873}, descriptors: {equation_no: '4'}}
-  - {parameters: {alpha: 0.00027, beta: 4.45063}, descriptors: {equation_no: '11'}}
 - name: bt_3
   type: fixed_effects
   taxa:
@@ -216,3 +192,28 @@ models:
   parameters: {alpha: 0.06581, beta: 0.38942}
   descriptors: {equation_no: '23'}
   prediction_function: alpha * (dsob^2 * hst * rws * vc)^beta
+model_sets:
+- name: bt
+  type: fixed_effects_set
+  taxa:
+  - family: Myrtaceae
+    genus: Corymbia
+    species: citriodora
+  response: {bt: kg}
+  covariates: {dsob: cm}
+  prediction_function: alpha * dsob^beta
+  specifications:
+  - {parameters: {alpha: 0.0822, beta: 2.64134}, descriptors: {equation_no: '3'}}
+  - {parameters: {alpha: 0.10606, beta: 2.56803}, descriptors: {equation_no: '10'}}
+- name: bt_2
+  type: fixed_effects_set
+  taxa:
+  - family: Myrtaceae
+    genus: Corymbia
+    species: citriodora
+  response: {bt: kg}
+  covariates: {hst: m}
+  prediction_function: alpha * hst^beta
+  specifications:
+  - {parameters: {alpha: 0.00622, beta: 3.49873}, descriptors: {equation_no: '4'}}
+  - {parameters: {alpha: 0.00027, beta: 4.45063}, descriptors: {equation_no: '11'}}

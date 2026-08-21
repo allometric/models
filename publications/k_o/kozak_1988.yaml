@@ -4,7 +4,8 @@ publication:
   title: A variable-exponent taper equation
   author: Kozak, A
   year: 1988
-models:
+models: []
+model_sets:
 - name: dsih
   type: fixed_effects_set
   response: {dsih: cm}

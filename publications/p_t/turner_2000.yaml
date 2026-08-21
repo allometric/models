@@ -4,7 +4,8 @@ publication:
   title: Assessing alternative allometric algorithms for estimating leaf area of Douglas-fir trees and stands
   author: Turner, David P and Acker, Steven A and Means, Joseph E and Garman, Steven L
   year: 2000
-models:
+models: []
+model_sets:
 - name: bf
   type: fixed_effects_set
   response: {bf: kg}

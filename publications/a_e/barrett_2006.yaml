@@ -4,7 +4,8 @@ publication:
   title: Optimizing efficiency of height modeling for extensive forest inventories
   author: Barrett, T.M.
   year: 2006
-models:
+models: []
+model_sets:
 - name: hst
   type: fixed_effects_set
   response: {hst: m}

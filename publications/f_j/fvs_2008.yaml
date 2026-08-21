@@ -4,7 +4,8 @@ publication:
   title: Pacific Northwest Coast (PN) Variant Overview - Forest Vegetation Simulator
   author: Staff, FVS
   year: 2008
-models:
+models: []
+model_sets:
 - name: hst
   type: fixed_effects_set
   response: {hst: ft}

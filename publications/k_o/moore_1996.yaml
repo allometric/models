@@ -4,7 +4,8 @@ publication:
   title: Height-diameter equations for ten tree species in the Inland Northwest
   author: Moore, James A and Zhang, Lianjun and Stuck, Dean
   year: 1996
-models:
+models: []
+model_sets:
 - name: hst
   type: fixed_effects_set
   response: {hst: ft}

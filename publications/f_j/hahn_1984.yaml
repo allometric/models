@@ -4,7 +4,8 @@ publication:
   title: Tree Volume and Biomass Equations for the Lake States
   author: Hahn, Jerold T
   year: 1984
-models:
+models: []
+model_sets:
 - name: hst
   type: fixed_effects_set
   response: {hst: ft}

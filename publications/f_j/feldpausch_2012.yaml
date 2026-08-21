@@ -5,6 +5,21 @@ publication:
   author: 'Feldpausch, Ted R and Lloyd, Jon and Lewis, Simon L and Brienen, Roel JW and Gloor, Manuel and Monteagudo Mendoza, Abel and Lopez-Gonzalez, Gabriela and Banin, Lindsay and Abu Salim, Kamariah and Affum-Baffoe, Kofi and others, '
   year: 2012
 models:
+- name: bt
+  type: fixed_effects
+  response: {bt: kg}
+  covariates: {dsob: cm, rws: g cm-3}
+  parameters: {a: -1.8222, b: 2.337, c: 0.1632, d: -0.0248, e: 0.9792, rse: 0.3595}
+  descriptors: {geographic_region: pantropical}
+  prediction_function: cf <- exp(rse^2/2); cf * exp(a + b * log(dsob) + c * log(dsob)^2 + d * log(dsob)^3 + e * log(rws))
+- name: bt_2
+  type: fixed_effects
+  response: {bt: kg}
+  covariates: {dsob: cm, rws: g cm-3, hst: m}
+  parameters: {a: -2.9205, b: 0.9894, rse: 0.3222}
+  descriptors: {geographic_region: pantropical}
+  prediction_function: cf <- exp(rse^2/2); cf * exp(a + b * log(dsob^2 * rws * hst))
+model_sets:
 - name: hst
   type: fixed_effects_set
   response: {hst: m}
@@ -22,17 +37,3 @@ models:
   - {parameters: {a: 50.096, b: 0.03711, c: 0.8291}, descriptors: {continent: Africa, country: [CM, GA, TZ, GH, LB]}}
   - {parameters: {a: 42.574, b: 0.0482, c: 0.8307}, descriptors: {continent: S. America, country: [BO, BR, BR, CO, EC, PE]}}
   - {parameters: {a: 50.874, b: 0.042, c: 0.784}, descriptors: {country: [CM, GA, TZ, GH, LB, BO, BR, CO, EC, PE, BN, MY, AU]}}
-- name: bt
-  type: fixed_effects
-  response: {bt: kg}
-  covariates: {dsob: cm, rws: g cm-3}
-  parameters: {a: -1.8222, b: 2.337, c: 0.1632, d: -0.0248, e: 0.9792, rse: 0.3595}
-  descriptors: {geographic_region: pantropical}
-  prediction_function: cf <- exp(rse^2/2); cf * exp(a + b * log(dsob) + c * log(dsob)^2 + d * log(dsob)^3 + e * log(rws))
-- name: bt_2
-  type: fixed_effects
-  response: {bt: kg}
-  covariates: {dsob: cm, rws: g cm-3, hst: m}
-  parameters: {a: -2.9205, b: 0.9894, rse: 0.3222}
-  descriptors: {geographic_region: pantropical}
-  prediction_function: cf <- exp(rse^2/2); cf * exp(a + b * log(dsob^2 * rws * hst))

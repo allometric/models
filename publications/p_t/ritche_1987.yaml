@@ -5,6 +5,41 @@ publication:
   author: Ritchie, Martin W and Hann, David W
   year: 1987
 models:
+- name: rc_5
+  type: fixed_effects
+  response: {rc: ft ft-1}
+  covariates: {ccfl: ft2 ft-2}
+  covt_defs: {ccfl: crown competition factor of large trees}
+  parameters: {b_2: -0.00088567}
+  taxa:
+  - {family: Fagaceae, genus: Notholithocarpus, species: densiflorus}
+  prediction_function: 1 - ((1)/(1 + exp(b_2 * ccfl)))
+- name: rc_6
+  type: fixed_effects
+  response: {rc: ft ft-1}
+  covariates: {gs_s: ft2 acre-1}
+  parameters: {b_0: 2.22352, b_3: -0.426931}
+  taxa:
+  - {family: Fagaceae, genus: Quercus, species: chrysolepis}
+  prediction_function: 1 - ((1)/(1 + exp(b_0 + b_3 * log(gs_s))))
+- name: rc_7
+  type: fixed_effects
+  response: {rc: ft ft-1}
+  covariates: {hst: ft, dsob: in, gs_s: ft2 acre-1}
+  parameters: {b_0: 2.65524, b_3: -0.646829, b_4: 0.728396}
+  taxa:
+  - {family: Fagaceae, genus: Quercus, species: kelloggii}
+  prediction_function: 1 - ((1)/(1 + exp(b_0 + b_3 * log(gs_s) + b_4 * (dsob/hst))))
+- name: rc_8
+  type: fixed_effects
+  response: {rc: ft ft-1}
+  covariates: {hst: ft, ccfl: ft2 ft-2}
+  covt_defs: {ccfl: crown competition factor of large trees}
+  parameters: {b_0: 0.919152, b_1: -0.00768402, b_2: -0.00618461}
+  taxa:
+  - {family: Fagaceae, genus: Quercus, species: kelloggii}
+  prediction_function: 1 - ((1)/(1 + exp(b_0 + b_1 * hst + b_2 * ccfl)))
+model_sets:
 - name: rc
   type: fixed_effects_set
   response: {rc: ft ft-1}
@@ -42,37 +77,3 @@ models:
   specifications:
   - {parameters: {b_0: 0.791433, b_2: -0.00255926}, taxa: [{family: Pinaceae, genus: Tsuga, species: heterophylla}]}
   - {parameters: {b_0: 0.36163, b_2: -0.00647642}, taxa: [{family: Fagaceae, genus: Quercus, species: garryana}]}
-- name: rc_5
-  type: fixed_effects
-  response: {rc: ft ft-1}
-  covariates: {ccfl: ft2 ft-2}
-  covt_defs: {ccfl: crown competition factor of large trees}
-  parameters: {b_2: -0.00088567}
-  taxa:
-  - {family: Fagaceae, genus: Notholithocarpus, species: densiflorus}
-  prediction_function: 1 - ((1)/(1 + exp(b_2 * ccfl)))
-- name: rc_6
-  type: fixed_effects
-  response: {rc: ft ft-1}
-  covariates: {gs_s: ft2 acre-1}
-  parameters: {b_0: 2.22352, b_3: -0.426931}
-  taxa:
-  - {family: Fagaceae, genus: Quercus, species: chrysolepis}
-  prediction_function: 1 - ((1)/(1 + exp(b_0 + b_3 * log(gs_s))))
-- name: rc_7
-  type: fixed_effects
-  response: {rc: ft ft-1}
-  covariates: {hst: ft, dsob: in, gs_s: ft2 acre-1}
-  parameters: {b_0: 2.65524, b_3: -0.646829, b_4: 0.728396}
-  taxa:
-  - {family: Fagaceae, genus: Quercus, species: kelloggii}
-  prediction_function: 1 - ((1)/(1 + exp(b_0 + b_3 * log(gs_s) + b_4 * (dsob/hst))))
-- name: rc_8
-  type: fixed_effects
-  response: {rc: ft ft-1}
-  covariates: {hst: ft, ccfl: ft2 ft-2}
-  covt_defs: {ccfl: crown competition factor of large trees}
-  parameters: {b_0: 0.919152, b_1: -0.00768402, b_2: -0.00618461}
-  taxa:
-  - {family: Fagaceae, genus: Quercus, species: kelloggii}
-  prediction_function: 1 - ((1)/(1 + exp(b_0 + b_1 * hst + b_2 * ccfl)))

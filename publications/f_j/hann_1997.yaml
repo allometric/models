@@ -4,7 +4,8 @@ publication:
   title: Equations for predicting the largest crown width of stand-grown trees in western Oregon
   author: Hann, D.W.
   year: 1997
-models:
+models: []
+model_sets:
 - name: dcl
   type: fixed_effects_set
   response: {dcl: ft}

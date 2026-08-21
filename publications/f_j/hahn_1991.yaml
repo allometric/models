@@ -4,7 +4,8 @@ publication:
   title: Cubic and board foot volume models for the Central States
   author: Hahn, Jerold T and Hansen, Mark H
   year: 1991
-models:
+models: []
+model_sets:
 - name: vsia
   type: fixed_effects_set
   response: {vsia: ft3}

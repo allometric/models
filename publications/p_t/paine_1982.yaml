@@ -4,7 +4,8 @@ publication:
   title: Maximum crown-width equations for southwestern Oregon tree species
   author: Paine, D.W.
   year: 1982
-models:
+models: []
+model_sets:
 - name: dcm
   type: fixed_effects_set
   response: {dcm: feet}

@@ -4,7 +4,8 @@ publication:
   title: Regional prediction models for the aboveground biomass estimation of eucalyptus grandis in Northeastern Argentina
   author: Winck, Rosa and Fassola, Hugo and Barth, Sara Regina and Crechi, Ernesto and Keller, Aldo and Videla, Daniel and Zaderenko, Constantino
   year: 2015
-models:
+models: []
+model_sets:
 - name: bb
   type: fixed_effects_set
   taxa:

@@ -4,7 +4,8 @@ publication:
   title: Tree height estimation in redwood/Douglas-fir stands in Mendocino County
   author: Eng, Helge
   year: 2012
-models:
+models: []
+model_sets:
 - name: hst
   type: fixed_effects_set
   response: {hst: ft}

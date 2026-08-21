@@ -5,6 +5,31 @@ publication:
   author: Montero, G and López-Leiva, C and Ruiz-Peinado, R and López-Senespleda, E and Onrubia, R and Pasalodos, M
   year: 2020
 models:
+- name: hht_2
+  type: fixed_effects
+  response: {hht: m}
+  covariates: {ah: years}
+  parameters: {c1: 0.1322, c2: 0.7778}
+  taxa:
+  - {family: Ericaceae, genus: Erica, species: scoparia}
+  prediction_function: c1 * ah^c2
+- name: dh_2
+  type: fixed_effects
+  response: {dh: mm}
+  covariates: {ah: years}
+  parameters: {c1: 1.246, c2: 0.9504}
+  taxa:
+  - {family: Anacardiaceae, genus: Pistacia, species: lentiscus}
+  prediction_function: c1 * ah^c2
+- name: i_bh_p_2
+  type: fixed_effects
+  response: {i_bh_p: t ha-1 year-1}
+  covariates: {rv_p: m2 m-2, hht_p: dm}
+  parameters: {c1: -0.1694, c2: 0.3119, c3: 1.6414, c4: 0.6606}
+  taxa:
+  - {family: Anacardiaceae, genus: Pistacia, species: lentiscus}
+  prediction_function: c4 * exp(c1) * rv_p^c2 * hht_p^c3
+model_sets:
 - name: hht
   type: fixed_effects_set
   response: {hht: m}
@@ -38,14 +63,6 @@ models:
   - {parameters: {c1: -0.002, c2: 0.0994, c3: -0.306}, taxa: [{family: Lamiaceae, genus: Lavandula, species: stoechas}]}
   - {parameters: {c1: -0.0056, c2: 0.2411, c3: -0.4756}, taxa: [{family: Lamiaceae, genus: Phlomis, species: purpurea}]}
   - {parameters: {c1: -0.0008, c2: 0.0687, c3: -0.4222}, taxa: [{family: Lamiaceae, genus: Thymus, species: spp}]}
-- name: hht_2
-  type: fixed_effects
-  response: {hht: m}
-  covariates: {ah: years}
-  parameters: {c1: 0.1322, c2: 0.7778}
-  taxa:
-  - {family: Ericaceae, genus: Erica, species: scoparia}
-  prediction_function: c1 * ah^c2
 - name: dh
   type: fixed_effects_set
   response: {dh: mm}
@@ -90,14 +107,6 @@ models:
   - {parameters: {c1: -0.0283, c2: 1.1574, c3: 0.5316}, taxa: [{family: Lamiaceae, genus: Lavandula, species: stoechas}]}
   - {parameters: {c1: 0.022, c2: -0.0323, c3: 6.4075}, taxa: [{family: Lamiaceae, genus: Phlomis, species: purpurea}]}
   - {parameters: {c1: -0.0138, c2: 0.4069, c3: 4.7902}, taxa: [{family: Lamiaceae, genus: Thymus, species: spp}]}
-- name: dh_2
-  type: fixed_effects
-  response: {dh: mm}
-  covariates: {ah: years}
-  parameters: {c1: 1.246, c2: 0.9504}
-  taxa:
-  - {family: Anacardiaceae, genus: Pistacia, species: lentiscus}
-  prediction_function: c1 * ah^c2
 - name: bh_p
   type: fixed_effects_set
   response: {bh_p: t ha-1}
@@ -147,14 +156,6 @@ models:
   - {parameters: {c1: 0.1592441, c2: 0.6173933, c3: 1.0}, taxa: [{family: Lamiaceae, genus: Lavandula, species: stoechas}]}
   - {parameters: {c1: 0.1020098, c2: 1.0, c3: 1.0}, taxa: [{family: Lamiaceae, genus: Phlomis, species: purpurea}]}
   - {parameters: {c1: 0.1022028, c2: 0.511909, c3: 1.0}, taxa: [{family: Lamiaceae, genus: Thymus, species: spp}]}
-- name: i_bh_p_2
-  type: fixed_effects
-  response: {i_bh_p: t ha-1 year-1}
-  covariates: {rv_p: m2 m-2, hht_p: dm}
-  parameters: {c1: -0.1694, c2: 0.3119, c3: 1.6414, c4: 0.6606}
-  taxa:
-  - {family: Anacardiaceae, genus: Pistacia, species: lentiscus}
-  prediction_function: c4 * exp(c1) * rv_p^c2 * hht_p^c3
 - name: i_bh_p_3
   type: fixed_effects_set
   response: {i_bh_p: t ha-1}

@@ -5,6 +5,272 @@ publication:
   author: 'Forrester, David I and Tachauer, I Heloise H and Annighoefer, Peter and Barbeito, Ignacio and Pretzsch, Hans and Ruiz-Peinado, Ricardo and Stark, Hendrik and Vacchiano, Giorgio and Zlatanov, Tzvetan and Chakraborty, Tamalika and others, '
   year: 2017
 models:
+- name: bt_2
+  type: fixed_effects
+  response: {bt: kg}
+  covariates: {dsob: cm, nol: °}
+  parameters: {beta_0: 0.0271412654204764, beta_1: 2.3775, beta_2: 0.025, cf: 1.04023995050143}
+  taxa:
+  - {family: Betulaceae, genus: Alnus, species: glutinosa}
+  descriptors: {eq_no: '7'}
+  prediction_function: exp(log(beta_0) + beta_1 * log(dsob) + beta_2 * nol) * cf
+- name: bt_8
+  type: fixed_effects
+  response: {bt: kg}
+  covariates: {dsob: cm, att: years, nol: °}
+  parameters: {beta_0: 0.211845085541545, beta_1: 2.3993, beta_2: 0.1719, beta_3: -0.0373, cf: 1.028344555102}
+  taxa:
+  - {family: Pinaceae, genus: Pinus, species: pinaster}
+  descriptors: {eq_no: '21'}
+  prediction_function: exp(log(beta_0) + beta_1 * log(dsob) + beta_2 * log(att) + beta_3 * nol) * cf
+- name: bt_9
+  type: fixed_effects
+  response: {bt: kg}
+  covariates: {dsob: cm, att: years, tl: C}
+  parameters: {beta_0: 0.0273428557488799, beta_1: 2.1916, beta_2: 0.43, beta_3: 0.0239, cf: 1.05323409418768}
+  taxa:
+  - {family: Pinaceae, genus: Pinus, species: sylvestris}
+  descriptors: {eq_no: '20'}
+  prediction_function: exp(log(beta_0) + beta_1 * log(dsob) + beta_2 * log(att) + beta_3 * tl) * cf
+- name: bt_10
+  type: fixed_effects
+  response: {bt: kg}
+  covariates: {dsob: cm, hlp: mm}
+  parameters: {beta_0: 0.131401205328744, beta_1: 2.4722, beta_2: -0.0002, cf: 1.00652936175467}
+  taxa:
+  - {family: Pinaceae, genus: Pseudotuga, species: menziesii}
+  descriptors: {eq_no: '8'}
+  prediction_function: exp(log(beta_0) + beta_1 * log(dsob) + beta_2 * hlp) * cf
+- name: bt_14
+  type: fixed_effects
+  response: {bt: kg}
+  covariates: {dsob: cm, es: ha-1, hlp: mm}
+  parameters: {beta_0: 0.287451824425885, beta_1: 2.328, beta_2: -0.0746, beta_3: -0.0003, cf: 1.013475998}
+  descriptors: {eq_no: '16', species_group: All species}
+  prediction_function: exp(log(beta_0) + beta_1 * log(dsob) + beta_2 * log(es) + beta_3 * hlp) * cf
+- name: bt_15
+  type: fixed_effects
+  response: {bt: kg}
+  covariates: {dsob: cm, es: ha-1, tl: C}
+  parameters: {beta_0: 0.269604286658977, beta_1: 2.328, beta_2: -0.0736, beta_3: -0.0181, cf: 1.013671187}
+  descriptors: {eq_no: '17', species_group: All species}
+  prediction_function: exp(log(beta_0) + beta_1 * log(dsob) + beta_2 * log(es) + beta_3 * tl) * cf
+- name: bs_8
+  type: fixed_effects
+  response: {bs: kg}
+  covariates: {dsob: cm, es: ha-1, noa: °}
+  parameters: {beta_0: 3.84860428026117e-06, beta_1: 2.4648, beta_2: -0.2695, beta_3: 0.2441, cf: 0.972109687840969}
+  taxa:
+  - {family: Sapindaceae, genus: Acer, species: pseudoplatanus}
+  descriptors: {eq_no: '18'}
+  prediction_function: exp(log(beta_0) + beta_1 * log(dsob) + beta_2 * log(es) + beta_3 * noa) * cf
+- name: bs_14
+  type: fixed_effects
+  response: {bs: kg}
+  covariates: {dsob: cm, att: years, tl: C}
+  parameters: {beta_0: 0.0653760039452407, beta_1: 2.5671, beta_2: -0.2086, beta_3: 0.055, cf: 0.990298734651754}
+  taxa:
+  - {family: Fagaceae, genus: Quercus, species: ilex}
+  descriptors: {eq_no: '20'}
+  prediction_function: exp(log(beta_0) + beta_1 * log(dsob) + beta_2 * log(att) + beta_3 * tl) * cf
+- name: bf_7
+  type: fixed_effects
+  response: {bf: kg}
+  covariates: {dsob: cm, att: years, hlp: mm}
+  parameters: {beta_0: 3.02769014373322, beta_1: 2.0453, beta_2: -0.9729, beta_3: -0.0009, cf: 1.03698647332726}
+  taxa:
+  - {family: Pinaceae, genus: Picea, species: abies}
+  descriptors: {eq_no: '19'}
+  prediction_function: exp(log(beta_0) + beta_1 * log(dsob) + beta_2 * log(att) + beta_3 * hlp) * cf
+- name: bf_9
+  type: fixed_effects
+  response: {bf: kg}
+  covariates: {dsob: cm, att: years, nol: °}
+  parameters: {beta_0: 0.000854153190744106, beta_1: 1.8187, beta_2: 0.3667, beta_3: 0.0361, cf: 1.01767840379472}
+  taxa:
+  - {family: Pinaceae, genus: Pinus, species: sylvestris}
+  descriptors: {eq_no: '21'}
+  prediction_function: exp(log(beta_0) + beta_1 * log(dsob) + beta_2 * log(att) + beta_3 * nol) * cf
+- name: bf_10
+  type: fixed_effects
+  response: {bf: kg}
+  covariates: {dsob: cm, nol: °}
+  parameters: {beta_0: 0.00766416277216376, beta_1: 1.9689, beta_2: 0.0291, cf: 0.973413861626866}
+  taxa:
+  - {family: Pinaceae, genus: Pseudotuga, species: menziesii}
+  descriptors: {eq_no: '7'}
+  prediction_function: exp(log(beta_0) + beta_1 * log(dsob) + beta_2 * nol) * cf
+- name: bf_11
+  type: fixed_effects
+  response: {bf: kg}
+  covariates: {dsob: cm, att: years, tl: C}
+  parameters: {beta_0: 3.06976189512476, beta_1: 2.4347, beta_2: -1.2283, beta_3: -0.2053, cf: 1.00633643923366}
+  taxa:
+  - {family: Pinaceae, genus: Pseudotuga, species: menziesii}
+  descriptors: {eq_no: '20'}
+  prediction_function: exp(log(beta_0) + beta_1 * log(dsob) + beta_2 * log(att) + beta_3 * tl) * cf
+- name: bf_14
+  type: fixed_effects
+  response: {bf: kg}
+  covariates: {dsob: cm, gs_s: m2 ha-1, hlp: mm}
+  parameters: {beta_0: 0.0304186308920437, beta_1: 2.0551, beta_2: -0.0353, beta_3: 0.0006, cf: 1.01874523178204}
+  descriptors: {eq_no: '13', species_group: All species}
+  prediction_function: exp(log(beta_0) + beta_1 * log(dsob) + beta_2 * gs_s + beta_3 * hlp) * cf
+- name: bf_15
+  type: fixed_effects
+  response: {bf: kg}
+  covariates: {dsob: cm, gs_s: m2 ha-1, tl: C}
+  parameters: {beta_0: 0.0304186308920437, beta_1: 2.0551, beta_2: -0.0353, beta_3: 0.0006, cf: 1.01874523178204}
+  descriptors: {eq_no: '14', species_group: All species}
+  prediction_function: exp(log(beta_0) + beta_1 * log(dsob) + beta_2 * gs_s + beta_3 * tl) * cf
+- name: bsr_14
+  type: fixed_effects
+  response: {bsr: kg}
+  covariates: {dsob: cm, att: years, hlp: mm}
+  parameters: {beta_0: 0.0425574649443611, beta_1: 2.2459, beta_2: 0.1944, beta_3: 0.0006, cf: 1.03053558960702}
+  taxa:
+  - {family: Pinaceae, genus: Pinus, species: sylvestris}
+  descriptors: {eq_no: '19'}
+  prediction_function: exp(log(beta_0) + beta_1 * log(dsob) + beta_2 * log(att) + beta_3 * hlp) * cf
+- name: bsr_15
+  type: fixed_effects
+  response: {bsr: kg}
+  covariates: {dsob: cm, att: years, es: ha-1}
+  parameters: {beta_0: 0.129859783380948, beta_1: 2.2669, beta_2: 0.1351, beta_3: -0.0565, cf: 1.01838588032254}
+  descriptors: {eq_no: '15', species_group: Conifers}
+  prediction_function: exp(log(beta_0) + beta_1 * log(dsob) + beta_2 * log(att) + beta_3 * log(es)) * cf
+- name: bb_11
+  type: fixed_effects
+  response: {bb: kg}
+  covariates: {dsob: cm, att: years, es: ha-1}
+  parameters: {beta_0: 3.70588136566916e-12, beta_1: 2.5283, beta_2: 5.4243, beta_3: 0.9764, cf: 0.966140726157767}
+  taxa:
+  - {family: Oleaceae, genus: Fraxinus, species: excelsior}
+  descriptors: {eq_no: '15'}
+  prediction_function: exp(log(beta_0) + beta_1 * log(dsob) + beta_2 * log(att) + beta_3 * log(es)) * cf
+- name: bb_12
+  type: fixed_effects
+  response: {bb: kg}
+  covariates: {dsob: cm, hlp: mm}
+  parameters: {beta_0: 0.293405402504112, beta_1: 2.1436, beta_2: -0.0023, cf: 0.967649830589433}
+  taxa:
+  - {family: Pinaceae, genus: Larix, species: decidua}
+  descriptors: {eq_no: '8'}
+  prediction_function: exp(log(beta_0) + beta_1 * log(dsob) + beta_2 * hlp) * cf
+- name: bb_16
+  type: fixed_effects
+  response: {bb: kg}
+  covariates: {dsob: cm, gs_s: m2 ha-1, hlp: mm}
+  parameters: {beta_0: 0.028356471592256, beta_1: 2.3877, beta_2: -0.027, beta_3: 0.0005, cf: 0.995761222474058}
+  descriptors: {eq_no: '13', species_group: Conifers}
+  prediction_function: exp(log(beta_0) + beta_1 * log(dsob) + beta_2 * gs_s + beta_3 * hlp) * cf
+- name: bb_17
+  type: fixed_effects
+  response: {bb: kg}
+  covariates: {dsob: cm, gs_s: m2 ha-1, tl: C}
+  parameters: {beta_0: 0.028356471592256, beta_1: 2.3877, beta_2: -0.027, beta_3: 0.0005, cf: 0.995761222474058}
+  descriptors: {eq_no: '14', species_group: Conifers}
+  prediction_function: exp(log(beta_0) + beta_1 * log(dsob) + beta_2 * gs_s + beta_3 * tl) * cf
+- name: rfa_8
+  type: fixed_effects
+  response: {rfa: m2}
+  covariates: {dsob: cm, att: years, nol: °}
+  parameters: {beta_0: 0.00369675452375521, beta_1: 1.8168, beta_2: 0.3767, beta_3: 0.0355, cf: 1.01575876021216}
+  taxa:
+  - {family: Pinaceae, genus: Pinus, species: sylvestris}
+  descriptors: {eq_no: '21'}
+  prediction_function: exp(log(beta_0) + beta_1 * log(dsob) + beta_2 * log(att) + beta_3 * nol) * cf
+- name: rfa_9
+  type: fixed_effects
+  response: {rfa: m2}
+  covariates: {dsob: cm, gs_s: m2 ha-1, nol: °}
+  parameters: {beta_0: 8.71198792839406, beta_1: 2.2159, beta_2: -0.0611, beta_3: -0.0503, cf: 0.91790041264565}
+  taxa:
+  - {family: Pinaceae, genus: Pseudotuga, species: menziesii}
+  descriptors: {eq_no: '12'}
+  prediction_function: exp(log(beta_0) + beta_1 * log(dsob) + beta_2 * gs_s + beta_3 * nol) * cf
+- name: rfa_10
+  type: fixed_effects
+  response: {rfa: m2}
+  covariates: {dsob: cm, att: years, hlp: mm}
+  parameters: {beta_0: 8.08491516430506, beta_1: 2.3773, beta_2: -1.2538, beta_3: -0.0006, cf: 1.01568324119734}
+  taxa:
+  - {family: Pinaceae, genus: Pseudotuga, species: menziesii}
+  descriptors: {eq_no: '19'}
+  prediction_function: exp(log(beta_0) + beta_1 * log(dsob) + beta_2 * log(att) + beta_3 * hlp) * cf
+- name: br_5
+  type: fixed_effects
+  response: {br: kg}
+  covariates: {dsob: cm, hlp: mm}
+  parameters: {beta_0: 0.239572306893222, beta_1: 2.3406, beta_2: -0.0028, cf: 0.997629809456582}
+  taxa:
+  - {family: Fagaceae, genus: Fagus, species: sylvatica}
+  descriptors: {eq_no: '8'}
+  prediction_function: exp(log(beta_0) + beta_1 * log(dsob) + beta_2 * hlp) * cf
+- name: br_6
+  type: fixed_effects
+  response: {br: kg}
+  covariates: {dsob: cm, att: years, hlp: mm}
+  parameters: {beta_0: 0.366447505440527, beta_1: 2.3745, beta_2: -0.1598, beta_3: -0.0026, cf: 1.0166499785021}
+  taxa:
+  - {family: Fagaceae, genus: Fagus, species: sylvatica}
+  descriptors: {eq_no: '19'}
+  prediction_function: exp(log(beta_0) + beta_1 * log(dsob) + beta_2 * log(att) + beta_3 * hlp) * cf
+- name: br_7
+  type: fixed_effects
+  response: {br: kg}
+  covariates: {dsob: cm, nol: °}
+  parameters: {beta_0: 0.101337373193254, beta_1: 2.7536, beta_2: -0.0686, cf: 1.01924683377201}
+  taxa:
+  - {family: Pinaceae, genus: Pinus, species: pinaster}
+  descriptors: {eq_no: '7'}
+  prediction_function: exp(log(beta_0) + beta_1 * log(dsob) + beta_2 * nol) * cf
+- name: br_8
+  type: fixed_effects
+  response: {br: kg}
+  covariates: {dsob: cm, att: years, es: ha-1}
+  parameters: {beta_0: 0.00174639782176648, beta_1: 2.1458, beta_2: 0.5666, beta_3: 0.1174, cf: 1.05120801690007}
+  taxa:
+  - {family: Pinaceae, genus: Pinus, species: sylvestris}
+  descriptors: {eq_no: '15'}
+  prediction_function: exp(log(beta_0) + beta_1 * log(dsob) + beta_2 * log(att) + beta_3 * log(es)) * cf
+- name: br_9
+  type: fixed_effects
+  response: {br: kg}
+  covariates: {dsob: cm, tl: C}
+  parameters: {beta_0: 0.00649774555457737, beta_1: 2.6583, beta_2: 0.044, cf: 1.02519088449636}
+  taxa:
+  - {family: Pinaceae, genus: Pseudotuga, species: menziesii}
+  descriptors: {eq_no: '9'}
+  prediction_function: exp(log(beta_0) + beta_1 * log(dsob) + beta_2 * tl) * cf
+- name: bbd_6
+  type: fixed_effects
+  response: {bbd: kg}
+  covariates: {dsob: cm, att: years, es: ha-1}
+  parameters: {beta_0: 2.59463689221547e-17, beta_1: 2.2444, beta_2: 0.0375, beta_3: 0.6626, cf: 0.972583751678496}
+  taxa:
+  - {family: Pinaceae, genus: Pseudotuga, species: menziesii}
+  descriptors: {eq_no: '15'}
+  prediction_function: exp(log(beta_0) + beta_1 * log(dsob) + beta_2 * log(att) + beta_3 * log(es)) * cf
+- name: bbl_5
+  type: fixed_effects
+  response: {bbl: kg}
+  covariates: {dsob: cm, gs_s: m2 ha-1, nol: °}
+  parameters: {beta_0: 1.74387658580765e-06, beta_1: 2.363, beta_2: 0.0774, beta_3: 0.1181, cf: 1.06191834784197}
+  taxa:
+  - {family: Pinaceae, genus: Pinus, species: sylvestris}
+  descriptors: {eq_no: '12'}
+  prediction_function: exp(log(beta_0) + beta_1 * log(dsob) + beta_2 * gs_s + beta_3 * nol) * cf
+- name: bbl_6
+  type: fixed_effects
+  response: {bbl: kg}
+  covariates: {dsob: cm, es: ha-1, hlp: mm}
+  parameters: {beta_0: 0.000426584536852325, beta_1: 2.1423, beta_2: 0.2707, beta_3: 0.0026, cf: 1.14181592734594}
+  taxa:
+  - {family: Pinaceae, genus: Pinus, species: sylvestris}
+  descriptors: {eq_no: '16'}
+  prediction_function: exp(log(beta_0) + beta_1 * log(dsob) + beta_2 * log(es) + beta_3 * hlp) * cf
+model_sets:
 - name: bt
   type: fixed_effects_set
   response: {bt: kg}
@@ -34,15 +300,6 @@ models:
   - {parameters: {beta_0: 0.121955384738228, beta_1: 2.3691, cf: 1.023846148}, component: aboveground, descriptors: {equation: 3, proc_group: nontaxa, species_group: All species}}
   - {parameters: {beta_0: 0.135904886756281, beta_1: 2.3625, cf: 0.99737271839475}, component: aboveground, descriptors: {equation: 3, proc_group: nontaxa, species_group: Broad-leaved species}}
   - {parameters: {beta_0: 0.109865322963244, beta_1: 2.3786, cf: 1.03881738197664}, component: aboveground, descriptors: {equation: 3, proc_group: nontaxa, species_group: Conifers}}
-- name: bt_2
-  type: fixed_effects
-  response: {bt: kg}
-  covariates: {dsob: cm, nol: °}
-  parameters: {beta_0: 0.0271412654204764, beta_1: 2.3775, beta_2: 0.025, cf: 1.04023995050143}
-  taxa:
-  - {family: Betulaceae, genus: Alnus, species: glutinosa}
-  descriptors: {eq_no: '7'}
-  prediction_function: exp(log(beta_0) + beta_1 * log(dsob) + beta_2 * nol) * cf
 - name: bt_3
   type: fixed_effects_set
   response: {bt: kg}
@@ -96,33 +353,6 @@ models:
   specifications:
   - {parameters: {beta_0: 0.0424851787146599, beta_1: 2.3608, beta_2: 0.0043, beta_3: 0.1576, cf: 1.03313713149677}, descriptors: {eq_no: '10'}, taxa: [{family: Pinaceae, genus: Pinus, species: pinaster}]}
   - {parameters: {beta_0: 0.0718984911407766, beta_1: 2.3137, beta_2: -0.0077, beta_3: 0.2429, cf: 1.01222233818371}, descriptors: {eq_no: '10', species_group: Conifers}}
-- name: bt_8
-  type: fixed_effects
-  response: {bt: kg}
-  covariates: {dsob: cm, att: years, nol: °}
-  parameters: {beta_0: 0.211845085541545, beta_1: 2.3993, beta_2: 0.1719, beta_3: -0.0373, cf: 1.028344555102}
-  taxa:
-  - {family: Pinaceae, genus: Pinus, species: pinaster}
-  descriptors: {eq_no: '21'}
-  prediction_function: exp(log(beta_0) + beta_1 * log(dsob) + beta_2 * log(att) + beta_3 * nol) * cf
-- name: bt_9
-  type: fixed_effects
-  response: {bt: kg}
-  covariates: {dsob: cm, att: years, tl: C}
-  parameters: {beta_0: 0.0273428557488799, beta_1: 2.1916, beta_2: 0.43, beta_3: 0.0239, cf: 1.05323409418768}
-  taxa:
-  - {family: Pinaceae, genus: Pinus, species: sylvestris}
-  descriptors: {eq_no: '20'}
-  prediction_function: exp(log(beta_0) + beta_1 * log(dsob) + beta_2 * log(att) + beta_3 * tl) * cf
-- name: bt_10
-  type: fixed_effects
-  response: {bt: kg}
-  covariates: {dsob: cm, hlp: mm}
-  parameters: {beta_0: 0.131401205328744, beta_1: 2.4722, beta_2: -0.0002, cf: 1.00652936175467}
-  taxa:
-  - {family: Pinaceae, genus: Pseudotuga, species: menziesii}
-  descriptors: {eq_no: '8'}
-  prediction_function: exp(log(beta_0) + beta_1 * log(dsob) + beta_2 * hlp) * cf
 - name: bt_11
   type: fixed_effects_set
   response: {bt: kg}
@@ -147,20 +377,6 @@ models:
   specifications:
   - {parameters: {beta_0: 0.179066147911493, beta_1: 2.358, beta_2: -0.0026, beta_3: -0.0003, cf: 1.015111729}, component: aboveground, descriptors: {equation: 14, proc_group: nontaxa, species_group: All species}}
   - {parameters: {beta_0: 0.198433747561544, beta_1: 2.3177, beta_2: -0.0042, beta_3: -0.0003, cf: 1.00633299859154}, component: aboveground, descriptors: {equation: 14, proc_group: nontaxa, species_group: Conifers}}
-- name: bt_14
-  type: fixed_effects
-  response: {bt: kg}
-  covariates: {dsob: cm, es: ha-1, hlp: mm}
-  parameters: {beta_0: 0.287451824425885, beta_1: 2.328, beta_2: -0.0746, beta_3: -0.0003, cf: 1.013475998}
-  descriptors: {eq_no: '16', species_group: All species}
-  prediction_function: exp(log(beta_0) + beta_1 * log(dsob) + beta_2 * log(es) + beta_3 * hlp) * cf
-- name: bt_15
-  type: fixed_effects
-  response: {bt: kg}
-  covariates: {dsob: cm, es: ha-1, tl: C}
-  parameters: {beta_0: 0.269604286658977, beta_1: 2.328, beta_2: -0.0736, beta_3: -0.0181, cf: 1.013671187}
-  descriptors: {eq_no: '17', species_group: All species}
-  prediction_function: exp(log(beta_0) + beta_1 * log(dsob) + beta_2 * log(es) + beta_3 * tl) * cf
 - name: bs
   type: fixed_effects_set
   response: {bs: kg}
@@ -269,15 +485,6 @@ models:
   - {parameters: {beta_0: 0.00650815026901657, beta_1: 2.4648, beta_2: -0.3133, beta_3: 0.6927, cf: 0.972109687842699}, descriptors: {eq_no: '17'}, taxa: [{family: Sapindaceae, genus: Acer, species: pseudoplatanus}]}
   - {parameters: {beta_0: 0.132987518636823, beta_1: 2.3528, beta_2: -0.0653, beta_3: 0.0327, cf: 0.943777809240054}, component: stem mass, descriptors: {equation: 17, proc_group: nontaxa, species_group: Broad-leaved species}}
   - {parameters: {beta_0: 0.299362519560978, beta_1: 2.3137, beta_2: -0.1077, beta_3: -0.0385, cf: 1.01845749163288}, component: stem mass, descriptors: {equation: 17, proc_group: nontaxa, species_group: Conifers}}
-- name: bs_8
-  type: fixed_effects
-  response: {bs: kg}
-  covariates: {dsob: cm, es: ha-1, noa: °}
-  parameters: {beta_0: 3.84860428026117e-06, beta_1: 2.4648, beta_2: -0.2695, beta_3: 0.2441, cf: 0.972109687840969}
-  taxa:
-  - {family: Sapindaceae, genus: Acer, species: pseudoplatanus}
-  descriptors: {eq_no: '18'}
-  prediction_function: exp(log(beta_0) + beta_1 * log(dsob) + beta_2 * log(es) + beta_3 * noa) * cf
 - name: bs_9
   type: fixed_effects_set
   response: {bs: kg}
@@ -326,15 +533,6 @@ models:
   specifications:
   - {parameters: {beta_0: 0.0300077379173506, beta_1: 2.453, beta_2: 0.3645, beta_3: -0.0003, cf: 0.989671946431388}, component: stem mass, descriptors: {equation: 19, proc_group: taxa}, taxa: [{family: Pinaceae, genus: Pseudotuga, species: menziesii}]}
   - {parameters: {beta_0: 0.0896268803578133, beta_1: 2.4101, beta_2: 0.1912, beta_3: -0.0008, cf: 1.02854443241867}, component: stem mass, descriptors: {equation: 19, proc_group: taxa}, taxa: [{family: Fagaceae, genus: Quercus, species: petraea}, {family: Fagaceae, genus: Quercus, species: robur}]}
-- name: bs_14
-  type: fixed_effects
-  response: {bs: kg}
-  covariates: {dsob: cm, att: years, tl: C}
-  parameters: {beta_0: 0.0653760039452407, beta_1: 2.5671, beta_2: -0.2086, beta_3: 0.055, cf: 0.990298734651754}
-  taxa:
-  - {family: Fagaceae, genus: Quercus, species: ilex}
-  descriptors: {eq_no: '20'}
-  prediction_function: exp(log(beta_0) + beta_1 * log(dsob) + beta_2 * log(att) + beta_3 * tl) * cf
 - name: bf
   type: fixed_effects_set
   response: {bf: kg}
@@ -429,15 +627,6 @@ models:
   - {parameters: {beta_0: 0.223845320306888, beta_1: 2.4033, beta_2: -0.0256, beta_3: -0.6619, cf: 1.0132841713531}, component: foliage mass, descriptors: {equation: 10, proc_group: taxa}, taxa: [{family: Pinaceae, genus: Pseudotuga, species: menziesii}]}
   - {parameters: {beta_0: 0.0945146906453509, beta_1: 2.0942, beta_2: -0.0238, beta_3: -0.3155, cf: 1.04122348256218}, component: foliage mass, descriptors: {equation: 10, proc_group: nontaxa, species_group: All species}}
   - {parameters: {beta_0: 0.134566066472595, beta_1: 2.146, beta_2: -0.0244, beta_3: -0.3547, cf: 1.03341929464074}, component: foliage mass, descriptors: {equation: 10, proc_group: nontaxa, species_group: Conifers}}
-- name: bf_7
-  type: fixed_effects
-  response: {bf: kg}
-  covariates: {dsob: cm, att: years, hlp: mm}
-  parameters: {beta_0: 3.02769014373322, beta_1: 2.0453, beta_2: -0.9729, beta_3: -0.0009, cf: 1.03698647332726}
-  taxa:
-  - {family: Pinaceae, genus: Picea, species: abies}
-  descriptors: {eq_no: '19'}
-  prediction_function: exp(log(beta_0) + beta_1 * log(dsob) + beta_2 * log(att) + beta_3 * hlp) * cf
 - name: bf_8
   type: fixed_effects_set
   response: {bf: kg}
@@ -448,33 +637,6 @@ models:
   - {parameters: {beta_0: 0.000692363120062341, beta_1: 2.5183, beta_2: -0.2246, beta_3: 0.3566, cf: 1.00783842489501}, component: foliage mass, descriptors: {equation: 15, proc_group: taxa}, taxa: [{family: Pinaceae, genus: Pseudotuga, species: menziesii}]}
   - {parameters: {beta_0: 0.00792129956600299, beta_1: 2.0961, beta_2: -0.1873, beta_3: 0.1578, cf: 1.04463660714236}, component: foliage mass, descriptors: {equation: 15, proc_group: nontaxa, species_group: All species}}
   - {parameters: {beta_0: 0.00520518518113771, beta_1: 2.1767, beta_2: -0.1633, beta_3: 0.213, cf: 1.03439756501322}, component: foliage mass, descriptors: {equation: 15, proc_group: nontaxa, species_group: Conifers}}
-- name: bf_9
-  type: fixed_effects
-  response: {bf: kg}
-  covariates: {dsob: cm, att: years, nol: °}
-  parameters: {beta_0: 0.000854153190744106, beta_1: 1.8187, beta_2: 0.3667, beta_3: 0.0361, cf: 1.01767840379472}
-  taxa:
-  - {family: Pinaceae, genus: Pinus, species: sylvestris}
-  descriptors: {eq_no: '21'}
-  prediction_function: exp(log(beta_0) + beta_1 * log(dsob) + beta_2 * log(att) + beta_3 * nol) * cf
-- name: bf_10
-  type: fixed_effects
-  response: {bf: kg}
-  covariates: {dsob: cm, nol: °}
-  parameters: {beta_0: 0.00766416277216376, beta_1: 1.9689, beta_2: 0.0291, cf: 0.973413861626866}
-  taxa:
-  - {family: Pinaceae, genus: Pseudotuga, species: menziesii}
-  descriptors: {eq_no: '7'}
-  prediction_function: exp(log(beta_0) + beta_1 * log(dsob) + beta_2 * nol) * cf
-- name: bf_11
-  type: fixed_effects
-  response: {bf: kg}
-  covariates: {dsob: cm, att: years, tl: C}
-  parameters: {beta_0: 3.06976189512476, beta_1: 2.4347, beta_2: -1.2283, beta_3: -0.2053, cf: 1.00633643923366}
-  taxa:
-  - {family: Pinaceae, genus: Pseudotuga, species: menziesii}
-  descriptors: {eq_no: '20'}
-  prediction_function: exp(log(beta_0) + beta_1 * log(dsob) + beta_2 * log(att) + beta_3 * tl) * cf
 - name: bf_12
   type: fixed_effects_set
   response: {bf: kg}
@@ -491,20 +653,6 @@ models:
   specifications:
   - {parameters: {beta_0: 0.18215450927516, beta_1: 2.0582, beta_2: -0.0357, beta_3: -0.0259, cf: 1.01813290863111}, component: foliage mass, descriptors: {equation: 12, proc_group: nontaxa, species_group: All species}}
   - {parameters: {beta_0: 0.280943976896617, beta_1: 2.0917, beta_2: -0.0372, beta_3: -0.0268, cf: 1.00458548793716}, component: foliage mass, descriptors: {equation: 12, proc_group: nontaxa, species_group: Conifers}}
-- name: bf_14
-  type: fixed_effects
-  response: {bf: kg}
-  covariates: {dsob: cm, gs_s: m2 ha-1, hlp: mm}
-  parameters: {beta_0: 0.0304186308920437, beta_1: 2.0551, beta_2: -0.0353, beta_3: 0.0006, cf: 1.01874523178204}
-  descriptors: {eq_no: '13', species_group: All species}
-  prediction_function: exp(log(beta_0) + beta_1 * log(dsob) + beta_2 * gs_s + beta_3 * hlp) * cf
-- name: bf_15
-  type: fixed_effects
-  response: {bf: kg}
-  covariates: {dsob: cm, gs_s: m2 ha-1, tl: C}
-  parameters: {beta_0: 0.0304186308920437, beta_1: 2.0551, beta_2: -0.0353, beta_3: 0.0006, cf: 1.01874523178204}
-  descriptors: {eq_no: '14', species_group: All species}
-  prediction_function: exp(log(beta_0) + beta_1 * log(dsob) + beta_2 * gs_s + beta_3 * tl) * cf
 - name: bsr
   type: fixed_effects_set
   response: {bsr: kg}
@@ -678,22 +826,6 @@ models:
   - {parameters: {beta_0: 0.0529662691060567, beta_1: 2.2742, beta_2: 0.0128, beta_3: 0.1526, cf: 1.01045779914786}, descriptors: {eq_no: '10'}, taxa: [{family: Pinaceae, genus: Pinus, species: sylvestris}]}
   - {parameters: {beta_0: 0.0787166958948096, beta_1: 2.3383, beta_2: 0.0031, beta_3: 0.1421, cf: 1.05681470722903}, component: stem + branch mass, descriptors: {equation: 10, proc_group: nontaxa, species_group: All species}}
   - {parameters: {beta_0: 0.0603255228674566, beta_1: 2.3283, beta_2: 0.0045, beta_3: 0.1438, cf: 1.00290164215558}, component: stem + branch mass, descriptors: {equation: 10, proc_group: nontaxa, species_group: Conifers}}
-- name: bsr_14
-  type: fixed_effects
-  response: {bsr: kg}
-  covariates: {dsob: cm, att: years, hlp: mm}
-  parameters: {beta_0: 0.0425574649443611, beta_1: 2.2459, beta_2: 0.1944, beta_3: 0.0006, cf: 1.03053558960702}
-  taxa:
-  - {family: Pinaceae, genus: Pinus, species: sylvestris}
-  descriptors: {eq_no: '19'}
-  prediction_function: exp(log(beta_0) + beta_1 * log(dsob) + beta_2 * log(att) + beta_3 * hlp) * cf
-- name: bsr_15
-  type: fixed_effects
-  response: {bsr: kg}
-  covariates: {dsob: cm, att: years, es: ha-1}
-  parameters: {beta_0: 0.129859783380948, beta_1: 2.2669, beta_2: 0.1351, beta_3: -0.0565, cf: 1.01838588032254}
-  descriptors: {eq_no: '15', species_group: Conifers}
-  prediction_function: exp(log(beta_0) + beta_1 * log(dsob) + beta_2 * log(att) + beta_3 * log(es)) * cf
 - name: bb
   type: fixed_effects_set
   response: {bb: kg}
@@ -837,24 +969,6 @@ models:
   - {parameters: {beta_0: 0.0694880836072942, beta_1: 2.3876, beta_2: -0.5335, beta_3: 0.0688, cf: 1.39975267670707}, component: total branch, descriptors: {equation: 20, proc_group: nontaxa, species_group: All species}}
   - {parameters: {beta_0: 0.00561058660916789, beta_1: 2.416, beta_2: 0.2733, beta_3: 0.068, cf: 1.50495250878159}, component: total branch, descriptors: {equation: 20, proc_group: nontaxa, species_group: Broad-leaved species}}
   - {parameters: {beta_0: 0.24728840300359, beta_1: 2.3292, beta_2: -0.6249, beta_3: -0.0475, cf: 1.05018880362496}, component: total branch, descriptors: {equation: 20, proc_group: nontaxa, species_group: Conifers}}
-- name: bb_11
-  type: fixed_effects
-  response: {bb: kg}
-  covariates: {dsob: cm, att: years, es: ha-1}
-  parameters: {beta_0: 3.70588136566916e-12, beta_1: 2.5283, beta_2: 5.4243, beta_3: 0.9764, cf: 0.966140726157767}
-  taxa:
-  - {family: Oleaceae, genus: Fraxinus, species: excelsior}
-  descriptors: {eq_no: '15'}
-  prediction_function: exp(log(beta_0) + beta_1 * log(dsob) + beta_2 * log(att) + beta_3 * log(es)) * cf
-- name: bb_12
-  type: fixed_effects
-  response: {bb: kg}
-  covariates: {dsob: cm, hlp: mm}
-  parameters: {beta_0: 0.293405402504112, beta_1: 2.1436, beta_2: -0.0023, cf: 0.967649830589433}
-  taxa:
-  - {family: Pinaceae, genus: Larix, species: decidua}
-  descriptors: {eq_no: '8'}
-  prediction_function: exp(log(beta_0) + beta_1 * log(dsob) + beta_2 * hlp) * cf
 - name: bb_13
   type: fixed_effects_set
   response: {bb: kg}
@@ -880,20 +994,6 @@ models:
   specifications:
   - {parameters: {beta_0: 0.224989847504045, beta_1: 2.3768, beta_2: -0.2193, beta_3: -0.0339, cf: 1.09160791201311}, descriptors: {eq_no: '21'}, taxa: [{family: Salicaceae, genus: Populus, species: null}]}
   - {parameters: {beta_0: 0.0457071745985698, beta_1: 2.416, beta_2: 0.2841, beta_3: -0.0308, cf: 1.50512599697419}, descriptors: {eq_no: '21', species_group: Broad-leaved species}}
-- name: bb_16
-  type: fixed_effects
-  response: {bb: kg}
-  covariates: {dsob: cm, gs_s: m2 ha-1, hlp: mm}
-  parameters: {beta_0: 0.028356471592256, beta_1: 2.3877, beta_2: -0.027, beta_3: 0.0005, cf: 0.995761222474058}
-  descriptors: {eq_no: '13', species_group: Conifers}
-  prediction_function: exp(log(beta_0) + beta_1 * log(dsob) + beta_2 * gs_s + beta_3 * hlp) * cf
-- name: bb_17
-  type: fixed_effects
-  response: {bb: kg}
-  covariates: {dsob: cm, gs_s: m2 ha-1, tl: C}
-  parameters: {beta_0: 0.028356471592256, beta_1: 2.3877, beta_2: -0.027, beta_3: 0.0005, cf: 0.995761222474058}
-  descriptors: {eq_no: '14', species_group: Conifers}
-  prediction_function: exp(log(beta_0) + beta_1 * log(dsob) + beta_2 * gs_s + beta_3 * tl) * cf
 - name: rfa
   type: fixed_effects_set
   response: {rfa: m2}
@@ -987,33 +1087,6 @@ models:
   - {parameters: {beta_0: 0.0172197206935647, beta_1: 2.4513, beta_2: -0.4353, beta_3: 0.2886, cf: 1.01391926824243}, component: leaf area, descriptors: {equation: 15, proc_group: taxa}, taxa: [{family: Pinaceae, genus: Pseudotuga, species: menziesii}]}
   - {parameters: {beta_0: 0.0658747544264029, beta_1: 2.0824, beta_2: -0.2389, beta_3: 0.154, cf: 1.03800503005486}, component: leaf area, descriptors: {equation: 15, proc_group: nontaxa, species_group: All species}}
   - {parameters: {beta_0: 0.0335942620136396, beta_1: 2.1586, beta_2: -0.2256, beta_3: 0.1982, cf: 1.0380923995504}, component: leaf area, descriptors: {equation: 15, proc_group: nontaxa, species_group: Conifers}}
-- name: rfa_8
-  type: fixed_effects
-  response: {rfa: m2}
-  covariates: {dsob: cm, att: years, nol: °}
-  parameters: {beta_0: 0.00369675452375521, beta_1: 1.8168, beta_2: 0.3767, beta_3: 0.0355, cf: 1.01575876021216}
-  taxa:
-  - {family: Pinaceae, genus: Pinus, species: sylvestris}
-  descriptors: {eq_no: '21'}
-  prediction_function: exp(log(beta_0) + beta_1 * log(dsob) + beta_2 * log(att) + beta_3 * nol) * cf
-- name: rfa_9
-  type: fixed_effects
-  response: {rfa: m2}
-  covariates: {dsob: cm, gs_s: m2 ha-1, nol: °}
-  parameters: {beta_0: 8.71198792839406, beta_1: 2.2159, beta_2: -0.0611, beta_3: -0.0503, cf: 0.91790041264565}
-  taxa:
-  - {family: Pinaceae, genus: Pseudotuga, species: menziesii}
-  descriptors: {eq_no: '12'}
-  prediction_function: exp(log(beta_0) + beta_1 * log(dsob) + beta_2 * gs_s + beta_3 * nol) * cf
-- name: rfa_10
-  type: fixed_effects
-  response: {rfa: m2}
-  covariates: {dsob: cm, att: years, hlp: mm}
-  parameters: {beta_0: 8.08491516430506, beta_1: 2.3773, beta_2: -1.2538, beta_3: -0.0006, cf: 1.01568324119734}
-  taxa:
-  - {family: Pinaceae, genus: Pseudotuga, species: menziesii}
-  descriptors: {eq_no: '19'}
-  prediction_function: exp(log(beta_0) + beta_1 * log(dsob) + beta_2 * log(att) + beta_3 * hlp) * cf
 - name: rfa_11
   type: fixed_effects_set
   response: {rfa: m2}
@@ -1103,51 +1176,6 @@ models:
   - {parameters: {beta_0: 0.157662280308311, beta_1: 2.2126, beta_2: -0.0273, cf: 0.999495577150128}, component: root mass, descriptors: {equation: 4, proc_group: taxa}, taxa: [{family: Fagaceae, genus: Quercus, species: ilex}]}
   - {parameters: {beta_0: 0.0218774249067978, beta_1: 2.2076, beta_2: 0.0275, cf: 0.996828349095421}, component: root mass, descriptors: {equation: 4, proc_group: taxa}, taxa: [{family: Fagaceae, genus: Quercus, species: petraea}, {family: Fagaceae, genus: Quercus, species: robur}]}
   - {parameters: {beta_0: 0.0606157814404994, beta_1: 2.2895, beta_2: -0.0132, cf: 1.02568957533564}, descriptors: {eq_no: '4', species_group: All species}}
-- name: br_5
-  type: fixed_effects
-  response: {br: kg}
-  covariates: {dsob: cm, hlp: mm}
-  parameters: {beta_0: 0.239572306893222, beta_1: 2.3406, beta_2: -0.0028, cf: 0.997629809456582}
-  taxa:
-  - {family: Fagaceae, genus: Fagus, species: sylvatica}
-  descriptors: {eq_no: '8'}
-  prediction_function: exp(log(beta_0) + beta_1 * log(dsob) + beta_2 * hlp) * cf
-- name: br_6
-  type: fixed_effects
-  response: {br: kg}
-  covariates: {dsob: cm, att: years, hlp: mm}
-  parameters: {beta_0: 0.366447505440527, beta_1: 2.3745, beta_2: -0.1598, beta_3: -0.0026, cf: 1.0166499785021}
-  taxa:
-  - {family: Fagaceae, genus: Fagus, species: sylvatica}
-  descriptors: {eq_no: '19'}
-  prediction_function: exp(log(beta_0) + beta_1 * log(dsob) + beta_2 * log(att) + beta_3 * hlp) * cf
-- name: br_7
-  type: fixed_effects
-  response: {br: kg}
-  covariates: {dsob: cm, nol: °}
-  parameters: {beta_0: 0.101337373193254, beta_1: 2.7536, beta_2: -0.0686, cf: 1.01924683377201}
-  taxa:
-  - {family: Pinaceae, genus: Pinus, species: pinaster}
-  descriptors: {eq_no: '7'}
-  prediction_function: exp(log(beta_0) + beta_1 * log(dsob) + beta_2 * nol) * cf
-- name: br_8
-  type: fixed_effects
-  response: {br: kg}
-  covariates: {dsob: cm, att: years, es: ha-1}
-  parameters: {beta_0: 0.00174639782176648, beta_1: 2.1458, beta_2: 0.5666, beta_3: 0.1174, cf: 1.05120801690007}
-  taxa:
-  - {family: Pinaceae, genus: Pinus, species: sylvestris}
-  descriptors: {eq_no: '15'}
-  prediction_function: exp(log(beta_0) + beta_1 * log(dsob) + beta_2 * log(att) + beta_3 * log(es)) * cf
-- name: br_9
-  type: fixed_effects
-  response: {br: kg}
-  covariates: {dsob: cm, tl: C}
-  parameters: {beta_0: 0.00649774555457737, beta_1: 2.6583, beta_2: 0.044, cf: 1.02519088449636}
-  taxa:
-  - {family: Pinaceae, genus: Pseudotuga, species: menziesii}
-  descriptors: {eq_no: '9'}
-  prediction_function: exp(log(beta_0) + beta_1 * log(dsob) + beta_2 * tl) * cf
 - name: bbd
   type: fixed_effects_set
   response: {bbd: kg}
@@ -1198,15 +1226,6 @@ models:
   - {parameters: {beta_0: 0.00160168352466222, beta_1: 2.16, beta_2: 0.0448, cf: 0.988999223}, component: dead branch, descriptors: {equation: 4, proc_group: nontaxa, species_group: All species}}
   - {parameters: {beta_0: 30.9229924673993, beta_1: 2.4149, beta_2: -0.4889, cf: 0.969016748471394}, component: dead branch, descriptors: {equation: 4, proc_group: nontaxa, species_group: Broad-leaved species}}
   - {parameters: {beta_0: 0.0017847088255459, beta_1: 2.1225, beta_2: 0.046, cf: 0.994048499681298}, component: dead branch, descriptors: {equation: 4, proc_group: nontaxa, species_group: Conifers}}
-- name: bbd_6
-  type: fixed_effects
-  response: {bbd: kg}
-  covariates: {dsob: cm, att: years, es: ha-1}
-  parameters: {beta_0: 2.59463689221547e-17, beta_1: 2.2444, beta_2: 0.0375, beta_3: 0.6626, cf: 0.972583751678496}
-  taxa:
-  - {family: Pinaceae, genus: Pseudotuga, species: menziesii}
-  descriptors: {eq_no: '15'}
-  prediction_function: exp(log(beta_0) + beta_1 * log(dsob) + beta_2 * log(att) + beta_3 * log(es)) * cf
 - name: bbd_7
   type: fixed_effects_set
   response: {bbd: kg}
@@ -1281,24 +1300,6 @@ models:
   - {parameters: {beta_0: 0.0904190774599059, beta_1: 2.3723, beta_2: -0.0531, cf: 1.015273835}, component: live branch, descriptors: {equation: 4, proc_group: nontaxa, species_group: All species}}
   - {parameters: {beta_0: 8.45726186804114e-05, beta_1: 2.858, beta_2: 0.2154, cf: 0.925584706387066}, component: live branch, descriptors: {equation: 4, proc_group: nontaxa, species_group: Broad-leaved species}}
   - {parameters: {beta_0: 0.102376303939115, beta_1: 2.2496, beta_2: -0.0459, cf: 1.03951859581643}, component: live branch, descriptors: {equation: 4, proc_group: nontaxa, species_group: Conifers}}
-- name: bbl_5
-  type: fixed_effects
-  response: {bbl: kg}
-  covariates: {dsob: cm, gs_s: m2 ha-1, nol: °}
-  parameters: {beta_0: 1.74387658580765e-06, beta_1: 2.363, beta_2: 0.0774, beta_3: 0.1181, cf: 1.06191834784197}
-  taxa:
-  - {family: Pinaceae, genus: Pinus, species: sylvestris}
-  descriptors: {eq_no: '12'}
-  prediction_function: exp(log(beta_0) + beta_1 * log(dsob) + beta_2 * gs_s + beta_3 * nol) * cf
-- name: bbl_6
-  type: fixed_effects
-  response: {bbl: kg}
-  covariates: {dsob: cm, es: ha-1, hlp: mm}
-  parameters: {beta_0: 0.000426584536852325, beta_1: 2.1423, beta_2: 0.2707, beta_3: 0.0026, cf: 1.14181592734594}
-  taxa:
-  - {family: Pinaceae, genus: Pinus, species: sylvestris}
-  descriptors: {eq_no: '16'}
-  prediction_function: exp(log(beta_0) + beta_1 * log(dsob) + beta_2 * log(es) + beta_3 * hlp) * cf
 - name: bbl_7
   type: fixed_effects_set
   response: {bbl: kg}

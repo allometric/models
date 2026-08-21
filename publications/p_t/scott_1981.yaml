@@ -4,7 +4,8 @@ publication:
   title: Northeastern forest survey revised cubic-foot volume equations
   author: Scott, Charles Thomas
   year: 1981
-models:
+models: []
+model_sets:
 - name: vsia
   type: fixed_effects_set
   response: {vsia: ft3}

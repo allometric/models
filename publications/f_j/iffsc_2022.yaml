@@ -20,14 +20,6 @@ models:
   taxa:
   - {family: Uritaceae, genus: Cecropia, species: galaziovii}
   prediction_function: a/(1 + exp(b + c * dsoc + d * hst))
-- name: bt_3
-  type: fixed_effects_set
-  response: {bt: kg}
-  covariates: {dsob: cm, hst: m}
-  prediction_function: a * dsob^b * hst^c
-  specifications:
-  - {parameters: {a: 0.1523, b: 1.1254, c: 1.0338}, taxa: [{family: Cyatheaceae, genus: Cyathea, species: delgadii}]}
-  - {parameters: {a: 0.0175, b: 1.5288, c: 1.66}, taxa: [{family: Arecaceae, genus: Euterpe, species: edulist}]}
 - name: bt_4
   type: fixed_effects
   response: {bt: kg}
@@ -43,3 +35,12 @@ models:
   parameters: {a: 0.05678, b: 20.6603, c: 0.037056, d: 0.9894}
   descriptors: {forest_type: deciduous}
   prediction_function: a * (dsob^2 * (1.3 + b * (1 - exp(c * dsob))) * rws)^d
+model_sets:
+- name: bt_3
+  type: fixed_effects_set
+  response: {bt: kg}
+  covariates: {dsob: cm, hst: m}
+  prediction_function: a * dsob^b * hst^c
+  specifications:
+  - {parameters: {a: 0.1523, b: 1.1254, c: 1.0338}, taxa: [{family: Cyatheaceae, genus: Cyathea, species: delgadii}]}
+  - {parameters: {a: 0.0175, b: 1.5288, c: 1.66}, taxa: [{family: Arecaceae, genus: Euterpe, species: edulist}]}

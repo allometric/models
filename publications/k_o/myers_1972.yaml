@@ -4,7 +4,8 @@ publication:
   title: Volume tables and point-sampling factors for Engelmann spruce in Colorado and Wyoming
   author: Myers, Clifford A and Edminster, Carleton B
   year: 1972
-models:
+models: []
+model_sets:
 - name: vsoa
   type: fixed_effects_set
   taxa:

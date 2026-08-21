@@ -4,7 +4,8 @@ publication:
   title: Biomass production and CO2 fixation by Spanish forests
   author: Montero, Gregorio and Ruiz-Peinado, Ricardo and Munoz, Marta
   year: 2005
-models:
+models: []
+model_sets:
 - name: bt
   type: fixed_effects_set
   response: {bt: kg}

@@ -4,7 +4,8 @@ publication:
   title: Volume tables and point-sampling factors for ponderosa pine in the Black Hills
   author: Myers, Clifford A
   year: 1964
-models:
+models: []
+model_sets:
 - name: vsom
   type: fixed_effects_set
   taxa:

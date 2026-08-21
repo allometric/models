@@ -5,6 +5,15 @@ publication:
   author: Poudel, Krishna P and Temesgen, Hailemariam and Radtke, Philip J and Gray, Andrew N
   year: 2019
 models:
+- name: bt_2
+  type: fixed_effects
+  response: {bt: kg}
+  covariates: {dsob: cm, hst: m}
+  parameters: {a: -0.6616, b: 0.8288, c: 0.2127, d: 0.4145, cf: 1.0246}
+  taxa:
+  - {family: Pinaceae, genus: Pinus, species: ponderosa}
+  prediction_function: cf * exp(a + b * log(dsob) + c * log(dsob)^2 + d * log(hst))
+model_sets:
 - name: vsia
   type: fixed_effects_set
   response: {vsia: m3}
@@ -58,14 +67,6 @@ models:
   - {parameters: {a: -3.0439, b: 2.0345, c: 0.642, cf: 1.0}, taxa: [{family: Salicaceae, genus: Populus, species: tremuloides}]}
   - {parameters: {a: -3.8009, b: 1.63, c: 1.3354, cf: 1.0}, taxa: [{family: Salicaceae, genus: Populus, species: balsamifera}]}
   - {parameters: {a: -5.5175, b: 2.6795, c: 1.2805, cf: 1.0}, taxa: [{family: Pinaceae, genus: Abies, species: lasiocarpa}]}
-- name: bt_2
-  type: fixed_effects
-  response: {bt: kg}
-  covariates: {dsob: cm, hst: m}
-  parameters: {a: -0.6616, b: 0.8288, c: 0.2127, d: 0.4145, cf: 1.0246}
-  taxa:
-  - {family: Pinaceae, genus: Pinus, species: ponderosa}
-  prediction_function: cf * exp(a + b * log(dsob) + c * log(dsob)^2 + d * log(hst))
 - name: bt_3
   type: fixed_effects_set
   response: {bt: kg}

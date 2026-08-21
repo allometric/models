@@ -4,7 +4,8 @@ publication:
   title: The Yield of Douglas-fir in the Pacific Northwest
   author: McArdle, Richard E and Meyer, Walter H and Bruce, Donald
   year: 1961
-models:
+models: []
+model_sets:
 - name: hstix50
   type: fixed_effects_set
   taxa:

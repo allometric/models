@@ -4,7 +4,8 @@ publication:
   title: Comprehensive tree volume equations for major species of New Mexico and Arizona. I. Results and methodology. II. Tables for unforked trees
   author: Hann, DW and Bare, BB
   year: 1978
-models:
+models: []
+model_sets:
 - name: vsia
   type: fixed_effects_set
   response: {vsia: ft3}

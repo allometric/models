@@ -4,7 +4,8 @@ publication:
   title: Diameter Growth Models for 35 Atlantic Forest Tree Species in Silvicultural Trials in the North of Espirito Santo, Brazil
   author: Rolim, Samir and Piotto, Daniel and Orellana, Enrique
   year: 2019
-models:
+models: []
+model_sets:
 - name: dsob
   type: fixed_effects_set
   response: {dsob: cm}

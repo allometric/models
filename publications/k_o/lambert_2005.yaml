@@ -4,7 +4,8 @@ publication:
   title: Canadian national tree aboveground biomass equations
   author: Lambert, MC and Ung, CH and Raulier, Fr'ed'eric
   year: 2005
-models:
+models: []
+model_sets:
 - name: bs
   type: fixed_effects_set
   response: {bs: kg}

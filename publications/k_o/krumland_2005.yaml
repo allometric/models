@@ -4,7 +4,8 @@ publication:
   title: Site index systems for major young-growth forest and woodland species in northern California
   author: Krumland, Helge
   year: 2005
-models:
+models: []
+model_sets:
 - name: hstixi
   type: fixed_effects_set
   response: {hstixi: ft}

@@ -4,7 +4,8 @@ publication:
   title: 'Canadian national biomass equations: new parameter estimates that include British Columbia data'
   author: Ung, Chhun-Huor and Bernier, Pierre and Guo, Xiao-Jing
   year: 2008
-models:
+models: []
+model_sets:
 - name: bs
   type: fixed_effects_set
   response: {bs: kg}
