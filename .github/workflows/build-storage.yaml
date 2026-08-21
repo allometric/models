@@ -1,0 +1,29 @@
+name: build-storage
+
+on:
+  push:
+    branches: [ v4 ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Install orc
+        run: pip install git+https://github.com/allometric/orc.git
+
+      - name: Build storage artifacts
+        run: orc ingest publications --parquet dist
+
+      - uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: Updating compiled storage artifacts
+          file_pattern: 'dist/*'
