@@ -1,0 +1,226 @@
+publication:
+  key: hanson_2002
+  bibtype: techreport
+  title: "Site index equations and mean annual increment equations for Pacific Northwest Research Station forest inventory and analysis inventories, 1985-2001"
+  author: "Hanson, Erica J and Azuma, David L and Hiserote, Bruce A"
+  year: 2002
+  number: 533
+  institution: "Pacific Northwest Research Station, USDA Forest Service"
+  address: "Portland, OR"
+  month: "December"
+  descriptors:
+    country: US
+    region: [US-OR, US-WA, US-CA]
+
+models:
+  - name: hstix50
+    type: fixed_effects
+    response: { hstix50: "ft" }
+    covariates: { hst: "ft", atb: "year" }
+    taxa:
+      - { family: Pinaceae, genus: Pseudotsuga, species: menziesii }
+      - { family: Pinaceae, genus: Abies, species: grandis }
+      - { family: Pinaceae, genus: Pinus, species: monticola }
+    parameters:
+      a: 0.954038
+      b: -0.0558178
+      c: 0.000733819
+      d: 0.109757
+      e: 0.00792236
+      f: 0.000197693
+    prediction_function: "4.5 + 2500/((atb^2/(hst - 4.5) + a + b * atb + c * atb^2)/(d + e * atb + f * atb^2))"
+    description: "King site index, breast-height age 50; Table 1 eq. 1a (King 1966). Douglas-fir and grand fir in western Oregon except Jackson and Josephine Counties, western Washington except silver fir zone, California except mixed conifer; western white pine in western Washington. Used when King's selection method was used."
+    notes: "PNW-FIA preferred this equation for coastal Douglas-fir."
+
+  - name: hstix50_mcardle_lt40
+    type: fixed_effects
+    response: { hstix50: "ft" }
+    covariates: { hst: "ft", atb: "year" }
+    taxa:
+      - { family: Pinaceae, genus: Pseudotsuga, species: menziesii }
+      - { family: Pinaceae, genus: Abies, species: grandis }
+      - { family: Pinaceae, genus: Pinus, species: monticola }
+    parameters: { a: 3.3, b: -0.8, c: 0.96, d: -2.66 }
+    prediction_function: "exp(a + (b * log(atb))) * (c * hst + d)"
+    descriptors: { age_class: "< 40" }
+    description: "McArdle site index, breast-height age 50; Table 1 eq. 1b (derived from McArdle and others 1961). Used when King's selection method was not used and trees were younger than 40 years."
+
+  - name: hstix50_mcardle_ge40
+    type: fixed_effects
+    response: { hstix50: "ft" }
+    covariates: { hst: "ft", atb: "year" }
+    taxa:
+      - { family: Pinaceae, genus: Pseudotsuga, species: menziesii }
+      - { family: Pinaceae, genus: Abies, species: grandis }
+      - { family: Pinaceae, genus: Pinus, species: monticola }
+    parameters: { a: 2.1, b: -0.47, c: 0.96, d: -2.66 }
+    prediction_function: "exp(a + (b * log(atb))) * (c * hst + d)"
+    descriptors: { age_class: ">= 40" }
+    description: "McArdle site index, breast-height age 50; Table 1 eq. 1c (derived from McArdle and others 1961). Used when King's selection method was not used and trees were 40 years or older."
+
+  - name: hstix50_king_conv
+    type: fixed_effects
+    response: { hstix50: "ft" }
+    covariates: { atb: "year", sim: "ft" }
+    taxa:
+      - { family: Pinaceae, genus: Pseudotsuga, species: menziesii }
+      - { family: Pinaceae, genus: Abies, species: grandis }
+      - { family: Pinaceae, genus: Pinus, species: monticola }
+    parameters: { a: 21.5, b: -0.18127, c: 0.72114 }
+    prediction_function: "a + b * (atb + 8) + c * sim"
+    covt_defs: { sim: "McArdle site index in feet for breast-height age 50" }
+    description: "Conversion of McArdle's site index to King's site index, breast-height age 50 (King 1966)."
+
+  - name: hstix50_cochran
+    type: fixed_effects
+    response: { hstix50: "ft" }
+    covariates: { hst: "ft", atb: "year" }
+    taxa:
+      - { family: Pinaceae, genus: Pseudotsuga, species: menziesii }
+    parameters: { a: 84.47, b: -0.37496, c: 1.36164, d: -0.00243434, e: 0.52032, f: -0.0013194, g: 27.2823 }
+    prediction_function: "a - (exp(b + c * log(atb) + d * log(atb)^4)) * (e + f * atb + g/atb) + (hst - 4.5) * (e + f * atb + g/atb)"
+    description: "Table 1 eq. 2 (Cochran 1979b). Douglas-fir in Jackson and Josephine Counties, Oregon."
+
+  - name: hstix100_herman
+    type: fixed_effects
+    response: { hstix100: "ft" }
+    covariates: { hst: "ft", atb: "year" }
+    taxa:
+      - { family: Pinaceae, genus: Abies, species: procera }
+      - { family: Pinaceae, genus: Abies, species: shastensis }
+      - { family: Pinaceae, genus: Abies, species: lasiocarpa }
+      - { family: Pinaceae, genus: Abies, species: concolor }
+      - { family: Pinaceae, genus: Abies, species: amabilis }
+      - { family: Pinaceae, genus: Tsuga, species: mertensiana }
+    parameters: { a1: -62.755, a2: 672.55, b1: 0.9484, b2: 516.49, c1: -0.00144, c2: 0.1442 }
+    prediction_function: "a <- a1 + a2 * (1/atb)^(0.5); b <- b1 + b2 * (1/atb)^2; c <- c1 + c2 * (1/atb); a + b * (hst - 4.5) + c * (hst - 4.5)^2"
+    descriptors: { age_class: "> 100" }
+    description: "Table 1 eq. 4b (Herman and others 1978). Noble fir, Shasta red fir in Oregon, subalpine fir, white fir, Pacific silver fir, and mountain hemlock. Site trees older than 100 years."
+
+  - name: hstix50_wiley
+    type: fixed_effects
+    response: { hstix50: "ft" }
+    covariates: { hst: "ft", atb: "year" }
+    taxa:
+      - { family: Pinaceae, genus: Tsuga, species: heterophylla }
+      - { family: Pinaceae, genus: Picea, species: sitchensis }
+    parameters: { a: 0.1394, b: 0.0137, c: 0.00007, d: -1.7307, e: -0.0616, f: 0.00192 }
+    prediction_function: "2500 * ((hst - 4.5) * (a + b * atb + c * atb^2))/(atb^2 - (hst - 4.5) * (d + e * atb + f * atb^2)) + 4.5"
+    descriptors: { age_class: "< 120" }
+    description: "Table 1 eq. 5a (Wiley 1978). Western hemlock and Sitka spruce, trees younger than 120 years."
+
+  - name: hstix50_barnes
+    type: fixed_effects
+    response: { hstix50: "ft" }
+    covariates: { hst: "ft", atb: "year" }
+    taxa:
+      - { family: Pinaceae, genus: Tsuga, species: heterophylla }
+      - { family: Pinaceae, genus: Picea, species: sitchensis }
+    parameters: { a: 22.6, b: 0.014482, c: 0.001162 }
+    prediction_function: "4.5 + a * exp((b - c * log(atb)) * (hst - 4.5))"
+    descriptors: { age_class: "> 120" }
+    description: "Table 1 eq. 5b (Barnes 1962). Western hemlock and Sitka spruce, trees older than 120 years."
+
+  - name: hstix50_brickell
+    type: fixed_effects
+    response: { hstix50: "ft" }
+    covariates: { hst: "ft", atb: "year" }
+    taxa:
+      - { family: Pinaceae, genus: Picea, species: engelmannii }
+    parameters: { b1: 10.717283, b2: 0.0046314777, b3: 0.74471147, b4: -26413.763, b5: -0.042819823, b6: -0.0047812062, b7: 4.9254336e-06, b8: 2.1975906e-07, b9: 5.1675949, b10: -1.4349139e-08, b11: -9.481014 }
+    prediction_function: "hst + b1 * (log(atb) - log(50)) + b2 * ((10^10/atb^5) - 32) + b3 * hst * ((10^4/atb^2) - 4) + b4 * hst * (atb^(-2.5) - 50^(-2.5)) + b5 * hst * (log(atb) - log(50))^2 + b6 * hst^2 * (10^4/atb^2 - 4) + b7 * hst^2 * (10^10/atb^5 - 32) + b8 * hst^3 * (10^10/atb^5 - 32) + b9 * hst^3 * (atb^(-2.75) - 50^(-2.75)) + b10 * hst^4 * (100/atb - 2) + b11 * hst^4 * (atb^(-4.5) - 50^(-4.5))"
+    description: "Table 1 eq. 6 (Brickell 1966). Engelmann spruce, site index for total age 50."
+    notes: "Equation developed outside the PNW-FIA region (northern and central Rocky Mountains) and used for Engelmann spruce in Oregon and Washington."
+
+  - name: hstix100_barrett
+    type: fixed_effects
+    response: { hstix100: "ft" }
+    covariates: { hst: "ft", atb: "year" }
+    taxa:
+      - { family: Pinaceae, genus: Pinus, species: ponderosa }
+      - { family: Pinaceae, genus: Pinus, species: jeffreyi }
+      - { family: Pinaceae, genus: Pinus, species: coulteri }
+      - { family: Pinaceae, genus: Pinus, species: muricata }
+    parameters: { a: 100.43, b: 1.198632, c: 0.00283073, d: 8.44441, e: 128.8952205, f: 0.016959, g: 1.23114 }
+    prediction_function: "a - (b - c * atb + d/atb) * (e * (1 - exp(-f * atb)^g)) + ((b - c * atb + d/atb) * (hst - 4.5)) + 4.5"
+    descriptors: { age_class: "< 130" }
+    description: "Table 1 eq. 8a (Barrett 1978). Ponderosa pine, Jeffrey pine, Coulter pine, and Bishop pine, site trees younger than 130 years breast-height age."
+
+  - name: hstix50_redcedar
+    type: fixed_effects
+    response: { hstix50: "ft" }
+    covariates: { hst: "ft", atb: "year" }
+    taxa:
+      - { family: Cupressaceae, genus: Thuja, species: plicata }
+    parameters: { a: 0.05027, b: 0.01411, c: 0.000097667, d: -3.11785, e: -0.02465, f: 0.00174 }
+    prediction_function: "(2500/0.3048) * ((hst - 1.3) * (a + b * atb + c * atb^2))/(atb^2 - (hst - 1.3) * (d + e * atb + f * atb^2)) + 4.5"
+    descriptors: { age_class: "<= 50" }
+    description: "Table 1 eq. 10a, adapted from Mitchell and Polsson (1987). Western red cedar, trees younger than or equal to 50 years."
+
+  - name: hstix50_larch
+    type: fixed_effects
+    response: { hstix50: "ft" }
+    covariates: { hst: "ft", atb: "year" }
+    taxa:
+      - { family: Pinaceae, genus: Larix, species: occidentalis }
+    parameters: { a: 78.07, b1: 3.51412, b2: -0.125483, b3: 0.0023559, b4: -2.028e-05, b5: 6.4782e-08, b6: 1.46897, b7: 0.0092466, b8: -0.00023957, b9: 1.1122e-06 }
+    prediction_function: "b <- b1 + b2 * atb + b3 * atb^2 + b4 * atb^3 + b5 * atb^4; b_m <- b * (b6 * atb + b7 * atb^2 + b8 * atb^3 + b9 * atb^4); a + b * (hst - 4.5) - b * b_m"
+    description: "Table 1 eq. 12 (Cochran 1985). Western larch in western Oregon and eastern Oregon."
+
+  - name: hstix50_alder
+    type: fixed_effects
+    response: { hstix50: "ft" }
+    covariates: { hst: "ft", atb: "year" }
+    taxa:
+      - { family: Betulaceae, genus: Alnus, species: rubra }
+    parameters: { a: 0.60924, b: 19.538 }
+    prediction_function: "hst * (a + b/atb)"
+    description: "Table 1 eq. 13 (Worthington and others 1960). Red alder and other hardwoods except black cottonwood, in western Oregon, eastern Oregon, western Washington, eastern Washington, and California."
+
+  - name: hstix100_curtis_lt100
+    type: fixed_effects
+    response: { hstix100: "ft" }
+    covariates: { hst: "ft", atb: "year" }
+    taxa:
+      - { family: Pinaceae, genus: Pseudotsuga, species: menziesii }
+      - { family: Pinaceae, genus: Abies, species: grandis }
+      - { family: Pinaceae, genus: Abies, species: concolor }
+    parameters: { alpha_1: 0.010006, beta_1: 1.0, beta_2: 0.00549779, beta_3: 1.46842e-14 }
+    prediction_function: "alpha <- alpha_1 * (100 - atb)^2; beta <- beta_1 + beta_2 * (100 - atb) + beta_3 * (100 - atb)^7; alpha + beta * (hst - 4.5) + 4.5"
+    descriptors: { age_class: "<= 100" }
+    description: "Table 1 eq. 14a (Curtis and others 1974). Douglas-fir, grand fir, and white fir in eastern Oregon and eastern Washington; Douglas-fir in silver fir zone of western Washington. Breast-height age 100 years or less."
+
+  - name: hstix100_curtis_gt100
+    type: fixed_effects
+    response: { hstix100: "ft" }
+    covariates: { hst: "ft", atb: "year" }
+    taxa:
+      - { family: Pinaceae, genus: Pseudotsuga, species: menziesii }
+      - { family: Pinaceae, genus: Abies, species: grandis }
+      - { family: Pinaceae, genus: Abies, species: concolor }
+    parameters: { alpha_1: 7.66772, alpha_2: -0.95, beta_1: 1.0, beta_2: -0.730948, beta_3: 0.8 }
+    prediction_function: "alpha <- alpha_1 * (exp(alpha_2 * (100/(atb - 100))^2)); beta <- beta_1 + beta_2 * (log(atb, base = 10) - 2)^beta_3; alpha + beta * (hst - 4.5) + 4.5"
+    descriptors: { age_class: "> 100" }
+    description: "Table 1 eq. 14b (Curtis and others 1974). Douglas-fir, grand fir, and white fir in eastern Oregon and eastern Washington; Douglas-fir in silver fir zone of western Washington. Breast-height age greater than 100 years."
+
+  - name: hstix50_larch_brickell
+    type: fixed_effects
+    response: { hstix50: "ft" }
+    covariates: { hst: "ft", atb: "year" }
+    taxa:
+      - { family: Pinaceae, genus: Larix, species: occidentalis }
+      - { family: Pinaceae, genus: Pinus, species: monticola }
+    parameters: { a: 0.37956, b: 48.4372 }
+    prediction_function: "a * hst * exp(b/(atb + 8))"
+    description: "Table 1 eq. 15 (Brickell 1970). Western larch in western Washington and eastern Washington; western white pine in eastern Washington. Replaced Cochran (1985) equations for the same areas and species beginning in 1990."
+
+  - name: hstix50_const
+    type: fixed_effects
+    response: { hstix50: "ft" }
+    covariates: {}
+    taxa:
+      - { family: Salicaceae, genus: Populus, species: balsamifera }
+      - { family: Salicaceae, genus: Populus, species: fremontii }
+    parameters: {}
+    prediction_function: "92.0"
+    description: "Table 1 eq. 11. Black cottonwood and Fremont poplar site index fixed at 92.0 feet (developed in-house from plot data in cottonwood stands; Bolsinger 1974)."
