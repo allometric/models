@@ -4,6 +4,12 @@ publication:
   title: Optimizing efficiency of height modeling for extensive forest inventories
   author: Barrett, T.M.
   year: 2006
+  descriptors:
+    country: US
+    region: [US-WA, US-OR, US-CA]
+  volume: 36
+  journal: "Canadian Journal of Forest Research"
+  doi: "https://doi.org/10.1139/x06-128"
 models: []
 model_sets:
 - name: hst

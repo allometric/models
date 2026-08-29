@@ -4,6 +4,12 @@ publication:
   title: Tree height estimation in redwood/Douglas-fir stands in Mendocino County
   author: Eng, Helge
   year: 2012
+  descriptors:
+    country: US
+    state: US-CA
+  booktitle: "Proceedings of the coast redwood forests in a changing California: A symposium for scientists and managers"
+  pages: 649--656
+  organization: "USDA For. Serv., Gen. Tech. Rep. PSW-GTR-238, Pacific Southwest Research Station"
 models: []
 model_sets:
 - name: hst

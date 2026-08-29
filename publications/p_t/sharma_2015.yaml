@@ -4,6 +4,13 @@ publication:
   title: Modeling height-diameter relationships for Norway spruce, Scots pine, and downy birch using Norwegian national forest inventory data
   author: Sharma, Ram P and Breidenbach, Johannes
   year: 2015
+  descriptors:
+    country: NO
+  journal: "Forest Science and Technology"
+  volume: 11
+  number: 1
+  pages: 45--53
+  publisher: "Taylor & Francis"
 models: []
 model_sets:
 - name: hst

@@ -4,6 +4,15 @@ publication:
   title: Aboveground biomass quantification and tree-level prediction models for the Brazilian subtropical Atlantic Forest
   author: Uller, Heitor Felippe and Zimermann Oliveira, Laio and Klitzke, Aline Renata and Roberto Eleotério, Jackson and Fantini, Alfredo Celso and Vibrans, Alexander Christian
   year: 2019
+  descriptors:
+    country: BR
+    region: BR-SC
+  journal: "Southern Forests"
+  volume: 81
+  number: 3
+  pages: 261--271
+  publisher: NISC
+  doi: "https://doi.org/10.2989/00306525.2019.1581498"
 models:
 - name: bt
   type: fixed_effects

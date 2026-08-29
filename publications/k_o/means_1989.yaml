@@ -4,6 +4,13 @@ publication:
   title: Height Growth and Site Index Curves for Douglas-Fir in the Siuslaw National Forest, Oregon
   author: Means, JF and Sabin, TE
   year: 1989
+  descriptors:
+    country: US
+    region: US-OR
+  journal: "Western Journal of Applied Forestry"
+  volume: 4
+  number: 4
+  doi: "https://doi.org/10.1093/wjaf/4.4.136"
 models:
 - name: hstix50
   type: fixed_effects

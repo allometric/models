@@ -4,6 +4,12 @@ publication:
   title: Biometric Models for Mixed-species Plantation in the North of Espirito Santo, Brazil
   author: Rolim, Samir and Orellano, Enrique and Piotto, Daniel and de, Edgar
   year: 2019
+  descriptors:
+    country: BR
+    region: BR-ES
+  booktitle: "Silviculture and Wood Properties of Native Species of the Atlantic Forest of Brazil"
+  editor: "Rolim, Samir and Piotto, Daniel"
+  pages: 21--29
 models:
 - name: hst
   type: fixed_effects

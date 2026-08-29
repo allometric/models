@@ -4,6 +4,11 @@ publication:
   title: Height growth and site index estimates for noble fir in high elevation forests of the Oregon-Washington Cascades
   author: Herman, Francis R and Curtis, Robert O and DeMars, Donald J
   year: 1978
+  descriptors:
+    country: US
+    region: [US-OR, US-WA]
+  volume: 243
+  institution: "Department of Agriculture, Forest Service, Pacific Northwest Forest and Range Experiment Station"
 models:
 - name: hstix100
   type: fixed_effects

@@ -4,6 +4,15 @@ publication:
   title: Estimating individual-tree aboveground biomass of tree species in the western USA
   author: Poudel, Krishna P and Temesgen, Hailemariam and Radtke, Philip J and Gray, Andrew N
   year: 2019
+  descriptors:
+    country: [US, CA]
+    region: [CA-BC, US-WA, US-OR, US-CA, US-NV, US-ID, US-MT, US-UT, US-AZ, US-CO]
+  journal: "Canadian Journal of Forest Research"
+  volume: 49
+  number: 6
+  pages: 701--714
+  publisher: "NRC Research Press"
+  doi: "https://doi.org/10.1139/cjfr-2018-0361"
 models:
 - name: bt_2
   type: fixed_effects

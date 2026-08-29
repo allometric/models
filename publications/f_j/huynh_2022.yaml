@@ -4,6 +4,15 @@ publication:
   title: Allometric equations to estimate aboveground biomass in spotted gum (Corymbia citriodora subspecies variegata) plantations in Queensland
   author: Huynh, Trinh and Lewis, Tom and Applegate, Grahame and Pachas, Anibal Nahuel A and Lee, David J
   year: 2022
+  descriptors:
+    country: AU
+    region: AU-QLD
+  journal: Forests
+  volume: 13
+  number: 3
+  pages: "486"
+  publisher: MDPI
+  doi: "https://doi.org/10.3390/f13030486"
 models:
 - name: bt_3
   type: fixed_effects
@@ -145,7 +154,7 @@ models:
     species: citriodora
   response: {bt: kg}
   covariates: {dsob: cm, vc: cm3}
-  parameters: {alpha: 0.09881, beta: 2.61161}
+  parameters: {alpha: 0.09881, beta: 2.61161, beta_1: 0.01109}
   descriptors: {equation_no: '19'}
   prediction_function: alpha * dsob^beta * vc^beta_1
 - name: bt_16

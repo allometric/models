@@ -4,6 +4,10 @@ publication:
   title: Biomass production and CO2 fixation by Spanish forests
   author: Montero, Gregorio and Ruiz-Peinado, Ricardo and Munoz, Marta
   year: 2005
+  descriptors:
+    country: ES
+  volume: 13
+  institution: "National Institute for Agricultural and Food Research and Technology"
 models: []
 model_sets:
 - name: bt

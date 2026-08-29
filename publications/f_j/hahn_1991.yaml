@@ -4,6 +4,15 @@ publication:
   title: Cubic and board foot volume models for the Central States
   author: Hahn, Jerold T and Hansen, Mark H
   year: 1991
+  descriptors:
+    country: US
+    region: [US-IN, US-IL, US-MO, US-IA]
+  journal: "Northern Journal of Applied Forestry"
+  volume: 8
+  number: 2
+  pages: 46--57
+  publisher: "Oxford University Press"
+  doi: "https://doi.org/10.1093/njaf/8.2.47"
 models: []
 model_sets:
 - name: vsia

@@ -4,6 +4,10 @@ publication:
   title: Height growth and site index curves for red alder
   author: Harrington, CA and Curtis, RO
   year: 1986
+  descriptors:
+    country: US
+    region: [US-OR, US-WA]
+  institution: "Pacific Northwest Research Station, US Department of Agriculture, Forest Service"
 models:
 - name: hstix
   type: fixed_effects

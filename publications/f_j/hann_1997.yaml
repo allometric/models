@@ -4,6 +4,10 @@ publication:
   title: Equations for predicting the largest crown width of stand-grown trees in western Oregon
   author: Hann, D.W.
   year: 1997
+  descriptors:
+    country: US
+    region: US-OR
+  institution: "Oregon State University, College of Forestry, Forest Research Lab"
 models: []
 model_sets:
 - name: dcl

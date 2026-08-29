@@ -4,6 +4,11 @@ publication:
   title: Volume equations for second-growth Douglas-fir
   author: Bruce, David and DeMars, Donald J
   year: 1974
+  descriptors:
+    country: [US, CA]
+    region: [US-OR, US-WA, CA-BC]
+  volume: 239
+  institution: "Pacific Northwest Forest and Range Experiment Station, Forest Service"
 models:
 - name: vsia
   type: fixed_effects

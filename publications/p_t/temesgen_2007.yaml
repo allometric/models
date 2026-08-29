@@ -4,6 +4,15 @@ publication:
   title: Regional height--diameter equations for major tree species of southwest Oregon
   author: Temesgen, Hailemariam and Hann, David W and Monleon, Vincente J
   year: 2007
+  descriptors:
+    country: US
+    region: US-OR
+  journal: "Western Journal of Applied Forestry"
+  volume: 22
+  number: 3
+  pages: 213--219
+  publisher: "Oxford University Press"
+  doi: "https://doi.org/10.1093/wjaf/22.3.213"
 models: []
 model_sets:
 - name: hst

@@ -4,6 +4,12 @@ publication:
   title: Volume tables and point-sampling factors for ponderosa pine in the Black Hills
   author: Myers, Clifford A
   year: 1964
+  descriptors:
+    country: US
+    region: [US-WY, US-SD]
+  institution: "Rocky Mountain Forest and Range Experiment Station, Forest Service, US"
+  volume: 8
+  doi: "https://doi.org/10.5962/bhl.title.99237"
 models: []
 model_sets:
 - name: vsom

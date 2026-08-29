@@ -4,6 +4,11 @@ publication:
   title: Tree Volume and Biomass Equations for the Lake States
   author: Hahn, Jerold T
   year: 1984
+  descriptors:
+    country: US
+    region: [US-WI, US-MI, US-MN]
+  institution: "USDA Department of Agriculture, North Central Forest Experiment Station"
+  doi: "https://doi.org/10.2737/NC-RP-250"
 models: []
 model_sets:
 - name: hst

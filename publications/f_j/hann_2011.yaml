@@ -4,6 +4,11 @@ publication:
   title: Revised volume and taper equations for six major conifer species in southwest Oregon
   author: Hann, David W
   year: 2011
+  descriptors:
+    country: US
+    region: US-OR
+  institution: "Oregon State University"
+  volume: 2
 models: []
 model_sets:
 - name: dsib

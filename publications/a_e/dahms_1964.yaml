@@ -4,6 +4,11 @@ publication:
   title: Gross and net yield tables for lodgepole pine
   author: Dahms, Walter G
   year: 1964
+  descriptors:
+    country: US
+    region: US-OR
+  institution: "Pacific Northwest Forest and Range Experiment Station, Forest Service"
+  doi: "https://doi.org/10.5962/bhl.title.94205"
 models:
 - name: hstix100
   type: fixed_effects

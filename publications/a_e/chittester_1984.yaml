@@ -4,6 +4,11 @@ publication:
   title: Cubic-foot tree volume equations and tables for western juniper
   author: Chittester, Judith M and MacLean, Colin D
   year: 1984
+  descriptors:
+    country: US
+    region: [US-OR, US-CA]
+  institution: "US Department of Agriculture, Forest Service, Pacific Northwest Forest and Range Experiment Station (USA)"
+  doi: "https://doi.org/10.2737/PNW-RN-420"
 models:
 - name: vsia
   type: fixed_effects

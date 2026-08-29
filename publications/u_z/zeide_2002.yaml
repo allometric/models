@@ -6,6 +6,11 @@ publication:
   year: 2002
   descriptors:
     model_name: Normal height-diameter relationship
+    country: US
+    region: US-AR
+  booktitle: "Proceedings of the 11th Biennial Southern Silvicultural Research Conference"
+  pages: 463--466
+  organization: "General Technical Report SRS-48. USDA, Forest Service. Southern Research Station"
 models:
 - name: hst_s
   type: fixed_effects

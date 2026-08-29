@@ -4,6 +4,11 @@ publication:
   title: Site index curves for Douglas-fir in the Pacific Northwest
   author: King, James E.
   year: 1966
+  descriptors:
+    country: US
+    region: US-WA
+  number: 8
+  institution: "Weyerhaeuser Forestry Research Center"
 models:
 - name: hstix50
   type: fixed_effects

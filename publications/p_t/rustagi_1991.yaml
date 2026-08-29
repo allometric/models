@@ -4,6 +4,15 @@ publication:
   title: Compatible variable-form volume and stem-profile equations for Douglas-fir
   author: Rustagi, Krishna P and Loveless Jr, Robert S
   year: 1991
+  descriptors:
+    country: [US, CA]
+    region: [US-OR, US-WA, CA-BC]
+  journal: "Canadian Journal of Forest Research"
+  volume: 21
+  number: 2
+  pages: 143--151
+  publisher: "NRC Research Press Ottawa, Canada"
+  doi: "https://doi.org/10.1139/x91-018"
 models:
 - name: vsio
   type: fixed_effects

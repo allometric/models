@@ -4,6 +4,12 @@ publication:
   title: Height growth and site index curves for managed, even-aged stands of ponderosa pine in the Pacific Northwest
   author: Barrett, James Willis
   year: 1978
+  descriptors:
+    country: US
+    region: [US-WA, US-OR]
+  volume: 232
+  institution: "Department of Agriculture, Forest Service, Pacific Northwest Forest and Range Research Station"
+  doi: "https://doi.org/10.5962/bhl.title.94197"
 models:
 - name: hstix100
   type: fixed_effects

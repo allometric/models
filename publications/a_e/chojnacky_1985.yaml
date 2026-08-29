@@ -4,6 +4,10 @@ publication:
   title: Pinyon-juniper volume equations for the central Rocky Mountain States
   author: Chojnacky, David C
   year: 1985
+  descriptors:
+    country: US
+  volume: 339
+  institution: "US Department of Agriculture, Forest Service"
 models: []
 model_sets:
 - name: vsoa
@@ -25,7 +29,7 @@ model_sets:
 - name: vsoa_2
   type: fixed_effects_set
   response: {vsoa: ft3}
-  covariates: {dsoc: in, hst: ft, single_stem: ''}
+  covariates: {dsoc: in, hst: ft, single_stem: unitless}
   covt_defs: {single_stem: 'Equal to 1 if the tree has one stem, 0 otherwise'}
   prediction_function: (a + b * (dsoc^2 * hst)^(1/3) + c * single_stem)^3
   specifications:

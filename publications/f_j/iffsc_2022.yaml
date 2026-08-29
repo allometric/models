@@ -4,6 +4,10 @@ publication:
   title: Modelos de biomassa para espécies arbóreas nativas de Santa Catarina
   author: 'IFFSC, '
   year: 2022
+  descriptors:
+    country: BR
+    region: BR-SC
+  institution: "Inventário Florístico Florestal de Santa Catarina"
 models:
 - name: bt
   type: fixed_effects

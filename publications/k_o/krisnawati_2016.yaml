@@ -4,6 +4,14 @@ publication:
   title: A compatible estimation model of stem volume and taper for Acacia mangium Willd. plantations
   author: Krisnawati, Haruni
   year: 2016
+  descriptors:
+    country: ID
+    region: ID-SS
+  journal: "Indoensian Journal of Forestry Research"
+  volume: 3
+  number: 1
+  pages: 49--64
+  doi: "https://doi.org/10.20886/ijfr.2016.3.1.49-64"
 models:
 - name: vsoa
   type: fixed_effects

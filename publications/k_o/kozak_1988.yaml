@@ -4,6 +4,15 @@ publication:
   title: A variable-exponent taper equation
   author: Kozak, A
   year: 1988
+  descriptors:
+    country: CA
+    region: CA-BC
+  journal: "Canadian Journal of Forest Research"
+  volume: 18
+  number: 11
+  pages: 1363--1368
+  publisher: "NRC Research Press Ottawa, Canada"
+  doi: "https://doi.org/10.1139/x88-213"
 models: []
 model_sets:
 - name: dsih

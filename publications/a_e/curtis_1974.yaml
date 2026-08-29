@@ -4,6 +4,13 @@ publication:
   title: Height growth and site index for Douglas-fir in high-elevation forests of the Oregon-Washington Cascades
   author: Curtis, Robert O and Herman, Francis R and DeMars, Donald J
   year: 1974
+  descriptors:
+    country: US
+    region: [US-OR, US-WA]
+  volume: 20
+  number: 4
+  pages: 307--316
+  journal: "Forest Science"
 models:
 - name: hstix100
   type: fixed_effects

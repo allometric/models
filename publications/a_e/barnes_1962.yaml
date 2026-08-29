@@ -4,6 +4,11 @@ publication:
   title: Yield of even-aged stands of western hemlock
   author: Barnes, George H
   year: 1962
+  descriptors:
+    country: US
+    region: [US-OR, US-WA]
+  number: 1273
+  institution: "Department of Agriculture, Forest Service"
 models:
 - name: hstix50
   type: fixed_effects

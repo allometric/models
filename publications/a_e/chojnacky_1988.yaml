@@ -4,6 +4,12 @@ publication:
   title: Juniper, pinyon, oak, and mesquite volume equations for Arizona
   author: Chojnacky, David C
   year: 1988
+  descriptors:
+    country: US
+    region: US-AZ
+  volume: 391
+  institution: "US Department of Agriculture, Forest Service, Intermountain Research Station"
+  doi: "https://doi.org/10.5962/bhl.title.68960"
 models: []
 model_sets:
 - name: vsoa

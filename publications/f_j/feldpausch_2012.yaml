@@ -4,6 +4,14 @@ publication:
   title: Tree height integrated into pantropical forest biomass estimates
   author: 'Feldpausch, Ted R and Lloyd, Jon and Lewis, Simon L and Brienen, Roel JW and Gloor, Manuel and Monteagudo Mendoza, Abel and Lopez-Gonzalez, Gabriela and Banin, Lindsay and Abu Salim, Kamariah and Affum-Baffoe, Kofi and others, '
   year: 2012
+  descriptors:
+    country: [CM, GA, TZ, GH, LB, BO, BR, CO, EC, PE, BN, MY, AU]
+  journal: Biogeosciences
+  volume: 9
+  number: 8
+  pages: 3381--3403
+  publisher: "Copernicus GmbH"
+  doi: "https://doi.org/10.5194/bg-9-3381-2012"
 models:
 - name: bt
   type: fixed_effects

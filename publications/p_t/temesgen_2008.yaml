@@ -4,6 +4,14 @@ publication:
   title: "Analysis and comparison of nonlinear tree height prediction\n          strategies for Douglas-fir forests"
   author: Temesgen, Hailemariam and Monleon, Vicente J. and Hann, David W.
   year: 2008
+  descriptors:
+    country: US
+    region: US-OR
+  journal: "Canadian Journal of Forest Research"
+  volume: 38
+  number: 3
+  pages: 553-565
+  doi: "https://doi.org/10.1139/X07-104"
 models:
 - name: hst
   type: fixed_effects

@@ -4,6 +4,10 @@ publication:
   title: Maximum crown-width equations for southwestern Oregon tree species
   author: Paine, D.W.
   year: 1982
+  descriptors:
+    country: US
+    region: US-OR
+  institution: "Oregon State University, School of Forestry, Forest Research Lab"
 models: []
 model_sets:
 - name: dcm

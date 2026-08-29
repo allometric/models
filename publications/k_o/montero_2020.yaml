@@ -4,6 +4,9 @@ publication:
   title: Biomass production and carbon sequestration by Spanish shrublands and by the superficial organic horizon of forest soils
   author: Montero, G and López-Leiva, C and Ruiz-Peinado, R and López-Senespleda, E and Onrubia, R and Pasalodos, M
   year: 2020
+  descriptors:
+    country: ES
+  institution: "Ministry of Agriculture, Fisheries and Food: Madrid, Spain"
 models:
 - name: hht_2
   type: fixed_effects

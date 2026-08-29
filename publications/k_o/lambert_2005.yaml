@@ -4,6 +4,14 @@ publication:
   title: Canadian national tree aboveground biomass equations
   author: Lambert, MC and Ung, CH and Raulier, Fr'ed'eric
   year: 2005
+  descriptors:
+    country: CA
+  journal: "Canadian Journal of Forest Research"
+  volume: 35
+  number: 8
+  pages: 1996--2018
+  publisher: "NRC Research Press Ottawa, Canada"
+  doi: "https://doi.org/10.1139/x05-112"
 models: []
 model_sets:
 - name: bs

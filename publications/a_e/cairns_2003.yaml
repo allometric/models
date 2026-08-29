@@ -4,6 +4,14 @@ publication:
   title: Composition and aboveground tree biomass of a dry semi-evergreen forest on Mexico’s Yucatan Peninsula
   author: Cairns, Michael A and Olmsted, Ingrid and Granados, Juli'an and Argaez, Jorge
   year: 2003
+  descriptors:
+    country: MX
+    region: [MX-YUC, MX-CAM, MX-ROO]
+  journal: "Forest Ecology and Management"
+  volume: 186
+  number: 1-3
+  pages: 125--132
+  publisher: Elsevier
 models: []
 model_sets:
 - name: bt

@@ -4,6 +4,16 @@ publication:
   title: 'Canadian national biomass equations: new parameter estimates that include British Columbia data'
   author: Ung, Chhun-Huor and Bernier, Pierre and Guo, Xiao-Jing
   year: 2008
+  descriptors:
+    country: CA
+  doi: "https://doi.org/10.1139/X07-224"
+  journal: "Canadian Journal of Forest Research"
+  volume: 38
+  number: 5
+  month: may
+  url: "http://www.nrcresearchpress.com/doi/abs/10.1139/X07-224"
+  pages: 1123--1132
+  publisher: "NRC Research Press Ottawa, Canada"
 models: []
 model_sets:
 - name: bs

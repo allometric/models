@@ -4,6 +4,10 @@ publication:
   title: Volume equations for New Mexico's pinyon-juniper dryland forests. Forest Service research paper
   author: Chojnacky, DC
   year: 1994
+  descriptors:
+    country: US
+    region: US-NM
+  institution: "Forest Service, Ogden, UT (United States). Intermountain Research Station"
 models: []
 model_sets:
 - name: vsoa

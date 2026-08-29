@@ -4,6 +4,12 @@ publication:
   title: Northeastern forest survey revised cubic-foot volume equations
   author: Scott, Charles Thomas
   year: 1981
+  descriptors:
+    country: US
+    region: [US-TN, US-OH, US-WV, US-MD, US-DE, US-PA, US-NJ, US-NY, US-CT, US-RI, US-MA, US-VT, US-NH, US-ME]
+  volume: 304
+  institution: "US Department of Agriculture, Forest Service"
+  doi: "https://doi.org/10.2737/NE-RN-304"
 models: []
 model_sets:
 - name: vsia

@@ -4,6 +4,10 @@ publication:
   title: Equations for predicting height to crown base for fourteen tree species in southwest Oregon
   author: Ritchie, Martin W and Hann, David W
   year: 1987
+  descriptors:
+    country: US
+    region: US-OR
+  institution: "Oregon State University"
 models:
 - name: rc_5
   type: fixed_effects

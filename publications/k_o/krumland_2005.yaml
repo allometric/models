@@ -4,6 +4,10 @@ publication:
   title: Site index systems for major young-growth forest and woodland species in northern California
   author: Krumland, Helge
   year: 2005
+  descriptors:
+    country: US
+    region: US-CA
+  institution: "State of California, The Resources Agency, Department of Forestry and Fire Protection"
 models: []
 model_sets:
 - name: hstixi

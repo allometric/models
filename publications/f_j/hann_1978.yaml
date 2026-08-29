@@ -4,6 +4,11 @@ publication:
   title: Comprehensive tree volume equations for major species of New Mexico and Arizona. I. Results and methodology. II. Tables for unforked trees
   author: Hann, DW and Bare, BB
   year: 1978
+  descriptors:
+    country: US
+    region: [US-AZ, US-NM]
+  institution: "Research Paper, Intermountain Forest and Range Experiment Station, USDA Forest Service"
+  number: "INT-209/No. INT-210"
 models: []
 model_sets:
 - name: vsia

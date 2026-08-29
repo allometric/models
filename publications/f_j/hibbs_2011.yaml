@@ -4,6 +4,15 @@ publication:
   title: Stem taper and volume of managed red alder
   author: Hibbs, David and Bluhm, Andrew and Garber, Sean
   year: 2007
+  descriptors:
+    country: [US, CA]
+    region: [US-OR, US-WA, CA-BC]
+  journal: "Western Journal of Applied Forestry"
+  volume: 22
+  number: 1
+  pages: 61--66
+  publisher: "Oxford University Press"
+  doi: "https://doi.org/10.1093/wjaf/22.1.61"
 models:
 - name: dsih
   type: fixed_effects

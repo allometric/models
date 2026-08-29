@@ -4,6 +4,13 @@ publication:
   title: Taxon-specific modeling systems for improving reliability of tree aboveground biomass and its components estimates in tropical dry dipterocarp forests
   author: Huy, Bao and Tinh, Nguyen Thi and Poudel, Krishna P and Frank, Bryce Michael and Temesgen, Hailemariam
   year: 2019
+  descriptors:
+    country: VN
+  journal: "Forest Ecology and Management"
+  volume: 437
+  pages: 156-174
+  publisher: Elsevier
+  doi: "https://doi.org/10.1016/j.foreco.2019.01.038"
 models: []
 model_sets:
 - name: bs

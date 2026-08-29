@@ -4,6 +4,12 @@ publication:
   title: Generalized biomass and leaf area allometric equations for European tree species incorporating stand structure, tree age and climate
   author: 'Forrester, David I and Tachauer, I Heloise H and Annighoefer, Peter and Barbeito, Ignacio and Pretzsch, Hans and Ruiz-Peinado, Ricardo and Stark, Hendrik and Vacchiano, Giorgio and Zlatanov, Tzvetan and Chakraborty, Tamalika and others, '
   year: 2017
+  descriptors:
+    country: [AT, BE, BG, HR, CY, CZ, DK, EE, FI, FR, DE, GR, HU, IT, LV, LT, LU, MT, NL, PL, PT, RO, SK, SI, ES]
+  journal: "Forest Ecology and Management"
+  volume: 396
+  pages: 160--175
+  publisher: Elsevier
 models:
 - name: bt_2
   type: fixed_effects

@@ -4,6 +4,11 @@ publication:
   title: Site index, height growth, normal yields, and stocking levels for larch in Oregon and Washington
   author: Cochran, PH
   year: 1985
+  descriptors:
+    country: US
+    region: [US-OR, US-WA]
+  volume: 424
+  institution: "US Department of Agriculture, Forest Service, Pacific Northwest Forest and Experiment Station"
 models:
 - name: hstix50
   type: fixed_effects

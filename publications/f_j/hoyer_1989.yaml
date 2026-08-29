@@ -4,6 +4,11 @@ publication:
   title: Height-age and site index curves for Pacific silver fir in the Pacific Northwest
   author: Hoyer, Gerald E and Herman, Francis R
   year: 1989
+  descriptors:
+    country: US
+    region: [US-OR, US-WA]
+  volume: 418
+  institution: "US Department of Agriculture, Forest Service, Pacific Northwest Research Station"
 models:
 - name: hst
   type: fixed_effects

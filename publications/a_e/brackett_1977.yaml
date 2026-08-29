@@ -4,6 +4,10 @@ publication:
   title: Notes on tarif tree volume computation
   author: Brackett, Michael
   year: 1977
+  descriptors:
+    country: US
+    region: US-WA
+  institution: "State of Washington, Dept. of Natural Resources"
 models: []
 model_sets:
 - name: vsia

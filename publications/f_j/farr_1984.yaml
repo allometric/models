@@ -4,6 +4,12 @@ publication:
   title: Site index and height growth curves for unmanaged even-aged stands of western hemlock and Sitka spruce in southeast Alaska.
   author: Farr, Wilbur
   year: 1984
+  descriptors:
+    country: US
+    region: US-AK
+  number: 326
+  institution: "Pacific Northwest Forest and Range Experiment Station"
+  doi: "https://doi.org/10.5962/bhl.title.94521"
 models:
 - name: hstix50
   type: fixed_effects

@@ -4,6 +4,11 @@ publication:
   title: Site index and height growth curves for managed, even-aged stands of white or grand fir east of the Cascades in Oregon and Washington
   author: Cochran, PH
   year: 1979
+  descriptors:
+    country: US
+    region: [US-OR, US-WA]
+  volume: 252
+  institution: "Department of Agriculture, Forest Service, Pacific Northwest Forest and Range Experiment Station"
 models: []
 model_sets:
 - name: hstix50

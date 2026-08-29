@@ -4,6 +4,15 @@ publication:
   title: Estimating upper stem diameters and volume of Douglas-fir and Western hemlock trees in the Pacific northwest
   author: Poudel, Krishna P and Temesgen, Hailemariam and Gray, Andrew N
   year: 2018
+  descriptors:
+    country: US
+    region: [US-OR, US-WA]
+  journal: "Forest Ecosystems"
+  volume: 5
+  number: 1
+  pages: 1--12
+  publisher: Springer
+  doi: "https://doi.org/10.1186/s40663-018-0134-2"
 models: []
 model_sets:
 - name: rsdodi

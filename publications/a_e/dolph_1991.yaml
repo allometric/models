@@ -4,6 +4,11 @@ publication:
   title: Polymorphic site index curves for red fir in California and southern Oregon
   author: Dolph, K Leroy
   year: 1991
+  descriptors:
+    country: US
+    region: [US-CA, US-OR]
+  volume: 206
+  institution: "US Department of Agriculture, Forest Service, Pacific Southwest Research Station"
 models:
 - name: hst
   type: fixed_effects

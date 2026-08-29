@@ -4,6 +4,14 @@ publication:
   title: Biomass, carbon, and nutrient dynamics of secondary forests in a humid tropical region of Mexico
   author: Hughes, R Flint and Kauffman, J Boone and Jaramillo, Victor J
   year: 1999
+  descriptors:
+    country: MX
+    region: MX-VER
+  journal: Ecology
+  volume: 80
+  number: 6
+  pages: 1892--1907
+  publisher: "Wiley Online Library"
 models:
 - name: hst
   type: fixed_effects

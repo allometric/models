@@ -4,6 +4,10 @@ publication:
   title: Equations for predicting diameter and squared diameter inside bark at breast height for six major conifers of southwest Oregon
   author: Larsen, David Rolf and Hann, David W
   year: 1985
+  descriptors:
+    country: US
+    region: US-OR
+  institution: "Oregon State University"
 models: []
 model_sets:
 - name: dsib

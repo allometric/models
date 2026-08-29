@@ -4,6 +4,14 @@ publication:
   title: Carbon Accumulation in the Aboveground Biomass of a Bambusa oldhamii Plantation
   author: Casta~neda-Mendoza, Arturo and Vargas-Hern'andez, Jes'us and G'omez-Guerrero, Armando and Valdez-Hern'andez, Juan I and Vaquera-Huerta, Humberto
   year: 2005
+  descriptors:
+    country: MX
+    region: MX-VER
+  journal: Agrociencia
+  volume: 39
+  number: 1
+  pages: 107--116
+  publisher: "Colegio de Postgraduados"
 models: []
 model_sets:
 - name: bs

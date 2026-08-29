@@ -4,6 +4,11 @@ publication:
   title: Site index curves for Engelmann spruce in northern and central Rocky Mountains
   author: Brickell, James Earl
   year: 1966
+  descriptors:
+    country: US
+    region: [US-ID, US-MT, US-WY, US-CO, US-UT]
+  volume: 42
+  institution: "US Department of Agriculture, Forest Service"
 models:
 - name: hstix50
   type: fixed_effects

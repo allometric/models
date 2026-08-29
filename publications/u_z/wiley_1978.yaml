@@ -4,6 +4,11 @@ publication:
   title: Site index tables for western hemlock in the Pacific Northwest
   author: Wiley, Kenneth N.
   year: 1978
+  descriptors:
+    country: [US, CA]
+    region: [US-OR, US-WA, CA-BC]
+  institution: Weyerhaeuser
+  number: 17
 models:
 - name: hstix50
   type: fixed_effects

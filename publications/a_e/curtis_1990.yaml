@@ -4,6 +4,10 @@ publication:
   title: Height growth and site index curves for western white pine in the Cascade Range of Washington and Oregon
   author: Curtis, Robert O and Diaz, Nancy M and Clendenen, Gary W
   year: 1990
+  descriptors:
+    country: US
+    region: [US-OR, US-WA]
+  institution: "US Department of Agriculture, Forest Service, Pacific Northwest Research Station"
 models:
 - name: hstix50
   type: fixed_effects

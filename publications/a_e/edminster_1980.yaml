@@ -4,6 +4,12 @@ publication:
   title: Volume tables and point-sampling factors for ponderosa pine in the Front Range of Colorado
   author: Edminster, Carleton B and Beeson, Robert T and Metcalf, Gary E
   year: 1980
+  descriptors:
+    country: US
+    region: US-CO
+  volume: 218
+  institution: "Rocky Mountain Forest and Range Experiment Station, Forest Service, US"
+  doi: "https://doi.org/10.5962/bhl.title.98678"
 models:
 - name: vsia
   type: fixed_effects
