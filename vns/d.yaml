@@ -1,0 +1,44 @@
+measure:
+  code: d
+  name: diameter
+variables:
+  - name: dsob
+    component: s
+    modifiers: [o, b]
+    description: diameter of the stem, outside bark at breast height
+  - name: dsoh
+    component: s
+    modifiers: [o, h]
+    description: diameter of the stem, outside bark at a specified height
+  - name: dsih
+    component: s
+    modifiers: [i, h]
+    description: diameter of the stem, inside bark at a specified height
+  - name: dsib
+    component: s
+    modifiers: [i, b]
+    description: diameter of the stem, inside bark at breast height
+  - name: dui1
+    component: u
+    modifiers: [i, '1']
+    description: diameter of the stump, inside bark at one unit
+  - name: dsoc
+    component: s
+    modifiers: [o, c]
+    description: diameter outside bark above the root collar
+  - name: dc
+    component: c
+    modifiers: []
+    description: crown diameter
+  - name: dcm
+    component: c
+    modifiers: [m]
+    description: maximum crown diameter
+  - name: dcl
+    component: c
+    modifiers: [l]
+    description: largest crown diameter
+  - name: dh
+    component: h
+    modifiers: []
+    description: shrub diameter

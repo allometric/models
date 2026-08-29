@@ -1,0 +1,20 @@
+measure:
+  code: a
+  name: age
+variables:
+  - name: atb
+    component: t
+    modifiers: [b]
+    description: age of the tree at breast height
+  - name: att
+    component: t
+    modifiers: [t]
+    description: age of the tree
+  - name: ah
+    component: h
+    modifiers: []
+    description: age of the shrub
+  - name: ati
+    component: t
+    modifiers: [i]
+    description: index age for a base-age invariant site index function

@@ -1,0 +1,52 @@
+measure:
+  code: r
+  name: ratio
+variables:
+  - name: rc
+    component: c
+    modifiers: []
+    description: crown ratio
+  - name: rsdodi
+    component: s
+    modifiers: [dodi]
+    description: diameter of the stem inside bark at a height along the stem divided by diameter outside bark at breast height
+  - name: rfbt
+    component: f
+    modifiers: [bt]
+    description: ratio of foliage biomass to biomass of entire tree
+  - name: rsbt
+    component: s
+    modifiers: [bt]
+    description: ratio of stem biomass to biomass of entire tree
+  - name: rkbt
+    component: k
+    modifiers: [bt]
+    description: ratio of bark biomass to biomass of entire tree
+  - name: rbbt
+    component: b
+    modifiers: [bt]
+    description: ratio of branch biomass to biomass of entire tree
+  - name: rwd
+    component: w
+    modifiers: [d]
+    description: wood density
+  - name: rws
+    component: w
+    modifiers: [s]
+    description: wood specific gravity
+  - name: rsvg
+    component: s
+    modifiers: [vg]
+    description: volume to basal area ratio
+  - name: rsk
+    component: s
+    modifiers: [k]
+    description: bark correction factor
+  - name: rv
+    component: v
+    modifiers: []
+    description: ratio of forest cover
+  - name: rfa
+    component: f
+    modifiers: [a]
+    description: leaf area

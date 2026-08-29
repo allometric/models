@@ -1,0 +1,27 @@
+components:
+  - code: b
+    name: branch
+  - code: c
+    name: crown
+  - code: f
+    name: foliage
+  - code: k
+    name: bark
+  - code: r
+    name: root
+  - code: s
+    name: stem
+  - code: t
+    name: tree
+  - code: u
+    name: stump
+  - code: w
+    name: wood
+  - code: h
+    name: shrub
+  - code: v
+    name: cover
+  - code: o
+    name: topographic
+  - code: l
+    name: climatic

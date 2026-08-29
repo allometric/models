@@ -1,0 +1,8 @@
+measure:
+  code: e
+  name: density
+variables:
+  - name: es
+    component: s
+    modifiers: []
+    description: stem density

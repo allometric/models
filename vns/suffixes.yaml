@@ -1,0 +1,5 @@
+suffixes:
+  - code: p
+    scale: plot
+  - code: s
+    scale: stand

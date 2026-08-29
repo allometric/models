@@ -1,0 +1,48 @@
+measure:
+  code: b
+  name: biomass
+variables:
+  - name: bs
+    component: s
+    modifiers: []
+    description: stem biomass
+  - name: bb
+    component: b
+    modifiers: []
+    description: branch biomass
+  - name: bbl
+    component: b
+    modifiers: [l]
+    description: ' live branch biomass'
+  - name: bbd
+    component: b
+    modifiers: [d]
+    description: ' dead branch biomass'
+  - name: bf
+    component: f
+    modifiers: []
+    description: foliage biomass
+  - name: bk
+    component: k
+    modifiers: []
+    description: bark biomass
+  - name: bt
+    component: t
+    modifiers: []
+    description: tree biomass
+  - name: br
+    component: r
+    modifiers: []
+    description: root biomass
+  - name: bsi
+    component: s
+    modifiers: [i]
+    description: stem biomass without bark
+  - name: bh
+    component: h
+    modifiers: []
+    description: shrub biomass
+  - name: bsr
+    component: s
+    modifiers: [r]
+    description: stem + branch biomass

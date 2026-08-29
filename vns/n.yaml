@@ -1,0 +1,20 @@
+measure:
+  code: n
+  name: angle
+variables:
+  - name: nol
+    component: o
+    modifiers: [l]
+    description: latitude
+  - name: noo
+    component: o
+    modifiers: [o]
+    description: longitude
+  - name: nos
+    component: o
+    modifiers: [s]
+    description: slope
+  - name: noa
+    component: o
+    modifiers: [a]
+    description: aspect

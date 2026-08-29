@@ -1,0 +1,21 @@
+measures:
+  - code: a
+    name: age
+  - code: b
+    name: biomass
+  - code: d
+    name: diameter
+  - code: e
+    name: density
+  - code: g
+    name: basal area
+  - code: h
+    name: height
+  - code: r
+    name: ratio
+  - code: v
+    name: volume
+  - code: n
+    name: angle
+  - code: t
+    name: temperature

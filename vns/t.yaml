@@ -1,0 +1,8 @@
+measure:
+  code: t
+  name: temperature
+variables:
+  - name: tlt
+    component: l
+    modifiers: [t]
+    description: mean annual temperature

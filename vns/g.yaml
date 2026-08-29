@@ -1,0 +1,8 @@
+measure:
+  code: g
+  name: basal area
+variables:
+  - name: gs
+    component: s
+    modifiers: []
+    description: basal area

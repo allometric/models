@@ -1,0 +1,72 @@
+measure:
+  code: h
+  name: height
+variables:
+  - name: hst
+    component: s
+    modifiers: [t]
+    description: total height of the stem
+  - name: hsm
+    component: s
+    modifiers: [m]
+    description: merchantable height of the stem
+  - name: hnd
+    component: n
+    modifiers: [d]
+    description: average height of dominant trees in stand
+  - name: hso
+    component: s
+    modifiers: [o]
+    description: height of the stem above breast height
+  - name: hsb
+    component: s
+    modifiers: [b]
+    description: height of the stem to crown base
+  - name: hsv
+    component: s
+    modifiers: [v]
+    description: height of the stem to crown base above breast height
+  - name: hsd
+    component: s
+    modifiers: [d]
+    description: height to a specified diameter (taper)
+  - name: hsdip75
+    component: s
+    modifiers: [d, ip75]
+    description: height to a diameter that is 0.75 times the diameter inside bark at breast height
+  - name: hsdop67
+    component: s
+    modifiers: [d, op67]
+    description: height to a diameter that is 0.67 times the diameter outside bark at breast height
+  - name: hstixi
+    component: s
+    modifiers: [t, ixi]
+    description: site index (base age invariant function)
+  - name: hstix20
+    component: s
+    modifiers: [t, ix20]
+    description: site index at 20 year base age
+  - name: hstix50
+    component: s
+    modifiers: [t, ix50]
+    description: site index at 50 year base age
+  - name: hstix100
+    component: s
+    modifiers: [t, ix100]
+    description: site index at 100 year base age
+  - name: hsl
+    component: s
+    modifiers: [l]
+    description: distance from tip of stem to merchantibility limit
+  - name: hht
+    component: h
+    modifiers: [t]
+    description: total height of the shrub
+  - name: hcl
+    component: c
+    modifiers: [l]
+    description: height of live crown
+  - name: hlp
+    component: l
+    modifiers: [p]
+    description: mean annual precipitation

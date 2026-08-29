@@ -1,0 +1,7 @@
+model_types:
+  - model_type: taper
+    response_name_starts: [dsoh, dsih, rsd]
+  - model_type: site index
+    response_name_starts: [hstix]
+  - model_type: VBAR
+    response_name_starts: [rsvg]

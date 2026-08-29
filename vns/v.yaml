@@ -1,0 +1,44 @@
+measure:
+  code: v
+  name: volume
+variables:
+  - name: vsia
+    component: s
+    modifiers: [i, a]
+    description: volume of the entire stem inside bark, including top and stump
+  - name: vsoa
+    component: s
+    modifiers: [o, a]
+    description: volume of the entire stem outside bark, including top and stump
+  - name: vsim
+    component: s
+    modifiers: [i, m]
+    description: volume of the merchantable portion of the stem inside bark
+  - name: vsom
+    component: s
+    modifiers: [o, m]
+    description: volume of the merchantable portion of the stem outside bark
+  - name: vsib
+    component: s
+    modifiers: [i, b]
+    description: volume of the stem below breast height inside bark
+  - name: vsio
+    component: s
+    modifiers: [i, o]
+    description: volume of the stem above breast height inside bark
+  - name: vsoo
+    component: s
+    modifiers: [o, o]
+    description: volume of the stem above breast height outside bark
+  - name: vui
+    component: u
+    modifiers: [i]
+    description: volume of the stump inside bark
+  - name: vt
+    component: t
+    modifiers: []
+    description: volume of the top
+  - name: vc
+    component: c
+    modifiers: []
+    description: volume of the crown
