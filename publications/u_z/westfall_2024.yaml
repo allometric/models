@@ -1,0 +1,571 @@
+publication:
+  key: westfall_2024
+  bibtype: techreport
+  title: "A national-scale tree volume, biomass, and carbon modeling system for the United States"
+  author: "Westfall, James A and Coulston, John W and Gray, Andrew N and Shaw, John D and Radtke, Philip J and Walker, David M and Weiskittel, Aaron R and MacFarlane, David W and Affleck, David L R and Zhao, Dehai and Temesgen, Hailemariam and Poudel, Krishna P and Frank, Jereme M and Prisley, Stephen P and Wang, Yingfang and Sanchez Meador, Andrew J and Auty, David and Domke, Grant M"
+  year: 2024
+  number: "WO-104"
+  institution: "U.S. Department of Agriculture, Forest Service"
+  address: "Washington, DC"
+  month: "May"
+  doi: 10.2737/WO-GTR-104
+  url: https://doi.org/10.2737/WO-GTR-104
+  descriptors:
+    country: US
+models: []
+model_sets:
+- name: biomass_total_wood_bark_branch_m1
+  type: fixed_effects_set
+  response: {bt: lb}
+  covariates: {dsob: in, hst: ft}
+  prediction_function: 'a * dsob^b * hst^c'
+  response_definition: 'Total aboveground dry biomass (wood, bark, and branches; foliage excluded); D is diameter at breast height (4.5 ft) outside bark in inches and H is total tree height in feet.'
+  description: "Species-level total aboveground biomass models (model 1: y = a * D^b * H^c); supplemental Table S8a. Apply the species x ecodivision row when the tree's FIA ecodivision matches; otherwise use the row with no ecodivision for that species, if present."
+  component: aboveground biomass
+  specifications:
+  - parameters: { a: 0.349568157, b: 2.036595585, c: 0.610614134 }
+    taxa: [{ family: 'Pinaceae', genus: 'Abies', species: 'amabilis' }]
+    descriptors: { fia_species_code: 11, common_name: 'Pacific silver fir' }
+  - parameters: { a: 0.073497618, b: 1.998948783, c: 1.008150026 }
+    taxa: [{ family: 'Pinaceae', genus: 'Abies', species: 'concolor' }]
+    descriptors: { fia_species_code: 15, common_name: 'white fir' }
+  - parameters: { a: 0.014607388, b: 1.512436368, c: 1.71211905 }
+    taxa: [{ family: 'Pinaceae', genus: 'Abies', species: 'concolor' }]
+    descriptors: { ecodivision: 'M260', fia_species_code: 15, common_name: 'white fir' }
+  - parameters: { a: 0.349568157, b: 2.068859342, c: 0.610614134 }
+    taxa: [{ family: 'Pinaceae', genus: 'Abies', species: 'fraseri' }]
+    descriptors: { fia_species_code: 16, common_name: 'Fraser fir' }
+  - parameters: { a: 0.349568157, b: 2.083812739, c: 0.610614134 }
+    taxa: [{ family: 'Pinaceae', genus: 'Abies', species: 'grandis' }]
+    descriptors: { fia_species_code: 17, common_name: 'grand fir' }
+  - parameters: { a: 0.349568157, b: 2.070000431, c: 0.610614134 }
+    taxa: [{ family: 'Pinaceae', genus: 'Abies', species: 'magnifica' }]
+    descriptors: { fia_species_code: 20, common_name: 'California red fir' }
+  - parameters: { a: 0.301398904, b: 2.034237148, c: 0.695059531 }
+    taxa: [{ family: 'Cupressaceae', genus: 'Juniperus', species: 'virginiana' }]
+    descriptors: { fia_species_code: 68, common_name: 'eastern redcedar' }
+  - parameters: { a: 0.882434652, b: 2.025368218, c: 0.435750124 }
+    taxa: [{ family: 'Pinaceae', genus: 'Larix', species: 'laricina' }]
+    descriptors: { fia_species_code: 71, common_name: 'tamarack' }
+  - parameters: { a: 0.664116474, b: 2.010379452, c: 0.50920278 }
+    taxa: [{ family: 'Pinaceae', genus: 'Larix', species: 'laricina' }]
+    descriptors: { ecodivision: '210', fia_species_code: 71, common_name: 'tamarack' }
+  - parameters: { a: 0.301398904, b: 1.991589532, c: 0.695059531 }
+    taxa: [{ family: 'Pinaceae', genus: 'Larix', species: 'occidentalis' }]
+    descriptors: { fia_species_code: 73, common_name: 'western larch' }
+  - parameters: { a: 0.286625447, b: 1.737783775, c: 0.837560422 }
+    taxa: [{ family: 'Pinaceae', genus: 'Picea', species: 'engelmannii' }]
+    descriptors: { fia_species_code: 93, common_name: 'Engelmann spruce' }
+  - parameters: { a: 0.213931593, b: 1.67741863, c: 0.941537364 }
+    taxa: [{ family: 'Pinaceae', genus: 'Picea', species: 'engelmannii' }]
+    descriptors: { ecodivision: 'M330', fia_species_code: 93, common_name: 'Engelmann spruce' }
+  - parameters: { a: 0.21805211, b: 2.489339298, c: 0.520617556 }
+    taxa: [{ family: 'Pinaceae', genus: 'Picea', species: 'glauca' }]
+    descriptors: { fia_species_code: 94, common_name: 'white spruce' }
+  - parameters: { a: 0.039235479, b: 2.226011879, c: 1.144335464 }
+    taxa: [{ family: 'Pinaceae', genus: 'Picea', species: 'glauca' }]
+    descriptors: { ecodivision: '210', fia_species_code: 94, common_name: 'white spruce' }
+  - parameters: { a: 0.313619663, b: 2.122370911, c: 0.62071126 }
+    taxa: [{ family: 'Pinaceae', genus: 'Picea', species: 'mariana' }]
+    descriptors: { fia_species_code: 95, common_name: 'black spruce' }
+  - parameters: { a: 0.313619663, b: 2.122370911, c: 0.62071126 }
+    taxa: [{ family: 'Pinaceae', genus: 'Picea', species: 'mariana' }]
+    descriptors: { ecodivision: '210', fia_species_code: 95, common_name: 'black spruce' }
+  - parameters: { a: 0.371615725, b: 2.043904648, c: 0.646763187 }
+    taxa: [{ family: 'Pinaceae', genus: 'Picea', species: 'rubens' }]
+    descriptors: { fia_species_code: 97, common_name: 'red spruce' }
+  - parameters: { a: 0.371615725, b: 1.970403305, c: 0.646763187 }
+    taxa: [{ family: 'Pinaceae', genus: 'Picea', species: 'sitchensis' }]
+    descriptors: { fia_species_code: 98, common_name: 'Sitka spruce' }
+  - parameters: { a: 0.495643869, b: 2.109006809, c: 0.508476798 }
+    taxa: [{ family: 'Pinaceae', genus: 'Pinus', species: 'banksiana' }]
+    descriptors: { fia_species_code: 105, common_name: 'jack pine' }
+  - parameters: { a: 0.495643869, b: 2.109006809, c: 0.508476798 }
+    taxa: [{ family: 'Pinaceae', genus: 'Pinus', species: 'banksiana' }]
+    descriptors: { ecodivision: '210', fia_species_code: 105, common_name: 'jack pine' }
+  - parameters: { a: 0.303679972, b: 2.060661231, c: 0.658443677 }
+    taxa: [{ family: 'Pinaceae', genus: 'Pinus', species: 'contorta' }]
+    descriptors: { fia_species_code: 108, common_name: 'lodgepole pine' }
+  - parameters: { a: 0.181923396, b: 2.064633748, c: 0.783734848 }
+    taxa: [{ family: 'Pinaceae', genus: 'Pinus', species: 'contorta' }]
+    descriptors: { ecodivision: 'M330', fia_species_code: 108, common_name: 'lodgepole pine' }
+  - parameters: { a: 0.186963564, b: 2.19009994, c: 0.725056549 }
+    taxa: [{ family: 'Pinaceae', genus: 'Pinus', species: 'echinata' }]
+    descriptors: { fia_species_code: 110, common_name: 'shortleaf pine' }
+  - parameters: { a: 0.057622485, b: 2.148749824, c: 1.021064662 }
+    taxa: [{ family: 'Pinaceae', genus: 'Pinus', species: 'echinata' }]
+    descriptors: { ecodivision: '230', fia_species_code: 110, common_name: 'shortleaf pine' }
+  - parameters: { a: 0.748830041, b: 2.118508655, c: 0.435975843 }
+    taxa: [{ family: 'Pinaceae', genus: 'Pinus', species: 'echinata' }]
+    descriptors: { ecodivision: 'M230', fia_species_code: 110, common_name: 'shortleaf pine' }
+  - parameters: { a: 0.148830682, b: 2.057563893, c: 0.810673827 }
+    taxa: [{ family: 'Pinaceae', genus: 'Pinus', species: 'jeffreyi' }]
+    descriptors: { fia_species_code: 116, common_name: 'Jeffrey pine' }
+  - parameters: { a: 0.112404906, b: 2.075821407, c: 0.926658282 }
+    taxa: [{ family: 'Pinaceae', genus: 'Pinus', species: 'palustris' }]
+    descriptors: { fia_species_code: 121, common_name: 'longleaf pine' }
+  - parameters: { a: 0.112404906, b: 2.075821407, c: 0.926658282 }
+    taxa: [{ family: 'Pinaceae', genus: 'Pinus', species: 'palustris' }]
+    descriptors: { ecodivision: '230', fia_species_code: 121, common_name: 'longleaf pine' }
+  - parameters: { a: 0.380820507, b: 2.118642907, c: 0.552282327 }
+    taxa: [{ family: 'Pinaceae', genus: 'Pinus', species: 'ponderosa' }]
+    descriptors: { fia_species_code: 122, common_name: 'ponderosa pine' }
+  - parameters: { a: 0.23095964, b: 2.180139622, c: 0.636401464 }
+    taxa: [{ family: 'Pinaceae', genus: 'Pinus', species: 'ponderosa' }]
+    descriptors: { ecodivision: 'M260', fia_species_code: 122, common_name: 'ponderosa pine' }
+  - parameters: { a: 0.231449281, b: 1.925735742, c: 0.805486816 }
+    taxa: [{ family: 'Pinaceae', genus: 'Pinus', species: 'ponderosa' }]
+    descriptors: { ecodivision: 'M310', fia_species_code: 122, common_name: 'ponderosa pine' }
+  - parameters: { a: 0.38869001, b: 2.095942335, c: 0.554494316 }
+    taxa: [{ family: 'Pinaceae', genus: 'Pinus', species: 'ponderosa' }]
+    descriptors: { ecodivision: 'M330', fia_species_code: 122, common_name: 'ponderosa pine' }
+  - parameters: { a: 0.148830682, b: 2.151179164, c: 0.810673827 }
+    taxa: [{ family: 'Pinaceae', genus: 'Pinus', species: 'pungens' }]
+    descriptors: { fia_species_code: 123, common_name: 'Table Mountain pine' }
+  - parameters: { a: 0.148830682, b: 2.190447581, c: 0.810673827 }
+    taxa: [{ family: 'Pinaceae', genus: 'Pinus', species: 'rigida' }]
+    descriptors: { fia_species_code: 126, common_name: 'pitch pine' }
+  - parameters: { a: 0.278363855, b: 2.106451786, c: 0.623519753 }
+    taxa: [{ family: 'Pinaceae', genus: 'Pinus', species: 'strobus' }]
+    descriptors: { fia_species_code: 129, common_name: 'eastern white pine' }
+  - parameters: { a: 0.272341852, b: 1.978761046, c: 0.706249069 }
+    taxa: [{ family: 'Pinaceae', genus: 'Pinus', species: 'strobus' }]
+    descriptors: { ecodivision: '210', fia_species_code: 129, common_name: 'eastern white pine' }
+  - parameters: { a: 0.370462954, b: 2.217732339, c: 0.489143001 }
+    taxa: [{ family: 'Pinaceae', genus: 'Pinus', species: 'strobus' }]
+    descriptors: { ecodivision: 'M220', fia_species_code: 129, common_name: 'eastern white pine' }
+  - parameters: { a: 0.784128198, b: 2.287530154, c: 0.32258062 }
+    taxa: [{ family: 'Pinaceae', genus: 'Pinus', species: 'virginiana' }]
+    descriptors: { fia_species_code: 132, common_name: 'Virginia pine' }
+  - parameters: { a: 0.744572557, b: 2.21183998, c: 0.3744599 }
+    taxa: [{ family: 'Pinaceae', genus: 'Pinus', species: 'virginiana' }]
+    descriptors: { ecodivision: 'M220', fia_species_code: 132, common_name: 'Virginia pine' }
+  - parameters: { a: 0.174719172, b: 1.726525291, c: 0.984599765 }
+    taxa: [{ family: 'Pinaceae', genus: 'Pseudotsuga', species: 'menziesii' }]
+    descriptors: { fia_species_code: 202, common_name: 'Douglas-fir' }
+  - parameters: { a: 0.135206507, b: 1.713527048, c: 1.047613377 }
+    taxa: [{ family: 'Pinaceae', genus: 'Pseudotsuga', species: 'menziesii' }]
+    descriptors: { ecodivision: '240', fia_species_code: 202, common_name: 'Douglas-fir' }
+  - parameters: { a: 0.120040708, b: 1.71368785, c: 1.061101895 }
+    taxa: [{ family: 'Pinaceae', genus: 'Pseudotsuga', species: 'menziesii' }]
+    descriptors: { ecodivision: 'M240', fia_species_code: 202, common_name: 'Douglas-fir' }
+  - parameters: { a: 0.017636841, b: 1.546946282, c: 1.607689586 }
+    taxa: [{ family: 'Pinaceae', genus: 'Pseudotsuga', species: 'menziesii' }]
+    descriptors: { ecodivision: 'M260', fia_species_code: 202, common_name: 'Douglas-fir' }
+  - parameters: { a: 0.142806947, b: 1.970143963, c: 0.878880818 }
+    taxa: [{ family: 'Pinaceae', genus: 'Pseudotsuga', species: 'menziesii' }]
+    descriptors: { ecodivision: 'M330', fia_species_code: 202, common_name: 'Douglas-fir' }
+  - parameters: { a: 0.301398904, b: 1.904691556, c: 0.695059531 }
+    taxa: [{ family: 'Cupressaceae', genus: 'Sequoia', species: 'sempervirens' }]
+    descriptors: { fia_species_code: 211, common_name: 'redwood' }
+  - parameters: { a: 0.301398904, b: 1.84425738, c: 0.695059531 }
+    taxa: [{ family: 'Cupressaceae', genus: 'Taxodium', species: 'distichum' }]
+    descriptors: { fia_species_code: 221, common_name: 'baldcypress' }
+  - parameters: { a: 0.110459157, b: 1.538421675, c: 1.171293113 }
+    taxa: [{ family: 'Cupressaceae', genus: 'Taxodium', species: 'ascendens' }]
+    descriptors: { fia_species_code: 222, common_name: 'pondcypress' }
+  - parameters: { a: 0.110459157, b: 1.538421675, c: 1.171293113 }
+    taxa: [{ family: 'Cupressaceae', genus: 'Taxodium', species: 'ascendens' }]
+    descriptors: { ecodivision: '230', fia_species_code: 222, common_name: 'pondcypress' }
+  - parameters: { a: 0.116109718, b: 1.895372365, c: 0.955815802 }
+    taxa: [{ family: 'Pinaceae', genus: 'Tsuga', species: 'heterophylla' }]
+    descriptors: { fia_species_code: 263, common_name: 'western hemlock' }
+  - parameters: { a: 0.349568157, b: 2.074751581, c: 0.610614134 }
+    taxa: [{ family: 'Pinaceae', genus: 'Tsuga', species: 'mertensiana' }]
+    descriptors: { fia_species_code: 264, common_name: 'mountain hemlock' }
+  - parameters: { a: 0.219077829, b: 2.34655145, c: 0.566149295 }
+    taxa: [{ family: 'Sapindaceae', genus: 'Acer', species: 'negundo' }]
+    descriptors: { fia_species_code: 313, common_name: 'boxelder' }
+  - parameters: { a: 0.219077829, b: 2.34655145, c: 0.566149295 }
+    taxa: [{ family: 'Sapindaceae', genus: 'Acer', species: 'negundo' }]
+    descriptors: { ecodivision: '230', fia_species_code: 313, common_name: 'boxelder' }
+  - parameters: { a: 4.724200785, b: 2.266637565, c: -0.062750913 }
+    taxa: [{ family: 'Sapindaceae', genus: 'Acer', species: 'saccharinum' }]
+    descriptors: { fia_species_code: 317, common_name: 'silver maple' }
+  - parameters: { a: 0.030114004, b: 1.906921766, c: 1.385635015 }
+    taxa: [{ family: 'Sapindaceae', genus: 'Acer', species: 'saccharum' }]
+    descriptors: { fia_species_code: 318, common_name: 'sugar maple' }
+  - parameters: { a: 0.197488976, b: 1.931805898, c: 0.92308401 }
+    taxa: [{ family: 'Sapindaceae', genus: 'Acer', species: 'saccharum' }]
+    descriptors: { ecodivision: '210', fia_species_code: 318, common_name: 'sugar maple' }
+  - parameters: { a: 0.531644989, b: 2.204051341, c: 0.517144891 }
+    taxa: [{ family: 'Betulaceae', genus: 'Betula', species: 'spp.' }]
+    descriptors: { fia_species_code: 370, common_name: 'birch spp.' }
+  - parameters: { a: 0.093272971, b: 1.90993593, c: 1.100520353 }
+    taxa: [{ family: 'Betulaceae', genus: 'Betula', species: 'alleghaniensis' }]
+    descriptors: { fia_species_code: 371, common_name: 'yellow birch' }
+  - parameters: { a: 0.065196083, b: 1.90492982, c: 1.186839134 }
+    taxa: [{ family: 'Betulaceae', genus: 'Betula', species: 'alleghaniensis' }]
+    descriptors: { ecodivision: '210', fia_species_code: 371, common_name: 'yellow birch' }
+  - parameters: { a: 0.731333337, b: 2.201429775, c: 0.42310958 }
+    taxa: [{ family: 'Betulaceae', genus: 'Betula', species: 'papyrifera' }]
+    descriptors: { fia_species_code: 375, common_name: 'paper birch' }
+  - parameters: { a: 0.921838183, b: 2.20808746, c: 0.365204162 }
+    taxa: [{ family: 'Betulaceae', genus: 'Betula', species: 'papyrifera' }]
+    descriptors: { ecodivision: '210', fia_species_code: 375, common_name: 'paper birch' }
+  - parameters: { a: 0.092749057, b: 1.907269894, c: 1.052397971 }
+    taxa: [{ family: 'Betulaceae', genus: 'Betula', species: 'papyrifera' }]
+    descriptors: { ecodivision: 'M210', fia_species_code: 375, common_name: 'paper birch' }
+  - parameters: { a: 0.592401108, b: 2.28787127, c: 0.476750767 }
+    taxa: [{ family: 'Betulaceae', genus: 'Carpinus', species: 'caroliniana' }]
+    descriptors: { fia_species_code: 391, common_name: 'American hornbeam, musclewood' }
+  - parameters: { a: 0.14249435, b: 2.231464781, c: 0.835308377 }
+    taxa: [{ family: 'Juglandaceae', genus: 'Carya', species: 'spp.' }]
+    descriptors: { fia_species_code: 400, common_name: 'hickory spp.' }
+  - parameters: { a: 0.154205459, b: 2.406949282, c: 0.708207968 }
+    taxa: [{ family: 'Juglandaceae', genus: 'Carya', species: 'spp.' }]
+    descriptors: { ecodivision: '230', fia_species_code: 400, common_name: 'hickory spp.' }
+  - parameters: { a: 0.138758302, b: 2.116086022, c: 0.914738151 }
+    taxa: [{ family: 'Juglandaceae', genus: 'Carya', species: 'spp.' }]
+    descriptors: { ecodivision: 'M220', fia_species_code: 400, common_name: 'hickory spp.' }
+  - parameters: { a: 0.426589681, b: 2.160514868, c: 0.637323715 }
+    taxa: [{ family: 'Juglandaceae', genus: 'Carya', species: 'cordiformis' }]
+    descriptors: { fia_species_code: 402, common_name: 'bitternut hickory' }
+  - parameters: { a: 0.426589681, b: 2.16506594, c: 0.637323715 }
+    taxa: [{ family: 'Juglandaceae', genus: 'Carya', species: 'glabra' }]
+    descriptors: { fia_species_code: 403, common_name: 'pignut hickory' }
+  - parameters: { a: 0.359289578, b: 2.063221986, c: 0.610643492 }
+    taxa: [{ family: 'Cannabaceae', genus: 'Celtis', species: 'spp.' }]
+    descriptors: { fia_species_code: 460, common_name: 'hackberry spp.' }
+  - parameters: { a: 0.068502885, b: 2.112095282, c: 1.010901178 }
+    taxa: [{ family: 'Cannabaceae', genus: 'Celtis', species: 'laevigata' }]
+    descriptors: { fia_species_code: 461, common_name: 'sugarberry' }
+  - parameters: { a: 0.068502885, b: 2.112095282, c: 1.010901178 }
+    taxa: [{ family: 'Cannabaceae', genus: 'Celtis', species: 'laevigata' }]
+    descriptors: { ecodivision: '230', fia_species_code: 461, common_name: 'sugarberry' }
+  - parameters: { a: 0.359289578, b: 2.199636684, c: 0.610643492 }
+    taxa: [{ family: 'Cannabaceae', genus: 'Celtis', species: 'occidentalis' }]
+    descriptors: { fia_species_code: 462, common_name: 'hackberry' }
+  - parameters: { a: 0.359289578, b: 2.214982904, c: 0.610643492 }
+    taxa: [{ family: 'Fabaceae', genus: 'Cercis', species: 'canadensis' }]
+    descriptors: { fia_species_code: 471, common_name: 'eastern redbud' }
+  - parameters: { a: 0.238121203, b: 1.981857962, c: 0.847835409 }
+    taxa: [{ family: 'Cornaceae', genus: 'Cornus', species: 'florida' }]
+    descriptors: { fia_species_code: 491, common_name: 'flowering dogwood' }
+  - parameters: { a: 0.150841077, b: 1.863068053, c: 1.025042672 }
+    taxa: [{ family: 'Cornaceae', genus: 'Cornus', species: 'florida' }]
+    descriptors: { ecodivision: '230', fia_species_code: 491, common_name: 'flowering dogwood' }
+  - parameters: { a: 0.359289578, b: 2.168847162, c: 0.610643492 }
+    taxa: [{ family: 'Ebenaceae', genus: 'Diospyros', species: 'virginiana' }]
+    descriptors: { fia_species_code: 521, common_name: 'common persimmon' }
+  - parameters: { a: 0.032731339, b: 2.05914548, c: 1.26086221 }
+    taxa: [{ family: 'Fagaceae', genus: 'Fagus', species: 'grandifolia' }]
+    descriptors: { fia_species_code: 531, common_name: 'American beech' }
+  - parameters: { a: 0.114158762, b: 1.796155886, c: 1.118192132 }
+    taxa: [{ family: 'Fagaceae', genus: 'Fagus', species: 'grandifolia' }]
+    descriptors: { ecodivision: '210', fia_species_code: 531, common_name: 'American beech' }
+  - parameters: { a: 0.398124318, b: 2.167230187, c: 0.573789458 }
+    taxa: [{ family: 'Oleaceae', genus: 'Fraxinus', species: 'spp.' }]
+    descriptors: { fia_species_code: 540, common_name: 'ash spp.' }
+  - parameters: { a: 0.475068336, b: 1.944479885, c: 0.61796786 }
+    taxa: [{ family: 'Oleaceae', genus: 'Fraxinus', species: 'spp.' }]
+    descriptors: { ecodivision: '230', fia_species_code: 540, common_name: 'ash spp.' }
+  - parameters: { a: 0.818458154, b: 1.873535737, c: 0.581382983 }
+    taxa: [{ family: 'Oleaceae', genus: 'Fraxinus', species: 'americana' }]
+    descriptors: { fia_species_code: 541, common_name: 'white ash' }
+  - parameters: { a: 0.505880958, b: 1.841960689, c: 0.716696756 }
+    taxa: [{ family: 'Oleaceae', genus: 'Fraxinus', species: 'americana' }]
+    descriptors: { ecodivision: '210', fia_species_code: 541, common_name: 'white ash' }
+  - parameters: { a: 0.359289578, b: 2.125186018, c: 0.610643492 }
+    taxa: [{ family: 'Oleaceae', genus: 'Fraxinus', species: 'nigra' }]
+    descriptors: { fia_species_code: 543, common_name: 'black ash' }
+  - parameters: { a: 0.22558181, b: 1.792987614, c: 0.883721143 }
+    taxa: [{ family: 'Oleaceae', genus: 'Fraxinus', species: 'pennsylvanica' }]
+    descriptors: { fia_species_code: 544, common_name: 'green ash' }
+  - parameters: { a: 0.30653383, b: 1.812211917, c: 0.803589437 }
+    taxa: [{ family: 'Oleaceae', genus: 'Fraxinus', species: 'pennsylvanica' }]
+    descriptors: { ecodivision: '230', fia_species_code: 544, common_name: 'green ash' }
+  - parameters: { a: 0.359289578, b: 2.176037856, c: 0.610643492 }
+    taxa: [{ family: 'Aquifoliaceae', genus: 'Ilex', species: 'opaca' }]
+    descriptors: { fia_species_code: 591, common_name: 'American holly' }
+  - parameters: { a: 0.359289578, b: 2.179254712, c: 0.610643492 }
+    taxa: [{ family: 'Juglandaceae', genus: 'Juglans', species: 'nigra' }]
+    descriptors: { fia_species_code: 602, common_name: 'black walnut' }
+  - parameters: { a: 0.176429479, b: 2.219442715, c: 0.698966292 }
+    taxa: [{ family: 'Altingiaceae', genus: 'Liquidambar', species: 'styraciflua' }]
+    descriptors: { fia_species_code: 611, common_name: 'sweetgum' }
+  - parameters: { a: 0.176552299, b: 2.219508076, c: 0.698773109 }
+    taxa: [{ family: 'Altingiaceae', genus: 'Liquidambar', species: 'styraciflua' }]
+    descriptors: { ecodivision: '230', fia_species_code: 611, common_name: 'sweetgum' }
+  - parameters: { a: 0.359289578, b: 2.055452878, c: 0.610643492 }
+    taxa: [{ family: 'Magnoliaceae', genus: 'Magnolia', species: 'virginiana' }]
+    descriptors: { fia_species_code: 653, common_name: 'sweetbay' }
+  - parameters: { a: 0.194805944, b: 1.939361634, c: 0.7682613 }
+    taxa: [{ family: 'Nyssaceae', genus: 'Nyssa', species: 'aquatica' }]
+    descriptors: { fia_species_code: 691, common_name: 'water tupelo' }
+  - parameters: { a: 0.194805944, b: 1.939361634, c: 0.7682613 }
+    taxa: [{ family: 'Nyssaceae', genus: 'Nyssa', species: 'aquatica' }]
+    descriptors: { ecodivision: '230', fia_species_code: 691, common_name: 'water tupelo' }
+  - parameters: { a: 0.359289578, b: 2.113238225, c: 0.610643492 }
+    taxa: [{ family: 'Nyssaceae', genus: 'Nyssa', species: 'sylvatica' }]
+    descriptors: { fia_species_code: 693, common_name: 'blackgum' }
+  - parameters: { a: 0.960248321, b: 2.412438666, c: 0.177228973 }
+    taxa: [{ family: 'Nyssaceae', genus: 'Nyssa', species: 'biflora' }]
+    descriptors: { fia_species_code: 694, common_name: 'swamp tupelo' }
+  - parameters: { a: 0.960248321, b: 2.412438666, c: 0.177228973 }
+    taxa: [{ family: 'Nyssaceae', genus: 'Nyssa', species: 'biflora' }]
+    descriptors: { ecodivision: '230', fia_species_code: 694, common_name: 'swamp tupelo' }
+  - parameters: { a: 0.359289578, b: 2.071689208, c: 0.610643492 }
+    taxa: [{ family: 'Ericaceae', genus: 'Oxydendrum', species: 'arboreum' }]
+    descriptors: { fia_species_code: 711, common_name: 'sourwood' }
+  - parameters: { a: 0.359289578, b: 2.083871933, c: 0.610643492 }
+    taxa: [{ family: 'Platanaceae', genus: 'Platanus', species: 'occidentalis' }]
+    descriptors: { fia_species_code: 731, common_name: 'American sycamore' }
+  - parameters: { a: 0.337387708, b: 2.148198161, c: 0.56216026 }
+    taxa: [{ family: 'Salicaceae', genus: 'Populus', species: 'spp.' }]
+    descriptors: { fia_species_code: 740, common_name: 'cottonwood and poplar spp.' }
+  - parameters: { a: 0.099825153, b: 2.032553584, c: 0.898045231 }
+    taxa: [{ family: 'Salicaceae', genus: 'Populus', species: 'spp.' }]
+    descriptors: { ecodivision: '230', fia_species_code: 740, common_name: 'cottonwood and poplar spp.' }
+  - parameters: { a: 0.063679544, b: 2.044922633, c: 1.029077254 }
+    taxa: [{ family: 'Salicaceae', genus: 'Populus', species: 'balsamifera' }]
+    descriptors: { fia_species_code: 741, common_name: 'balsam poplar' }
+  - parameters: { a: 0.063679544, b: 2.044922633, c: 1.029077254 }
+    taxa: [{ family: 'Salicaceae', genus: 'Populus', species: 'balsamifera' }]
+    descriptors: { ecodivision: '210', fia_species_code: 741, common_name: 'balsam poplar' }
+  - parameters: { a: 0.183406635, b: 1.980557158, c: 0.776309008 }
+    taxa: [{ family: 'Salicaceae', genus: 'Populus', species: 'deltoides' }]
+    descriptors: { fia_species_code: 742, common_name: 'eastern cottonwood' }
+  - parameters: { a: 0.446369541, b: 2.307513916, c: 0.440759181 }
+    taxa: [{ family: 'Salicaceae', genus: 'Populus', species: 'grandidentata' }]
+    descriptors: { fia_species_code: 743, common_name: 'bigtooth aspen' }
+  - parameters: { a: 0.446369541, b: 2.307513916, c: 0.440759181 }
+    taxa: [{ family: 'Salicaceae', genus: 'Populus', species: 'grandidentata' }]
+    descriptors: { ecodivision: '210', fia_species_code: 743, common_name: 'bigtooth aspen' }
+  - parameters: { a: 0.077568867, b: 2.00707876, c: 1.018290332 }
+    taxa: [{ family: 'Salicaceae', genus: 'Populus', species: 'tremuloides' }]
+    descriptors: { fia_species_code: 746, common_name: 'quaking aspen' }
+  - parameters: { a: 0.219583283, b: 2.152173348, c: 0.702499308 }
+    taxa: [{ family: 'Salicaceae', genus: 'Populus', species: 'tremuloides' }]
+    descriptors: { ecodivision: '210', fia_species_code: 746, common_name: 'quaking aspen' }
+  - parameters: { a: 0.148096171, b: 1.960083605, c: 0.877910539 }
+    taxa: [{ family: 'Salicaceae', genus: 'Populus', species: 'tremuloides' }]
+    descriptors: { ecodivision: 'M330', fia_species_code: 746, common_name: 'quaking aspen' }
+  - parameters: { a: 0.198661401, b: 1.998036007, c: 0.847256421 }
+    taxa: [{ family: 'Rosaceae', genus: 'Prunus', species: 'serotina' }]
+    descriptors: { fia_species_code: 762, common_name: 'black cherry' }
+  - parameters: { a: 0.0923161, b: 1.819131811, c: 1.13745364 }
+    taxa: [{ family: 'Rosaceae', genus: 'Prunus', species: 'serotina' }]
+    descriptors: { ecodivision: '210', fia_species_code: 762, common_name: 'black cherry' }
+  - parameters: { a: 0.264408284, b: 2.018938385, c: 0.81646861 }
+    taxa: [{ family: 'Fagaceae', genus: 'Quercus', species: 'coccinea' }]
+    descriptors: { fia_species_code: 806, common_name: 'scarlet oak' }
+  - parameters: { a: 0.127408231, b: 1.959122505, c: 1.013780167 }
+    taxa: [{ family: 'Fagaceae', genus: 'Quercus', species: 'coccinea' }]
+    descriptors: { ecodivision: 'M220', fia_species_code: 806, common_name: 'scarlet oak' }
+  - parameters: { a: 0.422428568, b: 2.282802709, c: 0.535120267 }
+    taxa: [{ family: 'Fagaceae', genus: 'Quercus', species: 'falcata' }]
+    descriptors: { fia_species_code: 812, common_name: 'southern red oak' }
+  - parameters: { a: 0.426589681, b: 2.054761007, c: 0.637323715 }
+    taxa: [{ family: 'Fagaceae', genus: 'Quercus', species: 'pagoda' }]
+    descriptors: { fia_species_code: 813, common_name: 'cherrybark oak' }
+  - parameters: { a: 0.426589681, b: 2.241349172, c: 0.637323715 }
+    taxa: [{ family: 'Fagaceae', genus: 'Quercus', species: 'laevis' }]
+    descriptors: { fia_species_code: 819, common_name: 'turkey oak' }
+  - parameters: { a: 0.426589681, b: 2.12930132, c: 0.637323715 }
+    taxa: [{ family: 'Fagaceae', genus: 'Quercus', species: 'laurifolia' }]
+    descriptors: { fia_species_code: 820, common_name: 'laurel oak' }
+  - parameters: { a: 0.256737292, b: 2.19465205, c: 0.659512841 }
+    taxa: [{ family: 'Fagaceae', genus: 'Quercus', species: 'lyrata' }]
+    descriptors: { fia_species_code: 822, common_name: 'overcup oak' }
+  - parameters: { a: 0.256737292, b: 2.19465205, c: 0.659512841 }
+    taxa: [{ family: 'Fagaceae', genus: 'Quercus', species: 'lyrata' }]
+    descriptors: { ecodivision: '230', fia_species_code: 822, common_name: 'overcup oak' }
+  - parameters: { a: 0.426589681, b: 2.023817449, c: 0.637323715 }
+    taxa: [{ family: 'Fagaceae', genus: 'Quercus', species: 'macrocarpa' }]
+    descriptors: { fia_species_code: 823, common_name: 'bur oak' }
+  - parameters: { a: 0.426589681, b: 2.174921885, c: 0.637323715 }
+    taxa: [{ family: 'Fagaceae', genus: 'Quercus', species: 'marilandica' }]
+    descriptors: { fia_species_code: 824, common_name: 'blackjack oak' }
+  - parameters: { a: 0.198112644, b: 1.949045814, c: 0.918899075 }
+    taxa: [{ family: 'Fagaceae', genus: 'Quercus', species: 'nigra' }]
+    descriptors: { fia_species_code: 827, common_name: 'water oak' }
+  - parameters: { a: 0.198112644, b: 1.949045814, c: 0.918899075 }
+    taxa: [{ family: 'Fagaceae', genus: 'Quercus', species: 'nigra' }]
+    descriptors: { ecodivision: '230', fia_species_code: 827, common_name: 'water oak' }
+  - parameters: { a: 0.288336273, b: 2.226705257, c: 0.637411393 }
+    taxa: [{ family: 'Fagaceae', genus: 'Quercus', species: 'texana' }]
+    descriptors: { fia_species_code: 828, common_name: 'Nuttall oak' }
+  - parameters: { a: 0.288336273, b: 2.226705257, c: 0.637411393 }
+    taxa: [{ family: 'Fagaceae', genus: 'Quercus', species: 'texana' }]
+    descriptors: { ecodivision: '230', fia_species_code: 828, common_name: 'Nuttall oak' }
+  - parameters: { a: 0.146976739, b: 1.975301052, c: 0.953728002 }
+    taxa: [{ family: 'Fagaceae', genus: 'Quercus', species: 'phellos' }]
+    descriptors: { fia_species_code: 831, common_name: 'willow oak' }
+  - parameters: { a: 0.146976739, b: 1.975301052, c: 0.953728002 }
+    taxa: [{ family: 'Fagaceae', genus: 'Quercus', species: 'phellos' }]
+    descriptors: { ecodivision: '230', fia_species_code: 831, common_name: 'willow oak' }
+  - parameters: { a: 0.330459585, b: 2.332430728, c: 0.560678945 }
+    taxa: [{ family: 'Fagaceae', genus: 'Quercus', species: 'prinus' }]
+    descriptors: { fia_species_code: 832, common_name: 'chestnut oak' }
+  - parameters: { a: 0.358022711, b: 2.3286472, c: 0.545529814 }
+    taxa: [{ family: 'Fagaceae', genus: 'Quercus', species: 'prinus' }]
+    descriptors: { ecodivision: 'M220', fia_species_code: 832, common_name: 'chestnut oak' }
+  - parameters: { a: 0.642811096, b: 2.173042958, c: 0.508678825 }
+    taxa: [{ family: 'Fagaceae', genus: 'Quercus', species: 'rubra' }]
+    descriptors: { fia_species_code: 833, common_name: 'northern red oak' }
+  - parameters: { a: 0.806921231, b: 2.086126467, c: 0.501127694 }
+    taxa: [{ family: 'Fagaceae', genus: 'Quercus', species: 'rubra' }]
+    descriptors: { ecodivision: '210', fia_species_code: 833, common_name: 'northern red oak' }
+  - parameters: { a: 0.426589681, b: 2.093743422, c: 0.637323715 }
+    taxa: [{ family: 'Fagaceae', genus: 'Quercus', species: 'stellata' }]
+    descriptors: { fia_species_code: 835, common_name: 'post oak' }
+  - parameters: { a: 0.673108646, b: 2.297017028, c: 0.403264056 }
+    taxa: [{ family: 'Fagaceae', genus: 'Quercus', species: 'velutina' }]
+    descriptors: { fia_species_code: 837, common_name: 'black oak' }
+  - parameters: { a: 0.426589681, b: 2.170505127, c: 0.637323715 }
+    taxa: [{ family: 'Fagaceae', genus: 'Quercus', species: 'margarettiae' }]
+    descriptors: { fia_species_code: 840, common_name: 'dwarf post oak' }
+  - parameters: { a: 0.426589681, b: 2.237831724, c: 0.637323715 }
+    taxa: [{ family: 'Fagaceae', genus: 'Quercus', species: 'incana' }]
+    descriptors: { fia_species_code: 842, common_name: 'bluejack oak' }
+  - parameters: { a: 0.359289578, b: 2.159720641, c: 0.610643492 }
+    taxa: [{ family: 'Fabaceae', genus: 'Robinia', species: 'pseudoacacia' }]
+    descriptors: { fia_species_code: 901, common_name: 'black locust' }
+  - parameters: { a: 0.183406635, b: 1.934937524, c: 0.776309008 }
+    taxa: [{ family: 'Salicaceae', genus: 'Salix', species: 'spp.' }]
+    descriptors: { fia_species_code: 920, common_name: 'willow spp.' }
+  - parameters: { a: 0.183406635, b: 1.928925794, c: 0.776309008 }
+    taxa: [{ family: 'Salicaceae', genus: 'Salix', species: 'nigra' }]
+    descriptors: { fia_species_code: 922, common_name: 'black willow' }
+  - parameters: { a: 0.150199697, b: 2.022000111, c: 0.813433571 }
+    taxa: [{ family: 'Malvaceae', genus: 'Tilia', species: 'spp.' }]
+    descriptors: { fia_species_code: 950, common_name: 'basswood spp.' }
+  - parameters: { a: 0.157124269, b: 1.974207604, c: 0.834615788 }
+    taxa: [{ family: 'Malvaceae', genus: 'Tilia', species: 'spp.' }]
+    descriptors: { ecodivision: '210', fia_species_code: 950, common_name: 'basswood spp.' }
+  - parameters: { a: 0.359289578, b: 2.04306793, c: 0.610643492 }
+    taxa: [{ family: 'Malvaceae', genus: 'Tilia', species: 'americana' }]
+    descriptors: { fia_species_code: 951, common_name: 'American basswood' }
+  - parameters: { a: 0.404477403, b: 1.978292925, c: 0.661280749 }
+    taxa: [{ family: 'Ulmaceae', genus: 'Ulmus', species: 'spp.' }]
+    descriptors: { fia_species_code: 970, common_name: 'elm spp.' }
+  - parameters: { a: 0.364527236, b: 1.959591428, c: 0.694720835 }
+    taxa: [{ family: 'Ulmaceae', genus: 'Ulmus', species: 'spp.' }]
+    descriptors: { ecodivision: '230', fia_species_code: 970, common_name: 'elm spp.' }
+  - parameters: { a: 0.808350136, b: 2.356851122, c: 0.269505607 }
+    taxa: [{ family: 'Ulmaceae', genus: 'Ulmus', species: 'americana' }]
+    descriptors: { fia_species_code: 972, common_name: 'American elm' }
+  - parameters: { a: 0.840212676, b: 2.389262957, c: 0.240469269 }
+    taxa: [{ family: 'Ulmaceae', genus: 'Ulmus', species: 'americana' }]
+    descriptors: { ecodivision: '210', fia_species_code: 972, common_name: 'American elm' }
+  - parameters: { a: 0.359289578, b: 2.10136858, c: 0.610643492 }
+    taxa: [{ family: 'Tracheophyta', genus: 'Tree', species: 'unknown' }]
+    descriptors: { fia_species_code: 999, common_name: 'other or unknown live tree' }
+- name: biomass_total_wood_bark_branch_m2
+  type: fixed_effects_set
+  response: {bt: lb}
+  covariates: {dsob: in, hst: ft}
+  prediction_function: 'ifelse(dsob < k, a * dsob^b * hst^c, a * k^(b - b1) * dsob^b1 * hst^c)'
+  response_definition: 'Total aboveground dry biomass (wood, bark, and branches; foliage excluded); D is diameter at breast height (4.5 ft) outside bark in inches and H is total tree height in feet.'
+  description: "Species-level total aboveground biomass models (model 2, segmented: y = a * D^b * H^c for D < k, else a * k^(b - b1) * D^b1 * H^c); supplemental Table S8a. k is the segmentation point: 9.0 in for softwoods (SPCD < 300), 11.0 in for hardwoods (SPCD >= 300). Apply the species x ecodivision row when the tree's FIA ecodivision matches; otherwise use the row with no ecodivision for that species, if present."
+  component: aboveground biomass
+  specifications:
+  - parameters: { a: 0.328136654, b: 2.068856431, b1: 2.178341624, c: 0.600282409, k: 9.0 }
+    taxa: [{ family: 'Pinaceae', genus: 'Abies', species: 'balsamea' }]
+    descriptors: { fia_species_code: 12, common_name: 'balsam fir' }
+  - parameters: { a: 0.328925371, b: 2.068305047, b1: 2.173714588, c: 0.600489623, k: 9.0 }
+    taxa: [{ family: 'Pinaceae', genus: 'Abies', species: 'balsamea' }]
+    descriptors: { ecodivision: '210', fia_species_code: 12, common_name: 'balsam fir' }
+  - parameters: { a: 0.443491134, b: 2.038793267, b1: 2.314536598, c: 0.520420476, k: 9.0 }
+    taxa: [{ family: 'Pinaceae', genus: 'Abies', species: 'lasiocarpa' }]
+    descriptors: { fia_species_code: 19, common_name: 'subalpine fir' }
+  - parameters: { a: 0.177868614, b: 2.180014222, b1: 1.976884888, c: 0.78319536, k: 9.0 }
+    taxa: [{ family: 'Pinaceae', genus: 'Pinus', species: 'elliottii' }]
+    descriptors: { stand_origin: 'natural', fia_species_code: 111, common_name: 'slash pine' }
+  - parameters: { a: 0.177868614, b: 2.180014222, b1: 1.976884888, c: 0.78319536, k: 9.0 }
+    taxa: [{ family: 'Pinaceae', genus: 'Pinus', species: 'elliottii' }]
+    descriptors: { ecodivision: '230', stand_origin: 'natural', fia_species_code: 111, common_name: 'slash pine' }
+  - parameters: { a: 0.156724247, b: 2.014189076, b1: 2.123600697, c: 0.805766856, k: 9.0 }
+    taxa: [{ family: 'Pinaceae', genus: 'Pinus', species: 'resinosa' }]
+    descriptors: { fia_species_code: 125, common_name: 'red pine' }
+  - parameters: { a: 0.163474811, b: 2.033616764, b1: 2.140153969, c: 0.782544189, k: 9.0 }
+    taxa: [{ family: 'Pinaceae', genus: 'Pinus', species: 'resinosa' }]
+    descriptors: { ecodivision: '210', fia_species_code: 125, common_name: 'red pine' }
+  - parameters: { a: 0.0472227, b: 1.955146233, b1: 1.971465942, c: 1.146284919, k: 9.0 }
+    taxa: [{ family: 'Pinaceae', genus: 'Pinus', species: 'taeda' }]
+    descriptors: { stand_origin: 'natural', fia_species_code: 131, common_name: 'loblolly pine' }
+  - parameters: { a: 0.078468409, b: 1.688933865, b1: 2.157576692, c: 1.157707856, k: 9.0 }
+    taxa: [{ family: 'Pinaceae', genus: 'Pinus', species: 'taeda' }]
+    descriptors: { stand_origin: 'planted', fia_species_code: 131, common_name: 'loblolly pine' }
+  - parameters: { a: 0.045928912, b: 1.956540143, b1: 1.955393942, c: 1.154203033, k: 9.0 }
+    taxa: [{ family: 'Pinaceae', genus: 'Pinus', species: 'taeda' }]
+    descriptors: { ecodivision: '230', stand_origin: 'natural', fia_species_code: 131, common_name: 'loblolly pine' }
+  - parameters: { a: 0.078468409, b: 1.688933865, b1: 2.157576692, c: 1.157707856, k: 9.0 }
+    taxa: [{ family: 'Pinaceae', genus: 'Pinus', species: 'taeda' }]
+    descriptors: { ecodivision: '230', stand_origin: 'planted', fia_species_code: 131, common_name: 'loblolly pine' }
+  - parameters: { a: 0.393287534, b: 1.920335843, b1: 2.030340224, c: 0.560517316, k: 9.0 }
+    taxa: [{ family: 'Cupressaceae', genus: 'Thuja', species: 'occidentalis' }]
+    descriptors: { fia_species_code: 241, common_name: 'northern white-cedar' }
+  - parameters: { a: 0.393287534, b: 1.920335843, b1: 2.030340224, c: 0.560517316, k: 9.0 }
+    taxa: [{ family: 'Cupressaceae', genus: 'Thuja', species: 'occidentalis' }]
+    descriptors: { ecodivision: '210', fia_species_code: 241, common_name: 'northern white-cedar' }
+  - parameters: { a: 0.401758567, b: 1.891153446, b1: 2.055171185, c: 0.676829753, k: 9.0 }
+    taxa: [{ family: 'Pinaceae', genus: 'Tsuga', species: 'canadensis' }]
+    descriptors: { fia_species_code: 261, common_name: 'eastern hemlock' }
+  - parameters: { a: 0.428326758, b: 1.859288817, b1: 2.075952205, c: 0.673695108, k: 9.0 }
+    taxa: [{ family: 'Pinaceae', genus: 'Tsuga', species: 'canadensis' }]
+    descriptors: { ecodivision: '210', fia_species_code: 261, common_name: 'eastern hemlock' }
+  - parameters: { a: 0.435207622, b: 2.125444089, b1: 2.041079911, c: 0.547532483, k: 9.0 }
+    taxa: [{ family: 'Pinaceae', genus: 'Tsuga', species: 'canadensis' }]
+    descriptors: { ecodivision: 'M220', fia_species_code: 261, common_name: 'eastern hemlock' }
+  - parameters: { a: 0.050815817, b: 1.901310248, b1: 1.959335919, c: 1.2649823, k: 11.0 }
+    taxa: [{ family: 'Fagaceae', genus: 'Quercus', species: 'alba' }]
+    descriptors: { fia_species_code: 802, common_name: 'white oak' }
+  - parameters: { a: 0.185615748, b: 1.909923379, b1: 1.867881975, c: 0.937170791, k: 11.0 }
+    taxa: [{ family: 'Fagaceae', genus: 'Quercus', species: 'alba' }]
+    descriptors: { ecodivision: '210', fia_species_code: 802, common_name: 'white oak' }
+  - parameters: { a: 0.260621543, b: 1.68852516, b1: 2.401181762, c: 0.962303387, k: 11.0 }
+    taxa: [{ family: 'Fagaceae', genus: 'Quercus', species: 'alba' }]
+    descriptors: { ecodivision: '220', fia_species_code: 802, common_name: 'white oak' }
+  - parameters: { a: 0.165274989, b: 2.001535824, b1: 2.305559605, c: 0.922473495, k: 11.0 }
+    taxa: [{ family: 'Fagaceae', genus: 'Quercus', species: 'alba' }]
+    descriptors: { ecodivision: '230', fia_species_code: 802, common_name: 'white oak' }
+  - parameters: { a: 0.024470323, b: 1.93799905, b1: 1.88681949, c: 1.403264432, k: 11.0 }
+    taxa: [{ family: 'Fagaceae', genus: 'Quercus', species: 'alba' }]
+    descriptors: { ecodivision: 'M220', fia_species_code: 802, common_name: 'white oak' }
+- name: biomass_total_wood_bark_branch_m3
+  type: fixed_effects_set
+  response: {bt: lb}
+  covariates: {dsob: in, hst: ft}
+  prediction_function: 'a * dsob^(a1 * (1 - exp(-b * dsob))^c1) * hst^c'
+  response_definition: 'Total aboveground dry biomass (wood, bark, and branches; foliage excluded); D is diameter at breast height (4.5 ft) outside bark in inches and H is total tree height in feet.'
+  description: 'Species-level total aboveground biomass models (model 3, continuously variable: y = a * D^(a1 * (1 - exp(-b * D))^c1) * H^c); supplemental Table S8a.'
+  component: aboveground biomass
+  specifications:
+  - parameters: { a: 0.358815475, a1: 1.849604207, b: 0.149984321, c: 0.841295541, c1: 0.332484731 }
+    taxa: [{ family: 'Pinaceae', genus: 'Pinus', species: 'elliottii' }]
+    descriptors: { stand_origin: 'planted', fia_species_code: 111, common_name: 'slash pine' }
+  - parameters: { a: 0.358815475, a1: 1.849604207, b: 0.149984321, c: 0.841295541, c1: 0.332484731 }
+    taxa: [{ family: 'Pinaceae', genus: 'Pinus', species: 'elliottii' }]
+    descriptors: { ecodivision: '230', stand_origin: 'planted', fia_species_code: 111, common_name: 'slash pine' }
+- name: biomass_total_wood_bark_branch_m4
+  type: fixed_effects_set
+  response: {bt: lb}
+  covariates: {dsob: in, hst: ft}
+  prediction_function: 'a * dsob^b * hst^c * exp(-b1 * dsob)'
+  response_definition: 'Total aboveground dry biomass (wood, bark, and branches; foliage excluded); D is diameter at breast height (4.5 ft) outside bark in inches and H is total tree height in feet.'
+  description: "Species-level total aboveground biomass models (model 4, modified Wiley: y = a * D^b * H^c * exp(-b1 * D)); supplemental Table S8a. Apply the species x ecodivision row when the tree's FIA ecodivision matches; otherwise use the row with no ecodivision for that species, if present."
+  component: aboveground biomass
+  specifications:
+  - parameters: { a: 0.315730276, b: 1.853839844, b1: -0.024745685, c: 0.740557379 }
+    taxa: [{ family: 'Sapindaceae', genus: 'Acer', species: 'rubrum' }]
+    descriptors: { fia_species_code: 316, common_name: 'red maple' }
+  - parameters: { a: 0.181426445, b: 1.710544262, b1: -0.025073986, c: 0.953960978 }
+    taxa: [{ family: 'Sapindaceae', genus: 'Acer', species: 'rubrum' }]
+    descriptors: { ecodivision: '210', fia_species_code: 316, common_name: 'red maple' }
+  - parameters: { a: 0.480472826, b: 1.901115542, b1: -0.026261863, c: 0.597190558 }
+    taxa: [{ family: 'Sapindaceae', genus: 'Acer', species: 'rubrum' }]
+    descriptors: { ecodivision: '230', fia_species_code: 316, common_name: 'red maple' }
+  - parameters: { a: 1.742544318, b: 1.672298098, b1: -0.06539757, c: 0.340272222 }
+    taxa: [{ family: 'Sapindaceae', genus: 'Acer', species: 'rubrum' }]
+    descriptors: { ecodivision: 'M220', fia_species_code: 316, common_name: 'red maple' }
+  - parameters: { a: 0.284661872, b: 2.001103314, b1: -0.016648396, c: 0.650792314 }
+    taxa: [{ family: 'Magnoliaceae', genus: 'Liriodendron', species: 'tulipifera' }]
+    descriptors: { fia_species_code: 621, common_name: 'yellow-poplar' }
+  - parameters: { a: 0.25057406, b: 2.114664101, b1: -0.003592877, c: 0.657241844 }
+    taxa: [{ family: 'Magnoliaceae', genus: 'Liriodendron', species: 'tulipifera' }]
+    descriptors: { ecodivision: '230', fia_species_code: 621, common_name: 'yellow-poplar' }
+  - parameters: { a: 0.154317349, b: 2.568115687, b1: 0.011588086, c: 0.543413156 }
+    taxa: [{ family: 'Magnoliaceae', genus: 'Liriodendron', species: 'tulipifera' }]
+    descriptors: { ecodivision: 'M220', fia_species_code: 621, common_name: 'yellow-poplar' }
