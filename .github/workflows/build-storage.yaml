@@ -2,7 +2,7 @@ name: build-storage
 
 on:
   push:
-    branches: [ v4 ]
+    branches: [ main ]
 
 jobs:
   build:
