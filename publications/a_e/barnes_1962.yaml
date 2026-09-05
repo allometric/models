@@ -8,6 +8,7 @@ publication:
     country: US
     region: [US-OR, US-WA]
   number: 1273
+  url: "https://hdl.handle.net/2027/uva.x030348655"
   institution: "Department of Agriculture, Forest Service"
 models:
 - name: hstix50
@@ -19,4 +20,6 @@ models:
   response: {hstix50: ft}
   covariates: {atb: year, hst: ft}
   parameters: {a: 22.6, b: 0.014482, c: 0.001162}
+  descriptors: {age_class: '> 120'}
+  description: "Table 1 eq. 5b. Western hemlock site index at breast-height age 50; site trees older than 120 years."
   prediction_function: 4.5 + a * exp((b - c * log(atb)) * (hst - 4.5))
