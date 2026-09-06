@@ -27,3 +27,11 @@ jobs:
         with:
           commit_message: Updating compiled storage artifacts
           file_pattern: 'dist/*'
+
+      - name: Notify allometric/site to rebuild
+        env:
+          GH_TOKEN: ${{ secrets.SITE_DISPATCH_TOKEN }}
+        run: |
+          gh api -X POST repos/allometric/site/dispatches \
+            -f event_type=models-updated \
+            -f "client_payload[sha]=$GITHUB_SHA"
