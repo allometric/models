@@ -1,0 +1,46 @@
+publication:
+  key: krajicek_1961
+  bibtype: article
+  title: Crown competition - a measure of density
+  author: Krajicek, John E.; Brinkman, Kenneth A.; Gingrich, Samuel F.
+  year: 1961
+  journal: Forest Science
+  volume: 7
+  number: 1
+  pages: 35-42
+  descriptors:
+    country: US
+    region: US-IA
+models:
+- name: dcm
+  type: fixed_effects
+  response: {dcm: ft}
+  covariates: {dsob: in}
+  taxa:
+  - {family: Fagaceae, genus: Quercus, species: alba}
+  - {family: Fagaceae, genus: Quercus, species: rubra}
+  - {family: Fagaceae, genus: Quercus, species: velutina}
+  - {family: Juglandaceae, genus: Carya, species: ovata}
+  parameters: {b_0: 3.12, b_1: 1.829}
+  prediction_function: b_0 + b_1 * dsob
+  description: "Maximum crown width of open-grown trees. Regression of 183 open-grown hardwoods (88 white oak, 60 black and red oaks, 35 hickories) measured in eastern Iowa; differences among hardwood species were small (white oak vs. red oaks and white oak vs. hickory not significant at the 5% level), so all hardwood data were combined (Fig. 2)."
+model_sets:
+- name: mca
+  type: fixed_effects_set
+  response: {mca: percent}
+  covariates: {dsob: in}
+  response_definition: "Maximum crown area (MCA) of an open-grown tree as a percentage of an acre"
+  prediction_function: b_0 + b_1 * dsob + b_2 * dsob^2
+  description: "Maximum crown area percentage of an acre from the open-grown-tree crown width/d.b.h. regressions: MCA = crown area in square feet / 435.6 (p. 37)."
+  specifications:
+  - parameters: {b_0: 0.0175, b_1: 0.0205, b_2: 0.0060}
+    taxa:
+    - {family: Fagaceae, genus: Quercus, species: alba}
+    - {family: Fagaceae, genus: Quercus, species: rubra}
+    - {family: Fagaceae, genus: Quercus, species: velutina}
+    - {family: Juglandaceae, genus: Carya, species: ovata}
+    descriptors: {species_group: oak-hickory hardwoods}
+  - parameters: {b_0: 0.0460, b_1: 0.0239, b_2: 0.0031}
+    taxa:
+    - {family: Pinaceae, genus: Picea, species: abies}
+    descriptors: {species_group: Norway spruce}
